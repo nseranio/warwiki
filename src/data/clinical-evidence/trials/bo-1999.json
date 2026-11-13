@@ -52,8 +52,8 @@
     "locator": "Methods, eligibility and randomisation; Figure 1"
   },
   "verdict": "positive",
-  "verdictNote": "Supervised training improved pad-test leakage and subjective severity more than the other strategies.",
-  "takeaway": "In women with genuine stress incontinence, supervised pelvic floor muscle training reduced standardized pad-test leakage and patient-reported severity more than vaginal electrical stimulation, weighted vaginal cones, or no active treatment after six months.",
+  "verdictNote": "Supervised training had the largest standardized pad-test reduction; global four-group P = 0.038.",
+  "takeaway": "Among 107 analyzed women in a 122-woman trial of genuine stress incontinence, supervised pelvic floor muscle training produced the largest six-month reduction in standardized pad-test leakage (global P = 0.038), exceeding vaginal electrical stimulation by 22.8 g (95% CI 3.8 to 41.8; P = 0.02).",
   "reports": [
     {
       "id": "bo-1999-1999",
@@ -65,7 +65,7 @@
       "doi": "10.1136/bmj.318.7182.487",
       "pmid": "10024253",
       "followUp": "six months of assigned treatment",
-      "followUpLocator": "Methods, Interventions",
+      "followUpLocator": "Full text, Methods, Interventions, p 488",
       "results": [
         {
           "endpoint": "Standardized stress pad test",
@@ -78,16 +78,21 @@
             "control": "−12.7 g (95% CI −27.2 to 1.8)"
           },
           "effect": {
-            "type": "none",
-            "p": "0.038"
+            "type": "difference",
+            "value": 22.8,
+            "ci": [
+              3.8,
+              41.8
+            ],
+            "p": "0.02"
           },
           "met": true,
-          "note": "Kruskal-Wallis global comparison; a negative change means less leakage. Treated-participant analysis (25, 25, 27, and 30 women, respectively).",
-          "locator": "Table 2; Results, Changes after treatment"
+          "note": "PFMT versus stimulation difference in reduction; global four-group P = 0.038. Negative arm changes mean less leakage. Treated-participant analysis (25, 25, 27, and 30 women, respectively).",
+          "locator": "Full text, Table 2 and Results, Changes after treatment, p 490"
         },
         {
           "endpoint": "Patient-reported severity",
-          "role": "primary",
+          "role": "secondary",
           "measure": "Condition rated unproblematic at six months",
           "values": {
             "pfmt": "14/25 (56.0%)",
@@ -101,12 +106,12 @@
           },
           "met": true,
           "note": "P value compares change from baseline in the exercise group with the other groups; five-category self-rating.",
-          "locator": "Results, Subjective cure; Methods, Subjective assessment"
+          "locator": "Full text, Methods, Main outcome measures, p 489; Results, Subjective cure, p 491; Discussion, p 492"
         },
         {
           "endpoint": "Objective cure",
           "role": "secondary",
-          "measure": "Standardized pad-test leakage ≤2 g at six months",
+          "measure": "Standardized pad-test leakage <2 g at six months",
           "values": {
             "pfmt": "11/25 (44.0%)",
             "stim": "7/25 (28.0%)",
@@ -117,8 +122,9 @@
             "type": "none",
             "p": "0.02"
           },
+          "met": true,
           "note": "Reported four-group comparison.",
-          "locator": "Results, Objective cure"
+          "locator": "Full text, Results, Objective cure, p 491"
         },
         {
           "endpoint": "Request for additional treatment",
@@ -134,8 +140,44 @@
             "type": "none",
             "p": "<0.001"
           },
+          "met": true,
           "note": "Question asked at the end of assigned treatment.",
-          "locator": "Results, paragraph after Table 4"
+          "locator": "Full text, Results, paragraph after Table 4, p 491"
+        },
+        {
+          "endpoint": "24-hour pad test",
+          "role": "secondary",
+          "measure": "Mean change in 24-hour home pad-test leakage, baseline to six months (g); global four-group comparison",
+          "values": {
+            "pfmt": "−6.6 g (95% CI −12.1 to −1.1)",
+            "stim": "−0.5 g (95% CI −8.9 to 7.9)",
+            "cones": "−22 g (95% CI −55.7 to 11.7)",
+            "control": "−7.1 g (95% CI −20.2 to 6.0)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.684"
+          },
+          "met": false,
+          "note": "Home test performed on a typical activity day; treated-participant analysis (25, 25, 27, and 30 women, respectively).",
+          "locator": "Full text, Methods, Secondary outcome measures, p 489; Table 2, p 490"
+        },
+        {
+          "endpoint": "Pelvic floor muscle strength",
+          "role": "secondary",
+          "measure": "Mean vaginal squeeze pressure before versus after six months (cm H2O)",
+          "values": {
+            "pfmt": "11.0 (95% CI 7.7 to 14.3) to 19.2 (15.3 to 23.1)",
+            "stim": "14.8 (10.9 to 18.7) to 18.6 (13.3 to 23.9)",
+            "cones": "11.8 (8.5 to 15.1) to 15.4 (11.1 to 19.7)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.03"
+          },
+          "met": true,
+          "note": "PFMT change exceeded changes with stimulation and cones (P = 0.03); only PFMT improved significantly versus control (P < 0.01).",
+          "locator": "Full text, Results, Changes after treatment and Figure 2, p 490"
         }
       ],
       "harms": [
@@ -143,45 +185,59 @@
           "label": "Reported treatment adverse effects",
           "values": {
             "pfmt": "none reported",
-            "stim": "2 women reported smarting, tenderness, or bleeding",
+            "stim": "2 women reported smarting (1 tenderness and bleeding; 1 discomfort)",
             "cones": "1 abdominal pain; 2 vaginitis; 1 bleeding",
             "control": "not reported"
           },
-          "locator": "Results, Adverse effects and treatment tolerance",
+          "locator": "Full text, Results, Adverse effects and treatment tolerance, p 491",
           "note": "Event counts are reported without an adverse-event analysis denominator; women may have reported more than one symptom."
         },
         {
           "label": "Withdrawal attributed to pain or bleeding",
           "values": {
-            "pfmt": "0",
-            "stim": "3 (2 pain; 1 bleeding)",
-            "cones": "1 (bleeding)",
-            "control": "0"
+            "pfmt": "0/29 randomized",
+            "stim": "3/32 randomized (2 pain; 1 bleeding)",
+            "cones": "1/29 randomized (bleeding)",
+            "control": "0/32 randomized"
           },
-          "locator": "Results, opening paragraph; Figure 1",
+          "locator": "Full text, Figure 1, p 489; Results, opening paragraph, pp 489–490",
           "note": "Other withdrawals included motivation, travel, unrelated circumstances, and use of other treatments."
+        },
+        {
+          "label": "Motivation or device-use problems",
+          "values": {
+            "stim": "8 women reported motivation problems and difficulty using the stimulator",
+            "cones": "14 women reported motivation problems and difficulty using the cones"
+          },
+          "locator": "Full text, Results, Adverse effects and treatment tolerance, p 491",
+          "note": "The report does not specify an adverse-effect analysis denominator or whether complaints overlapped with other symptoms."
         }
       ],
       "delivery": [
         {
           "label": "Assigned treatment protocols",
-          "value": "PFMT: 8–12 near-maximal contractions three times daily plus a weekly 45-minute therapist-led class; electrical stimulation: MS 106 Twin vaginal stimulation at 50 Hz for 30 minutes daily; cones: Mabella 20, 40, and 70 g weights for 20 minutes daily; control: continence guard offered.",
-          "locator": "Methods, Interventions"
+          "value": "PFMT: 8–12 near-maximal contractions three times daily, held 6–8 seconds with three or four fast contractions added, plus a weekly 45-minute therapist-led class; electrical stimulation: MS 106 Twin intermittent vaginal stimulation at 50 Hz, 0.2 ms pulse width, 0–120 mA and individualized duty cycle for 30 minutes daily; cones: Mabella 20, 40, and 70 g weights for 20 minutes daily; control: continence guard offered.",
+          "locator": "Full text, Methods, Interventions, p 488"
         },
         {
           "label": "Pad-test protocol",
           "value": "After catheter emptying, bladder filled with 200 mL saline; 30 seconds running in place and 30 seconds jumping jacks; pad weight change measured.",
-          "locator": "Methods, Main outcome measures, Pad test with standardised bladder volume"
+          "locator": "Full text, Methods, Main outcome measures, Pad test with standardised bladder volume, p 489"
         },
         {
           "label": "Statistical plan",
-          "value": "Global Kruskal-Wallis comparison with P <0.05 as the significance threshold; primary treated-participant analysis and intention-to-treat sensitivity analysis carrying baseline values forward for missing measurements.",
-          "locator": "Methods, Statistical methods"
+          "value": "Kruskal-Wallis global tests for interval-scaled variables and Cochran-Mantel-Haenszel or chi-square tests for categorical variables, with P <0.05 as the significance threshold; primary treated-participant analysis and intention-to-treat sensitivity analysis carrying baseline values forward for missing measurements.",
+          "locator": "Full text, Methods, Statistical methods, p 489"
         },
         {
           "label": "Trial flow and treatment adherence",
           "value": "122 randomized (PFMT 29; stimulation 32; cones 29; control 32); 107 in treated-participant efficacy analysis (25; 25; 27; 30). Mean adherence: PFMT 93% (SE 1.5%); stimulation 75% (SE 2.8%); cones 78% (SE 4.4%).",
-          "locator": "Figure 1; Results, opening paragraph and Compliance with treatment"
+          "locator": "Full text, Figure 1, p 489; Results, opening paragraph and Compliance with treatment, pp 489–490"
+        },
+        {
+          "label": "Continence guard use in untreated controls",
+          "value": "14/30 analyzed controls used the offered continence guard; four felt completely dry while wearing it and five felt somewhat better.",
+          "locator": "Full text, Results, paragraph after Table 4, p 491"
         }
       ],
       "source": {

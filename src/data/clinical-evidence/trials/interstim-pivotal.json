@@ -331,69 +331,125 @@
       "doi": "10.1016/j.juro.2007.07.032",
       "pmid": "17869298",
       "followUp": "5 years after implantation; uncontrolled implanted cohort",
-      "followUpLocator": "PubMed abstract, Purpose, Materials and Methods and Results",
+      "followUpLocator": "Full text, Patient Disposition and Table 1, pp 2030-2031",
       "results": [
         {
-          "endpoint": "Urge-incontinence success",
-          "role": "descriptive",
-          "measure": "At least 50% diary improvement at 5 years",
+          "endpoint": "Urge-incontinence heavy leaks per day",
+          "role": "primary",
+          "measure": "At least 50% fewer heavy leaks per day at 5 years with LOCF and withdrawal-failure imputation",
           "values": {
-            "exp": "68%"
+            "exp": "53/78 (68%); mean heavy leaks/day 2.6 ± 3.3 at baseline to 0.8 ± 1.7 at 5 years"
           },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "<0.001"
           },
-          "note": "96 originally implanted with urge incontinence; exact 5-year analysis denominator not stated. No concurrent control; mean leaks/day fell from 9.6 ± 6.0 to 3.9 ± 4.0.",
-          "locator": "PubMed abstract, Materials and Methods and Results"
+          "met": "not-tested",
+          "note": "The 50% threshold defined individual clinical success; the paper gave no study-level success threshold. Repeated-measures P value is for diary change, not the success proportion.",
+          "locator": "Full text, Study variables and Statistical Analysis, p 2030; Table 2 and figure caption, pp 2031-2032"
         },
         {
-          "endpoint": "Urgency-frequency success",
-          "role": "descriptive",
-          "measure": "At least 50% diary improvement at 5 years",
+          "endpoint": "Urgency-frequency volume per void",
+          "role": "primary",
+          "measure": "At least 50% greater volume per void at 5 years with LOCF and withdrawal-failure imputation",
           "values": {
-            "exp": "56%"
+            "exp": "14/25 (56%); mean volume/void 92.3 ± 52.8 to 165.2 ± 147.7 mL"
           },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "<0.001"
           },
-          "note": "25 originally implanted with urgency-frequency; exact 5-year analysis denominator not stated. No concurrent control; mean voids/day fell from 19.3 ± 7.0 to 14.8 ± 7.6.",
-          "locator": "PubMed abstract, Materials and Methods and Results"
+          "met": "not-tested",
+          "note": "Degree-of-urgency clinical success was also 14/25 (56%), but its repeated-measures change was not statistically significant; no study-level success threshold was stated.",
+          "locator": "Full text, Efficacy for Urgency Frequency and figure caption, p 2031; Table 2, p 2032"
         },
         {
-          "endpoint": "Retention success",
-          "role": "descriptive",
-          "measure": "At least 50% diary improvement at 5 years",
+          "endpoint": "Retention volume per catheterization",
+          "role": "primary",
+          "measure": "At least 50% lower catheterized volume per catheterization at 5 years with LOCF and withdrawal-failure imputation",
           "values": {
-            "exp": "71%"
+            "exp": "21/31 (68%); mean volume/catheterization 379.9 ± 183.8 to 109.2 ± 184.3 mL"
           },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "<0.001"
           },
-          "note": "31 originally implanted with retention; exact 5-year analysis denominator not stated. No concurrent control; mean catheterizations/day fell from 5.3 ± 2.8 to 1.9 ± 2.8.",
-          "locator": "PubMed abstract, Materials and Methods and Results"
+          "met": "not-tested",
+          "note": "Table 2 prints 71% beside 21/31, which calculates to 68%; text also says 71%. Catheterization-frequency success was 18/31 (58%). No study-level success threshold was stated.",
+          "locator": "Full text, Efficacy for Urinary Retention, p 2031; Table 2, p 2032"
+        },
+        {
+          "endpoint": "Urge-incontinence leaks per day",
+          "role": "primary",
+          "measure": "At least 50% fewer leaks per day at 5 years with LOCF and withdrawal-failure imputation",
+          "values": {
+            "exp": "56/96 (58%); mean leaks/day 9.6 ± 6.0 to 3.9 ± 4.0"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": "not-tested",
+          "note": "Pad-use success was 53/87 (61%). No study-level success threshold was stated.",
+          "locator": "Full text, Efficacy for Urge Incontinence and figure caption, p 2031; Table 2, p 2032"
+        },
+        {
+          "endpoint": "Urgency-frequency voids per day",
+          "role": "primary",
+          "measure": "At least 50% fewer voids per day at 5 years with LOCF and withdrawal-failure imputation",
+          "values": {
+            "exp": "10/25 (40%); mean voids/day 19.3 ± 7.0 to 14.8 ± 7.6"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": "not-tested",
+          "note": "The repeated-measures P value is for diary change, not the success proportion. No study-level success threshold was stated.",
+          "locator": "Full text, Efficacy for Urgency Frequency and figure caption, p 2031; Table 2, p 2032"
         }
       ],
       "harms": [
         {
           "label": "Device- or therapy-related adverse events",
           "values": {
-            "exp": "279 events in 102/152 implanted patients"
+            "exp": "102/152 patients (67%); Table 3 totals 271 events (31 device-related, 240 therapy-related)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "No life-threatening or irreversible adverse events were reported."
+          "locator": "Full text, Safety, p 2031; Table 3, p 2032",
+          "note": "Table 3 lists new pain or undesired stimulation in 41/152 (27.0%), pain at PNE or the INS implant site in 29/152 (19.1%), and lead migration as device-related in 5/152 (3.3%) and therapy-related in 8/152 (5.3%). The abstract states 279 events, Results says 221, and Discussion says 271; Table 3 sums to 271. No life-threatening or irreversible events were reported."
+        },
+        {
+          "label": "Adverse events requiring surgery",
+          "values": {
+            "exp": "60/152 patients (39.5%); 110 events; device exchange in 36/152 (23.7%)"
+          },
+          "locator": "Full text, Safety, p 2031; Tables 3-4, pp 2032-2033",
+          "note": "Permanent explant for adverse event: 9/152 (5.9%) in Table 4; overall explant for adverse event or loss of efficacy: 16/152 (10.5%) in Safety."
+        },
+        {
+          "label": "PNE or implant-site infection",
+          "values": {
+            "exp": "12/152 patients (7.9%); 14 therapy-related events"
+          },
+          "locator": "Full text, Table 3, p 2032"
         }
       ],
       "delivery": [
         {
           "label": "Five-year cohort implantation",
-          "value": "17 centers enrolled 163 patients; 11 declined implantation after testing and 152 received InterStim (96 urge incontinence, 25 urgency-frequency, 31 retention).",
-          "locator": "PubMed abstract, Materials and Methods"
+          "value": "17 centers enrolled 163 patients: 129 crossed over from MDT-103 and 34 enrolled under the new protocol; 11 of the latter declined implantation after positive testing, leaving 152 implants (96 urge incontinence, 25 urgency-frequency, 31 retention).",
+          "locator": "Full text, Patient Selection and Evaluation, p 2030"
+        },
+        {
+          "label": "Generator placement and diary follow-up",
+          "value": "Generator placement was abdominal in 121/152 patients and buttock in 31/152; 105/152 completed the five-year visit and 87/152 a five-year diary. Missing diaries used last observation carried forward; adverse-event or efficacy withdrawals counted as failures.",
+          "locator": "Full text, Patient Selection and Evaluation, Patient Disposition, and Statistical Analysis, p 2030; Table 1, p 2030"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2007_07_032.txt",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2007_07_032.fulltext.txt",
         "checked": "2026-11-12",
-        "level": "abstract"
+        "level": "full-text"
       }
     }
   ],

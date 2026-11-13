@@ -12,7 +12,7 @@ for tid in ids:
     data = json.loads((d / f"{tid}.json").read_text())
     txt = json.dumps(data, indent=2, ensure_ascii=False) + "\n"
     for dst in (ROOT / "src/data/clinical-evidence/trials" / f"{tid}.json", HERE / "work" / tid / f"{tid}.json"):
-        dst.write_text(txt)
+        if dst.parent.exists(): dst.write_text(txt)
     for dst in (ROOT / "docs/06-clinical-evidence/studies" / f"{tid}.mdx", HERE / "work" / tid / f"{tid}.mdx"):
-        shutil.copy(d / f"{tid}.mdx", dst)
+        if dst.parent.exists(): shutil.copy(d / f"{tid}.mdx", dst)
     print("installed", tid)

@@ -138,80 +138,131 @@
       "doi": "10.1016/j.juro.2007.08.033",
       "pmid": "17937959",
       "followUp": "12 weeks of fixed-dose treatment",
-      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "followUpLocator": "Full text, Methods, p 2489",
       "results": [
         {
           "endpoint": "Micturitions per 24 hours",
           "role": "primary",
-          "measure": "Mean change from baseline to week 12",
+          "measure": "Least-squares mean change from baseline to study end; 800 analyzed with last observation carried forward",
           "values": {
-            "feso4": "−1.9",
-            "feso8": "−1.9",
-            "placebo": "−1.0"
+            "feso4": "−1.61 (n=267)",
+            "feso8": "−2.09 (n=267)",
+            "placebo": "−1.08 (n=266)"
           },
           "effect": {
             "type": "none"
           },
           "met": true,
-          "note": "P=0.032 for 4 mg and P<0.001 for 8 mg versus placebo; FDA-reproduced sponsor results.",
-          "locator": "FDA medical review, p 3, Table 1, Study SP584"
+          "note": "P=0.032 for 4 mg and P<0.001 for 8 mg versus placebo; least-squares mean change, with no contrast confidence intervals reported.",
+          "locator": "Full text, Table 2, p 2491; Statistical Analysis, p 2490"
         },
         {
           "endpoint": "Urgency urinary incontinence episodes per 24 hours",
           "role": "primary",
-          "measure": "Mean change from baseline to week 12 among participants incontinent at baseline",
+          "measure": "Least-squares mean change from baseline to study end among participants incontinent at baseline",
           "values": {
-            "feso4": "−1.8 (n=228)",
-            "feso8": "−2.4 (n=218)",
-            "placebo": "−1.0 (n=205)"
+            "feso4": "−1.65 (n=228)",
+            "feso8": "−2.28 (n=218)",
+            "placebo": "−0.96 (n=205)"
           },
           "effect": {
             "type": "none"
           },
           "met": true,
-          "note": "P=0.002 for 4 mg and P<0.001 for 8 mg versus placebo; FDA-reproduced sponsor results.",
-          "locator": "FDA medical review, p 3, Table 2, Study SP584"
+          "note": "P=0.003 for 4 mg and P<0.001 for 8 mg versus placebo; 651 participants had at least one baseline urgency incontinence episode.",
+          "locator": "Full text, Table 2 and footnote, p 2491"
         },
         {
           "endpoint": "Treatment response",
           "role": "primary",
           "measure": "Patient-rated response at week 12",
           "values": {
-            "feso4": "significantly greater than placebo",
-            "feso8": "significantly greater than placebo",
-            "placebo": "reference"
+            "feso4": "64% yes (n=267)",
+            "feso8": "74% yes (n=267)",
+            "placebo": "45% yes (n=266)"
           },
           "effect": {
             "type": "none"
           },
           "met": true,
-          "note": "The abstract gives no response proportions or dose-specific P values.",
-          "locator": "Nitti PubMed abstract, Materials and Methods and Results"
+          "note": "Yes meant improved or greatly improved on the four-point Treatment Benefit scale; P<0.001 for each fesoterodine dose versus placebo. Response numerators were not reported.",
+          "locator": "Full text, Table 2, p 2491; Appendix, p 2493"
+        },
+        {
+          "endpoint": "Mean voided volume per micturition",
+          "role": "secondary",
+          "measure": "Least-squares mean change in mL from baseline to study end",
+          "values": {
+            "feso4": "+16.5 (n=266)",
+            "feso8": "+33.6 (n=265)",
+            "placebo": "+8.38 (n=261)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "note": "Nominal comparisons versus placebo: P=0.150 for 4 mg and P<0.001 for 8 mg; secondary endpoints were outside the multiplicity-controlled primary testing sequence.",
+          "locator": "Full text, Table 2, p 2491"
         }
       ],
       "harms": [
         {
           "label": "Dry mouth, constipation, and urinary tract infection",
           "values": {
-            "feso4": "more frequent with fesoterodine overall",
-            "feso8": "more frequent with fesoterodine overall",
-            "placebo": "reference"
+            "feso4": "dry mouth 45/282; constipation 14/282; urinary tract infection 10/282",
+            "feso8": "dry mouth 99/279; constipation 21/279; urinary tract infection 15/279",
+            "placebo": "dry mouth 19/271; constipation 7/271; urinary tract infection 11/271"
           },
-          "locator": "Nitti PubMed abstract, Results",
-          "note": "The abstract does not provide event rates or separate the two fesoterodine doses."
+          "locator": "Full text, Table 3, p 2492",
+          "note": "Treatment-emergent events in the safety population; urinary tract infection was 10/282 with 4 mg versus 11/271 with placebo."
+        },
+        {
+          "label": "Urinary retention and increased post-void residual",
+          "values": {
+            "feso4": "urinary retention AE 4/282; post-void residual >200 mL in 1/282",
+            "feso8": "urinary retention AE 6/279; post-void residual >200 mL in 7/279",
+            "placebo": "urinary retention AE 1/271; post-void residual >200 mL in 0/271"
+          },
+          "locator": "Full text, Tolerability and Safety, pp 2491-2492; Table 3, p 2492",
+          "note": "Eight participants had post-void residual >200 mL; none required catheterization. Urinary retention and increased residual could overlap."
+        },
+        {
+          "label": "Adverse-event withdrawal",
+          "values": {
+            "feso4": "17/282",
+            "feso8": "25/279",
+            "placebo": "11/271"
+          },
+          "locator": "Full text, Discontinuations, p 2492",
+          "note": "Dry mouth led to withdrawal in 3/282 and 5/279 fesoterodine recipients; urinary retention or increased residual led to withdrawal in 2/282 and 3/279."
+        },
+        {
+          "label": "Any treatment-emergent adverse event",
+          "values": {
+            "feso4": "171/282",
+            "feso8": "193/279",
+            "placebo": "149/271"
+          },
+          "locator": "Full text, Table 3, p 2492",
+          "note": "All treatment-emergent adverse events, irrespective of attribution to study medication."
         }
       ],
       "delivery": [
         {
-          "label": "US trial treatment",
-          "value": "Fesoterodine 4 mg (283 randomized), fesoterodine 8 mg (279), or placebo (274) once daily for 12 weeks; 836 total randomized.",
-          "locator": "Nitti PubMed abstract, Materials and Methods"
+          "label": "US trial treatment and eligibility",
+          "value": "Fesoterodine 4 mg (283 randomized), fesoterodine 8 mg (279), or placebo (274) once daily for 12 weeks; 836 total randomized. Overactive bladder duration was at least six months; neurogenic overactive bladder, clinically relevant obstruction, and baseline post-void residual >100 mL were excluded.",
+          "locator": "Full text, Abstract, p 2488; Subject Selection and Study Design, p 2489"
+        },
+        {
+          "label": "Study medication adherence and completion",
+          "value": "At least 96% were compliant with study medication during the double-blind phase; 681/836 randomized participants completed 12 weeks.",
+          "locator": "Full text, Results, Subjects, p 2490; Discontinuations, p 2492"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2007_08_033.txt",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2007_08_033.fulltext.txt",
         "checked": "2026-11-12",
-        "level": "abstract"
+        "level": "full-text"
       }
     },
     {

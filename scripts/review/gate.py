@@ -217,6 +217,7 @@ GUIDE_LOCAL = [  # trial-page guideline references -> the owner's local copies (
     ((r"AUA|SUFU|AUGS", r"Genitourinary Syndrome of Menopause"), "aua-sufu-augs-gsm-2025.txt"),
     ((_AUA, r"Testosterone"), "aua-testosterone-deficiency.txt"),
     ((_AUA, r"Urethral Stricture"), "aua-urethral-stricture-2023-unabridged.txt"),
+    ((_AUA, r"Chronic Prostatitis|Chronic Pelvic Pain"), "aua-cpps-2025-unabridged.txt"),
     ((_AUA, r"[Mm]uscle-[Ii]nvasive [Bb]ladder [Cc]ancer"), "aua-mibc-2024-unabridged.txt"),
     ((_EAU, r"Non-?[Nn]eurogenic Female"), "eau-non-neurogenic-female-luts-2026.txt"),
     ((_EAU, r"Male (?:LUTS|Lower Urinary)"), "eau-male-luts-2026.txt"),

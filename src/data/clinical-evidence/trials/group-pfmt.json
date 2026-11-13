@@ -179,12 +179,16 @@
       "doi": "10.1016/j.jphys.2022.06.001",
       "pmid": "35753969",
       "followUp": "1-year economic evaluation",
-      "followUpLocator": "PubMed abstract, Design and Outcome measures",
+      "followUpLocator": "Full text, Method—Design and Outcome measures, p 2; Data analysis, p 3",
       "results": [
         {
           "endpoint": "Participant-perspective cost",
           "role": "secondary",
           "measure": "One-year cost difference per woman, group minus individual, 2019 Canadian dollars",
+          "values": {
+            "group": "CA$539 (SD 233; n=154)",
+            "individual": "CA$1,453 (SD 246; n=165)"
+          },
           "effect": {
             "type": "difference",
             "value": -914,
@@ -193,13 +197,18 @@
               -863
             ]
           },
-          "note": "Economic evaluation alongside the 362-person randomized trial; absolute arm costs were not reported in the abstract.",
-          "locator": "PubMed abstract, Design, Participants, Outcome measures, Results"
+          "met": "not-tested",
+          "note": "Planned secondary economic analysis of 319 one-year completers from 362 randomized women; bootstrap 95% CI; no P value reported.",
+          "locator": "Full text, Method—Design and Data analysis, pp 2–3; Table 2, p 3"
         },
         {
           "endpoint": "Provider-perspective cost",
           "role": "secondary",
           "measure": "One-year cost difference per woman, group minus individual, 2019 Canadian dollars",
+          "values": {
+            "group": "CA$321 (SD 72; n=154)",
+            "individual": "CA$830 (SD 43; n=165)"
+          },
           "effect": {
             "type": "difference",
             "value": -509,
@@ -208,16 +217,67 @@
               -496
             ]
           },
-          "note": "The abstract reports group training was at least 60% less costly across the perspectives studied.",
-          "locator": "PubMed abstract, Outcome measures and Results"
+          "met": "not-tested",
+          "note": "Bootstrap 95% CI; no P value reported. The group arm was at least 60% less costly across both perspectives.",
+          "locator": "Full text, Table 2 and Results, pp 3–4"
+        },
+        {
+          "endpoint": "Mean reduction in urinary incontinence episodes",
+          "role": "secondary",
+          "measure": "Mean percentage reduction at one year among diary completers; group minus individual",
+          "values": {
+            "group": "74% (SD 44; n=153)",
+            "individual": "72% (SD 45; n=165)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 2,
+            "ci": [
+              1.8,
+              2.4
+            ]
+          },
+          "met": "not-tested",
+          "note": "Economic-analysis means, distinct from the primary trial report's median reductions; no P value reported.",
+          "locator": "Full text, Table 3, p 4"
+        },
+        {
+          "endpoint": "Quality-adjusted life years",
+          "role": "secondary",
+          "measure": "One-year mean QALY derived from ICIQ-LUTSqol among participants with utility data",
+          "values": {
+            "group": "0.9815 (SD 0.018; n=151)",
+            "individual": "0.9820 (SD 0.018; n=163)"
+          },
+          "met": "not-tested",
+          "note": "The paper's Table 3 prints conflicting incremental QALY estimates; arm means are retained without an effect estimate.",
+          "locator": "Full text, Method—Effectiveness outcomes, p 3; Tables 3–4, pp 4–5"
+        },
+        {
+          "endpoint": "Net monetary benefit",
+          "role": "secondary",
+          "measure": "Mean one-year net monetary benefit at CA$50,000 willingness to pay per QALY; nonparametric bootstrap incremental benefit, group minus individual",
+          "values": {
+            "group": "Participant: CA$48,537; provider: CA$48,752 (n=151)",
+            "individual": "Participant: CA$47,649; provider: CA$48,272 (n=163)"
+          },
+          "met": "not-tested",
+          "note": "Incremental net monetary benefit: participant CA$828 (95% CI 821–834); provider CA$458 (95% CI 452–464). No P value reported.",
+          "locator": "Full text, Table 4, p 5"
         }
       ],
       "harms": [],
-      "delivery": [],
+      "delivery": [
+        {
+          "label": "Costing assumptions",
+          "value": "The participant-perspective cost table assigns CA$100 for initial assessment plus CA$261 for treatment sessions (CA$361 primary treatment cost) per group participant, versus CA$100 plus CA$1,173 (CA$1,273 primary treatment cost) per individual participant. Provider costing included physiotherapist labour, room and equipment, and follow-up calls.",
+          "locator": "Full text, Table 2, p 3; Method—Cost outcomes, pp 2–3"
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_jphys_2022_06_001.txt",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_jphys_2022_06_001.fulltext.txt",
         "checked": "2026-11-12",
-        "level": "abstract"
+        "level": "full-text"
       }
     }
   ],

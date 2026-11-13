@@ -37,11 +37,11 @@
     ],
     "population": "Patients undergoing radical cystectomy who were scheduled to receive postoperative intravenous opioid patient-controlled analgesia.",
     "description": "Multicenter, double-blind, placebo-controlled randomized trial",
-    "locator": "Lee 2014, PubMed abstract, Design, setting, and participants and Results; Kauf 2014, PubMed abstract, Purpose"
+    "locator": "Full text, Methods, pp 266-267; Fig. 1; Table 1"
   },
   "verdict": "positive",
-  "verdictNote": "GI-2 recovery was faster with alvimopan.",
-  "takeaway": "Oral alvimopan versus placebo accelerated GI-2 recovery after radical cystectomy (5.5 versus 6.8 days; HR 1.8, p < 0.0001) and shortened mean hospital stay in the randomized trial.",
+  "verdictNote": "GI-2 recovery was faster in the 277-patient modified intention-to-treat analysis.",
+  "takeaway": "In the modified intention-to-treat analysis after radical cystectomy, oral alvimopan versus placebo shortened Kaplan–Meier mean GI-2 recovery (5.5 versus 6.8 days; HR 1.773, 95% CI 1.4-2.3; p < 0.0001) and mean hospital stay (7.44 versus 10.07 days).",
   "reports": [
     {
       "id": "alvimopan-cystectomy-2013-economics",
@@ -104,85 +104,140 @@
       "citation": "Lee CT, Chang SS, Kamat AM, et al. \"Alvimopan accelerates gastrointestinal recovery after radical cystectomy: a multicenter randomized placebo-controlled trial.\" *Eur Urol.* 2014;66(2):265-272. doi:10.1016/j.eururo.2014.02.036",
       "doi": "10.1016/j.eururo.2014.02.036",
       "pmid": "24630419",
-      "followUp": "Index postoperative hospital stay",
+      "followUp": "In-hospital efficacy assessment through postoperative day 10; adverse events in the first 30 days after cystectomy; follow-up visit 30 days after discharge",
+      "followUpLocator": "Full text, Methods, pp 266-267; Results, p 268",
       "results": [
         {
           "endpoint": "GI-2 recovery",
           "role": "primary",
           "measure": "Time to both first solid-food tolerance and first bowel movement, days",
           "values": {
-            "exp": "5.5 days",
-            "ctl": "6.8 days"
+            "exp": "5.5 days (n=143 MITT)",
+            "ctl": "6.8 days (n=134 MITT)"
           },
           "effect": {
             "type": "HR",
-            "value": 1.8,
+            "value": 1.773,
+            "ci": [
+              1.4,
+              2.3
+            ],
             "p": "<0.0001"
           },
           "met": true,
-          "note": "Modified intention-to-treat population: 277 of 280 randomized; arm-specific analysis denominators were not in the abstract.",
-          "locator": "PubMed abstract, Outcome measurements and statistical analysis and Results"
+          "note": "Kaplan-Meier mean, with 10-day observation censoring; 12% versus 25% did not achieve GI-2 before discharge or day 10. Three placebo patients were excluded from MITT.",
+          "locator": "Full text, Results, p 267; Table 2 and note, p 269; Fig. 1"
+        },
+        {
+          "endpoint": "Discharge order written",
+          "role": "key-secondary",
+          "measure": "Kaplan-Meier mean time from end of surgery to discharge order, days; censored at 10 days",
+          "values": {
+            "exp": "6.9 days (n=143 MITT)",
+            "ctl": "7.8 days (n=134 MITT)"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 1.668,
+            "ci": [
+              1.3,
+              2.2
+            ],
+            "p": "0.0002"
+          },
+          "met": true,
+          "note": "Second endpoint in the prespecified sequential testing order; 11% versus 27% were censored before discharge or day 10.",
+          "locator": "Full text, Methods, pp 266-267; Results, p 267; Table 2 and note, p 269"
         },
         {
           "endpoint": "Hospital length of stay",
-          "role": "secondary",
+          "role": "key-secondary",
           "measure": "Mean postoperative hospital length of stay, days; mean difference in days",
           "values": {
-            "exp": "7.4 days",
-            "ctl": "10.1 days"
+            "exp": "7.44 days (n=143 MITT)",
+            "ctl": "10.07 days (n=134 MITT)"
           },
           "effect": {
             "type": "difference",
-            "value": -2.7,
+            "value": -2.63,
             "p": "0.0051"
           },
-          "note": "Mean difference in days, alvimopan minus placebo, calculated from reported group means.",
-          "locator": "PubMed abstract, Results"
+          "met": true,
+          "note": "Third endpoint in the prespecified sequential testing order; difference in days, alvimopan minus placebo, as reported in Table 2.",
+          "locator": "Full text, Methods, pp 266-267; Table 2, p 269"
         },
         {
           "endpoint": "Postoperative ileus-related morbidity",
           "role": "secondary",
           "measure": "Patients with postoperative ileus-related morbidity; risk difference in percentage points",
           "values": {
-            "exp": "8.4%",
-            "ctl": "29.1%"
+            "exp": "8.4% (n=143 MITT)",
+            "ctl": "29.1% (n=134 MITT)"
           },
           "effect": {
             "type": "difference",
             "value": -20.7,
             "p": "<0.001"
           },
-          "note": "Risk difference in percentage points, alvimopan minus placebo, calculated from reported percentages; event counts were not in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "met": true,
+          "note": "Fourth endpoint in the prespecified sequential testing order; includes nasogastric tube insertion (7.7% versus 24.6%), prolonged stay due to ileus, or ileus readmission within 7 days (one patient per arm).",
+          "locator": "Full text, Methods, p 266; Results, pp 267-268; Table 2, p 269; Fig. 3, p 270"
         }
       ],
       "harms": [
         {
           "label": "Postoperative ileus adverse events",
           "values": {
-            "exp": "7%",
-            "ctl": "26%"
+            "exp": "10/143 (7.0%)",
+            "ctl": "36/137 (26.3%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Event counts and safety arm denominators were not reported in the abstract."
+          "locator": "Full text, Table 3, p 270",
+          "note": "Treatment-emergent adverse event in the safety population; p < 0.001."
         },
         {
           "label": "Serious postoperative ileus adverse events",
           "values": {
-            "exp": "5%",
-            "ctl": "20%"
+            "exp": "4.9% (safety n=143)",
+            "ctl": "20.4% (safety n=137)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Event counts and safety arm denominators were not reported in the abstract."
+          "locator": "Full text, Results, p 268",
+          "note": "Nonfatal serious adverse event; event counts were not printed."
         },
         {
           "label": "Cardiovascular adverse events",
           "values": {
-            "exp": "8.4%",
-            "ctl": "15.3%"
+            "exp": "12/143 (8.4%)",
+            "ctl": "21/137 (15.3%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Independently adjudicated; p = 0.09. Event counts and safety arm denominators were not reported in the abstract."
+          "locator": "Full text, Results, p 268; Table 3, p 270",
+          "note": "Independently adjudicated cardiovascular events of interest; estimated relative risk 0.55; p = 0.09."
+        },
+        {
+          "label": "Serious adverse events and deaths",
+          "values": {
+            "exp": "SAEs 25.7% (reported); deaths 5/143 (3.5%)",
+            "ctl": "SAEs 48.9% (reported); deaths 4/137 (2.9%)"
+          },
+          "locator": "Full text, Results, p 268",
+          "note": "Safety population n=143 and n=137; SAE counts were not printed, and 25.7% does not round from an integer numerator over 143. No deaths were considered related to study medication."
+        },
+        {
+          "label": "Urinary tract infection serious adverse events",
+          "values": {
+            "exp": "3.5% (safety n=143)",
+            "ctl": "1.5% (safety n=137)"
+          },
+          "locator": "Full text, Results, p 268",
+          "note": "Serious adverse event; event counts were not printed."
+        },
+        {
+          "label": "All-cause readmission within 30 days",
+          "values": {
+            "exp": "23.8% (MITT n=143)",
+            "ctl": "26.9% (MITT n=134)"
+          },
+          "locator": "Full text, Results, p 268",
+          "note": "No statistically significant difference (p = 0.58); event counts were not printed."
         }
       ],
       "delivery": [
@@ -192,13 +247,22 @@
             "exp": "12 mg",
             "ctl": "matching placebo"
           },
-          "locator": "PubMed abstract, Intervention",
-          "note": "Maximum 15 inpatient doses."
+          "locator": "Full text, Methods, p 266",
+          "note": "One dose 30 minutes to 5 hours before surgery, then twice daily until discharge or 7 days; maximum 15 inpatient doses. Both arms had ambulation encouraged on postoperative day 1, liquids offered on day 3, solids on day 4, no epidural analgesia, and at most two opioid-sparing NSAID doses."
+        },
+        {
+          "label": "Surgical approach and operative duration",
+          "values": {
+            "exp": "Open 122/143 (85.3%); mean surgery duration 5.8 hours",
+            "ctl": "Open 114/137 (83.2%); mean surgery duration 5.8 hours"
+          },
+          "locator": "Full text, Table 1, p 268",
+          "note": "Among 21 high-volume academic sites; urinary diversion types differed between arms."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2014_02_036.txt",
-        "level": "abstract",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2014_02_036.fulltext.txt",
+        "level": "full-text",
         "checked": "2026-11-12"
       }
     }
@@ -206,7 +270,7 @@
   "relations": [],
   "page": "/docs/clinical-evidence/studies/alvimopan-cystectomy",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

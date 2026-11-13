@@ -227,7 +227,7 @@
       "doi": "10.3310/hta24700",
       "pmid": "33289476",
       "followUp": "24-month clinical and economic assessment",
-      "followUpLocator": "PubMed abstract, Main outcome measures and Results",
+      "followUpLocator": "Full text, Methods, p 8; Table 6, p 19; Table 23, p 42",
       "results": [
         {
           "endpoint": "ICIQ-UI SF severity",
@@ -248,25 +248,72 @@
           },
           "met": false,
           "note": "The HTA reports the same trial and primary endpoint as the BMJ article.",
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Scientific summary, p xxiii; Table 6, p 19"
+        },
+        {
+          "endpoint": "Incremental cost per quality-adjusted life-year",
+          "role": "primary",
+          "measure": "24-month imputed base-case NHS cost-effectiveness, with therapist-reported appointment duration",
+          "values": {
+            "exp": "£956 mean cost; 1.568 QALYs",
+            "ctl": "£906 mean cost; 1.567 QALYs"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": false,
+          "note": "Incremental cost £50; QALY gain 0.0009; ICER £56,617 per QALY exceeded the £20,000–30,000 cost-effectiveness threshold; probability 48.8% at £20,000 per QALY.",
+          "locator": "Full text, Health economic evaluation, pp 34, 40–42, Table 23"
         }
       ],
-      "harms": [],
+      "harms": [
+        {
+          "label": "Participants with a non-serious adverse event",
+          "values": {
+            "exp": "34",
+            "ctl": "14"
+          },
+          "note": "Events related or possibly related to intervention: 21 versus 2 participants; serious adverse events: 6 versus 2 events, all unrelated. No separate adverse-event safety denominator was reported.",
+          "locator": "Full text, Adverse events, p 27"
+        }
+      ],
       "delivery": [
         {
           "label": "Process evaluation",
-          "value": "The biofeedback group received an intensified intervention; both groups received core PFMT components, and adherence was similar.",
-          "locator": "PubMed abstract, Results"
+          "value": "Therapist checklists and appointment recordings found that the biofeedback group received additional biofeedback components while basic PFMT components were delivered in both groups; optional components were seldom used. Therapist-recorded home programme adherence between appointments was 220/281 (78.3%) versus 241/297 (81.1%).",
+          "locator": "Full text, Table 13, p 27; Process evaluation, pp 51–52, 61–62"
         },
         {
-          "label": "Cost-effectiveness probability",
-          "value": "48% at a £20,000 willingness-to-pay threshold per quality-adjusted life-year",
-          "locator": "PubMed abstract, Results"
+          "label": "Treatment as allocated under prespecified protocol definition",
+          "values": {
+            "exp": "198/266 (74.4%)",
+            "ctl": "230/276 (83.3%)"
+          },
+          "note": "Post hoc allowance for biofeedback introduction by appointment 2 gave 222/266 (83.5%) in the biofeedback arm.",
+          "locator": "Full text, Intervention received, pp 14–16"
+        },
+        {
+          "label": "PFMT at least weekly at 24 months",
+          "values": {
+            "exp": "90/173 (52.0%)",
+            "ctl": "87/188 (46.3%)"
+          },
+          "note": "Participant-reported exercise during the preceding month; once weekly or more often.",
+          "locator": "Full text, Table 14, p 28"
+        },
+        {
+          "label": "Cumulative incontinence surgery over 24 months",
+          "values": {
+            "exp": "10/81 (12.3%)",
+            "ctl": "8/86 (9.3%)"
+          },
+          "note": "Restricted to women with complete treatment-uptake data; adjusted OR 1.25 (95% CI 0.35–4.46).",
+          "locator": "Full text, Table 9, p 23"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_3310_hta24700.txt",
-        "level": "abstract",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_3310_hta24700.fulltext.txt",
+        "level": "full-text",
         "checked": "2026-11-12"
       }
     }

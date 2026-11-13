@@ -208,30 +208,94 @@
       "doi": "10.3310/UKYW4923",
       "pmid": "40620147",
       "followUp": "Within-trial follow-up to 15 or 24 months; lifetime cost-effectiveness model",
-      "followUpLocator": "PubMed abstract, Design and Conclusion; Lancet 2025 p1062, economic analysis",
+      "followUpLocator": "Full text, Chapter 5, Methods, pp 41–44",
       "results": [
         {
-          "endpoint": "Incremental NHS cost",
-          "role": "secondary",
-          "measure": "Mean cost difference per participant, urodynamics plus assessment minus assessment alone",
+          "endpoint": "Lifetime cost-effectiveness",
+          "role": "primary",
+          "measure": "Modelled lifetime NHS cost and QALYs per participant",
           "values": {
-            "exp": "£463 higher",
-            "ctl": "reference"
+            "exp": "£37,818; 11.245 QALYs",
+            "ctl": "£36,438; 11.247 QALYs"
           },
           "effect": {
             "type": "difference",
-            "value": 463
+            "value": 1380
           },
-          "note": "Incremental QALYs 0.011; ICER £42,643 per QALY gained; 34% probability of cost-effectiveness at £20,000/QALY willingness to pay. Costs, QALYs, ICER, and cost-effectiveness probability are from the within-trial analysis.",
-          "locator": "PubMed abstract, Results"
+          "met": false,
+          "note": "Urodynamics was dominated: £1,380 higher cost and 0.002 fewer QALYs; 23.4% probability of cost-effectiveness at £20,000 per QALY. The model extrapolated beyond trial follow-up using external evidence; no confidence interval or P value was reported for this estimate.",
+          "locator": "Full text, Chapter 5, Table 21, p 52"
+        },
+        {
+          "endpoint": "Incremental NHS cost",
+          "role": "secondary",
+          "measure": "Estimated 24-month mean NHS cost per participant, multiple-imputation analysis",
+          "values": {
+            "exp": "£3,907.33 (n=550; imputed)",
+            "ctl": "£3,444.78 (n=549; imputed)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 462.55,
+            "ci": [
+              48.1,
+              877.01
+            ]
+          },
+          "met": "not-tested",
+          "note": "Within-trial analysis of all 1,099 participants with imputed missing data; ICER £42,643 per QALY gained and 33.82% probability of cost-effectiveness at £20,000 per QALY. Complete-case sensitivity analysis gave 67.26% probability at the same threshold. No P value was reported for the cost difference.",
+          "locator": "Full text, Chapter 5, Tables 16 and 20, pp 48, 50"
+        },
+        {
+          "endpoint": "Incremental QALYs",
+          "role": "secondary",
+          "measure": "Estimated 24-month QALYs per participant, multiple-imputation analysis",
+          "values": {
+            "exp": "1.315 (n=550; imputed)",
+            "ctl": "1.304 (n=549; imputed)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.011,
+            "ci": [
+              -0.044,
+              0.065
+            ]
+          },
+          "met": "not-tested",
+          "note": "Within-trial analysis of all 1,099 participants with imputed missing data; no P value was reported for the QALY difference.",
+          "locator": "Full text, Chapter 5, Table 18, p 49"
         }
       ],
-      "harms": [],
-      "delivery": [],
+      "harms": [
+        {
+          "label": "Serious adverse events",
+          "value": "9/1099 participants",
+          "note": "Five deaths were unrelated to trial participation; four expected serious events comprised an anaesthetic complication, hospitalised possible pyelonephritis/UTI, and two instances of self-catheterisation after botulinum toxin A. Arm-specific counts and Clavien-Dindo grades were not reported.",
+          "locator": "Full text, Chapter 4, Safety data, p 39"
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Allocated assessment received",
+          "values": {
+            "exp": "491/550 (89.3%)",
+            "ctl": "522/549 (95.1%)"
+          },
+          "note": "Eight assigned to assessment alone underwent urodynamics; 13 assigned to urodynamics received assessment alone.",
+          "locator": "Full text, Chapter 4, Intervention details, p 22"
+        },
+        {
+          "label": "Botulinum toxin A dose in treatment pathway",
+          "value": "100 units",
+          "note": "For women with detrusor overactivity, the treatment pathway allowed either botulinum toxin A or a sacral neuromodulation test after local discussion; treatment availability varied by unit.",
+          "locator": "Full text, Chapter 2, Treatment pathway following intervention, p 11"
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_3310_ukyw4923.txt",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_3310_ukyw4923.fulltext.txt",
         "checked": "2026-11-12",
-        "level": "abstract"
+        "level": "full-text"
       }
     }
   ],

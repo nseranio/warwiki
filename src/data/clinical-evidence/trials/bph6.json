@@ -20,26 +20,28 @@
     "randomized": true,
     "blinding": "open-label",
     "type": "noninferiority",
-    "n": 80,
+    "n": 91,
     "arms": [
       {
         "key": "exp",
         "label": "Prostatic urethral lift",
+        "n": 46,
         "role": "experimental"
       },
       {
         "key": "ctl",
         "label": "transurethral resection of the prostate",
+        "n": 45,
         "role": "control"
       }
     ],
-    "population": "Men with BPH-related lower urinary tract symptoms who were candidates for TURP, aged at least 50 years, with IPSS above 12, Qmax at most 15 mL/s, and prostate volume at most 60 cc.",
+    "population": "Sexually active men with BPH-related lower urinary tract symptoms who were candidates for TURP, aged at least 50 years, with IPSS above 12, Qmax at most 15 mL/s, prostate volume at most 60 cc, and no obstructive median lobe or current urinary retention.",
     "description": "Ten-center, open-label randomized noninferiority trial",
-    "locator": "Sønksen 2015, PubMed abstract, Methods; Gratzke 2017, full text, Study Protocol and Procedure"
+    "locator": "Full text, Table 1 and Fig. 2; Study Protocol and Procedure, p 644"
   },
   "verdict": "positive",
-  "verdictNote": "The novel BPH6 composite favored PUL; later symptom and flow gains favored TURP.",
-  "takeaway": "Prostatic urethral lift was noninferior and superior to TURP on the 12-month BPH6 composite responder endpoint; both relieved symptoms, while lift favored ejaculation preservation and recovery.",
+  "verdictNote": "The 12-month composite favored PUL; symptom and flow gains favored TURP.",
+  "takeaway": "Among 79 treated men analyzed, prostatic urethral lift was noninferior and superior to TURP on the 12-month BPH6 composite (23/44 [52%] vs 7/35 [20%]); TURP improved symptoms more, while lift favored recovery and ejaculatory preservation.",
   "reports": [
     {
       "id": "bph6-2015",
@@ -51,36 +53,119 @@
       "doi": "10.1016/j.eururo.2015.04.024",
       "pmid": "25937539",
       "followUp": "12 months",
-      "followUpLocator": "PubMed abstract, title and Results",
+      "followUpLocator": "Full text, title and Study Endpoint and Statistical Methods, pp 643–645",
       "results": [
         {
           "endpoint": "BPH6 composite responder endpoint",
           "role": "primary",
-          "measure": "12-month composite of symptom relief, recovery, erectile and ejaculatory preservation, continence preservation, and safety",
+          "measure": "12-month response on all six components: at least 30% IPSS reduction, recovery VAS at least 70 by 1 month, preserved erectile function and ejaculation, ISI at most 4, and no treatment-related Clavien-Dindo grade II+ event",
+          "values": {
+            "exp": "23/44 (52.3%)",
+            "ctl": "7/35 (20.0%)"
+          },
           "effect": {
-            "type": "none"
+            "type": "difference",
+            "value": 32,
+            "ci": [
+              10,
+              51
+            ],
+            "p": "0.005"
           },
           "met": true,
-          "note": "The abstract reports both noninferiority and superiority of PUL; it gives no arm-specific responder rates or confidence limit.",
-          "locator": "PubMed abstract, Outcome Measurements and Results"
+          "note": "Treated analysis: 44 PUL and 35 TURP after 91 randomized and 80 treated; noninferiority margin 10 percentage points, one-sided P less than 0.0001, then superiority P=0.005. The recovery threshold was changed from 80 to 70 and sexual-function elements to sustained assessment.",
+          "locator": "Full text, Study Endpoint and Statistical Methods, pp 644–645; Fig. 2, p 646; Results, p 649; Table 5, p 650"
         },
         {
-          "endpoint": "Ejaculatory function preservation and quality of recovery",
+          "endpoint": "Ejaculatory function preservation",
           "role": "secondary",
-          "measure": "Between-arm comparisons during 12-month follow-up",
+          "measure": "BPH6 ejaculation component: semen emission sustained during 12 months",
+          "values": {
+            "exp": "100%",
+            "ctl": "61%"
+          },
           "effect": {
             "type": "none",
-            "p": "<0.01"
+            "p": "<0.0001"
           },
-          "note": "Both favored PUL; the abstract does not give arm-specific rates.",
-          "locator": "PubMed abstract, Results"
+          "note": "Component comparison, not a separate primary endpoint; denominator was not stated for this component.",
+          "locator": "Full text, Table 2, p 645; Results, p 647; Table 5, p 650"
+        },
+        {
+          "endpoint": "Quality of recovery",
+          "role": "secondary",
+          "measure": "BPH6 recovery component: visual analogue score at least 70/100 by 1 month",
+          "values": {
+            "exp": "82%",
+            "ctl": "53%"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 29,
+            "ci": [
+              6,
+              49
+            ],
+            "p": "0.008"
+          },
+          "note": "The original 80/100 threshold yielded 57% versus 32%; component denominators were not stated.",
+          "locator": "Full text, Study Endpoint and Statistical Methods, p 644; Results, p 646; Table 5, p 650"
+        },
+        {
+          "endpoint": "IPSS",
+          "role": "secondary",
+          "measure": "Mean paired change from baseline at 12 months; larger reduction favors TURP",
+          "values": {
+            "exp": "−11.4 points (n=41)",
+            "ctl": "−15.4 points (n=32)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -4.0,
+            "ci": [
+              -7.7,
+              -0.4
+            ],
+            "p": "0.02"
+          },
+          "note": "Adjusted difference is TURP minus PUL in paired change; the separate BPH6 symptom-response component was 73% versus 91% (P=0.05).",
+          "locator": "Full text, Table 4, p 648; Table 5, p 650"
         }
       ],
-      "harms": [],
-      "delivery": [],
+      "harms": [
+        {
+          "label": "Treatment-related Clavien-Dindo events and selected adverse events through 12 months",
+          "values": {
+            "exp": "grade I 30/44 (68%); grade II 3/44 (7%); grade IIIb 4/44 (9%); retention 4/44 (9%); UTI 3/44 (7%); retrograde ejaculation 0/44",
+            "ctl": "grade I 26/35 (74%); grade II 4/35 (11%); grade IIIb 5/35 (14%); retention 0/35; UTI 2/35 (6%); retrograde ejaculation 7/35 (20%)"
+          },
+          "locator": "Full text, Table 6, p 650",
+          "note": "Grades are patient counts within each grade, not mutually exclusive totals; no grade IIIa events were reported. TURP grade IIIb events included bleeding, stricture, and secondary treatment."
+        },
+        {
+          "label": "Reintervention within 12 months",
+          "values": {
+            "exp": "3/44 (7%); all for recurrent LUTS",
+            "ctl": "5/35 (14%); 2 for bleeding, 1 urethral stricture, 2 for recurrent LUTS"
+          },
+          "locator": "Full text, Results, p 649; Table 7, p 650",
+          "note": "Secondary treatment for recurrent LUTS alone was 3/44 (6.8%) versus 2/35 (5.7%); overall reintervention P=0.5."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Procedure and early recovery",
+          "values": {
+            "exp": "mean 4.7 implants (n=44); mean anesthesia time 55 min (n=44); discharge 1.0 d (n=44); return to activity 11 d (n=43); catheter >24 h in 45%",
+            "ctl": "12 unipolar and 23 bipolar TURPs; mean anesthesia time 71 min (n=35); discharge 1.9 d (n=35); return to activity 17 d (n=32); catheter >24 h in 74%"
+          },
+          "locator": "Full text, Study Protocol and Procedure, p 644; Fig. 2 and Table 3, p 646; Results, p 646",
+          "note": "PUL used permanent lateral-lobe retraction implants; surgeon experience before enrollment was 0–20 PUL procedures versus extensive TURP experience."
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2015_04_024.txt",
-        "level": "abstract",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2015_04_024.fulltext.txt",
+        "level": "full-text",
         "checked": "2026-11-12"
       }
     },
@@ -232,7 +317,7 @@
   "relations": [],
   "page": "/docs/clinical-evidence/studies/bph6",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

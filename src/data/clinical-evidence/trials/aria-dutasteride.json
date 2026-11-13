@@ -41,7 +41,7 @@
     "locator": "PubMed abstract, Methods; Debruyne 2004 PubMed abstract, Objectives"
   },
   "verdict": "positive",
-  "verdictNote": "The abstract omits prespecified endpoints and arm-specific event rates.",
+  "verdictNote": "The 48-month comparison was open-label; both groups received dutasteride after month 24.",
   "takeaway": "Across three randomized ARIA trials, dutasteride improved symptom score and peak flow and reduced acute urinary retention and BPH surgery compared with placebo over 24 months in men with symptomatic enlarged prostates.",
   "reports": [
     {
@@ -160,35 +160,99 @@
       "doi": "10.1016/j.eururo.2004.05.008",
       "pmid": "15363566",
       "followUp": "48 months, including a 24-month open-label extension",
-      "followUpLocator": "PubMed abstract, Objectives and Methods",
+      "followUpLocator": "Full text, Materials and methods, p 489",
       "results": [
         {
-          "endpoint": "Symptoms, flow and prostate volume",
+          "endpoint": "AUA Symptom Index",
           "role": "descriptive",
-          "measure": "Change from month 24 to month 48",
+          "measure": "Mean change from original baseline at month 48, open-label ITT",
           "values": {
-            "exp": "continued dutasteride: further improvement",
-            "ctl": "placebo switched to dutasteride: further improvement"
+            "exp": "−6.5 points (D/D; 1,188 entered extension)",
+            "ctl": "−5.6 points (P/D; 1,152 entered extension)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "Between-group comparison at month 48; both groups also improved from month 24 (p<0.001 each). No confidence interval reported. Open-label ITT denominators are enrollment counts, not month-48 measurement counts.",
+          "locator": "Full text, Results §3.3, pp 490–491; Table 2"
+        },
+        {
+          "endpoint": "Peak urinary flow",
+          "role": "descriptive",
+          "measure": "Mean Qmax change from original baseline at month 48, open-label ITT",
+          "values": {
+            "exp": "+2.7 mL/s (D/D; 1,188 entered extension)",
+            "ctl": "+1.9 mL/s (P/D; 1,152 entered extension)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.042"
+          },
+          "note": "Between-group comparison at month 48; D/D improved from month 24 (p=0.007) and P/D improved after switching (p<0.001). No confidence interval reported.",
+          "locator": "Full text, Results §3.3, p 491; Fig. 5"
+        },
+        {
+          "endpoint": "Total prostate volume",
+          "role": "descriptive",
+          "measure": "Mean percentage change from original baseline at month 48, open-label ITT",
+          "values": {
+            "exp": "−27.3% (D/D; 1,188 entered extension)",
+            "ctl": "−21.7% (P/D; 1,152 entered extension)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "Between-group comparison at month 48. From month 24 to 48, TPV decreased in P/D (p<0.001), but the further D/D decrease did not reach significance (p=0.07). No confidence interval reported.",
+          "locator": "Full text, Results §3.3, p 490; Fig. 2"
+        },
+        {
+          "endpoint": "Acute urinary retention and BPH-related surgery",
+          "role": "descriptive",
+          "measure": "Crude incidence through month 48, double-blind ITT denominators; both groups received dutasteride after month 24",
+          "values": {
+            "exp": "AUR 2.4%; BPH-related surgery 2.6% (D/D; n=2,167)",
+            "ctl": "AUR 5.1%; BPH-related surgery 4.5% (P/D; n=2,158)"
           },
           "effect": {
             "type": "none"
           },
-          "note": "At month 48 the continued-dutasteride group had significantly greater symptom and flow improvement and volume reduction; all patients received dutasteride in the extension.",
-          "locator": "PubMed abstract, Methods and Results"
+          "note": "AUR and surgery caused study withdrawal; the 48-month figures retain original double-blind ITT denominators. The paper reports percentages without event counts or confidence intervals.",
+          "locator": "Full text, Materials and methods, p 490; Table 4, p 493"
         }
       ],
-      "harms": [],
+      "harms": [
+        {
+          "label": "New drug-related sexual adverse events, months 24–36",
+          "values": {
+            "exp": "Impotence 1.4%; decreased libido 0.4%; ejaculation disorders 0.3% (D/D; n=1,188)",
+            "ctl": "Impotence 2.8%; decreased libido 2.4%; ejaculation disorders 1.2% (P/D; n=1,152)"
+          },
+          "note": "P/D patients initiated dutasteride at month 24; D/D patients continued it. Table reports onset percentages without event counts.",
+          "locator": "Full text, Table 5, p 493"
+        },
+        {
+          "label": "New drug-related adverse events and gynaecomastia, months 24–36",
+          "values": {
+            "exp": "Any drug-related event 6.4%; gynaecomastia 1.8% (D/D; n=1,188)",
+            "ctl": "Any drug-related event 10.5%; gynaecomastia 1.3% (P/D; n=1,152)"
+          },
+          "note": "Gynaecomastia includes breast or nipple tenderness and enlargement. Table reports onset percentages without event counts.",
+          "locator": "Full text, Table 5, p 493"
+        }
+      ],
       "delivery": [
         {
           "label": "Open-label extension",
-          "value": "Patients from all three pivotal trials were eligible; both original groups received dutasteride 0.5 mg daily during the 24-month extension.",
-          "locator": "PubMed abstract, Objectives and Methods"
+          "value": "Of 4,325 randomized men, 2,340 entered the optional 24-month open-label extension (D/D 1,188; P/D 1,152); both groups received dutasteride 0.5 mg daily.",
+          "locator": "Full text, Materials and methods, p 489; Results §3.1, p 490"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2004_05_008.txt",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2004_05_008.fulltext.txt",
         "checked": "2026-11-12",
-        "level": "abstract"
+        "level": "full-text"
       }
     }
   ],

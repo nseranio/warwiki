@@ -20,24 +20,24 @@
     "randomized": true,
     "blinding": "double-blind",
     "type": "superiority",
-    "n": 360,
+    "n": 363,
     "arms": [
       {
         "key": "exp",
         "label": "Alfuzosin 10 mg once daily",
-        "n": 236,
+        "n": 240,
         "role": "experimental"
       },
       {
         "key": "ctl",
         "label": "placebo",
-        "n": 121,
+        "n": 123,
         "role": "control"
       }
     ],
-    "population": "360 men with a first episode of spontaneous acute urinary retention attributed to benign prostatic hyperplasia underwent emergency catheterization.",
-    "description": "Double-blind, placebo-controlled randomized trial with second-phase rerandomization",
-    "locator": "McNeill 2004, PubMed abstract, Materials and methods; McNeill 2005, PubMed abstract, Methods and Results"
+    "population": "363 men older than 50 years with a first episode of spontaneous acute urinary retention attributed to benign prostatic hyperplasia and 500–1500 mL drained at emergency catheterization were randomized; 360 received first-phase treatment.",
+    "description": "Double-blind, placebo-controlled randomized trial at 71 centers in Europe and South Africa with second-phase rerandomization",
+    "locator": "Full text (2005 report), Methods, p 84; Table I, p 85"
   },
   "verdict": "positive",
   "verdictNote": "The initial voiding-trial endpoint improved; six-month surgery incidence did not differ significantly.",
@@ -71,7 +71,7 @@
             "p": "0.012"
           },
           "met": true,
-          "note": "Risk difference calculated from reported rounded percentages; endpoint denominators total 357, leaving three of 360 randomized participants unaccounted for in the abstract.",
+          "note": "Risk difference calculated from reported rounded percentages; TWOC data were available for 357 patients (236/121).",
           "locator": "PubMed abstract, Results"
         }
       ],
@@ -100,46 +100,127 @@
       "citation": "McNeill SA, Hargreave TB, Roehrborn CG; Alfaur Study Group. \"Alfuzosin 10 mg once daily in the management of acute urinary retention: results of a double-blind placebo-controlled study.\" *Urology.* 2005;65(1):83-89. doi:10.1016/j.urology.2004.07.042",
       "doi": "10.1016/j.urology.2004.07.042",
       "pmid": "15667868",
-      "followUp": "Six months after blinded rerandomization of successful voiding-trial participants.",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUp": "Six months after blinded rerandomization of successful voiding-trial participants; 169 were rerandomized and 165 received treatment.",
+      "followUpLocator": "Full text, Results, p 85; Table I, p 85",
       "results": [
         {
           "endpoint": "BPH surgery after successful trial without catheter",
           "role": "primary",
-          "measure": "Six-month BPH surgery; risk difference in percentage points",
+          "measure": "Six-month BPH surgery; Kaplan–Meier surgery-free survival difference in percentage points",
           "values": {
             "exp": "14/82 (17.1%)",
             "ctl": "20/83 (24.1%)"
           },
           "effect": {
             "type": "difference",
-            "value": -7.0
+            "value": 8.3,
+            "ci": [
+              -4.6,
+              21.3
+            ],
+            "p": "0.20"
           },
           "met": false,
-          "note": "Separate second-phase randomization of 165 successful voiding-trial participants; difference calculated from rounded percentages. The abstract reports a six-month Kaplan–Meier surgery-free survival difference of 8.3 percentage points (P = 0.20).",
-          "locator": "PubMed abstract, Methods and Results"
+          "note": "Of 204 successful TWOCs, 169 were rerandomized (85/84) and 165 received treatment (82/83); the effect is the reported surgery-free survival difference, not the raw surgery-risk difference.",
+          "locator": "Full text, Results, p 85; Table I, p 85"
+        },
+        {
+          "endpoint": "BPH surgery at one month after successful trial without catheter",
+          "role": "primary",
+          "measure": "One-month BPH surgery; Kaplan–Meier surgery-free survival difference in percentage points",
+          "values": {
+            "exp": "5/82 (6.1%)",
+            "ctl": "13/83 (15.7%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 9.6,
+            "ci": [
+              0.2,
+              19.0
+            ],
+            "p": "0.04"
+          },
+          "met": true,
+          "note": "Event counts come from 5/14 and 13/20 of the respective six-month surgery totals; percentages use the 82/83 treatment-exposed denominators.",
+          "locator": "Full text, Abstract, p 83; Results, p 85"
+        },
+        {
+          "endpoint": "BPH surgery at three months after successful trial without catheter",
+          "role": "primary",
+          "measure": "Three-month BPH surgery; Kaplan–Meier surgery-free survival difference in percentage points",
+          "values": {
+            "exp": "8/82 (9.8%)",
+            "ctl": "17/83 (20.5%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 11.4,
+            "ci": [
+              0.3,
+              22.4
+            ],
+            "p": "0.04"
+          },
+          "met": true,
+          "note": "Event counts come from 8/14 and 17/20 of the respective six-month surgery totals; percentages use the 82/83 treatment-exposed denominators.",
+          "locator": "Full text, Abstract, p 83; Results, p 85"
+        },
+        {
+          "endpoint": "Lower urinary tract symptoms and bother at treatment end",
+          "role": "descriptive",
+          "measure": "Last-assessed IPSS and IPSS bother score",
+          "values": {
+            "exp": "IPSS 8.75; bother 1.66",
+            "ctl": "IPSS 11.45; bother 2.27"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "note": "IPSS P = 0.012; bother-score P = 0.004. The paper does not designate these as secondary endpoints or give a prespecified success threshold, arm-specific numbers assessed, or confidence intervals.",
+          "locator": "Full text, Results, pp 85–86"
         }
       ],
-      "harms": [],
+      "harms": [
+        {
+          "label": "Serious adverse events and adverse-event withdrawals during second phase",
+          "values": {
+            "exp": "serious events 4.8%; withdrawals 1/82 (1.2%)",
+            "ctl": "serious events 4.9%; withdrawals 4/83 (4.8%)"
+          },
+          "locator": "Full text, Safety, p 86",
+          "note": "Serious-event percentages are published without event counts or explicit event denominators; 82/83 received second-phase treatment."
+        },
+        {
+          "label": "Potentially vasodilatory adverse events during second phase",
+          "values": {
+            "exp": "0/82",
+            "ctl": "0/83"
+          },
+          "locator": "Full text, Safety, p 86",
+          "note": "Dizziness, postural hypotension or hypotension, malaise, and syncope were grouped; none occurred in the second phase."
+        }
+      ],
       "delivery": [
         {
           "label": "Second-phase treatment",
-          "value": "Participants with successful trial without catheter were blindly rerandomized to alfuzosin 10 mg once daily or placebo for six months; BPH surgery was assessed at one, three, and six months.",
-          "locator": "PubMed abstract, Methods"
+          "value": "Of 204 men with successful trial without catheter, 169 were blindly rerandomized (85 alfuzosin, 84 placebo); 165 received six months of assigned alfuzosin 10 mg once daily (82) or placebo (83). BPH surgery was assessed at one, three, and six months. Scheduled surgery criteria included peak flow below 5 mL/s, postvoid residual above 350 mL, IPSS above 25, recurrent urinary tract infection, progressive uropathy, macroscopic hematuria, and patient request.",
+          "locator": "Full text, Methods, p 84; Results and Table I, p 85"
         },
         {
           "label": "Emergency surgery after retention relapse",
           "values": {
-            "exp": "11/14 (78.6%) of those requiring BPH surgery",
-            "ctl": "16/20 (80.0%) of those requiring BPH surgery"
+            "exp": "11/82 (13.4%) treated; 11/14 (78.6%) of those requiring surgery",
+            "ctl": "16/83 (19.3%) treated; 16/20 (80.0%) of those requiring surgery"
           },
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Results, p 85"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_urology_2004_07_042.txt",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_urology_2004_07_042.fulltext.txt",
         "checked": "2026-11-12",
-        "level": "abstract"
+        "level": "full-text"
       }
     }
   ],

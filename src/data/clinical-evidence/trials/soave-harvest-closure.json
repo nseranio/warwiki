@@ -18,7 +18,7 @@
   "design": {
     "phase": "not applicable",
     "randomized": true,
-    "blinding": "not stated in abstract",
+    "blinding": "Allocation concealed until buccal graft harvest; postoperative blinding not stated",
     "type": "noninferiority",
     "n": 135,
     "arms": [
@@ -35,13 +35,13 @@
         "role": "control"
       }
     ],
-    "population": "135 patients with urethral stricture treated by buccal mucosa graft substitution urethroplasty.",
-    "description": "Randomized noninferiority trial of cheek donor-site management",
-    "locator": "PubMed abstract, Design, setting, and participants; Intervention; Results and limitations"
+    "population": "135 men with urethral stricture analyzed after unilateral buccal harvest for single-stage substitution urethroplasty; 163 consented and 28 were excluded after intraoperative changes.",
+    "description": "Randomized noninferiority trial of cheek donor-site management performed by six reconstructive surgeons",
+    "locator": "Full text, Methods, pp 2–3; Results, p 3; Table 1"
   },
-  "verdict": "noninferior",
-  "verdictNote": "Nonclosure met the reported noninferiority conclusion for pain intensity and affective quality.",
-  "takeaway": "Among patients undergoing buccal graft substitution urethroplasty, leaving the cheek harvest site open was noninferior to closure for oral pain intensity and affective pain quality at each assessed postoperative time point.",
+  "verdict": "mixed",
+  "verdictNote": "Intensity and affective pain met noninferiority throughout; sensory and total pain only at day 21 and month 3.",
+  "takeaway": "In 135 analyzed men after unilateral buccal graft urethroplasty, donor-site nonclosure was noninferior to closure for oral pain intensity and affective quality at all five postoperative assessments; sensory and total pain met noninferiority only at day 21 and month 3.",
   "reports": [
     {
       "id": "soave-harvest-closure-2018",
@@ -53,91 +53,139 @@
       "doi": "10.1016/j.eururo.2017.11.014",
       "pmid": "29198583",
       "followUp": "Questionnaires through 6 months after urethroplasty",
-      "followUpLocator": "PubMed abstract, Intervention",
+      "followUpLocator": "Full text, Methods, Questionnaire, p 3",
       "results": [
         {
           "endpoint": "Oral pain intensity",
           "role": "primary",
-          "measure": "Noninferiority of nonclosure versus closure at each postoperative assessment",
+          "measure": "11-point numeric rating scale; model-estimated nonclosure-minus-closure difference at postoperative days 1, 5, and 21 and months 3 and 6; one-point noninferiority margin",
           "effect": {
             "type": "none"
           },
           "met": true,
-          "note": "The abstract reports noninferiority but gives no arm scores, margin, effect estimate, or confidence interval.",
-          "locator": "PubMed abstract, Outcome measurements and statistical analysis; Results and limitations"
+          "note": "Noninferior at all five time points. Figure 1 plots model-estimated means, differences, and 95% confidence intervals without numeric labels in the supplied text; supplementary mean scores are absent.",
+          "locator": "Full text, Methods, Statistical analysis, p 3; Results, p 3; Fig. 1, p 5"
         },
         {
           "endpoint": "Affective quality of oral pain",
           "role": "primary",
-          "measure": "Noninferiority of nonclosure versus closure at each postoperative assessment",
+          "measure": "Short-Form McGill affective pain index; model-estimated nonclosure-minus-closure difference at postoperative days 1, 5, and 21 and months 3 and 6; one-point noninferiority margin",
           "effect": {
             "type": "none"
           },
           "met": true,
-          "note": "The abstract identifies oral pain quality as coprimary and specifies affective quality in its noninferiority result; no margin or arm scores are supplied.",
-          "locator": "PubMed abstract, Outcome measurements and statistical analysis; Results and limitations"
+          "note": "Noninferior at all five time points. Figure 2 plots model-estimated means, differences, and 95% confidence intervals without numeric labels in the supplied text; supplementary mean scores are absent.",
+          "locator": "Full text, Methods, Statistical analysis, p 3; Results, pp 3–4; Fig. 2, p 6"
+        },
+        {
+          "endpoint": "Sensory quality of oral pain",
+          "role": "primary",
+          "measure": "Short-Form McGill sensory pain index; noninferiority of nonclosure versus closure at postoperative days 1, 5, and 21 and months 3 and 6",
+          "effect": {
+            "type": "none"
+          },
+          "met": false,
+          "note": "Noninferiority met at day 21 and month 3, but not at days 1 or 5 or month 6; Figure 2 gives graphical differences and 95% confidence intervals without numeric labels in the supplied text.",
+          "locator": "Full text, Results, p 4; Fig. 2, p 6"
+        },
+        {
+          "endpoint": "Total oral pain index",
+          "role": "primary",
+          "measure": "Short-Form McGill total pain index; noninferiority of nonclosure versus closure at postoperative days 1, 5, and 21 and months 3 and 6",
+          "effect": {
+            "type": "none"
+          },
+          "met": false,
+          "note": "Noninferiority met at day 21 and month 3, but not at days 1 or 5 or month 6; Figure 2 gives graphical differences and 95% confidence intervals without numeric labels in the supplied text.",
+          "locator": "Full text, Results, p 4; Fig. 2, p 6"
         },
         {
           "endpoint": "Time from urethroplasty and oral pain",
-          "role": "secondary",
+          "role": "descriptive",
           "measure": "Covariate effect of postoperative time on pain intensity and sensory, affective, and total pain quality",
           "effect": {
             "type": "none",
             "p": "<0.001 for each outcome"
           },
-          "note": "Generalized linear mixed models; the abstract gives no direction or magnitude.",
-          "locator": "PubMed abstract, Results and limitations"
+          "met": "not-tested",
+          "note": "Mixed-model covariate analysis; oral pain intensity and sensory, affective, and total pain indices declined over time; no prespecified noninferiority test for this covariate.",
+          "locator": "Full text, Results, pp 3–4; Discussion, pp 4–6"
         },
         {
           "endpoint": "Graft length and oral pain",
-          "role": "secondary",
+          "role": "descriptive",
           "measure": "Association of graft length with pain intensity and sensory and total pain quality",
           "effect": {
             "type": "none",
             "p": "intensity 0.001; sensory 0.020; total 0.042"
           },
-          "note": "Covariate effects from generalized linear mixed models; direction and magnitude are not given in the abstract.",
-          "locator": "PubMed abstract, Outcome measurements and statistical analysis; Results and limitations"
+          "met": "not-tested",
+          "note": "Mixed-model covariate analysis; each additional millimeter of graft length corresponded to a 1.014-fold oral-pain intensity NRS score; no prespecified noninferiority test for this covariate.",
+          "locator": "Full text, Results, pp 3–4; Discussion, p 4"
         }
       ],
       "harms": [
         {
           "label": "Oral donor-site morbidity",
-          "locator": "PubMed abstract, Results and limitations",
-          "note": "Reported domains were bleeding, swelling, numbness, altered salivation and taste, and impaired mouth opening, smiling, whistling, diet, and speech; arm-specific rates are absent from the abstract."
+          "values": {
+            "exp": "At month 6, numbness 30/42 and impaired mouth opening 14/41 questionnaire respondents",
+            "ctl": "At month 6, numbness 24/42 and impaired mouth opening 20/42 questionnaire respondents"
+          },
+          "locator": "Full text, Table 2, pp 7–8; Results, p 4",
+          "note": "Other measured domains were bleeding, swelling, altered salivation and taste, and impaired smiling, whistling, diet, and speech. Oral morbidity questions were nonvalidated; group-by-time effects were not significant. Up to 52/135 (39%) lacked a month-6 response for some domains."
+        },
+        {
+          "label": "Oral complications, Clavien-Dindo grade I",
+          "values": {
+            "exp": "25/71 (35%) at day 21; 2/70 (2.9%) at month 3; 0/67 at month 6",
+            "ctl": "23/62 (37%) at day 21; 4/62 (6.5%) at month 3; 2/62 (3.2%) at month 6"
+          },
+          "locator": "Full text, Table 2, p 12; Discussion, p 12",
+          "note": "Only grade I complications were observed: pain or swelling requiring medication, or bleeding requiring compression; interaction P greater than 0.9. Denominators are reconstructed from table counts, rounded percentages, and total missing responses."
         }
       ],
       "delivery": [
         {
           "label": "Enrollment period",
           "value": "October 15, 2014 to December 18, 2015",
-          "locator": "PubMed abstract, Design, setting, and participants"
+          "locator": "Full text, Methods, Patient cohort, p 2"
         },
         {
           "label": "Donor-site intervention",
           "values": {
-            "exp": "Inner-cheek harvest site left open (72 patients)",
-            "ctl": "Inner-cheek harvest site closed (63 patients)"
+            "exp": "Inner-cheek harvest site left open after bipolar hemostasis (72 analyzed men)",
+            "ctl": "Inner-cheek harvest site closed with interrupted 4-0 monofilament sutures after bipolar hemostasis (63 analyzed men)"
           },
-          "locator": "PubMed abstract, Intervention"
+          "note": "Both groups received temporary cottonoid gauze, daily chamomile rinses, and cheek cooling on postoperative days 1–5.",
+          "locator": "Full text, Methods, Surgical procedure and randomization; Postoperative management, p 2"
+        },
+        {
+          "label": "Analysis set after intraoperative changes",
+          "value": "163 consented; 28 excluded after intraoperative changes (25 two-stage urethroplasties, 3 bilateral harvests); 135 analyzed (72 nonclosure, 63 closure), without an intention-to-treat analysis",
+          "locator": "Full text, Methods, Patient cohort, p 2; Results, Patients' baseline characteristics, p 3"
+        },
+        {
+          "label": "Graft harvest dimensions",
+          "value": "Ovoid inner-cheek grafts, uniformly 15 mm wide; median length 45 mm (quartiles 40–60) in nonclosure and 50 mm (50–80) in closure; 2% lidocaine with adrenaline infiltration",
+          "locator": "Full text, Methods, Surgical procedure and randomization, p 2; Table 1, p 4"
         },
         {
           "label": "Patient-reported assessment schedule",
           "value": "Before surgery; postoperative days 1, 5, and 21; months 3 and 6",
-          "locator": "PubMed abstract, Intervention"
+          "locator": "Full text, Methods, Questionnaire, p 3"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2017_11_014.txt",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2017_11_014.fulltext.txt",
         "checked": "2026-11-12",
-        "level": "abstract"
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/soave-harvest-closure",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

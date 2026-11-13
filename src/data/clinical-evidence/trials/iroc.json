@@ -74,12 +74,12 @@
             "p": "0.01"
           },
           "met": true,
-          "note": "Analyzed in 305 of 317 operated patients; mixed model adjusted for center and diversion type. The prespecified superiority test used two-sided P<0.05.",
-          "locator": "JAMA PDF p2097, Primary Outcome; Figure 2"
+          "note": "Modified intention-to-treat analysis in 305 of 317 operated patients, by randomized group; mixed model adjusted for center and diversion type. The prespecified superiority test used two-sided P &lt; 0.05.",
+          "locator": "Full text, Statistical Analysis, p 2094; Figure 1, p 2095; Primary Outcome, p 2097"
         },
         {
           "endpoint": "Cancer recurrence",
-          "role": "exploratory",
+          "role": "secondary",
           "measure": "Recurrence at median 18.4-month follow-up",
           "values": {
             "exp": "29/161 (18.0%)",
@@ -94,12 +94,13 @@
             ],
             "p": "0.70"
           },
+          "met": "not-tested",
           "note": "Secondary outcomes were interpreted as exploratory because of multiple comparisons.",
-          "locator": "JAMA PDF p2100, Oncological and Survival Outcomes"
+          "locator": "Full text, Outcomes, p 2094; Oncological and Survival Outcomes, p 2100"
         },
         {
           "endpoint": "Overall mortality",
-          "role": "exploratory",
+          "role": "secondary",
           "measure": "All-cause mortality at median 18.4-month follow-up",
           "values": {
             "exp": "23/161 (14.3%)",
@@ -114,8 +115,43 @@
             ],
             "p": "0.80"
           },
+          "met": "not-tested",
           "note": "Secondary outcomes were interpreted as exploratory because of multiple comparisons.",
-          "locator": "JAMA PDF p2100, Oncological and Survival Outcomes"
+          "locator": "Full text, Outcomes, p 2094; Oncological and Survival Outcomes, p 2100"
+        },
+        {
+          "endpoint": "Generic health-related quality of life at 5 weeks",
+          "role": "secondary",
+          "measure": "EQ-5D-5L mean-score difference, open minus robotic; 5-week completed outcomes",
+          "effect": {
+            "type": "difference",
+            "value": -0.07,
+            "ci": [
+              -0.11,
+              -0.03
+            ],
+            "p": "0.003"
+          },
+          "met": "not-tested",
+          "note": "Exploratory secondary comparison; no multiplicity-adjusted threshold. Completed outcomes: 130 robotic and 116 open; arm-level score point estimates are not tabulated in the main article. Difference was no longer statistically significant by 12 weeks.",
+          "locator": "Full text, Quality of Life, p 2098; Figure 3A, p 2099"
+        },
+        {
+          "endpoint": "Self-reported disability at 5 weeks",
+          "role": "secondary",
+          "measure": "WHODAS 2.0 mean-score difference, open minus robotic; 5-week completed outcomes",
+          "effect": {
+            "type": "difference",
+            "value": 0.43,
+            "ci": [
+              0.15,
+              0.73
+            ],
+            "p": "0.003"
+          },
+          "met": "not-tested",
+          "note": "Exploratory secondary comparison; no multiplicity-adjusted threshold. Completed outcomes: 114 robotic and 102 open. Full-text Results give 0.43, whereas the abstract gives 0.48; 12-week difference was 0.38 (95% CI 0.09–0.68; P=0.01).",
+          "locator": "Full text, Disability, pp 2098–2100; Figure 3C, p 2099"
         }
       ],
       "harms": [
@@ -125,7 +161,7 @@
             "exp": "102/161 (63.4%)",
             "ctl": "106/156 (67.9%)"
           },
-          "locator": "JAMA PDF p2098, Adverse Events",
+          "locator": "Full text, Adverse Events, p 2098",
           "note": "Operated patients; secondary outcome."
         },
         {
@@ -134,7 +170,7 @@
             "exp": "3/161 (1.9%)",
             "ctl": "13/156 (8.3%)"
           },
-          "locator": "JAMA PDF p2098, Table 2",
+          "locator": "Full text, Table 2, p 2098",
           "note": "Risk difference −6.47 percentage points (95% CI −11.43 to −1.38); exploratory secondary comparison."
         },
         {
@@ -143,16 +179,16 @@
             "exp": "9/161 (5.6%)",
             "ctl": "27/156 (17.3%)"
           },
-          "locator": "JAMA PDF p2098, Table 2",
+          "locator": "Full text, Table 2 and Adverse Events, p 2098",
           "note": "Risk difference −11.72 percentage points (95% CI −18.59 to −4.58); table and body give 17.3% for open surgery, while abstract says 16.0%."
         },
         {
           "label": "Ureteroileal stricture within 12 weeks",
           "values": {
-            "exp": "2.5%",
-            "ctl": "0.6%"
+            "exp": "2.5% of 161",
+            "ctl": "0.6% of 156"
           },
-          "locator": "JAMA PDF p2098, Table 2 footnote b",
+          "locator": "Full text, Table 2, p 2098, footnote b",
           "note": "Reported within the genitourinary complication category; numerator not specified in the article."
         },
         {
@@ -161,7 +197,7 @@
             "exp": "11/158 (7.0%)",
             "ctl": "18/149 (12.1%)"
           },
-          "locator": "JAMA PDF p2098, Adverse Events",
+          "locator": "Full text, Adverse Events, p 2098",
           "note": "Reported after surgery."
         },
         {
@@ -170,8 +206,26 @@
             "exp": "2/161 (1.2%)",
             "ctl": "4/156 (2.6%)"
           },
-          "locator": "JAMA PDF p2097, Primary Outcome",
+          "locator": "Full text, Primary Outcome, p 2097",
           "note": "Two deaths in the robotic group and four in the open group."
+        },
+        {
+          "label": "Clavien-Dindo grade III–V complication within 12 weeks",
+          "values": {
+            "exp": "25/151 (16.6%)",
+            "ctl": "33/150 (22.0%)"
+          },
+          "locator": "Full text, Table 2, p 2098",
+          "note": "Calculated from mutually exclusive maximum grades III, IIIa, IIIb, IV, IVa, IVb and V in Table 2; grading data available for 151 and 150 patients."
+        },
+        {
+          "label": "Infection complication within 12 weeks",
+          "values": {
+            "exp": "38/161 (23.6%)",
+            "ctl": "52/156 (33.3%)"
+          },
+          "locator": "Full text, Table 2, p 2098",
+          "note": "Difference −9.73 percentage points (95% CI −19.47 to 0.24); exploratory secondary comparison."
         }
       ],
       "delivery": [
@@ -181,7 +235,7 @@
             "exp": "161/169",
             "ctl": "156/169"
           },
-          "locator": "JAMA PDF p2095, Figure 1",
+          "locator": "Full text, Figure 1, p 2095",
           "note": "Includes crossover; 157 and 149 patients underwent the assigned robotic and open approach, respectively."
         },
         {
@@ -190,7 +244,7 @@
             "exp": "142/161 (88.2%)",
             "ctl": "140/156 (89.7%)"
           },
-          "locator": "JAMA PDF p2096, Table 1",
+          "locator": "Full text, Table 1, p 2097",
           "note": "The remaining patients had continent diversion/neobladder."
         },
         {
@@ -199,7 +253,7 @@
             "exp": "4.92 hours (IQR 4.03–5.70)",
             "ctl": "4.50 hours (IQR 3.50–5.47)"
           },
-          "locator": "JAMA PDF p2100, Procedure Characteristics",
+          "locator": "Full text, Procedure Characteristics, p 2100",
           "note": "First incision to wound closure."
         },
         {
@@ -208,7 +262,7 @@
             "exp": "200 mL (IQR 125–375)",
             "ctl": "550 mL (IQR 400–859)"
           },
-          "locator": "JAMA PDF p2100, Procedure Characteristics",
+          "locator": "Full text, Procedure Characteristics, p 2100",
           "note": ""
         },
         {
@@ -217,17 +271,17 @@
             "exp": "7 days (IQR 6–10)",
             "ctl": "8 days (IQR 6–14)"
           },
-          "locator": "JAMA PDF p2097, Primary Outcome",
+          "locator": "Full text, Primary Outcome, p 2097",
           "note": ""
         },
         {
           "label": "Standardized surgery and recovery",
           "value": "Accredited surgeons; robotic operators had completed at least 30 cystectomies; both arms used enhanced recovery and at least external iliac, obturator, and internal iliac lymphadenectomy.",
-          "locator": "JAMA PDF pp2093–2094, Intervention"
+          "locator": "Full text, Intervention, pp 2093–2094"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Downloads/WHITWIKI-Sources-2026-10-14/owner-supplied/batch5-jefferson/M019-iroc-2022.pdf",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1001_jama_2022_7393.fulltext.txt",
         "level": "full-text",
         "checked": "2026-11-12"
       }

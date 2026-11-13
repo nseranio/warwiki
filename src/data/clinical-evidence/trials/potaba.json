@@ -36,13 +36,13 @@
         "role": "control"
       }
     ],
-    "population": "Men with Peyronie's disease for less than 12 months, noncalcified plaques, and no pretreatment.",
-    "description": "Multicenter, double-blind, placebo-controlled randomized trial",
-    "locator": "PubMed abstract, Purpose and Patients and Methods"
+    "population": "Previously untreated men with Peyronie's disease for no more than 12 months and noncalcified plaques; diabetes, compensated nephropathy, chronic gastric or bowel disease, and absent response to intracavernosal injection were excluded.",
+    "description": "11-center, double-blind, placebo-controlled randomized trial",
+    "locator": "Full text, Patients and methods, p 531; Table 1"
   },
   "verdict": "positive",
-  "verdictNote": "Composite response favored POTABA among completers; the prespecified significance threshold was unavailable.",
-  "takeaway": "Oral potassium paraaminobenzoate improved composite plaque or curvature response versus placebo among 75 completers (74.3% versus 50.0%); the abstract reported no relevant difference in improvement of pre-existing curvature.",
+  "verdictNote": "Composite response met the prespecified 0.05 threshold among 75 completers; 28 randomized men were excluded.",
+  "takeaway": "In 75 completers, oral potassium paraaminobenzoate improved composite plaque or curvature response versus placebo (26/35 [74.3%] versus 20/40 [50.0%]; P = 0.016); pre-existing curvature improvement did not differ significantly.",
   "reports": [
     {
       "id": "potaba-2005",
@@ -54,28 +54,28 @@
       "doi": "10.1016/j.eururo.2004.12.022",
       "pmid": "15774254",
       "followUp": "12 months of treatment and follow-up",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Patients and methods, p 531",
       "results": [
         {
           "endpoint": "Composite response",
           "role": "primary",
-          "measure": "Plaque-size regression and/or at least 30% penile-curvature reduction among completers",
+          "measure": "Complete resolution or plaque-size reduction and/or at least 30% curvature reduction at 12 months among 75 valid cases",
           "values": {
-            "exp": "74.3%",
-            "ctl": "50.0%"
+            "exp": "26/35 (74.3%)",
+            "ctl": "20/40 (50.0%)"
           },
           "effect": {
             "type": "none",
             "p": "0.016"
           },
-          "met": null,
-          "note": "The abstract reports a significant difference but does not state a prespecified alpha or arm-specific completer denominators.",
-          "locator": "PubMed abstract, Patients and Methods and Results"
+          "met": true,
+          "note": "The protocol specified alpha = 0.05 for response-rate superiority and planned at least 46 completers per group; no effect confidence interval was reported.",
+          "locator": "Full text, Patients and methods, p 531; Results 3.2, p 532"
         },
         {
           "endpoint": "Plaque size",
-          "role": "secondary",
-          "measure": "Mean plaque area, baseline to 12 months",
+          "role": "descriptive",
+          "measure": "Baseline-adjusted mean plaque area, baseline to 12 months",
           "values": {
             "exp": "259 to 142 mm²",
             "ctl": "259 to 233 mm²"
@@ -84,37 +84,53 @@
             "type": "none",
             "p": "0.042"
           },
-          "note": "Placebo mean increased to 303 mm² at 6 months before declining to 233 mm² at 12 months; P is the reported between-group comparison.",
-          "locator": "PubMed abstract, Results"
+          "note": "Figure 1 reports baseline-adjusted means; placebo mean increased to 303 mm² at 6 months. P = 0.042 is the reported two-sided treatment effect in the ANCOVA.",
+          "locator": "Full text, Abstract, Results; Results 3.2 and Fig. 1, p 532"
         },
         {
           "endpoint": "Pre-existing penile curvature",
-          "role": "secondary",
+          "role": "descriptive",
           "measure": "Improvement during treatment",
           "values": {
-            "exp": "not reported",
-            "ctl": "not reported"
+            "exp": "19/30 (63.3%) decreased; 1/30 (3.3%) increased",
+            "ctl": "19/32 (59.4%) decreased; 7/32 (21.9%) increased"
           },
           "effect": {
             "type": "none",
             "p": "0.066"
           },
-          "note": "The abstract reports no relevant difference in improvement of pre-existing penile deviation, without arm-specific estimates or curvature angles.",
-          "locator": "PubMed abstract, Results and Conclusions"
+          "note": "No between-group difference in improvement was reported; curvature angles were not reported.",
+          "locator": "Full text, Results 3.2, pp 532–533; Table 2"
         },
         {
           "endpoint": "Curvature deterioration",
-          "role": "secondary",
+          "role": "descriptive",
           "measure": "New or worsened curvature during treatment",
           "values": {
-            "exp": "protective effect on deterioration reported",
-            "ctl": "32.5% deteriorated"
+            "exp": "1/35 (2.9%) deteriorated",
+            "ctl": "13/40 (32.5%) deteriorated"
           },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "0.001"
           },
-          "note": "The abstract reports P<0.001 for placebo deterioration, without an active-arm event rate, arm-specific denominators, or a between-arm estimate for this endpoint.",
-          "locator": "PubMed abstract, Results and Conclusions"
+          "note": "P = 0.001 is the reported between-group comparison of new or worsened curvature; no effect confidence interval was reported.",
+          "locator": "Full text, Results 3.2, p 533; Table 2"
+        },
+        {
+          "endpoint": "New curvature in initially straight men",
+          "role": "descriptive",
+          "measure": "New penile curvature during 12 months among valid cases without baseline deviation",
+          "values": {
+            "exp": "0/5 (0%)",
+            "ctl": "6/8 (75.0%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.021"
+          },
+          "note": "The small initially straight subgroup is included in the overall curvature-deterioration result.",
+          "locator": "Full text, Results 3.2, pp 532–533; Table 2"
         },
         {
           "endpoint": "Pain reduction",
@@ -127,36 +143,68 @@
           "effect": {
             "type": "none"
           },
-          "note": "No significant between-group difference was reported; arm-specific denominators were not given.",
-          "locator": "PubMed abstract, Results"
+          "note": "No significant between-group difference was reported; event numerators and pain-subgroup denominators were not given.",
+          "locator": "Full text, Results 3.2, p 533"
         }
       ],
       "harms": [
         {
           "label": "Severe adverse events",
           "values": {
-            "exp": "none reported",
-            "ctl": "none reported"
+            "exp": "0/51 reported",
+            "ctl": "0/52 reported"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract does not provide event counts, other adverse events, or discontinuations by arm."
+          "locator": "Full text, Abstract, Results; Results 3.1, p 532",
+          "note": "No clinically significant pathological laboratory values were observed."
+        },
+        {
+          "label": "Withdrawal due to side effects",
+          "values": {
+            "exp": "7/51 (13.7%)",
+            "ctl": "4/52 (7.7%)"
+          },
+          "locator": "Full text, Results 3.1, p 532",
+          "note": "In the active group, one withdrawal each was attributed to pruritus, fever, and chills."
+        },
+        {
+          "label": "Withdrawal due to gastrointestinal disorders",
+          "values": {
+            "exp": "4/51 (7.8%)",
+            "ctl": "4/52 (7.7%)"
+          },
+          "locator": "Full text, Results 3.1, p 532",
+          "note": "These eight withdrawals are included in the side-effect withdrawal counts."
         }
       ],
       "delivery": [
         {
           "label": "Oral treatment schedule",
-          "value": "Potassium paraaminobenzoate 3 g four times daily (12 g/day) or placebo for 12 months.",
-          "locator": "PubMed abstract, Patients and Methods"
+          "value": "Potassium paraaminobenzoate powder 3 g four times daily (12 g/day) or placebo powder for 12 months.",
+          "locator": "Full text, Patients and methods, p 531"
         },
         {
           "label": "Study completion",
-          "value": "75/103 randomized participants completed the study and formed the main valid-case analysis.",
-          "locator": "PubMed abstract, Patients and Methods"
+          "value": "35/51 potassium paraaminobenzoate recipients and 40/52 placebo recipients completed treatment (75/103 total) and formed the valid-case analysis.",
+          "locator": "Full text, Results 3.1, p 532"
+        },
+        {
+          "label": "Nonadherence exclusions",
+          "values": {
+            "exp": "9/51 (17.6%)",
+            "ctl": "8/52 (15.4%)"
+          },
+          "locator": "Full text, Results 3.1, p 532",
+          "note": "Participants reported not taking the powder regularly; these 17 men were excluded from the valid-case analysis."
+        },
+        {
+          "label": "Plaque and curvature assessment",
+          "value": "Plaque length and width were measured by caliper on the stretched flaccid penis; curvature was assessed from standardized erection photographs after intracavernosal prostaglandin E1 and manual stimulation.",
+          "locator": "Full text, Patients and methods, p 531"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2004_12_022.txt",
-        "level": "abstract",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2004_12_022.fulltext.txt",
+        "level": "full-text",
         "checked": "2026-11-12"
       }
     }
@@ -164,7 +212,7 @@
   "relations": [],
   "page": "/docs/clinical-evidence/studies/potaba",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

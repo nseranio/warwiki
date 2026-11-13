@@ -312,40 +312,21 @@
         {
           "endpoint": "Incremental cost per QALY gained",
           "role": "primary",
-          "measure": "One-year societal incremental cost-effectiveness ratio for sling versus sham; $150,000/QALY willingness-to-pay threshold",
+          "measure": "One-year societal incremental cost-effectiveness ratio for sling versus sham; $150,000/QALY willingness-to-pay threshold; 165 sling and 172 sham participants included",
           "effect": {
             "type": "none"
           },
           "met": "not-tested",
           "note": "$309,620/QALY; estimated probability of cost-effectiveness at $150,000/QALY was 24.1%. No formal hypothesis threshold was specified.",
-          "locator": "Results: Effectiveness and Costs by Treatment Group; Figure 2"
-        },
-        {
-          "endpoint": "One-year societal costs",
-          "role": "secondary",
-          "measure": "Mean per-person societal cost in US dollars; sling minus sham",
-          "values": {
-            "exp": "$18,170",
-            "ctl": "$15,700"
-          },
-          "effect": {
-            "type": "difference",
-            "value": 2470,
-            "ci": [
-              100,
-              4840
-            ],
-            "p": "0.041"
-          },
-          "locator": "Table 2; Results: Effectiveness and Costs by Treatment Group"
+          "locator": "Full text, Analysis and Results, p 463; Figure 2, p 465"
         },
         {
           "endpoint": "One-year change in quality-adjusted life-years",
-          "role": "secondary",
+          "role": "primary",
           "measure": "Change from baseline in Health Utilities Index Mark 3 QALYs; sling minus sham",
           "values": {
-            "exp": "0.040 QALYs",
-            "ctl": "0.032 QALYs"
+            "exp": "0.040 QALYs (n=165)",
+            "ctl": "0.032 QALYs (n=172)"
           },
           "effect": {
             "type": "difference",
@@ -356,11 +337,94 @@
             ],
             "p": "0.536"
           },
-          "locator": "Table 2; Results: Effectiveness and Costs by Treatment Group"
+          "met": "not-tested",
+          "locator": "Full text, Effectiveness, p 462; Table 2, p 464"
+        },
+        {
+          "endpoint": "One-year societal costs",
+          "role": "secondary",
+          "measure": "Mean per-person societal cost in US dollars; sling minus sham",
+          "values": {
+            "exp": "$18,170 (n=165)",
+            "ctl": "$15,700 (n=172)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 2470,
+            "ci": [
+              100,
+              4840
+            ],
+            "p": "0.041"
+          },
+          "locator": "Full text, Table 2, p 464; Results, p 463"
+        },
+        {
+          "endpoint": "Urinary incontinence at 12 months in economic analysis",
+          "role": "secondary",
+          "measure": "Urinary incontinence treatment failure; sling minus sham",
+          "values": {
+            "exp": "27.3% (n=165)",
+            "ctl": "43.0% (n=172)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.16,
+            "ci": [
+              -0.26,
+              -0.06
+            ],
+            "p": "0.002"
+          },
+          "locator": "Full text, Table 2, p 464; Results, p 463"
+        },
+        {
+          "endpoint": "One-year health care sector costs",
+          "role": "secondary",
+          "measure": "Mean per-person US dollars; sling minus sham",
+          "values": {
+            "exp": "$18,400 (n=165)",
+            "ctl": "$14,590 (n=172)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 3810,
+            "ci": [
+              2180,
+              5440
+            ],
+            "p": "<0.001"
+          },
+          "locator": "Full text, Table 2, p 464"
+        },
+        {
+          "endpoint": "One-year patient costs",
+          "role": "secondary",
+          "measure": "Mean per-person US dollars, change from baseline; sling minus sham",
+          "values": {
+            "exp": "-$220 (n=165)",
+            "ctl": "$1,110 (n=172)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -1330,
+            "ci": [
+              -3050,
+              380
+            ],
+            "p": "0.128"
+          },
+          "locator": "Full text, Table 2, p 464"
         }
       ],
       "harms": [],
-      "delivery": [],
+      "delivery": [
+        {
+          "label": "Economic-analysis resource ascertainment",
+          "value": "Health utility was measured at baseline, 3 and 12 months; patient and productivity costs were surveyed at baseline and 3, 6, 9 and 12 months; health care utilization included the index operation, later visits, procedures, complications, hospitalizations and medications.",
+          "locator": "Full text, Effectiveness and Costs, p 462; Analysis, p 463"
+        }
+      ],
       "source": {
         "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_spv_0000000000001306.fulltext.txt",
         "level": "full-text",

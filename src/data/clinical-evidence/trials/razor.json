@@ -60,8 +60,8 @@
           "role": "primary",
           "measure": "Two-year Kaplan–Meier progression-free survival; risk difference in percentage points (robotic minus open)",
           "values": {
-            "exp": "72.3% (150 per protocol)",
-            "ctl": "71.6% (152 per protocol)"
+            "exp": "72.3% (95% CI 64.3–78.8; 150 per protocol)",
+            "ctl": "71.6% (95% CI 63.6–78.2; 152 per protocol)"
           },
           "effect": {
             "type": "difference",
@@ -73,16 +73,16 @@
             "p": "0.001 (one-sided noninferiority)"
           },
           "met": true,
-          "note": "Prespecified lower confidence bound had to exceed −15 percentage points; 41/150 versus 42/152 progressed within two years.",
-          "locator": "Lancet PDF p2529, Table 2"
+          "note": "Prespecified lower confidence bound had to exceed −15 percentage points; 41/150 versus 42/152 progressed within two years; two-sided comparison P=0.90.",
+          "locator": "Full text, Table 2 and Results, pp 2529–2530"
         },
         {
           "endpoint": "Progression-free survival",
-          "role": "secondary",
-          "measure": "Two-year modified intention-to-treat sensitivity analysis; risk difference in percentage points",
+          "role": "primary",
+          "measure": "Two-year Kaplan–Meier progression-free survival, modified intention-to-treat sensitivity analysis; risk difference in percentage points",
           "values": {
-            "exp": "72.3% (159 operated)",
-            "ctl": "71.8% (153 operated)"
+            "exp": "72.3% (95% CI 64.5–78.6; 159 operated)",
+            "ctl": "71.8% (95% CI 63.8–78.3; 153 operated)"
           },
           "effect": {
             "type": "difference",
@@ -93,8 +93,9 @@
             ],
             "p": "0.001 (one-sided noninferiority)"
           },
-          "note": "Modified intention-to-treat population comprised patients randomized and operated.",
-          "locator": "Lancet PDF p2529, Table 2"
+          "note": "Sensitivity analysis of the primary endpoint among randomized patients who underwent surgery; 43/159 versus 42/153 progressed within two years.",
+          "locator": "Full text, Table 2 and Statistical analysis, p 2529",
+          "met": true
         },
         {
           "endpoint": "Positive surgical margin",
@@ -114,7 +115,22 @@
             "p": "0.59"
           },
           "note": "Risk difference in percentage points; no prespecified noninferiority test for this endpoint.",
-          "locator": "Lancet PDF p2532, Table 3"
+          "locator": "Full text, Table 3, p 2532"
+        },
+        {
+          "endpoint": "Local recurrence",
+          "role": "descriptive",
+          "measure": "Patients with local recurrence during follow-up",
+          "values": {
+            "exp": "6/150 (4%)",
+            "ctl": "4/152 (3%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.54"
+          },
+          "note": "No port-site recurrences were reported.",
+          "locator": "Full text, Results, p 2530"
         }
       ],
       "harms": [
@@ -124,7 +140,7 @@
             "exp": "101/150 (67%)",
             "ctl": "105/152 (69%)"
           },
-          "locator": "Lancet PDF p2531, Table 3",
+          "locator": "Full text, Table 3, p 2531",
           "note": "Per-protocol population; difference −1.8 percentage points (95% CI −12.3 to 8.8)."
         },
         {
@@ -133,8 +149,8 @@
             "exp": "33/150 (22%)",
             "ctl": "34/152 (22%)"
           },
-          "locator": "Lancet PDF p2531, Table 3",
-          "note": "Per-protocol population."
+          "locator": "Full text, Table 3, p 2531",
+          "note": "Per-protocol population; difference −0.4 percentage points (95% CI −9.0 to 9.8)."
         },
         {
           "label": "Urinary tract infection",
@@ -142,7 +158,7 @@
             "exp": "53/150 (35%)",
             "ctl": "39/152 (26%)"
           },
-          "locator": "Lancet PDF p2533, Table 5",
+          "locator": "Full text, Table 5, p 2533",
           "note": "Grade I–V adverse events."
         },
         {
@@ -151,7 +167,7 @@
             "exp": "33/150 (22%)",
             "ctl": "31/152 (20%)"
           },
-          "locator": "Lancet PDF p2533, Table 5",
+          "locator": "Full text, Table 5, p 2533",
           "note": "Grade I–V adverse events."
         },
         {
@@ -160,7 +176,34 @@
             "exp": "13/150 (9%)",
             "ctl": "10/152 (7%)"
           },
-          "locator": "Lancet PDF p2533, Table 5",
+          "locator": "Full text, Table 5, p 2533",
+          "note": "Grade I–V adverse events."
+        },
+        {
+          "label": "90-day Clavien–Dindo grade V complication",
+          "values": {
+            "exp": "4/150 (3%)",
+            "ctl": "4/152 (3%)"
+          },
+          "locator": "Full text, Table 3, p 2531",
+          "note": "Per-protocol population."
+        },
+        {
+          "label": "Anastomotic bowel leak",
+          "values": {
+            "exp": "3/150 (2%)",
+            "ctl": "0/152"
+          },
+          "locator": "Full text, Table 5, p 2533",
+          "note": "Grade I–V adverse events."
+        },
+        {
+          "label": "Deep wound infection",
+          "values": {
+            "exp": "3/150 (2%)",
+            "ctl": "10/152 (7%)"
+          },
+          "locator": "Full text, Table 5, p 2533",
           "note": "Grade I–V adverse events."
         }
       ],
@@ -168,12 +211,12 @@
         {
           "label": "Sites and surgeon experience",
           "value": "15 US centers; each surgeon had performed at least 10 radical cystectomies in the preceding year and was fellowship trained or had a focused bladder-cancer practice.",
-          "locator": "Lancet PDF p2527, Methods"
+          "locator": "Full text, Procedures, p 2527"
         },
         {
           "label": "Diversion and surgical template",
           "value": "All urinary diversions were extracorporeal; diversion type followed patient and surgeon preference; lymphadenectomy extent and chemotherapy followed institutional preference.",
-          "locator": "Lancet PDF pp2527,2535, Methods and Discussion"
+          "locator": "Full text, Procedures, p 2527 and Discussion, p 2535"
         },
         {
           "label": "Diversion types in per-protocol population",
@@ -181,7 +224,7 @@
             "exp": "ileal conduit 113/150 (75%); neobladder 36/150 (24%); continent cutaneous reservoir 1/150 (1%)",
             "ctl": "ileal conduit 122/152 (80%); neobladder 30/152 (20%)"
           },
-          "locator": "Lancet PDF p2528, Table 1"
+          "locator": "Full text, Table 1, p 2528"
         },
         {
           "label": "Procedures received",
@@ -189,7 +232,7 @@
             "exp": "150/176 assigned patients in per-protocol analysis; 17/176 had no surgery; 9/176 had a different procedure",
             "ctl": "152/174 assigned patients in per-protocol analysis; 21/174 had no surgery; 1/174 had robotic surgery"
           },
-          "locator": "Lancet PDF pp2525,2528, Summary and Figure 1",
+          "locator": "Full text, Figure 1, p 2528",
           "note": "Five robotic-assigned patients converted to open surgery; Figure 1 lists reasons including locally advanced disease, visualization, Trendelenburg intolerance, and a colonic mass."
         },
         {
@@ -198,7 +241,7 @@
             "exp": "median 300 mL (IQR 200–500); 148 with data",
             "ctl": "median 700 mL (IQR 500–1000); 149 with data"
           },
-          "locator": "Lancet PDF p2531, Table 3"
+          "locator": "Full text, Table 3, p 2531"
         },
         {
           "label": "Perioperative transfusion",
@@ -206,7 +249,7 @@
             "exp": "35/143 (24%)",
             "ctl": "65/143 (45%)"
           },
-          "locator": "Lancet PDF p2531, Table 3",
+          "locator": "Full text, Table 3, p 2531",
           "note": "Difference −21.0 percentage points (95% CI −31.8 to −10.2)."
         },
         {
@@ -215,7 +258,7 @@
             "exp": "median 428 min (IQR 322–509); median stay 6 days (IQR 5–10)",
             "ctl": "median 361 min (IQR 281–450); median stay 7 days (IQR 6–10)"
           },
-          "locator": "Lancet PDF p2531, Table 3"
+          "locator": "Full text, Table 3, p 2531"
         },
         {
           "label": "Lymph node dissection",
@@ -223,11 +266,16 @@
             "exp": "extended 76/149 (51%); mean 23.3 nodes (SD 12.5)",
             "ctl": "extended 84/152 (55%); mean 25.7 nodes (SD 14.5)"
           },
-          "locator": "Lancet PDF p2532, Table 3"
+          "locator": "Full text, Table 3, p 2532"
+        },
+        {
+          "label": "Pelvic lymphadenectomy boundaries",
+          "value": "Standard dissection extended distally to Cooper’s ligament and the node of Cloquet, proximally to the ureter crossing the common iliac vessels, laterally to the genitofemoral nerve, medially to tissue medial to the hypogastric artery, and posteriorly to the floor of the obturator fossa; extended dissection reached the aortic bifurcation.",
+          "locator": "Full text, Table 3 footnote, p 2532"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Downloads/WHITWIKI-Jefferson-2026-10-14/RAZOR-2018-main.pdf",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0140_6736_18_30996_6.fulltext.txt",
         "checked": "2026-11-12",
         "level": "full-text"
       }

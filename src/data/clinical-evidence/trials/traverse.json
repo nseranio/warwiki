@@ -40,7 +40,7 @@
     "locator": "NEJM pp108–111, Methods and Patients; 5,246 randomization IDs, 5,204 unique participants in full analysis"
   },
   "verdict": "noninferior",
-  "verdictNote": "MACE noninferiority met; pulmonary embolism, atrial fibrillation, and acute kidney injury occurred more often with testosterone.",
+  "verdictNote": "MACE noninferiority met; nonfatal arrhythmia, atrial fibrillation, acute kidney injury, and pulmonary embolism occurred more often with testosterone.",
   "takeaway": "Daily 1.62% testosterone gel was noninferior to placebo gel for cardiovascular death, nonfatal myocardial infarction, or nonfatal stroke over mean 33.0-month follow-up in symptomatic hypogonadal men with established or elevated cardiovascular risk (HR 0.96, 95% CI 0.78–1.17).",
   "reports": [
     {
@@ -74,7 +74,28 @@
           },
           "met": true,
           "note": "Prespecified noninferiority margin: upper 95% CI for HR <1.5; safety population received at least one dose.",
-          "locator": "NEJM p114, Table 2; p107, abstract Results"
+          "locator": "Full text, Table 2, p 114; Results, p 113"
+        },
+        {
+          "endpoint": "MACE, principal sensitivity analysis",
+          "role": "descriptive",
+          "measure": "First cardiovascular death, nonfatal myocardial infarction, or nonfatal stroke, censoring events more than 365 days after the last dose",
+          "values": {
+            "exp": "154/2,596 (5.9%)",
+            "ctl": "152/2,602 (5.8%)"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 1.02,
+            "ci": [
+              0.81,
+              1.27
+            ],
+            "p": "<0.001 for noninferiority"
+          },
+          "met": true,
+          "note": "Prespecified principal sensitivity analysis in the treated safety population; upper 95% CI below 1.5.",
+          "locator": "Full text, Results, Trial End Points, p 113; Figure 2B, p 112"
         },
         {
           "endpoint": "MACE plus coronary revascularization",
@@ -92,8 +113,9 @@
               1.21
             ]
           },
+          "met": "not-tested",
           "note": "Secondary analyses were not adjusted for multiplicity.",
-          "locator": "NEJM p114, Table 2"
+          "locator": "Full text, Table 2, p 114; Statistical Analysis, p 109"
         }
       ],
       "harms": [
@@ -103,8 +125,26 @@
             "exp": "24/2,596 (0.9%)",
             "ctl": "12/2,602 (0.5%)"
           },
-          "locator": "NEJM p114, Table 2",
+          "locator": "Full text, Table 2, p 114",
           "note": "Adjudicated component of venous thromboembolism; no component HR prespecified."
+        },
+        {
+          "label": "Venous thromboembolic events",
+          "values": {
+            "exp": "44/2,596 (1.7%)",
+            "ctl": "30/2,602 (1.2%)"
+          },
+          "locator": "Full text, Table 2, p 114",
+          "note": "Adjudicated tertiary composite of pulmonary embolism, deep venous thrombosis, and other peripheral venous thrombosis; HR 1.46 (95% CI 0.92–2.32), interval unadjusted for multiplicity."
+        },
+        {
+          "label": "Nonfatal arrhythmia warranting intervention",
+          "values": {
+            "exp": "134/2,596 (5.2%)",
+            "ctl": "87/2,602 (3.3%)"
+          },
+          "locator": "Full text, Table 3, p 115",
+          "note": "Investigator-reported; P=0.001, without multiplicity correction."
         },
         {
           "label": "Atrial fibrillation",
@@ -112,7 +152,7 @@
             "exp": "91/2,596 (3.5%)",
             "ctl": "63/2,602 (2.4%)"
           },
-          "locator": "NEJM p115, Table 3",
+          "locator": "Full text, Table 3, p 115",
           "note": "Investigator-reported; P=0.02, without multiplicity correction."
         },
         {
@@ -121,7 +161,7 @@
             "exp": "60/2,596 (2.3%)",
             "ctl": "40/2,602 (1.5%)"
           },
-          "locator": "NEJM p115, Table 3",
+          "locator": "Full text, Table 3, p 115",
           "note": "Investigator-reported; P=0.04, without multiplicity correction."
         },
         {
@@ -130,7 +170,7 @@
             "exp": "50/2,596 (1.9%)",
             "ctl": "34/2,602 (1.3%)"
           },
-          "locator": "NEJM p115, Table 3",
+          "locator": "Full text, Table 3, p 115",
           "note": "P=0.08; different ascertainment from adjudicated acute urinary retention in the prostate substudy."
         }
       ],
@@ -138,7 +178,12 @@
         {
           "label": "Gel regimen and titration",
           "value": "Daily 1.62% testosterone gel or matching placebo; central algorithm targeted testosterone 350–750 ng/dL, adjusted for hematocrit above 54%.",
-          "locator": "NEJM p109, Trial Intervention"
+          "locator": "Full text, Trial Intervention, p 109"
+        },
+        {
+          "label": "Mean daily testosterone dose",
+          "value": "65±22 mg",
+          "locator": "Full text, Results, Trial End Points, p 113"
         },
         {
           "label": "Study-drug discontinuation",
@@ -146,17 +191,25 @@
             "exp": "61.4%",
             "ctl": "61.7%"
           },
-          "locator": "NEJM p111, Patients",
+          "locator": "Full text, Results, Patients, pp 111–112",
           "note": "Mean exposure 21.7 months across groups."
+        },
+        {
+          "label": "Assigned-regimen exposure",
+          "values": {
+            "exp": "67.5% of potential treatment time",
+            "ctl": "67.3% of potential treatment time"
+          },
+          "locator": "Full text, Results, Patients, p 112"
         },
         {
           "label": "Analysis populations",
           "value": "5,246 randomization IDs; 5,204 unique full-analysis participants (2,601 testosterone, 2,603 placebo); 5,198 treated safety participants (2,596 and 2,602).",
-          "locator": "NEJM p111, Patients"
+          "locator": "Full text, Results, Patients, p 111"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/dl-2026-09-26/NEJMoa2215025.txt",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1056_nejmoa2215025.fulltext.txt",
         "checked": "2026-11-12",
         "level": "full-text"
       }

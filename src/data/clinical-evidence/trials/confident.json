@@ -100,13 +100,13 @@
       ],
       "delivery": [
         {
-          "label": "Trial withdrawals",
+          "label": "Treatment or trial withdrawals",
           "values": {
             "exp": "7/115",
             "ctl": "5/112"
           },
-          "locator": "PubMed abstract, Findings",
-          "note": "Most withdrawals were attributed to inability to attend weekly treatment."
+          "locator": "Full text, Figure 3, p 17; Results, p 18",
+          "note": "Twelve patients withdrew from treatment or the trial (seven PTNS, five sham). The companion NIHR HTA report (doi:10.3310/hta19770) identifies five citing weekly treatment commitments, seven withdrawing from the trial and five from treatment only."
         }
       ],
       "source": {
@@ -133,31 +133,117 @@
           "endpoint": "Weekly faecal incontinence episodes",
           "role": "secondary",
           "measure": "Adjusted mean difference in change, PTNS minus sham, episodes per week",
+          "values": {
+            "exp": "6.4 mean episodes/week after treatment (n=105; 9.9 at baseline, n=111)",
+            "ctl": "9.1 mean episodes/week after treatment (n=104; 10.4 at baseline, n=108)"
+          },
           "effect": {
             "type": "difference",
-            "value": -2.3,
+            "value": -2.262,
             "ci": [
-              -4.2,
-              -0.3
+              -4.185,
+              -0.339
             ],
-            "p": "0.02"
+            "p": "0.021"
           },
-          "note": "The decrease was in urge episodes (P=0.02); passive episodes did not differ significantly (P=0.23). No significant differences were found in St Mark's score or quality-of-life measures.",
-          "locator": "PubMed abstract, Results"
+          "met": true,
+          "note": "Adjusted intention-to-treat comparison used multiple imputation; displayed arm means use available diaries.",
+          "locator": "Full text, Table 6, p 24; Table 7, p 25; Tables 22 and 25, pp 126, 131"
+        },
+        {
+          "endpoint": "Weekly urge faecal incontinence episodes",
+          "role": "secondary",
+          "measure": "Adjusted mean difference in change, PTNS minus sham, episodes per week",
+          "values": {
+            "exp": "3.0 mean episodes/week after treatment (n=106; 5.3 at baseline, n=114)",
+            "ctl": "4.4 mean episodes/week after treatment (n=105; 4.8 at baseline, n=109)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -1.456,
+            "ci": [
+              -2.693,
+              -0.219
+            ],
+            "p": "0.021"
+          },
+          "met": true,
+          "note": "Passive episodes did not differ (adjusted difference -0.635, 95% CI -1.668 to 0.397; P=0.228).",
+          "locator": "Full text, Table 6, p 24; Tables 22 and 25, pp 126, 131"
+        },
+        {
+          "endpoint": "Patient-centred outcomes score",
+          "role": "secondary",
+          "measure": "Adjusted mean difference in change, PTNS minus sham; lower score indicates improvement",
+          "values": {
+            "exp": "7.8 mean after treatment (n=87)",
+            "ctl": "8.4 mean after treatment (n=85)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.545,
+            "ci": [
+              -1.081,
+              -0.008
+            ],
+            "p": "0.047"
+          },
+          "met": true,
+          "locator": "Full text, Table 6, p 24; Table 10, p 29; Table 26, p 133"
+        },
+        {
+          "endpoint": "St Mark's Continence Score",
+          "role": "secondary",
+          "measure": "Adjusted mean difference in change, PTNS minus sham",
+          "values": {
+            "exp": "13.9 mean after treatment (n=104)",
+            "ctl": "14.6 mean after treatment (n=101)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.047,
+            "ci": [
+              -1.033,
+              0.939
+            ],
+            "p": "0.925"
+          },
+          "met": false,
+          "note": "Disease-specific and generic quality-of-life measures also showed no significant between-arm differences.",
+          "locator": "Full text, Table 6, p 24; Table 8, p 27; Table 26, p 133"
         }
       ],
-      "harms": [],
+      "harms": [
+        {
+          "label": "Serious adverse events, all unrelated and resolved",
+          "values": {
+            "exp": "2 events/115 participants",
+            "ctl": "2 events/112 participants"
+          },
+          "note": "These are event counts, not participant incidence; no Clavien-Dindo grades were reported.",
+          "locator": "Full text, Results, p 33; Tables 14–15, p 34"
+        }
+      ],
       "delivery": [
         {
           "label": "PTNS and sham protocol",
-          "value": "Urgent PC fine-needle stimulation near the right tibial nerve for 30 minutes weekly for 12 treatments; sham needle inserted subcutaneously at the same site with transcutaneous stimulation at the distal foot.",
-          "locator": "PubMed abstract, Interventions"
+          "value": "Urgent PC 34-gauge needle inserted about 2 cm deep, 5 cm cephalad to the medial malleolus and 2 cm posterior to the tibia, with sensory or motor response confirmed; 30 minutes weekly for 12 treatments. Sham needle inserted 2 mm at the same site with foot TENS at 10 Hz and 200 microseconds.",
+          "locator": "Full text, Methods, pp 8–11"
+        },
+        {
+          "label": "Treatment completion",
+          "values": {
+            "exp": "108/115 completed treatment",
+            "ctl": "107/112 completed treatment"
+          },
+          "note": "197/227 met the per-protocol definition of at least 10 treatments within 13 weeks, spaced 5–10 days apart.",
+          "locator": "Full text, Figure 3, p 17; Results, p 32"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_3310_hta19770.txt",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_3310_hta19770.fulltext.txt",
         "checked": "2026-11-12",
-        "level": "abstract"
+        "level": "full-text"
       }
     },
     {

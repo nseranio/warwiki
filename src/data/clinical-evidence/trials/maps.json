@@ -36,13 +36,13 @@
         "n": 428
       }
     ],
-    "population": "853 men with urinary incontinence six weeks after radical prostatectomy (411) or TURP (442) in 34 UK centres.",
+    "population": "853 men with urinary incontinence around six weeks after radical prostatectomy (411) or TURP (442) in 34 UK centres; mean time from surgery to randomisation was approximately eight weeks.",
     "description": "Two parallel UK multicentre randomized superiority trials",
     "locator": "Lancet accepted manuscript pp6–7,10, Table 1; HTA Chapter 2, Study design and populations"
   },
   "verdict": "negative",
-  "verdictNote": "Neither trial improved continence; added NHS costs had no QALY advantage.",
-  "takeaway": "Four one-to-one therapist sessions of pelvic floor muscle training with indicated bladder training did not reduce 12-month incontinence versus standard care after radical prostatectomy or TURP; both UK trials found higher NHS costs without a QALY advantage.",
+  "verdictNote": "Neither trial showed a significant continence benefit; NHS costs increased without a QALY advantage.",
+  "takeaway": "Four one-to-one therapist sessions of pelvic floor muscle training with indicated bladder training showed no statistically significant reduction in 12-month incontinence versus standard care after radical prostatectomy or TURP; both UK trials found higher NHS costs without a QALY advantage.",
   "reports": [
     {
       "id": "maps-2011-hta",
@@ -76,7 +76,7 @@
             "p": "0.003"
           },
           "note": "Adjusted relative risk; practice was self-reported.",
-          "locator": "HTA Chapter 7, Table 36"
+          "locator": "Full text, Chapter 7, Table 36"
         },
         {
           "endpoint": "Self-reported pelvic floor exercise practice after TURP",
@@ -96,7 +96,7 @@
             "p": "0.001"
           },
           "note": "Adjusted relative risk; practice was self-reported.",
-          "locator": "HTA Chapter 12, Table 74"
+          "locator": "Full text, Chapter 12, Table 74"
         }
       ],
       "harms": [],
@@ -104,12 +104,17 @@
         {
           "label": "Therapist visits and technique",
           "value": "First 60-minute assessment followed by three approximately 45-minute visits at about 2, 6 and 12 weeks; digital anal examination provided verbal feedback on contractions.",
-          "locator": "HTA Chapter 2, Interventions; Chapter 3, Assessment of pelvic floor strength"
+          "locator": "Full text, Chapter 2, Interventions, pp 10–11; Chapter 3, Summary of the MAPS intervention, p 28"
         },
         {
           "label": "Home program and urgency treatment",
-          "value": "Three maximum-strength contractions with 10-second breaks in lying, sitting and standing, twice daily; sustained contraction during walking and before leakage triggers; urge suppression and bladder training for urgency.",
-          "locator": "HTA Chapter 3, Pelvic floor muscle therapy regimen; Bladder training/urge suppression"
+          "value": "Three maximum-strength contractions in lying, sitting and standing positions twice daily, with 10-second breaks between contractions; a slight pelvic-floor lift while walking, contraction before leakage triggers and after voiding; urge suppression and bladder training for urgency.",
+          "locator": "Full text, Chapter 3, Pelvic floor muscle training and Bladder training/urge suppression, pp 28–29"
+        },
+        {
+          "label": "Machine-mediated biofeedback",
+          "value": "Used in 17 men after radical prostatectomy and 10 after TURP across five centres; digital anal examination with verbal feedback was the standard intervention.",
+          "locator": "Full text, Chapter 3, Biofeedback and Centres, resources and therapists, pp 28–29"
         }
       ],
       "source": {
@@ -133,42 +138,84 @@
         {
           "endpoint": "Any incontinence after radical prostatectomy",
           "role": "primary",
-          "measure": "12-month self-reported incontinence risk difference (percentage points)",
+          "measure": "12-month self-reported incontinence",
           "values": {
             "exp": "148/196 (75.5%)",
             "ctl": "151/195 (77.4%)"
           },
           "effect": {
-            "type": "difference",
-            "value": -1.9,
+            "type": "RR",
+            "value": 0.97,
             "ci": [
-              -10,
-              6
-            ]
+              0.87,
+              1.09
+            ],
+            "p": "0.64"
           },
           "met": false,
-          "note": "Prespecified target was a 15-percentage-point reduction in persistent incontinence.",
-          "locator": "Lancet accepted manuscript p10, Table 3; HTA Chapter 7, Table 28"
+          "note": "Adjusted intention-to-treat RR; unadjusted risk difference −1.9 percentage points (95% CI −10 to 6). The trial was powered to detect a 15-point reduction; 196/205 and 195/206 randomized men supplied 12-month outcomes.",
+          "locator": "Full text, Table 3, p 25; Results, p 10"
         },
         {
           "endpoint": "Any incontinence after TURP",
           "role": "primary",
-          "measure": "12-month self-reported incontinence risk difference (percentage points)",
+          "measure": "12-month self-reported incontinence",
           "values": {
             "exp": "126/194 (64.9%)",
             "ctl": "125/203 (61.6%)"
           },
           "effect": {
-            "type": "difference",
-            "value": 3.4,
+            "type": "RR",
+            "value": 1.06,
             "ci": [
-              -6,
-              13
-            ]
+              0.91,
+              1.23
+            ],
+            "p": "0.47"
           },
           "met": false,
-          "note": "Prespecified target was a 15-percentage-point reduction; 61.6% is 125/203 rounded to one decimal.",
-          "locator": "Lancet accepted manuscript p10, Table 3; HTA Chapter 12, Table 66"
+          "note": "Adjusted intention-to-treat RR; unadjusted risk difference 3.4 percentage points (95% CI −6 to 13). The trial was powered to detect a 15-point reduction; 194/220 and 203/222 randomized men supplied 12-month outcomes.",
+          "locator": "Full text, Table 3, p 25; Results, p 10"
+        },
+        {
+          "endpoint": "Severe incontinence after radical prostatectomy",
+          "role": "secondary",
+          "measure": "Daily leakage of a moderate or large amount at 12 months",
+          "values": {
+            "exp": "74/196 (38%)",
+            "ctl": "78/195 (40%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.93,
+            "ci": [
+              0.73,
+              1.19
+            ],
+            "p": "0.58"
+          },
+          "note": "Adjusted relative risk.",
+          "locator": "Full text, Table 2, p 21"
+        },
+        {
+          "endpoint": "Severe incontinence after TURP",
+          "role": "secondary",
+          "measure": "Daily leakage of a moderate or large amount at 12 months",
+          "values": {
+            "exp": "48/194 (25%)",
+            "ctl": "49/203 (24%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 1.03,
+            "ci": [
+              0.73,
+              1.45
+            ],
+            "p": "0.88"
+          },
+          "note": "Adjusted relative risk.",
+          "locator": "Full text, Table 2, p 21"
         },
         {
           "endpoint": "Pad use after radical prostatectomy",
@@ -188,7 +235,7 @@
             "p": "0.50"
           },
           "note": "Adjusted relative risk.",
-          "locator": "Lancet accepted manuscript Table 2, Outcomes at 12 months"
+          "locator": "Full text, Table 2, p 21"
         },
         {
           "endpoint": "Pad use after TURP",
@@ -208,7 +255,7 @@
             "p": "0.86"
           },
           "note": "Adjusted relative risk.",
-          "locator": "Lancet accepted manuscript Table 2, Outcomes at 12 months"
+          "locator": "Full text, Table 2, p 21"
         },
         {
           "endpoint": "NHS costs after radical prostatectomy",
@@ -227,7 +274,7 @@
             ]
           },
           "note": "Mean QALY difference was 0.002 (95% CI -0.027 to 0.023).",
-          "locator": "Lancet accepted manuscript p10, Economic evaluation after radical prostatectomy"
+          "locator": "Full text, Results, Economic evaluation after radical prostatectomy, p 10"
         },
         {
           "endpoint": "NHS costs after TURP",
@@ -246,7 +293,7 @@
             ]
           },
           "note": "Mean QALY difference was -0.00003 (95% CI -0.026 to 0.026).",
-          "locator": "Lancet accepted manuscript p10, Economic evaluation after TURP"
+          "locator": "Full text, Results, Economic evaluation after TURP, p 10"
         }
       ],
       "harms": [
@@ -256,7 +303,7 @@
             "exp": "None reported",
             "ctl": "None reported"
           },
-          "locator": "Lancet accepted manuscript p10, Adverse effects",
+          "locator": "Full text, Results, Adverse effects, p 10",
           "note": "No adverse effects were reported by any participant in either trial."
         }
       ],
@@ -264,17 +311,17 @@
         {
           "label": "Index prostate procedures",
           "value": "Radical prostatectomy included abdominal, perineal and laparoscopic approaches, with no robotic procedures; TURP included standard and laser resections, with no HoLEP.",
-          "locator": "Lancet accepted manuscript Table 1 and footnotes"
+          "locator": "Full text, Table 1 and footnotes, pp 19–20"
         },
         {
           "label": "Attendance at one or more therapist visits",
           "value": "189/205 (92%) after radical prostatectomy and 189/220 (86%) after TURP; final visit attended by 175/205 (85%) and 158/220 (72%), respectively, without necessarily attending every interim visit.",
-          "locator": "Lancet accepted manuscript p10, Exercise behaviour and treatment compliance; Table 4"
+          "locator": "Full text, Results, Exercise behaviour and treatment compliance, p 9; Table 4, p 26"
         },
         {
           "label": "Usual-care context",
           "value": "All men received a lifestyle advice leaflet; control participants could receive routine non-specialist pelvic floor exercise information and other usual NHS care.",
-          "locator": "Lancet accepted manuscript p6, Interventions; HTA Chapter 2, Control arm"
+          "locator": "Full text, Interventions, p 5"
         }
       ],
       "source": {

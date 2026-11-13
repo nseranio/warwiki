@@ -178,13 +178,14 @@
       "results": [
         {
           "endpoint": "Urinary incontinence episodes",
-          "role": "descriptive",
+          "role": "primary",
           "measure": "Mean change from study baseline in episodes/day at week 6 across six 200-U treatment cycles",
           "values": {
             "u200": "-3.2 to -4.1 episodes/day"
           },
-          "note": "Pooled extension, not a randomized comparison with the original placebo arm.",
-          "locator": "PDF p370, Efficacy Measures; Figure 2A"
+          "met": "not-tested",
+          "note": "Pooled treated population; descriptive analysis without a prespecified statistical threshold or randomized placebo comparison.",
+          "locator": "Full text, Study Assessments and Statistical Analyses, p 369; Results and Figure 2A, pp 370-372"
         },
         {
           "endpoint": "Time to retreatment request",
@@ -193,7 +194,8 @@
           "values": {
             "u200": "9.0 months"
           },
-          "locator": "PDF p371, Efficacy Measures"
+          "locator": "Full text, Efficacy Measures, p 371",
+          "met": "not-tested"
         },
         {
           "endpoint": "Incontinence Quality of Life score",
@@ -203,16 +205,18 @@
             "u200": "+27.1 to +33.5 points"
           },
           "note": "The minimally important difference was 11 points.",
-          "locator": "PDF p371, Efficacy Measures; Figure 3A"
+          "locator": "Full text, Efficacy Measures and Figure 3A, pp 371-373",
+          "met": "not-tested"
         }
       ],
       "harms": [
         {
-          "label": "New clean intermittent catheterization after first 200-U treatment among prior nonusers",
+          "label": "New clean intermittent catheterization among prior nonusers by dose and treatment cycle",
           "values": {
-            "u200": "26/88 (29.5%)"
+            "u200": "26/88 (29.5%) after cycle 1; 2/58 (3.4%) after cycle 2; 3/50 (6.0%) after cycle 3",
+            "u300": "43.0% after cycle 1; 15.0% after cycle 2; 4.8% after cycle 3"
           },
-          "locator": "PDF p371, Adverse Events",
+          "locator": "Full text, Adverse Events, p 371",
           "note": "Pooled extension population from the two phase 3 trials."
         },
         {
@@ -221,24 +225,29 @@
             "u200": "UTI 56/203 (27.6%); retention 41/203 (20.2%)",
             "u300": "UTI 57/185 (30.8%); retention 42/185 (22.7%)"
           },
-          "locator": "PDF p373, Table II",
+          "locator": "Full text, Table II, p 373",
           "note": "Events within 12 weeks of the first onabotulinumtoxinA treatment in the pooled treated population."
+        },
+        {
+          "label": "Neutralizing-antibody seroconversion during extension",
+          "value": "8/381 (2.1%) overall; 3/200 (1.5%) among patients receiving the approved 200-U dose.",
+          "locator": "Full text, Toxin-Neutralizing Antibodies, p 371"
         }
       ],
       "delivery": [
         {
           "label": "Extension eligibility and retention",
           "value": "396 patients entered the extension after completing either phase 3 trial; 388 received onabotulinumtoxinA and 240/396 (60.6%) were followed for at least four years.",
-          "locator": "PDF p370, Patient Disposition"
+          "locator": "Full text, Patient Disposition, p 370"
         },
         {
           "label": "Repeat-treatment protocol",
           "value": "Initially 200 U or 300 U via 30 cystoscopic 1-mL trigone-sparing detrusor injections; after a 2011 amendment, all received 200 U. Retreatment required patient request, at least 12 weeks since injection, and at least one incontinence episode in three days.",
-          "locator": "PDF p369, Study Design and Participants"
+          "locator": "Full text, Study Design and Participants, p 369"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19/NDO-Kennelly-4-Year-nau22934.pdf",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1002_nau_22934.fulltext.txt",
         "checked": "2026-11-12",
         "level": "full-text"
       }
@@ -257,35 +266,77 @@
       "results": [
         {
           "endpoint": "Urinary incontinence episodes",
-          "role": "descriptive",
+          "role": "primary",
           "measure": "Week-6 mean reduction in episodes/day across four treatment years",
-          "note": "The mean reduction was 3.4 to 3.9 episodes/day across dose cohorts and years in 227 pooled four-year completers; some began at 300 U before switching to 200 U.",
-          "locator": "PDF pp801-802, abstract; p804, Figure 3"
+          "values": {
+            "u200": "-3.4, -3.6, -3.8, -3.7 episodes/day in years 1-4 (200-U-only cohort, n=122 completers)",
+            "u300": "-3.6, -3.4, -3.8, -3.9 episodes/day in years 1-4 (300/200-U cohort, n=105 completers)"
+          },
+          "met": "not-tested",
+          "note": "Post-hoc descriptive analysis of 227 four-year completers; pooled year-1 to year-4 changes were -3.5, -3.5, -3.8, and -3.8 episodes/day. Year-specific denominators were not printed in Figure 3.",
+          "locator": "Full text, Study Outcomes, p 802; Statistical Analyses, p 803; Figure 3, p 805"
         },
         {
           "endpoint": "Complete continence",
           "role": "descriptive",
           "measure": "100% reduction in daily incontinence episodes at week 6, across treatment years",
-          "note": "Rates ranged from 43.6% to 57.4% across dose cohorts among the four-year completers who received treatment in a given year.",
-          "locator": "PDF p802, abstract; p805, Figure 4B"
+          "values": {
+            "u200": "43.6%, 52.1%, 51.1%, 47.6% in years 1-4",
+            "u300": "49.5%, 51.2%, 55.9%, 57.4% in years 1-4"
+          },
+          "note": "Among four-year completers treated in a given year; pooled rates were 46.3%, 51.7%, 53.2%, and 52.0% in years 1-4. Year-specific denominators were not printed in Figure 4B.",
+          "locator": "Full text, Figure 4B, p 805",
+          "met": "not-tested"
+        },
+        {
+          "endpoint": "Incontinence Quality of Life score",
+          "role": "descriptive",
+          "measure": "Mean change from phase-3 baseline at week 6 after treatment by year among four-year completers",
+          "values": {
+            "u200": "+29.4, +31.7, +31.1, +29.5 points in years 1-4 (200-U-only cohort, n=122 completers)",
+            "u300": "+34.4, +29.7, +34.0, +33.8 points in years 1-4 (300/200-U cohort, n=105 completers)"
+          },
+          "note": "Pooled changes were +31.7, +30.8, +32.2, and +31.4 points in years 1-4; the minimally important difference was 11 points. Year-specific denominators were not printed in Figure 5.",
+          "locator": "Full text, Figure 5A, p 806",
+          "met": "not-tested"
+        },
+        {
+          "endpoint": "Duration of effect",
+          "role": "descriptive",
+          "measure": "Median time from injection to patient request for retreatment among completers with completed cycles",
+          "values": {
+            "u200": "9.2 months (n=112); 29/112 at least 12 months",
+            "u300": "9.0 months (n=95); 31/95 (32.6%) at least 12 months"
+          },
+          "locator": "Full text, Results and Figure 2, p 804",
+          "met": "not-tested"
         }
       ],
       "harms": [
         {
           "label": "De novo catheterization among patients who had never used CIC at start of year",
-          "locator": "PDF p803, Table 1",
-          "note": "In the pooled completer cohort, including 200-U-only and 300/200-U groups, 37/85 (43.5%) initiated CIC in year 1 and 0/36 in year 4."
+          "values": {
+            "u200": "18/46 (39.1%) in year 1; 0/23 in year 4",
+            "u300": "19/39 (48.7%) in year 1; 0/13 in year 4"
+          },
+          "locator": "Full text, Table 1, p 803",
+          "note": "Pooled 37/85 (43.5%) initiated CIC in year 1 and 0/36 in year 4; denominators are completers who had never used CIC at the start of each year."
+        },
+        {
+          "label": "Urinary infection and retention within 12 weeks of treatments in four-year completers",
+          "value": "UTI: 73/340 treatments (21.5%) in year 1 and 43/228 (18.9%) in year 4; retention: 45/340 (13.2%) in year 1 and 7/228 (3.1%) in year 4. UTI did not require symptoms; retention was investigator-defined.",
+          "locator": "Full text, Study Outcomes, p 802; Table 2, p 806"
         }
       ],
       "delivery": [
         {
           "label": "Four-year completion and treatment frequency",
           "value": "227/388 (58.5%) treated patients completed four years; completers received a mean 1.4-1.5 treatments per year.",
-          "locator": "PDF p803, Table 1; pp801-802, abstract"
+          "locator": "Full text, Table 1, p 803; Results and Figure 1, pp 803-804"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Downloads/rovner-et-al-2016-long-term-efficacy-and-safety-of-onabotulinumtoxina-in-patients-with-neurogenic-detrusor-overactivity.pdf",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2016_04_046.fulltext.txt",
         "checked": "2026-11-12",
         "level": "full-text"
       }
