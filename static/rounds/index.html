@@ -333,7 +333,7 @@ if(S.set.pool==="trials"){S.set.pool="all";S.set.kinds=["trial"]}
 delete S.set.topic;
 const FIELDS={both:"All",specialty:"GURS/URPS",general:"General",oncology:"Oncology"};
 if(!FIELDS[S.set.field])S.set.field="both";if(!S.set.yield||!LS.get("rounds-yield-v2",false)){S.set.yield="all";LS.put("rounds-yield-v2",true)}
-const YIELDS={all:"Everything",cu:"Must + good to know",c:"Must know"};
+const YIELDS={all:"All",cu:"High-yield + standard",c:"High-yield"};
 const yOk=q=>S.set.yield==="all"||q.yield==="core"||(S.set.yield==="cu"&&(q.yield==="useful"||!q.yield));
 const TOPICS_=()=>(S.meta&&S.meta.topics)||[];
 const GROUPS_=()=>((S.meta&&S.meta.groups)||[]).filter(g=>TOPICS_().some(t=>t.group===g.id));
@@ -553,7 +553,7 @@ function home(){
   <div class="panel opts">
     <h2>New block</h2>
     <div><div class="lab" style="margin-bottom:8px">Topics</div>${topicPicker}</div>
-    <div><div class="lab" style="margin-bottom:6px">Yield</div>${segs("yield",Object.entries(YIELDS).map(([k,l])=>[k,l,S.qs.filter(q=>inField(q)&&(k==="all"||q.yield==="core"||(k==="cu"&&(q.yield==="useful"||!q.yield)))).length]))}<div class="note" style="margin-top:6px">Everything includes deep cuts such as small-series numbers and subgroups. Must + good to know leaves those out. Must know keeps guideline statements, landmark trial results and standard decisions.</div></div>
+    <div><div class="lab" style="margin-bottom:6px">Yield</div>${segs("yield",Object.entries(YIELDS).map(([k,l])=>[k,l,S.qs.filter(q=>inField(q)&&(k==="all"||q.yield==="core"||(k==="cu"&&(q.yield==="useful"||!q.yield)))).length]))}<div class="note" style="margin-top:6px">All includes supplemental questions such as small-series numbers and subgroups. High-yield + standard leaves those out. High-yield keeps guideline statements, landmark trial results and standard decisions.</div></div>
     <div><div class="lab" style="margin-bottom:6px">Type</div>${multi("kinds",[["__all","All types"],...Object.entries(KINDS).map(([k,l])=>[k,l,kindCnt(k)])])}</div>
     <div><div class="lab" style="margin-bottom:6px">Questions</div>${segs("pool",pools)}</div>
     <div><div class="lab" style="margin-bottom:6px">How many</div><div class="nRow">${segs("n",[[5,"5"],[10,"10"],[20,"20"],["all","All"]])}<input id="nIn" class="nIn" type="number" inputmode="numeric" min="1" max="${avail||1}" placeholder="Custom" aria-label="Custom number of questions" value="${typeof S.set.n==="number"&&![5,10,20].includes(S.set.n)?S.set.n:""}"></div></div>
@@ -621,7 +621,7 @@ function quiz(){
   <div class="qbar"><button class="exitBtn" id="exitBlock">‹ ${b.finished?"Summary":"Exit"}</button><div class="lab">Question ${idx+1} of ${b.ids.length}</div><div class="clock" id="clock">${b.finished?"Review":clock()}</div></div>
   <div class="ticks" aria-hidden="true">${ticks}</div>
   <div class="${fresh?"case":""}" style="display:flex;flex-direction:column;gap:16px">
-  <div class="meta"><span class="chip ${q.field==="oncology"?"onc":""}">${esc(topicLabel(q.topic))}</span><span class="chip ${q.kind==="trial"?"t":""}">${esc(q.trial||KINDS[q.kind]||q.kind)}</span>${q.yield==="core"?'<span class="chip core">Must know</span>':q.yield==="detail"?'<span class="chip">Deep cut</span>':""}${q.boardFav?'<span class="chip bf">Board favorite</span>':""}</div>
+  <div class="meta"><span class="chip ${q.field==="oncology"?"onc":""}">${esc(topicLabel(q.topic))}</span><span class="chip ${q.kind==="trial"?"t":""}">${esc(q.trial||KINDS[q.kind]||q.kind)}</span>${q.yield==="core"?'<span class="chip core">High-yield</span>':q.yield==="detail"?'<span class="chip">Supplemental</span>':""}${q.boardFav?'<span class="chip bf">Board favorite</span>':""}</div>
   <div class="qbody"><div class="qn">${idx+1}.</div><div><div class="stem">${esc(q.stem)}</div><div class="ask">${esc(q.question)}</div></div></div>
   ${choices}
   ${ans}
