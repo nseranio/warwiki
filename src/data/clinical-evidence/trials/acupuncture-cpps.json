@@ -18,7 +18,7 @@
   "design": {
     "phase": "not applicable",
     "randomized": true,
-    "blinding": "sham-controlled",
+    "blinding": "Participants, outcome assessors, and statisticians blinded; acupuncturists unblinded",
     "type": "superiority",
     "n": 440,
     "arms": [
@@ -35,13 +35,13 @@
         "role": "control"
       }
     ],
-    "population": "440 men with moderate to severe chronic prostatitis/chronic pelvic pain syndrome at ten tertiary hospitals in China.",
+    "population": "440 men aged 18 to 50 years with moderate to severe chronic prostatitis/chronic pelvic pain syndrome (NIH-CPSI at least 15) at ten tertiary hospitals in China.",
     "description": "Multicenter, randomized, sham-controlled superiority trial",
-    "locator": "PubMed abstract, Design, Setting, Participants, Results"
+    "locator": "Full text, Methods, Setting and Participants, p 1358; Figure 1, p 1359"
   },
   "verdict": "positive",
-  "verdictNote": "Responder differences were significant at both prespecified time points.",
-  "takeaway": "In men with moderate to severe chronic prostatitis/chronic pelvic pain syndrome, 20 acupuncture sessions over 8 weeks produced more NIH-CPSI responders than sham acupuncture at both week 8 and week 32.",
+  "verdictNote": "Prespecified responder tests were significant at weeks 8 and 32 in intention-to-treat analysis.",
+  "takeaway": "Among 440 men with moderate to severe chronic prostatitis/chronic pelvic pain syndrome, 20 acupuncture sessions over 8 weeks increased modeled NIH-CPSI response versus sham at weeks 8 and 32 (adjusted OR 2.6 at both time points).",
   "reports": [
     {
       "id": "acupuncture-cpps-2021",
@@ -53,101 +53,165 @@
       "doi": "10.7326/M21-1814",
       "pmid": "34399062",
       "followUp": "8-week treatment; assessment at weeks 8 and 32 (24 weeks after treatment)",
-      "followUpLocator": "PubMed abstract, Intervention, Measurements",
+      "followUpLocator": "Full text, Methods, Interventions and Assessments and Outcomes, pp 1358–1359",
       "results": [
         {
           "endpoint": "NIH-CPSI responders",
           "role": "primary",
-          "measure": "Week-8 proportion with at least a 6-point NIH-CPSI reduction; adjusted risk difference in percentage points",
+          "measure": "Week-8 modeled intention-to-treat probability of at least a 6-point NIH-CPSI reduction; n=220 randomized per arm",
           "values": {
             "exp": "60.6%",
             "ctl": "36.8%"
           },
           "effect": {
-            "type": "difference",
-            "value": 21.6,
+            "type": "OR",
+            "value": 2.6,
             "ci": [
-              12.8,
-              30.4
+              1.8,
+              4.0
             ],
             "p": "<0.001"
           },
           "met": true,
-          "note": "Sustained efficacy required statistical significance at both weeks 8 and 32; response percentages and effect are reported estimates.",
-          "locator": "PubMed abstract, Measurements and Results"
+          "note": "Prespecified baseline-adjusted logistic mixed model; withdrawals without NIH-CPSI scores counted as nonresponders. Post hoc adjusted risk difference 21.6 percentage points (95% CI 12.8–30.4).",
+          "locator": "Full text, Statistical Analysis, p 1362; Table 2, pp 1361–1362; Results, p 1363"
         },
         {
           "endpoint": "NIH-CPSI responders",
           "role": "primary",
-          "measure": "Week-32 proportion with at least a 6-point NIH-CPSI reduction; adjusted risk difference in percentage points",
+          "measure": "Week-32 modeled intention-to-treat probability of at least a 6-point NIH-CPSI reduction; n=220 randomized per arm",
           "values": {
             "exp": "61.5%",
             "ctl": "38.3%"
           },
           "effect": {
-            "type": "difference",
-            "value": 21.1,
+            "type": "OR",
+            "value": 2.6,
             "ci": [
-              12.2,
-              30.1
+              1.7,
+              3.9
             ],
             "p": "<0.001"
           },
           "met": true,
-          "note": "Week 32 was 24 weeks after treatment ended; response percentages and effect are reported estimates.",
-          "locator": "PubMed abstract, Measurements and Results"
+          "note": "Prespecified baseline-adjusted logistic mixed model; withdrawals without NIH-CPSI scores counted as nonresponders. Post hoc adjusted risk difference 21.1 percentage points (95% CI 12.2–30.1).",
+          "locator": "Full text, Statistical Analysis, p 1362; Table 2, pp 1361–1362; Results, p 1363"
+        },
+        {
+          "endpoint": "NIH-CPSI total score",
+          "role": "secondary",
+          "measure": "Week-8 adjusted mean change from baseline, intention-to-treat; n=220 randomized per arm",
+          "values": {
+            "exp": "7.4-point decrease",
+            "ctl": "4.9-point decrease"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 2.5,
+            "ci": [
+              1.6,
+              3.4
+            ]
+          },
+          "met": "not-tested",
+          "note": "Positive difference denotes greater symptom-score reduction with acupuncture; secondary comparisons were exploratory without multiplicity adjustment.",
+          "locator": "Full text, Table 2, pp 1361–1362; Statistical Analysis, p 1362"
+        },
+        {
+          "endpoint": "NIH-CPSI total score",
+          "role": "secondary",
+          "measure": "Week-32 adjusted mean change from baseline, intention-to-treat; n=220 randomized per arm",
+          "values": {
+            "exp": "7.4-point decrease",
+            "ctl": "4.9-point decrease"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 2.6,
+            "ci": [
+              1.6,
+              3.5
+            ]
+          },
+          "met": "not-tested",
+          "note": "Positive difference denotes greater symptom-score reduction with acupuncture; secondary comparisons were exploratory without multiplicity adjustment.",
+          "locator": "Full text, Table 2, pp 1361–1362; Statistical Analysis, p 1362"
         }
       ],
       "harms": [
         {
-          "label": "Reported adverse events",
+          "label": "Adverse events counted by type",
           "values": {
-            "exp": "20/220 (9.1%)",
-            "ctl": "14/220 (6.4%)"
+            "exp": "20 events/220 randomized (9.1%)",
+            "ctl": "14 events/220 randomized (6.4%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract reports events, without event types or severity distribution."
+          "locator": "Full text, Table 3 and footnote, p 1364",
+          "note": "Events were counted by type; these are not distinct-patient risks."
         },
         {
           "label": "Serious adverse events",
           "values": {
-            "exp": "0 reported",
-            "ctl": "0 reported"
+            "exp": "0/220 randomized",
+            "ctl": "0/220 randomized"
           },
-          "locator": "PubMed abstract, Results",
+          "locator": "Full text, Table 3, p 1364",
           "note": "No serious adverse events were reported."
+        },
+        {
+          "label": "Treatment-related hematoma, localized infection, and nausea",
+          "values": {
+            "exp": "subcutaneous hematoma 9/220 (4.1%); localized infection 1/220 (0.5%); nausea 1/220 (0.5%)",
+            "ctl": "subcutaneous hematoma 5/220 (2.3%); localized infection 0/220; nausea 0/220"
+          },
+          "locator": "Full text, Table 3 and footnote, p 1364",
+          "note": "Treatment-related events were mild and transient; counts are event types."
         }
       ],
       "delivery": [
         {
           "label": "Treatment schedule",
           "values": {
-            "exp": "20 acupuncture sessions over 8 weeks",
-            "ctl": "20 sham-acupuncture sessions over 8 weeks"
+            "exp": "Twenty 30-minute sessions over 8 weeks: three weekly for 4 weeks, then two weekly for 4 weeks",
+            "ctl": "Twenty 30-minute sessions over 8 weeks: three weekly for 4 weeks, then two weekly for 4 weeks"
           },
-          "locator": "PubMed abstract, Intervention"
+          "locator": "Full text, Methods, Interventions, p 1358"
         },
         {
-          "label": "Session duration and practitioner",
+          "label": "Practitioner qualifications",
           "values": {
-            "exp": "30-minute sessions delivered by certified, experienced acupuncturists",
-            "ctl": "30-minute sessions delivered by certified, experienced acupuncturists"
+            "exp": "Certified acupuncturists with five years of undergraduate training and at least two years of clinical experience",
+            "ctl": "Certified acupuncturists with five years of undergraduate training and at least two years of clinical experience"
           },
-          "locator": "Full text, AUA 2025 guideline, Statement 28 discussion, p 35",
-          "note": "The guideline summarizes Sun et al. 2021; the primary report remains abstract-only locally."
+          "locator": "Full text, Methods, Interventions, p 1358"
+        },
+        {
+          "label": "Needling protocol",
+          "values": {
+            "exp": "Bilateral BL33 and BL35 to 50–60 mm; BL23 and SP6 to 25–30 mm; manipulation every 10 minutes except at BL33",
+            "ctl": "Superficial 2–3 mm insertion at bilateral nonacupoints lateral to the active sites, without manipulation"
+          },
+          "locator": "Full text, Methods, Interventions, p 1358"
+        },
+        {
+          "label": "Treatment completion and attendance",
+          "values": {
+            "exp": "206/220 randomized completed eight-week treatment; mean 18.9 sessions (SD 3.9)",
+            "ctl": "208/220 randomized completed eight-week treatment; mean 19.1 sessions (SD 3.5)"
+          },
+          "locator": "Full text, Figure 1, p 1359; Results, p 1362"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_7326_m21_1814.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_7326_m21_1814.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/acupuncture-cpps",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

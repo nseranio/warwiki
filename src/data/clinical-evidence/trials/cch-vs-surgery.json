@@ -271,11 +271,11 @@
       "doi": "10.1093/jsxmed/qdae001.356",
       "pmid": null,
       "followUp": "12 months after treatment; 28 of 40 randomized men had data (12 CCH, 16 surgery)",
-      "followUpLocator": "Publisher abstract, Results",
+      "followUpLocator": "Full text, Results",
       "results": [
         {
           "endpoint": "Overall satisfaction",
-          "role": "descriptive",
+          "role": "primary",
           "measure": "Very satisfied at 12 months, patient report",
           "values": {
             "exp": "36%",
@@ -285,12 +285,13 @@
             "type": "none",
             "p": "<0.01"
           },
-          "note": "Item-specific denominators were not published; P value compares the satisfaction distribution.",
-          "locator": "Publisher abstract, Results"
+          "note": "Reported primary outcome; no prespecified threshold for this follow-up is given. Item-specific denominators are not reported; P compares the satisfaction response distribution.",
+          "locator": "Full text, Results, p i234",
+          "met": "not-tested"
         },
         {
           "endpoint": "Coronal penile length",
-          "role": "descriptive",
+          "role": "secondary",
           "measure": "Median change from baseline at 12 months",
           "values": {
             "exp": "+1.0 cm",
@@ -301,11 +302,11 @@
             "p": "<0.05"
           },
           "note": "",
-          "locator": "Publisher abstract, Results"
+          "locator": "Full text, Results, p i234"
         },
         {
           "endpoint": "Composite curvature",
-          "role": "descriptive",
+          "role": "secondary",
           "measure": "Median percentage improvement at 12 months",
           "values": {
             "exp": "55%",
@@ -316,21 +317,76 @@
             "p": "0.15"
           },
           "note": "",
-          "locator": "Publisher abstract, Results"
+          "locator": "Full text, Results, p i234"
+        },
+        {
+          "endpoint": "Objective curvature recurrence since 3 months",
+          "role": "secondary",
+          "measure": "Change in composite curvature from 3 to 12 months",
+          "values": {
+            "exp": "-5 degrees",
+            "ctl": "+5 degrees"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.05"
+          },
+          "note": "Negative change denotes further reduction in curvature; arm-specific measurement denominators were not reported.",
+          "locator": "Full text, Results, p i234"
+        },
+        {
+          "endpoint": "Subjective penile length loss",
+          "role": "secondary",
+          "measure": "Reported decreased penile length at 12 months",
+          "values": {
+            "exp": "9%",
+            "ctl": "62%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.01"
+          },
+          "note": "Item-specific denominators were not reported.",
+          "locator": "Full text, Results, p i234"
+        },
+        {
+          "endpoint": "Subjective indentation or hourglass improvement",
+          "role": "secondary",
+          "measure": "Reported improved indentation or hourglass deformity at 12 months",
+          "values": {
+            "exp": "75%",
+            "ctl": "56%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.05"
+          },
+          "note": "Item-specific denominators were not reported.",
+          "locator": "Full text, Results, p i234"
         }
       ],
-      "harms": [],
+      "harms": [
+        {
+          "label": "Decreased penile sensitivity at 12 months",
+          "values": {
+            "exp": "27%",
+            "ctl": "54%"
+          },
+          "note": "Item-specific denominators were not reported; P < 0.05.",
+          "locator": "Full text, Results, p i234"
+        }
+      ],
       "delivery": [
         {
           "label": "Adjunctive treatment cessation",
           "value": "Traction and sildenafil stopped at 3 months after treatment completion.",
-          "locator": "Publisher abstract, Methods"
+          "locator": "Full text, Methods, p i234"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1093_jsxmed_qdae001_356.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1093_jsxmed_qdae001_356.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -343,11 +399,11 @@
       "doi": "10.1093/jsxmed/qdae167.134",
       "pmid": null,
       "followUp": "24 months after treatment; 29 of 40 randomized men had questionnaire data",
-      "followUpLocator": "Publisher abstract, Results",
+      "followUpLocator": "Full text, Results",
       "results": [
         {
           "endpoint": "Overall satisfaction",
-          "role": "descriptive",
+          "role": "primary",
           "measure": "Very satisfied at 24 months, patient report",
           "values": {
             "exp": "62%",
@@ -357,12 +413,13 @@
             "type": "none",
             "p": "<0.05"
           },
-          "note": "Arm and item-specific denominators were not published in the abstract.",
-          "locator": "Publisher abstract, Results"
+          "note": "Reported primary outcome; no prespecified threshold for this follow-up is given. Arm and item-specific denominators are not reported.",
+          "locator": "Full text, Results, p vii86",
+          "met": "not-tested"
         },
         {
           "endpoint": "Subjective length loss",
-          "role": "descriptive",
+          "role": "secondary",
           "measure": "Reported length loss at 24 months",
           "values": {
             "exp": "15%",
@@ -372,12 +429,12 @@
             "type": "none",
             "p": "<0.001"
           },
-          "note": "Arm and item-specific denominators were not published in the abstract.",
-          "locator": "Publisher abstract, Results"
+          "note": "Arm and item-specific denominators were not reported.",
+          "locator": "Full text, Results, p vii86"
         },
         {
           "endpoint": "Subjective curvature recurrence",
-          "role": "descriptive",
+          "role": "secondary",
           "measure": "Reported curvature recurrence at 24 months",
           "values": {
             "exp": "8%",
@@ -388,15 +445,30 @@
             "p": "<0.01"
           },
           "note": "No objective curvature measurements were obtained at this visit.",
-          "locator": "Publisher abstract, Results"
+          "locator": "Full text, Results, p vii86"
+        },
+        {
+          "endpoint": "SEP-3 intercourse success",
+          "role": "secondary",
+          "measure": "Positive response for erection lasting long enough for intercourse at 24 months",
+          "values": {
+            "exp": "62%",
+            "ctl": "19%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.02"
+          },
+          "note": "Arm and item-specific denominators were not reported.",
+          "locator": "Full text, Results, p vii86"
         }
       ],
       "harms": [],
       "delivery": [],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1093_jsxmed_qdae167_134.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1093_jsxmed_qdae167_134.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -409,11 +481,11 @@
       "doi": "10.1093/jsxmed/qdaf320.096",
       "pmid": null,
       "followUp": "36 months after treatment; 23 of 40 randomized men had questionnaire data",
-      "followUpLocator": "Publisher abstract, Results",
+      "followUpLocator": "Full text, Results",
       "results": [
         {
           "endpoint": "Overall satisfaction",
-          "role": "descriptive",
+          "role": "primary",
           "measure": "Very satisfied at 36 months, patient report",
           "values": {
             "exp": "54%",
@@ -423,12 +495,13 @@
             "type": "none",
             "p": "<0.01"
           },
-          "note": "Arm and item-specific denominators were not published in the abstract.",
-          "locator": "Publisher abstract, Results"
+          "note": "Reported primary outcome; no prespecified threshold for this follow-up is given. Arm and item-specific denominators are not reported.",
+          "locator": "Full text, Results, pp iv66–iv67",
+          "met": "not-tested"
         },
         {
           "endpoint": "Subjective length loss",
-          "role": "descriptive",
+          "role": "secondary",
           "measure": "Reported length loss at 36 months",
           "values": {
             "exp": "46%",
@@ -439,7 +512,7 @@
             "p": "<0.001"
           },
           "note": "No objective length measurement was obtained at this visit.",
-          "locator": "Publisher abstract, Results"
+          "locator": "Full text, Results, p iv67"
         }
       ],
       "harms": [
@@ -449,15 +522,24 @@
             "exp": "8%",
             "ctl": "42%"
           },
-          "locator": "Publisher abstract, Results",
-          "note": "Arm and item-specific denominators were not published; P = 0.04."
+          "locator": "Full text, Results, p iv67",
+          "note": "Arm and item-specific denominators were not reported; P = 0.04."
+        },
+        {
+          "label": "Decreased or abnormal penile sensation at 36 months",
+          "values": {
+            "exp": "27%",
+            "ctl": "45%"
+          },
+          "note": "Arm and item-specific denominators were not reported; P = 0.03.",
+          "locator": "Full text, Results, p iv67"
         }
       ],
       "delivery": [],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1093_jsxmed_qdaf320_096.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1093_jsxmed_qdaf320_096.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],

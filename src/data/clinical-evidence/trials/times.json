@@ -70,7 +70,7 @@
         {
           "endpoint": "Patient-perceived treatment benefit",
           "role": "primary",
-          "measure": "Week-12 benefit; risk difference for combination versus placebo, percentage points",
+          "measure": "Week-12 benefit among participants with an available response; risk difference for combination versus placebo, percentage points",
           "values": {
             "exp": "172/215 (80.0%)",
             "tol": "136/209 (65.1%)",
@@ -87,8 +87,31 @@
             "p": "<0.001"
           },
           "met": true,
-          "note": "Protocol-specified analysis with last observation carried forward; 95% CI for risk difference is reported as rounded whole percentage points in Table 2. Corrected tamsulosin-placebo P=0.064; tolterodine-placebo P=0.48.",
-          "locator": "JAMA article, Table 2 and Efficacy End Points; 2007 correction, p1864"
+          "note": "Protocol-specified ITT population: combination n=217, tolterodine ER n=210, tamsulosin n=209, placebo n=215; 2, 1, 2, and 1, respectively, had no available benefit response. Missing postbaseline responses were imputed by last observation carried forward. Corrected tamsulosin-placebo P=0.064; tolterodine-placebo P=0.48.",
+          "locator": "Full text, Table 2 and Efficacy End Points, pp 2323–2324; 2007 correction, p 1864"
+        },
+        {
+          "endpoint": "Patient-perceived treatment benefit, missing counted as no benefit",
+          "role": "exploratory",
+          "measure": "Post hoc week-12 analysis using randomized arm denominators; risk difference for combination versus placebo, percentage points",
+          "values": {
+            "exp": "172/225 (76.4%)",
+            "tol": "136/217 (62.7%)",
+            "tam": "146/215 (67.9%)",
+            "ctl": "132/222 (59.5%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 16.9,
+            "ci": [
+              8,
+              26
+            ],
+            "p": "<0.001"
+          },
+          "met": "not-tested",
+          "note": "Post hoc sensitivity analysis; no prespecified success threshold. Table 2 rounds the exact confidence interval to whole percentage points.",
+          "locator": "Full text, Table 2, post hoc intention-to-treat analysis, p 2324"
         },
         {
           "endpoint": "Urgency urinary incontinence",
@@ -102,8 +125,9 @@
             "type": "none",
             "p": "0.005"
           },
-          "note": "Analyzed only among men with urgency urinary incontinence at baseline.",
-          "locator": "JAMA article, abstract Results and Figure 2B"
+          "note": "Analyzed only among men with urgency urinary incontinence at baseline. Baseline UUI subset: combination n=52, placebo n=48; week-12 observed diary counts 47 and 43. Adjusted means used ITT imputation.",
+          "locator": "Full text, Table 1 and Figure 2A, pp 2323, 2325",
+          "met": "not-tested"
         },
         {
           "endpoint": "Urgency without incontinence",
@@ -117,7 +141,9 @@
             "type": "none",
             "p": "0.03"
           },
-          "locator": "JAMA article, abstract Results and Figure 2A"
+          "locator": "Full text, Figure 2B and abstract, pp 2319, 2325",
+          "note": "Week-12 observed diary counts: combination n=211, placebo n=210; adjusted means used ITT imputation.",
+          "met": "not-tested"
         },
         {
           "endpoint": "Micturition frequency",
@@ -131,7 +157,9 @@
             "type": "none",
             "p": "<0.001"
           },
-          "locator": "JAMA article, abstract Results and Figure 2C"
+          "locator": "Full text, Figure 2C and abstract, pp 2319, 2325",
+          "note": "Week-12 observed diary counts: combination n=211, placebo n=212; adjusted means used ITT imputation.",
+          "met": "not-tested"
         },
         {
           "endpoint": "Nocturnal micturition frequency",
@@ -145,7 +173,9 @@
             "type": "none",
             "p": "0.02"
           },
-          "locator": "JAMA article, abstract Results and Figure 2D"
+          "locator": "Full text, Figure 2D and abstract, pp 2319, 2325",
+          "note": "Week-12 observed diary counts: combination n=209, placebo n=212; adjusted means used ITT imputation.",
+          "met": "not-tested"
         },
         {
           "endpoint": "Total IPSS",
@@ -159,7 +189,25 @@
             "type": "none",
             "p": "0.003"
           },
-          "locator": "JAMA article, abstract Results and Figure 3A"
+          "locator": "Full text, Figure 3A and abstract, pp 2319, 2326",
+          "note": "Week-12 observed IPSS counts: combination n=203, placebo n=213; adjusted means used ITT imputation.",
+          "met": "not-tested"
+        },
+        {
+          "endpoint": "IPSS quality-of-life item",
+          "role": "secondary",
+          "measure": "Adjusted mean change in IPSS quality-of-life item at week 12",
+          "values": {
+            "exp": "−1.61",
+            "ctl": "−1.17"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.003"
+          },
+          "met": "not-tested",
+          "note": "Week-12 observed IPSS QOL counts: combination n=205, placebo n=213; adjusted means used ITT imputation. No prespecified confirmatory threshold for this secondary endpoint.",
+          "locator": "Full text, abstract and Figure 3B, pp 2319, 2326"
         }
       ],
       "harms": [
@@ -171,8 +219,19 @@
             "tam": "15/215 (7.0%)",
             "ctl": "5/220 (2.3%)"
           },
-          "locator": "JAMA article, Table 3; safety population",
+          "locator": "Full text, Table 3 and Safety and Tolerability, pp 2324, 2326",
           "note": "Five combination recipients discontinued treatment because of dry mouth."
+        },
+        {
+          "label": "Discontinuation because of adverse events",
+          "values": {
+            "exp": "20/225 (8.9%)",
+            "tol": "5/216 (2.3%)",
+            "tam": "7/215 (3.3%)",
+            "ctl": "7/220 (3.2%)"
+          },
+          "note": "Counts are study discontinuations in Figure 1; denominators are the treated safety population.",
+          "locator": "Full text, Figure 1 and Safety and Tolerability, pp 2322, 2324"
         },
         {
           "label": "Acute urinary retention requiring catheterization",
@@ -182,8 +241,19 @@
             "tam": "0/215 (0%)",
             "ctl": "0/220 (0%)"
           },
-          "locator": "JAMA article, Table 4; safety population",
+          "locator": "Full text, Table 4 and Safety and Tolerability, pp 2324, 2326",
           "note": "The combination recipient required catheterization after 4 days; the tolterodine recipient after 11 days."
+        },
+        {
+          "label": "Reported urinary-retention adverse events",
+          "values": {
+            "exp": "2 events among 225 treated",
+            "tol": "2 events among 216 treated",
+            "tam": "0 events among 215 treated",
+            "ctl": "3 events among 220 treated"
+          },
+          "note": "Table 4 counts reported events, not unique affected men; catheterization counts appear separately.",
+          "locator": "Full text, Table 4, p 2326"
         },
         {
           "label": "Change in postvoid residual volume",
@@ -193,7 +263,7 @@
             "tam": "+0.11 mL",
             "ctl": "−3.61 mL"
           },
-          "locator": "JAMA article, Safety and Tolerability",
+          "locator": "Full text, Safety and Tolerability, p 2324",
           "note": "Between-group changes were not statistically significant."
         }
       ],
@@ -201,17 +271,17 @@
         {
           "label": "Daily drug regimen",
           "value": "Tolterodine ER 4 mg, tamsulosin 0.4 mg, both, or matched placebo once daily for 12 weeks, about 30 minutes after dinner.",
-          "locator": "JAMA article, Methods: Study Design"
+          "locator": "Full text, Study Design, p 2321"
         },
         {
           "label": "Medication adherence",
           "value": "More than 95% of the intention-to-treat population in each group ingested at least 80% of assigned medication.",
-          "locator": "JAMA article, Results: baseline and adherence paragraph"
+          "locator": "Full text, Patients, pp 2322–2323"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1001_jama_296_19_2319.txt",
-        "checked": "2026-11-12",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1001_jama_296_19_2319.fulltext.txt",
+        "checked": "2026-11-13",
         "level": "full-text"
       }
     },
@@ -229,8 +299,8 @@
       "harms": [],
       "delivery": [],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1001_jama_298_16_1864.txt",
-        "checked": "2026-11-12",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1001_jama_298_16_1864.fulltext.txt",
+        "checked": "2026-11-13",
         "level": "full-text"
       }
     },

@@ -30,13 +30,13 @@
         "n": 120
       }
     ],
-    "population": "Patients with fecal incontinence who had at least 50% improvement during test stimulation and received chronic InterStim implantation.",
-    "description": "Prospective multicenter single-arm study after test stimulation",
-    "locator": "Wexner 2010, PubMed abstract, Methods and Results"
+    "population": "Adults with chronic fecal incontinence (>2 frank stool-loss episodes/week for >6 months, or >12 months after vaginal delivery) after conservative treatment failure or ineligibility; 120/133 test-stimulated candidates received chronic InterStim implantation. Excluded external anal sphincter defects over 60 degrees and uncontrolled watery diarrhea.",
+    "description": "Prospective 16-center single-arm study (2002–2008); acute and 10–14-day subchronic test stimulation before implantation",
+    "locator": "Full text, Methods, pp 442–443"
   },
   "verdict": "descriptive",
-  "verdictNote": "The prespecified 50% responder threshold was exceeded in implanted patients at 12 months.",
-  "takeaway": "In a prospective single-arm study, 83% of implanted patients assessed at 12 months after InterStim sacral nerve stimulation had at least 50% fewer weekly fecal incontinence episodes, exceeding the prespecified 50% responder threshold.",
+  "verdictNote": "The 12-month primary objective was met in 88/106 evaluable implanted patients.",
+  "takeaway": "In a prospective single-arm study of 120 implanted test responders, 88/106 (83%) with 12-month diaries had at least 50% fewer weekly fecal incontinence episodes (95% CI 74%–90%; P < 0.0001), meeting the prespecified objective; a missing-data analysis estimated 73%.",
   "reports": [
     {
       "id": "snm-fi-pivotal-2010",
@@ -50,61 +50,94 @@
       "doi": "10.1097/SLA.0b013e3181cf8ed0",
       "pmid": "20160636",
       "followUp": "Mean 28 months (range 2.2-69.5 months); primary endpoint at 12 months",
-      "followUpLocator": "PubMed abstract, Results",
+      "followUpLocator": "Full text, Results, pp 443–444",
       "results": [
         {
           "endpoint": "Therapeutic success",
           "role": "primary",
           "measure": "At least 50% reduction in weekly incontinent episodes at 12 months versus baseline",
           "values": {
-            "snm": "83% (95% CI 74%-90%)"
+            "snm": "88/106 (83%; 95% CI 74%–90%)"
           },
           "effect": {
             "type": "none",
             "p": "<0.0001"
           },
           "met": true,
-          "note": "Prespecified objective: at least 50% of implanted subjects achieve therapeutic success; abstract does not give the 12-month analysis denominator.",
-          "locator": "PubMed abstract, Methods and Results"
+          "note": "Complete-case analysis of implanted patients with evaluable 12-month bowel diaries; exact binomial test against a 50% null. Modified worst-case analysis counted missing outcomes as failure unless subsequent data were available.",
+          "locator": "Full text, Results, p 444, Table 1"
         },
         {
           "endpoint": "Complete continence",
-          "role": "secondary",
+          "role": "descriptive",
           "measure": "No fecal incontinence at 12 months",
           "values": {
-            "snm": "41%"
+            "snm": "43/106 (41%)"
           },
           "effect": {
             "type": "none"
           },
-          "note": "The abstract does not give an analysis denominator.",
-          "locator": "PubMed abstract, Results"
+          "note": "Complete-case 12-month bowel-diary cohort; 41% shown in Figure 1.",
+          "locator": "Full text, Results, p 444, Figure 1",
+          "met": "not-tested"
         },
         {
           "endpoint": "Weekly incontinent episodes",
-          "role": "secondary",
+          "role": "descriptive",
           "measure": "Mean episodes per week at baseline and 12 months",
           "values": {
-            "snm": "9.4 at baseline; 1.9 at 12 months"
+            "snm": "9.4/week at baseline (n=120); 1.9/week at 12 months (n=106)"
           },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "<0.0001"
           },
-          "note": "Within-group change; no comparator arm.",
-          "locator": "PubMed abstract, Results"
+          "note": "Within-group paired comparison; no comparator arm.",
+          "locator": "Full text, Results, p 445, Table 2",
+          "met": "not-tested"
         },
         {
           "endpoint": "Therapeutic success",
           "role": "descriptive",
           "measure": "At least 50% reduction in weekly incontinent episodes at 24 months",
           "values": {
-            "snm": "85%"
+            "snm": "57/67 (85%)"
           },
           "effect": {
             "type": "none"
           },
-          "note": "The abstract does not give an analysis denominator.",
-          "locator": "PubMed abstract, Results"
+          "note": "Complete-case 24-month bowel-diary cohort; follow-up beyond the 12-month primary endpoint.",
+          "locator": "Full text, Results, p 444, Table 1",
+          "met": "not-tested"
+        },
+        {
+          "endpoint": "Weekly incontinent days",
+          "role": "secondary",
+          "measure": "At least 50% reduction in weekly incontinent days at 12 months",
+          "values": {
+            "snm": "88/106 (83%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "Prespecified secondary objective tested against a 50% null in the complete-case cohort.",
+          "locator": "Full text, Methods, p 442; Results, p 444, Table 1"
+        },
+        {
+          "endpoint": "Therapeutic success, missing-data sensitivity",
+          "role": "descriptive",
+          "measure": "At least 50% reduction in weekly incontinent episodes at 12 months with modified worst-case imputation",
+          "values": {
+            "snm": "88/120 (73%); 66% when 13 test failures/withdrawal included among 133 tested"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "note": "Missing 12-month data counted as failure unless later data existed; the tested-cohort analysis also includes 13 not chronically implanted.",
+          "locator": "Full text, Statistical Analysis, p 443; Results, p 444"
         }
       ],
       "harms": [
@@ -113,21 +146,43 @@
           "values": {
             "snm": "None reported"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract does not enumerate anticipated adverse events."
+          "locator": "Full text, Abstract, p 441; Adverse Events, p 445",
+          "note": "No unanticipated adverse device effects; anticipated device- or therapy-related adverse events occurred."
+        },
+        {
+          "label": "Device- or therapy-related adverse events",
+          "values": {
+            "snm": "307 events in 96/120 patients (80%); 26/307 serious events; implant-site pain 31/120 (25.8%), paresthesia 15/120 (12.5%)"
+          },
+          "locator": "Full text, Adverse Events, p 445",
+          "note": "Cumulative at the primary-report cutoff; serious-event count is events, not patients."
+        },
+        {
+          "label": "Implant-site infection and surgical treatment",
+          "values": {
+            "snm": "13/120 (10.8%) infections; 7/120 (5.8%) required surgery: 5/120 (4.2%) explants and 2/120 (1.7%) replacements"
+          },
+          "locator": "Full text, Adverse Events, p 445",
+          "note": "Primary-report adjudication; the 2011 report reclassified one infection onset to the test phase."
         }
       ],
       "delivery": [
         {
           "label": "Test stimulation and implantation",
-          "value": "133 underwent test stimulation; 120 received chronic InterStim implantation after at least 50% improvement during testing (90% test success reported).",
-          "locator": "PubMed abstract, Methods and Results"
+          "value": "Of 285 screened at 16 centers, 133 underwent acute test stimulation, 129 entered subchronic testing, and 120/133 (90.2%) received chronic implantation after test-phase improvement.",
+          "locator": "Full text, Results, p 443"
+        },
+        {
+          "label": "Lead placement and stimulation",
+          "value": "Quadripolar lead at S3 in 112/120, S4 in 5/120 and S2 in 3/120; 112/120 received a tined lead. External stimulation lasted 10–14 days; the implanted generator was placed in a contralateral gluteal pocket; recommended programming variables were a 210-microsecond pulse width and 15 Hz.",
+          "locator": "Full text, Study Procedures and Results, p 443",
+          "note": "Permanent implantation followed ≥50% improvement in weekly incontinent episodes and/or days during testing."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_sla_0b013e3181cf8ed0.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_sla_0b013e3181cf8ed0.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     },
     {
@@ -137,56 +192,81 @@
       "published": "2011-09-01",
       "dateApprox": true,
       "dateLocator": "Crossref and PubMed give September 2011 issue; exact online publication date not verified",
-      "cutoff": null,
+      "cutoff": "2010-02-08",
       "citation": "Mellgren A, Wexner SD, Coller JA, et al. \"Long-term Efficacy and Safety of Sacral Nerve Stimulation for Fecal Incontinence.\" *Dis Colon Rectum.* 2011;54(9):1065-1075. doi:10.1097/DCR.0b013e31822155e9",
       "doi": "10.1097/DCR.0b013e31822155e9",
       "pmid": "21825885",
-      "followUp": "Mean 3.1 years (range 0.2-6.1 years); 83 completed all or part of 3-year assessment",
-      "followUpLocator": "PubMed abstract, Results",
+      "followUp": "Mean 3.1 years (range 0.2–6.1); 83 completed all or part of 3-year assessment, 77/120 had 3-year bowel diaries",
+      "followUpLocator": "Full text, Study Design, p 1066; Results, pp 1068, 1071",
       "results": [
         {
           "endpoint": "Therapeutic success",
           "role": "descriptive",
           "measure": "At least 50% reduction in weekly incontinent episodes at 3 years",
           "values": {
-            "snm": "86%"
+            "snm": "66/77 (86%)"
           },
           "effect": {
             "type": "none",
             "p": "<0.0001"
           },
-          "note": "Among patients assessed at 3 years; the abstract does not give a result-specific denominator.",
-          "locator": "PubMed abstract, Results"
+          "note": "Complete-case 3-year bowel-diary cohort; 83 completed all or part of the assessment.",
+          "locator": "Full text, Results, pp 1068–1069, Figure 2",
+          "met": "not-tested"
         },
         {
           "endpoint": "Complete continence",
           "role": "descriptive",
           "measure": "No fecal incontinence at 3 years",
           "values": {
-            "snm": "40%"
+            "snm": "31/77 (40%)"
           },
           "effect": {
             "type": "none"
           },
-          "note": "The abstract does not give an analysis denominator.",
-          "locator": "PubMed abstract, Results"
+          "note": "Complete-case 3-year bowel-diary cohort.",
+          "locator": "Full text, Results, p 1068, Figure 2",
+          "met": "not-tested"
+        },
+        {
+          "endpoint": "Therapeutic success, missing-data sensitivity",
+          "role": "descriptive",
+          "measure": "At least 50% reduction in weekly incontinent episodes at 3 years among 120 implanted patients",
+          "values": {
+            "snm": "95/120 (79%) with last observation carried forward; 71/120 (59%) with modified worst-case imputation"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001 (LOCF); 0.055 (modified worst case)"
+          },
+          "met": "not-tested",
+          "note": "Both sensitivity analyses used all 120 implanted patients; 43 lacked 3-year bowel diaries.",
+          "locator": "Full text, Statistical Analysis, p 1067; Results, pp 1069, 1071"
         }
       ],
       "harms": [
         {
-          "label": "Device- or therapy-related adverse events through mean 36-month follow-up",
+          "label": "Device- or therapy-related adverse events through mean 3.1-year follow-up",
           "values": {
-            "snm": "Implant-site pain 28%; paresthesia 15%; altered sensation of stimulation 12%; infection 10%"
+            "snm": "Implant-site pain 28% of 120 implanted; paresthesia 15% of 120; altered stimulation sensation 12% of 120; implant-site infection 12/120 (10%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract does not give event-specific numerators or denominators."
+          "locator": "Full text, Adverse Events, pp 1070–1071",
+          "note": "Cumulative after chronic implantation at the 2010-02-08 cutoff; the article gives percentages but not patient numerators for pain, paresthesia or altered sensation. One infection was reclassified as test-phase onset."
+        },
+        {
+          "label": "Infection requiring surgery",
+          "values": {
+            "snm": "6/120 (5.0%) after chronic implantation: 5/120 (4.2%) explants and 1/120 (0.8%) replacement"
+          },
+          "locator": "Full text, Adverse Events and Discussion, pp 1071, 1073",
+          "note": "Twelve postimplant infection events; one superficial infection resolved spontaneously and five with medication."
         }
       ],
       "delivery": [],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_dcr_0b013e31822155e9.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_dcr_0b013e31822155e9.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     },
     {
@@ -196,12 +276,12 @@
       "published": "2013-02-01",
       "dateApprox": true,
       "dateLocator": "Crossref and PubMed give February 2013 issue; exact online publication date not verified",
-      "cutoff": null,
+      "cutoff": "2012-02-22",
       "citation": "Hull T, Giese C, Wexner SD, et al. \"Long-term Durability of Sacral Nerve Stimulation Therapy for Chronic Fecal Incontinence.\" *Dis Colon Rectum.* 2013;56(2):234-245. doi:10.1097/DCR.0b013e318276b24c",
       "doi": "10.1097/DCR.0b013e318276b24c",
       "pmid": "23303153",
-      "followUp": "At least 5 years in 76/120 implanted patients (maximum over 8 years)",
-      "followUpLocator": "PubMed abstract, Results",
+      "followUp": "76/120 followed at least 5 years (mean 6.2 years in this subset); 74 completed 5-year visit and 72 had evaluable bowel diaries",
+      "followUpLocator": "Full text, Patients and Results, pp 235–236, 238",
       "results": [
         {
           "endpoint": "Therapeutic success",
@@ -214,8 +294,9 @@
             "type": "none",
             "p": "<0.0001"
           },
-          "note": "72 had evaluable 5-year episode diaries among 76 followed at least 5 years.",
-          "locator": "PubMed abstract, Results"
+          "note": "Complete-case analysis of 72 patients with 5-year bowel diaries among 76 followed at least 5 years.",
+          "locator": "Full text, Results, p 236, Figure 2, p 238",
+          "met": "not-tested"
         },
         {
           "endpoint": "Complete continence",
@@ -228,20 +309,38 @@
             "type": "none"
           },
           "note": "Among patients with evaluable 5-year episode diaries.",
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Results, p 236, Figure 2, p 238",
+          "met": "not-tested"
         },
         {
           "endpoint": "Weekly incontinent episodes",
           "role": "descriptive",
           "measure": "Mean episodes per week at baseline and 5 years",
           "values": {
-            "snm": "9.1 at baseline; 1.7 at 5 years"
+            "snm": "9.1/week at baseline; 1.7/week at 5 years (n=72 with 5-year diaries)"
           },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "<0.0001"
           },
           "note": "Within-group change in the long-term analysis subset.",
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Results, p 236",
+          "met": "not-tested"
+        },
+        {
+          "endpoint": "Therapeutic success, missing-data sensitivity",
+          "role": "descriptive",
+          "measure": "At least 50% reduction in weekly incontinent episodes at 5 years with imputation among all implanted patients",
+          "values": {
+            "snm": "83/120 (69%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "met": "not-tested",
+          "note": "Of 48 missing 5-year diaries, baseline was carried forward for 20 and last observation for 28, according to reason for discontinuation or missingness.",
+          "locator": "Full text, Statistical Analysis and Results, p 236"
         }
       ],
       "harms": [
@@ -250,33 +349,41 @@
           "values": {
             "snm": "27/76 (35.5%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Among 76 patients followed at least 5 years."
+          "locator": "Full text, Safety, p 238",
+          "note": "Among the 76 with at least 5-year follow-up (mean 6.2 years); 7/27 patients had battery replacement as their only surgical intervention."
+        },
+        {
+          "label": "Revision, replacement, or explant in all implanted patients",
+          "values": {
+            "snm": "47/120 (39.2%) had ≥1 surgical intervention; 22/120 (18.3%) had system explant; 20/307 device/therapy-related adverse events were serious"
+          },
+          "locator": "Full text, Safety, p 238, Table 6, p 243",
+          "note": "Cumulative over 559 device-years; 10 revisions in 10 patients and 40 replacements in 29 patients. Explants overlap the total-intervention count."
         }
       ],
       "delivery": [
         {
           "label": "Long-term retention",
-          "value": "76/120 implanted patients (63%) were followed at least 5 years; 72 had evaluable episode diaries.",
-          "locator": "PubMed abstract, Results"
+          "value": "76/120 implanted patients (63.3%) were followed at least 5 years; 74 completed a 5-year visit and 72 had evaluable episode diaries.",
+          "locator": "Full text, Results, p 236"
         },
         {
           "label": "Test stimulation",
-          "value": "A 14-day test stimulation period preceded permanent implantation after at least 50% improvement in weekly episodes.",
-          "locator": "PubMed abstract, Interventions"
+          "value": "A 10–14-day subchronic test stimulation preceded permanent implantation after at least 50% improvement in weekly incontinent episodes and/or days.",
+          "locator": "Full text, Assessments at Baseline and at Follow-up Visits, p 235"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_dcr_0b013e318276b24c.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_dcr_0b013e318276b24c.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/snm-fi-pivotal",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

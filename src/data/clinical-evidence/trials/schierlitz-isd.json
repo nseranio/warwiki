@@ -18,9 +18,9 @@
   ],
   "question": "Does retropubic tension-free vaginal tape reduce persistent stress incontinence compared with transobturator tape in women with intrinsic sphincter deficiency?",
   "design": {
-    "phase": "not stated in abstract",
+    "phase": "not stated in full text",
     "randomized": true,
-    "blinding": "not stated in abstract",
+    "blinding": "Patients and surgeons not blinded",
     "type": "superiority",
     "n": 164,
     "arms": [
@@ -37,13 +37,13 @@
         "role": "control"
       }
     ],
-    "population": "Women with urodynamic stress urinary incontinence and intrinsic sphincter deficiency, with or without concomitant pelvic organ prolapse repair.",
+    "population": "Women with urodynamic stress urinary incontinence and intrinsic sphincter deficiency (maximum urethral closure pressure ≤20 cm H2O and/or leak-point pressure rise ≤60 cm H2O), with or without concomitant pelvic organ prolapse repair.",
     "description": "Randomized controlled trial at two Australian urogynecology centers",
-    "locator": "Primary PubMed abstract, Methods; ICS author abstract, Results (arm allocation)"
+    "locator": "Full text, Methods, pp 1254-1255; Results, p 1255"
   },
   "verdict": "positive",
-  "verdictNote": "Urodynamic stress incontinence at six months was lower after retropubic TVT.",
-  "takeaway": "Retropubic tension-free vaginal tape reduced urodynamic stress incontinence at six months versus transobturator tape in women with intrinsic sphincter deficiency (14/67 versus 32/71 assessed; P=.004).",
+  "verdictNote": "Urodynamic stress incontinence at six months was lower with retropubic TVT among women assessed.",
+  "takeaway": "In women with urodynamic stress incontinence and intrinsic sphincter deficiency, retropubic TVT had less urodynamic stress incontinence at six months than Monarc transobturator tape (14/67 [21%] versus 32/71 [45%] assessed; P=.004).",
   "reports": [
     {
       "id": "schierlitz-isd-2008",
@@ -57,7 +57,7 @@
       "doi": "10.1097/AOG.0b013e31818db391",
       "pmid": "19037033",
       "followUp": "6 months",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Methods, p 1255",
       "results": [
         {
           "endpoint": "Urodynamic stress urinary incontinence",
@@ -72,36 +72,99 @@
             "p": "0.004"
           },
           "met": true,
-          "note": "Outcome available for 138 of 164 randomized women.",
-          "locator": "PubMed abstract, Results"
+          "note": "Available-case urodynamic analysis in 138/164 randomized women; 17 asymptomatic women declined repeat testing.",
+          "locator": "Full text, Results, pp 1256-1257; Table 3"
         },
         {
           "endpoint": "Repeat sling surgery",
           "role": "secondary",
           "measure": "Repeat sling surgery by 6 months",
           "values": {
-            "exp": "0 women",
-            "ctl": "9 women"
+            "exp": "0/67 (0%)",
+            "ctl": "9/71 (12.7%)"
           },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "0.003"
           },
-          "note": "Arm denominators for this outcome are not stated in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Observed repeat sling surgery among women assessed at six months; distinct from the imputed intention-to-treat request estimate.",
+          "locator": "Full text, Table 3, p 1259; Results, p 1257",
+          "met": true
+        },
+        {
+          "endpoint": "Projected request for repeat surgery",
+          "role": "secondary",
+          "measure": "Intention-to-treat estimate of request for repeat surgery at six months; withdrawals and losses counted as failures, asymptomatic non-testers as successes",
+          "values": {
+            "exp": "5/82 (6.1%)",
+            "ctl": "13/82 (15.9%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 2.6,
+            "ci": [
+              0.9,
+              9.3
+            ],
+            "p": "0.08"
+          },
+          "met": false,
+          "note": "RR compares transobturator with retropubic tape; rate difference 9.7 percentage points (95% CI 0–19.9). The paper misprints 13/82 as 19.9%.",
+          "locator": "Full text, Results, p 1257"
         }
       ],
-      "harms": [],
+      "harms": [
+        {
+          "label": "Intraoperative bladder and vaginal perforation",
+          "values": {
+            "exp": "bladder 6/82 (7.3%); vaginal 0/82",
+            "ctl": "bladder 0/82; vaginal 4/82 (4.9%)"
+          },
+          "note": "One allocated TVT patient received Monarc after repeated bladder perforation; no urethral or bowel injury or transfusion in either arm.",
+          "locator": "Full text, Table 2, p 1258; Results, p 1255"
+        },
+        {
+          "label": "Voiding difficulty and tape adjustment",
+          "values": {
+            "exp": "indwelling catheter 1–5 d 7/82; self-catheterization 5–28 d 2/82; loosening 1/82; division 2/82",
+            "ctl": "indwelling catheter 1–5 d 3/82; self-catheterization 5–28 d 1/82; loosening 1/82; division 1/82"
+          },
+          "locator": "Full text, Table 2, p 1258"
+        },
+        {
+          "label": "Groin infection requiring drainage and persistent obturator pain",
+          "values": {
+            "exp": "0/82 for both",
+            "ctl": "1/82 for both (same patient)"
+          },
+          "note": "Abscess drained at six months with partial sling removal, antibiotics, and later pubovaginal sling.",
+          "locator": "Full text, Table 2, p 1258; Results, p 1257"
+        }
+      ],
       "delivery": [
         {
-          "label": "Concomitant prolapse repair",
-          "value": "Permitted with either sling operation",
-          "locator": "PubMed abstract, Methods"
+          "label": "Concomitant prolapse repair and catheter pathway",
+          "values": {
+            "exp": "29/82 (35%)",
+            "ctl": "26/82 (32%)"
+          },
+          "note": "Sling-alone catheter was removed at operation end; concomitant repair often had catheter and vaginal pack for 24–48 hours.",
+          "locator": "Full text, Table 1, p 1257; Methods, p 1255"
+        },
+        {
+          "label": "Sling device and technique",
+          "values": {
+            "exp": "Gynecare retropubic TVT",
+            "ctl": "American Medical Systems Monarc transobturator subfascial hammock"
+          },
+          "note": "Surgeons had independently performed at least 15 of each procedure; both tapes were tensioned over fine scissors, with routine cystoscopy and preoperative antibiotic prophylaxis.",
+          "locator": "Full text, Methods, pp 1254-1255"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_aog_0b013e31818db391.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_aog_0b013e31818db391.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     },
     {
@@ -116,18 +179,18 @@
       "doi": "10.1097/AOG.0b013e31823dfc73",
       "pmid": "22270284",
       "followUp": "3 years",
-      "followUpLocator": "PubMed abstract, Objective and Methods",
+      "followUpLocator": "Full text, Methods, p 323",
       "results": [
         {
           "endpoint": "Repeat surgery for stress urinary incontinence",
           "role": "primary",
-          "measure": "Symptomatic stress incontinence requiring repeat surgery at 3 years",
+          "measure": "Symptomatic stress incontinence requiring repeat surgery during follow-up; one TVT event occurred at 43.7 months",
           "values": {
-            "exp": "1/72 (1.4%)",
-            "ctl": "15/75 (20%)"
+            "exp": "1/82 (1.2%) randomized; 1/72 (1.4%) followed",
+            "ctl": "15/82 (18.3%) randomized; 15/75 (20%) followed"
           },
           "effect": {
-            "type": "RR",
+            "type": "HR",
             "value": 15,
             "ci": [
               2,
@@ -136,37 +199,71 @@
             "p": "<0.001"
           },
           "met": true,
-          "note": "RR compares transobturator tape with retropubic TVT, reversing the displayed arm order.",
-          "locator": "PubMed abstract, Results"
+          "note": "HR compares transobturator with retropubic tape in time-to-event analysis. Intention-to-treat rate difference 17.1 percentage points (95% CI 8.4–25.8); transobturator median time to repeat surgery 15.6 months (IQR 11.8–41.4). The single TVT repeat operation was at 43.7 months.",
+          "locator": "Full text, Results, p 324; Table 1, p 324; Figure 2, p 325"
         },
         {
-          "endpoint": "Quality of life",
+          "endpoint": "Urogenital distress",
           "role": "secondary",
-          "measure": "UDI short form, IIQ short form, and patient-rated success score at 3 years",
+          "measure": "UDI-6 short-form score at 36 months",
           "values": {
-            "exp": "improved from baseline",
-            "ctl": "improved from baseline"
+            "exp": "median 3 (n=70)",
+            "ctl": "median 4 (n=71)"
           },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "0.78"
           },
-          "note": "The abstract reports no between-group difference on these measures.",
-          "locator": "PubMed abstract, Results"
+          "note": "Scores improved from baseline within both groups (P<.001), without a between-arm difference.",
+          "locator": "Full text, Table 2, p 325; Results, p 325",
+          "met": false
+        },
+        {
+          "endpoint": "Patient-rated success",
+          "role": "secondary",
+          "measure": "Numerical success score (0–100) at 36 months",
+          "values": {
+            "exp": "median 90 (n=70)",
+            "ctl": "median 90 (n=71)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.32"
+          },
+          "locator": "Full text, Table 2, p 325",
+          "met": false
+        },
+        {
+          "endpoint": "Incontinence impact",
+          "role": "secondary",
+          "measure": "IIQ-7 short form change from baseline to 36 months",
+          "values": {
+            "exp": "baseline median 8; follow-up median 0 (n=70)",
+            "ctl": "baseline median 11; follow-up median 0 (n=71)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 2.1,
+            "p": "0.03"
+          },
+          "note": "Table 2 reports an unlabeled interval of 0.3–4.3 around the between-group difference; discussion describes greater improvement with transobturator tape. The table’s change scores and difference do not reconcile arithmetically.",
+          "locator": "Full text, Table 2, p 325; Discussion, p 326",
+          "met": true
         }
       ],
       "harms": [],
       "delivery": [],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_aog_0b013e31823dfc73.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_aog_0b013e31823dfc73.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/schierlitz-isd",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

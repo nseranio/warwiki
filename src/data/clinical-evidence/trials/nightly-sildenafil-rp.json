@@ -20,28 +20,28 @@
     "randomized": true,
     "blinding": "double-blind",
     "type": "superiority",
-    "n": 76,
+    "n": 125,
     "arms": [
       {
         "key": "exp",
         "label": "Nightly sildenafil 50 or 100 mg",
-        "n": 51,
+        "n": 82,
         "role": "experimental"
       },
       {
         "key": "ctl",
         "label": "placebo",
-        "n": 25,
+        "n": 43,
         "role": "control"
       }
     ],
-    "population": "Men with normal preoperative erectile function after bilateral nerve-sparing radical retropubic prostatectomy; 76 completed endpoint assessment.",
+    "population": "Men with normal preoperative erectile function after bilateral nerve-sparing radical retropubic prostatectomy; 125 randomized, 123 treated, and 76 completed treatment and washout for efficacy analysis.",
     "description": "Double-blind, placebo-controlled randomized trial",
-    "locator": "Padma-Nathan 2008, PubMed abstract, Methods and Results; 76 and arm counts are completers"
+    "locator": "Full text, Results and Table 1, pp 481-482 (125 randomized; Table 1 footnote identifies two randomized but untreated men)"
   },
-  "verdict": "positive",
-  "verdictNote": "Early closure and a completer analysis limit the positive endpoint.",
-  "takeaway": "Nightly sildenafil 50 or 100 mg after bilateral nerve-sparing prostatectomy yielded unassisted erections after washout in 14/51 completers (27%), versus 1/25 (4%) with placebo; enrollment stopped early.",
+  "verdict": "inconclusive",
+  "verdictNote": "Neither dose met Bonferroni alpha 0.025; the pooled completer comparison had P = 0.0156.",
+  "takeaway": "After bilateral nerve-sparing prostatectomy, 125 men were randomized but only 76 completed assessment. Neither nightly sildenafil dose met the Bonferroni-adjusted primary comparison with placebo; a pooled completer analysis found spontaneous erectile function in 14/51 versus 1/25 (P = 0.0156).",
   "reports": [
     {
       "id": "nightly-sildenafil-rp-2008-subanalysis",
@@ -53,29 +53,51 @@
       "doi": "10.1111/j.1743-6109.2007.00700.x",
       "pmid": "18086170",
       "followUp": "36 weeks of treatment followed by 8 weeks without ED treatment; assessment at postoperative week 48",
-      "followUpLocator": "Publisher abstract, Methods",
+      "followUpLocator": "Full text, Trial Design, p 477",
       "results": [
+        {
+          "endpoint": "Duration of nocturnal penile rigidity at least 55%",
+          "role": "primary",
+          "measure": "Penile-plethysmography outcome at the base and tip through postoperative week 48 in 54 completers",
+          "values": {
+            "exp": "100 mg: week-48 base duration 36% and tip duration 65% of preoperative values",
+            "ctl": "Little improvement from the postoperative week-4 nadir; week-48 percentage not stated in text"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "note": "The paper reports descriptive trajectories without a formal treatment-group test. Tip rigidity at least 55% separated sildenafil responders from nonresponders more clearly than base rigidity.",
+          "locator": "Full text, Efficacy Variables and Duration of Rigidity, p 479; Figures 1-2, pp 478, 480; Study Responders vs. Nonresponders, pp 480-481"
+        },
         {
           "endpoint": "Unassisted erectile-function response in nocturnal-tumescence subset",
           "role": "descriptive",
-          "measure": "Postoperative week-48 response after 8-week washout, by nightly dose",
+          "measure": "Postoperative week-48 unassisted erectile-function response after 8-week washout in 54 penile-plethysmography completers",
           "values": {
-            "exp": "50 mg: 4/17 (24%); 100 mg: 6/18 (33%)",
+            "exp": "50 mg: 4/17 (24%); 100 mg: 6/18 (33%); combined: 10/35 (29%)",
             "ctl": "1/19 (5%)"
           },
           "effect": {
             "type": "none"
           },
-          "note": "The 54-man subset underwent penile plethysmography; tip rigidity at or above 55% best separated responders from nonresponders.",
-          "locator": "Publisher abstract, Methods and Results"
+          "note": "Responder status followed the parent trial definition; this small subset was not subjected to rigorous statistical analysis.",
+          "locator": "Full text, Study Responders vs. Nonresponders, p 480; Comment, p 481",
+          "met": "not-tested"
         }
       ],
       "harms": [],
-      "delivery": [],
+      "delivery": [
+        {
+          "label": "Operative technique",
+          "value": "Experienced surgeons used the standard Walsh open radical retropubic technique; bilateral nerve sparing was documented after surgery and checked against operative and pathology reports; no laparoscopic procedures were included.",
+          "locator": "Full text, Trial Design, p 477"
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_j_1743_6109_2007_00700_x.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_j_1743_6109_2007_00700_x.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -88,49 +110,108 @@
       "doi": "10.1038/ijir.2008.33",
       "pmid": "18650827",
       "followUp": "36 weeks of nightly treatment from postoperative week 4, then 8-week drug-free assessment at week 48",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Study design, p 480; Primary efficacy results, p 482",
       "results": [
         {
-          "endpoint": "Spontaneous erectile function",
+          "endpoint": "Spontaneous erectile function by assigned dose",
           "role": "primary",
-          "measure": "IIEF questions 3 and 4 combined score at least 8 plus satisfactory-sexual-activity response, after 8-week drug-free period",
+          "measure": "Postoperative week-48 responder rate after 36 weeks of treatment and 8-week drug-free washout: combined IIEF questions 3 and 4 score at least 8 plus satisfactory-sexual-activity response; completer analysis",
           "values": {
-            "exp": "14/51 completers (27%)",
-            "ctl": "1/25 completers (4%)"
+            "exp": "50 mg: 6/23 (26%; 95% CI 10–48); 100 mg: 8/28 (29%; 95% CI 13–49)",
+            "ctl": "1/25 (4%; 95% CI 0–20)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "50 mg vs placebo: 0.04; 100 mg vs placebo: 0.03 (nominal Fisher exact P values)"
+          },
+          "met": false,
+          "note": "The statistical plan specified pairwise dose-versus-placebo comparisons and Bonferroni adjustment after switching from CMH to Fisher exact testing. For two comparisons, adjusted alpha is 0.025; the Table 2 P values match unadjusted Fisher tests and neither dose reaches the adjusted threshold.",
+          "locator": "Full text, Statistics, p 481; Primary efficacy results and Table 2, p 482"
+        },
+        {
+          "endpoint": "Pooled spontaneous erectile function across sildenafil doses",
+          "role": "exploratory",
+          "measure": "Postoperative week-48 responder rate after 8-week drug-free washout; pooled completer analysis",
+          "values": {
+            "exp": "14/51 (27%; 95% CI 16–42)",
+            "ctl": "1/25 (4%; 95% CI 0–20)"
           },
           "effect": {
             "type": "none",
             "p": "0.0156"
           },
-          "met": null,
-          "note": "Fisher exact test; prespecified significance threshold and randomized arm denominators unavailable in abstract.",
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "The pooled sildenafil comparison was reported in the abstract; the stated primary analysis plan used pairwise comparisons of each dose with placebo. No between-arm effect interval was reported.",
+          "locator": "Full text, abstract, p 479 (exact P value); Statistics, p 481; Table 2, p 482"
+        },
+        {
+          "endpoint": "IIEF erectile-function domain score",
+          "role": "secondary",
+          "measure": "End-of-study six-item Erectile Function domain score, mean ± SD (median), among completers",
+          "values": {
+            "exp": "13.1 ± 9.5 (median 9); 50 mg: 12.4 ± 9.2 (9); 100 mg: 13.7 ± 9.8 (10)",
+            "ctl": "8.8 ± 7.0 (median 6)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "note": "No between-arm P value is reported for this domain score.",
+          "locator": "Full text, Secondary efficacy results: erectile function domain, p 482"
         }
       ],
-      "harms": [],
+      "harms": [
+        {
+          "label": "Any adverse event",
+          "values": {
+            "exp": "50 mg: 32/40 (80%); 100 mg: 35/41 (85%)",
+            "ctl": "26/42 (62%)"
+          },
+          "note": "Headache: 6/40 (50 mg), 5/41 (100 mg), 3/42 (placebo); dyspepsia: 7/40, 7/41, 0/42; abnormal vision/chromatopsia: 2/40, 3/41, 0/42. Safety included everyone who took at least one dose.",
+          "locator": "Full text, Table 3 and Safety, pp 482-483"
+        },
+        {
+          "label": "Serious adverse event",
+          "values": {
+            "exp": "50 mg: 2/40 (5%); 100 mg: 1/41 (2%)",
+            "ctl": "3/42 (7%)"
+          },
+          "note": "None of the six serious events was considered related to study drug.",
+          "locator": "Full text, Table 3 and Safety, pp 482-483"
+        },
+        {
+          "label": "Discontinuation due to adverse event",
+          "values": {
+            "exp": "50 mg: 5/40; 100 mg: 1/41 (2%)",
+            "ctl": "1/42 (2%)"
+          },
+          "note": "Two 50-mg recipients discontinued for treatment-related events (fatigue, headache or dyspepsia); the other discontinuations were not described as treatment related.",
+          "locator": "Full text, Table 3 footnote b and Safety, pp 482-483"
+        }
+      ],
       "delivery": [
         {
           "label": "Treatment schedule",
-          "value": "Nightly sildenafil 50 or 100 mg or placebo began 4 weeks after surgery, continued for 36 weeks, and was followed by an 8-week drug-free period.",
-          "locator": "PubMed abstract, Methods"
+          "value": "Computer-generated 1:1:1 randomization allocated fixed-dose sildenafil 50 mg, sildenafil 100 mg or matching placebo using double-dummy blister cards. Nightly treatment began 4 weeks after surgery, continued for 36 weeks, and was followed by 8 weeks without any ED treatment.",
+          "locator": "Full text, Study design, p 480"
         },
         {
           "label": "Premature closure",
-          "value": "Enrollment ceased prematurely after a blinded interim review; 76 men completed assessment.",
-          "locator": "PubMed abstract, Results"
+          "value": "Of 238 screened, 125 were randomized, 123 took study drug, 82 completed 36 weeks of treatment, and 76 completed the 8-week drug-free assessment. Enrollment stopped after a blinded interim response of 9/35; 19 discontinuations were attributed to study closure.",
+          "locator": "Full text, Statistics and Results, p 481; Results and Discussion, pp 482-483"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1038_ijir_2008_33.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1038_ijir_2008_33.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/nightly-sildenafil-rp",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

@@ -14,7 +14,7 @@
       "lane": "cardiovascular-safety"
     }
   ],
-  "question": "In symptomatic hypogonadal men with undetectable PSA after prostatectomy for low-grade prostate cancer, does short-course testosterone cypionate improve sexual activity versus placebo without biochemical recurrence?",
+  "question": "In symptomatic hypogonadal men with stable low PSA after prostatectomy for low-grade prostate cancer, does short-course testosterone cypionate improve sexual activity versus placebo without biochemical recurrence?",
   "design": {
     "phase": "2",
     "randomized": true,
@@ -35,13 +35,13 @@
         "role": "control"
       }
     ],
-    "population": "Men aged 40 years or older with low libido, erectile dysfunction, or fatigue, a mean of 2 testosterone measurements below 275 ng/dL, organ-confined Gleason 3+3 or 3+4 prostate cancer, and undetectable PSA for at least 2 years after radical prostatectomy.",
+    "population": "Men aged 40 years or older with low libido, erectile dysfunction, or fatigue; a mean of 2 fasting morning total testosterone measurements below 275 ng/dL and/or free testosterone at most 70 pg/mL; organ-confined Gleason 3+3 or 3+4 prostate cancer; and stable PSA at most 0.1 ng/mL (later at most 0.04 ng/mL) for at least 2 years after radical prostatectomy.",
     "description": "Two-center, double-blind, placebo-controlled phase 2 randomized trial",
-    "locator": "PubMed abstract, Design, Setting, and Participants; Intervention; Results"
+    "locator": "Full text, Methods, Study Design and Participants, p 806; Table 1, p 808"
   },
   "verdict": "positive",
-  "verdictNote": "Sexual activity improved over 12 weeks; no biochemical recurrences were observed.",
-  "takeaway": "In hypogonadal men after prostatectomy for low-grade prostate cancer, 12 weeks of testosterone cypionate versus placebo increased sexual activity (adjusted difference 0.91 daily events, 95% CI 0.56–1.26); no biochemical recurrence was observed in either arm.",
+  "verdictNote": "Sexual activity improved; no biochemical recurrence occurred during treatment or 12-week follow-up.",
+  "takeaway": "In 136 hypogonadal men after prostatectomy for low-grade prostate cancer, 12 weeks of weekly testosterone cypionate versus placebo increased sexual activity (adjusted difference 0.91 daily events, 95% CI 0.56–1.26; P < .001); no biochemical recurrence occurred through 12-week follow-up (0/66 versus 0/64 treated).",
   "reports": [
     {
       "id": "testosterone-pca-survivors-2026",
@@ -52,16 +52,16 @@
       "citation": "Bhasin S, Burnett AL, Gagliano-Jucá T, et al. \"Testosterone Treatment in Prostate Cancer Survivors With Hypogonadism: A Randomized Clinical Trial.\" *JAMA Intern Med.* 2026;186(7):805-814. doi:10.1001/jamainternmed.2026.1343",
       "doi": "10.1001/jamainternmed.2026.1343",
       "pmid": "42113507",
-      "followUp": "12 weeks of treatment",
-      "followUpLocator": "PubMed abstract, Intervention; Results",
+      "followUp": "12 weeks of treatment and 12 weeks of post-treatment PSA follow-up",
+      "followUpLocator": "Full text, Methods, Study Outcomes, p 807; Results, Safety, p 810",
       "results": [
         {
           "endpoint": "Sexual activity",
           "role": "primary",
-          "measure": "Age- and PDE5 inhibitor-adjusted between-group difference in daily sexual-activity events after 12 weeks",
+          "measure": "Age-, PDE5 inhibitor-, and baseline-adjusted between-group difference in change from baseline in PDQ question 4 sexual-activity events, averaged across weeks 6 and 12; randomized efficacy analysis (68/68)",
           "values": {
-            "exp": "arm-specific mean not reported in abstract",
-            "ctl": "arm-specific mean not reported in abstract"
+            "exp": "baseline mean 1.64 (66 measured); modeled change +0.88 at week 6 and +0.99 at week 12 (68 randomized)",
+            "ctl": "baseline mean 1.51 (66 measured); modeled change -0.01 at week 6 and +0.06 at week 12 (68 randomized)"
           },
           "effect": {
             "type": "difference",
@@ -70,68 +70,143 @@
               0.56,
               1.26
             ],
-            "p": "<0.001"
+            "p": "<.001"
           },
           "met": true,
-          "note": "Adjusted difference is reported; arm-specific sexual-activity values are not in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Primary efficacy endpoint; PDQ question 4 includes partnered and nonpartnered activity. The treatment effect averages change at weeks 6 and 12, not week 12 alone.",
+          "locator": "Full text, Methods, Study Outcomes and Statistical Analyses, p 807; Table 1, pp 808-809; Table 3, p 811"
         },
         {
           "endpoint": "Sexual desire",
           "role": "secondary",
-          "measure": "Direction of change versus placebo after 12 weeks",
+          "measure": "Change from baseline in DISF-SD sexual-desire score, averaged across weeks 6 and 12; randomized efficacy analysis (68/68)",
           "values": {
-            "exp": "improved more than placebo",
-            "ctl": "comparator; magnitude not reported in abstract"
+            "exp": "baseline mean 15.62 (66 measured); modeled change +3.53 at week 6 and +3.95 at week 12 (68 randomized)",
+            "ctl": "baseline mean 15.05 (66 measured); modeled change +0.87 at week 6 and +0.69 at week 12 (68 randomized)"
           },
           "effect": {
-            "type": "none"
+            "type": "difference",
+            "value": 2.96,
+            "ci": [
+              1.46,
+              4.45
+            ],
+            "p": "<.001"
           },
-          "note": "No estimate or interval is supplied in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Methods, Study Outcomes, p 807; Table 1, p 809; Table 3, p 811"
         },
         {
           "endpoint": "Erectile function",
           "role": "secondary",
-          "measure": "Change after 12 weeks",
+          "measure": "Change from baseline in IIEF erectile-function domain, averaged across weeks 6 and 12; randomized efficacy analysis (68/68)",
           "values": {
-            "exp": "no change reported",
-            "ctl": "comparator; magnitude not reported in abstract"
+            "exp": "baseline mean 6.07 (66 measured); modeled change +2.03 at week 6 and +2.05 at week 12 (68 randomized)",
+            "ctl": "baseline mean 7.36 (66 measured); modeled change +0.86 at week 6 and +1.36 at week 12 (68 randomized)"
           },
           "effect": {
-            "type": "none"
+            "type": "difference",
+            "value": 0.93,
+            "ci": [
+              -0.43,
+              2.29
+            ],
+            "p": ".18"
           },
-          "note": "The abstract states erectile function did not change.",
-          "locator": "PubMed abstract, Results"
+          "note": "Erectile-function score increased within the testosterone arm, but the between-group difference was not statistically significant.",
+          "locator": "Full text, Table 1, p 809; Results, Efficacy, p 810; Table 3, p 811"
+        },
+        {
+          "endpoint": "EPIC-26 sexual-function domain",
+          "role": "secondary",
+          "measure": "Change from baseline in prostate-cancer quality-of-life sexual-function domain, averaged across weeks 6 and 12; randomized efficacy analysis (68/68)",
+          "values": {
+            "exp": "baseline mean 24.53 (64 measured); modeled change +9.24 at week 6 and +9.19 at week 12",
+            "ctl": "baseline mean 26.57 (63 measured); modeled change +4.05 at week 6 and +3.67 at week 12"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 5.35,
+            "ci": [
+              1.63,
+              9.07
+            ],
+            "p": ".005"
+          },
+          "locator": "Full text, Table 1, p 809; Table 3, p 811"
+        },
+        {
+          "endpoint": "Loaded stair-climbing power",
+          "role": "secondary",
+          "measure": "Baseline-adjusted between-group difference in change from baseline to week 12, Boston-site assessed subset (31 testosterone, 32 placebo)",
+          "values": {
+            "exp": "31 assessed at week 12",
+            "ctl": "32 assessed at week 12"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 33.48,
+            "ci": [
+              5.65,
+              61.31
+            ],
+            "p": ".02"
+          },
+          "note": "Figure 2 estimate; Results text reports 33.0 W (95% CI 4.9-61.1 W).",
+          "locator": "Full text, Figure 2E and legend, p 812; Results, Efficacy, p 810"
         }
       ],
       "harms": [
         {
-          "label": "Biochemical recurrence (PSA at least 0.2 ng/mL)",
+          "label": "Biochemical recurrence (at least 2 consecutive PSA values at least 0.2 ng/mL)",
           "values": {
-            "exp": "0 observed (68 randomized)",
-            "ctl": "0 observed (68 randomized)"
+            "exp": "0/66 primary safety analysis through 12-week treatment and 12-week follow-up",
+            "ctl": "0/64 primary safety analysis through 12-week treatment and 12-week follow-up"
           },
-          "locator": "PubMed abstract, Main Outcomes and Measures; Results",
-          "note": "The abstract gives no arm-specific evaluable safety denominator."
+          "locator": "Full text, Methods, Study Outcomes, p 807; Figure 1, p 807; Results, Safety and Table 2, p 810",
+          "note": "No clinical recurrence; upper 95% confidence bound for zero biochemical recurrences was 5.3%."
+        },
+        {
+          "label": "Detectable PSA below the biochemical-recurrence threshold during treatment",
+          "values": {
+            "exp": "2/64 Table 2 safety set (1 below 0.1 ng/mL; 1 at least 0.1 to below 0.2 ng/mL)",
+            "ctl": "1/62 Table 2 safety set (below 0.1 ng/mL)"
+          },
+          "locator": "Full text, Results, Safety and Table 2, p 810"
+        },
+        {
+          "label": "Adverse events, serious adverse events, and erythrocytosis",
+          "values": {
+            "exp": "any adverse event 49/64; serious adverse event 3/64; erythrocytosis (hemoglobin over 18 g/dL) 3/64",
+            "ctl": "any adverse event 47/62; serious adverse event 1/62; erythrocytosis 0/62"
+          },
+          "locator": "Full text, Table 2 and footnotes, p 810",
+          "note": "Table 2 denominators are 64 and 62, although Figure 1 lists 66 and 64 in the primary safety analysis."
         }
       ],
       "delivery": [
         {
           "label": "Treatment",
           "value": "Testosterone cypionate 100 mg or placebo intramuscularly weekly for 12 weeks.",
-          "locator": "PubMed abstract, Intervention"
+          "locator": "Full text, Methods, Intervention Allocation and Masking, p 806"
         },
         {
           "label": "Study completion",
-          "value": "125 of 136 randomized men completed the study (91.9%); arm-specific completion was not reported in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "value": "125/136 randomized men completed the study (91.9%); week-12 outcomes were assessed in 64/68 testosterone and 61/68 placebo participants.",
+          "locator": "Full text, Figure 1, p 807; Results, p 808"
+        },
+        {
+          "label": "Injection adherence",
+          "values": {
+            "exp": "95% of scheduled injections administered",
+            "ctl": "94% of scheduled injections administered"
+          },
+          "locator": "Full text, Results, p 808"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1001_jamainternmed_2026_1343.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1001_jamainternmed_2026_1343.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     },
     {
@@ -148,16 +223,16 @@
       "harms": [],
       "delivery": [],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1001_jamainternmed_2026_3289.txt",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1001_jamainternmed_2026_3289.fulltext.txt",
         "level": "full-text",
-        "checked": "2026-11-12"
+        "checked": "2026-11-13"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/testosterone-pca-survivors",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

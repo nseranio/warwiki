@@ -18,28 +18,30 @@
   "design": {
     "phase": "not applicable",
     "randomized": true,
-    "blinding": "not reported in abstract",
+    "blinding": "Blinded diary scoring; participant and clinician blinding not reported",
     "type": "noninferiority",
     "n": 143,
     "arms": [
       {
         "key": "exp",
         "label": "Behavioral therapy added to alpha-blocker treatment",
+        "n": 73,
         "role": "experimental"
       },
       {
         "key": "ctl",
         "label": "oxybutynin extended release added to alpha-blocker treatment",
+        "n": 70,
         "role": "control"
       }
     ],
-    "population": "Men aged 42–88 years without bladder outlet obstruction who still had urgency and more than eight daily voids after a four-week alpha-blocker run-in.",
+    "population": "Men aged 42–88 years screened for low uroflow and elevated postvoid residual who still had urgency and more than eight daily voids after a four-week alpha-blocker run-in.",
     "description": "Two-site randomized equivalence trial",
-    "locator": "PubMed abstract, Objectives, Design, Participants, Interventions"
+    "locator": "Full text, Methods, Participants and Design, pp 2210–2211; Results, p 2211"
   },
   "verdict": "noninferior",
-  "verdictNote": "The prespecified equivalence analysis found equivalent posttreatment daily voiding means.",
-  "takeaway": "In men with persistent overactive bladder symptoms after alpha-blocker treatment, eight weeks of behavioral therapy and titrated oxybutynin extended release produced equivalent posttreatment daily voiding frequency (9.1 versus 9.5 voids/day; equivalence P < .01).",
+  "verdictNote": "Posttreatment daily voiding frequency met the prespecified ±15% equivalence margin.",
+  "takeaway": "In 143 men with persistent overactive bladder symptoms after alpha-blocker treatment, eight weeks of behavioral therapy and titrated oxybutynin extended release produced equivalent posttreatment daily voiding frequency (9.1 versus 9.5 voids/day among 124 completers; adjusted equivalence P = .001).",
   "reports": [
     {
       "id": "motive-2011",
@@ -51,70 +53,90 @@
       "doi": "10.1111/j.1532-5415.2011.03724.x",
       "pmid": "22092152",
       "followUp": "Eight weeks of randomized treatment after a four-week alpha-blocker run-in",
-      "followUpLocator": "PubMed abstract, Design and Interventions",
+      "followUpLocator": "Full text, Methods, Design and Outcome Assessment, pp 2210–2211",
       "results": [
         {
           "endpoint": "Daily voiding frequency",
           "role": "primary",
-          "measure": "Mean voids per 24 hours after eight weeks; equivalence test",
+          "measure": "Mean voids per 24 hours at eight weeks among completers (behavioral n = 64; drug n = 60); baseline-adjusted TOST equivalence margin ±15% of drug-group posttreatment mean",
           "values": {
             "exp": "9.1 (baseline 11.3)",
             "ctl": "9.5 (baseline 11.5)"
           },
           "effect": {
             "type": "none",
-            "p": "<0.01"
+            "p": "0.001"
           },
           "met": true,
-          "note": "The abstract reports equivalent posttreatment means but does not give the equivalence margin, arm denominators or confidence interval.",
-          "locator": "PubMed abstract, Results"
+          "note": "Unadjusted completer TOST P = .006; last-observation-carried-forward intention-to-treat TOST P = .003; baseline-adjusted LOCF P < .001. No confidence interval reported.",
+          "locator": "Full text, Methods, Power Analysis and Data Analysis, p 2211; Results, p 2212; Table 2, p 2213"
         },
         {
           "endpoint": "Nocturia",
           "role": "secondary",
-          "measure": "Mean change in nightly episodes after eight weeks",
+          "measure": "Mean change in nightly episodes at eight weeks among completers (behavioral n = 64; drug n = 60)",
           "values": {
-            "exp": "−0.70 episodes/night",
-            "ctl": "−0.32 episodes/night"
+            "exp": "2.23 at baseline, 1.53 at eight weeks; change −0.70 episodes/night (n = 64)",
+            "ctl": "2.30 at baseline, 1.96 at eight weeks; change −0.32 episodes/night (n = 60)"
           },
           "effect": {
             "type": "none",
             "p": "0.05"
           },
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "locator": "Full text, Table 2, p 2213"
         },
         {
           "endpoint": "Maximum urgency",
           "role": "secondary",
-          "measure": "Mean change in maximum urgency score after eight weeks",
+          "measure": "Mean change in maximum urgency score at eight weeks among assessed completers (behavioral n = 61; drug n = 60)",
           "values": {
-            "exp": "−0.12",
-            "ctl": "−0.44"
+            "exp": "2.42 at baseline, 2.30 at eight weeks; change −0.12 (n = 61)",
+            "ctl": "2.37 at baseline, 1.93 at eight weeks; change −0.44 (n = 60)"
           },
           "effect": {
             "type": "none",
             "p": "0.02"
           },
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "locator": "Full text, Table 2, p 2213"
         }
       ],
-      "harms": [],
+      "harms": [
+        {
+          "label": "Somewhat or extremely bothersome side effects at eight weeks",
+          "values": {
+            "exp": "12.6% (Table 3 behavioral respondents n = 63; item denominator not specified)",
+            "ctl": "28.8% (Table 3 drug respondents n = 60; item denominator not specified)"
+          },
+          "note": "Respondent percentages are reported without item-level numerator or denominator; P = .01 for the ordinal side-effect rating comparison.",
+          "locator": "Full text, Results, Patient Global Ratings, p 2212; Table 3, p 2214"
+        }
+      ],
       "delivery": [
         {
           "label": "Behavioral treatment",
-          "value": "Pelvic floor muscle exercises, urge suppression techniques and delayed voiding for eight weeks, added after a four-week alpha-blocker run-in.",
-          "locator": "PubMed abstract, Design and Interventions"
+          "value": "Four nurse-practitioner clinic visits over eight weeks; pelvic floor contractions taught with anal-palpation feedback, usually 15 exercises three times daily, plus urge suppression, delayed voiding and nocturnal fluid restriction after 6 p.m.; added after a four-week alpha-blocker run-in.",
+          "locator": "Full text, Methods, Intervention and Behavioral Treatment, p 2210"
         },
         {
           "label": "Drug treatment",
-          "value": "Individually titrated oxybutynin extended release, 5–30 mg/day for eight weeks, added after a four-week alpha-blocker run-in.",
-          "locator": "PubMed abstract, Design and Interventions"
+          "value": "Four clinic visits over eight weeks; oxybutynin extended release started at 10 mg/day and titrated to 5–30 mg/day; dose reduced to 5 mg if postvoid residual exceeded 150 mL; added after a four-week alpha-blocker run-in.",
+          "locator": "Full text, Methods, Intervention and Drug Therapy, pp 2210–2211"
+        },
+        {
+          "label": "Treatment completion and final oxybutynin dose",
+          "values": {
+            "exp": "64/73 completed treatment and posttreatment assessment",
+            "ctl": "60/70 completed treatment and posttreatment assessment; at posttreatment 9 took 5 mg, 25 took 10 mg, 8 took 15 mg, 4 took 20 mg, 2 took 30 mg, and 12 reported no current drug use"
+          },
+          "locator": "Full text, Figure 1 and Results, p 2212"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_j_1532_5415_2011_03724_x.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_j_1532_5415_2011_03724_x.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -126,53 +148,64 @@
       "citation": "Johnson TM 2nd, Markland AD, Goode PS, et al. \"Efficacy of Adding Behavioural Treatment or Antimuscarinic Drug Therapy to α-Blocker Therapy in Men with Nocturia.\" *BJU Int.* 2013;112(1):100-108. doi:10.1111/j.1464-410X.2012.11736.x",
       "doi": "10.1111/j.1464-410X.2012.11736.x",
       "pmid": "23448285",
-      "followUp": "Nocturia analysis after the randomized treatment period",
-      "followUpLocator": "PubMed abstract, Patients and methods; primary report abstract, Interventions",
+      "followUp": "Nocturia analysis at eight weeks after randomization",
+      "followUpLocator": "Full text, Outcome Assessment, p 102",
       "results": [
         {
           "endpoint": "Nocturia in men with at least one baseline nightly episode",
-          "role": "secondary",
-          "measure": "Mean reduction in nightly episodes among 127 men",
+          "role": "primary",
+          "measure": "Mean change in nightly episodes at eight weeks among 127 randomized men with baseline nocturia ≥1/night (behavioral n = 64; drug n = 63); missing posttreatment values carried forward",
           "values": {
-            "exp": "0.97 fewer episodes/night",
-            "ctl": "0.56 fewer episodes/night"
+            "exp": "2.50 at baseline, 1.52 at eight weeks; mean change −0.97 episodes/night (n = 64)",
+            "ctl": "2.31 at baseline, 1.75 at eight weeks; mean change −0.56 episodes/night (n = 63)"
           },
           "effect": {
             "type": "none",
             "p": "0.01"
           },
-          "note": "The abstract gives the combined analysis population but not arm denominators.",
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "Between-group P value compares mean changes; the paper states no prespecified alpha or confidence interval.",
+          "locator": "Full text, Outcome Assessment and Data Analysis, pp 102–103; Table 2, p 104"
         },
         {
           "endpoint": "Nocturia in men with at least two baseline nightly episodes",
           "role": "secondary",
-          "measure": "Mean reduction in nightly episodes among 76 men",
+          "measure": "Mean change in nightly episodes at eight weeks among 76 randomized men with baseline nocturia ≥2/night (behavioral n = 38; drug n = 38); missing posttreatment values carried forward",
           "values": {
-            "exp": "1.26 fewer episodes/night",
-            "ctl": "0.61 fewer episodes/night"
+            "exp": "3.23 at baseline, 1.97 at eight weeks; mean change −1.26 episodes/night (n = 38)",
+            "ctl": "2.89 at baseline, 2.28 at eight weeks; mean change −0.61 episodes/night (n = 38)"
           },
           "effect": {
             "type": "none",
             "p": "0.008"
           },
-          "note": "The abstract gives the combined analysis population but not arm denominators.",
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "Between-group P value compares mean changes; the paper states no prespecified alpha or confidence interval.",
+          "locator": "Full text, Figure 1, p 101; Data Analysis, p 103; Table 3, p 104"
         }
       ],
       "harms": [],
-      "delivery": [],
+      "delivery": [
+        {
+          "label": "Adherence in nocturia analysis",
+          "values": {
+            "exp": "Self-rated pelvic floor exercise adherence 63% of prescribed exercises; adherence-report denominator not stated",
+            "ctl": "Mean pill-count adherence 96% of prescribed oxybutynin; adherence-report denominator not stated"
+          },
+          "locator": "Full text, Results, Participants, p 103"
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_j_1464_410x_2012_11736_x.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_j_1464_410x_2012_11736_x.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/motive",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

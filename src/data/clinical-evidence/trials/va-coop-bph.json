@@ -18,7 +18,7 @@
   ],
   "question": "Do terazosin, finasteride, or their combination improve symptoms and peak urinary flow more than placebo in men with symptomatic BPH?",
   "design": {
-    "phase": "not stated in abstract",
+    "phase": "not stated",
     "randomized": true,
     "blinding": "double-blind",
     "type": "superiority",
@@ -27,27 +27,31 @@
       {
         "key": "pbo",
         "label": "Placebo",
-        "role": "control"
+        "role": "control",
+        "n": 305
       },
       {
         "key": "ter",
         "label": "terazosin 10 mg daily",
-        "role": "experimental"
+        "role": "experimental",
+        "n": 305
       },
       {
         "key": "fin",
         "label": "finasteride 5 mg daily",
-        "role": "experimental"
+        "role": "experimental",
+        "n": 310
       },
       {
         "key": "combo",
         "label": "terazosin plus finasteride",
-        "role": "experimental"
+        "role": "experimental",
+        "n": 309
       }
     ],
-    "population": "1,229 men with symptomatic benign prostatic hyperplasia.",
+    "population": "1,229 men aged 45–80 years with symptomatic BPH, AUA symptom score ≥8, peak urinary flow 4–15 mL/s with voided volume ≥125 mL, and postvoid residual <300 mL; no minimum prostate volume.",
     "description": "Multicenter, double-blind, placebo-controlled randomized trial",
-    "locator": "PubMed abstract, Methods; PubMed publication types and MeSH"
+    "locator": "Full text, Methods, Recruitment and eligibility, p 534; Table 1, p 535"
   },
   "verdict": "mixed",
   "verdictNote": "Terazosin improved both endpoints; finasteride and its addition to terazosin did not.",
@@ -59,54 +63,111 @@
       "label": "Primary symptom and flow report",
       "published": "1996-08-22",
       "cutoff": null,
-      "citation": "Lepor H, Williford WO, Barry MJ, et al. \"The Efficacy of Terazosin, Finasteride, or Both in Benign Prostatic Hyperplasia.\" *N Engl J Med.* 1996;335(8):533-540. doi:10.1056/NEJM199608223350801",
+      "citation": "Lepor H, Williford WO, Barry MJ, et al. \"The Efficacy of Terazosin, Finasteride, or Both in Benign Prostatic Hyperplasia.\" *N Engl J Med.* 1996;335(8):533-539. doi:10.1056/NEJM199608223350801",
       "doi": "10.1056/NEJM199608223350801",
       "pmid": "8684407",
       "followUp": "1 year",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Methods, Follow-up of Patients, p 534",
       "results": [
         {
           "endpoint": "AUA symptom score",
           "role": "primary",
-          "measure": "Mean decrease from baseline at 1 year, points",
+          "measure": "Mean decrease from baseline at 52 weeks, points; observed 52-week cases",
           "values": {
-            "pbo": "2.6 points",
-            "ter": "6.1 points",
-            "fin": "3.2 points",
-            "combo": "6.2 points"
+            "pbo": "2.6 points (n=265)",
+            "ter": "6.1 points (n=275)",
+            "fin": "3.2 points (n=260)",
+            "combo": "6.2 points (n=278)"
           },
           "effect": {
             "type": "none",
-            "p": "<0.001 for terazosin and combination versus finasteride and placebo"
+            "p": "finasteride vs terazosin <0.001; finasteride vs combination <0.001; terazosin vs combination 1.00; terazosin vs placebo <0.001; combination vs placebo <0.001; finasteride vs placebo 0.63"
           },
-          "met": null,
-          "note": "Finasteride did not differ from placebo; combination was no more effective than terazosin alone.",
-          "locator": "PubMed abstract, Results and Conclusions"
+          "met": true,
+          "note": "Primary pairwise comparisons were finasteride versus terazosin, finasteride versus combination, and terazosin versus combination, with Bonferroni adjustment. Repeated-measures analysis included randomized men with any follow-up data; no numerical between-arm effect estimate or CI was reported.",
+          "locator": "Full text, Methods, Statistical Analysis, p 534; Results and Figure 1, p 536"
         },
         {
           "endpoint": "Peak urinary flow",
           "role": "primary",
-          "measure": "Mean increase from baseline at 1 year, mL/s",
+          "measure": "Mean increase from baseline at 52 weeks, mL/s; observed 52-week cases",
           "values": {
-            "pbo": "1.4 mL/s",
-            "ter": "2.7 mL/s",
-            "fin": "1.6 mL/s",
-            "combo": "3.2 mL/s"
+            "pbo": "1.4 mL/s (n=264)",
+            "ter": "2.7 mL/s (n=275)",
+            "fin": "1.6 mL/s (n=252)",
+            "combo": "3.2 mL/s (n=277)"
           },
           "effect": {
             "type": "none",
-            "p": "<0.001 for terazosin and combination versus finasteride and placebo"
+            "p": "finasteride vs terazosin <0.001; finasteride vs combination <0.001; terazosin vs combination 0.15; terazosin vs placebo <0.001; combination vs placebo <0.001; finasteride vs placebo 0.07"
           },
-          "met": null,
-          "note": "Finasteride did not differ from placebo; combination was no more effective than terazosin alone.",
-          "locator": "PubMed abstract, Results and Conclusions"
+          "met": true,
+          "note": "Primary pairwise comparisons were finasteride versus terazosin, finasteride versus combination, and terazosin versus combination, with Bonferroni adjustment. Repeated-measures analysis included randomized men with any follow-up data; no numerical between-arm effect estimate or CI was reported.",
+          "locator": "Full text, Methods, Statistical Analysis, p 534; Results and Figure 2, pp 536–537"
+        },
+        {
+          "endpoint": "Prostate volume",
+          "role": "descriptive",
+          "measure": "Mean change from baseline at 52 weeks, cm³",
+          "values": {
+            "pbo": "+0.5 cm³",
+            "ter": "+0.5 cm³",
+            "fin": "−6.1 cm³",
+            "combo": "−7.0 cm³"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001 for each finasteride-containing arm versus placebo and terazosin"
+          },
+          "met": "not-tested",
+          "note": "The report does not provide 52-week prostate-volume measurement denominators or a confidence interval.",
+          "locator": "Full text, Results, p 537"
         }
       ],
       "harms": [
         {
           "label": "Discontinuation because of adverse effects",
-          "locator": "PubMed abstract, Results",
-          "note": "1.6% with placebo versus 4.8%-7.8% across the three active groups; the abstract gives no arm-specific rates or denominators."
+          "locator": "Full text, Table 2, p 535",
+          "note": "Adverse-event withdrawal from study treatment; placebo lower than each active arm (P<0.05).",
+          "values": {
+            "pbo": "5/305 (1.6%)",
+            "ter": "18/305 (5.9%)",
+            "fin": "15/310 (4.8%)",
+            "combo": "24/309 (7.8%)"
+          }
+        },
+        {
+          "label": "Dizziness",
+          "values": {
+            "pbo": "22/305 (7%)",
+            "ter": "79/305 (26%)",
+            "fin": "26/310 (8%)",
+            "combo": "66/309 (21%)"
+          },
+          "locator": "Full text, Table 3, p 536",
+          "note": "Overall four-arm chi-square P<0.001."
+        },
+        {
+          "label": "Postural hypotension",
+          "values": {
+            "pbo": "3/305 (1%)",
+            "ter": "23/305 (8%)",
+            "fin": "7/310 (2%)",
+            "combo": "27/309 (9%)"
+          },
+          "locator": "Full text, Table 3, p 536",
+          "note": "Overall four-arm chi-square P<0.001."
+        },
+        {
+          "label": "Sexual adverse events",
+          "values": {
+            "pbo": "impotence 14/305 (5%); ejaculatory abnormality 4/305 (1%); decreased libido 4/305 (1%)",
+            "ter": "impotence 18/305 (6%); ejaculatory abnormality 1/305 (0.3%); decreased libido 8/305 (3%)",
+            "fin": "impotence 29/310 (9%); ejaculatory abnormality 6/310 (2%); decreased libido 14/310 (5%)",
+            "combo": "impotence 29/309 (9%); ejaculatory abnormality 21/309 (7%); decreased libido 15/309 (5%)"
+          },
+          "locator": "Full text, Table 3, p 536",
+          "note": "Overall four-arm chi-square P=0.05 for impotence and decreased libido; P<0.001 for ejaculatory abnormality."
         }
       ],
       "delivery": [
@@ -117,14 +178,25 @@
             "fin": "finasteride 5 mg",
             "combo": "both drugs at the assigned doses"
           },
-          "locator": "PubMed abstract, Methods",
+          "locator": "Full text, Methods, Treatments, p 534",
           "note": ""
+        },
+        {
+          "label": "Treatment adherence and terazosin dose reduction",
+          "values": {
+            "pbo": "254/305 (83%) completed assigned treatment; 2% dose reduction",
+            "ter": "256/305 (84%) completed assigned treatment; 11% dose reduction",
+            "fin": "243/310 (78%) completed assigned treatment; 2% dose reduction",
+            "combo": "254/309 (82%) completed assigned treatment; 11% dose reduction"
+          },
+          "locator": "Full text, Table 2, p 535; Results, Compliance and Safety, p 535",
+          "note": "Mean pill-count compliance ranged from 94% to 98% across arms. Among terazosin and combination recipients, 80% were taking 10 mg at study end."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1056_nejm199608223350801.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1056_nejm199608223350801.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -254,38 +326,57 @@
       "doi": "10.1002/(SICI)1097-0045(19990601)39:4<234::AID-PROS3>3.0.CO;2-4",
       "pmid": "10344212",
       "followUp": "52 weeks",
-      "followUpLocator": "PubMed abstract, Methods and Results",
+      "followUpLocator": "Full text, Methods, Follow-Up of Patients, p 235",
       "results": [
         {
-          "endpoint": "PSA response",
-          "role": "secondary",
-          "measure": "Direction of PSA change at 52 weeks",
+          "endpoint": "Mean serum PSA at 52 weeks",
+          "role": "descriptive",
+          "measure": "Mean serum PSA at baseline and 52 weeks, ng/mL; paired measurements",
           "values": {
-            "pbo": "significant increase",
-            "ter": "significant increase",
-            "fin": "significant decrease",
-            "combo": "significant decrease"
+            "pbo": "2.34 to 2.60 ng/mL",
+            "ter": "2.18 to 2.49 ng/mL",
+            "fin": "2.26 to 1.22 ng/mL",
+            "combo": "2.38 to 1.36 ng/mL"
+          },
+          "effect": {
+            "type": "none",
+            "p": "within-arm changes: finasteride and combination <0.001; placebo and terazosin <0.01; terazosin vs placebo not significant"
+          },
+          "note": "Pooled t-tests assessed group mean changes; the PSA-analysis denominators and between-arm effect estimates or CIs are not reported.",
+          "locator": "Full text, Methods, Statistical Analysis, p 235; Results, p 236",
+          "met": "not-tested"
+        },
+        {
+          "endpoint": "40%–60% decrease in PSA",
+          "role": "descriptive",
+          "measure": "Percentage with 40%–60% PSA decrease from baseline at 52 weeks",
+          "values": {
+            "pbo": "4.6%",
+            "ter": "4.7%",
+            "fin": "34.0%",
+            "combo": "30.3%"
           },
           "effect": {
             "type": "none"
           },
-          "note": "Terazosin did not differ from placebo. Only 35% of men receiving finasteride or combination had the expected 40%-60% PSA decrease; the abstract does not give a pooled denominator.",
-          "locator": "PubMed abstract, Results and Conclusions"
+          "met": "not-tested",
+          "note": "Table III reports percentages without analysis denominators; >60% decreases occurred in 3.0%, 2.2%, 29.0%, and 31.4%, respectively.",
+          "locator": "Full text, Table III, p 237"
         }
       ],
       "harms": [],
       "delivery": [],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1002_sici_1097_0045_19990601_39_4_234_aid_pros3_3_0_co_2_4.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1002_sici_1097_0045_19990601_39_4_234_aid_pros3_3_0_co_2_4.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/va-coop-bph",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

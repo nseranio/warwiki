@@ -16,7 +16,7 @@
   ],
   "question": "Does flexible-dose fesoterodine improve urgency compared with placebo in older adults with overactive bladder?",
   "design": {
-    "phase": "not stated in abstract",
+    "phase": "not stated in full text",
     "randomized": true,
     "blinding": "double-blind",
     "type": "superiority",
@@ -25,21 +25,23 @@
       {
         "key": "exp",
         "label": "Fesoterodine 4 mg daily with optional increase to 8 mg",
-        "role": "experimental"
+        "role": "experimental",
+        "n": 398
       },
       {
         "key": "ctl",
         "label": "matching placebo with sham dose adjustment",
-        "role": "control"
+        "role": "control",
+        "n": 396
       }
     ],
-    "population": "Adults aged 65 years or older with at least 3 months of overactive bladder symptoms, at least eight daily micturitions and three daily urgency episodes, moderate bladder bother, and MMSE score at least 20.",
+    "population": "Adults aged 65 years or older with at least 3 months of overactive bladder symptoms, at least eight daily micturitions and three daily urgency episodes, moderate bladder bother, and MMSE score at least 20; 47% were male and 46% had urgency urinary incontinence at baseline, and mean baseline MMSE was about 28 in both arms.",
     "description": "Multicenter, double-blind, placebo-controlled randomized trial",
-    "locator": "PubMed abstract, Design, Setting, Participants, and Interventions"
+    "locator": "Full text, Methods, pp 186–187; Results, p 187; Table 1"
   },
   "verdict": "positive",
-  "verdictNote": "Urgency improved; urgency urinary incontinence did not differ significantly.",
-  "takeaway": "In adults aged 65 or older with overactive bladder, flexible-dose fesoterodine 4 or 8 mg reduced urgency episodes more than placebo at 12 weeks; urgency urinary incontinence episodes did not differ significantly.",
+  "verdictNote": "Primary urgency endpoint met; urgency urinary incontinence did not differ significantly.",
+  "takeaway": "In adults aged 65 or older with overactive bladder, flexible-dose fesoterodine reduced daily urgency episodes more than placebo at 12 weeks (adjusted mean changes −3.47 vs −1.92; P<0.001); among the 46% with baseline urgency incontinence, median episode change did not differ (P=0.73).",
   "reports": [
     {
       "id": "sofia-2013",
@@ -51,32 +53,39 @@
       "doi": "10.1111/jgs.12088",
       "pmid": "23350833",
       "followUp": "12 weeks of randomized treatment",
-      "followUpLocator": "PubMed abstract, Design and Interventions",
+      "followUpLocator": "Full text, Methods, p 186",
       "results": [
         {
           "endpoint": "Urgency episodes",
           "role": "primary",
           "measure": "Change from baseline in episodes per 24 hours at week 12",
           "values": {
-            "exp": "greater improvement",
-            "ctl": "less improvement"
+            "exp": "−3.47 adjusted mean episodes/24 h (FAS n=374)",
+            "ctl": "−1.92 adjusted mean episodes/24 h (FAS n=382)"
           },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "<0.001"
           },
           "met": true,
-          "note": "The abstract reports a statistically significant between-group difference without arm-specific changes or an effect estimate.",
-          "locator": "PubMed abstract, Measurements and Results"
+          "note": "Least-squares mean change with last observation carried forward; adjusted between-arm difference and its 95% CI were not reported.",
+          "locator": "Full text, Figure 1A; Results, p 188"
         },
         {
           "endpoint": "Urgency urinary incontinence episodes",
           "role": "secondary",
           "measure": "Change from baseline at week 12",
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "0.73"
           },
-          "note": "The abstract reports no statistically significant between-group difference and gives no arm-specific changes.",
-          "locator": "PubMed abstract, Results"
+          "note": "The endpoint was analyzed only in the 46% with baseline UUI; exact subgroup denominators and a between-arm CI were not reported.",
+          "locator": "Full text, Figure 1E; Results, p 188",
+          "values": {
+            "exp": "−1.0 median episodes/24 h (baseline-UUI subset)",
+            "ctl": "−0.7 median episodes/24 h (baseline-UUI subset)"
+          },
+          "met": false
         },
         {
           "endpoint": "MMSE score",
@@ -85,35 +94,104 @@
           "effect": {
             "type": "none"
           },
-          "note": "The abstract reports no change in MMSE score, without group-specific values.",
-          "locator": "PubMed abstract, Results"
+          "note": "Mean MMSE change; no formal cognitive endpoint hypothesis was reported.",
+          "locator": "Full text, Safety, p 189",
+          "values": {
+            "exp": "+0.24 points (SD 1.76; baseline n=374, week-12 n=341)",
+            "ctl": "+0.23 points (SD 1.82; baseline n=382, week-12 n=356)"
+          },
+          "met": "not-tested"
+        },
+        {
+          "endpoint": "Micturitions",
+          "role": "secondary",
+          "measure": "Adjusted mean change in micturitions per 24 hours at week 12",
+          "values": {
+            "exp": "−1.95 (FAS n=374)",
+            "ctl": "−1.11 (FAS n=382)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Least-squares mean changes; no between-arm confidence interval reported.",
+          "locator": "Full text, Figure 1B; Results, p 188"
+        },
+        {
+          "endpoint": "Diary-dry rate",
+          "role": "secondary",
+          "measure": "No UUI episodes before weeks 8 and 12 among participants with baseline UUI",
+          "values": {
+            "exp": "53% (subgroup denominator not reported)",
+            "ctl": "45% (subgroup denominator not reported)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 1.52,
+            "ci": [
+              0.91,
+              2.53
+            ],
+            "p": "0.11"
+          },
+          "met": false,
+          "note": "Baseline-UUI subgroup; exact arm denominators not reported.",
+          "locator": "Full text, Results, p 188"
         }
       ],
       "harms": [
         {
           "label": "Dry mouth",
           "values": {
-            "exp": "34%",
-            "ctl": "5%"
+            "exp": "133/392 (33.9%)",
+            "ctl": "21/393 (5.3%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract does not give event counts or arm-specific safety denominators."
+          "locator": "Full text, Table 3",
+          "note": "Safety population; all-causality adverse event."
         },
         {
           "label": "Constipation",
           "values": {
-            "exp": "9%",
-            "ctl": "3%"
+            "exp": "35/392 (8.9%)",
+            "ctl": "10/393 (2.5%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract does not give event counts or arm-specific safety denominators."
+          "locator": "Full text, Table 3",
+          "note": "Safety population; all-causality adverse event."
+        },
+        {
+          "label": "Urinary retention and catheterization",
+          "values": {
+            "exp": "retention 5/392 (1.3%); catheterization 3/392 (0.8%)",
+            "ctl": "retention 1/393 (0.3%); catheterization 1/393 (0.3%)"
+          },
+          "locator": "Full text, Safety, pp 189–190",
+          "note": "Three men and two women receiving fesoterodine had retention; all catheterized patients were men."
+        },
+        {
+          "label": "Urinary tract infection",
+          "values": {
+            "exp": "10/392 (2.6%)",
+            "ctl": "7/393 (1.8%)"
+          },
+          "locator": "Full text, Table 3",
+          "note": "Safety population; all-causality adverse event."
+        },
+        {
+          "label": "Any adverse event and adverse-event discontinuation",
+          "values": {
+            "exp": "any AE 244/392 (62.2%); AE discontinuation 46/392 (11.7%)",
+            "ctl": "any AE 142/393 (36.1%); AE discontinuation 22/393 (5.6%)"
+          },
+          "locator": "Full text, Table 3",
+          "note": "Safety population; discontinuation values are all-causality adverse events."
         }
       ],
       "delivery": [
         {
           "label": "Dose adjustment",
           "value": "Fesoterodine began at 4 mg; increase to 8 mg was allowed at week 4 or 8, with de-escalation to 4 mg at week 8; placebo adjustments were sham.",
-          "locator": "PubMed abstract, Interventions"
+          "locator": "Full text, Methods, p 186"
         },
         {
           "label": "Dose escalation choice by week 8",
@@ -121,14 +199,14 @@
             "exp": "64%",
             "ctl": "71%"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The placebo group made a sham escalation choice; the abstract does not give counts or denominators."
+          "locator": "Full text, Participants and Dosing, p 187",
+          "note": "Fesoterodine versus sham placebo adjustment; counts and denominators were not reported."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_jgs_12088.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_jgs_12088.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       },
       "dateLocator": "Crossref record, published-online; PubMed citation, Epub"
     },
@@ -142,50 +220,91 @@
       "doi": "10.1002/nau.22383",
       "pmid": "23460503",
       "followUp": "12-week open-label extension after 12-week randomized treatment",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Methods, p 107",
       "results": [
         {
-          "endpoint": "Overactive bladder symptom response",
+          "endpoint": "Daily urgency episodes",
           "role": "descriptive",
-          "measure": "Bladder-diary and patient-reported outcomes at end of open-label extension",
+          "measure": "Change from double-blind baseline in daily urgency episodes at week 24, by age (extension FAS)",
           "effect": {
             "type": "none"
           },
-          "note": "The prior-fesoterodine group maintained its response; the prior-placebo group improved after starting fesoterodine. No arm-specific efficacy values appear in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Original assignment groups; all received fesoterodine during the extension. CIs are within-group, and no between-group hypothesis test was performed.",
+          "locator": "Full text, Table III; Results, p 109",
+          "values": {
+            "exp": "65–75: −4.1 (95% CI −4.7 to −3.5; n=210); >75: −4.0 (−4.7 to −3.3; n=95)",
+            "ctl": "65–75: −4.6 (95% CI −5.1 to −4.0; n=231); >75: −3.6 (−4.5 to −2.6; n=102)"
+          },
+          "met": "not-tested"
         }
       ],
       "harms": [
         {
           "label": "Any adverse event during open-label fesoterodine",
           "values": {
-            "exp": "30.7%",
-            "ctl": "48.1%"
+            "exp": "96/313 (30.7%)",
+            "ctl": "164/341 (48.1%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Groups are defined by original randomized assignment; both received fesoterodine during the extension. Arm-specific denominators are absent from the abstract."
+          "locator": "Full text, Table I",
+          "note": "Original assignment groups; both received open-label fesoterodine. Safety population."
         },
         {
-          "label": "Discontinued because of an adverse event during extension",
+          "label": "Discontinued because of treatment-emergent adverse event during extension",
           "values": {
-            "exp": "1.9%",
-            "ctl": "9.4%"
+            "exp": "6/313 (1.9%)",
+            "ctl": "32/341 (9.4%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Groups are defined by original randomized assignment; both received fesoterodine during the extension. Arm-specific denominators are absent from the abstract."
+          "locator": "Full text, Safety and Tolerability, p 109",
+          "note": "The narrative treatment-emergent AE counts differ from Table I disposition counts labeled AEs (11/313 and 33/341)."
+        },
+        {
+          "label": "Dry mouth during extension",
+          "values": {
+            "exp": "21/313 (6.7%)",
+            "ctl": "95/341 (27.9%)"
+          },
+          "locator": "Full text, Table I",
+          "note": "Original assignment groups; both received open-label fesoterodine."
+        },
+        {
+          "label": "Urinary tract infection during extension",
+          "values": {
+            "exp": "14/313 (4.5%)",
+            "ctl": "4/341 (1.2%)"
+          },
+          "locator": "Full text, Table I",
+          "note": "Original assignment groups; both received open-label fesoterodine."
+        },
+        {
+          "label": "Urinary retention during extension",
+          "values": {
+            "exp": "1/313 (0.3%); no discontinuation",
+            "ctl": "4/341 (1.2%); 3/341 (0.9%) discontinued, 2 catheterized"
+          },
+          "locator": "Full text, Safety and Tolerability, p 109",
+          "note": "Five men had retention; two of three discontinuing after prior placebo required catheterization."
         }
       ],
       "delivery": [
         {
           "label": "Open-label entrants and treatment",
-          "value": "654 prior trial completers entered; prior-placebo patients began fesoterodine 4 mg with optional increase to 8 mg, and prior-fesoterodine patients continued their assigned dose.",
-          "locator": "PubMed abstract, Methods and Results"
+          "value": "Of 655 randomized-phase completers, 654 entered (313 prior fesoterodine; 341 prior placebo) and 581 completed (282 and 299, respectively). Prior-placebo patients began fesoterodine 4 mg with optional increase to 8 mg at extension week 4 or 8; prior-fesoterodine patients continued their assigned dose.",
+          "locator": "Full text, Methods and Results, p 107; Table I"
+        },
+        {
+          "label": "Dose at extension week 8",
+          "values": {
+            "exp": "52.7% receiving 8 mg/day",
+            "ctl": "50.8% receiving 8 mg/day"
+          },
+          "locator": "Full text, Safety and Tolerability, p 109",
+          "note": "Original assignment groups; both receiving open-label fesoterodine. Counts and denominators for dose status not reported."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1002_nau_22383.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1002_nau_22383.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       },
       "dateLocator": "Crossref record, published-online; PubMed citation, Epub"
     }
@@ -193,7 +312,7 @@
   "relations": [],
   "page": "/docs/clinical-evidence/studies/sofia",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

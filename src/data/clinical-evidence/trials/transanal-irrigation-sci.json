@@ -19,7 +19,7 @@
   "design": {
     "phase": "not applicable",
     "randomized": true,
-    "blinding": "not stated in primary abstract",
+    "blinding": "No blinding; the interventions made blinding impossible",
     "type": "superiority",
     "n": 87,
     "arms": [
@@ -38,7 +38,7 @@
     ],
     "population": "Adults with spinal cord injury and neurogenic bowel dysfunction treated at five specialized European spinal cord injury centers.",
     "description": "Multicenter randomized superiority trial",
-    "locator": "PubMed abstract, Methods; secondary report, Methods"
+    "locator": "Full text, Patients and Methods, pp 738–741; Table 1"
   },
   "verdict": "positive",
   "verdictNote": "Constipation and fecal incontinence scores favored irrigation at 10 weeks.",
@@ -56,7 +56,7 @@
       "doi": "10.1053/j.gastro.2006.06.004",
       "pmid": "16952543",
       "followUp": "10-week randomized treatment period",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Abstract and Assessments During the Study, pp 738–740",
       "results": [
         {
           "endpoint": "Constipation score",
@@ -71,8 +71,8 @@
             "p": "0.0016"
           },
           "met": true,
-          "note": "Table 3 analysis included 39 irrigation and 41 conservative-care participants; missing termination assessments used baseline observations carried forward.",
-          "locator": "PubMed abstract, Results; full text, Table 3"
+          "note": "Intention-to-treat analysis included 39 irrigation and 41 conservative-care participants; missing termination assessments used baseline observations carried forward.",
+          "locator": "Full text, Table 3; Statistical Analysis, p 741"
         },
         {
           "endpoint": "Fecal incontinence score",
@@ -87,8 +87,8 @@
             "p": "0.015"
           },
           "met": true,
-          "note": "Scores are reported at study termination; endpoint-specific assessed denominators are absent from the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Intention-to-treat analysis included 42 irrigation and 45 conservative-care participants, with baseline observations carried forward for missing termination assessments.",
+          "locator": "Full text, Table 3"
         },
         {
           "endpoint": "Neurogenic bowel dysfunction score",
@@ -102,16 +102,71 @@
             "type": "none",
             "p": "0.048"
           },
-          "note": "Table 3 analysis included 41 irrigation and 45 conservative-care participants; missing termination assessments used baseline observations carried forward.",
-          "locator": "PubMed abstract, Results; full text, Table 3"
+          "note": "Intention-to-treat analysis included 41 irrigation and 45 conservative-care participants; missing termination assessments used baseline observations carried forward.",
+          "locator": "Full text, Table 3"
+        },
+        {
+          "endpoint": "Improvement in quality of life",
+          "role": "secondary",
+          "measure": "Mean improvement in quality of life at 10 weeks on a 0–10 numeric box scale (higher is better)",
+          "values": {
+            "exp": "6.3 (SD 2.9; n = 35)",
+            "ctl": "4.2 (SD 2.5; n = 44)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.00009"
+          },
+          "note": "Only assessed at termination; the score was not recorded at baseline.",
+          "locator": "Full text, Table 3; Assessments During the Study, p 740"
+        },
+        {
+          "endpoint": "Daily bowel management time",
+          "role": "descriptive",
+          "measure": "Mean minutes spent on bowel management daily during weeks 7–10",
+          "values": {
+            "exp": "47.0 (SD 25.0; n = 37)",
+            "ctl": "74.4 (SD 59.8; n = 43)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.040"
+          },
+          "note": "Steady-state weekly follow-up; last observation carried forward.",
+          "locator": "Full text, Table 5; Results, p 742"
         }
       ],
-      "harms": [],
-      "delivery": [],
+      "harms": [
+        {
+          "label": "Urinary tract infection treated with antibiotics",
+          "values": {
+            "exp": "5.9% of patients during weeks 1–10",
+            "ctl": "15.5% of patients during weeks 1–10"
+          },
+          "note": "P = 0.0052; the paper gives percentages without event counts or arm-specific assessed denominators.",
+          "locator": "Full text, Results, pp 742–743"
+        },
+        {
+          "label": "Hospitalization for severe abdominal pain",
+          "values": {
+            "exp": "2/42 randomized patients after 3 and 9 weeks of treatment",
+            "ctl": "not reported"
+          },
+          "note": "No serious condition was found; both improved after disimpaction. One discontinued treatment.",
+          "locator": "Full text, Results, p 743"
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Irrigation water volume and frequency",
+          "value": "Peristeen balloon catheter and manual pump; usual starting regimen 750 mL tepid tap water daily, adjustable to 250–1500 mL and every second day or less. During weeks 7–10, median volume was 700 mL (range 200–1500) among 37 users; 6 irrigated daily, 18 every second day, and 13 one to three times weekly.",
+          "locator": "Full text, Interventions, p 741; Table 6"
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1053_j_gastro_2006_06_004.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1053_j_gastro_2006_06_004.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -219,7 +274,7 @@
   "relations": [],
   "page": "/docs/clinical-evidence/studies/transanal-irrigation-sci",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

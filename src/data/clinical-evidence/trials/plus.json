@@ -36,13 +36,13 @@
         "role": "control"
       }
     ],
-    "population": "Men with persistent overactive bladder symptoms while receiving tamsulosin for lower urinary tract symptoms attributed to benign prostatic hyperplasia.",
+    "population": "Men aged at least 40 years with persistent overactive bladder symptoms (at least 8 micturitions and 2 urgency episodes daily) despite tamsulosin 0.4 mg daily for at least 2 months for LUTS attributed to previously diagnosed BPH.",
     "description": "Multicenter, double-blind, placebo-controlled phase 4 randomized trial",
-    "locator": "ClinicalTrials.gov NCT02757768, Participant Flow, Started; PubMed abstract, Methods"
+    "locator": "Full text, Study Design, p 1164; Results, p 1165; Figure 2, p 1166"
   },
   "verdict": "positive",
-  "verdictNote": "The adjusted benefit was 0.39 fewer micturitions per day.",
-  "takeaway": "In PLUS, mirabegron added to tamsulosin reduced daily micturitions more than placebo added to tamsulosin after 12 weeks (adjusted difference −0.39 per day, 95% CI −0.76 to −0.02).",
+  "verdictNote": "The adjusted benefit was 0.39 fewer micturitions per day (P = 0.039).",
+  "takeaway": "In PLUS, mirabegron added to tamsulosin reduced daily micturitions more than placebo added to tamsulosin after 12 weeks (adjusted difference −0.39 per day, 95% CI −0.76 to −0.02; P = 0.039).",
   "reports": [
     {
       "id": "plus-2020",
@@ -54,7 +54,7 @@
       "doi": "10.1097/JU.0000000000000738",
       "pmid": "31895002",
       "followUp": "12 weeks of randomized treatment",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Study Design, pp 1164–1165",
       "results": [
         {
           "endpoint": "Micturitions",
@@ -71,16 +71,17 @@
               -0.76,
               -0.02
             ],
-            "ciLevel": "95%"
+            "ciLevel": "95%",
+            "p": "0.039"
           },
           "met": true,
-          "note": "Full analysis set: 676 men; adjusted between-arm mean difference.",
-          "locator": "PubMed abstract, Results"
+          "note": "Full analysis set: 337 mirabegron-treated and 339 placebo-treated men; adjusted between-arm mean difference.",
+          "locator": "Full text, Results, p 1166; Figure 3, p 1168"
         },
         {
           "endpoint": "Urgency episodes",
-          "role": "secondary",
-          "measure": "Change in urgency episodes per day",
+          "role": "key-secondary",
+          "measure": "Change in grade 3/4 urgency episodes per day from baseline to end of treatment",
           "values": {
             "exp": "greater reduction",
             "ctl": "lesser reduction"
@@ -88,12 +89,13 @@
           "effect": {
             "type": "none"
           },
-          "note": "Reported as statistically superior for mirabegron; numerical estimates absent from abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Direction and statistical significance reported in Results; numerical arm estimates are plotted in Figure 5.",
+          "locator": "Full text, Efficacy Assessments, p 1165; Results, pp 1166–1167; Figure 5, p 1169",
+          "met": true
         },
         {
           "endpoint": "Mean volume voided per micturition",
-          "role": "secondary",
+          "role": "key-secondary",
           "measure": "Change in mean volume voided per micturition",
           "values": {
             "exp": "greater improvement",
@@ -102,12 +104,13 @@
           "effect": {
             "type": "none"
           },
-          "note": "Reported as statistically superior for mirabegron; numerical estimates absent from abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Direction and statistical significance reported in Results; numerical arm estimates are plotted in Figure 5.",
+          "locator": "Full text, Efficacy Assessments, p 1165; Results, pp 1166–1167; Figure 5, p 1169",
+          "met": true
         },
         {
           "endpoint": "Total urgency and frequency score",
-          "role": "secondary",
+          "role": "key-secondary",
           "measure": "Change in total urgency and frequency score",
           "values": {
             "exp": "greater improvement",
@@ -116,12 +119,13 @@
           "effect": {
             "type": "none"
           },
-          "note": "Reported as statistically superior for mirabegron; numerical estimates absent from abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Direction and statistical significance reported in Results; numerical arm estimates are plotted in Figure 5.",
+          "locator": "Full text, Efficacy Assessments, p 1165; Results, pp 1166–1167; Figure 5, p 1169",
+          "met": true
         },
         {
           "endpoint": "International Prostate Symptom Score",
-          "role": "secondary",
+          "role": "key-secondary",
           "measure": "Change in total IPSS",
           "values": {
             "exp": "no statistically significant between-arm difference",
@@ -130,40 +134,110 @@
           "effect": {
             "type": "none"
           },
-          "note": "Numerical estimates absent from abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "No statistically significant difference in total I-PSS; numerical arm estimates are plotted in Figure 5.",
+          "locator": "Full text, Efficacy Assessments, p 1165; Results, pp 1166–1167; Figure 5, p 1169",
+          "met": false
+        },
+        {
+          "endpoint": "Incontinence episodes",
+          "role": "secondary",
+          "measure": "Change in total incontinence episodes per day from baseline to end of treatment",
+          "effect": {
+            "type": "difference",
+            "value": -0.3,
+            "ci": [
+              -0.9,
+              0.3
+            ],
+            "ciLevel": "95%",
+            "p": "0.64"
+          },
+          "note": "Adjusted mean difference; between-arm difference was not statistically significant.",
+          "locator": "Full text, Results, pp 1166–1167"
+        },
+        {
+          "endpoint": "Urgency urinary incontinence episodes",
+          "role": "secondary",
+          "measure": "Change in urgency urinary incontinence episodes per day from baseline to end of treatment",
+          "effect": {
+            "type": "difference",
+            "value": -0.33,
+            "ci": [
+              -0.92,
+              0.26
+            ],
+            "ciLevel": "95%",
+            "p": "0.27"
+          },
+          "note": "Adjusted mean difference; between-arm difference was not statistically significant.",
+          "locator": "Full text, Results, pp 1166–1167"
+        },
+        {
+          "endpoint": "OAB-q symptom bother score",
+          "role": "secondary",
+          "measure": "Change in OAB-q symptom bother score from baseline to end of treatment",
+          "effect": {
+            "type": "difference",
+            "value": -2.11,
+            "ci": [
+              -5.02,
+              0.8
+            ],
+            "ciLevel": "95%",
+            "p": "0.15"
+          },
+          "note": "Adjusted mean difference; between-arm difference was not statistically significant.",
+          "locator": "Full text, Results, pp 1166–1167"
         }
       ],
       "harms": [
         {
           "label": "Urinary retention",
           "values": {
-            "exp": "higher than control",
-            "ctl": "lower than mirabegron"
+            "exp": "6/352 (1.7%)",
+            "ctl": "1/354 (0.3%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Arm counts absent from primary abstract."
+          "locator": "Full text, Safety, pp 1166–1167; Table 3, p 1169",
+          "note": "Safety analysis set; 2/352 (0.6%) versus 0/354 required catheterization."
+        },
+        {
+          "label": "Overall treatment-emergent adverse events",
+          "values": {
+            "exp": "91/352 (25.9%)",
+            "ctl": "111/354 (31.4%)"
+          },
+          "locator": "Full text, Table 3, p 1169",
+          "note": "Safety analysis set."
+        },
+        {
+          "label": "Drug-related treatment-emergent adverse events",
+          "values": {
+            "exp": "42/352 (11.9%)",
+            "ctl": "21/354 (5.9%)"
+          },
+          "locator": "Full text, Table 3, p 1169",
+          "note": "Safety analysis set."
         }
       ],
       "delivery": [
         {
           "label": "Tamsulosin run-in and randomized treatment",
           "value": "Tamsulosin 0.4 mg for 4 weeks before randomization; 12 weeks of add-on treatment.",
-          "locator": "PubMed abstract, Methods"
+          "locator": "Full text, Study Design, pp 1164–1165"
         },
         {
           "label": "Mirabegron dosing",
           "values": {
-            "exp": "25 mg initially, titrated to 50 mg after 4 weeks",
-            "ctl": "matched placebo titration after 4 weeks"
+            "exp": "25 mg daily initially, titrated to 50 mg daily after 4 weeks for 8 more weeks",
+            "ctl": "matched placebo daily, adjusted after 4 weeks to the 50 mg equivalent for 8 more weeks"
           },
-          "locator": "PubMed abstract, Methods"
+          "locator": "Full text, Study Design, p 1164; Figure 1, p 1165"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_ju_0000000000000738.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_ju_0000000000000738.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -278,7 +352,7 @@
   "relations": [],
   "page": "/docs/clinical-evidence/studies/plus",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

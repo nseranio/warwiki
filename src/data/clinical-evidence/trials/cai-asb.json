@@ -37,11 +37,11 @@
     ],
     "population": "Sexually active women aged 18–40 years with recurrent symptomatic urinary tract infection and asymptomatic bacteriuria confirmed by the same uropathogen at at least 10^5 CFU/mL on two consecutive urine cultures.",
     "description": "Single-center, open-label randomized superiority trial",
-    "locator": "2012 PDF pp772–773, Methods and Figure 1"
+    "locator": "Full text, Study Schedule, p 772; Figure 1, p 773; Results, p 774"
   },
   "verdict": "positive",
-  "verdictNote": "No treatment yielded fewer symptomatic recurrences; the reported relative risk does not reconcile with the group risks.",
-  "takeaway": "In young women with recurrent urinary tract infection, withholding antibiotics for asymptomatic bacteriuria led to fewer symptomatic recurrences at 12 months than susceptibility-guided antibiotic treatment (41/312 [13.1%] versus 169/361 [46.8%] among analyzed women).",
+  "verdictNote": "At 12 months, more women remained recurrence-free without treatment; reported recurrence RRs differ from crude ratios.",
+  "takeaway": "In young women with recurrent urinary tract infection and asymptomatic bacteriuria, withholding antibiotics yielded more women recurrence-free through 12 months than susceptibility-guided treatment (237/312 [76.0%] versus 62/361 [17.2%] among analyzed women; Kaplan–Meier P = 0.003).",
   "reports": [
     {
       "id": "cai-asb-2012",
@@ -53,15 +53,52 @@
       "doi": "10.1093/cid/cis534",
       "pmid": "22677710",
       "followUp": "12 months; 673/699 randomized women analyzed",
-      "followUpLocator": "2012 PDF p773, Figure 1; p775, Table 2",
+      "followUpLocator": "Full text, Results, p 774; Table 2, p 775",
       "results": [
         {
-          "endpoint": "Symptomatic UTI recurrence",
+          "endpoint": "Recurrence-free through 12 months",
           "role": "primary",
-          "measure": "Symptomatic UTI recorded at the 12-month follow-up visit, divided by each group's initially analyzed size",
+          "measure": "Women remaining asymptomatic after the three scheduled visits among the original analyzed groups",
           "values": {
-            "exp": "41/312 (13.1%)",
-            "ctl": "169/361 (46.8%)"
+            "exp": "237/312 (76.0%)",
+            "ctl": "62/361 (17.2%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.003"
+          },
+          "met": true,
+          "note": "Counts are derived from the final asymptomatic row of Table 2 over the initially analyzed groups. The reported Kaplan–Meier comparison of recurrence had RR 2.14 (SE 0.187; P = 0.003), without a confidence interval.",
+          "locator": "Full text, Study Schedule, p 773; Table 2 and Kaplan–Meier Results, p 775"
+        },
+        {
+          "endpoint": "Symptomatic UTI at 6-month visit",
+          "role": "descriptive",
+          "measure": "Symptomatic women among those remaining after symptomatic women at the 3-month visit were censored",
+          "values": {
+            "exp": "23/301 (7.6%)",
+            "ctl": "98/329 (29.8%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 1.31,
+            "ci": [
+              1.21,
+              1.42
+            ],
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "The reported RR does not equal the crude ratio of these visit-specific risks; percentages are recalculated from Table 2 counts.",
+          "locator": "Full text, Follow-up Results, p 774; Table 2, p 775"
+        },
+        {
+          "endpoint": "Symptomatic UTI at 12-month visit",
+          "role": "descriptive",
+          "measure": "New symptomatic episodes among women remaining after symptomatic women at the 3- and 6-month visits were censored",
+          "values": {
+            "exp": "41/278 (14.7%)",
+            "ctl": "169/231 (73.2%)"
           },
           "effect": {
             "type": "RR",
@@ -73,8 +110,23 @@
             "p": "<0.0001"
           },
           "met": true,
-          "note": "Reported RR compares treated with untreated; it does not equal the crude ratio of the published analyzed-group risks.",
-          "locator": "2012 PDF p771, abstract Results; p775, Follow-up Results and Table 2"
+          "note": "The abstract instead divides these episode counts by initial analyzed groups (41/312 [13.1%] and 169/361 [46.8%]); the reported RR does not equal either crude risk ratio.",
+          "locator": "Full text, Abstract, p 771; Follow-up Results and Table 2, p 775"
+        },
+        {
+          "endpoint": "Quality of Well-Being score at 12 months",
+          "role": "descriptive",
+          "measure": "Mean score at the final scheduled visit; higher scores indicate better quality of life",
+          "values": {
+            "exp": "0.82 ± 0.03",
+            "ctl": "0.51 ± 0.02"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": true,
+          "locator": "Full text, Table 2 and Follow-up Results, p 775"
         }
       ],
       "harms": [
@@ -84,26 +136,40 @@
             "exp": "1/312",
             "ctl": "2/361"
           },
-          "locator": "2012 PDF p775, Follow-up Results",
+          "locator": "Full text, Follow-up Results, p 775",
           "note": "The article reports no significant between-group difference."
+        },
+        {
+          "label": "Antimicrobial adverse events",
+          "values": {
+            "exp": "none reported",
+            "ctl": "none reported"
+          },
+          "locator": "Full text, Follow-up Results, p 775",
+          "note": "No denominator for women receiving antimicrobial therapy is supplied."
         }
       ],
       "delivery": [
         {
           "label": "Bacteriuria and symptomatic UTI management",
           "value": "No antibiotic was given for asymptomatic bacteriuria in group A; group B received antibiotic therapy selected by antibiogram. Symptomatic UTIs in either group were cultured and treated by susceptibility.",
-          "locator": "2012 PDF p772, Study Schedule"
+          "locator": "Full text, Study Schedule, pp 772–773"
         },
         {
           "label": "Antibiotics used for asymptomatic bacteriuria",
           "value": "In the treated group, fosfomycin trometamol 31.4%, nitrofurantoin 26.8%, co-trimoxazole 19.8%, ciprofloxacin 13.1%, and levofloxacin 8.9% were used.",
-          "locator": "2012 PDF p774, Baseline Results",
+          "locator": "Full text, Baseline Results, p 774",
           "note": "The paper reports percentages without drug-specific counts."
+        },
+        {
+          "label": "Scheduled surveillance",
+          "value": "Follow-up visits and urine cultures were scheduled at 3, 6, and 12 months regardless of symptoms; symptomatic women between visits were asked to contact the center and undergo microbiological testing.",
+          "locator": "Full text, Study Schedule, pp 772–773"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1093_cid_cis534.txt",
-        "checked": "2026-11-12",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1093_cid_cis534.fulltext.txt",
+        "checked": "2026-11-13",
         "level": "full-text"
       }
     },
@@ -117,7 +183,7 @@
       "doi": "10.1093/cid/civ696",
       "pmid": "26270684",
       "followUp": "Mean 38.8 months; 550/673 women from the initial analyzed cohort completed follow-up",
-      "followUpLocator": "2015 PDF pp1655–1657, abstract and Results; p1658, Figure 2",
+      "followUpLocator": "Full text, Abstract, p 1655; Study Population, p 1656; Figure 2, p 1659",
       "results": [
         {
           "endpoint": "Symptomatic UTI recurrence",
@@ -131,53 +197,72 @@
             "type": "none",
             "p": "<0.001"
           },
+          "met": true,
           "note": "Complete-case observational follow-up of the original randomized groups.",
-          "locator": "2015 PDF p1657, Clinical Findings; p1659, Table 2"
+          "locator": "Full text, Clinical Findings, p 1657; Table 2, p 1660"
         },
         {
           "endpoint": "Amoxicillin–clavulanate-resistant E. coli",
-          "role": "secondary",
+          "role": "primary",
           "measure": "Resistant isolates among E. coli from symptomatic UTIs",
           "values": {
-            "exp": "1/26",
-            "ctl": "23/93"
+            "exp": "1/26 (3.8%)",
+            "ctl": "23/93 (24.7%)"
           },
           "effect": {
             "type": "none",
             "p": "0.03"
           },
-          "note": "Isolate-level comparison among women with symptomatic recurrence.",
-          "locator": "2015 PDF p1659, Table 2"
+          "met": true,
+          "note": "Isolate-level comparison among women with symptomatic recurrence; the paper names antibiotic resistance as the main outcome.",
+          "locator": "Full text, Methods, p 1656; Table 2, p 1660"
         },
         {
           "endpoint": "Trimethoprim–sulfamethoxazole-resistant E. coli",
-          "role": "secondary",
+          "role": "primary",
           "measure": "Resistant isolates among E. coli from symptomatic UTIs",
           "values": {
-            "exp": "3/26",
-            "ctl": "32/93"
+            "exp": "3/26 (11.5%)",
+            "ctl": "32/93 (34.4%)"
           },
           "effect": {
             "type": "none",
             "p": "0.01"
           },
-          "note": "Isolate-level comparison among women with symptomatic recurrence.",
-          "locator": "2015 PDF p1659, Table 2"
+          "met": true,
+          "note": "Isolate-level comparison among women with symptomatic recurrence; the paper names antibiotic resistance as the main outcome.",
+          "locator": "Full text, Methods, p 1656; Table 2, p 1660"
         },
         {
           "endpoint": "Ciprofloxacin-resistant E. coli",
-          "role": "secondary",
+          "role": "primary",
           "measure": "Resistant isolates among E. coli from symptomatic UTIs",
           "values": {
-            "exp": "5/26",
-            "ctl": "41/93"
+            "exp": "5/26 (19.2%)",
+            "ctl": "41/93 (44.1%)"
           },
           "effect": {
             "type": "none",
             "p": "0.03"
           },
-          "note": "Isolate-level comparison among women with symptomatic recurrence.",
-          "locator": "2015 PDF p1659, Table 2"
+          "met": true,
+          "note": "Isolate-level comparison among women with symptomatic recurrence; the paper names antibiotic resistance as the main outcome. Other tested drugs showed no significant difference; susceptibility differences first appeared at 2-year follow-up.",
+          "locator": "Full text, Methods, p 1656; Table 2, p 1660"
+        },
+        {
+          "endpoint": "Quality of Well-Being score at long-term follow-up",
+          "role": "descriptive",
+          "measure": "Mean score among 550 women retained for analysis; higher scores indicate better quality of life",
+          "values": {
+            "exp": "0.83 ± 0.05",
+            "ctl": "0.54 ± 0.03"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.01"
+          },
+          "met": true,
+          "locator": "Full text, Questionnaires and Clinical Findings, p 1657; Table 2, p 1660"
         }
       ],
       "harms": [
@@ -187,20 +272,34 @@
             "exp": "2/257 (0.8%)",
             "ctl": "6/293 (2.0%)"
           },
-          "locator": "2015 PDF p1659, Table 2",
+          "locator": "Full text, Clinical Findings, p 1657; Table 2, p 1660",
           "note": "Between-group P = 0.37."
+        },
+        {
+          "label": "Antimicrobial adverse effects among women treated for symptomatic UTI",
+          "values": {
+            "exp": "0/97 reported",
+            "ctl": "0/204 reported"
+          },
+          "locator": "Full text, Clinical Findings, p 1657",
+          "note": "All 301 symptomatic women received antibiotics; adverse effects were recorded but not included in the analysis."
         }
       ],
       "delivery": [
         {
           "label": "Follow-up surveillance",
-          "value": "Visits were scheduled every 6 months; urine culture and susceptibility testing were performed for symptomatic episodes, and all such episodes received susceptibility-guided antibiotics.",
-          "locator": "2015 PDF p1656, Study Schedule and Data Collection"
+          "value": "Visits were scheduled every 6 months or more often for symptoms. No microbiological evaluation was scheduled for asymptomatic women. Symptomatic episodes were cultured and treated by susceptibility; treated women remained in follow-up, and isolates from multiple episodes were collected.",
+          "locator": "Full text, Study Schedule and Data Collection, p 1656"
+        },
+        {
+          "label": "Antibiotics for symptomatic episodes",
+          "value": "Among 301 symptomatic women, 85 received fosfomycin trometamol, 59 nitrofurantoin, 37 amoxicillin–clavulanic acid, 35 co-trimoxazole, and 30 ciprofloxacin; other antibiotics accounted for the remainder.",
+          "locator": "Full text, Clinical Findings, p 1657"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1093_cid_civ696.txt",
-        "checked": "2026-11-12",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1093_cid_civ696.fulltext.txt",
+        "checked": "2026-11-13",
         "level": "full-text"
       }
     }

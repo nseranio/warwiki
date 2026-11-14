@@ -53,51 +53,113 @@
       "doi": "10.1111/j.1743-6109.2005.00110.x",
       "pmid": "16422829",
       "followUp": "After six injections administered every other week",
+      "followUpLocator": "Full text, Materials and Methods, p 711",
       "results": [
         {
-          "endpoint": "Penile hemodynamics",
-          "role": "secondary",
-          "measure": "Penile blood-flow improvement by duplex Doppler ultrasound in the 39-patient analysis",
+          "endpoint": "Peak systolic velocity",
+          "role": "descriptive",
+          "measure": "Mean cavernosal peak systolic velocity (cm/s ± SEM) before and at least 4 weeks after six injections in the 39-patient Doppler analysis",
           "values": {
-            "exp": "Greater improvement",
-            "ctl": "Less improvement"
+            "exp": "32.85 ± 2.00 to 37.92 ± 2.17 (n=19; change +5.07 cm/s)",
+            "ctl": "31.36 ± 1.60 to 30.48 ± 1.36 (n=20; change −0.88 cm/s)"
           },
           "effect": {
             "type": "none"
           },
-          "note": "The abstract reports a significant between-group difference without numerical blood-flow estimates.",
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "Within-arm P<0.05 for interferon and P>0.05 for saline; the paper gives no numerical between-group P value or confidence interval for PSV.",
+          "locator": "Full text, Table 4 and Results, p 712"
         },
         {
           "endpoint": "Nonvascular hemodynamic classification",
-          "role": "secondary",
-          "measure": "Change within the interferon arm",
+          "role": "descriptive",
+          "measure": "Patients with nonvascular status (PSV >30 cm/s, EDV ≤5 cm/s, and RI >0.8) before and after treatment in the 39-patient Doppler analysis",
           "values": {
-            "exp": "Increased",
-            "ctl": "Not reported"
+            "exp": "6/19 to 11/19",
+            "ctl": "5/20 to 5/20"
           },
           "effect": {
             "type": "none"
           },
-          "note": "The abstract reports a significant increase within the interferon arm.",
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "Within-arm P<0.05 for interferon and P>0.05 for saline. The published percentages do not match one-decimal rounding from the reported counts; counts are retained.",
+          "locator": "Full text, Materials and Methods, p 711; Table 5 and Results, p 712"
+        },
+        {
+          "endpoint": "Resistive index and end-diastolic velocity",
+          "role": "descriptive",
+          "measure": "Mean penile duplex resistive index and end-diastolic velocity (cm/s), before and after treatment",
+          "values": {
+            "exp": "RI 0.82 ± 0.03 to 0.89 ± 0.03 (P<0.05); EDV 5.47 ± 0.95 to 4.03 ± 1.13 (P=0.073); n=19",
+            "ctl": "RI 0.83 ± 0.04 to 0.87 ± 0.03 (P>0.05); EDV 5.63 ± 1.31 to 4.38 ± 1.08 (P=0.089); n=20"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "note": "P values are within-arm comparisons; no confidence interval or exact between-group P value is reported.",
+          "locator": "Full text, Table 4 and Results, p 712"
+        },
+        {
+          "endpoint": "Borderline arterial insufficiency",
+          "role": "descriptive",
+          "measure": "Patients with borderline arterial insufficiency before and after treatment by penile duplex",
+          "values": {
+            "exp": "7/19 to 2/19 (within-arm P<0.05)",
+            "ctl": "5/20 to 6/20 (within-arm P>0.05)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "locator": "Full text, Table 5, p 712"
+        },
+        {
+          "endpoint": "Erectile function",
+          "role": "descriptive",
+          "measure": "Mean IIEF erectile-function score (maximum 30) before and after treatment; paired questionnaires returned by 17/19 interferon and 16/20 saline recipients",
+          "values": {
+            "exp": "17.85 ± 1.67 to 21.10 ± 1.56 (P>0.05)",
+            "ctl": "17.65 ± 1.52 to 19.05 ± 1.48 (P>0.05)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "note": "Table 3 headings give arm n=19 and n=20, but the Results state that 17 and 16, respectively, completed paired questionnaires; the score analysis denominators are not explicit.",
+          "locator": "Full text, Table 3, p 711; Results, p 712"
         }
       ],
-      "harms": [],
+      "harms": [
+        {
+          "label": "Sinusitis, flu-like symptoms, and penile swelling with ecchymosis",
+          "values": {
+            "exp": "Reported; event count not given for the 19-patient interferon group",
+            "ctl": "2/20 reported minor penile swelling with ecchymosis"
+          },
+          "note": "The report describes flu-like symptoms as fever, chills, and arthralgia; symptoms responded to over-the-counter NSAIDs and lasted no more than 24–48 hours. It states adverse effects occur in up to 40% without a subset numerator. No Clavien-Dindo grading is given.",
+          "locator": "Full text, Results, pp 712–713"
+        }
+      ],
       "delivery": [
         {
           "label": "Doppler analysis subset and regimen",
           "values": {
-            "exp": "19 patients; 5 million units every other week for six injections",
+            "exp": "19 patients; 5 million units interferon α-2b in 10 mL saline every other week for six injections over 12 weeks",
             "ctl": "20 patients; 10 mL saline every other week for six injections"
           },
-          "locator": "PubMed abstract, Materials and Methods"
+          "locator": "Full text, Materials and Methods, pp 710–711"
+        },
+        {
+          "label": "Injection and Doppler assessment technique",
+          "value": "Circumferential penile block with 1% lidocaine without epinephrine approximately 10 minutes before plaque injection; 10 mL syringe and 27-gauge needle with multiple punctures; direct pressure at least 2 minutes after injection. PDDU used intracavernosal prostaglandin E1 and audiovisual stimulation and was repeated at least 4 weeks after injection six.",
+          "locator": "Full text, Materials and Methods, p 711"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_j_1743_6109_2005_00110_x.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_j_1743_6109_2005_00110_x.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     },
     {

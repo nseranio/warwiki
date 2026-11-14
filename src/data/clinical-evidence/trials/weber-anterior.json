@@ -43,11 +43,11 @@
     ],
     "population": "Women undergoing surgery for anterior vaginal prolapse at Cleveland Clinic, including those having concurrent prolapse repairs but excluding planned Burch, sling, or needle suspension procedures.",
     "description": "Single-center, assessor-blinded, three-arm randomized surgical trial",
-    "locator": "Chmielewski 2011 PDF pp 69.e2–69.e3, Methods and Figure 1"
+    "locator": "Full text, Methods and Results, pp 1299–1301"
   },
   "verdict": "negative",
-  "verdictNote": "Neither modified repair showed a demonstrated anatomic benefit in the original report.",
-  "takeaway": "Among women with anterior vaginal prolapse, standard anterior colporrhaphy, polyglactin 910 mesh augmentation, and ultralateral colporrhaphy had similar reported anatomic cure and symptom resolution at a median 23.3 months; mesh augmentation did not improve cure over standard repair.",
+  "verdictNote": "Primary anatomic comparison did not meet superiority (log-rank P = .578).",
+  "takeaway": "In 114 women randomized to standard, polyglactin 910 mesh-augmented, or ultralateral anterior colporrhaphy, the primary anatomic comparison found no significant difference (log-rank P = .578); 83 returned for follow-up at a median 23.3 months.",
   "reports": [
     {
       "id": "weber-anterior-2001",
@@ -59,42 +59,85 @@
       "doi": "10.1067/mob.2001.119081",
       "pmid": "11744900",
       "followUp": "Median 23.3 months among women returning for follow-up",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Results, p 1302",
       "results": [
         {
           "endpoint": "Anatomic cure at points Aa and Ba",
           "role": "primary",
-          "measure": "Stage 0 or I at points Aa and Ba among follow-up attendees",
+          "measure": "Optimal stage 0 at both Aa and Ba, or satisfactory stage I at both points with improvement from baseline; 83 follow-up attendees, with the Kaplan–Meier/log-rank primary comparison by randomized assignment",
           "values": {
             "std": "10/33 (30%)",
             "mesh": "11/26 (42%)",
             "ultra": "11/24 (46%)"
           },
           "effect": {
+            "type": "none",
+            "p": ".578"
+          },
+          "met": false,
+          "note": "Primary outcome analyzed by randomized assignment after five exclusions; observed arm proportions are among 83 follow-up attendees. Planned to detect 30-percentage-point differences with 5% type I error. No effect estimate or confidence interval reported.",
+          "locator": "Full text, Methods and Results, pp 1300–1302; Fig 2, p 1302"
+        },
+        {
+          "endpoint": "Prolapse symptom severity",
+          "role": "secondary",
+          "measure": "Visual analog scale, 1–10, before and after surgery among follow-up attendees",
+          "value": "6.9 ± 2.7 preoperatively; 1.1 ± 0.8 postoperatively; mean change 5.7 ± 2.8 points",
+          "effect": {
             "type": "none"
           },
-          "met": null,
-          "note": "The abstract concludes that outcomes were similar but gives no prespecified comparison threshold or P value.",
-          "locator": "PubMed abstract, Study Design and Results"
+          "met": "not-tested",
+          "note": "Within-patient improvement; no arm difference reported and no confidence interval given.",
+          "locator": "Full text, Table II and Results, pp 1302–1303"
+        },
+        {
+          "endpoint": "Manual pressure to void",
+          "role": "secondary",
+          "measure": "Symptom before and after surgery among follow-up attendees",
+          "value": "24/82 (29%) preoperatively; 2/82 (2%) postoperatively; resolved in 23/24 (96%) with baseline symptom",
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "note": "One of 57 women without the baseline symptom reported new onset; no arm comparison reported.",
+          "locator": "Full text, Table II, p 1303"
         }
       ],
-      "harms": [],
+      "harms": [
+        {
+          "label": "Hemorrhage requiring transfusion and pulmonary embolism",
+          "value": "Hemorrhage requiring transfusion: 1/39 standard repairs; pulmonary embolism: 1/35 ultralateral repairs. No other major postoperative complications were reported.",
+          "locator": "Full text, Table I, p 1301; Results, p 1302",
+          "note": "Clavien-Dindo grades were not reported."
+        },
+        {
+          "label": "Absorbable mesh exposure",
+          "value": "One mesh erosion among 35 mesh-group repairs (1/35), treated by office excision of exposed mesh with subsequent vaginal healing.",
+          "locator": "Full text, Table I, p 1301; Results, p 1302",
+          "note": "No other mesh-related complications were reported."
+        }
+      ],
       "delivery": [
         {
           "label": "Surgery and follow-up",
-          "value": "109/114 underwent surgery; 83/109 (76%) returned for follow-up.",
-          "locator": "PubMed abstract, Results"
+          "value": "109/114 underwent an anterior repair; five excluded from all analyses (four did not undergo surgery and one did not have an anterior repair). Five received a different technique from assigned. 83/109 (76%) returned for follow-up; 26 did not (standard 2, mesh 9, ultralateral 15; follow-up imbalance P = .0007).",
+          "locator": "Full text, Results, pp 1301–1302"
         },
         {
           "label": "Technique allocation",
-          "value": "Standard anterior repair, standard repair plus absorbable polyglactin 910 mesh, or ultralateral anterior repair.",
-          "locator": "PubMed abstract, Study Design"
+          "value": "All arms received No. 0 polydioxanone suburethral plication and 2-0 polyglactin epithelial closure. Standard repair plicated vaginal muscularis without tension using interrupted No. 0 polydioxanone; ultralateral repair dissected to both pubic rami and plicated paravaginal tissue under tension; the mesh arm fixed a cut-to-fit polyglactin 910 sheet over standard plication with interrupted 2-0 polyglactin.",
+          "locator": "Full text, Methods, p 1300"
+        },
+        {
+          "label": "Concurrent surgery and bladder drainage",
+          "value": "Among 109 operated women, the report recorded 57 vaginal hysterectomies, 101 posterior colporrhaphies, 28 enterocele repairs, and 48 vault suspensions. Suprapubic catheters were used in 100 women for a mean 20.4 ± 18.5 days; mean hospital stay was 2.1 ± 0.5 days.",
+          "locator": "Full text, Results, pp 1301–1302"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1067_mob_2001_119081.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1067_mob_2001_119081.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     },
     {
@@ -218,7 +261,7 @@
   "relations": [],
   "page": "/docs/clinical-evidence/studies/weber-anterior",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

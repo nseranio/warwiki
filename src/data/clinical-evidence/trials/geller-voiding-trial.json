@@ -18,7 +18,7 @@
   "design": {
     "phase": "not applicable",
     "randomized": true,
-    "blinding": "not reported in abstract",
+    "blinding": "Patients and staff performing voiding trials were not blinded",
     "type": "diagnostic",
     "n": 50,
     "arms": [
@@ -37,11 +37,11 @@
     ],
     "population": "50 women undergoing surgery for urinary incontinence, pelvic organ prolapse, or both between November 2009 and March 2010.",
     "description": "Randomized-order paired diagnostic accuracy study",
-    "locator": "PubMed abstract, Methods and Results; PubMed affiliation"
+    "locator": "Full text, Methods, p 638; Figure 1, p 639"
   },
   "verdict": "descriptive",
-  "verdictNote": "Retrograde testing was more specific; the abstract gives no prespecified accuracy threshold.",
-  "takeaway": "In 50 women receiving both postoperative tests, retrograde-fill voiding trials had 94.4% sensitivity and 58.1% specificity for voiding dysfunction lasting at least 7 days, versus 100% and 25.8% with spontaneous trials; retrograde testing failed fewer women (62% versus 84%).",
+  "verdictNote": "Retrograde testing was more specific; no prespecified between-method accuracy threshold was tested.",
+  "takeaway": "In 50 women receiving both postoperative tests, retrograde-fill voiding trials had 94.4% sensitivity and 58.1% specificity for retention lasting more than 7 days, versus 100% and 25.8% with spontaneous trials; failure rates were 31/50 versus 42/50 (P=.001).",
   "reports": [
     {
       "id": "geller-voiding-trial-2011",
@@ -54,55 +54,57 @@
       "citation": "Geller EJ, Hankins KJ, Parnell BA, et al. \"Diagnostic accuracy of retrograde and spontaneous voiding trials for postoperative voiding dysfunction: a randomized controlled trial.\" *Obstet Gynecol.* 2011;118(3):637-642. doi:10.1097/AOG.0b013e318229e8dd",
       "doi": "10.1097/AOG.0b013e318229e8dd",
       "pmid": "21860294",
-      "followUp": "Voiding dysfunction lasting at least 7 days was the diagnostic reference outcome",
-      "followUpLocator": "PubMed abstract, Results",
+      "followUp": "Retention lasting more than 7 days was the diagnostic reference outcome; duration follow-up was available for 49/50 women",
+      "followUpLocator": "Full text, Methods, p 639; Results, p 640; Discussion, p 642",
       "results": [
         {
           "endpoint": "Prolonged postoperative voiding dysfunction",
           "role": "primary",
-          "measure": "Sensitivity and specificity for voiding dysfunction lasting at least 7 days",
+          "measure": "Sensitivity and specificity (95% CI) for retention lasting more than 7 days; duration follow-up 49/50",
           "values": {
-            "retrograde": "94.4% sensitivity; 58.1% specificity",
-            "spontaneous": "100% sensitivity; 25.8% specificity"
+            "retrograde": "94.4% sensitivity (17/18; 95% CI 70.6–99.7%); 58.1% specificity (18/31; 95% CI 39.3–74.9%)",
+            "spontaneous": "100% sensitivity (18/18; 95% CI 78.1–100%); 25.8% specificity (8/31; 95% CI 12.5–44.9%)"
           },
           "effect": {
             "type": "none"
           },
-          "met": null,
-          "note": "The abstract does not state a prespecified diagnostic-accuracy threshold or denominators for the estimates.",
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "Counts derive from Table 2 percentages and 49/50 duration follow-up; the paper did not prespecify a between-method accuracy threshold. Table 2 Fisher exact P values (<.001 retrograde; .02 spontaneous) assess association within each method, not between-method accuracy.",
+          "locator": "Full text, Table 2, p 640; Methods, p 639; Discussion, p 642"
         },
         {
           "endpoint": "Voiding trial failure",
-          "role": "secondary",
-          "measure": "Failure rate for each test across the paired cohort",
+          "role": "descriptive",
+          "measure": "Failure rate for each test across the paired cohort (P=.001)",
           "values": {
-            "retrograde": "62%",
-            "spontaneous": "84%"
+            "retrograde": "31/50 (62%)",
+            "spontaneous": "42/50 (84%)"
           },
           "effect": {
             "type": "none"
           },
-          "note": "Each woman underwent both tests; these are test-level failure rates, not randomized-group rates. Numerators are not provided in the abstract.",
-          "locator": "PubMed abstract, Methods and Results"
+          "met": "not-tested",
+          "note": "Each woman underwent both tests; these are paired test-level rates, not randomized-sequence group rates. Counts derive from the reported percentages of 50.",
+          "locator": "Full text, Results, p 639"
         },
         {
           "endpoint": "Predictive values",
-          "role": "secondary",
-          "measure": "Positive and negative predictive values for voiding dysfunction lasting at least 7 days",
+          "role": "primary",
+          "measure": "Positive and negative predictive values (95% CI) for retention lasting more than 7 days",
           "values": {
-            "retrograde": "56.7% positive; 94.7% negative",
-            "spontaneous": "43.9% positive; 100% negative"
+            "retrograde": "56.7% positive (17/30; 95% CI 37.7–74.0%); 94.7% negative (18/19; 95% CI 71.9–99.7%)",
+            "spontaneous": "43.9% positive (18/41; 95% CI 28.8–60.1%); 100% negative (8/8; 95% CI 59.8–100%)"
           },
           "effect": {
             "type": "none"
           },
-          "note": "The abstract does not provide the underlying two-by-two tables.",
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "Counts derive from Table 2 percentages and 49/50 duration follow-up; the paper does not print the two-by-two counts.",
+          "locator": "Full text, Table 2, p 640; Discussion, p 642"
         },
         {
           "endpoint": "Patient preference",
-          "role": "descriptive",
+          "role": "secondary",
           "measure": "Preferred voiding trial, irrespective of test order",
           "values": {
             "retrograde": "51.1%",
@@ -111,35 +113,78 @@
           "effect": {
             "type": "none"
           },
-          "note": "Preference denominator and the remainder of responses are not given in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "The nonvalidated preference questionnaire has no printed denominator; order did not affect preference (P=.40), and the difference was not statistically significant.",
+          "locator": "Full text, Results, p 641; Discussion, p 642"
+        },
+        {
+          "endpoint": "Spontaneous trial failure mechanism",
+          "role": "descriptive",
+          "measure": "High postvoid residual or inadequate voided volume among 50 paired tests",
+          "values": {
+            "spontaneous": "34/50 (68%) high postvoid residual; 8/50 (16%) inadequate voided volume"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "note": "Counts derive from percentages of 50; all retrograde failures resulted from high postvoid residual.",
+          "locator": "Full text, Results, p 639"
         }
       ],
       "harms": [
         {
           "label": "Duration of postoperative retention by paired-test failure pattern",
-          "note": "Women failing both tests had 12.6 ± 14.4 days of retention versus 2.5 ± 2.1 days among those failing only one test (P = .004); group denominators were not reported in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Women failing both tests had 12.6 ± 14.4 days of retention versus 2.5 ± 2.1 days among those failing only one test (P=.004); pattern-specific duration denominators were not printed; 49/50 had duration follow-up.",
+          "locator": "Full text, Results, p 639; Discussion, p 642"
+        },
+        {
+          "label": "Postoperative urinary tract infection",
+          "values": {
+            "retrograde": "16.0% in retrograde-first sequence",
+            "spontaneous": "12.5% in spontaneous-first sequence"
+          },
+          "note": "P=.79; numerators and denominators for these postoperative UTI rates were not printed. Among those discharged self-catheterizing versus others, UTI occurred in 13.8% versus 17.6% (P=.99).",
+          "locator": "Full text, Results, p 640"
+        },
+        {
+          "label": "Other postoperative complications",
+          "values": {
+            "retrograde": "1 postoperative fever in retrograde-first sequence",
+            "spontaneous": "1 postoperative transfusion and 1 postoperative fever in spontaneous-first sequence"
+          },
+          "note": "The paper reports no Clavien-Dindo grades for these events.",
+          "locator": "Full text, Results, p 640"
         }
       ],
       "delivery": [
         {
           "label": "Paired testing and randomized order",
           "value": "All 50 women received both methods; 25 were randomized to retrograde first and 25 to spontaneous first.",
-          "locator": "PubMed abstract, Methods and Results"
+          "locator": "Full text, Figure 1, p 639; Methods, p 638"
+        },
+        {
+          "label": "Voiding trial protocol",
+          "value": "On postoperative day 1, retrograde testing instilled 300 mL saline through the Foley catheter, then required a void within 30 minutes; residual was estimated by subtracting voided volume from 300 mL. Spontaneous testing allowed filling for up to 4 hours and required two consecutive passes. Postvoid residual >100 mL failed either method; spontaneous voided volume <200 mL was inadequate and counted as failure.",
+          "locator": "Full text, Methods, p 638"
+        },
+        {
+          "label": "Management after failed test",
+          "value": "Women failing either method were discharged on intermittent self-catheterization until two consecutive postvoid residuals <100 mL; no prophylactic antibiotics were given.",
+          "locator": "Full text, Methods, p 638–639; Results, p 640"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_aog_0b013e318229e8dd.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_aog_0b013e318229e8dd.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/geller-voiding-trial",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

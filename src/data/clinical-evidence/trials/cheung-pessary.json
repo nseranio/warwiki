@@ -37,13 +37,13 @@
         "role": "control"
       }
     ],
-    "population": "Women with symptomatic stage I–III pelvic organ prolapse.",
+    "population": "Previously untreated women with symptomatic stage I–III pelvic organ prolapse.",
     "description": "Parallel-group, single-blind randomized trial",
-    "locator": "PubMed abstract, Methods and Results"
+    "locator": "Full text, Methods, p 74; Table 1, p 77"
   },
   "verdict": "positive",
-  "verdictNote": "Both prolapse symptom and impact scores improved more with pessary addition at 12 months.",
-  "takeaway": "In women with symptomatic stage I–III prolapse, adding a vaginal pessary to pelvic floor exercise training improved prolapse symptom and impact scores more than pelvic floor exercise training alone at 12 months.",
+  "verdictNote": "Prolapse distress improved at 6 and 12 months; prolapse impact differed at 12 months only.",
+  "takeaway": "In previously untreated women with symptomatic stage I–III prolapse, adding a ring pessary to pelvic floor exercise training improved prolapse distress at 6 and 12 months and prolapse impact at 12 months versus training alone; 83/139 (60%) retained the pessary at 12 months.",
   "reports": [
     {
       "id": "cheung-pessary-2016",
@@ -57,52 +57,95 @@
       "doi": "10.1097/AOG.0000000000001489",
       "pmid": "27275798",
       "followUp": "12 months",
-      "followUpLocator": "PubMed abstract, Methods and Results",
+      "followUpLocator": "Full text, Methods and Results, pp 74–75",
       "results": [
         {
-          "endpoint": "Prolapse symptom distress",
+          "endpoint": "Prolapse symptom distress at 6 and 12 months",
           "role": "primary",
-          "measure": "12-month mean change in Pelvic Organ Prolapse Distress Inventory score; between-arm mean difference calculated from reported changes",
+          "measure": "6-month median POPDI score (interquartile range) and 12-month mean change, intention-to-treat with missing scores imputed",
           "values": {
-            "exp": "−29.7 points",
-            "ctl": "−4.7 points"
+            "exp": "6 mo: 40.7 (11.3–100.0); 12-mo change: −29.7 points (n=139)",
+            "ctl": "6 mo: 54.8 (22.6–103.6); 12-mo change: −4.7 points (n=137)"
           },
           "effect": {
             "type": "difference",
             "value": -25.0,
             "p": "<0.01"
           },
-          "met": null,
-          "note": "Between-arm difference is arithmetic; prespecified alpha is not stated in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "met": true,
+          "note": "Both time points met the 5% threshold: 6-month median-score P=0.02; 12-month mean-change P<0.01. At 12 months, median scores were 32.1 (IQR 12.5–78.6) versus 49.4 (21.4–95.2), P=0.04. Between-arm 12-month change difference −25.0 points is arithmetic. At 12 months, 86/139 (62%) versus 48/137 (35%) achieved the minimal important difference (P<0.01).",
+          "locator": "Full text, Results, pp 75–77; Table 2, p 78"
         },
         {
           "endpoint": "Prolapse impact on quality of life",
           "role": "primary",
-          "measure": "12-month mean change in Pelvic Organ Prolapse Impact Questionnaire score; between-arm mean difference calculated from reported changes",
+          "measure": "12-month mean change in POPIQ score, intention-to-treat with missing scores imputed",
           "values": {
-            "exp": "−29.0 points",
-            "ctl": "+3.5 points"
+            "exp": "−29.0 points (n=139)",
+            "ctl": "+3.5 points (n=137)"
           },
           "effect": {
             "type": "difference",
             "value": -32.5,
             "p": "<0.01"
           },
-          "met": null,
-          "note": "Between-arm difference is arithmetic; prespecified alpha is not stated in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "met": true,
+          "note": "Between-arm change difference −32.5 points is arithmetic; the reported P<0.01 is for the between-group comparison. At 12 months, median scores were 0.3 (IQR 0–22.2) versus 8.9 (0–64.9), P=0.02. At 12 months, 49/139 (35%) versus 23/137 (16.8% calculated; article prints 18%) achieved the minimal important difference (P=0.01).",
+          "locator": "Full text, Results, pp 75–77; Table 2, p 78"
+        },
+        {
+          "endpoint": "Prolapse impact on quality of life at 6 months",
+          "role": "primary",
+          "measure": "6-month median POPIQ score (interquartile range), intention-to-treat with imputation",
+          "values": {
+            "exp": "5.6 (0–42.4; n=139)",
+            "ctl": "8.3 (0–76.5; n=137)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.22"
+          },
+          "met": false,
+          "locator": "Full text, Table 2, p 78"
+        },
+        {
+          "endpoint": "Patient-reported prolapse symptom improvement",
+          "role": "secondary",
+          "measure": "12-month improvement among questionnaire completers; adjusted logistic regression",
+          "values": {
+            "exp": "80/132 (60.6%)",
+            "ctl": "36/128 (28.1%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 5.3,
+            "ci": [
+              2.88,
+              9.91
+            ],
+            "p": "<0.001"
+          },
+          "locator": "Full text, Results, p 77"
         }
       ],
       "harms": [
         {
-          "label": "Overall complications",
+          "label": "Vaginal bleeding, discharge, and infection",
           "values": {
-            "exp": "Low; rate not stated",
-            "ctl": "Low; rate not stated"
+            "exp": "Bleeding 9/132 (6.8%); bothersome discharge 6/132 (4.5%); bacterial vaginosis 1 woman",
+            "ctl": "Bleeding 4/128 (3.1%); bothersome discharge 2/128 (1.6%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract describes rates as low and similar without event counts or types."
+          "note": "Bleeding P=0.17 and discharge P=0.16; the single vaginal infection in the pessary arm required antibiotics. Infection denominator was not specified separately.",
+          "locator": "Full text, Results and Table 3, pp 77–78"
+        },
+        {
+          "label": "De novo urinary symptoms",
+          "values": {
+            "exp": "Stress incontinence 24/50 (48.0%); urge incontinence 17/73 (23.3%); voiding difficulty 10/92 (10.9%)",
+            "ctl": "Stress incontinence 13/58 (22.4%); urge incontinence 19/84 (22.6%); voiding difficulty 8/97 (8.2%)"
+          },
+          "note": "Denominators exclude women with the corresponding symptom at baseline; between-group P values 0.01, 0.85, and 0.54, respectively.",
+          "locator": "Full text, Table 3, p 78"
         }
       ],
       "delivery": [
@@ -112,21 +155,39 @@
             "exp": "132/139 (95.0%)",
             "ctl": "128/137 (93.4%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Percentages use randomized arm denominators."
+          "locator": "Full text, Results, p 75",
+          "note": "Questionnaire completers; primary outcome analysis imputed missing values for 7/139 pessary and 9/137 control participants at 12 months (Table 2)."
+        },
+        {
+          "label": "Ring pessary fitting and retention",
+          "values": {
+            "exp": "Successfully fitted and comfortable 92/139 (66%) at 2 weeks; retained 87/139 (63%) at 6 months and 83/139 (60%) at 12 months",
+            "ctl": "No pessary; 120/137 (88%) remained on conservative treatment at 12 months"
+          },
+          "note": "Largest comfortable ring pessary inserted; slipped pessaries could be refitted with the same or next size up to three times. Across arms, 61 women received a treatment different from allocation by 12 months.",
+          "locator": "Full text, Methods, p 74; Results, p 75; Discussion, p 79"
+        },
+        {
+          "label": "Pelvic floor exercise training and adherence",
+          "values": {
+            "exp": "Regular exercise 53/135 (39.3% calculated; article prints 39.2%) at 6 months; 72/135 (53.3%) at 12 months",
+            "ctl": "Regular exercise 66/134 (49.3%) at 6 months; 56/130 (43.1%) at 12 months"
+          },
+          "note": "Both arms received a teaching session within 2 weeks and individual sessions at weeks 4, 8, and 16. They were advised to practice daily with at least two sets of 8–12 repetitions per day and 8–10 exercises per session at least twice weekly. Reported adherence was at least twice daily on 3 days per week; between-arm P=0.10 at both follow-ups.",
+          "locator": "Full text, Methods, p 74; Results, p 75"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_aog_0000000000001489.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_aog_0000000000001489.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/cheung-pessary",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

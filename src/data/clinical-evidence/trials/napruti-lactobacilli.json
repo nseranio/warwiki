@@ -39,11 +39,11 @@
     ],
     "population": "252 community-dwelling postmenopausal women with at least three self-reported symptomatic UTIs in the preceding year, recruited through Dutch advertisements and clinicians at 10 centers.",
     "description": "Multicenter, double-blind, double-dummy noninferiority randomized trial",
-    "locator": "JAMA full text, Methods (Patients, Intervention); Results (Participant flow), Table 1"
+    "locator": "Full text, Methods, p 705; Table 1 and Figure 1, pp 705, 707"
   },
-  "verdict": "inconclusive",
-  "verdictNote": "The 10% noninferiority margin was missed; the confidence interval also included no difference.",
-  "takeaway": "Oral L. rhamnosus GR-1 plus L. reuteri RC-14 did not meet noninferiority versus daily trimethoprim-sulfamethoxazole: mean symptomatic UTIs over 12 months were 3.3 versus 2.9 (difference 0.4, 95% CI −0.4 to 1.5). Resistance rose with antibiotic prophylaxis, not lactobacilli.",
+  "verdict": "negative",
+  "verdictNote": "Noninferiority failed; TMP-SMX delayed recurrence but increased E. coli resistance.",
+  "takeaway": "In postmenopausal women, oral L. rhamnosus GR-1 plus L. reuteri RC-14 failed noninferiority to daily trimethoprim-sulfamethoxazole for symptomatic UTI prevention: 3.3 versus 2.9 recurrences over 12 months (difference 0.4, 95% CI −0.4 to 1.5). TMP-SMX increased E. coli resistance.",
   "reports": [
     {
       "id": "napruti-lactobacilli-2012",
@@ -55,15 +55,15 @@
       "doi": "10.1001/archinternmed.2012.777",
       "pmid": "22782199",
       "followUp": "12 months of prophylaxis plus 3 months after discontinuation",
-      "followUpLocator": "JAMA full text, Methods (Assessment, Outcome measures); Table 2",
+      "followUpLocator": "Full text, Methods, pp 705–706; Table 2, p 708",
       "results": [
         {
           "endpoint": "Symptomatic UTI recurrence",
           "role": "primary",
           "measure": "Mean clinical recurrences over 12 months; mean difference, lactobacilli minus TMP-SMX",
           "values": {
-            "exp": "3.3 (analysis n=123)",
-            "ctl": "2.9 (analysis n=115)"
+            "exp": "3.3 (95% CI 2.7–4.0; ITT n=123)",
+            "ctl": "2.9 (95% CI 2.3–3.6; ITT n=115)"
           },
           "effect": {
             "type": "difference",
@@ -76,45 +76,47 @@
             "p": "0.42"
           },
           "met": false,
-          "note": "The prespecified noninferiority margin was 10% relative to TMP-SMX; the upper 95% confidence limit exceeded it. The report's intention-to-treat set included women who took at least one dose.",
-          "locator": "JAMA full text, Methods (Statistical analysis); Results (Primary outcomes), Table 2"
+          "note": "The prespecified 10% noninferiority margin was exceeded: relative difference 13.8% (95% CI −13.8% to 51.7%). The paper defines ITT as participants who took at least one dose.",
+          "locator": "Full text, Methods, pp 706–707; Results, p 707; Table 2, p 708"
         },
         {
           "endpoint": "At least one symptomatic UTI",
-          "role": "descriptive",
+          "role": "primary",
           "measure": "Kaplan-Meier estimated proportion during 12 months of prophylaxis",
           "values": {
-            "exp": "79.1%",
-            "ctl": "69.3%"
+            "exp": "79.1% (95% CI 69.9%–85.7%; ITT n=123)",
+            "ctl": "69.3% (95% CI 58.9%–77.0%; ITT n=115)"
           },
           "effect": {
             "type": "none"
           },
-          "note": "Named a primary clinical outcome in the report; no separate noninferiority threshold specified. Percentages are Kaplan-Meier estimates, not simple n/N fractions.",
-          "locator": "JAMA full text, Methods (Outcome measures, Statistical analysis); Results (Primary outcomes), Table 2"
+          "note": "Primary clinical outcome without a separate prespecified success threshold; percentages are Kaplan–Meier estimates, not simple n/N fractions.",
+          "locator": "Full text, Methods, p 706; Table 2, p 708",
+          "met": "not-tested"
         },
         {
           "endpoint": "Time to first symptomatic UTI",
-          "role": "descriptive",
+          "role": "primary",
           "measure": "Median months during 12-month prophylaxis",
           "values": {
-            "exp": "3 months",
-            "ctl": "6 months"
+            "exp": "3 months (95% CI 2–5; ITT n=123)",
+            "ctl": "6 months (95% CI 4–9; ITT n=115)"
           },
           "effect": {
             "type": "none",
             "p": "0.02"
           },
-          "note": "Named a primary clinical outcome in the report; no separate noninferiority threshold specified; log-rank P value.",
-          "locator": "JAMA full text, Results (Primary outcomes), Table 2, Figure 2B"
+          "note": "Primary clinical outcome without a separate prespecified success threshold; P value is from the log-rank test.",
+          "locator": "Full text, Results, p 707; Table 2 and Figure 2B, p 708",
+          "met": "not-tested"
         },
         {
           "endpoint": "Microbiologically confirmed symptomatic UTI",
           "role": "secondary",
           "measure": "Mean recurrences over 12 months; mean difference, lactobacilli minus TMP-SMX",
           "values": {
-            "exp": "1.8 (analysis n=123)",
-            "ctl": "1.2 (analysis n=115)"
+            "exp": "1.8 (95% CI 1.4–2.3; ITT n=123)",
+            "ctl": "1.2 (95% CI 0.9–1.6; ITT n=115)"
           },
           "effect": {
             "type": "difference",
@@ -126,13 +128,30 @@
             "ciLevel": "95% CI",
             "p": "0.02"
           },
-          "note": "Microbiologic recurrence required symptoms and at least 10^3 CFU/mL in midstream urine.",
-          "locator": "JAMA full text, Methods (Outcome measures); Results (Secondary outcomes), Table 2"
+          "note": "Microbiologic recurrence required symptoms and at least 10^3 CFU/mL in midstream urine; no prespecified success threshold.",
+          "locator": "Full text, Methods, p 706; Results, p 707; Table 2, p 708",
+          "met": "not-tested"
+        },
+        {
+          "endpoint": "Symptomatic UTI recurrence by complicated UTI status",
+          "role": "exploratory",
+          "measure": "Mean clinical recurrences over 12 months, prespecified subgroup analysis",
+          "values": {
+            "exp": "Uncomplicated 3.2 (95% CI 2.5–4.2); complicated 3.4 (95% CI 2.6–4.5)",
+            "ctl": "Uncomplicated 1.9 (95% CI 1.4–2.6); complicated 4.4 (95% CI 3.4–5.7)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "interaction <0.001"
+          },
+          "met": "not-tested",
+          "note": "Prespecified subgroup analysis; no subgroup denominators or confirmatory success threshold reported.",
+          "locator": "Full text, Methods, p 706; Results, pp 707–708"
         },
         {
           "endpoint": "Antibiotic-resistant E. coli",
-          "role": "descriptive",
-          "measure": "Resistance to TMP-SMX, trimethoprim and amoxicillin in fecal or urinary isolates after one month",
+          "role": "primary",
+          "measure": "Percentage of TMP-SMX-resistant E. coli isolates from feces and asymptomatic urine at months 1 and 12; other antibiotic resistance assessed",
           "values": {
             "exp": "No increase during prophylaxis",
             "ctl": "Approximately 20%-40% at baseline to 80%-95% after one month"
@@ -140,8 +159,9 @@
           "effect": {
             "type": "none"
           },
-          "note": "Prespecified resistance outcome; the article provides approximate isolate ranges and no formal success threshold. Resistance declined during the three months after TMP-SMX withdrawal.",
-          "locator": "JAMA full text, Results (Primary outcomes: CRs and development of resistance), Figures 3-4; PubMed abstract, Results"
+          "note": "Primary resistance outcome without a prespecified success threshold. Isolate denominators varied by sample and time (fecal 56–99; urinary 30–53); all asymptomatic urinary E. coli isolates after 12 months of TMP-SMX were resistant to TMP-SMX and trimethoprim.",
+          "locator": "Full text, Methods, p 706; Results, p 707; Figure 3 and caption, pp 709–710",
+          "met": "not-tested"
         }
       ],
       "harms": [
@@ -151,7 +171,7 @@
             "exp": "72/123 (58.5%)",
             "ctl": "66/115 (57.4%)"
           },
-          "locator": "JAMA full text, Table 4",
+          "locator": "Full text, Table 4, p 710",
           "note": "Among women in the treatment analysis population."
         },
         {
@@ -160,7 +180,7 @@
             "exp": "14/123 (11.4%)",
             "ctl": "17/115 (14.8%)"
           },
-          "locator": "JAMA full text, Table 4",
+          "locator": "Full text, Table 4, p 710",
           "note": "One systemic allergic reaction in the TMP-SMX arm was judged likely treatment-related."
         },
         {
@@ -169,7 +189,7 @@
             "exp": "15/123 (12.2%)",
             "ctl": "6/115 (5.2%)"
           },
-          "locator": "JAMA full text, Table 4",
+          "locator": "Full text, Table 4, p 710",
           "note": "A masked safety board judged treatment association likely for 11/123 (8.9%) versus 3/115 (2.6%)."
         },
         {
@@ -178,15 +198,24 @@
             "exp": "3/123 (2.4%)",
             "ctl": "0/115 (0%)"
           },
-          "locator": "JAMA full text, Table 4",
+          "locator": "Full text, Table 4, p 710",
           "note": "Classified as unlikely to be treatment-related."
+        },
+        {
+          "label": "Nausea, vomiting, or diarrhea",
+          "values": {
+            "exp": "26/123 (21.1%)",
+            "ctl": "18/115 (15.7%)"
+          },
+          "locator": "Full text, Table 4, p 710",
+          "note": "Adverse-event category; no significant difference reported for adverse events overall."
         }
       ],
       "delivery": [
         {
           "label": "Double-dummy prophylaxis",
           "value": "For 12 months, lactobacilli recipients took a capsule containing at least 10^9 CFU of the two-strain preparation twice daily plus a nightly placebo tablet; TMP-SMX recipients took 480 mg nightly plus twice-daily placebo capsules.",
-          "locator": "JAMA full text, Methods (Intervention)"
+          "locator": "Full text, Methods (Intervention), p 705"
         },
         {
           "label": "Treatment analysis set",
@@ -194,18 +223,27 @@
             "exp": "123/125 randomized",
             "ctl": "115/127 randomized"
           },
-          "locator": "JAMA full text, Methods (Statistical analysis); Table 2",
+          "locator": "Full text, Methods (Statistical Analysis), p 706; Figure 1, p 707",
           "note": "The article calls this intention-to-treat and includes women who took at least one study dose."
         },
         {
           "label": "Vaginal microbiology",
           "value": "L. reuteri was not detected in vaginal swabs in either arm at baseline or month 12; month-12 mean Nugent scores were 6.0 with lactobacilli and 6.1 with TMP-SMX.",
-          "locator": "JAMA full text, Results (Changes in vaginal microflora)"
+          "locator": "Full text, Results (Changes in Vaginal Microflora), p 708"
+        },
+        {
+          "label": "Month-12 follow-up",
+          "values": {
+            "exp": "84/123 (68%)",
+            "ctl": "90/115 (78%)"
+          },
+          "locator": "Full text, Figure 1, p 707",
+          "note": "Participants with follow-up at month 12 among those who received assigned treatment; not an adherence measure."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1001_archinternmed_2012_777.txt",
-        "checked": "2026-11-12",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1001_archinternmed_2012_777.fulltext.txt",
+        "checked": "2026-11-13",
         "level": "full-text"
       }
     }

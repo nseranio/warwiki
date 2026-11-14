@@ -26,23 +26,23 @@
       {
         "key": "exp",
         "label": "Vaginal colpopexy with polypropylene mesh",
-        "n": 32,
+        "n": 33,
         "role": "experimental"
       },
       {
         "key": "ctl",
         "label": "traditional vaginal colpopexy without mesh",
-        "n": 33,
+        "n": 32,
         "role": "control"
       }
     ],
     "population": "Women with POP-Q stage 2–4 pelvic organ prolapse undergoing vaginal repair.",
-    "description": "Multicenter, double-blind superiority randomized trial",
-    "locator": "Iglesia 2010, PubMed abstract, Objective, Methods and Results; see notes for conflicting arm counts"
+    "description": "Multicenter, double-blind superiority randomized trial; early efficacy analyses grouped one mesh-assigned crossover with the 33 no-mesh operations",
+    "locator": "Full text, Iglesia 2010, Methods, pp 294–297; Gutman 2013, Fig. 1, p 774"
   },
   "verdict": "negative",
-  "verdictNote": "No objective cure advantage; enrollment stopped at the prespecified mesh-exposure threshold.",
-  "takeaway": "Vaginal colpopexy with polypropylene mesh did not improve objective or subjective cure versus traditional vaginal colpopexy without mesh in the early report; enrollment stopped after five mesh exposures (15.6%).",
+  "verdictNote": "No demonstrated cure advantage; enrollment stopped after 5/32 mesh exposures.",
+  "takeaway": "After one mesh-assigned crossover, early outcomes were analyzed by operation (32 mesh, 33 no mesh). No objective or subjective cure advantage was demonstrated; five mesh recipients had exposure (15.6%), exceeding the stopping threshold. Three-year composite cure was 8/23 versus 8/21 (RR 0.91, 95% CI 0.42–1.99).",
   "reports": [
     {
       "id": "iglesia-mesh-2010",
@@ -54,37 +54,39 @@
       "doi": "10.1097/AOG.0b013e3181e7d7f8",
       "pmid": "20664388",
       "followUp": "Three-month primary assessment; median 9.7 months at early stopping (range 2.4–26.7)",
-      "followUpLocator": "PubMed abstract, Objective and Results",
+      "followUpLocator": "Full text, Results, pp 297–300",
       "results": [
         {
           "endpoint": "Objective anatomic success",
           "role": "primary",
-          "measure": "POP-Q stage 1 or lower at 3 months",
+          "measure": "Overall POP-Q stage 1 or lower; primary endpoint specified at 3 months, with anatomic outcomes tabulated at median 9.7 months",
           "values": {
-            "exp": "not quantified in abstract",
-            "ctl": "not quantified in abstract"
-          },
-          "effect": {
-            "type": "none"
-          },
-          "met": false,
-          "note": "The abstract concludes that objective cure did not differ; it does not give the prespecified comparison's numerical result.",
-          "locator": "PubMed abstract, Methods and Conclusion"
-        },
-        {
-          "endpoint": "Overall recurrence",
-          "role": "secondary",
-          "measure": "Any-compartment recurrence at reported assessment; comparison P=.28",
-          "values": {
-            "exp": "19",
-            "ctl": "24"
+            "exp": "13/32 (40.6%)",
+            "ctl": "9/33 (27.3%)"
           },
           "effect": {
             "type": "none",
             "p": "0.28"
           },
-          "note": "Abstract prints 59.4% and 70.4%, respectively; the latter does not reconcile with the stated control-arm size.",
-          "locator": "PubMed abstract, Results"
+          "met": false,
+          "note": "Early analysis grouped the one mesh-assigned crossover with no-mesh operations; additional prolapse surgery or pessary use counted as failure.",
+          "locator": "Full text, Methods, p 296; Table 3, p 300"
+        },
+        {
+          "endpoint": "Overall recurrence",
+          "role": "primary",
+          "measure": "Overall POP-Q stage 2 or higher recurrence at median 9.7 months",
+          "values": {
+            "exp": "19/32 (59.4%)",
+            "ctl": "24/33 (72.7%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.28"
+          },
+          "met": false,
+          "note": "The abstract prints 70.4% for the no-mesh arm; the Results text and denominator give 72.7%. Of 43 recurrences, 33 remained at or above the hymen.",
+          "locator": "Full text, Results, p 297; Table 3, p 300"
         },
         {
           "endpoint": "Subjective bulge cure",
@@ -97,8 +99,8 @@
           "effect": {
             "type": "none"
           },
-          "note": "Outcome denominators are not given in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Abstract and Results give percentages but no arm-specific respondent denominators for this symptom item.",
+          "locator": "Full text, Abstract, p 293; Table 3, p 300"
         }
       ],
       "harms": [
@@ -108,44 +110,67 @@
             "exp": "5/32 (15.6%)",
             "ctl": "not applicable"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Prespecified stopping criterion was reached."
+          "locator": "Full text, Results, p 299",
+          "note": "The 15% prespecified exposure threshold stopped enrollment; three exposures required operating-room excision, one resolved after office trimming and estrogen, and one persisted asymptomatically."
         },
         {
           "label": "Cystotomy",
           "values": {
-            "exp": "2",
-            "ctl": "0"
+            "exp": "2/32 (6.3%)",
+            "ctl": "0/33 (0%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract reports two cystotomies in the mesh arm only."
+          "locator": "Full text, Results, p 299",
+          "note": "One cystotomy occurred during dissection and one during trocar insertion; both were repaired."
         },
         {
           "label": "Blood transfusion",
           "values": {
-            "exp": "1",
-            "ctl": "0"
+            "exp": "1/32 (3.1%)",
+            "ctl": "0/33 (0%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract reports one transfusion in the mesh arm only."
+          "locator": "Full text, Results, p 299",
+          "note": "Postoperative transfusion in a mesh recipient who also underwent hysterectomy."
+        },
+        {
+          "label": "Early reoperation for prolapse, exposure or another indication",
+          "values": {
+            "exp": "4/32 (12.5%); five operations",
+            "ctl": "0/33 (0%)"
+          },
+          "locator": "Full text, Table 3, p 300",
+          "note": "P=.048; Table 3 counts five operations in four mesh recipients."
+        },
+        {
+          "label": "Major infection requiring postoperative antibiotics",
+          "values": {
+            "exp": "0/32 (0%)",
+            "ctl": "0/33 (0%)"
+          },
+          "locator": "Full text, Results, p 299",
+          "note": "No major infection requiring postoperative antibiotics or mesh infection was reported; two-week UTI counts were not given."
         }
       ],
       "delivery": [
         {
           "label": "Mesh placement",
-          "value": "Among 32 mesh procedures, 24 received anterior mesh and eight received total mesh.",
-          "locator": "PubMed abstract, Results"
+          "value": "Of 32 mesh operations, 24 used anterior Prolift and eight total Prolift; multi-armed polypropylene mesh traversed transobturator and ischiorectal trocar paths, was attached to the apex with 2-0 polydioxanone, and trimmed to vaginal caliber.",
+          "locator": "Full text, Methods, p 296; Table 2, p 299"
         },
         {
           "label": "Native-tissue operation",
-          "value": "Vaginal colpopexy, primarily uterosacral ligament suspension, with concurrent colporrhaphy.",
-          "locator": "PubMed abstract, Results"
+          "value": "Among 33 no-mesh operations, 29 used uterosacral, three sacrospinous and one iliococcygeus suspension; all included anterior colporrhaphy.",
+          "locator": "Full text, Methods, p 296; Table 2, p 299"
+        },
+        {
+          "label": "Treatment crossover and analysis set",
+          "value": "One of 33 women randomized to mesh received no mesh because vaginal caliber was inadequate; the 2010 and 2012 reports analyzed her with the 33 no-mesh operations rather than by intention to treat.",
+          "locator": "Full text, Methods, p 294; Gutman 2013, Methods, p 772"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_aog_0b013e3181e7d7f8.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_aog_0b013e3181e7d7f8.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -279,67 +304,152 @@
       "doi": "10.1097/AOG.0b013e3182a49dac",
       "pmid": "24084533",
       "followUp": "Three-year questionnaires; blinded POP-Q examination at two or three years",
-      "followUpLocator": "PubMed abstract, Methods and Results",
+      "followUpLocator": "Full text, Methods, p 771; Results, p 772",
       "results": [
         {
-          "endpoint": "Three-year cure",
-          "role": "descriptive",
-          "measure": "Anatomic, symptomatic and combined cure under multiple definitions",
+          "endpoint": "Three-year composite cure",
+          "role": "primary",
+          "measure": "POP-Q stage 1 or lower, no bulge symptoms, Patient Global Impression of Improvement much or very much better, and no repeat prolapse surgery or pessary; complete-case analysis",
           "values": {
-            "exp": "no difference reported",
-            "ctl": "no difference reported"
+            "exp": "8/23 (35%)",
+            "ctl": "8/21 (38%)"
           },
           "effect": {
-            "type": "none"
+            "type": "RR",
+            "value": 0.91,
+            "ci": [
+              0.42,
+              1.99
+            ],
+            "p": ">0.99"
           },
-          "note": "The abstract gives no arm-specific cure rates; this was a planned final analysis after early trial closure.",
-          "locator": "PubMed abstract, Methods, Results and Conclusion"
+          "met": false,
+          "note": "Three mesh recipients reoperated for recurrent prolapse were failures for composite cure; reoperated participants were excluded from anatomic and subjective analyses.",
+          "locator": "Full text, Methods, p 771; Table 2, p 775"
         },
         {
           "endpoint": "Stage improvement from baseline",
           "role": "descriptive",
           "measure": "POP-Q stage improvement at 3 years",
           "values": {
-            "exp": "90%",
-            "ctl": "86%"
+            "exp": "90% of 20 examined",
+            "ctl": "86% of 21 examined"
           },
           "effect": {
             "type": "none",
             "p": "<0.01"
           },
-          "note": "The P value concerns within-group improvement; abstract does not give arm-specific denominators.",
-          "locator": "PubMed abstract, Results"
+          "note": "Within-group improvement from baseline (P<.01); between-group POP-Q stage did not differ at final examination.",
+          "locator": "Full text, Results, pp 772–773"
+        },
+        {
+          "endpoint": "Three-year anatomic cure, POP-Q stage 1 or lower",
+          "role": "primary",
+          "measure": "Overall POP-Q stage 1 or lower at 2- or 3-year blinded examination; complete cases excluding prolapse reoperations",
+          "values": {
+            "exp": "9/20 (45%)",
+            "ctl": "9/21 (43%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 1.05,
+            "ci": [
+              0.56,
+              1.96
+            ],
+            "p": ">0.99"
+          },
+          "met": false,
+          "locator": "Full text, Methods, p 771; Table 2, p 775"
+        },
+        {
+          "endpoint": "Three-year anatomic cure, hymen threshold",
+          "role": "primary",
+          "measure": "No prolapse beyond hymen (Ba, Bp and C at or proximal to 0) at 2- or 3-year blinded examination; complete cases",
+          "values": {
+            "exp": "17/20 (85%)",
+            "ctl": "15/21 (71%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 1.19,
+            "ci": [
+              0.86,
+              1.65
+            ],
+            "p": "0.45"
+          },
+          "met": false,
+          "locator": "Full text, Methods, p 771; Table 2, p 775"
+        },
+        {
+          "endpoint": "Three-year symptomatic bulge cure",
+          "role": "primary",
+          "measure": "Absence of patient-reported bulge at 3 years; questionnaire complete cases",
+          "values": {
+            "exp": "23/25 (92%)",
+            "ctl": "21/26 (81%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 1.14,
+            "ci": [
+              0.91,
+              1.42
+            ],
+            "p": "0.42"
+          },
+          "met": false,
+          "locator": "Full text, Methods, p 771; Table 2, p 775"
         }
       ],
       "harms": [
         {
           "label": "Reoperation for recurrent prolapse",
           "values": {
-            "exp": "3",
-            "ctl": "0"
+            "exp": "3/23 (13%) in three-year composite analysis",
+            "ctl": "0/21 (0%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "All three reoperations were in the mesh group."
+          "locator": "Full text, Results, pp 772–774; Table 2, p 775",
+          "note": "All three prolapse reoperations were in mesh recipients; one had urinary retention and voiding dysfunction at 4.5 months and underwent another prolapse operation at 17.5 months."
+        },
+        {
+          "label": "Mesh exposure through three years",
+          "values": {
+            "exp": "5/32 (15.6%); three surgical excisions",
+            "ctl": "not applicable"
+          },
+          "locator": "Full text, Results, p 773",
+          "note": "A small asymptomatic exposure at the three-year visit occurred at a previously excised location; paper reports five total recipients with exposure."
+        },
+        {
+          "label": "De novo dyspareunia and stress urinary incontinence at three years",
+          "values": {
+            "exp": "2 dyspareunia; 3 stress urinary incontinence",
+            "ctl": "1 dyspareunia; 2 stress urinary incontinence"
+          },
+          "locator": "Full text, Results, p 774",
+          "note": "The report gives event counts but does not state at-risk denominators for these incident symptoms."
         }
       ],
       "delivery": [
         {
           "label": "Three-year follow-up ascertainment",
-          "value": "Questionnaires: 51/65 (78%); POP-Q examinations: 41/65 (63%).",
-          "locator": "PubMed abstract, Results"
+          "value": "Three-year quality-of-life questionnaires: 51/65 (78%; 25 mesh, 26 no mesh); blinded POP-Q examinations at two or three years: 41/65 (63%; 20 mesh, 21 no mesh); median follow-up 3.05 years (IQR 2.97–3.15).",
+          "locator": "Full text, Results, p 772"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_aog_0b013e3182a49dac.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_aog_0b013e3182a49dac.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/iglesia-mesh",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

@@ -27,26 +27,29 @@
       {
         "key": "exp",
         "label": "Ospemifene 60 mg orally daily",
-        "role": "experimental"
+        "role": "experimental",
+        "n": 276
       },
       {
         "key": "exp30",
         "label": "ospemifene 30 mg orally daily",
-        "role": "experimental"
+        "role": "experimental",
+        "n": 282
       },
       {
         "key": "ctl",
         "label": "placebo",
-        "role": "control"
+        "role": "control",
+        "n": 268
       }
     ],
     "population": "Postmenopausal women with at most 5% superficial vaginal cells, vaginal pH above 5.0, and at least one moderate or severe symptom of vulvovaginal atrophy.",
     "description": "Double-blind, three-arm phase 3 randomized trial",
-    "locator": "PubMed abstract, Methods"
+    "locator": "Full text, Methods and Table 1, pp 481–482"
   },
   "verdict": "positive",
-  "verdictNote": "All coprimary endpoints met at 60 mg; 30 mg missed dyspareunia.",
-  "takeaway": "In the Bachmann phase 3 trial, oral ospemifene 60 mg daily improved vaginal cytology, pH, and most-bothersome dryness or dyspareunia versus placebo at 12 weeks; 30 mg did not significantly improve dyspareunia.",
+  "verdictNote": "All coprimary comparisons met at 60 mg; 30 mg missed dyspareunia.",
+  "takeaway": "In the 826-woman Bachmann trial, oral ospemifene 60 mg daily improved vaginal cytology and pH in the full cohort and dryness and dyspareunia in the respective most-bothersome-symptom subgroups versus placebo at 12 weeks; 30 mg missed the dyspareunia comparison.",
   "reports": [
     {
       "id": "ospemifene-pivotal-2010",
@@ -60,65 +63,140 @@
       "doi": "10.1097/gme.0b013e3181c1ac01",
       "pmid": "20032798",
       "followUp": "12 weeks of treatment",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Methods, p 481",
       "results": [
         {
           "endpoint": "Vaginal superficial cells",
           "role": "primary",
-          "measure": "Change in percentage of superficial cells at week 12",
+          "measure": "ITT mean change in percentage points at week 12 (LOCF)",
+          "values": {
+            "exp": "increase 10.8 points (n=276)",
+            "exp30": "increase 7.8 points (n=282)",
+            "ctl": "increase 2.2 points (n=268)"
+          },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "<0.001 for each dose versus placebo"
           },
           "met": true,
-          "note": "Both 60 mg and 30 mg were statistically significantly superior to placebo; absolute changes were not stated in the abstract.",
-          "locator": "PubMed abstract, Methods and Results"
+          "note": "No confidence interval reported.",
+          "locator": "Full text, Results, Maturation index, p 482"
         },
         {
           "endpoint": "Vaginal parabasal cells",
           "role": "primary",
-          "measure": "Change in percentage of parabasal cells at week 12",
+          "measure": "ITT mean change in percentage points at week 12 (LOCF)",
+          "values": {
+            "exp": "decrease 30.1 points (n=276)",
+            "exp30": "decrease 21.9 points (n=282)",
+            "ctl": "increase 3.98 points (n=268)"
+          },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "<0.001 for each dose versus placebo"
           },
           "met": true,
-          "note": "Both doses were statistically significantly superior to placebo; absolute changes were not stated in the abstract.",
-          "locator": "PubMed abstract, Methods and Results"
+          "note": "No confidence interval reported.",
+          "locator": "Full text, Results, Maturation index, p 482"
         },
         {
           "endpoint": "Vaginal pH",
           "role": "primary",
-          "measure": "Change in vaginal pH at week 12",
+          "measure": "ITT mean change at week 12 (LOCF)",
+          "values": {
+            "exp": "decrease 1.01 (n=276)",
+            "exp30": "decrease 0.67 (n=282)",
+            "ctl": "decrease 0.10 (n=268)"
+          },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "<0.001 for each dose versus placebo"
           },
           "met": true,
-          "note": "Both doses were statistically significantly superior to placebo; absolute changes were not stated in the abstract.",
-          "locator": "PubMed abstract, Methods and Results"
+          "note": "No confidence interval reported.",
+          "locator": "Full text, Results, Vaginal pH, p 482"
         },
         {
-          "endpoint": "Most bothersome symptom",
+          "endpoint": "Most bothersome vaginal dryness",
           "role": "primary",
-          "measure": "Change in severity of dryness or dyspareunia at week 12",
+          "measure": "ITT mean decrease in 0–3 severity score at week 12 (LOCF); dryness subgroup",
+          "values": {
+            "exp": "1.26",
+            "exp30": "1.22",
+            "ctl": "0.84"
+          },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "0.021 (60 mg); 0.04 (30 mg) versus placebo"
           },
           "met": true,
-          "note": "The 60-mg dose met the coprimary symptom endpoint; 30 mg was significant for dryness but not dyspareunia. Absolute changes were not stated in the abstract.",
-          "locator": "PubMed abstract, Methods and Results"
+          "note": "Dryness subgroup denominators and confidence intervals were not reported.",
+          "locator": "Full text, Results, MBS, p 482"
+        },
+        {
+          "endpoint": "Most bothersome dyspareunia",
+          "role": "primary",
+          "measure": "ITT mean decrease in 0–3 severity score at week 12 (LOCF); dyspareunia subgroup",
+          "values": {
+            "exp": "1.19",
+            "exp30": "1.02",
+            "ctl": "0.89"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.023 (60 mg); 30 mg not significant versus placebo"
+          },
+          "met": true,
+          "note": "The 30-mg comparison missed significance; subgroup denominators and confidence intervals were not reported.",
+          "locator": "Full text, Results, MBS, p 482"
         }
       ],
-      "harms": [],
+      "harms": [
+        {
+          "label": "At least one treatment-emergent adverse event",
+          "values": {
+            "exp": "164/276 (59.4%)",
+            "exp30": "182/282 (64.5%)",
+            "ctl": "140/268 (52.2%)"
+          },
+          "locator": "Full text, Table 3, p 484"
+        },
+        {
+          "label": "Hot flashes",
+          "values": {
+            "exp": "23/276 (8.3%)",
+            "exp30": "27/282 (9.6%)",
+            "ctl": "9/268 (3.4%)"
+          },
+          "locator": "Full text, Table 3, p 484"
+        },
+        {
+          "label": "Urinary tract infection adverse event",
+          "values": {
+            "exp": "20/276 (7.2%)",
+            "exp30": "13/282 (4.6%)",
+            "ctl": "6/268 (2.2%)"
+          },
+          "locator": "Full text, Table 3, p 484",
+          "note": "Events were participant reports, not necessarily culture-confirmed (Discussion, p 484)."
+        }
+      ],
       "delivery": [
         {
           "label": "Treatment and cointervention",
-          "value": "Oral ospemifene 30 or 60 mg/day or placebo for 12 weeks; all participants received nonhormonal vaginal lubricant for use as needed.",
-          "locator": "PubMed abstract, Methods"
+          "value": "Oral ospemifene 30 or 60 mg each morning or placebo for 12 weeks; all participants received nonhormonal vaginal lubricant for use as needed. In the final week, lubricant was used by 22% at 60 mg, 31% at 30 mg, and 29% with placebo.",
+          "locator": "Full text, Methods, Treatment, p 481; Results, Use of lubricant, p 483"
+        },
+        {
+          "label": "Twelve-week completion",
+          "value": "689/826 (83.4%) randomized women completed treatment.",
+          "locator": "Full text, Results, Study participants, p 482"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_gme_0b013e3181c1ac01.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_gme_0b013e3181c1ac01.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -133,52 +211,118 @@
       "doi": "10.1097/gme.0b013e31826d36ba",
       "pmid": "23096251",
       "followUp": "52 weeks total treatment (12-week parent trial plus 40-week extension)",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Methods, p 419",
       "results": [
         {
           "endpoint": "Endometrial biopsy",
           "role": "descriptive",
-          "measure": "Week-52 atrophic, inactive, or insufficient endometrial samples",
+          "measure": "Week-52 atrophic, inactive, or insufficient biopsy sample among women with samples",
+          "values": {
+            "exp": "53/55 (96.4%)",
+            "exp30": "44/46 (95.7%)",
+            "ctl": "32/32 (100%)"
+          },
           "effect": {
             "type": "none"
           },
-          "note": ">95% of samples; no arm-specific denominator or comparison was given.",
-          "locator": "PubMed abstract, Results"
+          "note": "Descriptive safety analysis; week-52 biopsy denominators are smaller than the enrolled arms.",
+          "locator": "Full text, Table 2, p 422"
+        },
+        {
+          "endpoint": "Endometrial thickness",
+          "role": "descriptive",
+          "measure": "Mean change from original baseline to week 52, mm (observed cases)",
+          "values": {
+            "exp": "1.14 mm (n=53)",
+            "exp30": "0.68 mm (n=46)",
+            "ctl": "−0.04 mm (n=30)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Descriptive comparison; no inferential P value or confidence interval reported.",
+          "locator": "Full text, Table 3, p 422"
         }
       ],
       "harms": [
         {
-          "label": "Endometrial hyperplasia or carcinoma",
-          "value": "0 cases reported among 180 extension participants",
-          "locator": "PubMed abstract, Results",
-          "note": "Arm-specific denominators were not given."
+          "label": "Endometrial hyperplasia or carcinoma at week 52",
+          "values": {
+            "exp": "0/55 biopsied",
+            "exp30": "0/46 biopsied",
+            "ctl": "0/32 biopsied"
+          },
+          "locator": "Full text, Table 2, p 422",
+          "note": "133 week-52 biopsy samples among 180 extension enrollees."
         },
         {
           "label": "Vaginal bleeding or spotting",
           "values": {
-            "exp": "3 ospemifene recipients (1.7%; denominator not specified)"
+            "exp": "1/69 (1.4%); one spotting event",
+            "exp30": "1/62 (1.6%); two bleeding events",
+            "ctl": "0/49 (0%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The source does not give the ospemifene-exposed denominator."
+          "locator": "Full text, Results, p 425",
+          "note": "Detailed results describe two participants with three events; abstract incorrectly calls them three participants."
         },
         {
           "label": "Venous thromboembolism",
-          "value": "0 cases reported among 180 extension participants",
-          "locator": "PubMed abstract, Results",
-          "note": "Arm-specific denominators were not given."
+          "values": {
+            "exp": "0/69",
+            "exp30": "0/62",
+            "ctl": "0/49"
+          },
+          "locator": "Full text, Results, Safety and tolerability, p 423"
+        },
+        {
+          "label": "At least one treatment-emergent adverse event",
+          "values": {
+            "exp": "44/69 (63.8%)",
+            "exp30": "38/62 (61.3%)",
+            "ctl": "22/49 (44.9%)"
+          },
+          "locator": "Full text, Table 4, p 423"
+        },
+        {
+          "label": "Urinary tract infection adverse event",
+          "values": {
+            "exp": "6/69 (8.7%)",
+            "exp30": "4/62 (6.5%)",
+            "ctl": "4/49 (8.2%)"
+          },
+          "locator": "Full text, Table 4, p 423"
+        },
+        {
+          "label": "Atypical epithelial or disordered proliferation on week-52 biopsy",
+          "values": {
+            "exp": "1/55 (1.8%) disordered proliferation",
+            "exp30": "1/46 (2.2%) atypical epithelial proliferation",
+            "ctl": "0/32 (0%)"
+          },
+          "locator": "Full text, Table 2, p 422"
         }
       ],
       "delivery": [
         {
           "label": "Extension treatment",
-          "value": "180 women with a uterus continued blinded placebo, ospemifene 30 mg/day, or ospemifene 60 mg/day for 40 additional weeks.",
-          "locator": "PubMed abstract, Methods"
+          "value": "180 women with a uterus who completed the parent 12-week trial continued blinded placebo (n=49), ospemifene 30 mg/day (n=62), or ospemifene 60 mg/day (n=69) each morning with food for 40 more weeks; 52 weeks total treatment and four-week follow-up.",
+          "locator": "Full text, Methods, pp 419–420 and Table 1, p 421"
+        },
+        {
+          "label": "Extension completion and adherence",
+          "values": {
+            "exp": "57/69 completed (82.6%); mean dose compliance 84.6%",
+            "exp30": "49/62 completed (79.0%); mean dose compliance 85.5%",
+            "ctl": "34/49 completed (69.4%); mean dose compliance 93.4%"
+          },
+          "locator": "Full text, Results, p 421",
+          "note": "140/180 completed the 40-week extension; completion counts computed from reported discontinuation rates."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_gme_0b013e31826d36ba.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_gme_0b013e31826d36ba.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -193,55 +337,71 @@
       "doi": "10.1097/gme.0b013e318279ba64",
       "pmid": "23361170",
       "followUp": "12 weeks of treatment",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Methods, p 625",
       "results": [
         {
           "endpoint": "Vaginal superficial cells",
           "role": "primary",
-          "measure": "Percentage of superficial cells at week 12",
+          "measure": "ITT mean change in percentage points at week 12 (LOCF)",
+          "values": {
+            "exp": "increase 12.3 points (n=303)",
+            "ctl": "increase 1.7 points (n=302)"
+          },
           "effect": {
             "type": "none",
             "p": "<0.0001"
           },
           "met": true,
-          "note": "Improved with ospemifene 60 mg versus placebo; the abstract gives no absolute values.",
-          "locator": "PubMed abstract, Results"
+          "note": "No confidence interval reported.",
+          "locator": "Full text, Results, Primary efficacy analysis, p 626"
         },
         {
           "endpoint": "Vaginal parabasal cells",
           "role": "primary",
-          "measure": "Percentage of parabasal cells at week 12",
+          "measure": "ITT mean change in percentage points at week 12 (LOCF)",
+          "values": {
+            "exp": "decrease 40.2 points (n=303)",
+            "ctl": "no reduction (n=302)"
+          },
           "effect": {
             "type": "none",
             "p": "<0.0001"
           },
           "met": true,
-          "note": "Improved with ospemifene 60 mg versus placebo; the abstract gives no absolute values.",
-          "locator": "PubMed abstract, Results"
+          "note": "No confidence interval reported.",
+          "locator": "Full text, Results, Primary efficacy analysis, p 626"
         },
         {
           "endpoint": "Vaginal pH",
           "role": "primary",
-          "measure": "Vaginal pH at week 12",
+          "measure": "ITT mean change at week 12 (LOCF)",
+          "values": {
+            "exp": "decrease 0.94 (n=303)",
+            "ctl": "decrease 0.07 (n=302)"
+          },
           "effect": {
             "type": "none",
             "p": "<0.0001"
           },
           "met": true,
-          "note": "Improved with ospemifene 60 mg versus placebo; the abstract gives no absolute values.",
-          "locator": "PubMed abstract, Results"
+          "note": "No confidence interval reported.",
+          "locator": "Full text, Results, Primary efficacy analysis, p 626"
         },
         {
           "endpoint": "Dyspareunia",
           "role": "primary",
-          "measure": "Severity of dyspareunia at week 12",
+          "measure": "ITT mean decrease in 0–3 severity score at week 12 (LOCF)",
+          "values": {
+            "exp": "1.5 (n=303)",
+            "ctl": "1.2 (n=302)"
+          },
           "effect": {
             "type": "none",
             "p": "0.0001"
           },
           "met": true,
-          "note": "Improved with ospemifene 60 mg versus placebo; the abstract gives no absolute values.",
-          "locator": "PubMed abstract, Results"
+          "note": "No confidence interval reported.",
+          "locator": "Full text, Results, Primary efficacy analysis, p 627"
         }
       ],
       "harms": [
@@ -251,41 +411,73 @@
             "exp": "186/303 (61.4%)",
             "ctl": "154/302 (51.0%)"
           },
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Table 3, p 628"
         },
         {
-          "label": "Treatment-related hot flushes",
+          "label": "Hot flushes, all treatment-emergent events",
           "values": {
-            "exp": "6.6%",
-            "ctl": "3.6%"
+            "exp": "20/303 (6.6%)",
+            "ctl": "13/302 (4.3%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract gives rates but not event counts; one participant per group discontinued."
+          "locator": "Full text, Table 4, p 628",
+          "note": "Treatment-related rates were 6.6% versus 3.6% (Results, p 628)."
+        },
+        {
+          "label": "Urinary tract infection adverse event",
+          "values": {
+            "exp": "17/303 (5.6%)",
+            "ctl": "11/302 (3.6%)"
+          },
+          "locator": "Full text, Table 4, p 628"
+        },
+        {
+          "label": "Vaginal candidiasis adverse event",
+          "values": {
+            "exp": "14/303 (4.6%)",
+            "ctl": "1/302 (0.3%)"
+          },
+          "locator": "Full text, Table 4, p 628"
+        },
+        {
+          "label": "Withdrawal because of adverse event",
+          "values": {
+            "exp": "14/303 (4.6%)",
+            "ctl": "10/302 (3.3%)"
+          },
+          "locator": "Full text, Table 3, p 628"
         }
       ],
       "delivery": [
         {
           "label": "Randomization and treatment",
           "values": {
-            "exp": "303 randomized to oral ospemifene 60 mg/day",
-            "ctl": "302 randomized to placebo"
+            "exp": "303 randomized to oral ospemifene 60 mg once daily with food in the morning",
+            "ctl": "302 randomized to placebo once daily with food in the morning"
           },
-          "locator": "PubMed abstract, Methods",
-          "note": "Separate randomized study, not follow-up of Bachmann 2010."
+          "locator": "Full text, Methods, p 625",
+          "note": "Separate dyspareunia cohort; nonhormonal lubricant was supplied for use as needed."
+        },
+        {
+          "label": "Twelve-week completion",
+          "values": {
+            "exp": "278/303 (91.7%)",
+            "ctl": "266/302 (88.1%)"
+          },
+          "locator": "Full text, Results, pp 626–628"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_gme_0b013e318279ba64.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_gme_0b013e318279ba64.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/ospemifene-pivotal",
   "status": {
-    "sourceRead": "abstract",
-    "claimsChecked": null,
+    "sourceRead": "full-text",
+    "claimsChecked": "2026-11-13",
     "clinicalReview": null
   }
 }

@@ -41,7 +41,7 @@
     "locator": "Withagen 2011, Materials and Methods; Milani 2018 PDF pp847,849, Figure 1"
   },
   "verdict": "positive",
-  "verdictNote": "Treated-compartment anatomy improved, while patient-reported improvement was similar and mesh exposure occurred.",
+  "verdictNote": "Treated-compartment anatomy improved; de novo untreated-compartment prolapse was more frequent, patient-reported improvement was similar, and mesh exposure occurred.",
   "takeaway": "Trocar-guided Prolift polypropylene mesh reduced 12-month treated-compartment anatomic failure versus conventional vaginal native-tissue repair for recurrent prolapse, without greater patient-reported improvement; mesh exposure occurred in 14/83 examined women (16.9%).",
   "reports": [
     {
@@ -198,13 +198,13 @@
       "citation": "Withagen MI, Milani AL, de Leeuw JW, Vierhout ME. \"Development of de novo prolapse in untreated vaginal compartments after prolapse repair with and without mesh: a secondary analysis of a randomised controlled trial.\" *BJOG.* 2012;119(3):354-360. doi:10.1111/j.1471-0528.2011.03231.x",
       "doi": "10.1111/j.1471-0528.2011.03231.x",
       "pmid": "22239416",
-      "followUp": "12 months after index surgery",
-      "followUpLocator": "PubMed abstract, Results",
+      "followUp": "12 months after index surgery; POP-Q evaluable in 62/66 eligible mesh and 59/68 eligible conventional patients (13 lost)",
+      "followUpLocator": "Full text, Methods and Results, pp 355–356, Figure 1",
       "results": [
         {
           "endpoint": "De novo prolapse in untreated compartments",
           "role": "primary",
-          "measure": "POP-Q stage II or higher in an untreated compartment at 12 months",
+          "measure": "POP-Q stage II or higher at 12 months in an untreated compartment that was below stage II at baseline; complete POP-Q cases after surgery in one compartment, with or without apical repair",
           "values": {
             "exp": "29/62 (47%)",
             "ctl": "10/59 (17%)"
@@ -218,17 +218,88 @@
             ],
             "p": "<0.001"
           },
-          "met": null,
-          "note": "Secondary analysis; abstract does not specify a prespecified testing threshold.",
-          "locator": "PubMed abstract, Results"
+          "met": true,
+          "note": "Secondary analysis with a new power calculation and stated two-sided alpha 0.05; OR is mesh versus conventional repair. Women treated in both anterior and posterior compartments were excluded. In an exploratory anterior-Prolift subgroup, de novo stage II or higher prolapse occurred after isolated repair in 14/26 (54%) versus 0/6 (0%) after added apical repair (P=0.02).",
+          "locator": "Full text, Methods, p 355; Results, pp 356–357; Table 3, p 359"
+        },
+        {
+          "endpoint": "De novo prolapse at or beyond the hymen in an untreated compartment",
+          "role": "secondary",
+          "measure": "New POP-Q descent to the hymen or beyond in an untreated compartment at 12 months",
+          "values": {
+            "exp": "21/62 (34%)",
+            "ctl": "3/59 (5%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 9.5,
+            "ci": [
+              2.5,
+              43.5
+            ],
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "OR is mesh versus conventional repair; complete POP-Q cases.",
+          "locator": "Full text, Table 3, p 359"
+        },
+        {
+          "endpoint": "De novo prolapse beyond the hymen in an untreated compartment",
+          "role": "secondary",
+          "measure": "New POP-Q descent beyond the hymen in an untreated compartment at 12 months",
+          "values": {
+            "exp": "13/62 (21%)",
+            "ctl": "1/59 (2%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 15.4,
+            "ci": [
+              1.9,
+              122
+            ],
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "OR is mesh versus conventional repair; complete POP-Q cases.",
+          "locator": "Full text, Table 3, p 359"
         }
       ],
-      "harms": [],
-      "delivery": [],
+      "harms": [
+        {
+          "label": "Temporary urinary retention and cumulative mesh exposure at 12 months",
+          "values": {
+            "exp": "retention 6/62 (10%); mesh exposure 8/62 (13%)",
+            "ctl": "retention 3/59 (5%); mesh exposure not applicable"
+          },
+          "note": "Analysis cohort; retention P=0.49, mesh exposure P=0.004.",
+          "locator": "Full text, Table 2, p 358"
+        },
+        {
+          "label": "Repeat surgery in an initially unaffected, untreated compartment within one year",
+          "values": {
+            "exp": "6/62 (10%)",
+            "ctl": "1/59 (2%)"
+          },
+          "note": "P=0.06; analysis cohort, not the whole randomized trial.",
+          "locator": "Full text, Results, p 357"
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Index operation distribution and operative time in analysis cohort",
+          "values": {
+            "exp": "32/62 (52%) anterior and 30/62 (48%) posterior Prolift; median 50 min (range 29–125)",
+            "ctl": "26/59 (44%) anterior and 33/59 (56%) posterior colporrhaphy; median 40 min (range 16–90)"
+          },
+          "note": "Operating-time comparison P=0.002; additional apical procedures were permitted.",
+          "locator": "Full text, Methods, p 355; Table 2, p 358"
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_j_1471_0528_2011_03231_x.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_j_1471_0528_2011_03231_x.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     },
     {

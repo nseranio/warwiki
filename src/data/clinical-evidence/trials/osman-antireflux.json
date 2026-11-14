@@ -33,13 +33,13 @@
         "role": "control"
       }
     ],
-    "population": "Sixty patients with invasive bladder cancer undergoing orthotopic ileal bladder substitution.",
-    "description": "Prospective randomized comparison of two antireflux techniques",
-    "locator": "PubMed abstract, Patients and Methods"
+    "population": "Sixty patients (41 men, 19 women) with invasive bladder cancer undergoing radical cystectomy and orthotopic ileal bladder substitution.",
+    "description": "Prospective comparison randomized by opaque sealed envelope: 30 patients (55 renal units) per arm; group 1 received an ileal W neobladder with a serous-lined extramural tunnel and group 2 a T-limb procedure.",
+    "locator": "Full text, Patients and Methods, p 1518; Table 1, p 1519"
   },
   "verdict": "positive",
   "verdictNote": "Less reflux with the tunnel; cortical scarring occurred in three versus four renal units.",
-  "takeaway": "In a randomized comparison of a serous-lined extramural ureteral tunnel versus a T-limb ileal antireflux procedure, ascending studies found reflux in 0/49 versus 13/45 evaluated renal units (29%; P < 0.01); ureteroileal stricture occurred in one unit per arm.",
+  "takeaway": "In randomized groups receiving a serous-lined extramural tunnel or T-limb, at mean follow-up of 6.3 versus 7.4 months, ascending studies found reflux in 0/49 versus 13/45 evaluable renal units (29%; P < 0.01); ureteroileal stricture occurred in one unit per arm.",
   "reports": [
     {
       "id": "osman-antireflux-2009",
@@ -50,12 +50,12 @@
       "citation": "Osman Y, Abol-Enein H, El-Mekresh M, et al. \"Comparison between a serous-lined extramural tunnel and T-limb ileal procedure as an antireflux technique in orthotopic ileal substitutes: a prospective randomized trial.\" *BJU Int.* 2009;104(10):1518-1521.",
       "doi": "10.1111/j.1464-410X.2009.08574.x",
       "pmid": "19388994",
-      "followUp": "Mean 6.3 (SD 0.5) and 7.4 (SD 1.9) in evaluated groups, respectively; time unit not given in abstract",
-      "followUpLocator": "PubMed abstract, Results",
+      "followUp": "Mean 6.3 (SD 0.5) months in the tunnel group and 7.4 (SD 1.9) months in the T-limb group among evaluable patients",
+      "followUpLocator": "Full text, Table 2 and Results, p 1519",
       "results": [
         {
           "endpoint": "Reflux on ascending study",
-          "role": "primary",
+          "role": "descriptive",
           "measure": "Refluxing renal units among evaluated units",
           "values": {
             "exp": "0/49 (0%)",
@@ -65,20 +65,21 @@
             "type": "none",
             "p": "<0.01"
           },
-          "met": null,
-          "note": "The abstract does not identify a prespecified primary endpoint or significance threshold.",
-          "locator": "PubMed abstract, Results"
+          "met": true,
+          "note": "The report does not designate a primary endpoint; the stated significance threshold was P < 0.05. Results are from evaluable renal units, not all randomized patients.",
+          "locator": "Full text, Patients and Methods and Table 2, p 1519"
         },
         {
           "endpoint": "Progressive renal cortical scarring",
-          "role": "secondary",
+          "role": "descriptive",
           "measure": "Renal units with progressive scarring, with or without >25% GFR reduction",
           "values": {
             "exp": "3/49",
             "ctl": "4/45"
           },
-          "note": "",
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "The report does not designate this as a secondary endpoint or give a between-arm test.",
+          "locator": "Full text, Table 3 and Results, pp 1519–1520"
         },
         {
           "endpoint": "GFR deterioration in refluxing T-limb units",
@@ -87,8 +88,21 @@
           "values": {
             "ctl": "3/13"
           },
-          "note": "One of the 13 refluxing T-limb units had progressive cortical scarring; overlap with GFR deterioration is not stated.",
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "One of the 13 refluxing T-limb units had progressive cortical scarring; Table 3 shows no overlap with the three units with GFR deterioration.",
+          "locator": "Full text, Table 3, p 1519; Results, p 1520"
+        },
+        {
+          "endpoint": "GFR deterioration",
+          "role": "descriptive",
+          "measure": ">25% GFR reduction among evaluated renal units",
+          "values": {
+            "exp": "1/49",
+            "ctl": "4/45"
+          },
+          "met": "not-tested",
+          "note": "Counts sum the GFR-deterioration and combined scarring/GFR-deterioration rows across reflux and stricture categories; no between-arm test reported.",
+          "locator": "Full text, Table 3, p 1519"
         }
       ],
       "harms": [
@@ -98,8 +112,26 @@
             "exp": "1/49",
             "ctl": "1/45"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "One evaluated renal unit in each group; P = 0.5."
+          "locator": "Full text, Table 2, p 1519",
+          "note": "One evaluated renal unit in each group; Table 2 gives P = 0.51."
+        },
+        {
+          "label": "Early urinary leak",
+          "values": {
+            "exp": "1/30 patients",
+            "ctl": "1/30 patients"
+          },
+          "locator": "Full text, Results, p 1519",
+          "note": "Tunnel-arm leak treated with percutaneous drain and longer urethral catheterization; T-limb leak treated with temporary percutaneous nephrostomy."
+        },
+        {
+          "label": "Temporary anastomotic oedema with obstruction",
+          "values": {
+            "exp": "0/30 patients",
+            "ctl": "2/30 patients"
+          },
+          "locator": "Full text, Results, p 1519; Discussion, p 1520",
+          "note": "T-limb patients required temporary percutaneous nephrostomy; oedema resolved within 4 and 6 weeks."
         }
       ],
       "delivery": [
@@ -109,26 +141,31 @@
             "exp": "27 patients (49 renal units)",
             "ctl": "23 patients (45 renal units)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "50/60 randomized patients contributed follow-up imaging; 10/60 did not. Arm-specific randomized counts are unavailable in the abstract."
+          "locator": "Full text, Table 1 and Results, p 1519",
+          "note": "30 patients (55 renal units) randomized per arm; 50/60 contributed follow-up imaging. Ten were unevaluable: three perioperative deaths, five oncological failures and two drug-induced renal failures; reasons by arm not reported."
         },
         {
           "label": "Upper-tract assessment",
           "value": "Baseline intravenous urography, isotope GFR assessment and 99mTc-DMSA cortical imaging; repeat imaging and ascending studies in evaluable patients.",
-          "locator": "PubMed abstract, Patients and Methods"
+          "locator": "Full text, Patients and Methods, pp 1518–1519"
+        },
+        {
+          "label": "Ascending-study protocol",
+          "value": "Water-soluble contrast and saline infused from a container 50 cm above the patient until reflux or maximum pouch capacity; postero-anterior and oblique views obtained.",
+          "locator": "Full text, Patients and Methods, p 1519"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_j_1464_410x_2009_08574_x.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_j_1464_410x_2009_08574_x.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/osman-antireflux",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

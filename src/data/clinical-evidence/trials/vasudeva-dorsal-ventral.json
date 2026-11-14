@@ -37,11 +37,11 @@
     ],
     "population": "Patients with long-segment (>2 cm), incomplete bulbar urethral stricture meeting the study's eligibility criteria.",
     "description": "Single-center, prospective randomized comparative trial",
-    "locator": "PubMed abstract, Methods and Results"
+    "locator": "Full text, Methods and Results, pp 968-969"
   },
   "verdict": "inconclusive",
-  "verdictNote": "The abstract gives no prespecified endpoint or superiority threshold.",
-  "takeaway": "In 80 patients with long-segment incomplete bulbar stricture, dorsal versus ventral onlay buccal mucosal graft urethroplasty yielded 12-month surgical success of 92.5% versus 90%; the reported difference was not statistically significant.",
+  "verdictNote": "Primary IPSS and Qmax comparisons were nonsignificant; no sample-size calculation was reported.",
+  "takeaway": "In 80 randomized patients with long-segment incomplete bulbar stricture, dorsal and ventral onlay buccal grafts had similar 12-month IPSS and Qmax among 38 patients per arm. Surgical success was 37/40 versus 36/40 (P = 0.51).",
   "reports": [
     {
       "id": "vasudeva-dorsal-ventral-2015",
@@ -53,65 +53,117 @@
       "doi": "10.1111/iju.12859",
       "pmid": "26138109",
       "followUp": "12 months",
-      "followUpLocator": "PubMed abstract, Results",
+      "followUpLocator": "Full text, Methods and Results, pp 968-970",
       "results": [
         {
-          "endpoint": "Surgical success",
-          "role": "descriptive",
-          "measure": "12-month surgical success; definition not supplied in abstract",
-          "values": {
-            "exp": "92.5%",
-            "ctl": "90%"
-          },
-          "effect": {
-            "type": "none"
-          },
-          "met": null,
-          "note": "Forty patients were randomized per arm; assessed denominators and a prespecified success threshold were not reported.",
-          "locator": "PubMed abstract, Results"
-        },
-        {
           "endpoint": "International Prostate Symptom Score",
-          "role": "descriptive",
-          "measure": "Reported percentage improvement in mean IPSS at 12 months",
+          "role": "primary",
+          "measure": "Mean IPSS at 12 months among patients without 3-month failure (n = 38 per arm)",
           "values": {
-            "exp": "324.95%",
-            "ctl": "353.59%"
+            "exp": "5.57 ± 4.72",
+            "ctl": "5.15 ± 4.56"
           },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "0.69"
           },
-          "note": "The abstract reports no significant between-group difference at 3 or 12 months; percentage-improvement calculation is unspecified.",
-          "locator": "PubMed abstract, Results"
+          "met": false,
+          "note": "Baseline means were 24.10 and 23.90; 3-month means were 4.95 and 4.80 (P = 0.86). Two 3-month failures per arm were excluded from 12-month means. Between-arm P threshold was 0.05; no confidence interval was reported.",
+          "locator": "Full text, Methods, p 968; Table 3, p 970"
         },
         {
           "endpoint": "Maximum urinary flow rate",
-          "role": "descriptive",
-          "measure": "Reported percentage improvement in mean Qmax at 12 months",
+          "role": "primary",
+          "measure": "Mean Qmax at 12 months (mL/s) among patients without 3-month failure (n = 38 per arm)",
           "values": {
-            "exp": "208.43%",
-            "ctl": "201.93%"
+            "exp": "17.32 ± 4.04 mL/s",
+            "ctl": "17.31 ± 4.00 mL/s"
           },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "0.99"
           },
-          "note": "The abstract reports no significant between-group difference at 3 or 12 months; baseline and absolute follow-up flow values are not supplied.",
-          "locator": "PubMed abstract, Results"
+          "met": false,
+          "note": "Baseline means were 5.57 and 5.68 mL/s; 3-month means were 18.21 and 18.09 mL/s (P = 0.87). Two 3-month failures per arm were excluded from 12-month means. Between-arm P threshold was 0.05; no confidence interval was reported.",
+          "locator": "Full text, Methods, p 968; Table 3, p 970"
+        },
+        {
+          "endpoint": "Surgical success",
+          "role": "descriptive",
+          "measure": "12-month freedom from failure (no further surgery and Qmax ≥14 mL/s), among 40 randomized per arm",
+          "values": {
+            "exp": "37/40 (92.5%)",
+            "ctl": "36/40 (90%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.51"
+          },
+          "met": false,
+          "note": "Two failures in each arm occurred by 3 months, with one further dorsal and two further ventral failures by 12 months. Redo urethroplasty was planned for all failures.",
+          "locator": "Full text, Methods, p 968; Results, p 969; Table 4, p 970"
         }
       ],
-      "harms": [],
-      "delivery": [],
+      "harms": [
+        {
+          "label": "Wound hematoma",
+          "values": {
+            "exp": "2/40 (5%)",
+            "ctl": "1/40 (2.5%)"
+          },
+          "locator": "Full text, Table 4, p 970",
+          "note": "P = 0.50; managed conservatively."
+        },
+        {
+          "label": "Wound infection and graft necrosis",
+          "values": {
+            "exp": "1/40 (2.5%)",
+            "ctl": "3/40 (7.5%)"
+          },
+          "locator": "Full text, Table 4, p 970",
+          "note": "Reported as one combined category; P = 0.32; managed conservatively."
+        },
+        {
+          "label": "Donor-site complication",
+          "values": {
+            "exp": "0/40 (0%)",
+            "ctl": "2/40 (5%)"
+          },
+          "locator": "Full text, Table 4, p 970",
+          "note": "P = 0.49; managed conservatively."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Operative duration",
+          "values": {
+            "exp": "116.75 ± 19.8 min",
+            "ctl": "113.25 ± 20.38 min"
+          },
+          "locator": "Full text, Surgical procedure, p 968; Table 2, p 969",
+          "note": "P = 0.43. Two consultant urologists used modified Barbagli dorsal onlay or Wessells ventral onlay; separate teams harvested graft and dissected perineum."
+        },
+        {
+          "label": "Graft length and catheter protocol",
+          "values": {
+            "exp": "6.27 ± 1.39 cm",
+            "ctl": "6.20 ± 1.35 cm"
+          },
+          "locator": "Full text, Surgical procedure, p 968; Table 2, p 969",
+          "note": "Graft-length P = 0.81. Pericatheter urethrogram at 4 weeks; catheter removed if no extravasation, otherwise retained one more week. No crossover permitted."
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_iju_12859.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_iju_12859.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/vasudeva-dorsal-ventral",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

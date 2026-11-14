@@ -20,34 +20,34 @@
     "randomized": true,
     "blinding": "double-blind, double-dummy",
     "type": "superiority",
-    "n": 1590,
+    "n": 1712,
     "arms": [
       {
         "key": "fes",
         "label": "Fesoterodine 8 mg daily after a 4 mg lead-in",
-        "n": 636,
+        "n": 679,
         "role": "experimental"
       },
       {
         "key": "tol",
         "label": "tolterodine ER 4 mg daily",
-        "n": 641,
+        "n": 684,
         "role": "control"
       },
       {
         "key": "pbo",
         "label": "placebo",
-        "n": 313,
+        "n": 334,
         "role": "control"
       }
     ],
-    "population": "1,590 patients with overactive bladder symptoms for at least 3 months, at least 8 voids and at least 1 urgency urinary incontinence episode per 24 hours in baseline 3-day diaries.",
-    "description": "Double-blind, double-dummy, placebo-controlled randomized trial",
-    "locator": "PubMed abstract, Patients and Methods; Results"
+    "population": "1,712 randomized adults; eligibility required overactive bladder symptoms for at least 3 months, at least 8 voids and at least 1 urgency urinary incontinence episode per 24 hours in baseline 3-day diaries; 1,590 entered the full efficacy analysis set.",
+    "description": "Double-blind, double-dummy, placebo-controlled randomized trial; arm counts are the treated safety set (1,697 total).",
+    "locator": "Full text, Patients and Methods, p 59; Results and Fig. 2, pp 60–61"
   },
   "verdict": "positive",
-  "verdictNote": "Fesoterodine improved the primary UUI endpoint versus both comparators; dry mouth was more frequent.",
-  "takeaway": "In a 12-week randomized trial, fesoterodine 8 mg reduced urgency urinary incontinence episodes more than tolterodine ER 4 mg (P = 0.017) and placebo (P < 0.001); dry mouth occurred in 28%, 16%, and 6%, respectively.",
+  "verdictNote": "The prespecified UUI comparison met significance; diary dryness was analyzed post hoc.",
+  "takeaway": "In a 12-week randomized trial, fesoterodine 8 mg reduced daily urgency urinary incontinence episodes by 1.72 versus 1.61 with tolterodine ER 4 mg (P = 0.017) and 1.46 with placebo (P < 0.001); dry mouth was more frequent with fesoterodine.",
   "reports": [
     {
       "id": "fesoterodine-vs-tolterodine-2010",
@@ -59,124 +59,183 @@
       "doi": "10.1111/j.1464-410X.2009.09086.x",
       "pmid": "20132103",
       "followUp": "12 weeks",
-      "followUpLocator": "PubMed abstract, Patients and Methods",
+      "followUpLocator": "Full text, Patients and Methods, p 59",
       "results": [
         {
           "endpoint": "Urgency urinary incontinence episodes",
           "role": "primary",
-          "measure": "Change from baseline to week 12 in episodes per 24 hours, fesoterodine versus tolterodine ER",
+          "measure": "Winsorized mean change from baseline to week 12 in episodes per 24 hours, fesoterodine versus tolterodine ER",
           "values": {
-            "fes": "greater reduction",
-            "tol": "smaller reduction"
+            "fes": "−1.72 (n=619)",
+            "tol": "−1.61 (n=626)"
           },
           "effect": {
-            "type": "none",
+            "type": "difference",
+            "value": -0.11,
             "p": "0.017"
           },
           "met": true,
-          "note": "",
-          "locator": "PubMed abstract, Results"
+          "note": "Difference calculated from rounded Figure 3A arm values; full analysis set with UUI at baseline; Van Elteren test; no confidence interval reported.",
+          "locator": "Full text, Fig. 3A, p 63; Results, p 61"
         },
         {
           "endpoint": "Urgency urinary incontinence episodes",
           "role": "primary",
-          "measure": "Change from baseline to week 12 in episodes per 24 hours, fesoterodine versus placebo",
+          "measure": "Winsorized mean change from baseline to week 12 in episodes per 24 hours, fesoterodine versus placebo",
           "values": {
-            "fes": "greater reduction",
-            "pbo": "smaller reduction"
+            "fes": "−1.72 (n=619)",
+            "pbo": "−1.46 (n=307)"
           },
           "effect": {
-            "type": "none",
+            "type": "difference",
+            "value": -0.26,
             "p": "<0.001"
           },
           "met": true,
-          "note": "",
-          "locator": "PubMed abstract, Results"
+          "note": "Difference calculated from rounded Figure 3A arm values; full analysis set with UUI at baseline; Van Elteren test; no confidence interval reported.",
+          "locator": "Full text, Fig. 3A, p 63; Results, p 61"
         },
         {
           "endpoint": "Diary dry rate",
-          "role": "secondary",
-          "measure": "No UUI episodes at endpoint among patients with at least one at baseline",
+          "role": "exploratory",
+          "measure": "No UUI episodes at week 12 among patients with at least one at baseline; post hoc analysis",
           "values": {
-            "fes": "64%",
-            "tol": "57%",
-            "pbo": "45%"
+            "fes": "396/619 (64.0%)",
+            "tol": "358/626 (57.2%)",
+            "pbo": "138/307 (45.0%)"
           },
           "effect": {
             "type": "none",
             "p": "0.015 versus tolterodine ER; <0.001 versus placebo"
           },
-          "met": null,
-          "note": "",
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "Post hoc analysis; participants with no baseline UUI were excluded.",
+          "locator": "Full text, Results, p 61"
         },
         {
           "endpoint": "Mean voided volume per void",
           "role": "secondary",
-          "measure": "Change from baseline to week 12, fesoterodine versus tolterodine ER",
+          "measure": "Least-squares mean change from baseline to week 12, mL per void",
           "values": {
-            "fes": "greater improvement",
-            "tol": "smaller improvement"
+            "fes": "+32.9 mL (n=626)",
+            "tol": "+23.5 mL (n=633)",
+            "pbo": "+16.8 mL (n=313)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 9.4,
+            "p": "0.005 versus tolterodine ER; <0.001 versus placebo"
+          },
+          "met": true,
+          "note": "Difference calculated from rounded Figure 3B arm values; no confidence interval reported.",
+          "locator": "Full text, Fig. 3B, p 63; Results, p 61"
+        },
+        {
+          "endpoint": "Total voids per 24 hours",
+          "role": "secondary",
+          "measure": "Least-squares mean change from baseline to week 12, fesoterodine versus tolterodine ER",
+          "values": {
+            "fes": "−2.2 (n=628)",
+            "tol": "−2.1 (n=634)",
+            "pbo": "−1.5 (n=313)"
           },
           "effect": {
             "type": "none",
-            "p": "0.005"
+            "p": "0.380 versus tolterodine ER; <0.001 versus placebo"
           },
-          "met": null,
-          "note": "",
-          "locator": "PubMed abstract, Results"
+          "met": false,
+          "note": "Fesoterodine–tolterodine comparison did not meet the prespecified two-sided 5% threshold.",
+          "locator": "Full text, Fig. 3C, p 63; Results, p 61"
         }
       ],
       "harms": [
         {
           "label": "Dry mouth",
           "values": {
-            "fes": "28%",
-            "tol": "16%",
-            "pbo": "6%"
+            "fes": "27.8% of 679",
+            "tol": "16.4% of 684",
+            "pbo": "6.0% of 334"
           },
-          "locator": "PubMed abstract, Results",
-          "note": ""
+          "locator": "Full text, Table 3, p 64",
+          "note": "Safety set; all-cause treatment-emergent adverse events."
         },
         {
           "label": "Constipation",
           "values": {
-            "fes": "5%",
-            "tol": "4%",
-            "pbo": "3%"
+            "fes": "5.4% of 679",
+            "tol": "4.1% of 684",
+            "pbo": "3.0% of 334"
           },
-          "locator": "PubMed abstract, Results",
-          "note": ""
+          "locator": "Full text, Table 3, p 64",
+          "note": "Safety set; all-cause treatment-emergent adverse events."
         },
         {
           "label": "Discontinuation due to treatment-emergent adverse events",
           "values": {
-            "fes": "6%",
-            "tol": "4%",
-            "pbo": "2%"
+            "fes": "6% of 679",
+            "tol": "4% of 684",
+            "pbo": "2% of 334"
           },
-          "locator": "PubMed abstract, Results",
-          "note": ""
+          "locator": "Full text, Fig. 2, p 61; Results, p 64",
+          "note": "Safety set; exact fesoterodine count differs between Figure 2 (44) and Results text (42)."
+        },
+        {
+          "label": "Urinary retention requiring catheterization",
+          "values": {
+            "fes": "1/679"
+          },
+          "locator": "Full text, Results, p 64; Discussion, p 65",
+          "note": "Treatment-related serious adverse event after 6 days at fesoterodine 4 mg in a 70-year-old man with benign prostatic enlargement."
+        },
+        {
+          "label": "Urinary tract infection",
+          "values": {
+            "fes": "2.2% of 679",
+            "tol": "1.5% of 684",
+            "pbo": "0.6% of 334"
+          },
+          "locator": "Full text, Table 3, p 64",
+          "note": "Safety set; all-cause treatment-emergent adverse events."
+        },
+        {
+          "label": "Nonfatal serious adverse events",
+          "values": {
+            "fes": "16/679 (2%)",
+            "tol": "9/684 (1%)",
+            "pbo": "6/334 (2%)"
+          },
+          "locator": "Full text, Results, p 64",
+          "note": "During treatment or within 30 days of last dose; two in the fesoterodine group were treatment-related."
         }
       ],
       "delivery": [
         {
           "label": "Dosing and masking",
-          "value": "Fesoterodine 4 mg daily for 1 week then 8 mg for 11 weeks; tolterodine ER 4 mg daily; sham dose escalation in the tolterodine ER and placebo groups.",
-          "locator": "PubMed abstract, Patients and Methods"
+          "value": "After a 2-week single-blind placebo run-in, fesoterodine 4 mg once daily for 1 week then 8 mg for 11 weeks; tolterodine ER 4 mg once daily for 12 weeks; sham dose escalation in tolterodine ER and placebo groups; all study drugs taken in the morning.",
+          "locator": "Full text, Patients and Methods, pp 59–60"
+        },
+        {
+          "label": "Study completion",
+          "values": {
+            "fes": "88% of 679 treated",
+            "tol": "92% of 684 treated",
+            "pbo": "91% of 334 treated"
+          },
+          "locator": "Full text, Results and Fig. 2, pp 60–61",
+          "note": "Treated safety set; 107 patients at two sites were excluded from efficacy analysis before unblinding because of diary-data irregularities."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_j_1464_410x_2009_09086_x.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_j_1464_410x_2009_09086_x.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/fesoterodine-vs-tolterodine",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

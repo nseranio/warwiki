@@ -332,12 +332,12 @@
       "doi": "10.1111/j.1743-6109.2004.04027.x",
       "pmid": "16422973",
       "followUp": "26-week randomized treatment",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Methods, p 186; Efficacy and Safety Assessments, p 187",
       "results": [
         {
           "endpoint": "Satisfaction with erection hardness",
           "role": "secondary",
-          "measure": "Per-patient satisfaction rate, as reported in the secondary abstract",
+          "measure": "ANCOVA least-squares mean per-patient satisfaction rate across all treatment attempts through 26 weeks; intent-to-treat population",
           "values": {
             "exp5": "38%",
             "exp10": "52%",
@@ -345,15 +345,17 @@
             "ctl": "18%"
           },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "<0.0001 for each dose versus placebo"
           },
-          "note": "The abstract reports dose dependence and statistical superiority without an exact P value.",
-          "locator": "PubMed abstract, Results"
+          "note": "Figure analysis n: 188, 194, 182, and 172 for 5 mg, 10 mg, 20 mg, and placebo, respectively; no multiplicity-adjusted secondary threshold or confidence interval reported.",
+          "locator": "Full text, Methods, p 187; Results and Figure 2, p 189",
+          "met": "not-tested"
         },
         {
           "endpoint": "Overall satisfaction with sexual experience",
           "role": "secondary",
-          "measure": "Per-patient satisfaction rate, as reported in the secondary abstract",
+          "measure": "ANCOVA least-squares mean per-patient satisfaction rate across all treatment attempts through 26 weeks; intent-to-treat population",
           "values": {
             "exp5": "45%",
             "exp10": "58%",
@@ -361,18 +363,110 @@
             "ctl": "23%"
           },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "<0.0001 for each dose versus placebo"
           },
-          "note": "The abstract reports dose dependence and statistical superiority without an exact P value.",
-          "locator": "PubMed abstract, Results"
+          "note": "Figure analysis n: 188, 194, 182, and 172 for 5 mg, 10 mg, 20 mg, and placebo, respectively; no multiplicity-adjusted secondary threshold or confidence interval reported.",
+          "locator": "Full text, Methods, p 187; Results and Figure 2, p 189",
+          "met": "not-tested"
+        },
+        {
+          "endpoint": "IIEF intercourse satisfaction domain",
+          "role": "secondary",
+          "measure": "Week-26 LOCF least-squares mean score, 0–15 scale; intent-to-treat population",
+          "values": {
+            "exp5": "8.9",
+            "exp10": "10.3",
+            "exp20": "10.3",
+            "ctl": "7.7"
+          },
+          "effect": {
+            "type": "none",
+            "p": "P=0.0013 for 5 mg and P<0.0001 for 10 and 20 mg versus placebo"
+          },
+          "met": "not-tested",
+          "note": "Figure analysis n: 188, 195, 183, and 170 for 5 mg, 10 mg, 20 mg, and placebo; no confidence interval or multiplicity-adjusted secondary threshold reported.",
+          "locator": "Full text, Results and Figure 1A, p 188"
+        },
+        {
+          "endpoint": "IIEF orgasmic function domain",
+          "role": "secondary",
+          "measure": "Week-26 LOCF least-squares mean score, 0–10 scale; intent-to-treat population",
+          "values": {
+            "exp5": "5.6",
+            "exp10": "7.1",
+            "exp20": "6.9",
+            "ctl": "5.3"
+          },
+          "effect": {
+            "type": "none",
+            "p": "P<0.0001 for 10 and 20 mg versus placebo; 5 mg not significant"
+          },
+          "met": "not-tested",
+          "note": "Figure analysis n: 187, 195, 183, and 170 for 5 mg, 10 mg, 20 mg, and placebo; no confidence interval or multiplicity-adjusted secondary threshold reported.",
+          "locator": "Full text, Results and Figure 1B, p 188"
+        },
+        {
+          "endpoint": "IIEF overall satisfaction domain",
+          "role": "secondary",
+          "measure": "Week-26 LOCF least-squares mean score, 2–10 scale; intent-to-treat population",
+          "values": {
+            "exp5": "6.3",
+            "exp10": "7.1",
+            "exp20": "7.1",
+            "ctl": "5.2"
+          },
+          "effect": {
+            "type": "none",
+            "p": "P<0.0001 for each dose versus placebo"
+          },
+          "met": "not-tested",
+          "note": "Figure analysis n: 187, 195, 183, and 169 for 5 mg, 10 mg, 20 mg, and placebo; no confidence interval or multiplicity-adjusted secondary threshold reported.",
+          "locator": "Full text, Results and Figure 1C, p 188"
+        },
+        {
+          "endpoint": "IIEF sexual desire domain",
+          "role": "secondary",
+          "measure": "Week-26 LOCF least-squares mean score, 2–10 scale; intent-to-treat population",
+          "values": {
+            "exp5": "7.2",
+            "exp10": "7.4",
+            "exp20": "7.5",
+            "ctl": "7.2"
+          },
+          "effect": {
+            "type": "none",
+            "p": "Not significantly different from placebo at any dose"
+          },
+          "met": "not-tested",
+          "note": "Figure analysis n: 188, 195, 183, and 170 for 5 mg, 10 mg, 20 mg, and placebo; exact P values and confidence intervals not reported.",
+          "locator": "Full text, Results and Figure 1D, p 188"
+        },
+        {
+          "endpoint": "Fugl-Meyer sexual-life quality-of-life item",
+          "role": "secondary",
+          "measure": "Week-26 LOCF mean score, 1–6 scale; intent-to-treat population",
+          "values": {
+            "exp5": "3.5",
+            "exp10": "3.9",
+            "exp20": "4.1",
+            "ctl": "2.9"
+          },
+          "effect": {
+            "type": "none",
+            "p": "P≤0.0001 for each dose versus placebo"
+          },
+          "met": "not-tested",
+          "note": "Outcome-specific denominators and confidence intervals not reported; no multiplicity-adjusted secondary threshold reported.",
+          "locator": "Full text, Results, p 189"
         }
       ],
       "harms": [],
       "delivery": [],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_j_1743_6109_2004_04027_x.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_j_1743_6109_2004_04027_x.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {

@@ -454,8 +454,40 @@
       "doi": "10.1001/jama.281.5.421",
       "pmid": "9952201",
       "followUp": "12 weeks in 268 randomized men with diabetes (136 sildenafil, 132 placebo)",
-      "followUpLocator": "Abstract, Design; Patients; Interventions",
+      "followUpLocator": "Full text, Abstract and Results, pp 421, 423",
       "results": [
+        {
+          "endpoint": "IIEF question 3: ability to achieve erections in men with diabetes",
+          "role": "primary",
+          "measure": "Least-squares mean score at 12 weeks (scale 1-5), intention-to-treat population",
+          "values": {
+            "exp": "3.2 (baseline 1.8; n=131)",
+            "ctl": "2.0 (baseline 1.6; n=126)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Two-sided 5% significance threshold; no between-arm confidence interval reported.",
+          "locator": "Full text, Results and Figure 2, p 424"
+        },
+        {
+          "endpoint": "IIEF question 4: ability to maintain erections in men with diabetes",
+          "role": "primary",
+          "measure": "Least-squares mean score at 12 weeks (scale 1-5), intention-to-treat population",
+          "values": {
+            "exp": "2.9 (baseline 1.5; n=131)",
+            "ctl": "1.6 (baseline 1.4; n=125)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Two-sided 5% significance threshold; no between-arm confidence interval reported.",
+          "locator": "Full text, Results and Figure 2, p 424"
+        },
         {
           "endpoint": "Global efficacy question: improved erections in men with diabetes",
           "role": "secondary",
@@ -469,12 +501,13 @@
             "p": "<0.001"
           },
           "note": "Separate diabetes-specific randomized trial at 19 US centers.",
-          "locator": "Abstract, Results"
+          "locator": "Full text, Results, p 424",
+          "met": true
         },
         {
           "endpoint": "At least one successful intercourse attempt in men with diabetes",
           "role": "secondary",
-          "measure": "Proportion of men with at least one successful attempt at intercourse at 12 weeks",
+          "measure": "Proportion of men with at least one successful attempt at intercourse during the 12-week treatment period",
           "values": {
             "exp": "71/117 (61%)",
             "ctl": "25/114 (22%)"
@@ -484,7 +517,24 @@
             "p": "<0.001"
           },
           "note": "Patient event-log outcome.",
-          "locator": "Abstract, Results"
+          "locator": "Full text, Results, p 424",
+          "met": true
+        },
+        {
+          "endpoint": "Successful intercourse during the last four weeks in men with diabetes",
+          "role": "secondary",
+          "measure": "Proportion of men reporting successful intercourse attempts during the last four weeks of treatment",
+          "values": {
+            "exp": "56/117 (48%)",
+            "ctl": "14/114 (12%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Event-log outcome; distinct from having at least one successful attempt over treatment.",
+          "locator": "Full text, Results, p 424"
         }
       ],
       "harms": [
@@ -494,51 +544,61 @@
             "exp": "22/136 (16%)",
             "ctl": "1/132 (1%)"
           },
-          "locator": "Abstract, Results",
+          "locator": "Full text, Adverse Effects, p 425",
           "note": ""
         },
         {
           "label": "Headache",
           "values": {
-            "exp": "11% (n=136)",
-            "ctl": "2% (n=132)"
+            "exp": "15/136 (11%)",
+            "ctl": "2/132 (2%)"
           },
-          "locator": "Abstract, Results",
-          "note": "Numerators not reported in abstract."
+          "locator": "Full text, Table 4 and Adverse Effects, p 425",
+          "note": "Adverse events of all causes."
         },
         {
           "label": "Dyspepsia",
           "values": {
-            "exp": "9% (n=136)",
-            "ctl": "0% (n=132)"
+            "exp": "12/136 (9%)",
+            "ctl": "0/132 (0%)"
           },
-          "locator": "Abstract, Results",
-          "note": "Numerators not reported in abstract."
+          "locator": "Full text, Table 4 and Adverse Effects, p 425",
+          "note": "Adverse events of all causes."
         },
         {
           "label": "Respiratory tract disorder",
           "values": {
-            "exp": "6% (n=136)",
-            "ctl": "2% (n=132)"
+            "exp": "8/136 (6%)",
+            "ctl": "2/132 (2%)"
           },
-          "locator": "Abstract, Results",
-          "note": "Predominantly sinus congestion or drainage; numerators not reported in abstract."
+          "locator": "Full text, Table 4 and Adverse Effects, p 425",
+          "note": "Adverse events of all causes; predominantly sinus congestion or drainage."
         },
         {
-          "label": "Cardiovascular adverse events",
+          "label": "Cardiovascular adverse events other than flushing",
           "values": {
-            "exp": "3% (n=136)",
-            "ctl": "5% (n=132)"
+            "exp": "4/136 (3%)",
+            "ctl": "6/132 (5%)"
           },
-          "locator": "Abstract, Results",
-          "note": "Numerators not reported in abstract."
+          "locator": "Full text, Adverse Effects, p 425",
+          "note": ""
+        },
+        {
+          "label": "Treatment discontinuation (all causes)",
+          "values": {
+            "exp": "5/136 (4%)",
+            "ctl": "11/132 (8%)"
+          },
+          "locator": "Full text, Figure 1 and Adverse Effects, pp 423, 425",
+          "note": "One patient in each group withdrew for an adverse event; no sildenafil recipient discontinued for a treatment-related adverse event."
         }
       ],
       "delivery": [
         {
           "label": "Dose schedule",
           "value": "Sildenafil initially 50 mg as needed, adjustable to 25 or 100 mg; one dose no more than daily, approximately 1 hour before anticipated sexual activity for 12 weeks",
-          "locator": "Abstract, Interventions"
+          "locator": "Full text, Study Design and Results, pp 422-423",
+          "note": "Median doses taken were 31 (range 3-81) with sildenafil and 25 (range 2-83) with placebo."
         },
         {
           "label": "Completed 12 weeks",
@@ -546,14 +606,23 @@
             "exp": "131/136",
             "ctl": "121/132"
           },
-          "locator": "Abstract, Results",
+          "locator": "Full text, Figure 1 and Results, pp 423-424",
           "note": "252/268 (94%) overall."
+        },
+        {
+          "label": "Final assigned dose",
+          "values": {
+            "exp": "100 mg: 126/136 (93%); 50 mg: 10/136 (7%); 25 mg: 0/136",
+            "ctl": "high dose: 127/132 (96%); medium dose: 5/132 (4%); low dose: 0/132"
+          },
+          "locator": "Full text, Results, p 423",
+          "note": "Dose adjusted for efficacy and tolerability."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1001_jama_281_5_421.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1001_jama_281_5_421.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {

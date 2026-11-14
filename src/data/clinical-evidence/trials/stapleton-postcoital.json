@@ -20,28 +20,34 @@
     "randomized": true,
     "blinding": "double-blind",
     "type": "superiority",
-    "n": 27,
+    "n": 35,
     "arms": [
       {
         "key": "exp",
         "label": "Postcoital trimethoprim–sulfamethoxazole",
-        "n": 16,
+        "n": 17,
         "role": "experimental"
       },
       {
         "key": "ctl",
         "label": "postcoital placebo",
-        "n": 11,
+        "n": 12,
         "role": "control"
+      },
+      {
+        "key": "daily",
+        "label": "Daily trimethoprim–sulfamethoxazole with postcoital placebo",
+        "n": 6,
+        "role": "experimental"
       }
     ],
-    "population": "Healthy young women prone to recurrent urinary tract infections.",
-    "description": "Double-blind, placebo-controlled randomized trial",
-    "locator": "PubMed abstract, opening paragraph"
+    "population": "Nonpregnant female university students with at least two culture-documented UTIs in the preceding 12 months and estimated intercourse fewer than 12 times per month.",
+    "description": "Three-arm double-blind randomized trial; 27 women in the postcoital arms were analyzed after excluding entry infections. Median culture-documented UTIs in the prior year were 3 with postcoital trimethoprim–sulfamethoxazole versus 4 with postcoital placebo (P=.02).",
+    "locator": "Full text, Study Population, pp 703–704; Patient Characteristics, p 704"
   },
   "verdict": "positive",
-  "verdictNote": "Small trial; the abstract does not identify a prespecified primary endpoint or threshold.",
-  "takeaway": "In healthy young women with recurrent urinary tract infections, postcoital trimethoprim–sulfamethoxazole reduced recurrence compared with postcoital placebo over more than six months: 2/16 versus 9/11 women developed infection.",
+  "verdictNote": "The report does not identify a prespecified endpoint or threshold; 27 postcoital-arm patients were analyzed.",
+  "takeaway": "In nonpregnant young women with recurrent urinary tract infections, postcoital trimethoprim–sulfamethoxazole reduced symptomatic recurrence versus postcoital placebo during 180 days: 2/16 versus 9/11 analyzed women developed infection (P=.0001).",
   "reports": [
     {
       "id": "stapleton-postcoital-1990",
@@ -52,28 +58,29 @@
       "citation": "Stapleton A, Latham RH, Johnson C, et al. \"Postcoital antimicrobial prophylaxis for recurrent urinary tract infection. A randomized, double-blind, placebo-controlled trial.\" *JAMA.* 1990;264(6):703-706. doi:10.1001/jama.1990.03450060049027",
       "doi": "10.1001/jama.1990.03450060049027",
       "pmid": "2197450",
-      "followUp": "More than six months of observation",
-      "followUpLocator": "PubMed abstract, results sentences",
+      "followUp": "180-day prophylaxis period",
+      "followUpLocator": "Full text, Efficacy of Prophylaxis, p 704",
       "results": [
         {
           "endpoint": "Recurrent urinary tract infection",
-          "role": "primary",
-          "measure": "Women with at least one UTI during more than six months of observation",
+          "role": "descriptive",
+          "measure": "Analyzed women with symptomatic UTI during 180-day prophylaxis (16 postcoital trimethoprim–sulfamethoxazole; 11 postcoital placebo)",
           "values": {
             "exp": "2/16 (12.5%)",
             "ctl": "9/11 (81.8%)"
           },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "0.0001"
           },
-          "met": null,
-          "note": "The abstract does not identify a prespecified primary endpoint, statistical test or threshold.",
-          "locator": "PubMed abstract, results sentences"
+          "met": "not-tested",
+          "note": "The paper reports no prespecified endpoint role, significance threshold, or confidence interval.",
+          "locator": "Full text, Efficacy of Prophylaxis, p 704"
         },
         {
           "endpoint": "UTI incidence",
-          "role": "secondary",
-          "measure": "Infections per patient-year during more than six months of observation",
+          "role": "descriptive",
+          "measure": "Symptomatic infections per patient-year during 180-day prophylaxis in the analyzed postcoital arms",
           "values": {
             "exp": "0.3 per patient-year",
             "ctl": "3.6 per patient-year"
@@ -81,31 +88,76 @@
           "effect": {
             "type": "none"
           },
-          "locator": "PubMed abstract, results sentences"
+          "met": "not-tested",
+          "locator": "Full text, Efficacy of Prophylaxis, p 704"
         }
       ],
-      "harms": [],
+      "harms": [
+        {
+          "label": "Nausea",
+          "values": {
+            "exp": "1/16 (6.3%; completed treatment)",
+            "ctl": "0/11 (0%)"
+          },
+          "locator": "Full text, Side Effects and Compliance, p 705"
+        },
+        {
+          "label": "Confirmed vaginal candidiasis",
+          "values": {
+            "exp": "2/16 (12.5%)",
+            "ctl": "0/11 (0%)"
+          },
+          "note": "One additional treated woman self-treated vaginal symptoms without a confirmed diagnosis.",
+          "locator": "Full text, Side Effects and Compliance, p 705"
+        },
+        {
+          "label": "Multidrug-resistant organisms in breakthrough UTIs",
+          "values": {
+            "exp": "2/2 infections (100%; both isolates resistant to trimethoprim–sulfamethoxazole)",
+            "ctl": "1/9 infections (11.1%)"
+          },
+          "locator": "Full text, Characteristics of Infections, pp 704–705"
+        }
+      ],
       "delivery": [
         {
-          "label": "Treatment timing",
+          "label": "Dose and treatment timing",
           "values": {
-            "exp": "trimethoprim–sulfamethoxazole after intercourse",
-            "ctl": "placebo after intercourse"
+            "exp": "trimethoprim 40 mg/sulfamethoxazole 200 mg within 2 hours after intercourse; daily placebo",
+            "ctl": "placebo within 2 hours after intercourse; daily placebo"
           },
-          "locator": "PubMed abstract, opening paragraph"
+          "note": "Only one postcoital tablet was instructed within 24 hours, even after multiple intercourse episodes.",
+          "locator": "Full text, Randomization and Follow-up, p 704"
+        },
+        {
+          "label": "Postcoital tablet adherence",
+          "values": {
+            "exp": "92%",
+            "ctl": "86%"
+          },
+          "note": "Assessed from daily diaries of tablets taken.",
+          "locator": "Full text, Randomization and Follow-up, p 704; Side Effects and Compliance, p 705"
+        },
+        {
+          "label": "Withdrawal during prophylaxis",
+          "values": {
+            "exp": "2/16 (12.5%) at 3 and 4.5 months for suspected or confirmed pregnancy",
+            "ctl": "not reported"
+          },
+          "locator": "Full text, Patient Characteristics, p 704"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/pmid_2197450.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1001_jama_1990_03450060049027.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/stapleton-postcoital",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

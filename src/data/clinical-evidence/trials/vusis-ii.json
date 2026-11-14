@@ -19,7 +19,7 @@
   "design": {
     "phase": "not applicable",
     "randomized": true,
-    "blinding": "not reported in primary abstract",
+    "blinding": "Participants and clinicians unblinded; subjective outcome data entry blinded to allocation",
     "type": "noninferiority",
     "n": 126,
     "arms": [
@@ -36,13 +36,13 @@
         "role": "control"
       }
     ],
-    "population": "Women with predominant stress urinary incontinence eligible for surgery on clinical assessment whose urodynamic findings were discordant with that assessment.",
+    "population": "Women with predominant stress urinary incontinence eligible for surgery on clinical assessment whose urodynamic findings were discordant with that assessment; prior incontinence surgery, prolapse at least 1 cm beyond the hymen, and postvoid residual of 150 mL or more were excluded.",
     "description": "Multicenter diagnostic cohort with embedded noninferiority randomized trial",
-    "locator": "PubMed abstract, Methods and Results"
+    "locator": "Full text, Methods, pp 1000-1001; Figure 1, p 1002"
   },
   "verdict": "noninferior",
-  "verdictNote": "Immediate surgery met the prespecified five-point noninferiority threshold at 12 months.",
-  "takeaway": "Among women whose urodynamic findings disagreed with clinical assessment, immediate midurethral sling surgery was noninferior to urodynamics-guided tailored therapy for 12-month Urogenital Distress Inventory improvement: 44 versus 39 points, with a prespecified five-point margin.",
+  "verdictNote": "Noninferiority was met; 62/64 and 61/62 assigned women had sling surgery by one year.",
+  "takeaway": "Among women with discordant urodynamics, immediate sling surgery was noninferior to urodynamics-guided tailored therapy for 12-month Urogenital Distress Inventory urinary-incontinence subscale improvement (44 versus 39 points; mean difference 5, one-sided 95% CI −∞ to 5); almost all women in both arms underwent sling surgery.",
   "reports": [
     {
       "id": "vusis-ii-2013",
@@ -56,12 +56,12 @@
       "doi": "10.1097/AOG.0b013e31828c68e3",
       "pmid": "23635736",
       "followUp": "12 months after baseline",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Methods, p 1001; Table 4, p 1005",
       "results": [
         {
-          "endpoint": "Urogenital Distress Inventory improvement",
+          "endpoint": "Urogenital Distress Inventory urinary-incontinence subscale improvement",
           "role": "primary",
-          "measure": "Mean 12-month improvement, points; mean difference (immediate surgery minus tailored therapy)",
+          "measure": "Mean 12-month improvement in randomized patients with valid observations (115/126); points; mean difference (immediate surgery minus tailored therapy)",
           "values": {
             "exp": "44 points (SD 24)",
             "ctl": "39 points (SD 25)"
@@ -72,43 +72,111 @@
             "ciLevel": "one-sided 95%"
           },
           "met": true,
-          "note": "Intention-to-treat analysis. The reported one-sided 95% confidence interval for the mean difference was −∞ to 5 points; the prespecified noninferiority margin was 5 points.",
-          "locator": "PubMed abstract, Methods and Results"
+          "note": "Intention-to-treat analysis based on valid observations. The reported one-sided 95% confidence interval for the mean difference was −∞ to 5 points; the prespecified noninferiority margin was 5 points. No primary-endpoint P value was reported.",
+          "locator": "Full text, Methods, p 1001; Figure 1, p 1002; Results and Table 4, pp 1004-1005"
         },
         {
-          "endpoint": "Cure",
+          "endpoint": "Subjective cure of stress urinary incontinence",
           "role": "secondary",
-          "measure": "Cure at 12 months",
-          "effect": {
-            "type": "none"
+          "measure": "No activity-related leakage on Urogenital Distress Inventory at 12 months; randomized patients with valid observations",
+          "values": {
+            "exp": "43/58 (74%)",
+            "ctl": "42/56 (75%)"
           },
-          "note": "The abstract reports no between-group difference without rates or a cure definition.",
-          "locator": "PubMed abstract, Results"
+          "effect": {
+            "type": "RR",
+            "value": 0.99,
+            "ci": [
+              0.8,
+              1.23
+            ]
+          },
+          "note": "Subjective cure required a negative response to the activity-related leakage item; any leakage counted as failure.",
+          "locator": "Full text, Methods, p 1001; Results and Table 4, pp 1004-1005"
+        },
+        {
+          "endpoint": "Objective cure of stress urinary incontinence",
+          "role": "secondary",
+          "measure": "Negative stress test at 12 months; randomized patients tested",
+          "values": {
+            "exp": "37/38 (97%)",
+            "ctl": "33/34 (97%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 1,
+            "ci": [
+              0.93,
+              1.09
+            ]
+          },
+          "locator": "Full text, Methods, p 1001; Results and Table 4, pp 1004-1005"
+        },
+        {
+          "endpoint": "Patient global impression of improvement",
+          "role": "secondary",
+          "measure": "Improved at 12 months on seven-point scale; randomized patients with valid observations",
+          "values": {
+            "exp": "50/55 (91%)",
+            "ctl": "52/57 (91%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 1,
+            "ci": [
+              0.89,
+              1.12
+            ]
+          },
+          "locator": "Full text, Methods, p 1001; Table 4, p 1005"
         }
       ],
       "harms": [
         {
-          "label": "Complications",
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract reports no between-group difference in complication rate but gives neither event counts nor complication types."
+          "label": "Reoperation",
+          "values": {
+            "exp": "1/64 (sling release)",
+            "ctl": "0/62"
+          },
+          "locator": "Full text, Results, p 1005",
+          "note": "The observational cohort had 13/452 reoperations. Across all 14 reoperations, indications were tape exposure (n=3), large residual urine (n=7), or persistent or recurrent stress incontinence (n=4)."
+        },
+        {
+          "label": "Prolonged catheterization and early sling release",
+          "locator": "Full text, Results, p 1005",
+          "note": "Clean intermittent catheterization for longer than six weeks was indicated in 8/453 (2%) operated women; five underwent sling release in the first postoperative days. Two further reoperations were indicated for large postvoid residuals."
+        },
+        {
+          "label": "Tape exposure requiring reoperation",
+          "locator": "Full text, Results, p 1005",
+          "note": "Three women in the 452-person observational cohort underwent reoperation for tape exposure."
         }
       ],
       "delivery": [
         {
           "label": "Diagnostic cohort and randomization",
-          "value": "All 578 women underwent urodynamics; 268/578 (46%) had findings discordant with clinical assessment, and 126/268 consented to randomization (64 immediate surgery, 62 tailored therapy).",
-          "locator": "PubMed abstract, Methods and Results"
+          "value": "Of 602 women who underwent urodynamics, 578 were eligible and enrolled; 268/578 (46%) had findings discordant with clinical assessment, and 126/268 consented to randomization (64 immediate surgery, 62 tailored therapy). Primary outcome data were complete for 115/126 (91%).",
+          "locator": "Full text, Figure 1, p 1002; Results, pp 1002-1003"
         },
         {
           "label": "Assigned treatment strategies",
-          "value": "Women with discordant findings were assigned either immediate midurethral sling surgery or individually tailored therapy based on urodynamics.",
-          "locator": "PubMed abstract, Methods and Conclusion"
+          "value": "Women with discordant findings were assigned either immediate midurethral sling surgery or individually tailored therapy based on urodynamics; tailored options included sling surgery, anticholinergics, pelvic floor exercises or bladder training, pessary, expectant management, intravesical botulinum toxin, or pretibial nerve stimulation.",
+          "locator": "Full text, Methods, p 1001"
+        },
+        {
+          "label": "Sling uptake and routes by one year",
+          "values": {
+            "exp": "62/64 (97%); 18 retropubic, 44 transobturator",
+            "ctl": "61/62 (98%); 15 retropubic, 46 transobturator"
+          },
+          "locator": "Full text, Table 3 and Results, p 1004",
+          "note": "Initial surgery occurred in 61/64 (95%) and 57/62 (92%), respectively; one immediate-surgery participant received drug treatment based on detrusor overactivity after the operation was postponed."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_aog_0b013e31828c68e3.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_aog_0b013e31828c68e3.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -183,7 +251,7 @@
   "relations": [],
   "page": "/docs/clinical-evidence/studies/vusis-ii",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

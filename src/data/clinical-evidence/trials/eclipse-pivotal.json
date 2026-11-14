@@ -30,13 +30,13 @@
         "role": "single"
       }
     ],
-    "population": "Women at six clinical sites with at least four fecal incontinence episodes on a two-week baseline diary underwent attempted device fitting.",
+    "population": "Women aged 19–75 years at six clinical sites with fecal incontinence for at least six months and at least four minor or major episodes on a two-week baseline diary underwent attempted device fitting.",
     "description": "Multicenter prospective open-label single-arm device study",
-    "locator": "PubMed abstract, Methods and Results"
+    "locator": "Full text, Methods, pp 541–542; Figure 2, p 543"
   },
   "verdict": "descriptive",
-  "verdictNote": "One-month response was measured among women who could be fitted; 49/110 did not enter treatment.",
-  "takeaway": "In the single-arm LIFE study, Eclipse could be fitted in 61/110 women; 48/61 treated women had at least 50% fewer fecal incontinence episodes at one month. There was no comparator arm.",
+  "verdictNote": "The primary endpoint met its prespecified threshold among the 61 women entering treatment after fitting.",
+  "takeaway": "In the single-arm LIFE study, Eclipse treatment followed successful fitting in 61/110 women. At one month, 48/61 (78.7%; 95% CI 66–88%) had at least 50% fewer fecal incontinence episodes, exceeding the prespecified 40% success threshold (P<0.001).",
   "reports": [
     {
       "id": "eclipse-pivotal-2015",
@@ -50,7 +50,7 @@
       "doi": "10.1097/AOG.0000000000000639",
       "pmid": "25730213",
       "followUp": "One month of treatment, with an optional two-month extension",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Methods, pp 541–542",
       "results": [
         {
           "endpoint": "Fecal incontinence episode response",
@@ -61,11 +61,16 @@
           },
           "effect": {
             "type": "none",
+            "ci": [
+              66,
+              88
+            ],
+            "ciLevel": "95%",
             "p": "<0.001"
           },
-          "met": null,
-          "note": "The abstract reports P<0.001 but does not state a prespecified success threshold or hypothesis.",
-          "locator": "PubMed abstract, Methods and Results"
+          "met": true,
+          "note": "Prespecified one-sided test of success above 40% at alpha 0.025; ITT excluded 49 women who did not enter treatment after fitting assessment.",
+          "locator": "Full text, Methods, p 542; Results, p 544"
         },
         {
           "endpoint": "Fecal incontinence episode response",
@@ -76,10 +81,16 @@
           },
           "effect": {
             "type": "none",
+            "ci": [
+              74,
+              94
+            ],
+            "ciLevel": "95%",
             "p": "<0.001"
           },
-          "note": "Five fitted participants lacked a valid one-month diary.",
-          "locator": "PubMed abstract, Methods and Results"
+          "note": "Three discontinued treatment and two had fewer than seven diary days; this was a supporting analysis.",
+          "locator": "Full text, Methods, p 542; Figure 2, p 543; Results, p 544",
+          "met": "not-tested"
         },
         {
           "endpoint": "Fecal incontinence episode response",
@@ -97,7 +108,8 @@
             "ciLevel": "95%"
           },
           "note": "Optional extension; 44 women had a three-month assessment.",
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Results, pp 544–545",
+          "met": "not-tested"
         },
         {
           "endpoint": "Patient Global Impression of Improvement",
@@ -110,43 +122,94 @@
             "type": "none"
           },
           "note": "Patient-reported improvement.",
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Results, p 544",
+          "met": "not-tested"
+        },
+        {
+          "endpoint": "Complete fecal continence",
+          "role": "secondary",
+          "measure": "No fecal incontinence episodes at one month in the per-protocol population",
+          "values": {
+            "eclipse": "23/56 (41.1%)"
+          },
+          "effect": {
+            "type": "none",
+            "ci": [
+              28,
+              55
+            ],
+            "ciLevel": "95%"
+          },
+          "locator": "Full text, Results, p 544",
+          "met": "not-tested"
+        },
+        {
+          "endpoint": "Fecal incontinence episodes",
+          "role": "secondary",
+          "measure": "Mean episodes per two weeks, baseline to one month in the per-protocol population",
+          "values": {
+            "eclipse": "11.6 ± 9.5 to 2.1 ± 2.9"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "locator": "Full text, Results, p 544",
+          "met": "not-tested"
         }
       ],
       "harms": [
         {
-          "label": "Serious adverse events",
+          "label": "Serious device-related adverse events",
           "values": {
             "eclipse": "0/110"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "No serious adverse events were reported across fitting and treatment."
+          "locator": "Full text, Results, p 545",
+          "note": "None occurred during fitting, one-month treatment, or optional extended wear."
         },
         {
           "label": "Device-related pelvic cramping or discomfort",
           "values": {
             "eclipse": "25/110 (22.7%)"
           },
-          "locator": "PubMed abstract, Results",
+          "locator": "Full text, Abstract, p 540; Table 3, p 545",
           "note": "16/25 (64%) occurred during fitting."
+        },
+        {
+          "label": "Device-related adverse events during fitting",
+          "values": {
+            "eclipse": "47/110 women (42.7%); 64 mild or moderate events, including urinary incontinence, urgency, or frequency in 11/110 (10.0%) and vaginal findings in 10/110 (9.1%)"
+          },
+          "locator": "Full text, Results and Table 3, p 545",
+          "note": "Vaginal findings combined erythema or petechiae, abrasions, irritation, and ecchymosis or bruising."
         }
       ],
       "delivery": [
         {
           "label": "Successful fit and treatment entry",
           "value": "61/110 women (55.5%) were successfully fitted and entered treatment.",
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Figure 2, p 543"
         },
         {
           "label": "Optional extension assessment",
-          "value": "44 women were assessed at three months after an optional two-month extension.",
-          "locator": "PubMed abstract, Methods and Results"
+          "value": "48 women entered the optional two-month extension; 44 had analyzable three-month diaries.",
+          "locator": "Full text, Figure 2, p 543"
+        },
+        {
+          "label": "Fitting attrition",
+          "value": "Of 110 women entering fitting, 49 did not enter treatment: 28 unsatisfactory fit, four unable to self-manage, one lost to follow-up, two logistical or timing constraints, and 14 withdrew.",
+          "locator": "Full text, Figure 2, p 543"
+        },
+        {
+          "label": "Insert comfort at one month",
+          "value": "54/56 per-protocol women (96.4%) reported that the insert was comfortable or could not be felt.",
+          "locator": "Full text, Results, p 544"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_aog_0000000000000639.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_aog_0000000000000639.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -161,12 +224,12 @@
       "doi": "10.1097/DCR.0000000000000517",
       "pmid": "26734971",
       "followUp": "One month of treatment in 56 evaluable women",
-      "followUpLocator": "PubMed abstract, Patients and Main Outcome Measures",
+      "followUpLocator": "Full text, Methods and Results, pp 128–129",
       "results": [
         {
           "endpoint": "Bowel movements with urgency",
           "role": "descriptive",
-          "measure": "Mean proportion of bowel movements associated with urgency, baseline to one month",
+          "measure": "Mean within-patient proportion of bowel movements associated with urgency, baseline to one month (per protocol, n=56)",
           "values": {
             "eclipse": "54% to 26%"
           },
@@ -174,13 +237,14 @@
             "type": "none",
             "p": "<0.0001"
           },
-          "note": "Within-cohort secondary analysis of 56 evaluable women; the abstract gives no bowel-movement denominator.",
-          "locator": "PubMed abstract, Results"
+          "note": "Within-cohort secondary analysis; percentages average each patient's fraction of bowel movements.",
+          "locator": "Full text, Table 1, p 129",
+          "met": "not-tested"
         },
         {
           "endpoint": "Liquid stool",
           "role": "descriptive",
-          "measure": "Proportion of bowel movements with Bristol stool form 6 or 7, baseline to one month",
+          "measure": "Mean within-patient proportion of bowel movements with Bristol stool form 6 or 7, baseline to one month (per protocol; n=56 baseline, n=55 at one month)",
           "values": {
             "eclipse": "36% to 21%"
           },
@@ -188,22 +252,64 @@
             "type": "none",
             "p": "0.0001"
           },
-          "note": "Within-cohort secondary analysis; the abstract gives no bowel-movement denominator.",
-          "locator": "PubMed abstract, Results"
+          "note": "One patient did not complete the one-month Bristol evaluation; percentages average each patient's fraction of bowel movements.",
+          "locator": "Full text, Table 1 and footnote, p 129",
+          "met": "not-tested"
+        },
+        {
+          "endpoint": "Incomplete bowel evacuation",
+          "role": "descriptive",
+          "measure": "Mean within-patient proportion of bowel movements with incomplete evacuation, baseline to one month (per protocol, n=56)",
+          "values": {
+            "eclipse": "39% to 26%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.0034"
+          },
+          "locator": "Full text, Table 1, p 129",
+          "met": "not-tested"
+        },
+        {
+          "endpoint": "Patients with frequent bowel dysfunction",
+          "role": "descriptive",
+          "measure": "More than 25% of bowel movements affected at baseline versus one month (per protocol)",
+          "values": {
+            "eclipse": "Liquid stool 34/56 (61%) to 17/55 (31%); urgency 41/56 (73%) to 22/56 (39%); incomplete evacuation 31/56 (55%) to 20/56 (36%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "liquid 0.0002; urgency <0.0001; incomplete evacuation 0.0076"
+          },
+          "locator": "Full text, Table 2, p 130",
+          "met": "not-tested"
+        },
+        {
+          "endpoint": "High daily bowel-movement frequency",
+          "role": "descriptive",
+          "measure": "More than two bowel movements per day at baseline, shifting to two or fewer per day at one month",
+          "values": {
+            "eclipse": "8/12 (66.7%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "locator": "Full text, Results, p 129",
+          "met": "not-tested"
         }
       ],
       "harms": [],
       "delivery": [
         {
           "label": "Device configuration",
-          "value": "Vaginal insert with a pressure-regulated pump.",
-          "locator": "PubMed abstract, Interventions"
+          "value": "Vaginal insert with a pressure-regulated pump; patients deflated the insert for defecation without removing it and were encouraged to remove it weekly for cleaning.",
+          "locator": "Full text, Methods, p 128"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_dcr_0000000000000517.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_dcr_0000000000000517.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -218,52 +324,78 @@
       "doi": "10.1097/SPV.0000000000000290",
       "pmid": "27564386",
       "followUp": "Fitting period among 110 women",
-      "followUpLocator": "PubMed abstract, Methods and Results",
+      "followUpLocator": "Full text, Methods and Results, pp 360–361",
       "results": [
         {
           "endpoint": "Successful fitting and prior prolapse surgery",
           "role": "descriptive",
           "measure": "Adjusted odds of successful fit without versus with prior prolapse surgery",
+          "values": {
+            "eclipse": "Prior prolapse surgery: 5/61 successfully fitted versus 16/49 unsuccessfully fitted"
+          },
           "effect": {
             "type": "OR",
             "value": 4.7,
             "ci": [
               1.53,
               14.53
-            ]
+            ],
+            "p": "0.007"
           },
           "note": "Prior prolapse surgery was associated with fitting failure; observational predictor analysis.",
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Table 1, p 361; Results, p 362",
+          "met": "not-tested"
         },
         {
           "endpoint": "Successful fitting and vaginal length",
           "role": "descriptive",
           "measure": "Adjusted odds of successful fit per additional centimeter of vaginal length",
+          "values": {
+            "eclipse": "Mean vaginal length 8.6 ± 1.2 cm successfully fitted versus 8.0 ± 1.1 cm unsuccessfully fitted"
+          },
           "effect": {
             "type": "OR",
             "value": 1.49,
             "ci": [
               1.02,
               2.17
-            ]
+            ],
+            "p": "0.041"
           },
           "note": "Shorter vaginal length was associated with fitting failure; observational predictor analysis.",
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Table 2, p 362; Results, p 362",
+          "met": "not-tested"
         }
       ],
       "harms": [],
-      "delivery": [],
+      "delivery": [
+        {
+          "label": "Insert sizing and fit assessment",
+          "value": "Thirteen base sizes (six round, seven elliptical) were available. Fit assessment checked comfort, pubic-bone position, retention on Valsalva, and rectal occlusion with the balloon inflated.",
+          "locator": "Full text, Methods and Figures 2–3, p 360"
+        },
+        {
+          "label": "Fitting visits",
+          "value": "Up to four visits were allowed; 68/110 (61.8%) required one visit.",
+          "locator": "Full text, Methods and Results, pp 360–361"
+        },
+        {
+          "label": "Timing of failed fitting",
+          "value": "Of 49 who did not complete fitting, 16 failed initial attempts, 29 later reported displacement or discomfort, and four withdrew.",
+          "locator": "Full text, Results, p 362"
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_spv_0000000000000290.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_spv_0000000000000290.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/eclipse-pivotal",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

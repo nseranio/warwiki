@@ -16,7 +16,7 @@
   "design": {
     "phase": "not applicable",
     "randomized": true,
-    "blinding": "not reported",
+    "blinding": "Participants blinded to repair method",
     "type": "superiority",
     "n": 64,
     "arms": [
@@ -33,13 +33,13 @@
         "role": "control"
       }
     ],
-    "population": "64 women with acute obstetric grade 3b or 3c anal sphincter injury or fourth-degree perineal tear.",
-    "description": "Randomized trial of two primary external sphincter repairs",
-    "locator": "PubMed abstract, Objective, Methods and Results"
+    "population": "64 women with acute obstetric grade 3b or 3c anal sphincter injury or fourth-degree perineal tear; grade 3a and prior third- or fourth-degree tears excluded.",
+    "description": "Single-center randomized trial; allocation minimized for parity, gestation, and delivery mode; two trained clinicians performed repairs",
+    "locator": "Full text, Methods and Results, pp 1262–1264; Table 1, p 1266"
   },
   "verdict": "positive",
-  "verdictNote": "The primary fecal incontinence endpoint favored overlap at 12 months; follow-up was incomplete.",
-  "takeaway": "Immediate overlapping external anal sphincter repair reduced reported fecal incontinence at 12 months compared with end-to-end repair after obstetric sphincter injury (0% versus 6/25 [24%]; P = .009).",
+  "verdictNote": "Primary fecal incontinence differed at 12 months among 52 of 64 questionnaire respondents.",
+  "takeaway": "Among 52 women assessed at 12 months after immediate obstetric sphincter repair, fecal incontinence occurred in 0/27 after overlap versus 6/25 (24%) after end-to-end repair (RR 0.07, 95% CI 0.00–1.21; P = .009).",
   "reports": [
     {
       "id": "oasi-repair-fernando-2006",
@@ -52,15 +52,15 @@
       "citation": "Fernando RJ, Sultan AH, Kettle C, et al. \"Repair techniques for obstetric anal sphincter injuries: a randomized controlled trial.\" *Obstet Gynecol.* 2006;107(6):1261-1268. doi:10.1097/01.AOG.0000218693.24144.bd",
       "doi": "10.1097/01.AOG.0000218693.24144.bd",
       "pmid": "16738150",
-      "followUp": "Serial questionnaires through 12 months after repair",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUp": "Questionnaires at 6 weeks and 3, 6, and 12 months after repair; 52/64 returned the 12-month questionnaire",
+      "followUpLocator": "Full text, Methods, pp 1263–1264",
       "results": [
         {
           "endpoint": "Fecal incontinence",
           "role": "primary",
           "measure": "Women reporting fecal incontinence at 12 months",
           "values": {
-            "exp": "0% (overlap denominator not stated for this endpoint in abstract)",
+            "exp": "0/27 (0%)",
             "ctl": "6/25 (24%)"
           },
           "effect": {
@@ -73,8 +73,8 @@
             "p": "0.009"
           },
           "met": true,
-          "note": "The abstract calls this difference significant; its reported RR interval includes 1 despite P = .009. Prespecified alpha is not stated.",
-          "locator": "PubMed abstract, Results and Conclusion"
+          "note": "Reported as an intention-to-treat analysis, but 12-month outcomes use 52/64 questionnaire respondents; prespecified two-sided alpha was .05. The published RR interval includes 1 despite P = .009.",
+          "locator": "Full text, Methods, pp 1264–1265; Table 2, p 1266"
         },
         {
           "endpoint": "Fecal urgency",
@@ -94,14 +94,14 @@
             "p": "0.02"
           },
           "note": "The 12-month urgency analysis included 52/64 randomized women.",
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Table 2, p 1266"
         },
         {
           "endpoint": "Deterioration of defecatory symptoms",
           "role": "secondary",
-          "measure": "Women reporting deterioration during 12 months",
+          "measure": "Women reporting deterioration from 6 weeks to 12 months",
           "values": {
-            "exp": "0% (overlap denominator not stated for this endpoint in abstract)",
+            "exp": "0/27 (0%)",
             "ctl": "4/25 (16%)"
           },
           "effect": {
@@ -109,39 +109,103 @@
             "p": "0.01"
           },
           "note": "",
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Table 4, p 1267"
+        },
+        {
+          "endpoint": "Flatus incontinence",
+          "role": "secondary",
+          "measure": "Women reporting flatus incontinence at 12 months",
+          "values": {
+            "exp": "4/27",
+            "ctl": "4/25 (16%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.93,
+            "ci": [
+              0.26,
+              3.31
+            ],
+            "p": "1.0"
+          },
+          "note": "Table 2 prints 14.9% for 4/27; arithmetic gives 14.8%.",
+          "locator": "Full text, Table 2, p 1266"
+        },
+        {
+          "endpoint": "Dyspareunia",
+          "role": "secondary",
+          "measure": "Women reporting dyspareunia at 12 months",
+          "values": {
+            "exp": "2/27 (7.4%)",
+            "ctl": "3/25 (12%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.62,
+            "ci": [
+              0.11,
+              3.39
+            ],
+            "p": "1.0"
+          },
+          "note": "",
+          "locator": "Full text, Table 2, p 1266"
         }
       ],
       "harms": [
         {
           "label": "Perineal pain at 12 months",
           "values": {
-            "exp": "0% (overlap denominator not stated for this endpoint in abstract)",
+            "exp": "0/27 (0%)",
             "ctl": "5/25 (20%)"
           },
-          "locator": "PubMed abstract, Results",
+          "locator": "Full text, Table 2, p 1266",
           "note": "P = .04; reported RR 0.08 (95% CI 0.00-1.45)."
+        },
+        {
+          "label": "Blood transfusion, wound dehiscence, fistula formation, or suture migration",
+          "values": {
+            "exp": "0/32 for each event",
+            "ctl": "0/32 for each event"
+          },
+          "locator": "Full text, Results, p 1265",
+          "note": "The paper did not report Clavien-Dindo grades, retention, infection, or reoperation rates."
         }
       ],
       "delivery": [
         {
           "label": "Repair timing and approach",
-          "value": "Immediate primary repair of the external anal sphincter by overlap or end-to-end approximation",
-          "locator": "PubMed abstract, Objective and Methods",
+          "value": "Within 3 hours of injury detection, two trained clinicians performed repairs under regional or general anesthesia. End-to-end repair used 2–3 mattress sutures of 3-0 PDS; overlap used two suture rows after mobilization, dividing remaining EAS fibers when needed. Torn IAS was repaired separately with interrupted 3-0 PDS.",
+          "locator": "Full text, Methods, pp 1262–1263",
           "note": ""
+        },
+        {
+          "label": "Median operating time and estimated blood loss",
+          "values": {
+            "exp": "38 min (range 15–70); 260 mL (range 100–600)",
+            "ctl": "28 min (range 15–55); 100 mL (range 100–450)"
+          },
+          "locator": "Full text, Results, p 1265",
+          "note": "Time P = .003 in Results (.03 in Discussion); blood loss P = .05."
+        },
+        {
+          "label": "Postoperative antibiotic and bowel regimen",
+          "value": "All women received intraoperative IV antibiotics, oral antibiotics for 7 days, and ispaghula husk plus lactulose for 14 days.",
+          "locator": "Full text, Methods, p 1263",
+          "note": "No postoperative dietary restrictions."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_01_aog_0000218693_24144_bd.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_01_aog_0000218693_24144_bd.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/oasi-repair-fernando",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

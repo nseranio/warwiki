@@ -156,25 +156,38 @@
       "doi": "10.1002/nau.22707",
       "pmid": "25546568",
       "followUp": "12 months after implant",
-      "followUpLocator": "PubMed abstract, AIMS and METHODS",
+      "followUpLocator": "Full text, Methods, p 247; Results, p 248",
       "results": [
         {
           "endpoint": "OAB therapeutic success",
           "role": "descriptive",
-          "measure": "12-month success among implanted subjects with diary data at baseline and 12 months; at least 50% improvement in leaks or voids per day, or fewer than 8 voids per day",
+          "measure": "12-month OAB therapeutic success among implanted completers with baseline and 12-month diary data (220 with complete diaries)",
           "values": {
             "exp": "85%"
           },
           "effect": {
             "type": "none"
           },
-          "note": "The abstract does not give the 12-month analysis denominator.",
-          "locator": "PubMed abstract, METHODS and RESULTS"
+          "note": "Completers sensitivity analysis without imputation.",
+          "locator": "Full text, Statistical Analyses and Results, p 248"
+        },
+        {
+          "endpoint": "OAB therapeutic success",
+          "role": "descriptive",
+          "measure": "12-month success in the modified-completers analysis of implanted subjects",
+          "values": {
+            "exp": "82%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "This was the primary 12-month efficacy analysis. UI success was 77% and UF success 68%. Early withdrawals for device-related death or adverse event, or lack of efficacy resulting in explant, were counted as failures; unrelated withdrawals were excluded.",
+          "locator": "Full text, Statistical Analyses and Results, p 248"
         },
         {
           "endpoint": "Urge incontinence leaks per day",
           "role": "descriptive",
-          "measure": "Mean reduction from baseline to 12 months among subjects with urge incontinence",
+          "measure": "Mean reduction from baseline to 12 months among implanted subjects with urge incontinence and paired diary data",
           "values": {
             "exp": "2.2 ± 2.7 leaks per day"
           },
@@ -182,12 +195,12 @@
             "type": "none",
             "p": "<0.0001"
           },
-          "locator": "PubMed abstract, RESULTS"
+          "locator": "Full text, Results, p 248"
         },
         {
           "endpoint": "Voids per day",
           "role": "descriptive",
-          "measure": "Mean reduction from baseline to 12 months among subjects with urgency-frequency",
+          "measure": "Mean reduction from baseline to 12 months among implanted subjects with urgency-frequency and paired diary data",
           "values": {
             "exp": "5.1 ± 4.1 voids per day"
           },
@@ -195,25 +208,25 @@
             "type": "none",
             "p": "<0.0001"
           },
-          "locator": "PubMed abstract, RESULTS"
+          "locator": "Full text, Results, p 248"
         },
         {
           "endpoint": "Urinary symptom interference",
           "role": "descriptive",
-          "measure": "Reported improved urinary symptom interference at 12 months",
+          "measure": "Improved or greatly improved urinary symptom interference at 12 months among implanted subjects with paired quality-of-life assessments",
           "values": {
             "exp": "80%"
           },
           "effect": {
             "type": "none"
           },
-          "note": "The abstract does not give a denominator.",
-          "locator": "PubMed abstract, RESULTS"
+          "note": "The paper does not report the denominator for this percentage.",
+          "locator": "Full text, Results, p 248; Fig. 3, p 249"
         },
         {
           "endpoint": "ICIQ-OABqol",
           "role": "descriptive",
-          "measure": "All measures improved from baseline through 12 months",
+          "measure": "Change from baseline to 12 months in all ICIQ-OABqol domains among implanted subjects with paired assessments",
           "values": {
             "exp": "all measures improved"
           },
@@ -221,7 +234,7 @@
             "type": "none",
             "p": "<0.0001"
           },
-          "locator": "PubMed abstract, RESULTS"
+          "locator": "Full text, Results, p 248; Fig. 2, p 249"
         }
       ],
       "harms": [
@@ -230,7 +243,7 @@
           "values": {
             "exp": "56/340 (16%)"
           },
-          "locator": "PubMed abstract, RESULTS",
+          "locator": "Full text, Results, p 249",
           "note": "Denominator is subjects who underwent test stimulation."
         },
         {
@@ -238,15 +251,42 @@
           "values": {
             "exp": "82/272 (30%)"
           },
-          "locator": "PubMed abstract, RESULTS",
+          "locator": "Full text, Results, p 249",
           "note": "Denominator is permanently implanted subjects."
+        },
+        {
+          "label": "Serious device-related adverse events through 12 months",
+          "values": {
+            "exp": "3 events during test stimulation among 340 tested; 1 event after implant among 272 implanted"
+          },
+          "locator": "Full text, Results, p 249",
+          "note": "Test-phase events were implant site infection, skin infection and respiratory arrest during surgery; post-implant event was implant site erosion. Clavien-Dindo grades were not reported."
+        },
+        {
+          "label": "Surgical intervention and permanent explant after implant through 12 months",
+          "values": {
+            "exp": "35/272 (13%) surgical intervention; 13/272 (5%) permanent explant"
+          },
+          "locator": "Full text, Results, p 249",
+          "note": "Explant reasons: nine adverse events, two patient requests and two both."
         }
       ],
-      "delivery": [],
+      "delivery": [
+        {
+          "label": "Staged lead placement and test stimulation",
+          "value": "InterStim neurostimulator models 3023/3058 and quadripolar tined lead models 3093/3889; fluoroscopic lead placement at a sacral nerve root, typically S3, with confirmed motor/sensory responses; 14-day test. A second test was permitted after an unsuccessful first test.",
+          "locator": "Full text, Methods, p 247"
+        },
+        {
+          "label": "Implantation and 12-month follow-up",
+          "value": "340 underwent test stimulation; 272 received a full-system implant after a successful test; 255 reached the 12-month visit and 220 had complete baseline and 12-month diaries. Seven discontinued before 12 months because of device-related adverse events or lack of efficacy.",
+          "locator": "Full text, Results, p 248"
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1002_nau_22707.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1002_nau_22707.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {

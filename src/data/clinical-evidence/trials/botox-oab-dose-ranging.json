@@ -194,52 +194,120 @@
       "doi": "10.1002/nau.21021",
       "pmid": "21351127",
       "followUp": "Urodynamic assessments at weeks 12 and 36",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Materials and Methods, p 557",
       "results": [
         {
-          "endpoint": "Maximum cystometric capacity and volume at first involuntary detrusor contraction",
+          "endpoint": "Maximum cystometric capacity",
           "role": "secondary",
-          "measure": "Change from baseline at week 12",
+          "measure": "Mean change from baseline, mL, at weeks 12 and 36; intent-to-treat population",
           "values": {
-            "d100": "Superior to placebo",
-            "d150": "Superior to placebo",
-            "d200": "Superior to placebo",
-            "d300": "Superior to placebo"
+            "ctl": "+49.5 at week 12; +12.5 at week 36 (44 randomized)",
+            "d50": "+50.0 at week 12; +21.0 at week 36 (57 randomized)",
+            "d100": "+71.0 at week 12; +38.4 at week 36 (54 randomized)",
+            "d150": "+101.7 at week 12; +49.8 at week 36 (49 randomized)",
+            "d200": "+91.5 at week 12; +48.2 at week 36 (53 randomized)",
+            "d300": "+130.8 at week 12; +59.3 at week 36 (56 randomized)"
           },
           "effect": {
             "type": "none"
           },
-          "note": "Improvements generally decreased by week 36; no difference in clinical outcomes by baseline detrusor overactivity status was reported.",
-          "locator": "PubMed abstract, Results and Conclusions"
+          "note": "Versus placebo: 150 U, P = 0.05, and 300 U, P <0.01, at week 12; 300 U, P <0.05, at week 36. Table II gives randomized arm sizes, not observed-case denominators for each change; confidence intervals were not reported.",
+          "locator": "Full text, Table II and Figure 2A, p 559"
+        },
+        {
+          "endpoint": "Volume at first involuntary detrusor contraction",
+          "role": "secondary",
+          "measure": "Mean change from baseline, mL, at weeks 12 and 36 among patients with a contraction at all three assessments",
+          "values": {
+            "ctl": "+42.8 at week 12; −35.1 at week 36",
+            "d50": "+44.7 at week 12; +36.6 at week 36",
+            "d100": "+82.5 at week 12; +58.2 at week 36",
+            "d150": "+67.1 at week 12; +62.5 at week 36",
+            "d200": "+72.6 at week 12; +49.6 at week 36",
+            "d300": "+100.8 at week 12; +81.8 at week 36"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "No active dose differed significantly from placebo at week 12; at week 36, 150 and 200 U differed at P <0.05 and 300 U at P <0.01. The subset denominator and confidence intervals were not reported.",
+          "locator": "Full text, Table II and Figure 2B, p 559"
         },
         {
           "endpoint": "No urgency urinary incontinence on diary",
           "role": "secondary",
           "measure": "Incontinence-free at week 12",
           "values": {
-            "d50": "29.8%",
-            "d300": "57.1%",
-            "ctl": "15.9%"
+            "ctl": "15.9% (7/44 randomized)",
+            "d50": "29.8% (17/57 randomized)",
+            "d100": "37.0% (20/54 randomized)",
+            "d150": "40.8% (20/49 randomized)",
+            "d200": "50.9% (27/53 randomized)",
+            "d300": "57.1% (32/56 randomized)"
           },
           "effect": {
             "type": "none"
           },
-          "note": "Active-dose range endpoints only are stated in the abstract; arm denominators come from ClinicalTrials.gov NCT00168454 Participant Flow.",
-          "locator": "PubMed abstract, Results; ClinicalTrials.gov NCT00168454, Participant Flow, Started"
+          "note": "The report prints percentages; counts are inferred from rounded percentages and randomized-arm denominators in Table I, not observed diary denominators.",
+          "locator": "Full text, Signs and Symptoms of OAB, p 558; Table I, p 558"
+        },
+        {
+          "endpoint": "Resolution of baseline detrusor overactivity",
+          "role": "exploratory",
+          "measure": "No detrusor overactivity at week 12 among baseline-positive patients with available data; post hoc",
+          "values": {
+            "ctl": "7/31",
+            "d50": "15/43 (34.9%)",
+            "d100": "11/36 (30.6%)",
+            "d150": "10/31 (32.3%)",
+            "d200": "16/36 (44.4%)",
+            "d300": "11/35 (31.4%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Baseline detrusor overactivity was present in 76.0% of the intent-to-treat population. Overall, 70/212 (33.0%) with available data no longer had detrusor overactivity at week 12; no between-group test or confidence interval was reported.",
+          "locator": "Full text, Table I, p 558; Detrusor Overactivity, p 559"
         }
       ],
       "harms": [
         {
-          "label": "Postvoid residual above 200 mL",
-          "locator": "PubMed abstract, Results",
-          "note": "More common with doses above 150 U; arm rates not provided."
+          "label": "Urinary retention adverse event",
+          "values": {
+            "ctl": "1/43 (2.3%)",
+            "d50": "5/56 (8.9%)",
+            "d100": "10/55 (18.2%)",
+            "d150": "14/50 (28.0%)",
+            "d200": "12/52 (23.1%)",
+            "d300": "14/55 (25.5%)"
+          },
+          "locator": "Full text, Adverse Events, p 560; Dmochowski 2010 full text, Table 1, p 2420",
+          "note": "The 2011 report prints percentages; safety denominators come from Dmochowski 2010. A protocol amendment defined PVR ≥200 mL as urinary retention regardless of symptoms; AE counts differ from measured PVR ≥200 mL counts. The 2011 report also notes that 9/37 intermittently catheterized patients had PVR <200 mL."
+        },
+        {
+          "label": "Mean postvoid residual change at week 2",
+          "values": {
+            "ctl": "+1.0 mL",
+            "d50": "+27.6 mL",
+            "d100": "+49.3 mL",
+            "d150": "+74.7 mL",
+            "d200": "+107.6 mL",
+            "d300": "+62.5 mL"
+          },
+          "locator": "Full text, Post-void residual urine volume, p 560",
+          "note": "Mean change from baseline peaked at week 2 and declined thereafter; denominators for observed measurements were not reported."
         }
       ],
-      "delivery": [],
+      "delivery": [
+        {
+          "label": "Urodynamic assessment protocol",
+          "value": "Cystometry at baseline and weeks 12 and 36 followed standardized ICS methods across 40 centers; all tracings were read by one blinded independent central reviewer.",
+          "locator": "Full text, Materials and Methods and Assessments, p 557"
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1002_nau_21021.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1002_nau_21021.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     },
     {

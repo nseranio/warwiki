@@ -223,8 +223,8 @@
       "citation": "Pencina KM, Travison TG, Cunningham GR, et al. \"Effect of Testosterone Replacement Therapy on Sexual Function and Hypogonadal Symptoms in Men with Hypogonadism.\" *J Clin Endocrinol Metab.* 2024;109(2):569-580. doi:10.1210/clinem/dgad484",
       "doi": "10.1210/clinem/dgad484",
       "pmid": "37589949",
-      "followUp": "Effect maintained at 24 months",
-      "followUpLocator": "PubMed abstract, Results",
+      "followUp": "Sexual outcomes assessed through 24 months",
+      "followUpLocator": "Full text, Study Outcomes, p 570; Figure 1, p 573",
       "results": [
         {
           "endpoint": "Sexual activity",
@@ -240,12 +240,12 @@
             "p": "0.011 omnibus"
           },
           "met": true,
-          "note": "Nested Sexual Function Study: 1,161 men with low libido (587 testosterone, 574 placebo).",
-          "locator": "PubMed abstract, Methods and Results"
+          "note": "PDQ-4 intent-to-treat mixed model using available questionnaires (260 testosterone and 259 placebo at month 6); omnibus P=0.011 across visits. Nested study randomized 587 and 574 men with low libido.",
+          "locator": "Full text, Statistical Analyses, p 572; Results and Figure 1, p 573"
         },
         {
           "endpoint": "Sexual activity",
-          "role": "descriptive",
+          "role": "primary",
           "measure": "Between-group mean difference in change in sexual activity, acts per day at 12 months",
           "effect": {
             "type": "difference",
@@ -253,25 +253,110 @@
             "ci": [
               0.11,
               0.83
-            ]
+            ],
+            "p": "0.011 omnibus"
           },
-          "note": "Treatment effect was maintained at 24 months; arm-specific means unavailable in abstract.",
-          "locator": "PubMed abstract, Results"
+          "met": true,
+          "note": "Primary PDQ-4 outcome; 170 testosterone and 171 placebo participants supplied month-12 questionnaires. Omnibus test across visits, not a separate month-12 test.",
+          "locator": "Full text, Results and Figure 1, p 573"
         },
         {
-          "endpoint": "Sexual desire, symptoms, and erectile function",
+          "endpoint": "Sexual activity",
+          "role": "primary",
+          "measure": "Between-group mean difference in change in sexual activity, acts per day at 24 months",
+          "effect": {
+            "type": "difference",
+            "value": 0.48,
+            "ci": [
+              -0.01,
+              0.96
+            ]
+          },
+          "met": "not-tested",
+          "note": "106 testosterone and 95 placebo participants supplied month-24 questionnaires; 12- versus 24-month treatment effects did not differ (F-test P=0.978). The 24-month CI includes zero; no separate significance test was reported.",
+          "locator": "Full text, Results and Figure 1, p 573"
+        },
+        {
+          "endpoint": "Hypogonadal symptoms",
           "role": "secondary",
-          "measure": "Reported secondary sexual-function outcomes",
-          "note": "Testosterone improved desire and hypogonadal symptoms, but not erectile function; numerical effects unavailable in abstract.",
-          "locator": "PubMed abstract, Results"
+          "measure": "Between-group difference in HIS-Q composite score change at 12 months (lower is better)",
+          "effect": {
+            "type": "difference",
+            "value": -2.5,
+            "ci": [
+              -3.9,
+              -1.1
+            ],
+            "p": "0.001 omnibus"
+          },
+          "met": true,
+          "note": "Intent-to-treat mixed model with available questionnaires; secondary comparisons were unadjusted for multiplicity.",
+          "locator": "Full text, Statistical Analyses, p 572; Results, Secondary Endpoints, p 573"
+        },
+        {
+          "endpoint": "Sexual desire",
+          "role": "secondary",
+          "measure": "Between-group difference in HIS-Q libido subdomain score change at 12 months (lower is better)",
+          "effect": {
+            "type": "difference",
+            "value": -3.3,
+            "ci": [
+              -5.5,
+              -1.1
+            ],
+            "p": "0.001 omnibus"
+          },
+          "met": true,
+          "note": "Secondary comparison unadjusted for multiplicity.",
+          "locator": "Full text, Results, Secondary Endpoints, p 574"
+        },
+        {
+          "endpoint": "Sexual symptoms",
+          "role": "secondary",
+          "measure": "Between-group difference in HIS-Q sexual-function domain score change at 12 months (lower is better)",
+          "effect": {
+            "type": "difference",
+            "value": -4.0,
+            "ci": [
+              -6.8,
+              -1.3
+            ],
+            "p": "0.019 omnibus"
+          },
+          "met": true,
+          "note": "Secondary comparison unadjusted for multiplicity.",
+          "locator": "Full text, Results, Secondary Endpoints, pp 573–574"
+        },
+        {
+          "endpoint": "Erectile function",
+          "role": "secondary",
+          "measure": "Between-group difference in IIEF-5 score change at 12 months (higher is better)",
+          "effect": {
+            "type": "difference",
+            "value": 0.6,
+            "ci": [
+              -0.4,
+              1.6
+            ],
+            "p": "0.443 omnibus"
+          },
+          "met": false,
+          "note": "181 testosterone and 161 placebo participants supplied month-12 IIEF-5 questionnaires; secondary comparison unadjusted for multiplicity.",
+          "locator": "Full text, Results, Secondary Endpoints, p 574; Figure 4, p 575"
         }
       ],
       "harms": [],
-      "delivery": [],
+      "delivery": [
+        {
+          "label": "Sexual Function Study eligibility and questionnaire retention",
+          "value": "Required DISF desire score below 20 and at least 4 baseline PDQ-4 diary days; month-24 PDQ-4 data were available for 106/587 testosterone and 95/574 placebo participants.",
+          "locator": "Full text, Materials and Methods, pp 570–571; Figure 1, p 573"
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1210_clinem_dgad484.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1210_clinem_dgad484.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -397,7 +482,7 @@
       "doi": "10.1056/NEJMoa2308836",
       "pmid": "38231621",
       "followUp": "Median 3.19 years",
-      "followUpLocator": "PubMed abstract, Results",
+      "followUpLocator": "Full text, Results, Interventions and Adherence, p 206",
       "results": [
         {
           "endpoint": "Clinical fracture",
@@ -416,16 +501,92 @@
             ]
           },
           "met": false,
-          "note": "Fracture-reduction hypothesis was not met; fractures were more frequent with testosterone.",
-          "locator": "PubMed abstract, Results"
+          "note": "Main fracture endpoint, intention-to-treat full-analysis population of 5,204 unique randomized men; fracture-reduction hypothesis not met. CI unadjusted for multiplicity; paper reports no P value.",
+          "locator": "Full text, Fracture End Points and Statistical Analysis, p 205; Results and Figures 1–2, p 207"
+        },
+        {
+          "endpoint": "Non–high-impact clinical fracture",
+          "role": "secondary",
+          "measure": "First adjudicated non–high-impact clinical fracture",
+          "values": {
+            "exp": "75/2,601 (2.88%)",
+            "ctl": "57/2,603 (2.19%)"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 1.32,
+            "ci": [
+              0.94,
+              1.86
+            ]
+          },
+          "met": "not-tested",
+          "note": "Prespecified other fracture endpoint; intention-to-treat full-analysis population, with unadjusted CI and no reported P value.",
+          "locator": "Full text, Fracture End Points, p 205; Figure 1, p 207"
+        },
+        {
+          "endpoint": "Any confirmed clinical fracture",
+          "role": "secondary",
+          "measure": "First adjudicated clinical fracture including sternum, fingers, toes, facial bones, and skull",
+          "values": {
+            "exp": "109/2,601 (4.19%)",
+            "ctl": "72/2,603 (2.77%)"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 1.52,
+            "ci": [
+              1.13,
+              2.05
+            ]
+          },
+          "met": "not-tested",
+          "note": "Prespecified other fracture endpoint; unadjusted CI and no reported P value.",
+          "locator": "Full text, Fracture End Points, p 205; Figure 1, p 207; Table 2, p 209"
+        },
+        {
+          "endpoint": "Major osteoporotic fracture",
+          "role": "secondary",
+          "measure": "First hip, humerus, wrist, or clinical spine fracture",
+          "values": {
+            "exp": "36/2,601 (1.38%)",
+            "ctl": "30/2,603 (1.15%)"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 1.2,
+            "ci": [
+              0.74,
+              1.95
+            ]
+          },
+          "met": "not-tested",
+          "note": "Prespecified other fracture endpoint; hip fracture separately occurred in 7/2,601 (0.27%) versus 6/2,603 (0.23%), HR 1.16 (95% CI 0.39–3.46). Unadjusted CIs, no reported P values.",
+          "locator": "Full text, Fracture End Points, p 205; Figure 1, p 207"
         }
       ],
-      "harms": [],
-      "delivery": [],
+      "harms": [
+        {
+          "label": "Serious musculoskeletal adverse events",
+          "values": {
+            "exp": "66/2,596 (2.5%)",
+            "ctl": "65/2,602 (2.5%)"
+          },
+          "locator": "Full text, Results, Trauma, Fracture Location, and Adverse Events, p 208; Results, Participants, p 206",
+          "note": "Safety population; includes musculoskeletal serious adverse events, not all falls."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Gel application and measured adherence",
+          "value": "Daily 1.62% gel started with one 20.25-mg pump depression to each shoulder; adherence by returned pump weight was approximately 90% in both groups.",
+          "locator": "Full text, Methods, Participants, p 205; Results, Interventions and Adherence, p 206"
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1056_nejmoa2308836.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1056_nejmoa2308836.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],

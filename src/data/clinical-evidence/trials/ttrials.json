@@ -250,29 +250,93 @@
       "doi": "10.1210/jc.2016-1645",
       "pmid": "27355400",
       "followUp": "12 months of treatment; sexual-function questionnaires every 3 months",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Subjects and Methods: Study design, p 3097",
       "results": [
         {
           "endpoint": "Measures of sexual activity improved versus placebo",
-          "role": "secondary",
-          "measure": "Count of sexual-activity measures with significant improvement",
+          "role": "exploratory",
+          "measure": "PDQ-Q4 component measures with significant treatment effects across months 3–12 in the 470-man Sexual Function Trial (234 testosterone, 236 placebo)",
           "values": {
-            "exp": "10 of 12 measures favored testosterone",
+            "exp": "10 of 12 measures favored testosterone (P values <0.001 to 0.026)",
             "ctl": "placebo comparator"
           },
           "effect": {
             "type": "none"
           },
-          "note": "Secondary analysis of the same Sexual Function Trial cohort; abstract reports no effect estimates for individual measures.",
-          "locator": "PubMed abstract, Results"
+          "note": "Intention-to-treat analysis by assigned arm. The two nonsignificant components were flirting by others and daytime spontaneous erections; the paper does not tabulate component-level arm values or estimates.",
+          "locator": "Full text, Results: Effect of the intervention on measures of sexual activity, pp 3099–3100; Figure 2A"
+        },
+        {
+          "endpoint": "Sexual activity association with free testosterone change",
+          "role": "exploratory",
+          "measure": "Adjusted PDQ-Q4 change per 20 pg/mL free testosterone increment within the testosterone arm",
+          "effect": {
+            "type": "difference",
+            "value": 0.15,
+            "ci": [
+              0.03,
+              0.27
+            ],
+            "p": "0.015"
+          },
+          "note": "Within-arm hormone association, not a randomized treatment effect; total testosterone and estradiol increments were also associated with PDQ-Q4 change.",
+          "locator": "Full text, Table 2, p 3102"
+        },
+        {
+          "endpoint": "Sexual desire association with free testosterone change",
+          "role": "exploratory",
+          "measure": "Adjusted DISF-SDD change per 20 pg/mL free testosterone increment within the testosterone arm",
+          "effect": {
+            "type": "difference",
+            "value": 0.77,
+            "ci": [
+              0.26,
+              1.27
+            ],
+            "p": "0.003"
+          },
+          "note": "Total testosterone and estradiol increments were also associated with desire; none of the three hormone increments was associated with IIEF-EFD change (P=0.98, 0.66, and 0.27, respectively).",
+          "locator": "Full text, Table 2, p 3102"
+        },
+        {
+          "endpoint": "Orgasmic function association with estradiol change",
+          "role": "exploratory",
+          "measure": "Adjusted IIEF-OFD change per 5 pg/mL estradiol increment within the testosterone arm",
+          "effect": {
+            "type": "difference",
+            "value": 0.09,
+            "ci": [
+              0.04,
+              0.14
+            ],
+            "p": "<0.001"
+          },
+          "note": "Total and free testosterone increments did not show significant associations with IIEF-OFD change.",
+          "locator": "Full text, Table 2, p 3102"
+        },
+        {
+          "endpoint": "Predictors and hormone threshold for sexual-function response",
+          "role": "exploratory",
+          "measure": "Interactions with 27 baseline characteristics after false-discovery-rate adjustment and within-arm threshold analyses",
+          "effect": {
+            "type": "none"
+          },
+          "note": "No baseline characteristic remained a significant response predictor after multiplicity adjustment; no sex-steroid response threshold was detected.",
+          "locator": "Full text, Results: Participant characteristics affecting response and Relation of changes in hormone levels, pp 3100–3101"
         }
       ],
       "harms": [],
-      "delivery": [],
+      "delivery": [
+        {
+          "label": "Sexual-function analysis gel dose target and adherence assessment",
+          "value": "AndroGel 1% started at 5 g daily; testosterone target changed from 400–800 to 500–800 ng/dL; used and unused pump bottles were weighed to assess adherence.",
+          "locator": "Full text, Subjects and Methods: Intervention, p 3097"
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1210_jc_2016_1645.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1210_jc_2016_1645.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     }
   ],

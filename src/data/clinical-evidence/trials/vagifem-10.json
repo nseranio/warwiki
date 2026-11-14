@@ -26,17 +26,19 @@
       {
         "key": "exp",
         "label": "10-µg vaginal estradiol tablet",
+        "n": 205,
         "role": "experimental"
       },
       {
         "key": "ctl",
         "label": "placebo vaginal tablet",
+        "n": 104,
         "role": "control"
       }
     ],
-    "population": "Postmenopausal women with vaginal atrophy.",
+    "population": "Postmenopausal women aged 45 years or older with an intact uterus, at least three urogenital symptoms (one moderate to severe), vaginal pH above 5, and endometrial thickness below 4 mm.",
     "description": "Multicenter, double-blind randomized superiority trial",
-    "locator": "Simon 2008, PubMed abstract, Methods"
+    "locator": "Full text, Materials and Methods, pp 1054–1055"
   },
   "verdict": "positive",
   "verdictNote": "All three week-12 primary endpoint domains favored estradiol.",
@@ -54,12 +56,12 @@
       "doi": "10.1097/AOG.0b013e31818aa7c3",
       "pmid": "18978105",
       "followUp": "Week-12 primary efficacy assessment; treatment continued through week 52",
-      "followUpLocator": "PubMed abstract, Methods and Results",
+      "followUpLocator": "Full text, Materials and Methods, pp 1054–1055",
       "results": [
         {
           "endpoint": "Vaginal Maturation Index",
           "role": "primary",
-          "measure": "Week-12 change from baseline in vaginal epithelial cell proportions",
+          "measure": "Week-12 change from baseline in vaginal epithelial cell proportions, intention-to-treat with last observation carried forward",
           "values": {
             "exp": "Parabasal −37%; superficial +13%; intermediate +24%",
             "ctl": "Parabasal −9%; superficial +4%; intermediate +5%"
@@ -69,29 +71,34 @@
             "p": "<0.001 for each component"
           },
           "met": true,
-          "note": "The abstract rounds each component to whole percentages; the cytology treatment effect differed from placebo after 2 weeks.",
-          "locator": "PubMed abstract, Results"
+          "note": "Adjusted differences (estradiol minus placebo): parabasal −29 percentage points (95% CI −34.6 to −22.8); superficial +10 (6.2–13.8); intermediate +19 (12.3–25.0). Cytology differed after 2 weeks.",
+          "locator": "Full text, Results, p 1056"
         },
         {
           "endpoint": "Vaginal Maturation Value",
           "role": "primary",
-          "measure": "Week-12 change from baseline in maturation value",
+          "measure": "Week-12 change from baseline in maturation value, intention-to-treat with last observation carried forward",
           "values": {
             "exp": "+25.0",
             "ctl": "+6.5"
           },
           "effect": {
-            "type": "none",
+            "type": "difference",
+            "value": 19.3,
+            "ci": [
+              15.5,
+              23.2
+            ],
             "p": "<0.001"
           },
           "met": true,
           "note": "Part of the vaginal cytology primary endpoint domain.",
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Results, pp 1057–1058"
         },
         {
           "endpoint": "Vaginal pH grade",
           "role": "primary",
-          "measure": "Week-12 change from baseline in vaginal pH grade",
+          "measure": "Week-12 change from baseline in vaginal pH grade, intention-to-treat with last observation carried forward",
           "values": {
             "exp": "−1.3",
             "ctl": "−0.4"
@@ -102,23 +109,28 @@
           },
           "met": true,
           "note": "The abstract reports a pH grade, not a measured pH-unit change; treatment effect differed from placebo after 2 weeks.",
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Abstract, p 1053; Results, Table 2, p 1058"
         },
         {
           "endpoint": "Most bothersome urogenital symptom",
           "role": "primary",
-          "measure": "Week-12 change from baseline in most bothersome symptom score",
+          "measure": "Week-12 change from baseline in most bothersome symptom score, intention-to-treat with last observation carried forward",
           "values": {
             "exp": "−1.23",
             "ctl": "−0.87"
           },
           "effect": {
-            "type": "none",
+            "type": "difference",
+            "value": -0.33,
+            "ci": [
+              -0.55,
+              -0.12
+            ],
             "p": "0.003"
           },
           "met": true,
           "note": "Treatment effect became apparent at week 4 and statistically significant at week 8; all efficacy treatment effects were significant at week 52.",
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Results, p 1058"
         },
         {
           "endpoint": "Vaginal health grade",
@@ -132,22 +144,73 @@
             "type": "none",
             "p": "<0.001"
           },
+          "met": "not-tested",
           "note": "Secondary efficacy assessment.",
-          "locator": "PubMed abstract, Methods and Results"
+          "locator": "Full text, Abstract, p 1053; Results, pp 1057–1058"
+        },
+        {
+          "endpoint": "Vaginal pH below 5.5",
+          "role": "descriptive",
+          "measure": "Week-12 category, intention-to-treat with last observation carried forward",
+          "values": {
+            "exp": "145/202 (71.8%)",
+            "ctl": "37/102 (36.3%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "note": "pH below 5.5 corresponded to no or mild atrophy; percentages use participants with pH data.",
+          "locator": "Full text, Table 2, p 1058"
         }
       ],
-      "harms": [],
+      "harms": [
+        {
+          "label": "Any adverse event",
+          "values": {
+            "exp": "158/205 (77.1%)",
+            "ctl": "77/103 exposed (74.8%)"
+          },
+          "locator": "Full text, Results, p 1058; 2010 Full text, Materials and Methods, p 877 (exposed placebo denominator)",
+          "note": "777 events overall; most were mild or moderate."
+        },
+        {
+          "label": "Serious adverse event",
+          "values": {
+            "exp": "5/205 (2.4%)",
+            "ctl": "2/103 exposed (1.9%)"
+          },
+          "locator": "Full text, Results, p 1058; 2010 Full text, Materials and Methods, p 877 (exposed placebo denominator)",
+          "note": "The estradiol group included one grade-2 endometrial adenocarcinoma."
+        },
+        {
+          "label": "Withdrawal because of adverse event",
+          "values": {
+            "exp": "11/205 (5.4%)",
+            "ctl": "5/104 randomized (4.8%)"
+          },
+          "locator": "Full text, Figure 1 and Results, p 1056"
+        }
+      ],
       "delivery": [
         {
-          "label": "Treatment duration",
-          "value": "Vaginal tablets assigned for 52 weeks; primary efficacy assessed at week 12.",
-          "locator": "PubMed abstract, Methods"
+          "label": "Treatment schedule",
+          "value": "One assigned 10-µg estradiol or placebo vaginal tablet daily for 14 days, then twice weekly through 52 weeks; primary efficacy assessed at week 12.",
+          "locator": "Full text, Materials and Methods, p 1055"
+        },
+        {
+          "label": "52-week completion",
+          "values": {
+            "exp": "164/205 (80.0%)",
+            "ctl": "70/104 (67.3%)"
+          },
+          "locator": "Full text, Figure 1 and Results, p 1056"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_aog_0b013e31818aa7c3.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_aog_0b013e31818aa7c3.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     },
     {
@@ -162,50 +225,69 @@
       "doi": "10.1097/AOG.0b013e3181f386bb",
       "pmid": "20859151",
       "followUp": "52 weeks across the randomized estradiol cohort and a separate open-label safety cohort",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Materials and Methods, pp 877–878",
       "results": [
         {
           "endpoint": "Endometrial hyperplasia or carcinoma",
-          "role": "descriptive",
-          "measure": "Pooled 52-week incidence among evaluable endometrial biopsy samples",
+          "role": "primary",
+          "measure": "Pooled 52-week hyperplasia or carcinoma incidence among evaluable endometrial biopsies, including events during treatment regardless of duration",
           "values": {
-            "exp": "2/386 (0.52%)"
+            "exp": "2/386 (0.52%; two-sided 95% CI 0.06–1.86%; one-sided 95% upper bound 1.62%)",
+            "ctl": "0/50 evaluable placebo biopsies from VAG-2195"
           },
           "effect": {
             "type": "none"
           },
-          "note": "Pooled active-treatment data from 205 randomized estradiol recipients and 336 women in a separate open-label trial; no pooled placebo comparison.",
-          "locator": "PubMed abstract, Methods and Results"
+          "met": true,
+          "note": "Primary safety endpoint pooled 205 randomized estradiol recipients and 336 open-label recipients; no pooled randomized placebo comparison. Reported incidence and CI bounds met the paper's stated FDA and EMA thresholds.",
+          "locator": "Full text, Materials and Methods, p 878; Table 4 and Results, p 881"
+        },
+        {
+          "endpoint": "Endometrial thickness",
+          "role": "secondary",
+          "measure": "Mean double-layer thickness at week 52 among completers",
+          "values": {
+            "exp": "2.13 mm (n=456), baseline 2.14 mm (n=539)",
+            "ctl": "2.21 mm (n=68), baseline 2.20 mm (n=103)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.921 for change from baseline"
+          },
+          "met": "not-tested",
+          "note": "ANCOVA compared change from baseline; week-52 LOCF comparison P=0.654.",
+          "locator": "Full text, Table 5 and Results, p 881"
         }
       ],
       "harms": [
         {
           "label": "Endometrial hyperplasia or carcinoma in pooled active-treatment cohorts",
           "values": {
-            "exp": "2/386 evaluable biopsies (0.52%)"
+            "exp": "2/386 evaluable biopsies (0.52%)",
+            "ctl": "0/50 evaluable placebo biopsies from VAG-2195"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "One complex hyperplasia without atypia followed 9 days of exposure. One grade-2 endometrioid adenocarcinoma had no evaluable screening biopsy, so preexistence was uncertain."
+          "locator": "Full text, Table 4 and Results, pp 880–881",
+          "note": "One complex hyperplasia without atypia followed 9 days of exposure. One grade-2, stage-1B endometrioid adenocarcinoma followed 324 days of exposure and had no evaluable screening biopsy, so preexistence was uncertain."
         }
       ],
       "delivery": [
         {
           "label": "Biopsy follow-up in pooled active-treatment cohorts",
-          "value": "541 estradiol recipients; 456 completed the trials; 443 had a biopsy at week 52; 386 biopsy samples were evaluable for hyperplasia/carcinoma.",
-          "locator": "PubMed abstract, Methods and Results"
+          "value": "541 estradiol recipients (205 randomized VAG-2195, 336 open-label VAG-1748); 456/541 (84.3%) completed the trials; 443 had a biopsy at week 52; 386 biopsy samples were included in the hyperplasia/carcinoma incidence analysis. Among 443 week-52 biopsies, 51 had no tissue and five had insufficient tissue with endometrial thickness at least 4 mm.",
+          "locator": "Full text, Tables 2–4 and Results, pp 879–881"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_aog_0b013e3181f386bb.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_aog_0b013e3181f386bb.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/vagifem-10",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

@@ -51,7 +51,7 @@
     "population": "196 men with refractory chronic prostatitis/chronic pelvic pain syndrome, an NIH-CPSI score of at least 15, mean symptom duration of 6.2 years, and substantial prior treatment.",
     "description": "Multicenter, double-blind, factorial randomized superiority trial",
     "setting": "10 tertiary North American urology outpatient clinics",
-    "locator": "PubMed abstract, Design and Patients; NIDDK CPCRN RCT #1 dataset integrity check, baseline table (49 per arm)"
+    "locator": "Full text, Table 2; Results, p 585"
   },
   "verdict": "negative",
   "verdictNote": "Neither factorial main effect improved the primary symptom endpoint significantly.",
@@ -66,53 +66,112 @@
       "citation": "Alexander RB, Propert KJ, Schaeffer AJ, et al. \"Ciprofloxacin or Tamsulosin in Men with Chronic Prostatitis/Chronic Pelvic Pain Syndrome: A Randomized, Double-Blind Trial.\" *Ann Intern Med.* 2004;141(8):581-589. doi:10.7326/0003-4819-141-8-200410190-00005",
       "doi": "10.7326/0003-4819-141-8-200410190-00005",
       "pmid": "15492337",
-      "followUp": "6-week primary outcome",
-      "followUpLocator": "PubMed abstract, Interventions and Results",
+      "followUp": "6-week primary outcome; symptom follow-up at 9 and 12 weeks",
+      "followUpLocator": "Full text, Study Design and Interventions, p 583",
       "results": [
         {
           "endpoint": "NIH-CPSI total score change",
           "role": "primary",
           "measure": "Ciprofloxacin main effect on NIH-CPSI total score at 6 weeks",
           "effect": {
-            "type": "none",
+            "type": "difference",
+            "value": -1.5,
+            "ci": [
+              -3.5,
+              0.5
+            ],
             "p": "0.15"
           },
           "met": false,
-          "note": "Ciprofloxacin versus no ciprofloxacin in the 2 × 2 factorial comparison; all treatment groups declined modestly.",
-          "locator": "PubMed abstract, Results"
+          "note": "Treatment-by-treatment interaction was not significant (P=0.075), so the primary analysis used factorial main effects. Modeled 6-week NIH-CPSI slope: ciprofloxacin -5.4 (95% CI -6.8 to -3.9) versus no ciprofloxacin -3.9 (95% CI -5.3 to -2.4); 98 randomized per factorial group, all available observations analyzed.",
+          "locator": "Full text, Table 3; Results, p 585"
         },
         {
           "endpoint": "NIH-CPSI total score change",
           "role": "primary",
           "measure": "Tamsulosin main effect on NIH-CPSI total score at 6 weeks",
           "effect": {
-            "type": "none",
+            "type": "difference",
+            "value": 0.4,
+            "ci": [
+              -1.6,
+              2.5
+            ],
             "p": ">0.2"
           },
           "met": false,
-          "note": "Tamsulosin versus no tamsulosin in the 2 × 2 factorial comparison; all treatment groups declined modestly.",
-          "locator": "PubMed abstract, Results"
+          "note": "Modeled 6-week NIH-CPSI slope: tamsulosin -4.4 (95% CI -5.8 to -2.9) versus no tamsulosin -4.8 (95% CI -6.2 to -3.3); 98 randomized per factorial group, all available observations analyzed.",
+          "locator": "Full text, Table 3; Results, p 585"
+        },
+        {
+          "endpoint": "NIH-CPSI total score change by randomized arm",
+          "role": "descriptive",
+          "measure": "Mean baseline-to-6-week change among participants with complete data",
+          "values": {
+            "placebo": "-3.4 points (n=45/49)",
+            "ciprofloxacin": "-6.2 points (n=42/49)",
+            "tamsulosin": "-4.4 points (n=45/49)",
+            "combination": "-4.1 points (n=42/49)"
+          },
+          "note": "Completers-only descriptive means, distinct from the longitudinal primary analysis; no individual-arm superiority test was prespecified.",
+          "locator": "Full text, Table 3, p 585"
+        },
+        {
+          "endpoint": "Patient-reported global response",
+          "role": "secondary",
+          "measure": "Markedly or moderately improved at 6 weeks; missing responses counted as nonresponse",
+          "values": {
+            "placebo": "11/49 (22%)",
+            "ciprofloxacin": "11/49 (22%)",
+            "tamsulosin": "12/49 (24%)",
+            "combination": "5/49 (10%)"
+          },
+          "note": "Intention-to-treat denominators; neither factorial comparison was statistically significant (P>0.2 for both).",
+          "locator": "Full text, Outcomes, p 583; Tables 4-5, p 586"
         }
       ],
-      "harms": [],
+      "harms": [
+        {
+          "label": "Any adverse event during treatment",
+          "values": {
+            "placebo": "20/48 (42%)",
+            "ciprofloxacin": "19/47 (40%)",
+            "tamsulosin": "20/48 (42%)",
+            "combination": "17/47 (36%)"
+          },
+          "note": "Safety-evaluable after at least 3 weeks; infection or fever occurred in 1/48 placebo, 0/47 ciprofloxacin, 1/48 tamsulosin, and 0/47 combination. Overall factorial adverse-event comparisons: P>0.2 for both drugs.",
+          "locator": "Full text, Appendix Table, p W-111; Results, p 586"
+        },
+        {
+          "label": "Worst adverse-event grade",
+          "value": "Among 190 safety-evaluable men, grade 1 mild: 41/190 (22%); grade 2 moderate: 33/190 (17%); grade 3 severe: 2/190 (1%), one each with placebo and ciprofloxacin alone, both progression of chronic pelvic pain.",
+          "note": "National Cancer Institute Common Toxicity Criteria grading, not Clavien-Dindo.",
+          "locator": "Full text, Outcomes, p 583; Results, p 586"
+        }
+      ],
       "delivery": [
         {
           "label": "Drug regimen",
           "value": "Ciprofloxacin 500 mg twice daily, tamsulosin 0.4 mg once daily, both drugs, or placebo for 6 weeks.",
-          "locator": "PubMed abstract, Design and Interventions"
+          "locator": "Full text, Table 1; Study Design and Interventions, pp 582-583"
+        },
+        {
+          "label": "Six-week follow-up and treatment completion",
+          "value": "174/196 (89%) had a 6-week outcome; 17/196 (9%) withdrew before week 6 and 5/196 missed that clinic visit. Eleven patients stopped treatment early but continued follow-up and were included in analyses.",
+          "locator": "Full text, Results, p 585"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_7326_0003_4819_141_8_200410190_00005.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_7326_0003_4819_141_8_200410190_00005.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/cpcrn-cipro-tamsulosin",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

@@ -172,22 +172,53 @@
       "citation": "Kuntz RM, Lehrich K, Ahyai S. \"Transurethral holmium laser enucleation of the prostate compared with transvesical open prostatectomy: 18-month follow-up of a randomized trial.\" *J Endourol.* 2004;18(2):189-191. doi:10.1089/089277904322959851",
       "doi": "10.1089/089277904322959851",
       "pmid": "15072629",
-      "followUp": "Assessments through 18 months",
-      "followUpLocator": "PubMed abstract, Patients and Methods",
+      "followUp": "Assessments at 1, 3, 6, 12 and 18 months; 94/120 completed 18 months (50/60 HoLEP, 44/60 open), after exclusion of 9 incidental prostate cancers and 17 losses to follow-up",
+      "followUpLocator": "Full text, Patients and Methods, Postoperative follow-up, p 190; Results, p 190; Table 2, p 190",
       "results": [
         {
-          "endpoint": "AUA symptom score, peak flow and postvoid residual",
-          "role": "secondary",
-          "measure": "Between-arm voiding outcomes through 18 months",
+          "endpoint": "AUA symptom score",
+          "role": "descriptive",
+          "measure": "Mean score at 18 months among 94 completers",
           "values": {
-            "exp": "improved; no significant between-arm difference",
-            "ctl": "improved; no significant between-arm difference"
+            "exp": "2.3 ± 2.2 (50/60 assessed; baseline 22.1 ± 3.3)",
+            "ctl": "2.0 ± 1.5 (44/60 assessed; baseline 21.0 ± 3.6)"
           },
           "effect": {
             "type": "none"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Within-arm improvement P < 0.0001; no between-arm endpoint values in abstract."
+          "met": "not-tested",
+          "locator": "Full text, Table 2 and Results, p 190; Results, p 191",
+          "note": "Within-arm improvement P<0.0001; no significant between-arm difference. No primary endpoint, prespecified threshold, effect estimate, confidence interval or exact between-arm P value reported."
+        },
+        {
+          "endpoint": "Peak urinary flow rate",
+          "role": "descriptive",
+          "measure": "Mean Qmax at 18 months among 94 completers",
+          "values": {
+            "exp": "27.4 ± 10.6 mL/s (50/60 assessed; baseline 3.8 ± 3.6)",
+            "ctl": "28.0 ± 5.7 mL/s (44/60 assessed; baseline 3.6 ± 3.8)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "locator": "Full text, Table 2 and Results, p 190; Results, p 191",
+          "note": "Within-arm improvement P<0.0001; no significant between-arm difference. No exact between-arm P value or confidence interval reported."
+        },
+        {
+          "endpoint": "Postvoid residual volume",
+          "role": "descriptive",
+          "measure": "Mean residual volume at 18 months among 94 completers",
+          "values": {
+            "exp": "7.1 ± 19.6 mL (50/60 assessed; baseline 280 ± 273)",
+            "ctl": "6.0 ± 11.7 mL (44/60 assessed; baseline 292 ± 191)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "locator": "Full text, Table 2 and Results, p 190; Results, p 191",
+          "note": "Within-arm improvement P<0.0001; no significant between-arm difference. No exact between-arm P value or confidence interval reported."
         }
       ],
       "harms": [
@@ -197,7 +228,8 @@
             "exp": "0/60",
             "ctl": "8/60"
           },
-          "locator": "PubMed abstract, Patients and Methods and Results"
+          "locator": "Full text, Results, p 191",
+          "note": "P=0.003."
         },
         {
           "label": "Patients with complications",
@@ -205,7 +237,7 @@
             "exp": "7/60",
             "ctl": "13/60"
           },
-          "locator": "PubMed abstract, Patients and Methods and Results"
+          "locator": "Full text, Abstract, p 189; Results, p 191"
         },
         {
           "label": "Secondary apical resection",
@@ -213,7 +245,7 @@
             "exp": "2/60",
             "ctl": "0/60"
           },
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Results, p 191"
         },
         {
           "label": "Bladder-neck contracture",
@@ -221,33 +253,49 @@
             "exp": "0/60",
             "ctl": "2/60"
           },
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Results, p 191"
+        },
+        {
+          "label": "Arterial bleeding requiring secondary coagulation",
+          "values": {
+            "exp": "3/60 (5.0%)",
+            "ctl": "3/60 (5.0%)"
+          },
+          "locator": "Full text, Results, p 191"
+        },
+        {
+          "label": "Urethral stricture requiring visual urethrotomy through 18 months",
+          "values": {
+            "exp": "2/60 (3.3%)",
+            "ctl": "0/60 (0%)"
+          },
+          "locator": "Full text, Results and Discussion, p 191",
+          "note": "HoLEP urethrotomies at 6 weeks and 16 months; open-arm bladder-neck contracture incisions at 6 weeks and 3 months."
         }
       ],
       "delivery": [
         {
           "label": "HoLEP laser settings",
-          "value": "High-powered Ho:YAG laser at 80–100 W (2.0 J, 40–50 Hz)",
-          "locator": "PubMed abstract, Patients and Methods",
-          "note": "Fiber diameter omitted because the abstract prints an unusual 550-nm unit that could not be checked against full text."
+          "value": "High-powered Ho:YAG laser at 80 or 100 W (2.0 J, 40–50 Hz); retrograde median and lateral lobe enucleation from apex to bladder between adenoma and capsule; lobes fragmented by electrocautery loop or mechanical morcellator",
+          "locator": "Full text, Patients and Methods, Surgical technique, p 190"
         },
         {
           "label": "Mean operative time",
           "values": {
-            "exp": "136 minutes",
-            "ctl": "91 minutes"
+            "exp": "135.9 ± 31.2 minutes",
+            "ctl": "90.6 ± 19.5 minutes"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "P < 0.0001."
+          "locator": "Full text, Table 1, p 190",
+          "note": "P<0.0001."
         },
         {
           "label": "Mean hemoglobin loss",
           "values": {
-            "exp": "1.9 g/dL",
-            "ctl": "2.8 g/dL"
+            "exp": "1.9 ± 1.3 g/dL",
+            "ctl": "2.8 ± 1.6 g/dL"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "P < 0.0001."
+          "locator": "Full text, Table 1, p 190",
+          "note": "P<0.0001."
         },
         {
           "label": "Median catheter time",
@@ -255,8 +303,8 @@
             "exp": "1 day",
             "ctl": "6 days"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "P < 0.0001."
+          "locator": "Full text, Abstract, p 189; Table 1, p 190",
+          "note": "Median days from the abstract; Table 1 reports mean 30.8 ± 17.3 versus 194.4 ± 20.1 hours; P<0.0001."
         },
         {
           "label": "Median hospital stay",
@@ -264,14 +312,14 @@
             "exp": "2 days",
             "ctl": "10 days"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "P < 0.0001."
+          "locator": "Full text, Abstract, p 189; Table 1, p 190",
+          "note": "Median days from the abstract; Table 1 reports mean 69.6 ± 36.4 versus 251.0 ± 45.5 hours; P<0.0001."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1089_089277904322959851.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1089_089277904322959851.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {

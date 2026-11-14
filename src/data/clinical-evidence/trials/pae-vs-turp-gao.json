@@ -18,7 +18,7 @@
   "design": {
     "phase": "not applicable",
     "randomized": true,
-    "blinding": "not stated in abstract",
+    "blinding": "Outcome observers were not blinded",
     "type": "superiority",
     "n": 114,
     "arms": [
@@ -35,13 +35,13 @@
         "role": "control"
       }
     ],
-    "population": "114 consenting men with benign prostatic hyperplasia were randomized to PAE or TURP.",
-    "description": "Prospective randomized controlled comparative trial",
-    "locator": "PubMed abstract, Materials and Methods"
+    "population": "114 men with BPH, IPSS greater than 7 after failed medical therapy, prostate volume 20–100 mL, and peak flow below 15 mL/s were randomized to PAE or TURP.",
+    "description": "Prospective randomized controlled comparative trial; powered to detect a 3-point IPSS difference; no primary endpoint expressly designated; modified intention-to-treat analysis",
+    "locator": "Full text, Study Population and Study Design, p 921"
   },
   "verdict": "mixed",
-  "verdictNote": "Both improved outcomes; TURP improved several early measures more, while PAE had more reported complications.",
-  "takeaway": "In 114 men randomized to prostatic arterial embolization or TURP, both procedures improved measured BPH outcomes through 24 months. TURP improved symptoms and flow more at one and three months; PAE had more overall adverse events and complications.",
+  "verdictNote": "Both improved function; TURP improved early outcomes more, while PAE had more complications and shorter hospital stays.",
+  "takeaway": "In 114 men randomized to prostatic arterial embolization or TURP, both arms improved through 24 months. TURP improved symptoms and flow more at 1 and 3 months; PAE had more adverse events or complications, including technical and clinical failures (30/57 vs 17/57), but shorter stays.",
   "reports": [
     {
       "id": "pae-vs-turp-gao-2014",
@@ -52,23 +52,23 @@
       "citation": "Gao YA, Huang Y, Zhang R, et al. \"Benign Prostatic Hyperplasia: Prostatic Arterial Embolization versus Transurethral Resection of the Prostate—A Prospective, Randomized, and Controlled Clinical Trial.\" *Radiology.* 2014;270(3):920-928. doi:10.1148/radiol.13122803",
       "doi": "10.1148/radiol.13122803",
       "pmid": "24475799",
-      "followUp": "Outcomes assessed at 1, 3, 6, 12, and 24 months; follow-up completion not stated in abstract",
-      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "followUp": "Assessments scheduled at 1, 3, 6, 12, and 24 months; mean follow-up 22.5 months; five patients lost by 12 months",
+      "followUpLocator": "Full text, Outcome Assessment, p 923; Results, p 924",
       "results": [
         {
           "endpoint": "IPSS, quality of life, peak flow, and postvoid residual",
           "role": "descriptive",
-          "measure": "Between-group comparative improvement at 1 and 3 months",
+          "measure": "Change from baseline at 1, 3, 6, 12, and 24 months",
           "values": {
-            "exp": "Improved from baseline",
-            "ctl": "Greater improvement than PAE"
+            "exp": "Improved at all visits; comparable to TURP at 12 and 24 months",
+            "ctl": "Improved at all visits; greater improvement than PAE at 1 and 3 months"
           },
           "effect": {
             "type": "none",
             "p": "<0.05"
           },
-          "note": "All six measured functional outcomes improved from baseline in both arms at every visit (P=0.001); the abstract does not identify a prespecified primary endpoint or provide absolute changes.",
-          "locator": "PubMed abstract, Results"
+          "note": "Within-group P = .001; the study was powered for a 3-point IPSS difference but did not designate a primary endpoint. Arm means and confidence intervals were not tabulated.",
+          "locator": "Full text, Study Design, p 921; Functional Results and Figure 5, pp 925, 927"
         },
         {
           "endpoint": "Prostate-specific antigen and prostate volume",
@@ -82,79 +82,127 @@
             "type": "none",
             "p": "<0.05"
           },
-          "note": "The abstract gives no absolute changes or between-group effect estimates.",
-          "locator": "PubMed abstract, Results"
+          "note": "Both arms improved from baseline (P = .001); numerical arm means and confidence intervals were not tabulated.",
+          "locator": "Full text, Functional Results, p 925; Figure 6, p 928"
         },
         {
           "endpoint": "Clinical failure",
           "role": "descriptive",
-          "measure": "Overall clinical failure rate; denominator and definition not given in abstract",
+          "measure": "Clinical failure through 24 months in treated patients",
           "values": {
-            "exp": "9.4%",
-            "ctl": "3.9%"
+            "exp": "5/54 treated patients",
+            "ctl": "2/53 treated patients"
           },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "0.262"
           },
-          "note": "Reported rates only; the abstract does not give a between-group test or analyzed denominators.",
-          "locator": "PubMed abstract, Results"
+          "note": "Failure meant IPSS decrease ≤25%, IPSS ≥18, QOL decrease ≤1, and QOL ≥4 and/or flow increase <2.5 mL/s with peak flow ≤7 mL/s; TURP followed at six months for clinical failures. The paper's reported percentages do not reconcile with the stated treated denominators.",
+          "locator": "Full text, Outcome Assessment, p 923; Results, p 924; Table 3, p 926"
         }
       ],
       "harms": [
         {
           "label": "Overall adverse events and complications",
           "values": {
-            "exp": "More than TURP; rate not stated",
-            "ctl": "Fewer than PAE; rate not stated"
+            "exp": "30/57 (52.6%)",
+            "ctl": "17/57 (29.8%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Between-group P=0.029; event counts, severity, and category definitions not supplied."
+          "locator": "Full text, Table 3 and Discussion, pp 925–926",
+          "note": "P = .029; totals include technical and clinical failures."
         },
         {
           "label": "Acute urinary retention",
           "values": {
-            "exp": "25.9%"
+            "exp": "14/54 (25.9%)",
+            "ctl": "3/53 (5.7%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "PAE group; event denominator and TURP rate not stated in abstract."
+          "locator": "Full text, Table 3, p 926",
+          "note": "Clavien I; bedside recatheterization; P = .004."
         },
         {
           "label": "Postembolization syndrome",
           "values": {
-            "exp": "11.1%"
+            "exp": "6/54 (11.1%)",
+            "ctl": "0/53 (0%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "PAE group; event denominator and syndrome definition not stated in abstract."
+          "locator": "Full text, Table 3, p 926",
+          "note": "Clavien I; symptomatic treatment; P = .038."
+        },
+        {
+          "label": "Clavien I–II and III–IV adverse events or complications",
+          "values": {
+            "exp": "Grades I–II: 22/57 (38.6%); grades III–IV: 8/57 (14.0%)",
+            "ctl": "Grades I–II: 13/57 (22.8%); grades III–IV: 4/57 (7.0%)"
+          },
+          "locator": "Full text, Table 3, p 926",
+          "note": "P = .113 for minor and .275 for major events; PAE major events were three technical and five clinical failures."
+        },
+        {
+          "label": "Urinary tract infection (Clavien II)",
+          "values": {
+            "exp": "1/54 (1.9%)",
+            "ctl": "2/53 (3.8%)"
+          },
+          "locator": "Full text, Table 3, p 926",
+          "note": "Both groups received antibiotics; P = .987."
+        },
+        {
+          "label": "Blood transfusion and transurethral resection syndrome",
+          "values": {
+            "exp": "0/54 transfusions; 0/54 resection syndrome",
+            "ctl": "2/53 (3.8%) transfusions; 1/53 (1.9%) resection syndrome"
+          },
+          "locator": "Full text, Table 3, p 926",
+          "note": "Transfusion was Clavien II; resection syndrome was Clavien IVb."
         }
       ],
       "delivery": [
         {
           "label": "Technical success",
           "values": {
-            "exp": "94.7%",
-            "ctl": "100%"
+            "exp": "54/57 (94.7%)",
+            "ctl": "53/53 treated (100%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract does not define technical success."
+          "locator": "Full text, Outcome Assessment, p 923; Results, p 924",
+          "note": "PAE success required selective prostatic arterial catheterization and embolization on at least one side."
         },
         {
           "label": "Technical failure after PAE",
-          "value": "5.3%",
-          "locator": "PubMed abstract, Results",
-          "note": "Reported PAE rate; the abstract does not detail the access or embolization failure."
+          "value": "3/57 (5.3%)",
+          "locator": "Full text, Results, p 924; Table 3, p 926",
+          "note": "Bilateral iliac arterial tortuosity and atherosclerosis prevented PAE; failures underwent TURP."
+        },
+        {
+          "label": "Procedure technique",
+          "values": {
+            "exp": "Local anesthesia; right femoral access; 355–500 µm polyvinyl alcohol particles to stasis; bilateral 48/57 (84.2%), unilateral 6/57 (10.5%)",
+            "ctl": "Epidural anesthesia; bipolar TURP with 26-F resectoscope; 22-F three-way Foley and saline irrigation"
+          },
+          "locator": "Full text, TURP and PAE Technique, p 922; Results, p 924",
+          "note": "PAE ended at complete stasis without reflux; TURP irrigation continued for at least 24 hours."
+        },
+        {
+          "label": "Procedure time, catheterization, and hospital stay",
+          "values": {
+            "exp": "89.7 ± 17.1 min; catheter 19/54 (35.2%); admitted 26/54 (48.1%); stay 2.9 ± 1.6 d",
+            "ctl": "83.5 ± 17.5 min; catheter 53/53 (100%); admitted 53/53 (100%); stay 4.8 ± 1.8 d"
+          },
+          "locator": "Full text, Table 2, p 925",
+          "note": "P = .066 for procedure time; P < .001 for catheterization, admission, and hospital stay."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1148_radiol_13122803.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1148_radiol_13122803.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/pae-vs-turp-gao",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

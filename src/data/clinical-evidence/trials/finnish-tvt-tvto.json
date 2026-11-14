@@ -35,12 +35,12 @@
       }
     ],
     "population": "Women undergoing primary surgery for stress urinary incontinence at seven Finnish hospitals; prior incontinence surgery, postvoid residual >100 mL, prolapse beyond second degree, and body mass index >35 kg/m² were among the exclusions.",
-    "description": "Multicenter randomized comparative trial",
-    "locator": "Laurikainen 2007, PubMed abstract, Objective, Methods, Results; Full text, Methods and Table 1, p 1110"
+    "description": "Multicenter randomized comparative trial; eight TVT-experienced gynecologists each performed at least five TVT-O procedures before enrollment. Sample size assumed 95% TVT success and 70% power to detect a 10% difference in success or complication rates.",
+    "locator": "Laurikainen 2007, Full text, Methods, p 5; Laurikainen 2014, Full text, Methods and Table 1, p 1110"
   },
-  "verdict": "mixed",
-  "verdictNote": "Early cure did not differ significantly; complications and opioid use favored TVT.",
-  "takeaway": "In women undergoing primary surgery for stress urinary incontinence, retropubic TVT and transobturator TVT-O had no statistically significant difference in two-month objective or subjective cure; TVT-O had more postoperative complications and opioid analgesia use.",
+  "verdict": "descriptive",
+  "verdictNote": "No primary endpoint was designated; two-month stress-test cure was similar, while early complications favored TVT.",
+  "takeaway": "Among 267 women who underwent the allocated operation, two-month negative cough stress tests followed retropubic TVT in 134/136 (98.5%) and TVT-O in 125/131 (95.4%), without a significant difference. Investigators registered 41 early complications in the 131-woman TVT-O group versus 18 in the 136-woman TVT group.",
   "reports": [
     {
       "id": "finnish-tvt-tvto-2007",
@@ -54,56 +54,84 @@
       "doi": "10.1097/01.AOG.0000249607.82768.a1",
       "pmid": "17197581",
       "followUp": "2 months",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Methods, p 6",
       "results": [
         {
           "endpoint": "Objective cure",
-          "role": "primary",
-          "measure": "Objective cure at 2 months",
+          "role": "descriptive",
+          "measure": "Negative cough stress test at 2 months among operated women analyzed",
           "values": {
-            "exp": "Rate not reported",
-            "ctl": "Rate not reported"
+            "exp": "134/136 (98.5%)",
+            "ctl": "125/131 (95.4%)"
           },
           "effect": {
             "type": "none"
           },
-          "met": null,
-          "note": "No statistically significant between-group difference detected.",
-          "locator": "PubMed abstract, Methods and Results"
+          "met": false,
+          "note": "No significant between-group difference reported; exact P value, effect estimate, and confidence interval not reported. The paper did not designate a primary endpoint.",
+          "locator": "Full text, Results, p 7; Methods, pp 5-6"
         },
         {
           "endpoint": "Subjective cure",
-          "role": "secondary",
-          "measure": "Subjective cure at 2 months",
+          "role": "descriptive",
+          "measure": "Condition-specific questionnaire improvement at 2 months",
           "values": {
-            "exp": "Rate not reported",
-            "ctl": "Rate not reported"
+            "exp": "UISS mean 11±3 to 0.7±1.6; 136 analyzed",
+            "ctl": "UISS mean 11±3 to 0.4±1.0; 131 analyzed"
           },
           "effect": {
             "type": "none"
           },
-          "note": "No statistically significant between-group difference detected; all condition-specific quality-of-life questionnaires improved within both groups without a between-group difference.",
-          "locator": "PubMed abstract, Methods and Results"
+          "met": false,
+          "note": "All condition-specific questionnaires improved within both groups (P<0.001 for pre/post comparisons), without a reported between-group difference; no binary subjective cure rate, between-arm effect, confidence interval, or exact P value was reported.",
+          "locator": "Full text, Results and Table 4, pp 7-9"
         }
       ],
       "harms": [
         {
           "label": "Intraoperative and immediate postoperative complications",
           "values": {
-            "exp": "Lower; count not reported",
-            "ctl": "Higher; count not reported"
+            "exp": "18/136 (13.2%)",
+            "ctl": "41/131 (31.3%)"
           },
-          "locator": "PubMed abstract, Results and Conclusion",
-          "note": "The higher overall complication rate with TVT-O was statistically significant; the authors judged it not clinically significant."
+          "locator": "Full text, Discussion, pp 9-10; Table 2, p 8",
+          "note": "P<0.001 for Table 2 other complications (15/136 versus 38/131); the discussion gives total registered complications including perforations. One TVT bladder perforation, one TVT retropubic hematoma requiring two-unit transfusion, and one TVT 800-mL bleed were reported. Authors judged the difference not clinically significant."
         },
         {
           "label": "Postoperative opioid analgesia",
           "values": {
-            "exp": "Less use; count not reported",
-            "ctl": "More use; count not reported"
+            "exp": "16/136 (11.8%)",
+            "ctl": "28/131 (21.4%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The between-group difference was statistically significant."
+          "locator": "Full text, Results, p 6; Table 2, p 8",
+          "note": "P=0.034; postoperative opiate analgesia. Table 2 prints 13% for 16/136 TVT patients, but 16/136 is 11.8%, as printed in the Results text."
+        },
+        {
+          "label": "Postoperative groin pain",
+          "values": {
+            "exp": "2/136 (1.5%)",
+            "ctl": "21/131 (16.0%)"
+          },
+          "locator": "Full text, Results, pp 6-7; Table 2, p 8",
+          "note": "P<0.001; TVT-O pain persisted for 2 weeks in 10 women, 4 weeks in 3, and 2 months in 1."
+        },
+        {
+          "label": "Postvoid residual over 100 mL after 24 hours",
+          "values": {
+            "exp": "7/136 (5.1%)",
+            "ctl": "20/131 (15.3%)"
+          },
+          "locator": "Full text, Table 3, p 8; Results, p 7",
+          "note": "P=0.006; mean time to PVR under 100 mL was 6 versus 9 hours (P=0.033). At 2 months, 8/136 versus 14/131 had PVR over 100 mL. One TVT recipient needed repeat catheterization on day 2; two TVT-O recipients self-catheterized for 1 and 3 weeks."
+        },
+        {
+          "label": "Postoperative urinary tract infection treatment",
+          "values": {
+            "exp": "11/136 (8.1%)",
+            "ctl": "17/131 (13.0%)"
+          },
+          "locator": "Full text, Results, p 7; Table 2, p 8",
+          "note": "Postoperative treatment for urinary tract infection; between-arm P value not reported."
         }
       ],
       "delivery": [
@@ -113,23 +141,37 @@
             "exp": "136 TVT",
             "ctl": "131 TVT-O"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "267 of 273 randomized women underwent their allocated operation; randomized arm denominators were not stated."
+          "locator": "Full text, Results and Fig. 1, pp 6-7",
+          "note": "267 of 273 randomized women underwent their allocated operation and were analyzed; one TVT-O allocation was converted to TVT for technical reasons and excluded, so 268 underwent surgery."
         },
         {
           "label": "Hospital stay",
           "values": {
-            "exp": "Shorter; duration not reported",
-            "ctl": "Longer; duration not reported"
+            "exp": "Mean 14±10 hours (range 4-54)",
+            "ctl": "Mean 17±14 hours (range 5-80)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The between-group difference was statistically significant."
+          "locator": "Full text, Results, p 6; Table 2, p 8",
+          "note": "P=0.027."
+        },
+        {
+          "label": "Operation and theater time",
+          "values": {
+            "exp": "Mean 29±16 minutes operation; 62±21 minutes theater",
+            "ctl": "Mean 29±8 minutes operation; 64±19 minutes theater"
+          },
+          "locator": "Full text, Table 2, p 8"
+        },
+        {
+          "label": "Anesthesia, prophylaxis, and immediate voiding protocol",
+          "value": "Local 0.25% prilocaine plus adrenaline (75-135 mL) with light IV sedation; single IV cefuroxime 1,500 mg or metronidazole 500 mg at operation start; no indwelling urinary catheter; spontaneous voiding requested within 3 hours",
+          "locator": "Full text, Methods, pp 5-6",
+          "note": "TVT used 70° thigh angle and cystoscopy after each retropubic needle passage; inside-out TVT-O used 90°-110° thigh angle and cystoscopy at operation end."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_01_aog_0000249607_82768_a1.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_01_aog_0000249607_82768_a1.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -251,7 +293,7 @@
   "relations": [],
   "page": "/docs/clinical-evidence/studies/finnish-tvt-tvto",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

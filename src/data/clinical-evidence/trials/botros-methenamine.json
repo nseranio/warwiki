@@ -4,7 +4,7 @@
   "aliases": [
     "Botros 2022"
   ],
-  "nct": null,
+  "nct": "NCT03077711",
   "area": [
     "infection"
   ],
@@ -14,7 +14,7 @@
       "lane": "prophylaxis"
     }
   ],
-  "question": "Does daily methenamine hippurate prevent culture-proven recurrent urinary tract infection as effectively as trimethoprim in adult women?",
+  "question": "How does methenamine hippurate compare with trimethoprim for culture-proven UTI recurrence in adult women?",
   "design": {
     "phase": "not applicable",
     "randomized": true,
@@ -25,21 +25,23 @@
       {
         "key": "exp",
         "label": "Methenamine hippurate prophylaxis",
+        "n": 45,
         "role": "experimental"
       },
       {
         "key": "ctl",
         "label": "trimethoprim prophylaxis",
+        "n": 47,
         "role": "control"
       }
     ],
-    "population": "Ninety-two women older than 18 years with at least two culture-positive urinary tract infections in six months or three in one year were randomized.",
+    "population": "Ninety-two women aged 18 to 99 years with at least two symptomatic, culture-positive urinary tract infections (minimum 10,000 CFU/mL) in six months or three in one year were randomized; mean age was 71.9 years, 86/92 (93.5%) were postmenopausal, and 43/92 (46.7%) used vaginal estrogen. Pregnancy, urinary tract abnormalities, acute pyelonephritis, renal insufficiency or failure, and postcoital prophylaxis were exclusion criteria.",
     "description": "Open-label randomized comparative trial",
-    "locator": "PubMed abstract, Methods"
+    "locator": "Full text, Methods, pp 572–573; Table 1, p 574"
   },
   "verdict": "inconclusive",
-  "verdictNote": "No recurrence difference was detected; the abstract gives no noninferiority margin.",
-  "takeaway": "In a randomized open-label trial of 92 women with recurrent UTI, daily methenamine hippurate and trimethoprim had the same observed 12-month culture-proven recurrence proportion in the reported intention-to-treat analysis (28/43 [65%] in each arm; P=1.00).",
+  "verdictNote": "The primary comparison found no difference; no equivalence margin was prespecified.",
+  "takeaway": "In this open-label randomized trial, 12-month culture-proven UTI recurrence occurred in 28/43 analyzed women (65.1%) with methenamine hippurate and 28/43 (65.1%) with trimethoprim (P=1.00); six of 92 randomized women were excluded from analysis.",
   "reports": [
     {
       "id": "botros-methenamine-2021",
@@ -50,60 +52,121 @@
       "citation": "Botros C, Lozo S, Iyer S, et al. \"Methenamine hippurate compared with trimethoprim for the prevention of recurrent urinary tract infections: a randomized clinical trial.\" *Int Urogynecol J.* 2022;33(3):571-580. doi:10.1007/s00192-021-04849-0",
       "doi": "10.1007/s00192-021-04849-0",
       "pmid": "34115162",
-      "followUp": "Culture-proven UTI recurrence by 12 months after prophylaxis initiation; treatment for at least six months",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUp": "Culture-proven UTI recurrence by 12 months after prophylaxis initiation; treatment for six months with optional continuation",
+      "followUpLocator": "Full text, Methods, p 573",
       "results": [
         {
           "endpoint": "Culture-proven UTI recurrence",
           "role": "primary",
-          "measure": "Participants with recurrence by 12 months, reported intention-to-treat analysis",
+          "measure": "Participants with symptomatic, culture-proven recurrence by 12 months, reported intention-to-treat analysis (86/92 randomized analyzed)",
           "values": {
-            "exp": "28/43 (65%)",
-            "ctl": "28/43 (65%)"
+            "exp": "28/43 (65.1%)",
+            "ctl": "28/43 (65.1%)"
           },
           "effect": {
             "type": "none",
             "p": "1.00"
           },
-          "met": null,
-          "note": "The abstract reports no between-group difference but gives no prespecified noninferiority margin or confidence interval; 86 of 92 randomized women appear in this analysis.",
-          "locator": "PubMed abstract, Results"
+          "met": false,
+          "note": "The planned comparison used a 0.05 significance level to detect a 23.8 percentage-point difference; no equivalence margin or between-group confidence interval was reported.",
+          "locator": "Full text, Methods, p 573; Results and Table 2, pp 574–575"
         },
         {
           "endpoint": "Culture-proven UTI recurrence",
-          "role": "secondary",
+          "role": "primary",
           "measure": "Participants with recurrence by 12 months, per-protocol analysis",
           "values": {
-            "exp": "30/46 (65%)",
-            "ctl": "26/40 (65%)"
+            "exp": "30/46 (65.2%)",
+            "ctl": "26/40 (65.0%)"
           },
           "effect": {
             "type": "none",
             "p": "0.98"
           },
-          "note": "The abstract states that per-protocol analysis addressed receipt of the alternative drug after randomization.",
-          "locator": "PubMed abstract, Methods and Results"
+          "met": false,
+          "note": "Supportive analysis of the primary endpoint after reassignment by actual medication received; 11 participants switched groups.",
+          "locator": "Full text, Results and Table 2, pp 574–575"
+        },
+        {
+          "endpoint": "Time to first recurrent UTI",
+          "role": "secondary",
+          "measure": "Days to first recurrent UTI, reported intention-to-treat analysis; mean ± SD",
+          "values": {
+            "exp": "119.3 ± 94.1 days",
+            "ctl": "100.7 ± 84.4 days"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.52"
+          },
+          "met": false,
+          "note": "Prespecified secondary outcome; no between-group confidence interval reported.",
+          "locator": "Full text, Methods, p 573; Table 2, p 575"
+        },
+        {
+          "endpoint": "Number of recurrent UTIs",
+          "role": "secondary",
+          "measure": "UTI recurrences in the year after prophylaxis initiation, reported intention-to-treat analysis; mean ± SD",
+          "values": {
+            "exp": "1.6 ± 1.9",
+            "ctl": "1.5 ± 1.7"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.72"
+          },
+          "met": false,
+          "note": "Before prophylaxis, yearly means were 3.7 ± 1.5 and 4.0 ± 2.1, respectively; within-group reductions had P<0.01.",
+          "locator": "Full text, Tables 2–3, pp 575–576"
         }
       ],
-      "harms": [],
+      "harms": [
+        {
+          "label": "Adverse effects and discontinuation",
+          "values": {
+            "exp": "diarrhea 2/45; abdominal pain 1/45; nephrolithiasis 1/45",
+            "ctl": "diarrhea 1/47; rash 2/47; weakness 2/47; C. difficile colitis 1/47"
+          },
+          "note": "10/92 patients stopped assigned medication after an adverse effect; the nephrolithiasis episode was thought unrelated.",
+          "locator": "Full text, Results, p 575; Table 4, p 577"
+        },
+        {
+          "label": "Trimethoprim-resistant recurrent urine cultures",
+          "values": {
+            "exp": "30/79 (38.0%)",
+            "ctl": "58/73 (79.5%)"
+          },
+          "note": "Denominators are recurrent cultures with susceptibility data, not participants; not all cultures had antibiotic sensitivities.",
+          "locator": "Full text, Results, p 576; Table 5, p 578"
+        }
+      ],
       "delivery": [
         {
           "label": "Prophylaxis duration",
-          "value": "Daily methenamine hippurate or trimethoprim for a minimum of six months.",
-          "locator": "PubMed abstract, Methods"
+          "value": "Methenamine hippurate 1 g twice daily or trimethoprim 100 mg nightly for six months; recurrence-free participants were encouraged to discontinue, with 12-month follow-up. Mean recorded treatment duration was 272.1 ± 18.4 versus 279.5 ± 17.5 days (P=0.77).",
+          "locator": "Full text, Methods, pp 572–573; Results, p 575"
+        },
+        {
+          "label": "Adherence and treatment switching",
+          "values": {
+            "exp": "Morisky-8 score 6.9 ± 1.6",
+            "ctl": "Morisky-8 score 7.3 ± 1.1"
+          },
+          "note": "Survey distributed to 51/92 participants (55.4%); the Morisky score comparison was P=0.44 between arms; 11/86 analyzed participants were reassigned for per-protocol analysis after switching drugs.",
+          "locator": "Full text, Results, pp 574–575"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1007_s00192_021_04849_0.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1007_s00192_021_04849_0.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/botros-methenamine",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

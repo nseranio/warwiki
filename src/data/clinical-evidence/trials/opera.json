@@ -225,7 +225,7 @@
     },
     {
       "id": "opera-2005-dry-mouth",
-      "kind": "secondary",
+      "kind": "post-hoc",
       "label": "Dry-mouth analysis",
       "published": "2005-06-01",
       "dateApprox": true,
@@ -235,42 +235,78 @@
       "doi": "10.1007/s11255-004-4703-7",
       "pmid": "16142551",
       "followUp": "12 weeks of treatment",
-      "followUpLocator": "PubMed abstract",
+      "followUpLocator": "Full text, Methods, p 248",
       "results": [],
       "harms": [
         {
           "label": "Dry mouth",
           "values": {
-            "exp": "28.1%",
-            "ctl": "21.6%"
+            "exp": "110/391 (28.1%)",
+            "ctl": "86/399 (21.6%)"
           },
-          "locator": "PubMed abstract",
-          "note": "P=0.039; most events were mild. The abstract does not state event numerators."
+          "locator": "Full text, Methods, p 248; Table 1, p 249",
+          "note": "Fisher exact P=0.039. The post hoc analysis excluded baseline-only dry mouth in 6 oxybutynin and 3 tolterodine recipients; Table 1 retains the randomized-arm denominators."
+        },
+        {
+          "label": "Mild dry mouth",
+          "values": {
+            "exp": "82/391 (21.0%)",
+            "ctl": "68/399 (17.0%)"
+          },
+          "locator": "Full text, Table 1, p 249",
+          "note": "Most severe reported episode per patient; Fisher exact P=0.174."
+        },
+        {
+          "label": "Moderate dry mouth",
+          "values": {
+            "exp": "22/391 (5.6%)",
+            "ctl": "16/399 (4.0%)"
+          },
+          "locator": "Full text, Table 1, p 249",
+          "note": "Most severe reported episode per patient; Fisher exact P=0.321."
         },
         {
           "label": "Severe dry mouth",
           "values": {
-            "exp": "1.5%",
-            "ctl": "0.5%"
+            "exp": "6/391 (1.5%)",
+            "ctl": "2/399 (0.5%)"
           },
-          "locator": "PubMed abstract",
-          "note": "P=0.173; the abstract does not state event numerators."
+          "locator": "Full text, Table 1, p 249",
+          "note": "Most severe reported episode per patient; Fisher exact P=0.173."
         },
         {
           "label": "Discontinuation due to dry mouth",
           "values": {
-            "exp": "7/391",
-            "ctl": "4/399"
+            "exp": "7/391 (1.8%)",
+            "ctl": "4/399 (1.0%)"
           },
-          "locator": "PubMed abstract; arm denominators from primary report, PubMed abstract, Results",
-          "note": "P=0.380; the analysis states the numerators, while the primary report states arm denominators."
+          "locator": "Full text, Results, p 249; Table 2, p 251",
+          "note": "Fisher exact P=0.380."
+        },
+        {
+          "label": "Premature discontinuation for any reason",
+          "values": {
+            "exp": "52/391 (13.3%)",
+            "ctl": "42/399 (10.5%)"
+          },
+          "locator": "Full text, Results, p 249; Table 2, p 251",
+          "note": "Fisher exact P=0.272."
         }
       ],
-      "delivery": [],
+      "delivery": [
+        {
+          "label": "Mean treatment duration",
+          "values": {
+            "exp": "79.3 days",
+            "ctl": "81.4 days"
+          },
+          "locator": "Full text, Results, p 249"
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1007_s11255_004_4703_7.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1007_s11255_004_4703_7.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     }
   ],

@@ -2,7 +2,7 @@
   "id": "botox-ic-kuo",
   "name": "Kuo 2016 IC/BPS",
   "aliases": [],
-  "nct": null,
+  "nct": "NCT01969773",
   "area": [
     "oab"
   ],
@@ -14,7 +14,7 @@
   ],
   "question": "Does suburothelial onabotulinumtoxinA added to hydrodistension reduce pain more than saline injection and hydrodistension in refractory IC/BPS?",
   "design": {
-    "phase": "not stated in abstract",
+    "phase": "not stated in full text",
     "randomized": true,
     "blinding": "double-blind",
     "type": "superiority",
@@ -33,13 +33,13 @@
         "role": "control"
       }
     ],
-    "population": "Sixty patients with IC/BPS refractory to conventional treatment, including eight men and 52 women, had a mean age of 50.8 ± 13.9 years.",
+    "population": "Sixty patients with IC/BPS and persistent or recurrent symptoms after at least two conventional treatments for at least 6 months, excluding Hunner lesions, included eight men and 52 women; mean age was 52.9 ± 14.3 years in the 40-patient toxin arm and 50.2 ± 13.2 years in the 20-patient saline arm.",
     "description": "Multicenter, 2:1, double-blind placebo-controlled randomized trial",
-    "locator": "PubMed abstract, Materials and Methods and Results"
+    "locator": "Full text, Patients and Outcome Measurements, p 610; Table I, p 611"
   },
   "verdict": "positive",
-  "verdictNote": "Pain reduction favored onabotulinumtoxinA at week 8; follow-up was short.",
-  "takeaway": "In refractory IC/BPS, suburothelial onabotulinumtoxinA 100 U plus hydrodistension reduced pain more at week 8 than saline injection plus hydrodistension (mean VAS change −2.6 versus −0.9; P = 0.021).",
+  "verdictNote": "Week-8 pain reduction favored onabotulinumtoxinA; dysuria and overall adverse events were higher at week 8.",
+  "takeaway": "In 60 patients with refractory IC/BPS without Hunner lesions, suburothelial onabotulinumtoxinA 100 U plus hydrodistension reduced week-8 pain more than saline injection plus hydrodistension (mean VAS change −2.6 versus −0.9; P = 0.021).",
   "reports": [
     {
       "id": "botox-ic-kuo-2016",
@@ -57,8 +57,8 @@
           "role": "primary",
           "measure": "Mean change from baseline to week 8; mean difference is onabotulinumtoxinA minus saline",
           "values": {
-            "exp": "−2.6 ± 2.8",
-            "ctl": "−0.9 ± 2.2"
+            "exp": "−2.6 ± 2.8 (n = 40)",
+            "ctl": "−0.9 ± 2.2 (n = 20)"
           },
           "effect": {
             "type": "difference",
@@ -66,73 +66,128 @@
             "p": "0.021"
           },
           "met": true,
-          "note": "Mean difference calculated from the two reported means; the abstract calls the between-group reduction significant.",
-          "locator": "PubMed abstract, Results"
+          "note": "Mean difference of −1.7 points calculated from reported mean changes; no confidence interval reported. Table I gives baseline VAS 5.1 versus 3.7 (P = 0.056), whereas Table II gives 5.3 versus 3.7.",
+          "locator": "Full text, Results and Table II, p 611"
         },
         {
           "endpoint": "Overall success",
           "role": "secondary",
-          "measure": "Overall success; definition and assessment time not supplied in abstract",
+          "measure": "GRA improvement of at least one point at 3 months",
           "values": {
-            "exp": "26/40",
-            "ctl": "3/20"
+            "exp": "25/40 (62.5%)",
+            "ctl": "3/20 (15%)"
           },
           "effect": {
             "type": "none",
             "p": "0.028"
           },
-          "note": "26/40 is 65%, although the abstract prints 63%; 3/20 is 15%.",
-          "locator": "PubMed abstract, Results"
+          "note": "Results text gives 25/40 at 3 months; the abstract instead gives 26/40 and labels it 63%. No confidence interval reported.",
+          "locator": "Full text, Evaluation and Follow-up, p 610; Results, p 611",
+          "met": true
         },
         {
           "endpoint": "Cystometric bladder capacity",
           "role": "secondary",
-          "measure": "Between-group change at week 8",
+          "measure": "Mean change from baseline to week 8, mL",
           "values": {
-            "exp": "increased; magnitude not reported",
-            "ctl": "magnitude not reported"
+            "exp": "+67.8 ± 164.3 (n = 40)",
+            "ctl": "−45.4 ± 138.5 (n = 20)"
           },
           "effect": {
-            "type": "none"
+            "type": "difference",
+            "value": 113.2,
+            "p": "0.020"
           },
-          "note": "The abstract reports a significant between-group difference without values.",
-          "locator": "PubMed abstract, Results"
+          "note": "Between-arm mean difference of 113.2 mL calculated from reported changes; no confidence interval reported.",
+          "locator": "Full text, Results and Table II, p 611",
+          "met": true
+        },
+        {
+          "endpoint": "Postvoid residual",
+          "role": "secondary",
+          "measure": "Mean change from baseline to week 8, mL",
+          "values": {
+            "exp": "+63.4 ± 119.3 (n = 40)",
+            "ctl": "−3.8 ± 126.6 (n = 20)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 67.2,
+            "p": "0.095"
+          },
+          "met": false,
+          "note": "Between-arm mean difference of 67.2 mL calculated from reported changes; no confidence interval reported.",
+          "locator": "Full text, Table II, p 611"
         }
       ],
       "harms": [
         {
-          "label": "Adverse events",
+          "label": "No adverse event at week 8",
           "values": {
-            "exp": "event counts not reported",
-            "ctl": "event counts not reported"
+            "exp": "20/40 (50%)",
+            "ctl": "19/20 (95%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract reports no between-group difference without event types or rates."
+          "locator": "Full text, Table III and Results, pp 611-612",
+          "note": "The paper reports a higher overall adverse-event incidence in the Botox group at week 8 (P = 0.033); the abstract says adverse events did not differ."
+        },
+        {
+          "label": "Dysuria at week 8",
+          "values": {
+            "exp": "16/40 (40%)",
+            "ctl": "1/20 (5%)"
+          },
+          "locator": "Full text, Table III, p 612"
+        },
+        {
+          "label": "Urinary tract infection at week 8",
+          "values": {
+            "exp": "2/40 (5%)",
+            "ctl": "0/20 (0%)"
+          },
+          "locator": "Full text, Table III, p 612"
+        },
+        {
+          "label": "Urinary retention at week 8",
+          "values": {
+            "exp": "1/40 (2.5%)",
+            "ctl": "0/20 (0%)"
+          },
+          "locator": "Full text, Table III and footnote, p 612",
+          "note": "The patient with retention also had a urinary tract infection."
+        },
+        {
+          "label": "Hematuria at week 8",
+          "values": {
+            "exp": "1/40 (2.5%)",
+            "ctl": "0/20 (0%)"
+          },
+          "locator": "Full text, Table III, p 612"
         }
       ],
       "delivery": [
         {
-          "label": "Endoscopic treatment",
+          "label": "Endoscopic treatment and perioperative care",
           "values": {
-            "exp": "suburothelial onabotulinumtoxinA 100 U plus hydrodistension",
-            "ctl": "equivalent amount of normal saline plus hydrodistension"
+            "exp": "100 U onabotulinumtoxinA in 10 mL saline; twenty 0.5 mL suburothelial injections (5 U each), posterior and lateral walls, trigone spared",
+            "ctl": "Twenty 0.5 mL suburothelial normal saline injections at the same sites"
           },
-          "locator": "PubMed abstract, Materials and Methods"
+          "note": "Both arms had hydrodistension at 80 cm H₂O for 15 minutes, an overnight 14 Fr Foley catheter, and cephalexin 500 mg every 6 hours for 7 days.",
+          "locator": "Full text, Randomization and Intravesical Injection, pp 610-611"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1002_nau_22760.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1002_nau_22760.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       },
-      "dateLocator": "Wiley publisher record, First published",
-      "followUpLocator": "PubMed abstract, Materials and Methods"
+      "dateLocator": "Full text, title-page publication data, p 609",
+      "followUpLocator": "Full text, Evaluation and Follow-up, p 610"
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/botox-ic-kuo",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }
