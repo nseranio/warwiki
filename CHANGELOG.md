@@ -6,6 +6,13 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## November 14, 2026 — Design review fixes and CI repaired (overnight, both sites)
+
+- Impeccable design critique of WARWIKI and WHITWIKI (separate design-review and detector agents; both 25/40). Report and ranked decisions for the owner: `~/Documents/WARWIKI/design-review-2026-11-14/DESIGN-CRITIQUE.md` (outside the repo). Main open items: phone tables hide the result column, Clinical Evidence landings need search and a collapsed decision list, heavy table headers and boxes, Rounds styling.
+- Fixed: the 404 heading was white on white in light mode (`8d65e4e2`); `--warwiki-text-subtle` and the footer copyright now pass 4.5:1 in both themes, and the technique database's sticky first header cell no longer shows muted text on blue on phones (`3c415561`). WHITWIKI got the same subtle-text contrast fix (`83d6e02`).
+- CI had failed on every push since October 24: the Video Library test looked for a searchbox, but adding surgeon suggestions (`list=` datalist) made the field a combobox. The test now finds it by label, and CI runs on ubuntu-24.04 because Playwright cannot install Chromium on ubuntu-latest 26.04 (`09af375d`; WHITWIKI `62448b2`). Both pipelines are green again.
+- Humanizer scan of page prose (2.5 million words): the sites read clean; 78 rewrite proposals for the 170 real tells are waiting for approval and the claim gate (`family-reviews/site-scan-2026-11-14/` in the SmartPhrase corpus).
+
 ## November 12, 2026 — Clinical Evidence: 183 missing trials
 
 - Must-know wave (`57f3026d`): 64 trials and 9 later reports of library trials (ABC, ROSETTA ×2, Ginsberg NDO, InSite, OPUS, PINNACLE, sildenafil diabetes trial, UNBLOCS). Should-know wave: 119 trials. Library: 68 → 251 trials; 10 new decision points (nocturia, IC/BPS, radiation cystitis, chronic pelvic pain, postoperative bladder management, GSM, male SUI conservative care, testosterone, cystectomy/diversion, perioperative thrombosis and bleeding) and 43 lanes.
