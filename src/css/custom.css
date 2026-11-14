@@ -1037,6 +1037,13 @@ article {
   margin-bottom: 1.1rem;
 }
 
+/* The 404 page reuses .hero__title outside the blue hero; white text was invisible in light mode (2026-11-14). */
+main.container .hero__title {
+  color: var(--ifm-heading-color);
+  text-shadow: none;
+  font-size: clamp(2.25rem, 6vw, 3.5rem);
+}
+
 .hero__subtitle {
   font-size: 1.15rem;
   color: rgba(255,255,255,0.75);
