@@ -228,8 +228,9 @@ html.locked,html.locked body{overflow:hidden}
 
 /* ---- booklet layer (overrides above) ---- */
 body{font-family:var(--sans)}
-h1.logo{display:flex;align-items:center;font:700 23px/1 var(--sans);font-stretch:112%;letter-spacing:2.5px;color:var(--ink);margin:0}
-h1.logo svg{width:22px;height:22px;margin:0 2px 0 1px}
+h1.logo{display:flex;align-items:center;font:700 36px/1 var(--sans);font-stretch:112%;letter-spacing:.11em;color:var(--ink);margin:0}
+h1.logo svg{width:.92em;height:.92em;margin:0 .07em 0 .03em}
+@media (max-width:520px){h1.logo{font-size:30px}}
 .panel{border-radius:8px;box-shadow:var(--shadow);background:var(--panel)}
 .btn{border-radius:6px;box-shadow:none;letter-spacing:.01em}
 .btn:hover:not(:disabled){box-shadow:none;filter:brightness(1.05)}
