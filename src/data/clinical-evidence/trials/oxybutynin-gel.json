@@ -15,7 +15,7 @@
       "lane": "monotherapy"
     }
   ],
-  "question": "Does once-daily oxybutynin chloride topical gel reduce urge incontinence episodes more than placebo gel in adults with overactive bladder?",
+  "question": "Does once-daily oxybutynin chloride topical gel reduce urinary incontinence episodes more than placebo gel in adults with overactive bladder and urgency-predominant incontinence?",
   "design": {
     "phase": "3",
     "randomized": true,
@@ -36,13 +36,13 @@
         "n": 400
       }
     ],
-    "population": "Adults with urgency-predominant urinary incontinence and overactive bladder, including 704 women among 789 randomized participants, had a mean age of 59 years.",
+    "population": "Adults with urgency-predominant urinary incontinence and overactive bladder, at least 8 voids and 4 urge incontinence episodes daily, mean voided volume of 350 mL or less, and PVR of 250 mL or less; 704 of 789 randomized participants were women and mean age was 59 years.",
     "description": "76-center, double-blind, placebo-controlled randomized trial",
-    "locator": "PubMed abstract, Materials and Methods and Results; ClinicalTrials.gov NCT00350636, Study Design"
+    "locator": "Full text, Materials and Methods, p 1765; Table 1, p 1766"
   },
   "verdict": "positive",
-  "verdictNote": "Daily urge incontinence episodes declined more with oxybutynin gel at 12 weeks.",
-  "takeaway": "Once-daily oxybutynin chloride 10% topical gel reduced daily urge incontinence episodes more than placebo gel over 12 weeks in adults with urgency-predominant incontinence (mean change −3.0 versus −2.5 episodes/day; P < 0.0001).",
+  "verdictNote": "Daily urinary incontinence episodes declined more with oxybutynin gel at study end.",
+  "takeaway": "Once-daily oxybutynin chloride 10% topical gel reduced daily urinary incontinence episodes more than placebo gel over 12 weeks in adults with urgency-predominant incontinence (mean change −3.0 versus −2.5 episodes/day; P < 0.0001).",
   "reports": [
     {
       "id": "oxybutynin-gel-2009",
@@ -54,53 +54,82 @@
       "doi": "10.1016/j.juro.2008.11.125",
       "pmid": "19233423",
       "followUp": "12-week randomized treatment",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Study Design, p 1766",
       "results": [
         {
-          "endpoint": "Urgency incontinence episodes",
+          "endpoint": "Urinary incontinence episodes",
           "role": "primary",
-          "measure": "Mean change from baseline in daily urge incontinence episodes at 12 weeks",
+          "measure": "Mean change from baseline in daily urinary incontinence episodes at study end (week 12 or last observation)",
           "values": {
-            "exp": "−3.0 episodes/day",
-            "ctl": "−2.5 episodes/day"
+            "exp": "−3.0 episodes/day (n=389)",
+            "ctl": "−2.5 episodes/day (n=400)"
           },
           "effect": {
             "type": "none",
             "p": "<0.0001"
           },
           "met": true,
-          "note": "Three-day urinary diaries; ANCOVA with last observation carried forward; no adjusted between-group difference was given in the abstract.",
-          "locator": "PubMed abstract, Materials and Methods and Results"
+          "note": "Three-day diaries counted urgency and/or stress incontinence; modified intent-to-treat ANCOVA with last observation carried forward. Baseline: 5.4 episodes/day in each arm; study end: 2.4 vs 2.9. The paper gives no adjusted between-arm estimate or confidence interval.",
+          "locator": "Full text, Study Design and Statistical Analysis, pp 1766-1767; Table 2, p 1768"
         },
         {
           "endpoint": "Micturitions",
           "role": "secondary",
-          "measure": "Mean change from baseline in daily urinary frequency at 12 weeks",
+          "measure": "Mean change from baseline in daily urinary frequency at study end",
           "values": {
-            "exp": "−2.7 voids/day",
-            "ctl": "−2.0 voids/day"
+            "exp": "−2.7 voids/day (n=389)",
+            "ctl": "−2.0 voids/day (n=400)"
           },
           "effect": {
             "type": "none",
             "p": "0.0017"
           },
           "note": "",
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Table 2, pp 1768-1769"
         },
         {
           "endpoint": "Voided volume",
           "role": "secondary",
-          "measure": "Mean change from baseline in voided volume at 12 weeks",
+          "measure": "Mean change from baseline in voided volume at study end",
           "values": {
-            "exp": "+21.0 mL",
-            "ctl": "+3.8 mL"
+            "exp": "+21.0 mL (n=389)",
+            "ctl": "+3.8 mL (n=400)"
           },
           "effect": {
             "type": "none",
             "p": "0.0018"
           },
           "note": "",
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Table 2, pp 1768-1769"
+        },
+        {
+          "endpoint": "Nocturia episodes",
+          "role": "secondary",
+          "measure": "Mean change from baseline in daily nocturia episodes at study end",
+          "values": {
+            "exp": "−0.75 episodes/day (n=389)",
+            "ctl": "−0.65 episodes/day (n=400)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.1372"
+          },
+          "note": "Between-arm difference was not statistically significant.",
+          "locator": "Full text, Table 2 and Efficacy, pp 1768-1769"
+        },
+        {
+          "endpoint": "Complete urinary continence",
+          "role": "secondary",
+          "measure": "No urinary incontinence episodes on the study-end 3-day diary",
+          "values": {
+            "exp": "108/389 (27.8%)",
+            "ctl": "69/400 (17.3%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "The paper reports no confidence interval or P value for this endpoint.",
+          "locator": "Full text, Study Design, p 1766; Efficacy, p 1768"
         }
       ],
       "harms": [
@@ -110,8 +139,8 @@
             "exp": "27/389 (6.9%)",
             "ctl": "11/400 (2.8%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": ""
+          "locator": "Full text, Table 3, p 1769",
+          "note": "P=0.0060."
         },
         {
           "label": "Application-site reactions",
@@ -119,37 +148,64 @@
             "exp": "21/389 (5.4%)",
             "ctl": "4/400 (1.0%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": ""
+          "locator": "Full text, Safety, p 1769",
+          "note": "Skin reactions caused withdrawal in 3/389 (0.8%) vs 1/400 (0.3%)."
         },
         {
           "label": "Serious treatment-related adverse events",
           "values": {
-            "exp": "0 reported",
-            "ctl": "0 reported"
+            "exp": "0/389",
+            "ctl": "0/400"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract states that none occurred, without arm-specific event counts."
+          "locator": "Full text, Table 3, p 1769",
+          "note": "Serious adverse events of any attribution occurred in 7/389 (1.8%) vs 10/400 (2.5%); none were treatment related."
+        },
+        {
+          "label": "Any adverse event",
+          "values": {
+            "exp": "221/389 (56.8%)",
+            "ctl": "193/400 (48.3%)"
+          },
+          "locator": "Full text, Table 3, p 1769",
+          "note": "Treatment-related adverse events occurred in 73/389 (18.8%) vs 45/400 (11.3%)."
+        },
+        {
+          "label": "Treatment-related urinary retention",
+          "values": {
+            "exp": "0/389",
+            "ctl": "1/400 (0.3%)"
+          },
+          "locator": "Full text, Table 4, p 1770; Safety, p 1769",
+          "note": "At study end, PVR was 250 mL or greater in one patient in each arm."
         }
       ],
       "delivery": [
         {
           "label": "Treatment regimen",
-          "value": "1 g of 10% oxybutynin chloride topical gel or matching placebo once daily for 12 weeks.",
-          "locator": "PubMed abstract, Materials and Methods"
+          "value": "1 g of 10% oxybutynin chloride topical gel or matching placebo once daily for 12 weeks, applied to rotating sites on the abdomen, upper arm or shoulder, and thigh.",
+          "locator": "Full text, Study Design, p 1766"
+        },
+        {
+          "label": "Treatment completion and compliance",
+          "values": {
+            "exp": "346/389 (88.9%) completed; 90.7% sachet-count compliance",
+            "ctl": "355/400 (88.8%) completed; 91.2% sachet-count compliance"
+          },
+          "locator": "Full text, Results and Figure 2, p 1767",
+          "note": "Compliance was assessed by counting unused sachets at each visit."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2008_11_125.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2008_11_125.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/oxybutynin-gel",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

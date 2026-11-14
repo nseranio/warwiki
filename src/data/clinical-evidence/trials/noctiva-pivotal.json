@@ -47,11 +47,11 @@
     ],
     "population": "1,333 adults aged at least 50 years with at least 2.16 nocturnal voids per night during screening were included in the pooled intent-to-treat analysis.",
     "description": "Pooled analysis of two multicenter, double-blind randomized trials",
-    "locator": "PubMed abstract, Methods; FDA medical review, Table 15"
+    "locator": "Full text, Results, p 608; Table 1, p 606"
   },
   "verdict": "positive",
-  "verdictNote": "Both pooled coprimary endpoints favored each dose; 0.83 mcg missed endpoints in individual trials.",
-  "takeaway": "In pooled DB3/DB4 data, desmopressin nasal spray 0.83 and 1.66 mcg reduced nocturnal voids and increased 50% responder rates versus placebo over 12 weeks.",
+  "verdictNote": "Both pooled coprimary endpoints favored each dose; 0.83 mcg responder endpoint was significant only after pooling.",
+  "takeaway": "In pooled DB3/DB4 intent-to-treat data, desmopressin nasal spray 0.83 and 1.66 mcg reduced nocturnal voids and increased 50% responder rates versus placebo over 12 weeks; the 0.83 mcg responder endpoint was significant only in the pooled analysis.",
   "reports": [
     {
       "id": "noctiva-pivotal-2018",
@@ -64,115 +64,180 @@
       "doi": "10.1016/j.juro.2018.04.050",
       "pmid": "29654805",
       "followUp": "12 weeks of randomized treatment",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Materials and Methods, p 605",
       "results": [
         {
           "endpoint": "Nocturnal voids, 1.66 mcg",
           "role": "primary",
           "measure": "Mean change in nocturnal voids per night over 12 weeks",
           "values": {
-            "exp": "−1.5",
-            "ctl": "−1.2"
+            "exp": "−1.5 (n=439)",
+            "ctl": "−1.2 (n=446)"
           },
           "effect": {
             "type": "none",
             "p": "<0.0001"
           },
           "met": true,
-          "note": "Pooled analysis; reported means, without an adjusted between-group effect estimate in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Pooled ITT least-squares mean change; n=439 and n=446. No between-group estimate or confidence interval reported.",
+          "locator": "Full text, Figure 1A and Results, pp 607–608"
         },
         {
           "endpoint": "Nocturnal voids, 0.83 mcg",
           "role": "primary",
           "measure": "Mean change in nocturnal voids per night over 12 weeks",
           "values": {
-            "low": "−1.4",
-            "ctl": "−1.2"
+            "low": "−1.4 (n=448)",
+            "ctl": "−1.2 (n=446)"
           },
           "effect": {
             "type": "none",
             "p": "<0.0001"
           },
           "met": true,
-          "note": "Pooled analysis; reported means, without an adjusted between-group effect estimate in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Pooled ITT least-squares mean change; n=448 and n=446. No between-group estimate or confidence interval reported.",
+          "locator": "Full text, Figure 1A and Results, pp 607–608"
         },
         {
           "endpoint": "At least 50% reduction in nocturnal voids, 1.66 mcg",
           "role": "primary",
           "measure": "12-week responder rate",
           "values": {
-            "exp": "48.7%",
-            "ctl": "30.3%"
+            "exp": "48.7% (n=439)",
+            "ctl": "30.3% (n=446)"
           },
           "effect": {
             "type": "none",
             "p": "<0.0001"
           },
           "met": true,
-          "note": "Pooled analysis; responder counts were not stated in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Pooled ITT; denominator n=439 and n=446. Responder numerators and confidence intervals not reported.",
+          "locator": "Full text, Figure 1B and Results, pp 607–608"
         },
         {
           "endpoint": "At least 50% reduction in nocturnal voids, 0.83 mcg",
           "role": "primary",
           "measure": "12-week responder rate",
           "values": {
-            "low": "37.9%",
-            "ctl": "30.3%"
+            "low": "37.9% (n=448)",
+            "ctl": "30.3% (n=446)"
           },
           "effect": {
             "type": "none",
-            "p": "0.0227"
+            "p": "0.0159"
           },
           "met": true,
-          "note": "Pooled analysis; responder counts were not stated in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Pooled ITT; denominator n=448 and n=446. Results text gives P=0.0159; abstract gives P=0.0227. Responder numerators and confidence intervals not reported.",
+          "locator": "Full text, Figure 1B and Results, pp 607–608"
         },
         {
-          "endpoint": "Impact of Nighttime Urination score",
+          "endpoint": "Impact of Nighttime Urination score, 1.66 mcg",
           "role": "secondary",
-          "measure": "DB4 questionnaire improvement with 1.66 mcg versus placebo",
-          "values": {},
+          "measure": "DB4 INTU overall impact score, least-squares mean change from baseline",
+          "values": {
+            "exp": "−14.1 (n=243)",
+            "low": "−12.4 (n=247)",
+            "ctl": "−11.5 (n=249)"
+          },
           "effect": {
             "type": "none",
             "p": "0.0255"
           },
-          "note": "Magnitude was not stated in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Higher dose versus placebo P=0.0255 in Results text; Figure 2 caption gives P=0.0225. No confidence interval reported.",
+          "locator": "Full text, Figure 2 and Results, p 608",
+          "met": true
+        },
+        {
+          "endpoint": "Time from bedtime to first nocturnal void",
+          "role": "secondary",
+          "measure": "Pooled ITT least-squares mean change, minutes",
+          "values": {
+            "exp": "108.0 (n=439)",
+            "low": "96.0 (n=448)",
+            "ctl": "72.0 (n=446)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001 for each dose versus placebo"
+          },
+          "note": "No between-group confidence interval reported.",
+          "locator": "Full text, Table 2, p 609",
+          "met": true
+        },
+        {
+          "endpoint": "Nights with at most one nocturnal void",
+          "role": "secondary",
+          "measure": "Pooled ITT least-squares mean change in percentage of nights per patient",
+          "values": {
+            "exp": "46.58 (n=439)",
+            "low": "39.94 (n=448)",
+            "ctl": "33.75 (n=446)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001 (1.66 mcg); 0.0121 (0.83 mcg) versus placebo"
+          },
+          "note": "Table 2 row heading reads one or more, but Methods and Results define this endpoint as one or fewer nocturnal voids. No between-group confidence interval reported.",
+          "locator": "Full text, Methods, p 606; Results, p 608; Table 2, p 609",
+          "met": true
         }
       ],
       "harms": [
         {
           "label": "Hyponatremia",
           "values": {
-            "exp": "1.1%",
-            "low": "0%",
-            "ctl": "0.2%"
+            "exp": "5/448 (1.1%)",
+            "low": "0/454 (0%)",
+            "ctl": "1/454 (0.2%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Defined as serum sodium ≤125 mmol/L regardless of symptoms or <130 mmol/L with symptoms; event counts were not stated in the abstract."
+          "locator": "Full text, Table 1, p 606; Safety, pp 609–610",
+          "note": "Safety population. Protocol definition: serum sodium ≤125 mmol/L regardless of symptoms or <130 mmol/L with symptoms. All five high-dose cases were older than 65 years."
+        },
+        {
+          "label": "Nasal discomfort",
+          "values": {
+            "exp": "25/448 (5.6%)",
+            "low": "16/454 (3.5%)",
+            "ctl": "25/454 (5.5%)"
+          },
+          "locator": "Full text, Table 1, p 606",
+          "note": "Treatment-emergent adverse event; pooled safety population."
+        },
+        {
+          "label": "Urinary tract infection",
+          "values": {
+            "exp": "7/448 (1.6%)",
+            "low": "16/454 (3.5%)",
+            "ctl": "6/454 (1.3%)"
+          },
+          "locator": "Full text, Table 1, p 606",
+          "note": "Treatment-emergent adverse event; pooled safety population."
+        },
+        {
+          "label": "Adverse-event discontinuation",
+          "value": "80/1,356 (5.9%) across pooled safety population, regardless of causality",
+          "locator": "Full text, Safety, p 609",
+          "note": "Arm-specific counts not reported in the main text."
         }
       ],
       "delivery": [
         {
           "label": "Randomized treatment",
-          "value": "Intranasal SER120 1.66 mcg, 0.83 mcg, or placebo for 12 weeks.",
-          "locator": "PubMed abstract, Methods"
+          "value": "Intranasal SER120 1.66 mcg, 0.83 mcg, or placebo as a single spray in either nostril nightly before bedtime for 12 weeks; study assessments every 2 weeks. No fluid restriction or behavioral therapy was imposed.",
+          "locator": "Full text, Study Design, p 605"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2018_04_050.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2018_04_050.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/noctiva-pivotal",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

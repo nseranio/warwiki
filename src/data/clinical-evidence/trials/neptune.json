@@ -48,13 +48,13 @@
         "role": "control"
       }
     ],
-    "population": "1,334 men with moderate-to-severe storage and voiding lower urinary tract symptoms, total IPSS at least 13, maximum flow 4–12 mL/s, at least two severe urgency episodes and eight micturitions daily, prostate volume under 75 mL, and postvoid residual at most 150 mL.",
+    "population": "1,334 men aged at least 45 years with at least three months of storage and voiding lower urinary tract symptoms, total IPSS at least 13, maximum flow 4–12 mL/s, at least two severe urgency episodes and eight micturitions daily, estimated prostate weight under 75 g, and postvoid residual at most 150 mL.",
     "description": "Multicenter, double-blind phase 3 randomized trial",
-    "locator": "van Kerrebroeck 2013, PubMed abstract, Methods; Drake 2015, PDF p2, Methods; ClinicalTrials.gov NCT01018511, Participant Flow, Started"
+    "locator": "Full text, Methods sections 2.1–2.2, p 1004; Fig. 1, p 1005"
   },
   "verdict": "positive",
-  "verdictNote": "The 6 mg combination met all success criteria; the 9 mg combination did not.",
-  "takeaway": "Over 12 weeks, fixed-dose solifenacin 6 mg plus tamsulosin OCAS met prespecified IPSS and urgency-frequency criteria versus placebo and tamsulosin OCAS alone; the 9 mg solifenacin combination did not meet all criteria versus tamsulosin.",
+  "verdictNote": "The 6 mg combination met both coprimary endpoints; the 9 mg combination did not.",
+  "takeaway": "Over 12 weeks, solifenacin 6 mg plus tamsulosin OCAS met prespecified IPSS superiority versus placebo, IPSS noninferiority versus tamsulosin, and TUFS superiority versus tamsulosin. The 9 mg combination failed IPSS noninferiority after multiplicity adjustment and TUFS superiority versus tamsulosin.",
   "reports": [
     {
       "id": "neptune-2013",
@@ -66,69 +66,138 @@
       "doi": "10.1016/j.eururo.2013.07.034",
       "pmid": "23932438",
       "followUp": "12 weeks of randomized treatment",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Methods section 2.2, p 1004",
       "results": [
         {
           "endpoint": "Total IPSS, 6 mg combination",
           "role": "primary",
-          "measure": "Mean change in total IPSS at 12 weeks; 6 mg combination versus tamsulosin and placebo",
+          "measure": "Adjusted mean change in total IPSS at 12 weeks (full analysis set); superiority versus placebo and noninferiority versus tamsulosin in both full-analysis and per-protocol sets",
           "values": {
-            "exp6": "−7.0 points",
-            "ctl": "−6.2 points",
-            "placebo": "−5.4 points"
+            "exp6": "−7.0 points (n=311)",
+            "ctl": "−6.2 points (n=297)",
+            "placebo": "−5.4 points (n=318)"
           },
           "effect": {
-            "type": "none"
+            "type": "difference",
+            "value": -0.8,
+            "p": "<0.001 superiority versus placebo; 0.001 noninferiority versus tamsulosin"
           },
           "met": true,
-          "note": "Prespecified success required superiority to placebo and noninferiority to tamsulosin for total IPSS; the abstract reports the 6 mg combination met all criteria but gives no margin or interval.",
-          "locator": "PubMed abstract, Outcome Measurements and Results"
+          "note": "The −0.8-point difference versus tamsulosin is calculated from rounded adjusted arm changes, not a reported contrast estimate. Noninferiority margin 0.5; per-protocol results were consistent. No contrast confidence interval reported.",
+          "locator": "Full text, Methods section 2.5, pp 1005–1006; Results section 3.2.1 and Fig. 2, p 1006; Table 2, p 1007"
         },
         {
           "endpoint": "Total Urgency and Frequency Score, 6 mg combination",
           "role": "primary",
-          "measure": "Mean change in TUFS at 12 weeks; 6 mg combination versus tamsulosin and placebo",
+          "measure": "Adjusted mean change in TUFS at 12 weeks (full analysis set); superiority versus tamsulosin",
           "values": {
-            "exp6": "−8.1 points",
-            "ctl": "−6.7 points",
-            "placebo": "−4.4 points"
+            "exp6": "−8.1 points (n=314)",
+            "ctl": "−6.7 points (n=299)",
+            "placebo": "−4.4 points (n=318)"
           },
           "effect": {
-            "type": "none"
+            "type": "difference",
+            "value": -1.4,
+            "p": "0.025 versus tamsulosin"
           },
           "met": true,
-          "note": "Prespecified success required superiority to tamsulosin for TUFS; the abstract reports all 6 mg combination criteria met without an effect interval.",
-          "locator": "PubMed abstract, Outcome Measurements and Results"
+          "note": "The −1.4-point difference versus tamsulosin is calculated from rounded adjusted arm changes, not a reported contrast estimate. No contrast confidence interval reported.",
+          "locator": "Full text, Results section 3.2.1 and Fig. 2, p 1006; Table 2, p 1007"
         },
         {
-          "endpoint": "Joint primary success criteria, 9 mg combination",
+          "endpoint": "Total IPSS, 9 mg combination",
           "role": "primary",
-          "measure": "Mean change in total IPSS and TUFS at 12 weeks",
+          "measure": "Adjusted mean change in total IPSS at 12 weeks (full analysis set); superiority versus placebo and noninferiority versus tamsulosin in both full-analysis and per-protocol sets",
           "values": {
-            "exp9": "IPSS −6.5; TUFS −7.6 points",
-            "ctl": "IPSS −6.2; TUFS −6.7 points",
-            "placebo": "IPSS −5.4; TUFS −4.4 points"
+            "exp9": "−6.5 points (n=299)",
+            "ctl": "−6.2 points (n=297)",
+            "placebo": "−5.4 points (n=318)"
           },
           "effect": {
-            "type": "none"
+            "type": "difference",
+            "value": -0.3,
+            "p": "0.006 superiority versus placebo; 0.028 nominal versus tamsulosin, not significant after multiplicity adjustment"
           },
           "met": false,
-          "note": "The abstract says the 9 mg combination met criteria versus placebo but not versus tamsulosin; it does not specify the failed contrast or margin.",
-          "locator": "PubMed abstract, Outcome Measurements and Results"
+          "note": "The −0.3-point difference versus tamsulosin is calculated from rounded adjusted arm changes, not a reported contrast estimate. Noninferiority was not established after multiplicity adjustment. No contrast confidence interval reported.",
+          "locator": "Full text, Methods section 2.5, pp 1005–1006; Results section 3.2.1 and Fig. 2, p 1006; Table 2, p 1007"
+        },
+        {
+          "endpoint": "Total Urgency and Frequency Score, 9 mg combination",
+          "role": "primary",
+          "measure": "Adjusted mean change in TUFS at 12 weeks (full analysis set); superiority versus tamsulosin",
+          "values": {
+            "exp9": "−7.6 points (n=302)",
+            "ctl": "−6.7 points (n=299)",
+            "placebo": "−4.4 points (n=318)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.9,
+            "p": "0.162 versus tamsulosin"
+          },
+          "met": false,
+          "note": "The −0.9-point difference versus tamsulosin is calculated from rounded adjusted arm changes, not a reported contrast estimate. No contrast confidence interval reported.",
+          "locator": "Full text, Results section 3.2.1 and Fig. 2, p 1006; Table 2, p 1007"
         }
       ],
-      "harms": [],
+      "harms": [
+        {
+          "label": "Any and serious treatment-emergent adverse events",
+          "values": {
+            "exp6": "99/337 (29.4%); serious 5/337 (1.5%)",
+            "exp9": "100/324 (30.9%); serious 9/324 (2.8%)",
+            "ctl": "74/326 (22.7%); serious 10/326 (3.1%)",
+            "placebo": "87/341 (25.5%); serious 3/341 (0.9%)"
+          },
+          "locator": "Full text, Table 4, p 1009",
+          "note": "Safety population; all-cause treatment-emergent events."
+        },
+        {
+          "label": "Drug-related dry mouth and constipation",
+          "values": {
+            "exp6": "dry mouth 27/337 (8.0%); constipation 9/337 (2.7%)",
+            "exp9": "dry mouth 34/324 (10.5%); constipation 16/324 (4.9%)",
+            "ctl": "dry mouth 1/326 (0.3%); constipation 1/326 (0.3%)",
+            "placebo": "dry mouth 4/341 (1.2%); constipation 1/341 (0.3%)"
+          },
+          "locator": "Full text, Table 4, pp 1009–1010",
+          "note": "Safety population; investigators judged these adverse events drug-related."
+        },
+        {
+          "label": "Catheter-requiring acute urinary retention",
+          "values": {
+            "exp6": "1/337 (0.3%)",
+            "exp9": "3/324 (0.9%)",
+            "ctl": "1/326 (0.3%)",
+            "placebo": "0/341 (0%)"
+          },
+          "locator": "Full text, Results section 3.3, p 1008; Table 4, pp 1009–1010",
+          "note": "Safety population; five cases after randomization required catheterization. Table 4 lists drug-related events; the 6 mg case was not considered drug-related."
+        }
+      ],
       "delivery": [
         {
           "label": "Randomized regimen",
-          "value": "Once-daily placebo, tamsulosin OCAS 0.4 mg, or a single fixed-dose tablet combining tamsulosin OCAS 0.4 mg with solifenacin 6 or 9 mg for 12 weeks.",
-          "locator": "PubMed abstract, Intervention"
+          "value": "After a two-week placebo run-in, once-daily matching placebo, tamsulosin OCAS 0.4 mg, or a single fixed-dose tablet combining tamsulosin OCAS 0.4 mg with solifenacin 6 or 9 mg was given for 12 weeks; visits occurred at weeks 4, 8, and 12.",
+          "locator": "Full text, Methods section 2.2, p 1004"
+        },
+        {
+          "label": "Randomized treatment completion",
+          "values": {
+            "exp6": "298/337 (88.4%)",
+            "exp9": "292/324 (90.1%)",
+            "ctl": "294/326 (90.2%)",
+            "placebo": "315/341 (92.4%)"
+          },
+          "locator": "Full text, Fig. 1, p 1005",
+          "note": "Completed treatment among safety-population participants; percentages as printed in Fig. 1."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2013_07_034.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2013_07_034.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -235,7 +304,7 @@
       "harms": [],
       "delivery": [],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_bju_13162.txt",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_bju_13162.fulltext.txt",
         "checked": "2026-11-12",
         "level": "abstract"
       }
@@ -297,7 +366,7 @@
   "relations": [],
   "page": "/docs/clinical-evidence/studies/neptune",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

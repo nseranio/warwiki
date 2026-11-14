@@ -31,11 +31,11 @@
     ],
     "population": "101 men with LUTS attributed to BPH and 80–150 mL prostates were enrolled at 16 centers in Canada and the United States.",
     "description": "Multicenter, prospective, single-arm device study",
-    "locator": "Desai, PubMed abstract, Methods; Bhojani, full text, Trial Design and Participants"
+    "locator": "Full text, Methods, Trial Design and Participants, p 322; Results, p 323"
   },
   "verdict": "descriptive",
-  "verdictNote": "Both three-month performance goals were met in a single-arm cohort.",
-  "takeaway": "In a single-arm study of 101 men with 80–150 mL prostates, Aquablation met prespecified three-month goals for safety (45.5% versus a 65% ceiling) and IPSS improvement (23.2 at baseline to 6.7).",
+  "verdictNote": "Both prespecified three-month performance goals were met in 101 treated men.",
+  "takeaway": "In 101 men with 80–150 mL prostates, Aquablation met both three-month performance goals: procedure-related safety events occurred in 45.5% against a 65% ceiling, and mean IPSS fell from 23.2 to 6.7, exceeding the 11-point improvement threshold.",
   "reports": [
     {
       "id": "water-ii-2019",
@@ -47,29 +47,29 @@
       "doi": "10.1111/bju.14703",
       "pmid": "30734990",
       "followUp": "Primary safety and efficacy assessments at 3 months; additional outcomes through 6 months",
-      "followUpLocator": "PubMed abstract, Results",
+      "followUpLocator": "Full text, Methods, p 322; Results and Fig. 1, p 323",
       "results": [
         {
           "endpoint": "Procedure-related safety events",
           "role": "primary",
           "measure": "Clavien–Dindo grade 2 or higher, or grade 1 causing persistent disability, through 3 months; prespecified ceiling 65%",
           "values": {
-            "exp": "45.5%"
+            "exp": "45.5% through 3 months"
           },
           "effect": {
             "type": "none",
             "p": "<0.001"
           },
           "met": true,
-          "note": "Tested against an external performance goal, not a concurrent TURP arm.",
-          "locator": "PubMed abstract, Results; goal also described in Bhojani full text, Trial Design and Participants"
+          "note": "Tested by exact binomial test against an external performance goal, without a concurrent TURP arm. The paper does not state the event numerator, analysis denominator, or a numerical confidence interval.",
+          "locator": "Full text, Methods, Study Endpoints and Statistical Analysis, pp 322–323; Results, p 324"
         },
         {
           "endpoint": "IPSS",
           "role": "primary",
-          "measure": "Mean IPSS at baseline and 3 months; prespecified goal was a reduction statistically greater than 11 points",
+          "measure": "Mean IPSS at baseline and 3 months; noninferiority to a 16-point reduction with a 5-point margin (reduction statistically greater than 11 points)",
           "values": {
-            "exp": "23.2 ± 6.3 at baseline; 6.7 ± 5.1 at 3 months"
+            "exp": "23.2 ± 6.3 at baseline (101 treated); 6.7 ± 5.1 at 3 months (98 attended visit)"
           },
           "effect": {
             "type": "difference",
@@ -77,8 +77,8 @@
             "p": "<0.001"
           },
           "met": true,
-          "note": "The 16.5-point difference is subtraction of reported means; the 11-point goal is described in the five-year report.",
-          "locator": "PubMed abstract, Results; goal in Bhojani full text, Trial Design and Participants"
+          "note": "The 16.5-point difference is subtraction of rounded reported means; the paper gives no numerical confidence interval or endpoint-specific measurement denominator.",
+          "locator": "Full text, Methods, Study Endpoints and Statistical Analysis, pp 322–323; Results and Fig. 1, pp 323–324"
         },
         {
           "endpoint": "Qmax",
@@ -92,39 +92,96 @@
             "value": 10.1,
             "p": "<0.001"
           },
-          "note": "Difference calculated from reported means.",
-          "locator": "PubMed abstract, Results"
+          "note": "Six-month observation of a prespecified three-month secondary endpoint; difference calculated from reported means. A numerical confidence interval was not reported.",
+          "locator": "Full text, Methods, Study Endpoints and Statistical Analysis, p 323; Results, p 323; Fig. 2, p 325"
+        },
+        {
+          "endpoint": "IPSS at six months",
+          "role": "descriptive",
+          "measure": "Mean IPSS at baseline and 6 months; 98/101 completed the six-month visit",
+          "values": {
+            "exp": "23.2 ± 6.3 at baseline; 5.9 ± 5.4 at 6 months"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -17.5,
+            "p": "<0.0001"
+          },
+          "note": "Reported paired mean improvement; rounded baseline and six-month means differ by 17.3 points. No numerical confidence interval or endpoint-specific measurement denominator was provided.",
+          "locator": "Full text, Results, pp 323–324; Fig. 2, p 325"
+        },
+        {
+          "endpoint": "Post-void residual volume",
+          "role": "secondary",
+          "measure": "Mean PVR at baseline and 6 months, mL",
+          "values": {
+            "exp": "131 at baseline; 47 at 6 months"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -84,
+            "p": "<0.0001"
+          },
+          "note": "Six-month observation of a prespecified three-month secondary endpoint; no numerical confidence interval or endpoint-specific measurement denominator was provided.",
+          "locator": "Full text, Methods, Study Endpoints and Statistical Analysis, p 323; Results, p 323; Fig. 2, p 325"
+        },
+        {
+          "endpoint": "BPH tissue reintervention",
+          "role": "secondary",
+          "measure": "Secondary procedure to remove additional prostate tissue through 6 months",
+          "values": {
+            "exp": "0/101 treated"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Prespecified at three months; none occurred through six months.",
+          "locator": "Full text, Methods, Study Endpoints and Statistical Analysis, p 323; Results, p 324"
         }
       ],
       "harms": [
         {
           "label": "Clavien–Dindo events through 6 months",
           "values": {
-            "exp": "grade 2: 22%; grade 3: 14%; grade 4: 5%"
+            "exp": "grade 2: 22/101 (21.8%); grade 3: 14/101 (13.9%); grade 4: 5/101 (5.0%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract does not give grade-specific numerators."
+          "locator": "Full text, Table 3, p 326",
+          "note": "Procedure/device-related events; patients can have more than one event or grade."
         },
         {
           "label": "Bleeding requiring intervention and/or transfusion",
           "values": {
-            "exp": "8 patients before discharge; 6 after discharge"
+            "exp": "14/101 (13.9%) with bleeding events: 8/101 (7.9%) before discharge and 6/101 (5.9%) within one month after discharge; 8/101 (7.9%) received transfusion alone, 3/101 (3.0%) underwent fulguration alone, and 2/101 (2.0%) received both"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract does not specify the after-discharge window or separate transfusion from other intervention."
+          "locator": "Full text, Results, p 324; Table 4, p 327",
+          "note": "Two patients had both transfusion and fulguration; the 14 bleeding cases include hematuria, clot retention and blood-loss anemia."
+        },
+        {
+          "label": "Persistent grade 1 and other urinary adverse events",
+          "values": {
+            "exp": "persistent grade 1: 18/101 (17.8%), including ejaculatory dysfunction 13, incontinence 3, and both 2; UTI: 6/101 (5.9%); other infection: 2/101 (2.0%); grade 3 urinary retention: 1/101 (1.0%); grade 3 incontinence requiring artificial urinary sphincter: 1/101 (1.0%)"
+          },
+          "locator": "Full text, Results, p 324; Table 3, p 326",
+          "note": "The five grade 1 incontinence events persisted at six months; the grade 3 stress-incontinence case was additional."
         }
       ],
       "delivery": [
         {
           "label": "Hospital stay",
-          "value": "Mean 1.6 days (same day to 6 days)",
-          "locator": "PubMed abstract, Results"
+          "value": "Mean 1.6 days (range 0–6 days; N=100, one excluded for concurrent non-prostatic hospitalization)",
+          "locator": "Full text, Table 2, p 324"
+        },
+        {
+          "label": "Procedure and catheter duration",
+          "value": "101 treated: mean handpiece-in to catheter-in time 37 minutes (range 15–97), TRUS-in to catheter-in time 55 minutes, and waterjet resection time 8 minutes (range 3–17); mean postoperative catheter duration 94 hours (range 17–729), with 68% discharged with a catheter",
+          "locator": "Full text, Results, pp 323–324; Table 2, p 324",
+          "note": "The 37-minute and 55-minute measures have different start points."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_bju_14703.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_bju_14703.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     },
     {
@@ -234,7 +291,7 @@
   ],
   "page": "/docs/clinical-evidence/studies/water-ii",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

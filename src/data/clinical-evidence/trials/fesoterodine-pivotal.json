@@ -47,11 +47,11 @@
     ],
     "population": "Adults with increased micturition frequency and urgency, with or without urgency urinary incontinence.",
     "description": "Multicenter, double-blind, placebo- and active-controlled randomized trial",
-    "locator": "Chapple PubMed abstract, Methods; FDA medical review, p 2, Study SP583"
+    "locator": "Full text, Methods, pp 1205–1207; Results, p 1207; Table 2, p 1208"
   },
   "verdict": "positive",
-  "verdictNote": "Both fixed fesoterodine doses improved the primary and coprimary outcomes versus placebo.",
-  "takeaway": "In the Chapple pivotal trial, fesoterodine 4 mg and 8 mg once daily improved micturition frequency, urgency urinary incontinence, and treatment response over placebo at 12 weeks; tolterodine ER was an active control.",
+  "verdictNote": "Both doses met the prespecified micturition, UUI, and treatment-response comparisons versus placebo.",
+  "takeaway": "In SP583, fesoterodine 4 mg and 8 mg once daily improved micturition frequency, urgency urinary incontinence, and patient-rated treatment response versus placebo at 12 weeks. The 8 mg arm had one catheterization for acute urinary retention.",
   "reports": [
     {
       "id": "fesoterodine-pivotal-2007",
@@ -63,69 +63,140 @@
       "doi": "10.1016/j.eururo.2007.07.009",
       "pmid": "17651893",
       "followUp": "12 weeks of fixed-dose treatment",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Methods, p 1205",
       "results": [
         {
           "endpoint": "Micturitions per 24 hours",
           "role": "primary",
-          "measure": "Mean change from baseline to week 12",
+          "measure": "Least-squares mean change from baseline to week 12 in the full analysis set, with last observation carried forward",
           "values": {
-            "feso4": "−1.7",
-            "feso8": "−1.9",
-            "placebo": "−1.0"
+            "feso4": "−1.76 (n=265)",
+            "feso8": "−1.88 (n=276)",
+            "placebo": "−0.95 (n=279)",
+            "tolterodine": "−1.73 (n=283)"
           },
           "effect": {
             "type": "none"
           },
           "met": true,
-          "note": "P<0.001 for each fesoterodine dose versus placebo; FDA-reproduced sponsor results, last observation carried forward.",
-          "locator": "FDA medical review, p 3, Table 1, Study SP583"
+          "note": "P<0.001 for each fesoterodine dose versus placebo; tolterodine P=0.001. No between-group confidence intervals reported.",
+          "locator": "Full text, Table 3, p 1209; Statistical analyses, p 1207"
         },
         {
           "endpoint": "Urgency urinary incontinence episodes per 24 hours",
           "role": "primary",
-          "measure": "Mean change from baseline to week 12 among participants incontinent at baseline",
+          "measure": "Least-squares mean change from baseline to week 12 among participants with at least one baseline urgency incontinence episode; last observation carried forward",
           "values": {
-            "feso4": "−2.1 (n=199)",
-            "feso8": "−2.3 (n=223)",
-            "placebo": "−1.2 (n=211)"
+            "feso4": "−1.95 (n=199)",
+            "feso8": "−2.22 (n=223)",
+            "placebo": "−1.14 (n=211)",
+            "tolterodine": "−1.74 (n=223)"
           },
           "effect": {
             "type": "none"
           },
           "met": true,
-          "note": "P=0.001 for 4 mg and P<0.001 for 8 mg versus placebo; FDA-reproduced sponsor results.",
-          "locator": "FDA medical review, p 3, Table 2, Study SP583"
+          "note": "P=0.001 for 4 mg and P<0.001 for 8 mg versus placebo; tolterodine P=0.008. No between-group confidence intervals reported.",
+          "locator": "Full text, Table 3 and footnote §, p 1209"
         },
         {
           "endpoint": "Treatment response",
           "role": "primary",
-          "measure": "Patient-rated benefit at week 12",
+          "measure": "Yes response at week 12: greatly improved or improved on the four-point treatment benefit scale, in the full analysis set",
           "values": {
-            "feso4": "significantly greater than placebo",
-            "feso8": "significantly greater than placebo",
-            "placebo": "reference"
+            "feso4": "75% (n=265)",
+            "feso8": "79% (n=276)",
+            "placebo": "53% (n=279)",
+            "tolterodine": "72% (n=283)"
           },
           "effect": {
             "type": "none"
           },
           "met": true,
-          "note": "The abstract gives no response proportions or dose-specific P values.",
-          "locator": "Chapple PubMed abstract, Methods and Results"
+          "note": "P<0.001 for each active treatment versus placebo. Response numerators and between-group confidence intervals were not reported.",
+          "locator": "Full text, Table 1, p 1206; Table 3, p 1209"
+        },
+        {
+          "endpoint": "Mean voided volume per micturition",
+          "role": "secondary",
+          "measure": "Least-squares mean change in mL from baseline to week 12; last observation carried forward",
+          "values": {
+            "feso4": "+27.72 (n=265)",
+            "feso8": "+33.62 (n=275)",
+            "placebo": "+9.37 (n=278)",
+            "tolterodine": "+23.64 (n=282)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "note": "Exploratory secondary-endpoint comparisons versus placebo: P<0.001 for each fesoterodine dose; tolterodine P=0.002. No between-group confidence intervals reported.",
+          "locator": "Full text, Table 3 and footnote, p 1209"
+        },
+        {
+          "endpoint": "Nocturnal micturitions per 24 hours",
+          "role": "secondary",
+          "measure": "Least-squares mean change from baseline to week 12; last observation carried forward",
+          "values": {
+            "feso4": "−0.39 (n=265)",
+            "feso8": "−0.39 (n=276)",
+            "placebo": "−0.32 (n=279)",
+            "tolterodine": "−0.40 (n=283)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "note": "Exploratory secondary-endpoint comparisons versus placebo: P=0.394 for 4 mg, P=0.418 for 8 mg, and P=0.336 for tolterodine; none reached nominal significance.",
+          "locator": "Full text, Table 3 and footnote, p 1209"
         }
       ],
-      "harms": [],
+      "harms": [
+        {
+          "label": "Dry mouth, constipation, and any treatment-emergent adverse event",
+          "values": {
+            "feso4": "dry mouth 59/272; constipation 9/272; any AE 135/272",
+            "feso8": "dry mouth 97/287; constipation 13/287; any AE 167/287",
+            "placebo": "dry mouth 20/283; constipation 4/283; any AE 107/283",
+            "tolterodine": "dry mouth 49/290; constipation 8/290; any AE 144/290"
+          },
+          "locator": "Full text, Table 4, p 1210",
+          "note": "Safety population; treatment-emergent events irrespective of attribution."
+        },
+        {
+          "label": "Urinary retention and catheterization",
+          "values": {
+            "feso4": "urinary retention 1/272; discontinuation for retention 1/272",
+            "feso8": "urinary retention 2/287; discontinuation for retention 0/287; acute urinary retention requiring catheterization 1/287",
+            "placebo": "not reported",
+            "tolterodine": "not reported"
+          },
+          "locator": "Full text, Safety and tolerability, p 1210; corrigendum, Eur Urol 2009;56:236",
+          "note": "The 2009 corrigendum replaces the original statement that no acute urinary retention required catheterization; the catheterized participant was male and assigned fesoterodine 8 mg. Only the 4 mg retention event led to discontinuation."
+        },
+        {
+          "label": "Adverse-event discontinuation",
+          "values": {
+            "feso4": "7/272",
+            "feso8": "14/287",
+            "placebo": "6/283",
+            "tolterodine": "9/290"
+          },
+          "locator": "Full text, Safety and tolerability, pp 1210–1211",
+          "note": "Discontinued the trial prematurely because of an adverse event; 36/1132 overall."
+        }
+      ],
       "delivery": [
         {
           "label": "Fixed-dose treatment",
-          "value": "Fesoterodine 4 mg or 8 mg, tolterodine ER 4 mg, or placebo once daily for 12 weeks.",
-          "locator": "Chapple PubMed abstract, Methods"
+          "value": "After a 2-week placebo run-in, participants received fesoterodine 4 mg or 8 mg, tolterodine ER 4 mg, or placebo once each morning for 12 weeks in a double-blind, double-dummy design at 150 sites in 19 countries. Eligibility required age at least 18 years, at least 6 months of urgency symptoms, at least 8 micturitions per 24 hours, and either at least 6 urgency or at least 3 UUI episodes in a 3-day baseline diary; baseline PVR greater than 100 mL and clinically relevant outlet obstruction were excluded. Efficacy used a full analysis set (randomized, treated, and with baseline and double-blind micturition data); safety included all treated participants (1132/1135).",
+          "locator": "Full text, Study design and Subjects, pp 1205–1206; corrigendum, Eur Urol 2008;53:1319; Statistical analyses and Results, p 1207"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2007_07_009.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2007_07_009.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -306,7 +377,7 @@
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1185_03007995_2011_559581.txt",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1185_03007995_2011_559581.fulltext.txt",
         "checked": "2026-11-12",
         "level": "abstract"
       }
@@ -315,7 +386,7 @@
   "relations": [],
   "page": "/docs/clinical-evidence/studies/fesoterodine-pivotal",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

@@ -209,44 +209,60 @@
       "doi": "10.1111/j.1464-410X.2004.04819.x",
       "pmid": "15180622",
       "followUp": "12-week randomized treatment in eleven pooled trials",
-      "followUpLocator": "PubMed abstract, Patients and Methods",
+      "followUpLocator": "Full text, Patients and Methods, pp 1276–1277",
       "results": [
         {
           "endpoint": "IIEF erectile-function domain",
           "role": "primary",
-          "measure": "Mean change from baseline, 10-mg and 20-mg tadalafil versus placebo",
+          "measure": "Mean change from baseline to 12-week endpoint in IIEF erectile-function domain score; intent-to-treat evaluable population (placebo n=616, 10 mg n=309, 20 mg n=1,111)",
           "values": {
-            "exp": "10 mg: +6.5 points; 20 mg: +8.6 points",
-            "ctl": "not reported"
+            "exp": "10 mg: +6.5 points (endpoint 21.1); 20 mg: +8.6 points (endpoint 23.2)",
+            "ctl": "+0.9 points (endpoint 15.3)"
           },
           "effect": {
             "type": "none",
             "p": "<0.001"
           },
           "met": true,
-          "note": "The abstract does not give the placebo change.",
-          "locator": "PubMed abstract, Results"
+          "note": "Bonferroni-adjusted pairwise P values; no confidence intervals reported. Prespecified two-sided significance threshold P <0.05.",
+          "locator": "Full text, Methods, p 1277; Table 3, p 1279"
+        },
+        {
+          "endpoint": "Sexual Encounter Profile question 2",
+          "role": "primary",
+          "measure": "Mean change from baseline to 12-week endpoint in each patient's percentage of yes responses for successful penetration; intent-to-treat SEP-evaluable population (placebo n=625, 10 mg n=311, 20 mg n=1,119)",
+          "values": {
+            "exp": "10 mg: +24 percentage points (endpoint 73%); 20 mg: +30 percentage points (endpoint 80%)",
+            "ctl": "+3 percentage points (endpoint 50%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Bonferroni-adjusted pairwise P values; no confidence intervals or attempt counts reported. Prespecified two-sided significance threshold P <0.05.",
+          "locator": "Full text, Methods, p 1277; Table 3, p 1279"
         },
         {
           "endpoint": "Sexual Encounter Profile question 3",
           "role": "primary",
-          "measure": "Mean success rate for intercourse attempts, 10-mg and 20-mg tadalafil versus placebo",
+          "measure": "Mean change from baseline to 12-week endpoint in each patient's percentage of yes responses for successful intercourse; intent-to-treat SEP-evaluable population (placebo n=625, 10 mg n=311, 20 mg n=1,119)",
           "values": {
-            "exp": "10 mg: 58%; 20 mg: 68%",
-            "ctl": "31%"
+            "exp": "10 mg: +34 percentage points (endpoint 58%); 20 mg: +46 percentage points (endpoint 68%)",
+            "ctl": "+8 percentage points (endpoint 31%)"
           },
           "effect": {
             "type": "none",
             "p": "<0.001"
           },
           "met": true,
-          "note": "The abstract gives percentages without attempt denominators.",
-          "locator": "PubMed abstract, Results"
+          "note": "Mean per-patient response, distinct from the proportion of all attempts. Bonferroni-adjusted pairwise P values; no confidence intervals or attempt counts reported. Prespecified two-sided significance threshold P <0.05.",
+          "locator": "Full text, Results, p 1277; Table 3, p 1279"
         },
         {
           "endpoint": "Global Assessment Question: improved erections",
-          "role": "secondary",
-          "measure": "Men reporting improved erections at endpoint, 10-mg and 20-mg tadalafil versus placebo",
+          "role": "descriptive",
+          "measure": "Men reporting improved erections at endpoint in ten 12-week studies; evaluable population (placebo n=558, 10 mg n=305, 20 mg n=995)",
           "values": {
             "exp": "10 mg: 71%; 20 mg: 84%",
             "ctl": "33%"
@@ -255,32 +271,69 @@
             "type": "none",
             "p": "<0.001"
           },
-          "note": "Arm-specific respondent denominators are not supplied in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "The paper calls GAQ an additional efficacy instrument; response numerators and confidence intervals are not reported.",
+          "locator": "Full text, Methods, p 1277; Table 3 and footnote, p 1279"
+        },
+        {
+          "endpoint": "Sexual Encounter Profile question 3, all attempts",
+          "role": "descriptive",
+          "measure": "Successful intercourse attempts as a proportion of all attempts during 12-week treatment, 10-mg and 20-mg tadalafil versus placebo",
+          "values": {
+            "exp": "10 mg: 61% of attempts; 20 mg: 72% of attempts",
+            "ctl": "34% of attempts"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "Attempt counts and confidence intervals not reported; distinct from the co-primary mean per-patient SEP-Q3 endpoint.",
+          "locator": "Full text, Results, p 1277"
         }
       ],
       "harms": [
         {
           "label": "Most frequent adverse events",
           "values": {
-            "exp": "headache, dyspepsia, back pain, and myalgia",
-            "ctl": "not reported"
+            "exp": "10 mg (n=321): headache 38/321, dyspepsia 23/321, back pain 20/321, myalgia 16/321; 20 mg (n=1,143): headache 173/1,143, dyspepsia 90/1,143, back pain 60/1,143, myalgia 33/1,143",
+            "ctl": "placebo (n=638): headache 30/638, dyspepsia 7/638, back pain 15/638, myalgia 6/638"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Event counts and comparative rates are not supplied."
+          "locator": "Full text, Table 2, p 1278",
+          "note": "Treatment-emergent events; most were mild or moderate and decreased in frequency during treatment."
+        },
+        {
+          "label": "At least one treatment-emergent adverse event",
+          "values": {
+            "exp": "10 mg: 185/321; 20 mg: 577/1,143",
+            "ctl": "247/638"
+          },
+          "locator": "Full text, Table 2, p 1278"
+        },
+        {
+          "label": "Discontinuation due to adverse events",
+          "values": {
+            "exp": "10 mg: 5/321 (1.6%); 20 mg: 36/1,143",
+            "ctl": "8/638 (1.3%)"
+          },
+          "locator": "Full text, Table 2, p 1278",
+          "note": "Difference among groups P=0.026; no Clavien-Dindo grades or procedure-related harms reported."
         }
       ],
       "delivery": [
         {
           "label": "Updated pooled treatment population",
-          "value": "2,102 men in eleven 12-week randomized trials; tadalafil 10 or 20 mg as needed versus placebo, without food restrictions.",
-          "locator": "PubMed abstract, Patients and Methods"
+          "value": "2,102 men at 174 centers in eleven 12-week randomized trials; eligible men were at least 18 years old, had erectile dysfunction for at least three months and a steady female partner, and made at least four intercourse attempts during a four-week treatment-free run-in. Fixed as-needed tadalafil 10 mg (n=321) or 20 mg (n=1,143) versus placebo (n=638), before sexual intercourse without food or sexual-activity timing restrictions. Most studies excluded previous sildenafil nonresponders.",
+          "locator": "Full text, Patients and Methods and Table 1, pp 1276–1277"
+        },
+        {
+          "label": "Treatment completion and analysis sets",
+          "value": "Completed 12-week treatment: placebo 554/638 (86.8%), tadalafil 10 mg 284/321 (88.5%), tadalafil 20 mg 1,025/1,143 (89.7%). Efficacy analysis included randomized men with baseline and at least one postbaseline measurement; safety analysis included all randomized men.",
+          "locator": "Full text, Methods, p 1277; Table 2, p 1278"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_j_1464_410x_2004_04819_x.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_j_1464_410x_2004_04819_x.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],

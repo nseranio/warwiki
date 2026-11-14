@@ -37,11 +37,11 @@
     ],
     "population": "1,522 men with LUTS/BPH at risk of progression events and no previous acute urinary retention.",
     "description": "Multicenter, double-blind, placebo-controlled randomized superiority trial",
-    "locator": "PubMed abstract, Patients and Methods; ClinicalTrials.gov NCT00029822, Design and Eligibility"
+    "locator": "Full text, Patients and Methods, pp 734-735"
   },
   "verdict": "negative",
   "verdictNote": "Primary urinary-retention endpoint missed; post hoc symptom-based progression favored alfuzosin.",
-  "takeaway": "In ALTESS, alfuzosin 10 mg once daily versus placebo did not reduce first acute urinary retention over two years, the prespecified primary endpoint; a post hoc composite of retention, BPH surgery or symptom worsening favored alfuzosin.",
+  "takeaway": "In 1,506 efficacy-evaluable men with LUTS/BPH, alfuzosin 10 mg once daily versus placebo did not reduce first acute urinary retention over two years (16/749 vs 14/757; P = 0.82); a post hoc composite of retention, BPH surgery or symptom worsening favored alfuzosin.",
   "reports": [
     {
       "id": "altess-2006",
@@ -53,102 +53,165 @@
       "doi": "10.1111/j.1464-410X.2006.06110.x",
       "pmid": "16536764",
       "followUp": "Two years of treatment",
-      "followUpLocator": "PubMed abstract, Objectives and Results",
+      "followUpLocator": "Full text, Patients and Methods, p 735",
       "results": [
         {
           "endpoint": "First acute urinary retention",
           "role": "primary",
           "measure": "First acute urinary retention through two years",
           "values": {
-            "exp": "2.1%",
-            "ctl": "1.8%"
+            "exp": "16/749 (2.1%)",
+            "ctl": "14/757 (1.8%)"
           },
           "effect": {
             "type": "none",
             "p": "0.82"
           },
           "met": false,
-          "note": "The abstract gives percentages without event counts or a confidence interval.",
-          "locator": "PubMed abstract, Patients and Methods and Results"
+          "note": "Intent-to-treat efficacy population (at least one postbaseline efficacy criterion); no effect confidence interval reported.",
+          "locator": "Full text, Patients and Methods and Results, p 735"
         },
         {
           "endpoint": "BPH-related surgery",
           "role": "secondary",
           "measure": "BPH-related surgery through two years",
           "values": {
-            "exp": "5.1%",
-            "ctl": "6.5%"
+            "exp": "38/749 (5.1%)",
+            "ctl": "49/757 (6.5%)"
           },
           "effect": {
-            "type": "none",
+            "type": "RR",
+            "value": 0.78,
+            "ci": [
+              0.52,
+              1.18
+            ],
             "p": "0.18"
           },
-          "note": "Reported relative risk reduction 22% (95% CI -18% to 48%).",
-          "locator": "PubMed abstract, Results"
+          "note": "Intent-to-treat; RR and CI converted from the reported relative risk reduction of 22% (95% CI -18% to 48%).",
+          "locator": "Full text, Results and Fig. 1B, pp 735, 737"
         },
         {
           "endpoint": "Symptom deterioration",
           "role": "exploratory",
           "measure": "Post hoc IPSS deterioration of at least 4 points through two years",
           "values": {
-            "exp": "11.7%",
-            "ctl": "16.8%"
+            "exp": "88/749 (11.7%)",
+            "ctl": "127/757 (16.8%)"
           },
           "effect": {
-            "type": "none",
+            "type": "RR",
+            "value": 0.7,
+            "ci": [
+              0.54,
+              0.9
+            ],
             "p": "0.0013"
           },
-          "note": "Post hoc analysis; reported relative risk reduction 30% (95% CI 10% to 46%).",
-          "locator": "PubMed abstract, Patients and Methods and Results"
+          "note": "Post hoc analysis in the intent-to-treat population; RR and CI converted from the reported relative risk reduction of 30% (95% CI 10% to 46%).",
+          "locator": "Full text, Patients and Methods and Results, p 735; Fig. 1C, p 738"
         },
         {
           "endpoint": "Overall clinical progression",
           "role": "exploratory",
           "measure": "Post hoc composite of acute urinary retention, BPH surgery or IPSS deterioration of at least 4 points through two years",
           "values": {
-            "exp": "16.3%",
-            "ctl": "22.1%"
+            "exp": "122/749 (16.3%)",
+            "ctl": "167/757 (22.1%)"
           },
           "effect": {
-            "type": "none",
+            "type": "RR",
+            "value": 0.74,
+            "ci": [
+              0.6,
+              0.91
+            ],
             "p": "<0.001"
           },
-          "note": "Post hoc analysis; reported relative risk reduction 26% (95% CI 9% to 40%).",
-          "locator": "PubMed abstract, Patients and Methods and Results"
+          "note": "Post hoc analysis in the intent-to-treat population; RR and CI converted from the reported relative risk reduction of 26% (95% CI 9% to 40%).",
+          "locator": "Full text, Patients and Methods and Results, p 735; Fig. 1D, p 738"
+        },
+        {
+          "endpoint": "IPSS, bother score and peak urinary flow",
+          "role": "secondary",
+          "measure": "Mean change in IPSS and bother score through two years; Qmax at 12 months",
+          "values": {
+            "exp": "IPSS -5.9 (SD 6.9); bother -1.3 (SD 1.5); Qmax +2.0 mL/s (SD 3.8)",
+            "ctl": "IPSS -4.7 (SD 6.9); bother -0.9 (SD 1.6); Qmax +1.3 mL/s (SD 3.6)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "IPSS P = 0.0017 in the Results text (0.017 in the abstract); bother P < 0.001; Qmax P = 0.001. No confidence intervals reported.",
+          "locator": "Full text, Patients and Methods and Results, p 735"
         }
       ],
       "harms": [
         {
-          "label": "Overall adverse events",
+          "label": "At least one treatment-emergent adverse event",
           "values": {
-            "exp": "not quantified",
-            "ctl": "not quantified"
+            "exp": "400/754 (53.1%)",
+            "ctl": "390/761 (51.2%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract describes incidence as comparable between groups."
+          "locator": "Full text, Table 3, p 740",
+          "note": "Exposed population; the Results prose reverses the arm assignment of these percentages."
+        },
+        {
+          "label": "Serious treatment-emergent adverse events and discontinuation for adverse events",
+          "values": {
+            "exp": "serious 83/754 (11.0%); discontinued 69/754 (9.2%)",
+            "ctl": "serious 81/761 (10.6%); discontinued 58/761 (7.6%)"
+          },
+          "locator": "Full text, Table 3, p 740",
+          "note": "Exposed population. Serious-event percentages recalculated from counts because printed percentages (11.7%, 11.4%) do not match denominators."
+        },
+        {
+          "label": "Dizziness or postural dizziness and hypotension or postural hypotension",
+          "values": {
+            "exp": "dizziness 45/754 (6.0%); hypotension 9/754 (1.2%)",
+            "ctl": "dizziness 35/761 (4.6%); hypotension 4/761 (0.5%)"
+          },
+          "locator": "Full text, Table 3, p 740"
+        },
+        {
+          "label": "Ejaculation failure or retrograde ejaculation",
+          "values": {
+            "exp": "3/754 (0.4%)",
+            "ctl": "0/761 (0%)"
+          },
+          "locator": "Full text, Table 3, p 740"
         }
       ],
       "delivery": [
         {
           "label": "Study treatment",
           "values": {
-            "exp": "alfuzosin 10 mg once daily for two years",
-            "ctl": "placebo for two years"
+            "exp": "alfuzosin 10 mg once daily after the same meal, without initial dose titration, for two years",
+            "ctl": "matching placebo after the same meal for two years"
           },
-          "locator": "PubMed abstract, Objectives and Patients and Methods"
+          "locator": "Full text, Patients and Methods, p 735"
+        },
+        {
+          "label": "Completed two years of assigned study follow-up",
+          "values": {
+            "exp": "529/759 randomized (69.7%)",
+            "ctl": "480/763 randomized (62.9%)"
+          },
+          "locator": "Full text, Table 1, p 736",
+          "note": "Completion denominator is randomized patients; 1,009 completed the study across both arms."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_j_1464_410x_2006_06110_x.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_j_1464_410x_2006_06110_x.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/altess",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

@@ -28,21 +28,23 @@
       {
         "key": "exp",
         "label": "Dutasteride 0.5 mg daily",
+        "n": 2167,
         "role": "experimental"
       },
       {
         "key": "ctl",
         "label": "placebo daily",
+        "n": 2158,
         "role": "control"
       }
     ],
-    "population": "Men with clinical BPH, AUA Symptom Index at least 12, Qmax at most 15 mL/s, prostate volume at least 30 cm3, and PSA 1.5–10 ng/mL.",
+    "population": "Men at least 50 years old with clinical BPH, AUA Symptom Index at least 12, Qmax at most 15 mL/s, prostate volume at least 30 cm3, and PSA 1.5–10 ng/mL; postvoid residual greater than 250 mL, AUR within 3 months, prior prostate surgery, alpha-blocker use within 4 weeks, and any prior 5-alpha-reductase inhibitor use were excluded.",
     "description": "Pooled, double-blind randomized placebo-controlled trials",
-    "locator": "PubMed abstract, Methods; Debruyne 2004 PubMed abstract, Objectives"
+    "locator": "Full text, Materials and Methods, p 435; Debruyne 2004 PubMed abstract, Objectives"
   },
   "verdict": "positive",
   "verdictNote": "The 48-month comparison was open-label; both groups received dutasteride after month 24.",
-  "takeaway": "Across three randomized ARIA trials, dutasteride improved symptom score and peak flow and reduced acute urinary retention and BPH surgery compared with placebo over 24 months in men with symptomatic enlarged prostates.",
+  "takeaway": "Across three randomized ARIA trials, dutasteride versus placebo improved 24-month AUA symptom score (−4.5 versus −2.3 points) and reduced acute urinary retention (39/2,167 versus 90/2,158); BPH surgery was less frequent (47/2,167 versus 89/2,158). Peak flow improved more with dutasteride in men with symptomatic enlarged prostates.",
   "reports": [
     {
       "id": "aria-dutasteride-2002",
@@ -56,96 +58,165 @@
       "doi": "10.1016/s0090-4295(02)01905-2",
       "pmid": "12350480",
       "followUp": "24 months",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Materials and Methods, p 435",
       "results": [
         {
           "endpoint": "AUA Symptom Index",
           "role": "primary",
-          "measure": "Change from baseline at 24 months",
+          "measure": "Mean AUA-SI change from baseline at month 24, at-visit completers",
           "values": {
-            "exp": "−4.5 points (21.4%)",
-            "ctl": "not stated"
+            "exp": "−4.5 points (21.4% improvement)",
+            "ctl": "−2.3 points"
           },
           "effect": {
-            "type": "none",
+            "type": "difference",
+            "value": -2.2,
             "p": "<0.001"
           },
-          "met": null,
-          "note": "The abstract does not identify the prespecified primary endpoint or its threshold.",
-          "locator": "PubMed abstract, Results"
+          "met": true,
+          "note": "The paper presents at-visit (completer) means after similar last-observation-carried-forward results; month-24 measurement denominators are not reported.",
+          "locator": "Full text, Table II, p 436; Results, p 437; Comment, p 439"
         },
         {
           "endpoint": "Peak urinary flow",
           "role": "secondary",
-          "measure": "Qmax change from baseline at 24 months",
+          "measure": "Mean Qmax change from baseline at month 24, at-visit completers",
           "values": {
             "exp": "+2.2 mL/s",
-            "ctl": "not stated"
+            "ctl": "+0.6 mL/s"
           },
           "effect": {
             "type": "none",
             "p": "<0.001"
           },
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Table II, p 436; Results, p 437",
+          "met": true,
+          "note": "The paper presents at-visit (completer) means after similar last-observation-carried-forward results; month-24 measurement denominators are not reported."
         },
         {
           "endpoint": "Acute urinary retention",
-          "role": "secondary",
-          "measure": "Relative risk reduction versus placebo over 24 months",
+          "role": "primary",
+          "measure": "Acute urinary retention through 24 months, randomized denominators",
           "values": {
-            "exp": "57% lower risk",
-            "ctl": "reference"
+            "exp": "39/2,167 (1.8%)",
+            "ctl": "90/2,158 (4.2%)"
           },
           "effect": {
-            "type": "none"
+            "type": "RR",
+            "value": 0.43,
+            "ci": [
+              0.29,
+              0.62
+            ],
+            "p": "<0.001"
           },
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Statistical Analysis, p 435; Results, p 437; Fig. 3",
+          "met": true,
+          "note": "Time to event was tested by stratified log-rank; the reported relative risk reduction was 57%."
         },
         {
           "endpoint": "BPH-related surgery",
           "role": "secondary",
-          "measure": "Relative risk reduction versus placebo over 24 months",
+          "measure": "BPH-related surgical intervention through 24 months, randomized denominators",
           "values": {
-            "exp": "48% lower risk",
-            "ctl": "reference"
+            "exp": "47/2,167 (2.2%)",
+            "ctl": "89/2,158 (4.1%)"
           },
           "effect": {
-            "type": "none"
+            "type": "RR",
+            "value": 0.52,
+            "ci": [
+              0.37,
+              0.74
+            ],
+            "p": "<0.001"
           },
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Statistical Analysis, p 435; Results, p 437; Fig. 3",
+          "met": true,
+          "note": "Time to event was tested by stratified log-rank; the reported relative risk reduction was 48%."
         },
         {
           "endpoint": "Total prostate volume",
           "role": "secondary",
-          "measure": "Mean change from baseline at 24 months",
+          "measure": "Mean total prostate volume change from baseline at month 24, at-visit completers",
           "values": {
-            "exp": "−25.7%",
-            "ctl": "not stated"
+            "exp": "−25.7% (−14.6 cm3)",
+            "ctl": "+1.7% (+0.8 cm3)"
           },
           "effect": {
             "type": "none",
             "p": "<0.001"
           },
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Table II, p 436; Results, p 437; Comment, p 438",
+          "met": true,
+          "note": "The paper presents at-visit (completer) means after similar last-observation-carried-forward results; month-24 measurement denominators are not reported."
+        },
+        {
+          "endpoint": "Serum PSA",
+          "role": "secondary",
+          "measure": "Mean change from baseline at month 24, at-visit completers",
+          "values": {
+            "exp": "−52.4% (−2.2 ng/mL)",
+            "ctl": "+15.8% (+0.5 ng/mL)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "The paper presents at-visit (completer) means after similar last-observation-carried-forward results; month-24 measurement denominators are not reported. The authors advise doubling total PSA after six months of dutasteride for clinical interpretation.",
+          "locator": "Full text, Table II, p 436; Results, p 437; Comment, p 439"
         }
       ],
-      "harms": [],
+      "harms": [
+        {
+          "label": "Drug-related sexual adverse events and gynecomastia through 24 months",
+          "values": {
+            "exp": "Impotence 158/2,167 (7.3%); decreased libido 91/2,167 (4.2%); ejaculation disorder 48/2,167 (2.2%); gynecomastia 50/2,167 (2.3%)",
+            "ctl": "Impotence 86/2,158 (4.0%); decreased libido 46/2,158 (2.1%); ejaculation disorder 17/2,158 (0.8%); gynecomastia 16/2,158 (0.7%)"
+          },
+          "note": "Each between-group comparison P<0.001.",
+          "locator": "Full text, Table III, p 438"
+        },
+        {
+          "label": "Any adverse event and drug-related adverse event through 24 months",
+          "values": {
+            "exp": "Any adverse event 77%; drug-related adverse event 19% (n=2,167)",
+            "ctl": "Any adverse event 75%; drug-related adverse event 14% (n=2,158)"
+          },
+          "note": "The text reports percentages without event counts.",
+          "locator": "Full text, Tolerability, pp 437–438"
+        },
+        {
+          "label": "Diagnosed prostate cancer through 24 months",
+          "values": {
+            "exp": "24/2,167 (1.1%)",
+            "ctl": "42/2,158 (1.9%)"
+          },
+          "locator": "Full text, Tolerability, p 438"
+        }
+      ],
       "delivery": [
         {
           "label": "Trial completion",
           "value": "2,951/4,325 completed the 24-month trials (68.2%).",
-          "locator": "PubMed abstract, Methods"
+          "locator": "Full text, Abstract, p 434; Results, p 436"
         },
         {
           "label": "Treatment schedule",
           "value": "One-month single-blind placebo lead-in, then dutasteride 0.5 mg daily or placebo for 24 months.",
-          "locator": "PubMed abstract, Methods"
+          "locator": "Full text, Materials and Methods, p 435"
+        },
+        {
+          "label": "Analysis populations and missing data",
+          "value": "Efficacy analyses included men receiving at least one dose (intent to treat); the reported month-24 continuous-outcome means use at-visit completers, with last-observation-carried-forward analyses giving similar treatment inferences. AUR and surgery use randomized group denominators.",
+          "locator": "Full text, Statistical Analysis, p 435; Results, p 437; Comment, p 438"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0090_4295_02_01905_2.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0090_4295_02_01905_2.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -259,7 +330,7 @@
   "relations": [],
   "page": "/docs/clinical-evidence/studies/aria-dutasteride",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

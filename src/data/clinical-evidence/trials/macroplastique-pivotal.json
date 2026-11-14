@@ -39,11 +39,11 @@
     ],
     "population": "Adult women with stress urinary incontinence primarily due to intrinsic sphincter deficiency after unsuccessful conservative treatment.",
     "description": "Multicenter, single-blind noninferiority randomized trial",
-    "locator": "FDA SSED P040050B PDF pp6–7,10"
+    "locator": "Full text, Study Design, pp 205–206; Figure 1, p 206"
   },
   "verdict": "noninferior",
-  "verdictNote": "The prespecified Stamey-grade noninferiority margin was met; dryness favored Macroplastique.",
-  "takeaway": "In women with stress incontinence primarily due to intrinsic sphincter deficiency, transurethral Macroplastique produced more one-grade Stamey improvement and more dryness at 12 months than transurethral Contigen; the prespecified noninferiority criterion was met.",
+  "verdictNote": "The paper’s treated-as-randomized Stamey analysis met its 15-point noninferiority margin.",
+  "takeaway": "In women with stress incontinence primarily due to intrinsic sphincter deficiency, Macroplastique improved Stamey grade in 75/122 (61.5%) versus 60/125 (48.0%) Contigen recipients at 12 months (difference 13.5 points; noninferiority P < 0.001); dryness was 45/122 (36.9%) versus 31/125 (24.8%).",
   "reports": [
     {
       "id": "macroplastique-pivotal-2009",
@@ -55,28 +55,29 @@
       "doi": "10.1016/j.juro.2008.09.032",
       "pmid": "19013613",
       "followUp": "12 months after last injection",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Study Design, p 205; Outcome Measures, p 205",
       "results": [
         {
           "endpoint": "Stamey-grade improvement",
           "role": "primary",
-          "measure": "At least one Stamey-grade improvement at 12 months after last injection; treated-per-protocol risk difference",
+          "measure": "At least one Stamey-grade improvement 12 months after last injection; paper-defined intent-to-treat set of 247 treated as randomized, with discontinuations counted as failures",
           "values": {
             "exp": "75/122 (61.5%)",
             "ctl": "60/125 (48.0%)"
           },
           "effect": {
             "type": "difference",
-            "value": 13.5
+            "value": 13.5,
+            "p": "<0.001 (noninferiority)"
           },
           "met": true,
-          "note": "Treated-per-protocol analysis in the paper; FDA SSED reports a prespecified 15-percentage-point noninferiority margin met in its all-randomized analysis.",
-          "locator": "PubMed abstract, Results; FDA SSED P040050B PDF pp14–15, Table 6"
+          "note": "Macroplastique-minus-Contigen difference, 13.5 percentage points. The paper states that the 95% upper bound for Contigen minus Macroplastique was below zero, without printing its numeric limit.",
+          "locator": "Full text, Statistical Analysis, p 206; Results, p 207; Table 3 and footnote, p 208"
         },
         {
           "endpoint": "Dryness",
-          "role": "key-secondary",
-          "measure": "Stamey grade 0 at 12 months after last injection; treated-per-protocol risk difference",
+          "role": "secondary",
+          "measure": "Stamey grade 0 at 12 months after last injection; paper-defined intent-to-treat set of 247 treated as randomized, with discontinuations counted as failures",
           "values": {
             "exp": "45/122 (36.9%)",
             "ctl": "31/125 (24.8%)"
@@ -86,94 +87,121 @@
             "value": 12.1,
             "p": "<0.05"
           },
-          "met": true,
-          "note": "The paper reports a statistically greater dry/cure proportion; FDA SSED calls dryness a key secondary outcome.",
-          "locator": "PubMed abstract, Results and Conclusions; FDA SSED P040050B PDF p15, Table 6"
+          "met": "not-tested",
+          "note": "Nominal chi-square P < 0.05; the paper specifies no prespecified secondary-endpoint success threshold.",
+          "locator": "Full text, Table 3 and footnote, p 208"
         },
         {
           "endpoint": "Pad-weight reduction",
           "role": "secondary",
-          "measure": "Mean reduction in one-hour pad weight from baseline at 12 months; mean difference",
+          "measure": "Mean one-hour pad-weight reduction from baseline at 12 months among follow-up attendees",
           "values": {
-            "exp": "25.4 mL",
-            "ctl": "22.8 mL"
+            "exp": "25.4 ± 39.4 mL (n=102)",
+            "ctl": "22.8 ± 35.0 mL (n=94)"
           },
           "effect": {
             "type": "difference",
             "value": 2.6,
             "p": "0.64"
           },
-          "met": false,
-          "note": "Units and values follow the journal abstract.",
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "Followed analysis; nominal between-arm P = 0.64. No prespecified secondary-endpoint success threshold.",
+          "locator": "Full text, Table 3 and footnote, p 208"
         },
         {
           "endpoint": "Incontinence quality of life",
           "role": "secondary",
-          "measure": "Mean improvement in I-QOL score at 12 months; mean difference",
+          "measure": "Mean I-QOL score improvement from baseline at 12 months among follow-up attendees",
           "values": {
-            "exp": "28.7 points",
-            "ctl": "26.4 points"
+            "exp": "28.7 ± 20.7 points (n=102)",
+            "ctl": "26.4 ± 24.0 points (n=94)"
           },
           "effect": {
             "type": "difference",
             "value": 2.3,
             "p": "0.49"
           },
-          "met": false,
-          "note": "",
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "Followed analysis; nominal between-arm P = 0.49. No prespecified secondary-endpoint success threshold.",
+          "locator": "Full text, Table 3 and footnote, p 208"
         }
       ],
       "harms": [
         {
-          "label": "Postprocedure catheterization",
-          "values": {
-            "exp": "53/122 (43.4%)",
-            "ctl": "30/125 (24.0%)"
-          },
-          "locator": "FDA SSED P040050B PDF p17, Table 7",
-          "note": "Usually immediate intermittent catheterization in clinic."
-        },
-        {
           "label": "Urinary retention",
           "values": {
-            "exp": "26/122 (21.3%)",
-            "ctl": "18/125 (14.4%)"
+            "exp": "8/122 (6.6%)",
+            "ctl": "4/125 (3.2%)"
           },
-          "locator": "FDA SSED P040050B PDF p17, Table 7",
-          "note": "Treatment-related events."
+          "locator": "Full text, Table 5, p 209",
+          "note": "Genitourinary events counted as treatment related regardless of investigator designation or timing."
         },
         {
-          "label": "Urinary tract infection",
+          "label": "Urinary tract infection within 365 days",
           "values": {
-            "exp": "31/122 (25.4%)",
+            "exp": "29/122 (23.8%)",
             "ctl": "31/125 (24.8%)"
           },
-          "locator": "FDA SSED P040050B PDF p17, Table 7",
-          "note": "Treatment-related events."
+          "locator": "Full text, Table 5, p 209",
+          "note": "Genitourinary events counted as treatment related regardless of investigator designation or timing."
+        },
+        {
+          "label": "Any adverse event",
+          "values": {
+            "exp": "72/122 (59.0%)",
+            "ctl": "68/125 (54.4%)"
+          },
+          "locator": "Full text, Safety, p 207; Table 5, p 209",
+          "note": ""
+        },
+        {
+          "label": "Urethral erosion",
+          "values": {
+            "exp": "2/122 (1.6%)",
+            "ctl": "1/125 (0.8%)"
+          },
+          "locator": "Full text, Table 5, p 209",
+          "note": ""
+        },
+        {
+          "label": "Serious treatment-related adverse event",
+          "values": {
+            "exp": "0/122 (0%)",
+            "ctl": "1/125 (0.8%), kidney infection"
+          },
+          "locator": "Full text, Safety, p 207",
+          "note": ""
         }
       ],
       "delivery": [
         {
           "label": "Injection technique",
-          "value": "Cystoscopic transurethral submucosal injection, typically at three urethral sites, until coaptation; Macroplastique placed 1.5–2 cm distal to the bladder neck.",
-          "locator": "FDA SSED P040050B PDF pp1–2,13"
+          "value": "Transurethral endoscopic implantation with a rigid 12-degree lens cystoscope; approximately 5 mL through a 5 Fr or 7 Fr needle under local or general anesthesia, occasionally with mild sedation; Macroplastique used an injector device.",
+          "locator": "Full text, Procedure, p 205"
         },
         {
           "label": "Repeat injection",
           "values": {
             "exp": "64/122 (52.5%)",
-            "ctl": "74/126 (58.7%)"
+            "ctl": "73/125 (58.4%)"
           },
-          "locator": "FDA SSED P040050B PDF p13, Table 5; PubMed abstract, Methods",
-          "note": "A repeat treatment was permitted after the 3-month visit; FDA treatment table includes one control-assigned patient implanted with Macroplastique."
+          "locator": "Full text, Study Design, p 205; Table 2, p 207; Discussion, p 210",
+          "note": "A second treatment was permitted after the 3-month visit; the protocol limited retreatment to one injection within four weeks of that visit."
+        },
+        {
+          "label": "Implant volume",
+          "values": {
+            "exp": "First 4.6 ± 1.2 mL; second 4.3 ± 1.4 mL; overall 6.8 ± 2.6 mL",
+            "ctl": "First 4.6 ± 2.1 mL; second 4.5 ± 1.6 mL; overall 7.2 ± 3.5 mL"
+          },
+          "locator": "Full text, Table 2, p 207",
+          "note": "Means ± SD; second-treatment means are among recipients of a second injection."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2008_09_032.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2008_09_032.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     },
     {
@@ -287,7 +315,7 @@
   "relations": [],
   "page": "/docs/clinical-evidence/studies/macroplastique-pivotal",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

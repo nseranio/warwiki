@@ -104,7 +104,7 @@
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_ju_0000000000001733.txt",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_ju_0000000000001733.fulltext.txt",
         "checked": "2026-11-12",
         "level": "abstract"
       }
@@ -118,73 +118,125 @@
       "citation": "Lucente V, Giusto L, MacDiarmid S. \"Two-year Pivotal Study Analysis of the Safety and Efficacy of Implantable Tibial Nerve Stimulation With eCoin® for Urgency Urinary Incontinence.\" *Urology.* 2024;194:17-23. doi:10.1016/j.urology.2024.07.046",
       "doi": "10.1016/j.urology.2024.07.046",
       "pmid": "39089497",
-      "followUp": "96-week evaluation; 72 participants completed",
-      "followUpLocator": "PubMed abstract, Results",
+      "followUp": "96 weeks after activation; 72 attended the visit and 69 had usable UUI diary data",
+      "followUpLocator": "Full text, Methods and Outcomes, p 18; Results, p 21",
       "results": [
         {
           "endpoint": "Urgency urinary incontinence responder rate",
-          "role": "descriptive",
-          "measure": "At least 50% fewer urgency urinary incontinence episodes at 96 weeks; 72 completed the evaluation, but the abstract does not give the analysis denominator",
+          "role": "secondary",
+          "measure": "At least 50% fewer urgency urinary incontinence episodes at 96 weeks after activation; 69 with available diary data among 72 visit completers; no missing-data imputation",
           "values": {
-            "exp": "78% (95% CI 67%-87%)"
+            "exp": "54/69 (78%; 95% CI 67%-87%)"
           },
           "effect": {
             "type": "none"
           },
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "locator": "Full text, Results, p 21; Statistical Analysis and Outcomes, p 18"
         },
         {
           "endpoint": "At least 75% fewer urgency urinary incontinence episodes",
-          "role": "descriptive",
-          "measure": "At least 75% reduction at 96 weeks; analysis denominator not given in abstract",
+          "role": "secondary",
+          "measure": "At least 75% fewer urgency urinary incontinence episodes at 96 weeks after activation; available diary data",
           "values": {
-            "exp": "48% (95% CI 36%-60%)"
+            "exp": "33/69 (48%; 95% CI 36%-60%)"
           },
           "effect": {
             "type": "none"
           },
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "locator": "Full text, Results, p 21"
         },
         {
           "endpoint": "Dry on three-day diary",
-          "role": "descriptive",
-          "measure": "No urgency urinary incontinence episodes on a three-day diary at 96 weeks; analysis denominator not given in abstract",
+          "role": "secondary",
+          "measure": "No urgency urinary incontinence episodes on a three-day diary at 96 weeks after activation; available diary data",
           "values": {
-            "exp": "22% (95% CI 13%-33%)"
+            "exp": "15/69 (22%; 95% CI 13%-33%)"
           },
           "effect": {
             "type": "none"
           },
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "locator": "Full text, Results, p 21"
         },
         {
           "endpoint": "Additional OAB medication",
-          "role": "descriptive",
-          "measure": "No additional OAB medication required during the extension; denominator not given in abstract",
+          "role": "secondary",
+          "measure": "Chose not to take concurrent OAB medication during the extension, when medication was permitted; denominator not stated",
           "values": {
             "exp": "91.3%"
           },
           "effect": {
             "type": "none"
           },
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "locator": "Full text, Outcomes, p 18"
+        },
+        {
+          "endpoint": "Mean change in daily urgency urinary incontinence episodes",
+          "role": "secondary",
+          "measure": "Change from baseline at 96 weeks after activation in participants with available diary data",
+          "values": {
+            "exp": "-2.97 episodes/day (SD 2.64; n=69) from baseline mean 4.32/day (n=132)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "locator": "Full text, Table 1, p 19"
+        },
+        {
+          "endpoint": "Overactive Bladder Questionnaire quality of life",
+          "role": "secondary",
+          "measure": "Mean change from baseline at 96 weeks after activation; available questionnaire data",
+          "values": {
+            "exp": "Symptom bother -33.9 (SD 27.4; n=67); health-related quality of life +34.6 (SD 26.3; n=67)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "locator": "Full text, Table 2, p 20"
         }
       ],
       "harms": [
         {
-          "label": "Serious or unanticipated adverse events in extension phase",
+          "label": "Device- or procedure-related serious adverse events and unanticipated adverse device effects during extension",
           "values": {
             "exp": "None reported"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Applies only to the extension phase."
+          "locator": "Full text, Safety, p 20",
+          "note": "Two additional nonserious related events were reported between 48 and 96 weeks."
+        },
+        {
+          "label": "Device- or procedure-related adverse events cumulative through 96 weeks after implantation",
+          "values": {
+            "exp": "29/133 (22%); infections 9/133 (7%), including postoperative wound infection 6/133 (5%)"
+          },
+          "locator": "Full text, Table 3, p 21",
+          "note": "Cumulative patient counts; 27/133 (20%) had related events through 52 weeks."
+        },
+        {
+          "label": "Serious device-related adverse events cumulative through 96 weeks after implantation",
+          "values": {
+            "exp": "3/133 (2%): implant-site infection 2/133 (2%), contact dermatitis 1/133 (1%)"
+          },
+          "locator": "Full text, Table 4, p 21; Safety, p 20",
+          "note": "All three occurred in the first year and resulted in explantation; no new related serious events in extension."
         }
       ],
-      "delivery": [],
+      "delivery": [
+        {
+          "label": "Extension enrollment and analysis",
+          "value": "105 participants consented to the extension; 72 attended the 96-week visit, 69 had available UUI diary data, and missing data were not imputed for secondary outcomes.",
+          "locator": "Full text, Methods and Statistical Analysis, p 18; Table 1, p 19"
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_urology_2024_07_046.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_urology_2024_07_046.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],

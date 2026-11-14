@@ -36,9 +36,9 @@
         "role": "control"
       }
     ],
-    "population": "Women with refractory overactive bladder or urgency-predominant mixed urinary incontinence after conservative and pharmacological treatment, considering invasive treatment.",
+    "population": "Women with refractory overactive bladder or urgency-predominant mixed urinary incontinence after unsuccessful conservative management and at least two pharmacological treatments unless contraindicated, considering invasive treatment.",
     "description": "Multicenter, open-label superiority randomized trial",
-    "locator": "Lancet 2025 pp1058–1059, Methods and trial profile"
+    "locator": "Full text, Methods and trial profile, pp 1058–1059"
   },
   "verdict": "negative",
   "verdictNote": "Added urodynamics did not improve final patient-reported success.",
@@ -74,8 +74,8 @@
             "p": "0.60"
           },
           "met": false,
-          "note": "Adjusted odds ratio; powered for a minimum 10-percentage-point superiority advantage. Analysis excluded four participants after randomization.",
-          "locator": "Lancet 2025 p1058, Statistical analysis; p1059, trial profile; p1061, Table 2"
+          "note": "Adjusted odds ratio; powered for a minimum 10-percentage-point superiority advantage. Intention-to-treat analysis excluded four participants after randomization; the missing-data sensitivity analysis gave OR 1.04 (95% CI 0.69–1.57; P = 0.84).",
+          "locator": "Full text, Statistical analysis and trial profile, p 1059; Results and Table 2, p 1061"
         },
         {
           "endpoint": "PGI-I success",
@@ -94,12 +94,13 @@
             ],
             "p": "<0.0001"
           },
+          "met": true,
           "note": "Earlier treatment in the assessment-only arm contributed to the early difference.",
-          "locator": "Lancet 2025 p1061, Table 2; p1063, Discussion"
+          "locator": "Full text, Table 2, p 1061; Discussion, p 1063"
         },
         {
           "endpoint": "PGI-I success after botulinum toxin A",
-          "role": "exploratory",
+          "role": "secondary",
           "measure": "Very much or much improved 2 months after injection among treated respondents",
           "values": {
             "exp": "88/138 (63.8%)",
@@ -114,19 +115,60 @@
             ],
             "p": "0.52"
           },
-          "note": "Post-treatment subgroup, not the randomized primary comparison.",
-          "locator": "Lancet 2025 p1061, Table 2"
+          "met": false,
+          "note": "Prespecified secondary outcome in the treated subgroup, not the randomized primary comparison.",
+          "locator": "Full text, Outcomes, p 1059; Table 2, p 1061"
+        },
+        {
+          "endpoint": "PGI-I success, less strict definition",
+          "role": "secondary",
+          "measure": "Final participant-reported very much improved, much improved, or improved",
+          "values": {
+            "exp": "217/496 (43.8%)",
+            "ctl": "209/503 (41.6%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 1.14,
+            "ci": [
+              0.79,
+              1.65
+            ],
+            "p": "0.47"
+          },
+          "met": false,
+          "locator": "Full text, Outcomes, p 1059; Table 2 and Results, p 1061"
+        },
+        {
+          "endpoint": "PGI-I success, per-protocol analysis",
+          "role": "descriptive",
+          "measure": "Final participant-reported very much or much improved among women receiving allocated investigation",
+          "values": {
+            "exp": "113/454 (24.9%)",
+            "ctl": "111/483 (23.0%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 1.22,
+            "ci": [
+              0.78,
+              1.91
+            ],
+            "p": "0.39"
+          },
+          "met": false,
+          "locator": "Full text, Statistical analysis, p 1060; Table 2 and Results, p 1061"
         }
       ],
       "harms": [
         {
           "label": "At least one adverse event",
           "values": {
-            "exp": "113/550",
+            "exp": "113/550 (20.5%)",
             "ctl": "122/549 (22.2%)"
           },
-          "locator": "Lancet 2025 p1062, Results",
-          "note": "The article prints 20.6% for 113/550, which recalculates to 20.5% to one decimal; the count is retained without a percentage."
+          "locator": "Full text, Results, p 1062",
+          "note": "The article prints 20.6% for 113/550; the percentage recalculates to 20.5% to one decimal."
         },
         {
           "label": "Urinary tract infection",
@@ -134,7 +176,7 @@
             "exp": "39/550 (7.1%)",
             "ctl": "41/549 (7.5%)"
           },
-          "locator": "Lancet 2025 p1063, Table 4",
+          "locator": "Full text, Table 4, p 1063",
           "note": "Events during the treatment pathway, not isolated post-urodynamics infections."
         },
         {
@@ -143,15 +185,23 @@
             "exp": "26/550 (4.7%)",
             "ctl": "32/549 (5.8%)"
           },
-          "locator": "Lancet 2025 p1063, Table 4",
+          "locator": "Full text, Table 4, p 1063",
           "note": "Most patients received intradetrusor botulinum toxin A; attribution to the diagnostic test is not reported."
+        },
+        {
+          "label": "Urinary retention without clean intermittent self-catheterisation",
+          "values": {
+            "exp": "5/550 (0.9%)",
+            "ctl": "11/549 (2.0%)"
+          },
+          "locator": "Full text, Table 4, p 1063"
         }
       ],
       "delivery": [
         {
           "label": "Assessment and urodynamics",
           "value": "Both arms: history, examination, 3-day bladder diary and post-void residual scan, with optional noninvasive uroflow; experimental arm: cystometry and uroflow, with optional pressure-flow study.",
-          "locator": "Lancet 2025 p1058, Procedures"
+          "locator": "Full text, Procedures, pp 1058–1059"
         },
         {
           "label": "Any treatment after assessment",
@@ -159,7 +209,7 @@
             "exp": "467/550 (84.9%)",
             "ctl": "479/549 (87.2%)"
           },
-          "locator": "Lancet 2025 p1062, Results",
+          "locator": "Full text, Results, p 1062",
           "note": "Treatment selection followed the urodynamic or clinical diagnosis, respectively."
         },
         {
@@ -168,7 +218,7 @@
             "exp": "277/467 (59.3%)",
             "ctl": "343/479 (71.6%)"
           },
-          "locator": "Lancet 2025 pp1062,1064, Results and Discussion",
+          "locator": "Full text, Results, p 1062; Discussion, p 1064",
           "note": "The source gives percentages among participants receiving any treatment."
         },
         {
@@ -177,7 +227,7 @@
             "exp": "16/467 (3.4%)",
             "ctl": "5/479 (1.0%)"
           },
-          "locator": "Lancet 2025 pp1062,1064, Results and Discussion",
+          "locator": "Full text, Results, p 1062; Discussion, p 1064",
           "note": "Treatment mix was a consequence of diagnostic strategy."
         },
         {
@@ -186,13 +236,23 @@
             "exp": "11/467 (2.4%)",
             "ctl": "8/479 (1.7%)"
           },
-          "locator": "Lancet 2025 pp1062,1064, Results and Discussion",
+          "locator": "Full text, Results, p 1062; Discussion, p 1064",
           "note": "Small treated subgroup."
+        },
+        {
+          "label": "Urodynamic diagnoses among women with a result",
+          "value": "Among 494 with a urodynamic diagnosis available: detrusor overactivity or detrusor overactivity incontinence 287/494 (58.1%); urodynamic stress incontinence 65/494 (13.2%); urodynamic mixed incontinence 39/494 (7.9%); neither stress incontinence nor detrusor overactivity confirmed 102/494 (20.6%). The reported category counts sum to 493.",
+          "locator": "Full text, Results, p 1062"
+        },
+        {
+          "label": "Urodynamic quality assurance",
+          "value": "An expert panel reviewed 124 randomly selected traces or reports; it disagreed with the local diagnosis in 5/124 (4.0%), and these diagnoses were changed.",
+          "locator": "Full text, Procedures, p 1059; Results, p 1063"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0140_6736_24_01886_5.txt",
-        "checked": "2026-11-12",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0140_6736_24_01886_5.fulltext.txt",
+        "checked": "2026-11-13",
         "level": "full-text"
       }
     },

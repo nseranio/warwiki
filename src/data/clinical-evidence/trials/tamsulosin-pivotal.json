@@ -27,26 +27,29 @@
       {
         "key": "t04",
         "label": "Tamsulosin 0.4 mg daily",
-        "role": "experimental"
+        "role": "experimental",
+        "n": 254
       },
       {
         "key": "t08",
         "label": "tamsulosin 0.8 mg daily",
-        "role": "experimental"
+        "role": "experimental",
+        "n": 248
       },
       {
         "key": "pbo",
         "label": "placebo",
-        "role": "control"
+        "role": "control",
+        "n": 254
       }
     ],
-    "population": "756 men with symptomatic benign prostatic hyperplasia were randomized in the primary US study.",
+    "population": "756 men aged at least 45 years with symptomatic BPH, AUA symptom score at least 13, Qmax 4–15 mL/s, and postvoid residual below 300 mL were randomized; recent urinary retention and significant cardiovascular disease were excluded.",
     "description": "Multicenter, double-blind, placebo-controlled phase 3 randomized trial",
-    "locator": "Lepor 1998, PubMed abstract, Methods"
+    "locator": "Full text, Inclusion/Exclusion Criteria and Patient Demographics, pp 893–894"
   },
   "verdict": "positive",
-  "verdictNote": "Both doses improved symptom score and peak flow; adverse events were higher at 0.8 mg.",
-  "takeaway": "In the primary US phase 3 trial, tamsulosin 0.4 mg daily or 0.4 mg for 1 week then 0.8 mg daily improved AUA symptom score and peak urinary flow versus placebo over 13 weeks; the higher-dose arm had more adverse events.",
+  "verdictNote": "All four primary measures improved with both doses; abnormal ejaculation increased with dose.",
+  "takeaway": "In 756 randomized men with symptomatic BPH, tamsulosin 0.4 mg daily or 0.4 mg for 1 week then 0.8 mg daily improved all four prespecified symptom and flow measures versus placebo at 13 weeks; abnormal ejaculation increased with dose.",
   "reports": [
     {
       "id": "tamsulosin-pivotal-1998",
@@ -60,84 +63,150 @@
       "doi": "10.1016/s0090-4295(98)00126-5",
       "pmid": "9609623",
       "followUp": "13 weeks of double-blind treatment",
-      "followUpLocator": "PubMed abstract, Results",
+      "followUpLocator": "Full text, Study Design, p 893",
       "results": [
         {
           "endpoint": "AUA symptom score",
           "role": "primary",
-          "measure": "Change in total AUA symptom score at trial end",
+          "measure": "Mean change in total AUA symptom score from baseline to 13-week endpoint; intention-to-treat population with available endpoint scores",
           "values": {
-            "t04": "Improved versus placebo",
-            "t08": "Improved versus placebo",
-            "pbo": "Comparator"
+            "t04": "−8.3 ± 6.3 points (n=246; mean ± SD)",
+            "t08": "−9.6 ± 6.2 points (n=237; mean ± SD)",
+            "pbo": "−5.5 ± 6.3 points (n=246; mean ± SD)"
           },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "<0.001 for each active arm versus placebo; 0.020 for 0.8 versus 0.4 mg"
           },
           "met": true,
-          "note": "The abstract reports statistically significant improvement for both doses but gives no arm estimates or prespecified alpha.",
-          "locator": "PubMed abstract, Methods and Results"
+          "note": "No between-arm confidence interval reported.",
+          "locator": "Full text, Table I, p 894"
+        },
+        {
+          "endpoint": "AUA symptom-score response",
+          "role": "primary",
+          "measure": "At least 25% reduction in total AUA symptom score from baseline to 13-week endpoint; intention-to-treat population with available endpoint scores",
+          "values": {
+            "t04": "171/246 (70%)",
+            "t08": "175/237 (74%)",
+            "pbo": "126/246 (51%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001 for each active arm versus placebo"
+          },
+          "met": true,
+          "note": "No between-arm confidence interval reported.",
+          "locator": "Full text, Table I, p 894"
         },
         {
           "endpoint": "Peak urinary flow",
           "role": "primary",
-          "measure": "Change in Qmax at trial end",
+          "measure": "Mean change in Qmax from baseline to 13-week endpoint; intention-to-treat population with available endpoint flow measurements",
           "values": {
-            "t04": "Improved versus placebo",
-            "t08": "Improved versus placebo",
-            "pbo": "Comparator"
+            "t04": "+1.75 ± 3.5 mL/s (n=254; mean ± SD)",
+            "t08": "+1.78 ± 3.3 mL/s (n=247; mean ± SD)",
+            "pbo": "+0.52 ± 3.3 mL/s (n=253; mean ± SD)"
           },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "<0.001 for each active arm versus placebo"
           },
           "met": true,
-          "note": "The abstract reports statistically significant improvement for both doses but gives no arm estimates or prespecified alpha.",
-          "locator": "PubMed abstract, Methods and Results"
+          "note": "No between-arm confidence interval reported.",
+          "locator": "Full text, Table I, p 894"
+        },
+        {
+          "endpoint": "Qmax response",
+          "role": "primary",
+          "measure": "At least 30% increase in Qmax from baseline to 13-week endpoint; intention-to-treat population with available endpoint flow measurements",
+          "values": {
+            "t04": "79/254 (31%)",
+            "t08": "88/247 (36%)",
+            "pbo": "54/253 (21%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.012 for 0.4 mg; <0.001 for 0.8 mg versus placebo"
+          },
+          "met": true,
+          "note": "No between-arm confidence interval reported.",
+          "locator": "Full text, Table I, p 894"
         },
         {
           "endpoint": "Early peak-flow response",
           "role": "secondary",
-          "measure": "Qmax response after first dose",
+          "measure": "Qmax response 4–8 hours after first 0.4-mg dose",
           "values": {
-            "t04": "Onset within 4 to 8 hours"
+            "t04": "Improved versus placebo (P <0.001)",
+            "t08": "Improved while receiving 0.4 mg",
+            "pbo": "Comparator"
           },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "<0.001 for 0.4 mg versus placebo"
           },
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Efficacy and Figure 1B, pp 894–896"
         }
       ],
       "harms": [
         {
-          "label": "Adverse events",
+          "label": "Treatment-emergent adverse events and common harms",
           "values": {
-            "t04": "Comparable to placebo",
-            "t08": "Somewhat higher than placebo",
-            "pbo": "Comparator"
+            "t04": "Any event 165/254 (65%); abnormal ejaculation 15/254 (6%); dizziness 25/254 (10%); infection 23/254 (9%)",
+            "t08": "Any event 180/248 (73%); abnormal ejaculation 44/248 (18%); dizziness 28/248 (11%); infection 25/248 (10%)",
+            "pbo": "Any event 151/254 (59%); abnormal ejaculation 0/254; dizziness 13/254 (5%); infection 13/254 (5%)"
           },
-          "locator": "PubMed abstract, Results"
+          "note": "Any event P=0.002 and abnormal ejaculation P<0.001 for 0.8 mg versus placebo; infection is not specified as urinary.",
+          "locator": "Full text, Table III, p 897"
         },
         {
-          "label": "Positive orthostatic tests",
+          "label": "Clinically significant orthostatic hypotension",
           "values": {
-            "t04": "Comparable to placebo",
-            "t08": "Comparable to placebo",
-            "pbo": "Comparator"
+            "t04": "1/254 (<1%)",
+            "t08": "2/248 (<1%)",
+            "pbo": "0/254"
           },
-          "locator": "PubMed abstract, Results"
+          "note": "Positive orthostatic test incidence was comparable across groups; this outcome required symptoms or a recorded orthostatic-hypotension event.",
+          "locator": "Full text, Safety, p 895"
+        },
+        {
+          "label": "Serious adverse events",
+          "values": {
+            "t04": "4/254 (2%)",
+            "t08": "6/248 (2%)",
+            "pbo": "3/254 (1%)"
+          },
+          "note": "No deaths occurred.",
+          "locator": "Full text, Safety, p 895"
+        },
+        {
+          "label": "Discontinuation because of adverse events",
+          "values": {
+            "t04": "18/254 (7%)",
+            "t08": "31/248 (13%)",
+            "pbo": "22/254 (9%)"
+          },
+          "note": "P=0.115 across groups by Fisher exact test.",
+          "locator": "Full text, Patient Demographics, p 894"
         }
       ],
       "delivery": [
         {
           "label": "Daily oral doses",
-          "value": "Tamsulosin 0.4 mg or 0.8 mg once daily versus placebo.",
-          "locator": "PubMed abstract, Methods"
+          "value": "Following a 4-week single-blind placebo lead-in, 254 men received tamsulosin 0.4 mg daily, 248 received 0.4 mg daily for 1 week then 0.8 mg daily for 12 weeks, and 254 received placebo during 13 double-blind weeks.",
+          "locator": "Full text, Study Design, p 893; Patient Demographics, p 894"
+        },
+        {
+          "label": "Intention-to-treat set and treatment completion",
+          "value": "755/756 randomized men met intention-to-treat criteria. Treatment was not completed by 41/254 (16%) assigned 0.4 mg, 50/248 (20%) assigned 0.8 mg, and 47/254 (19%) assigned placebo; 138/756 (18%) overall.",
+          "locator": "Full text, Patient Demographics, p 894"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0090_4295_98_00126_5.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0090_4295_98_00126_5.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -406,7 +475,7 @@
   "relations": [],
   "page": "/docs/clinical-evidence/studies/tamsulosin-pivotal",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

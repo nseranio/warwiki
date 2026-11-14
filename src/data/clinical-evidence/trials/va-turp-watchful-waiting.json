@@ -112,7 +112,7 @@
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1056_nejm199501123320202.txt",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1056_nejm199501123320202.fulltext.txt",
         "level": "abstract",
         "checked": "2026-11-12"
       }
@@ -126,39 +126,113 @@
       "citation": "Flanigan RC, Reda DJ, Wasson JH, et al. \"5-Year Outcome of Surgical Resection and Watchful Waiting for Men with Moderately Symptomatic Benign Prostatic Hyperplasia: A Department of Veterans Affairs Cooperative Study.\" *J Urol.* 1998;160(1):12-17. doi:10.1016/S0022-5347(01)63011-8",
       "doi": "10.1016/S0022-5347(01)63011-8",
       "pmid": "9628595",
-      "followUp": "Up to five years; 966 TURP and 990 watchful-waiting patient-years",
-      "followUpLocator": "Europe PMC abstract, Materials and Methods",
+      "followUp": "Up to five years; mean 3.4 years (966 patient-years) for TURP and 3.6 years (990 patient-years) for watchful waiting",
+      "followUpLocator": "Full text, Results, p 13",
       "results": [
         {
           "endpoint": "Treatment failure",
           "role": "primary",
-          "measure": "Five-year treatment-failure risk; risk difference in percentage points",
+          "measure": "Treatment failure through up to five years, intention to treat",
           "values": {
-            "exp": "10%",
-            "ctl": "21%"
+            "exp": "28/280 (10.0%)",
+            "ctl": "58/276 (21.0%)"
           },
           "effect": {
-            "type": "difference",
-            "value": -11,
+            "type": "RR",
+            "value": 0.476,
+            "ci": [
+              0.313,
+              0.724
+            ],
             "p": "0.0004"
           },
-          "met": null,
-          "note": "Risk difference in percentage points, calculated from the rounded percentages in the abstract; outcome denominators were not reported there.",
-          "locator": "Europe PMC abstract, Results"
+          "met": true,
+          "note": "Prespecified primary endpoint; all statistical tests were two-sided with 0.05 considered significant.",
+          "locator": "Full text, Statistical methods and Table 1, p 13"
+        },
+        {
+          "endpoint": "Urinary retention",
+          "role": "descriptive",
+          "measure": "Urinary-retention component of treatment failure through up to five years, intention to treat",
+          "values": {
+            "exp": "1/280 (0.4%)",
+            "ctl": "9/276 (3.3%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.11,
+            "ci": [
+              0.014,
+              0.859
+            ],
+            "p": "0.011"
+          },
+          "locator": "Full text, Table 1, p 13"
+        },
+        {
+          "endpoint": "High residual urine volume",
+          "role": "descriptive",
+          "measure": "High-residual-volume component of treatment failure through up to five years, intention to treat",
+          "values": {
+            "exp": "5/280 (1.8%)",
+            "ctl": "19/276 (6.9%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.259,
+            "ci": [
+              0.098,
+              0.685
+            ],
+            "p": "0.003"
+          },
+          "locator": "Full text, Table 1, p 13"
+        },
+        {
+          "endpoint": "Peak flow in men with low baseline flow",
+          "role": "descriptive",
+          "measure": "Modeled change from baseline to 60 months at baseline peak flow 7 mL/s",
+          "values": {
+            "exp": "+8.682 mL/s after assigned TURP",
+            "ctl": "+2.225 mL/s among men remaining on watchful waiting"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001 for initial TURP versus continued watchful waiting; 0.0002 versus later crossover"
+          },
+          "note": "Men who crossed over from watchful waiting to TURP had modeled change +4.676 mL/s; as-treated groups were not randomized comparisons.",
+          "locator": "Full text, Statistical methods, p 13, and Table 3, p 15"
         }
       ],
-      "harms": [],
+      "harms": [
+        {
+          "label": "Persistent incontinence",
+          "values": {
+            "exp": "4/280 (1.4%)",
+            "ctl": "8/276 (2.9%)"
+          },
+          "note": "Randomized-group comparison, P = 0.259; among men who actually underwent TURP, 3/250 (1.2%) had persistent incontinence.",
+          "locator": "Full text, Table 1, p 13, Table 2 and Discussion, p 14"
+        },
+        {
+          "label": "Repeat procedure after assignment to TURP",
+          "values": {
+            "exp": "11/280 (3.9%)"
+          },
+          "locator": "Full text, Results, p 13"
+        }
+      ],
       "delivery": [
         {
           "label": "Watchful-waiting crossover at five years",
-          "value": "36% of men assigned to watchful waiting crossed over to surgery.",
-          "locator": "Europe PMC abstract, Results"
+          "value": "76/276 (27.5%) underwent TURP during observed follow-up; the five-year Kaplan–Meier cumulative crossover estimate was 36%.",
+          "locator": "Full text, Results, pp 13–14"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0022_5347_01_63011_8.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0022_5347_01_63011_8.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     }
   ],

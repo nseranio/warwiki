@@ -35,13 +35,13 @@
         "role": "control"
       }
     ],
-    "population": "Forty men with anterior urethral strictures underwent direct-vision internal urethrotomy.",
+    "population": "Forty men with previously untreated bulbar urethral strictures after straddle injury or other blunt perineal trauma; stricture length ≤1.5 cm on retrograde urethrography.",
     "description": "Prospective randomized trial",
-    "locator": "PubMed abstract, Patients and Methods"
+    "locator": "Full text, Patients and methods, p 1090"
   },
-  "verdict": "positive",
-  "verdictNote": "Recurrence was lower at six months; the prespecified threshold was not reported.",
-  "takeaway": "In 40 men with anterior urethral stricture, submucosal mitomycin C injection at internal urethrotomy reduced six-month recurrence versus urethrotomy without mitomycin C (2/20 [10%] versus 10/20 [50%]; p = 0.006).",
+  "verdict": "descriptive",
+  "verdictNote": "Recurrence was lower with mitomycin C; no primary endpoint or sample size was specified.",
+  "takeaway": "In 40 men with previously untreated trauma-related bulbar strictures, submucosal mitomycin C before urethrotomy reduced recurrence during a mean 15 months of follow-up versus urethrotomy alone (2/20 [10%] versus 10/20 [50%]; p = 0.006).",
   "reports": [
     {
       "id": "mazdak-mitomycin-2007",
@@ -52,13 +52,13 @@
       "citation": "Mazdak H, Meshki I, Ghassami F. \"Effect of mitomycin C on anterior urethral stricture recurrence after internal urethrotomy.\" *Eur Urol.* 2007;51(4):1089-1092. doi:10.1016/j.eururo.2006.11.038",
       "doi": "10.1016/j.eururo.2006.11.038",
       "pmid": "17157434",
-      "followUp": "Recurrence compared at six months",
-      "followUpLocator": "PubMed abstract, Patients and Methods",
+      "followUp": "Mean 15 months (range 6–24); retrograde urethrography every 6 months or with obstructive symptoms; follow-up data for all 40 men",
+      "followUpLocator": "Full text, Patients and methods and Results, p 1090",
       "results": [
         {
           "endpoint": "Anterior urethral stricture recurrence",
-          "role": "primary",
-          "measure": "Men with recurrence at six-month assessment",
+          "role": "descriptive",
+          "measure": "Men with recurrence during follow-up (mean 15 months, range 6–24); all 40 had follow-up data",
           "values": {
             "exp": "2/20 (10%)",
             "ctl": "10/20 (50%)"
@@ -67,9 +67,8 @@
             "type": "none",
             "p": "0.006"
           },
-          "met": null,
-          "note": "The abstract calls the difference statistically significant but gives no prespecified alpha or endpoint threshold.",
-          "locator": "PubMed abstract, Results"
+          "note": "The authors call the comparison statistically significant; no primary endpoint designation or prespecified alpha is reported. No effect estimate or confidence interval is reported.",
+          "locator": "Full text, Results, p 1090 and Table 2, p 1091"
         }
       ],
       "harms": [],
@@ -77,23 +76,31 @@
         {
           "label": "Procedure and injection",
           "values": {
-            "exp": "Direct-vision internal urethrotomy under general anesthesia, then 0.1 mg mitomycin C injected submucosally at the urethrotomy site",
-            "ctl": "Direct-vision internal urethrotomy under general anesthesia without mitomycin C; control injection not specified in abstract"
+            "exp": "Before incision, 0.1 mg mitomycin C in 2 mL distilled water injected submucosally at 1, 5, 7 and 11 o'clock using a 22-gauge cystoscopic needle; then 12 o'clock cold-knife incision under general anesthesia with a 20F Wolf urethrotome by one surgeon",
+            "ctl": "12 o'clock cold-knife incision under general anesthesia with a 20F Wolf urethrotome by the same surgeon; no submucosal injection"
           },
-          "locator": "PubMed abstract, Patients and Methods"
+          "locator": "Full text, Patients and methods, p 1090"
+        },
+        {
+          "label": "Postoperative catheter",
+          "values": {
+            "exp": "18F or 20F indwelling catheter for 5 days",
+            "ctl": "18F or 20F indwelling catheter for 5 days"
+          },
+          "locator": "Full text, Patients and methods, p 1090"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2006_11_038.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2006_11_038.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/mazdak-mitomycin",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

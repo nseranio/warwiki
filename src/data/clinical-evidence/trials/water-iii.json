@@ -35,13 +35,13 @@
         "role": "control"
       }
     ],
-    "population": "202 men with moderate to severe lower urinary tract symptoms and prostate volumes of 80–180 mL were enrolled; 186 underwent surgery.",
+    "population": "202 men aged 45–80 years with IPSS ≥8 and prostate volumes of 80–180 mL were enrolled; 186 underwent surgery.",
     "description": "International, multicenter, partially randomized, nonblinded noninferiority trial",
-    "locator": "PubMed abstract, Methods and Key Findings; ClinicalTrials.gov NCT04801381, Study Design"
+    "locator": "Full text, Methods §§2.1–2.4 and Results, p 269"
   },
-  "verdict": "noninferior",
-  "verdictNote": "Three-month IPSS noninferiority shown; the abstract omits the safety decision threshold.",
-  "takeaway": "Partially randomized WATER III compared Aquablation with transurethral laser enucleation for 80–180 mL prostates. Three-month IPSS improvement met Bayesian noninferiority, while retrograde ejaculation and persistent stress incontinence were reported less often after Aquablation.",
+  "verdict": "mixed",
+  "verdictNote": "IPSS noninferiority met; safety noninferiority missed the prespecified 0.975 posterior-probability threshold.",
+  "takeaway": "Partially randomized WATER III compared Aquablation with transurethral laser enucleation for 80–180 mL prostates. Three-month IPSS improvement met Bayesian noninferiority; the coprimary safety endpoint did not. In eligible subgroups, persistent de novo ejaculatory dysfunction and stress incontinence at three months were less frequent after Aquablation.",
   "reports": [
     {
       "id": "water-iii-2026",
@@ -53,7 +53,7 @@
       "doi": "10.1016/j.euf.2026.01.006",
       "pmid": "41638951",
       "followUp": "3 months for the coprimary efficacy and safety endpoints",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Methods §2.6, p 268",
       "results": [
         {
           "endpoint": "IPSS change",
@@ -72,16 +72,16 @@
             ]
           },
           "met": true,
-          "note": "95% credible interval; posterior probability of noninferiority >0.999. Arm-specific analyzed denominators are absent from the abstract.",
-          "locator": "PubMed abstract, Key Findings and Limitations"
+          "note": "95% credible interval; posterior probability of noninferiority >0.999 (success threshold >0.975; margin 4.7 IPSS points). The randomized cohort was augmented by nonrandomized participants in the Bayesian model; arm-specific analyzed counts are not stated.",
+          "locator": "Full text, Methods §2.7, p 269; Results §3.2.1, p 269"
         },
         {
           "endpoint": "Procedural safety composite",
           "role": "primary",
           "measure": "Clavien–Dindo grade ≥2 or grade 1 complications persisting at 3 months; Bayesian risk difference, percentage points",
           "values": {
-            "exp": "40.8%",
-            "ctl": "56.8%"
+            "exp": "40/98 (40.8%)",
+            "ctl": "50/88 (56.8%)"
           },
           "effect": {
             "type": "difference",
@@ -91,29 +91,72 @@
               12.9
             ]
           },
-          "met": null,
-          "note": "95% credible interval; posterior probability of noninferiority 0.952. The abstract does not give the prespecified decision threshold or event denominators. Estimated difference is model-based, not subtraction of the displayed rates.",
-          "locator": "PubMed abstract, Methods and Key Findings and Limitations"
+          "met": false,
+          "note": "95% credible interval; posterior probability of noninferiority 0.952, below the prespecified >0.975 threshold with a 10-percentage-point margin. Event counts are calculated from reported rates and the safety population; the Bayesian difference is model-based.",
+          "locator": "Full text, Methods §2.7 and Results §3.2.2, p 269; Table 1, p 270"
+        },
+        {
+          "endpoint": "Qmax and prostate volume",
+          "role": "secondary",
+          "measure": "At 3 months, mean Qmax (mL/s) and mean prostate volume (mL)",
+          "values": {
+            "exp": "Qmax 19.8 ± 10.6 mL/s; prostate volume 51 mL",
+            "ctl": "Qmax 27.5 ± 11.3 mL/s; prostate volume 26 mL"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001 for each comparison"
+          },
+          "met": "not-tested",
+          "note": "Secondary outcomes; baseline Qmax was 10.7 versus 10.8 mL/s, and baseline prostate volume 105.3 versus 108.7 mL.",
+          "locator": "Full text, Methods §2.6, p 269; Results §3.5 and Fig. 3, pp 271–272; Table 1, p 270"
         }
       ],
       "harms": [
         {
-          "label": "Retrograde ejaculation at 3 months",
+          "label": "Persistent de novo ejaculatory dysfunction at 3 months",
           "values": {
             "exp": "14.8%",
             "ctl": "77.1%"
           },
-          "locator": "PubMed abstract, Key Findings and Limitations",
-          "note": "P <0.001; event counts and denominators are absent from the abstract."
+          "locator": "Full text, Results §3.3.4, p 270",
+          "note": "P <0.0001; defined as inability to ejaculate at 3 months among men sexually active at baseline and follow-up who met baseline MSHQ-EjD-SF ejaculatory-function criteria (question 3 score ≥1 and questions 1–3 total ≥4); arm-specific denominators are not stated in the article body."
         },
         {
           "label": "Persistent stress urinary incontinence at 3 months",
           "values": {
-            "exp": "0%",
-            "ctl": "9.3%"
+            "exp": "0/69 (0%)",
+            "ctl": "5/54 (9.3%)"
           },
-          "locator": "PubMed abstract, Key Findings and Limitations",
-          "note": "P <0.05; event counts and denominators are absent from the abstract."
+          "locator": "Full text, Results §3.3.3, p 270; Table 2, p 271",
+          "note": "P <0.05; denominator is men continent at baseline."
+        },
+        {
+          "label": "Clavien–Dindo grade ≥3 adverse events",
+          "values": {
+            "exp": "8/98 (8.2%)",
+            "ctl": "5/88 (5.7%)"
+          },
+          "locator": "Full text, Results §3.2.2, p 269; Table 1, p 270",
+          "note": "Counts calculated from reported rates and safety population; one LEP patient had a grade 4a hypervolemia event requiring one night in intensive care."
+        },
+        {
+          "label": "Urinary tract infection requiring antibiotics",
+          "values": {
+            "exp": "28/98 (28.6%)",
+            "ctl": "21/88 (23.9%)"
+          },
+          "locator": "Full text, Results §3.3.2, p 270; Table 1, p 270",
+          "note": "Counts calculated from reported rates and safety population; most common grade ≥2 complication in both groups."
+        },
+        {
+          "label": "Bleeding interventions",
+          "values": {
+            "exp": "Fulguration 5/98 (5.1%); transfusion 0/98; bladder tamponade 0/98",
+            "ctl": "Fulguration 3/88 (3.4%); transfusion 2/88 (2.3%); bladder tamponade 2/88 (2.3%)"
+          },
+          "locator": "Full text, Results §3.3.1, p 270; Table 1, p 270",
+          "note": "Counts calculated from reported percentages and safety population; events can overlap."
         }
       ],
       "delivery": [
@@ -123,20 +166,29 @@
             "exp": "98 treated",
             "ctl": "88 treated"
           },
-          "locator": "PubMed abstract, Key Findings and Limitations",
-          "note": "186 of 202 enrolled men underwent surgery; 170 had 3-month data, including 66 randomized and 104 nonrandomized men. Arm-specific analysis counts are not stated."
+          "locator": "Full text, Results and Fig. 1, pp 269–270",
+          "note": "186 of 202 enrolled men underwent surgery (35 randomized and 63 nonrandomized Aquablation; 32 randomized and 56 nonrandomized LEP); 170 had 3-month data (66 randomized, 104 nonrandomized)."
         },
         {
           "label": "Operative approaches",
-          "value": "AquaBeam waterjet ablation with bladder-neck electroresection for residual tissue and hemostasis versus center-standard holmium or thulium laser enucleation.",
-          "locator": "ClinicalTrials.gov NCT04801381, Arms and Interventions; https://clinicaltrials.gov/study/NCT04801381",
-          "note": "Registry protocol description; operative details are not in the PubMed abstract."
+          "value": "Aquablation and laser enucleation followed procedural and institutional standards; LEP used holmium or thulium laser, with laser type, enucleation, and coagulation technique at physician discretion.",
+          "locator": "Full text, Methods §2.5, p 268",
+          "note": "Surgeons were highly experienced; 79/88 LEP patients were treated by surgeons with >200 prior procedures."
+        },
+        {
+          "label": "Operative time",
+          "values": {
+            "exp": "58.1 ± 19.6 min; 2.4 ± 0.6 ablation runs",
+            "ctl": "61.8 ± 25.8 min; enucleation 41.5 ± 20.4 min; morcellation 14.1 ± 6.7 min"
+          },
+          "locator": "Full text, Results §3.4, pp 270–271",
+          "note": "Aquablation runs totaled 10.7 ± 3.4 min; mean coagulation time was 29.5 ± 13.8 min."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_euf_2026_01_006.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_euf_2026_01_006.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     },
     {
@@ -228,7 +280,7 @@
   ],
   "page": "/docs/clinical-evidence/studies/water-iii",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

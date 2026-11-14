@@ -42,9 +42,9 @@
         "n": 454
       }
     ],
-    "population": "Adults in the United States and Canada with overactive bladder symptoms for at least three months.",
+    "population": "Adults aged at least 18 years in the United States and Canada with at least three months of overactive bladder symptoms, at least eight micturitions and three grade 3/4 urgency episodes per 24 hours at baseline.",
     "description": "Multicenter, double-blind, placebo-controlled phase 3 randomized trial",
-    "locator": "PubMed abstract, Materials and Methods; publisher article, Patient Disposition and Demographics; FDA clinical review p93, Figure 3"
+    "locator": "Full text, Inclusion/Exclusion Criteria and Study Procedures, p 1390"
   },
   "verdict": "positive",
   "verdictNote": "Both doses met both co-primary symptom endpoints versus placebo at 12 weeks.",
@@ -61,12 +61,12 @@
       "doi": "10.1016/j.juro.2012.10.017",
       "pmid": "23079373",
       "followUp": "12 weeks of randomized treatment",
-      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "followUpLocator": "Full text, Study Procedures, p 1390",
       "results": [
         {
           "endpoint": "Incontinence episodes per 24 hours",
           "role": "primary",
-          "measure": "Mean change from baseline to final visit (95% CI)",
+          "measure": "Adjusted mean change from baseline to final visit (95% CI); FAS-I n=933: mirabegron 50 mg n=312, 100 mg n=296, placebo n=325",
           "values": {
             "mira50": "−1.47 (−1.69 to −1.25)",
             "mira100": "−1.63 (−1.86 to −1.40)",
@@ -74,16 +74,16 @@
           },
           "effect": {
             "type": "none",
-            "p": "<0.05"
+            "p": "<0.05 for each mirabegron dose vs placebo, multiplicity-adjusted"
           },
           "met": true,
-          "note": "Both mirabegron doses differed significantly from placebo; intervals are for within-arm mean changes.",
-          "locator": "PubMed abstract, Results"
+          "note": "Within-arm change CIs; placebo-adjusted differences and their CIs are not reported.",
+          "locator": "Full text, Table 2 and Statistical Analyses, pp 1391–1392"
         },
         {
           "endpoint": "Micturitions per 24 hours",
           "role": "primary",
-          "measure": "Mean change from baseline to final visit (95% CI)",
+          "measure": "Adjusted mean change from baseline to final visit (95% CI); FAS n=1,270: mirabegron 50 mg n=425, 100 mg n=412, placebo n=433",
           "values": {
             "mira50": "−1.66 (−1.92 to −1.40)",
             "mira100": "−1.75 (−2.01 to −1.48)",
@@ -91,41 +91,117 @@
           },
           "effect": {
             "type": "none",
-            "p": "<0.05"
+            "p": "<0.05 for each mirabegron dose vs placebo, multiplicity-adjusted"
           },
           "met": true,
-          "note": "Both mirabegron doses differed significantly from placebo; intervals are for within-arm mean changes.",
-          "locator": "PubMed abstract, Results"
+          "note": "Within-arm change CIs; placebo-adjusted differences and their CIs are not reported.",
+          "locator": "Full text, Table 2 and Statistical Analyses, pp 1391–1392"
+        },
+        {
+          "endpoint": "Volume voided per micturition",
+          "role": "key-secondary",
+          "measure": "Adjusted mean change from baseline to final visit, mL (95% CI); FAS n=1,270 (425/412/433) for 50 mg/100 mg/placebo",
+          "values": {
+            "mira50": "18.2 (13.4 to 22.9)",
+            "mira100": "18.0 (13.1 to 22.8)",
+            "placebo": "7.0 (2.3 to 11.7)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.05 for each mirabegron dose vs placebo, multiplicity-adjusted"
+          },
+          "met": true,
+          "note": "Within-arm change CIs; placebo-adjusted differences and their CIs are not reported.",
+          "locator": "Full text, Table 2 and Statistical Analyses, pp 1391–1392"
+        },
+        {
+          "endpoint": "Incontinence episodes per 24 hours at week 4",
+          "role": "key-secondary",
+          "measure": "Adjusted mean change from baseline to week 4 (95% CI); FAS-I n=933 (312/296/325) for 50 mg/100 mg/placebo",
+          "values": {
+            "mira50": "−1.20 (−1.43 to −0.97)",
+            "mira100": "−1.18 (−1.42 to −0.94)",
+            "placebo": "−0.72 (−0.95 to −0.50)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.05 for each mirabegron dose vs placebo, multiplicity-adjusted"
+          },
+          "met": true,
+          "note": "Within-arm change CIs; placebo-adjusted differences and their CIs are not reported.",
+          "locator": "Full text, Table 2 and Statistical Analyses, pp 1391–1392"
+        },
+        {
+          "endpoint": "Micturitions per 24 hours at week 4",
+          "role": "key-secondary",
+          "measure": "Adjusted mean change from baseline to week 4 (95% CI); FAS n=1,270 (425/412/433) for 50 mg/100 mg/placebo",
+          "values": {
+            "mira50": "−1.19 (−1.44 to −0.93)",
+            "mira100": "−1.37 (−1.62 to −1.11)",
+            "placebo": "−0.77 (−1.02 to −0.52)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.05 for each mirabegron dose vs placebo, multiplicity-adjusted"
+          },
+          "met": true,
+          "note": "Within-arm change CIs; placebo-adjusted differences and their CIs are not reported.",
+          "locator": "Full text, Table 2 and Statistical Analyses, pp 1391–1392"
         }
       ],
       "harms": [
         {
           "label": "Dry mouth",
           "values": {
-            "mira50": "0.5%",
-            "mira100": "2.1%",
-            "placebo": "1.5%"
+            "mira50": "2/442 (0.5%)",
+            "mira100": "9/433 (2.1%)",
+            "placebo": "7/453 (1.5%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract reports percentages without event counts or denominators."
+          "locator": "Full text, Table 3, p 1394",
+          "note": "Treatment-emergent events in the safety analysis set."
         },
         {
-          "label": "Frequently reported treatment-emergent adverse events",
-          "locator": "PubMed abstract, Results",
-          "note": "Hypertension, urinary tract infection, headache, and nasopharyngitis had similar incidence across mirabegron and placebo groups; no rates are given in the abstract."
+          "label": "Hypertension treatment-emergent adverse events",
+          "locator": "Full text, Safety Results, p 1394",
+          "note": "Prespecified hypertension grouping includes blood pressure increased and blood pressure abnormal; broader than the Table 3 preferred term.",
+          "values": {
+            "mira50": "33/442 (7.5%)",
+            "mira100": "27/433 (6.2%)",
+            "placebo": "32/453 (7.1%)"
+          }
+        },
+        {
+          "label": "Urinary tract infection",
+          "values": {
+            "mira50": "12/442 (2.7%)",
+            "mira100": "16/433 (3.7%)",
+            "placebo": "8/453 (1.8%)"
+          },
+          "locator": "Full text, Table 3 and Safety Results, pp 1393–1394",
+          "note": "Treatment-emergent reports were not necessarily urine culture-confirmed."
+        },
+        {
+          "label": "Acute urinary retention",
+          "values": {
+            "mira50": "0/442",
+            "mira100": "0/433"
+          },
+          "locator": "Full text, Safety Results, p 1393",
+          "note": "The report states that acute urinary retention was not observed in mirabegron-treated patients; it does not provide a placebo count."
         }
       ],
       "delivery": [
         {
           "label": "Treatment schedule",
-          "value": "Two-week placebo run-in, then mirabegron 50 mg, mirabegron 100 mg, or placebo once daily for 12 weeks.",
-          "locator": "PubMed abstract, Materials and Methods"
+          "value": "Two-week single-blind placebo run-in, then mirabegron 50 mg, mirabegron 100 mg, or placebo once daily for 12 weeks; visits at weeks 4, 8, and 12 and telephone follow-up 30 days later.",
+          "locator": "Full text, Study Procedures, p 1390",
+          "note": "Overall study discontinuations: 13.3% with 50 mg, 12.2% with 100 mg, and 15.2% with placebo; adverse-event discontinuations: 4.1%, 4.4%, and 3.7%, respectively (Full text, Patient Disposition, p 1391)."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2012_10_017.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2012_10_017.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
@@ -148,7 +224,7 @@
   ],
   "page": "/docs/clinical-evidence/studies/aries",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

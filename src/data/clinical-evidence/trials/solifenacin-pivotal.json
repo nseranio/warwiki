@@ -38,9 +38,9 @@
         "role": "control"
       }
     ],
-    "population": "Patients with symptoms of overactive bladder enrolled at multinational centers.",
+    "population": "Adults with overactive bladder symptoms for at least 3 months, at least 8 micturitions per 24 hours, and at least 3 urgency and/or incontinence episodes in a 3-day diary after a 2-week placebo run-in.",
     "description": "Multicenter, double-blind, placebo-controlled phase 3 randomized trial",
-    "locator": "PubMed abstract, Purpose and Materials and Methods; publisher indexed article text, Results (911 randomized)"
+    "locator": "Full text, Patients and Methods, p 1920; Results, p 1920"
   },
   "verdict": "positive",
   "verdictNote": "Both doses met the primary micturition endpoint; dry mouth increased with dose.",
@@ -58,24 +58,49 @@
       "doi": "10.1097/01.ju.0000140729.07840.16",
       "pmid": "15540755",
       "followUp": "12-week treatment",
-      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "followUpLocator": "Full text, Study design, p 1920",
       "results": [
         {
-          "endpoint": "Micturitions",
+          "endpoint": "Micturitions (5 mg versus placebo)",
           "role": "primary",
-          "measure": "Mean change in micturitions per 24 hours from baseline to 12 weeks",
+          "measure": "Mean change in micturitions per 24 hours from baseline to 12-week endpoint; efficacy set (286 on 5 mg, 281 on placebo), last observation carried forward; prespecified ANOVA",
           "values": {
             "s5": "−2.37",
+            "ctl": "−1.59"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.78,
+            "ci": [
+              -1.27,
+              -0.29
+            ],
+            "p": "0.0018"
+          },
+          "met": true,
+          "note": "The confidence interval is for the between-arm difference, not the within-arm change. Prespecified two-sided alpha was 0.05.",
+          "locator": "Full text, Statistical analysis, p 1920; Results, pp 1920-1921; Table 1, p 1921"
+        },
+        {
+          "endpoint": "Micturitions (10 mg versus placebo)",
+          "role": "primary",
+          "measure": "Mean change in micturitions per 24 hours from baseline to 12-week endpoint; efficacy set (290 on 10 mg, 281 on placebo), last observation carried forward; prespecified ANOVA",
+          "values": {
             "s10": "−2.81",
             "ctl": "−1.59"
           },
           "effect": {
-            "type": "none",
-            "p": "5 mg versus placebo: 0.0018; 10 mg versus placebo: 0.0001"
+            "type": "difference",
+            "value": -1.22,
+            "ci": [
+              -1.71,
+              -0.72
+            ],
+            "p": "0.0001"
           },
           "met": true,
-          "note": "Both dose comparisons were statistically significant; the abstract gives no between-dose test.",
-          "locator": "PubMed abstract, Results"
+          "note": "The confidence interval is for the between-arm difference, not the within-arm change. Prespecified two-sided alpha was 0.05.",
+          "locator": "Full text, Statistical analysis, p 1920; Results, pp 1920-1921; Table 1, p 1921"
         },
         {
           "endpoint": "Urgency episodes",
@@ -83,83 +108,142 @@
           "measure": "Mean change in urgency episodes per 24 hours from baseline to 12 weeks",
           "values": {
             "s5": "−2.84 (−51%)",
-            "s10": "−2.90 (−52%)"
+            "s10": "−2.90 (−52%)",
+            "ctl": "−1.98"
           },
           "effect": {
             "type": "none",
             "p": "5 mg versus placebo: 0.003; 10 mg versus placebo: 0.002"
           },
-          "note": "Placebo change not reported in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Unadjusted ANOVA comparison; efficacy set (286, 290, and 281 for 5 mg, 10 mg, and placebo). Between-arm 95% CIs: −1.44 to −0.28 (5 mg) and −1.49 to −0.35 (10 mg).",
+          "locator": "Full text, Results, pp 1920-1921; Table 1, p 1921"
         },
         {
           "endpoint": "Nocturia episodes",
           "role": "secondary",
           "measure": "Mean change in nocturia episodes per 24 hours from baseline to 12 weeks",
           "values": {
+            "s5": "−0.58",
             "s10": "−0.71 (−38.5%)",
             "ctl": "−0.52 (−16.4%)"
           },
           "effect": {
             "type": "none",
-            "p": "10 mg versus placebo: 0.036"
+            "p": "5 mg versus placebo: not significant; 10 mg versus placebo: 0.036"
           },
-          "note": "5 mg nocturia comparison not reported in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Unadjusted ANOVA; 10 mg versus placebo difference approximately −0.19 episodes (95% CI −0.38 to −0.01). The 5 mg comparison was not significant.",
+          "locator": "Full text, Results, p 1921; Figure 2, p 1921"
         },
         {
           "endpoint": "Incontinence episodes",
           "role": "secondary",
-          "measure": "Change in incontinence episodes per 24 hours at 12 weeks",
+          "measure": "Mean change in all incontinence episodes per 24 hours at 12-week endpoint; adjusted ANCOVA",
+          "values": {
+            "s5": "−1.73 adjusted (−1.63 unadjusted)",
+            "s10": "−1.58 adjusted (−1.57 unadjusted)",
+            "ctl": "−1.25 unadjusted"
+          },
           "effect": {
             "type": "none",
             "p": "5 mg versus placebo: 0.002; 10 mg versus placebo: 0.016"
           },
-          "note": "Both comparisons were statistically significant; change values are not given in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "491/857 efficacy-set participants (57%) reported incontinence at baseline; P values are from ANCOVA adjusted for baseline. Adjusted placebo change was not reported.",
+          "locator": "Full text, Results, pp 1921-1922; Figure 4, p 1922"
         },
         {
           "endpoint": "Urge-incontinence episodes",
           "role": "secondary",
-          "measure": "Change in urge-incontinence episodes per 24 hours at 12 weeks",
+          "measure": "Mean change in urge-incontinence episodes per 24 hours at 12-week endpoint; adjusted ANCOVA",
+          "values": {
+            "s5": "−1.33 adjusted (−1.30 unadjusted)",
+            "s10": "−1.24 adjusted (−1.21 unadjusted)",
+            "ctl": "−0.91 unadjusted"
+          },
           "effect": {
             "type": "none",
             "p": "5 mg versus placebo: 0.014; 10 mg versus placebo: 0.042"
           },
-          "note": "Both comparisons were statistically significant; change values are not given in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "405/857 efficacy-set participants (47%) reported urge incontinence at baseline; P values are from ANCOVA adjusted for baseline. Adjusted placebo change was not reported.",
+          "locator": "Full text, Results, pp 1921-1922; Figure 4, p 1922"
+        },
+        {
+          "endpoint": "Mean volume voided per micturition",
+          "role": "secondary",
+          "measure": "Mean change from baseline to 12-week endpoint, mL",
+          "values": {
+            "s5": "+30.8 mL",
+            "s10": "+36.0 mL",
+            "ctl": "+10.67 mL"
+          },
+          "effect": {
+            "type": "none",
+            "p": "5 mg versus placebo: 0.0001; 10 mg versus placebo: 0.0001"
+          },
+          "note": "Between-arm differences from rounded changes are approximately +20.1 mL (95% CI 12.4 to 27.7) and +25.3 mL (95% CI 17.7 to 33.0), respectively.",
+          "locator": "Full text, Results, p 1922; Figure 2, p 1921"
+        },
+        {
+          "endpoint": "Continence among participants incontinent at baseline",
+          "role": "descriptive",
+          "measure": "No incontinence at 12-week endpoint among participants with at least one baseline incontinence episode",
+          "values": {
+            "s5": "50.3% (arm-specific denominator not reported)",
+            "s10": "49.7% (arm-specific denominator not reported)"
+          },
+          "note": "491/857 efficacy-set participants had incontinence at baseline; arm-specific counts and placebo continence rate were not reported.",
+          "locator": "Full text, Results, pp 1921-1922"
         }
       ],
       "harms": [
         {
           "label": "Dry mouth",
           "values": {
-            "s5": "7.7%",
-            "s10": "23%",
-            "ctl": "2.3%"
+            "s5": "23/299 (7.7%)",
+            "s10": "71/307 (23.1%)",
+            "ctl": "7/301 (2.3%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Mostly mild; arm-specific event counts are not given in the abstract."
+          "locator": "Full text, Table 3, p 1922; Table 2, p 1921",
+          "note": "Mostly mild; no severe cases in either solifenacin group. Denominators are the treated safety set."
+        },
+        {
+          "label": "Constipation and blurred vision",
+          "values": {
+            "s5": "constipation 11/299 (3.7%); blurred vision 12/299 (4.0%)",
+            "s10": "constipation 28/307 (9.1%); blurred vision 18/307 (5.9%)",
+            "ctl": "constipation 6/301 (2.0%); blurred vision 7/301 (2.3%)"
+          },
+          "locator": "Full text, Table 3, p 1922; Table 2, p 1921",
+          "note": "Treatment-emergent anticholinergic adverse events in the treated safety set."
+        },
+        {
+          "label": "Discontinuation due to adverse event",
+          "values": {
+            "s5": "7/299 (2.3%)",
+            "s10": "12/307 (3.9%)",
+            "ctl": "10/301 (3.3%)"
+          },
+          "locator": "Full text, Table 2, p 1921",
+          "note": "Primary reason for treatment discontinuation in the treated safety set."
         }
       ],
       "delivery": [
         {
           "label": "Treatment schedule",
-          "value": "Oral solifenacin 5 mg or 10 mg, or placebo, once daily for 12 weeks.",
-          "locator": "PubMed abstract, Materials and Methods"
+          "value": "After a 2-week placebo run-in, oral solifenacin 5 mg or 10 mg, or placebo, was taken once daily for 12 weeks. Of 911 randomized, 907 were treated, 857 entered the efficacy analysis, and 830/907 (91.5%) completed treatment; 3-day micturition diaries preceded visits every 4 weeks.",
+          "locator": "Full text, Study design and Results, p 1920; Table 2, p 1921"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_01_ju_0000140729_07840_16.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_01_ju_0000140729_07840_16.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/solifenacin-pivotal",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

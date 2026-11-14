@@ -35,13 +35,13 @@
         "role": "control"
       }
     ],
-    "population": "Women with stress urinary incontinence due to intrinsic sphincter deficiency and no associated urethral hypermobility.",
+    "population": "Women at least 18 years old with stress urinary incontinence due to intrinsic sphincter deficiency, straining urethral angle of 35° or less, bladder capacity greater than 250 mL without detrusor instability, negative urine culture, and no prior urethral bulking.",
     "description": "Multicenter, single-blind noninferiority randomized trial",
-    "locator": "PubMed abstract, Objectives and Methods; FDA SSED p6"
+    "locator": "Full text, Materials and Methods, pp 877-878; Results, p 878"
   },
   "verdict": "noninferior",
-  "verdictNote": "FDA review found noninferiority; the journal abstract reports a nonsignificant superiority comparison.",
-  "takeaway": "Calcium hydroxylapatite (Coaptite) met the prespecified noninferiority criterion versus bovine dermal collagen (Contigen) for 12-month Stamey-grade improvement in women with intrinsic sphincter deficiency; the published complete-case comparison was 63.4% versus 57.0% (P = 0.34).",
+  "verdictNote": "Primary noninferiority met; 12-month efficacy analysis included 231/296 treated women.",
+  "takeaway": "Calcium hydroxylapatite (Coaptite) met the prespecified noninferiority criterion versus bovine dermal collagen (Contigen) for 12-month Stamey-grade improvement in women with intrinsic sphincter deficiency; among 231 evaluable women, improvement occurred in 83/131 (63.4%) versus 57/100 (57.0%; P = 0.34).",
   "reports": [
     {
       "id": "coaptite-pivotal-2007",
@@ -53,12 +53,12 @@
       "doi": "10.1016/j.urology.2007.01.050",
       "pmid": "17482925",
       "followUp": "12 months after initial injection; complete-case efficacy data for 231/296 treated women",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Materials and Methods, p 877",
       "results": [
         {
           "endpoint": "Stamey-grade improvement",
           "role": "primary",
-          "measure": "At least one Stamey-grade improvement at 12 months, complete cases",
+          "measure": "At least one Stamey-grade improvement at 12 months, evaluable patients with baseline and 12-month scores",
           "values": {
             "exp": "83/131 (63.4%)",
             "ctl": "57/100 (57.0%)"
@@ -68,59 +68,110 @@
             "p": "0.34"
           },
           "met": true,
-          "note": "Prespecified noninferiority margin was based on 15% of the control response proportion; FDA judged noninferiority met. Published P value tests between-group difference, not noninferiority.",
-          "locator": "PubMed abstract, Results; FDA SSED pp9,12,17, Table 7"
+          "note": "The prespecified 95% confidence interval criterion used a 15% bound and anticipated 70% collagen response; the paper states noninferiority was met but does not print the observed interval. P = 0.34 compares groups.",
+          "locator": "Full text, Materials and Methods, p 877; Efficacy, p 878"
         },
         {
           "endpoint": "Stamey-grade improvement",
-          "role": "descriptive",
-          "measure": "At least one Stamey-grade improvement at 12 months, treated population with last observation carried forward",
+          "role": "primary",
+          "measure": "At least one Stamey-grade improvement at 12 months, intent-to-treat analysis with last observation carried forward",
           "values": {
-            "exp": "91/158 (57.6%)",
-            "ctl": "70/138 (50.7%)"
+            "exp": "58%",
+            "ctl": "51%"
           },
           "effect": {
             "type": "none",
-            "p": "0.2445"
+            "p": "0.24"
           },
-          "note": "FDA regulatory analysis; differs from the journal abstract's complete-case denominators.",
-          "locator": "FDA SSED p12, Table 6"
+          "note": "The paper gives rounded percentages without arm counts for this analysis.",
+          "locator": "Full text, Efficacy, p 878",
+          "met": true
+        },
+        {
+          "endpoint": "Stamey grade 0 (dry)",
+          "role": "secondary",
+          "measure": "Cure at 12 months, evaluable patients",
+          "values": {
+            "exp": "39%",
+            "ctl": "37%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.78"
+          },
+          "met": "not-tested",
+          "note": "The paper does not provide arm-specific counts for this endpoint.",
+          "locator": "Full text, Efficacy, p 878"
+        },
+        {
+          "endpoint": "24-hour pad-weight response",
+          "role": "secondary",
+          "measure": "At least 50% decline in 24-hour pad weight at 12 months",
+          "values": {
+            "exp": "62%",
+            "ctl": "54%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.23"
+          },
+          "met": "not-tested",
+          "note": "The paper does not provide arm-specific counts for this endpoint.",
+          "locator": "Full text, Efficacy, p 878"
         }
       ],
       "harms": [
         {
-          "label": "Treatment-related urinary retention",
+          "label": "Transient urinary retention",
           "values": {
             "exp": "41%",
             "ctl": "33%"
           },
-          "locator": "FDA SSED p16, Safety Results",
-          "note": "Percentages reported without patient counts; treated safety populations were 158 and 138."
+          "locator": "Full text, Safety, p 878",
+          "note": "No permanent retention occurred; the paper reports percentages without patient counts."
         },
         {
-          "label": "Unanticipated treatment-related serious tissue dissection or erosion",
+          "label": "Treatment-related serious local erosion or tissue dissection",
           "values": {
             "exp": "2/158",
-            "ctl": "not stated"
+            "ctl": "0/138"
           },
-          "locator": "FDA SSED p17, Conclusions",
-          "note": "FDA review described tissue bridges and erosion in two Coaptite recipients; attribution to device versus technique was uncertain."
+          "locator": "Full text, Safety, p 878; Comment, p 879",
+          "note": "One vaginal-wall erosion led to a subsequent suburethral sling; the other event was trigonal submucosal dissection without intervention."
         },
         {
-          "label": "Systemic adverse events",
+          "label": "Systemic adverse events or chronic persistent urinary tract infection",
           "values": {
             "exp": "none observed",
             "ctl": "none observed"
           },
-          "locator": "PubMed abstract, Results",
-          "note": ""
+          "locator": "Full text, Abstract, Results, p 876; Safety, p 878",
+          "note": "Neither was reported in either arm."
+        },
+        {
+          "label": "Any serious adverse event",
+          "values": {
+            "exp": "11/158",
+            "ctl": "12/138"
+          },
+          "locator": "Full text, Safety, p 878",
+          "note": "23 patients experienced 33 serious events; only two events, both in the CaHA arm, were considered treatment related."
+        },
+        {
+          "label": "Post-treatment urge incontinence",
+          "values": {
+            "exp": "5.7%",
+            "ctl": "12%"
+          },
+          "locator": "Full text, Safety, p 878",
+          "note": "P < 0.05; the paper does not give patient counts."
         }
       ],
       "delivery": [
         {
           "label": "Injection protocol",
-          "value": "Cystoscopic urethral injection under anesthesia; up to five treatment sessions, with repeat sessions allowed in the first six months.",
-          "locator": "PubMed abstract, Methods; FDA SSED p9, Treatment"
+          "value": "Injection by experienced investigators at the bladder neck to achieve visual coaptation; anesthesia and transurethral or periurethral route at investigator discretion; up to five injections in the first six months.",
+          "locator": "Full text, Materials and Methods, p 877"
         },
         {
           "label": "Initial injection route",
@@ -128,8 +179,8 @@
             "exp": "145/158 (91.8%) transurethral",
             "ctl": "123/138 (89.1%) transurethral"
           },
-          "locator": "FDA SSED p13, Table 9",
-          "note": "Periurethral injection was permitted at investigator discretion."
+          "locator": "Full text, Results, p 878",
+          "note": "Periurethral injection was used in 13/158 (8.2%) CaHA patients and 15/138 (10.9%) collagen patients."
         },
         {
           "label": "Single-session treatment during study",
@@ -137,8 +188,8 @@
             "exp": "60/158 (38.0%)",
             "ctl": "36/138 (26.1%)"
           },
-          "locator": "PubMed abstract, Results; denominators confirmed in FDA SSED p6",
-          "note": "P = 0.034. Counts refer to all treated women, unlike the FDA SSED complete-case treatment table."
+          "locator": "Full text, Abstract, Results, p 876; Efficacy, p 878; Conclusions, p 879",
+          "note": "P = 0.034 in the abstract and conclusion; rounded to P = 0.03 in the efficacy text."
         },
         {
           "label": "Mean total injected volume over study",
@@ -146,21 +197,30 @@
             "exp": "4.0 mL",
             "ctl": "6.6 mL"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "P < 0.0001; FDA SSED complete-case table reports 6.8 mL for collagen."
+          "locator": "Full text, Abstract, Results, p 876; Efficacy, p 879",
+          "note": "P < 0.0001 for total volume over the study course."
+        },
+        {
+          "label": "Mean volume at first injection",
+          "values": {
+            "exp": "2.15 mL",
+            "ctl": "3.39 mL"
+          },
+          "locator": "Full text, Efficacy, p 879",
+          "note": "P < 0.0001."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_urology_2007_01_050.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_urology_2007_01_050.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/coaptite-pivotal",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

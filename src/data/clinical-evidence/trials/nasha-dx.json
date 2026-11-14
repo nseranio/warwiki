@@ -38,11 +38,11 @@
     ],
     "population": "Adults aged 18–75 years with fecal incontinence for at least 12 months, CCFIS at least 10, at least four episodes over 2 weeks, and failed supervised conservative treatment.",
     "description": "Multicenter, double-blind, sham-controlled superiority randomized trial",
-    "locator": "Graf 2011 PubMed abstract, Methods; Mellgren 2014 full text, Materials and Methods—Patients"
+    "locator": "Full text, Methods—Patients and Randomisation, p 998; Figure 1; Mellgren 2014 full text, Materials and Methods—Patients"
   },
   "verdict": "positive",
-  "verdictNote": "Six-month responder rate favored NASHA Dx; most treated patients received a second injection.",
-  "takeaway": "Transanal submucosal dextranomer in stabilized hyaluronic acid (NASHA Dx) produced more six-month fecal-incontinence responders than sham injection: 71/136 (52%) versus 22/70 (31%); odds ratio 2.36 (95% CI 1.24–4.47).",
+  "verdictNote": "All three prespecified primary success criteria were met; 112/136 treated patients received a second injection.",
+  "takeaway": "Transanal submucosal dextranomer in stabilized hyaluronic acid (NASHA Dx) produced more six-month fecal-incontinence responders than sham injection: 71/136 (52%) versus 22/70 (31%); odds ratio 2.36 (95% CI 1.24–4.47; P=0.0089). All three prespecified primary criteria were met.",
   "reports": [
     {
       "id": "nasha-dx-2011",
@@ -54,7 +54,7 @@
       "doi": "10.1016/S0140-6736(10)62297-0",
       "pmid": "21420555",
       "followUp": "Six-month masked assessment with a 2-week bowel diary",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Methods—Procedures and Statistical analysis, pp 998–1000",
       "results": [
         {
           "endpoint": "At least 50% reduction in fecal-incontinence episodes",
@@ -74,16 +74,75 @@
             "p": "0.0089"
           },
           "met": true,
-          "note": "FDA SSED pp15, 26–27 states that all three prespecified primary efficacy criteria were met; its model estimates differ from the Lancet's reported proportions and P value.",
-          "locator": "PubMed abstract, Findings; FDA SSED pp15, 26–27 for prespecified success criteria"
+          "note": "Intention-to-treat with last observation carried forward; 132/136 active and 65/70 sham patients were assessed at six months. Modeled response was 52.7% (95% CI 39.8–65.2) versus 32.1% (20.2–46.9). Both six-month primary criteria were met: between-arm P<0.05 and active-arm lower 95% CI >35%.",
+          "locator": "Full text, Methods—Statistical analysis, p 999; Results and Table 3, p 1000"
+        },
+        {
+          "endpoint": "At least 25% reduction in fecal-incontinence episodes",
+          "role": "primary",
+          "measure": "12-month active-arm responder proportion, intention-to-treat with last observation carried forward",
+          "values": {
+            "exp": "69.1% (95% CI 61.4–76.9; n=136 randomized)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": true,
+          "note": "The third prespecified primary criterion required the lower 95% CI to exceed 50%; the sham arm was unmasked and excluded after six months.",
+          "locator": "Full text, Methods—Procedures and primary endpoint, p 999; Results, Table 3, p 1000"
+        },
+        {
+          "endpoint": "Incontinence-free days over two weeks",
+          "role": "secondary",
+          "measure": "Mean increase from baseline at six months",
+          "values": {
+            "exp": "+3.1 days (SD 4.05; n=136 randomized)",
+            "ctl": "+1.7 days (SD 3.50; n=70 randomized)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.0156"
+          },
+          "met": true,
+          "note": "Prespecified secondary endpoint; intention-to-treat with last observation carried forward.",
+          "locator": "Full text, Methods—Secondary endpoints and Statistical analysis, pp 999–1000; Results, p 1000"
         }
       ],
-      "harms": [],
-      "delivery": [],
+      "harms": [
+        {
+          "label": "Common adverse events during the six-month blinded phase",
+          "values": {
+            "exp": "Proctalgia 19/136 (14.0%); injection-site bleeding 7/136 (5.1%); fever 11/136 (8.1%); rectal hemorrhage 10/136 (7.4%)",
+            "ctl": "Proctalgia 2/70 (2.9%); injection-site bleeding 12/70 (17.1%); fever 0/70; rectal hemorrhage 1/70 (1.4%)"
+          },
+          "note": "Injection-site bleeding was transient and stopped without intervention; the paper did not report Clavien-Dindo grades.",
+          "locator": "Full text, Results and Table 4, p 1001"
+        },
+        {
+          "label": "Serious treatment-related adverse events during the six-month blinded phase",
+          "values": {
+            "exp": "Rectal abscess 1/136 (0.7%), surgically drained; prostatic abscess 1/136 (0.7%), treated with antibiotics",
+            "ctl": "0/70 serious treatment-related events"
+          },
+          "note": "There were 128 treatment-related events in the active arm and 29 in the sham arm; these are event counts, not patient counts.",
+          "locator": "Full text, Results and Table 4, p 1001"
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Injection technique and retreatment",
+          "values": {
+            "exp": "Outpatient anoscopic injection without anesthesia: 1 mL in each of four submucosal quadrants about 5 mm above the dentate line (4 mL initially; 4–8 mL total if repeated); 112/136 (82%) received a second injection at one month",
+            "ctl": "Sham anoscopy without injection; 61/70 (87%) received a repeat sham procedure at one month"
+          },
+          "note": "Cleansing enema before treatment; needle held for 10 seconds to limit backflow. Retreatment was offered for CCFIS ≥10 without persistent adverse effects.",
+          "locator": "Full text, Methods—Procedures, p 999; Results, p 1000"
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0140_6736_10_62297_0.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0140_6736_10_62297_0.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -166,7 +225,7 @@
   "relations": [],
   "page": "/docs/clinical-evidence/studies/nasha-dx",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

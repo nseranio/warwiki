@@ -15,12 +15,12 @@
       "lane": "minimally-invasive"
     }
   ],
-  "question": "In sexually active men with symptomatic benign prostatic obstruction, does Rezūm water vapor thermal therapy improve urinary symptoms and preserve sexual function better than an alpha-blocker plus a 5-alpha-reductase inhibitor?",
+  "question": "In sexually active men with benign prostatic obstruction refractory to alpha-blocker therapy, is Rezūm water vapor therapy noninferior and then superior to combination pharmacotherapy for urinary symptoms, and superior for sexual-function preservation?",
   "design": {
     "phase": "not applicable",
     "randomized": true,
     "blinding": "open-label",
-    "type": "superiority",
+    "type": "noninferiority",
     "n": 151,
     "arms": [
       {
@@ -36,13 +36,13 @@
         "role": "control"
       }
     ],
-    "population": "151 sexually active men with symptomatic benign prostatic obstruction were randomized.",
-    "description": "Multicenter, pragmatic, open-label superiority randomized trial",
-    "locator": "PubMed abstract, Background and objective; Methods; ClinicalTrials.gov NCT04838769, Study Design"
+    "population": "151 sexually active men aged at least 45 years with symptomatic benign prostatic obstruction refractory to alpha-blocker monotherapy were randomized; entry required IPSS at least 13, Qmax at most 15 ml/s, PVR at most 250 ml, and prostate volume at least 30 ml.",
+    "description": "Multicenter, pragmatic, open-label randomized trial with gated IPSS noninferiority and superiority tests and an MSHQ superiority test",
+    "locator": "Full text, Methods §§2.1–2.5, p 3; Table 1, p 4"
   },
   "verdict": "mixed",
-  "verdictNote": "IPSS superiority met; sexual-function superiority was not demonstrated after multiple imputation.",
-  "takeaway": "In sexually active men with benign prostatic obstruction, Rezūm water vapor therapy improved 1-year IPSS more than an alpha-blocker plus a 5-alpha-reductase inhibitor; superiority for sexual-function preservation was not demonstrated after multiple imputation.",
+  "verdictNote": "IPSS noninferiority and superiority met; MSHQ superiority failed under multiple imputation.",
+  "takeaway": "In sexually active men with benign prostatic obstruction refractory to alpha-blocker monotherapy, Rezūm met IPSS noninferiority and superiority versus an alpha-blocker plus a 5-alpha-reductase inhibitor at 1 year. MSHQ superiority did not meet its prespecified threshold with multiple imputation.",
   "reports": [
     {
       "id": "vapeur-2026",
@@ -54,12 +54,33 @@
       "doi": "10.1016/j.euf.2026.08.001",
       "pmid": "42608232",
       "followUp": "1 year",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Methods §2.4 and Results §3.1, p 3",
       "results": [
         {
-          "endpoint": "IPSS change",
+          "endpoint": "IPSS noninferiority",
           "role": "primary",
-          "measure": "Mean baseline-to-1-year IPSS improvement; difference in change scores, Rezūm minus combination therapy",
+          "measure": "Available-case baseline-to-12-month IPSS change in the randomized cohort; 3-point noninferiority margin",
+          "values": {
+            "exp": "10.8 ± 6.8-point improvement",
+            "ctl": "6.2 ± 7.7-point improvement"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -4.6,
+            "ci": [
+              -7.6,
+              -1.6
+            ],
+            "ciLevel": "97.5%"
+          },
+          "met": true,
+          "note": "The negative difference is Rezūm minus combination therapy for change scores; the upper CI bound is below the prespecified +3-point noninferiority margin.",
+          "locator": "Full text, Methods §§2.4–2.5, p 3; Results §3.2, p 4; Abstract, pp 1–2"
+        },
+        {
+          "endpoint": "IPSS superiority",
+          "role": "primary",
+          "measure": "Available-case mean baseline-to-12-month IPSS improvement; difference in change scores, Rezūm minus combination therapy",
           "values": {
             "exp": "10.8 ± 6.8 points",
             "ctl": "6.2 ± 7.7 points"
@@ -75,8 +96,8 @@
             "p": "<0.001"
           },
           "met": true,
-          "note": "The negative mean difference is for IPSS change scores; the arm values are improvements expressed as positive magnitudes.",
-          "locator": "PubMed abstract, Key findings and limitations"
+          "note": "The negative mean difference is for change scores; the arm values are improvements. With multiple imputation, the difference was −6.5 points (97.5% CI −9.8 to −3.2; p < 0.0001). At 12 months, IPSS was 0–7 in 33/63 versus 8/57 available cases.",
+          "locator": "Full text, Methods §2.5, p 3; Results §3.2, p 4; Figs 1–2, pp 5–6; Abstract, p 1"
         },
         {
           "endpoint": "MSHQ change",
@@ -87,16 +108,23 @@
             "ctl": "−5.2 ± 16.4 points"
           },
           "effect": {
-            "type": "none"
+            "type": "difference",
+            "value": 7.0,
+            "ci": [
+              -0.8,
+              14.7
+            ],
+            "ciLevel": "97.5%",
+            "p": "0.022"
           },
           "met": false,
-          "note": "Superiority in preservation of sexual function was not demonstrated with multiple imputation.",
-          "locator": "PubMed abstract, Key findings and limitations"
+          "note": "The MICE comparison did not meet the prespecified one-sided 1.25% threshold. LOCF showed a 6.5-point difference (97.5% CI 0.7–12.3; p = 0.006).",
+          "locator": "Full text, Methods §2.5, p 3; Results §3.2, p 4"
         },
         {
           "endpoint": "Quality of life",
-          "role": "secondary",
-          "measure": "Mean 1-year quality-of-life score change",
+          "role": "descriptive",
+          "measure": "Mean baseline-to-12-month IPSS quality-of-life item change",
           "values": {
             "exp": "−2.7 ± 1.8 points",
             "ctl": "−1.8 ± 2.0 points"
@@ -105,39 +133,44 @@
             "type": "none",
             "p": "0.01"
           },
-          "note": "Lower scores represent improvement; the abstract does not name the scale.",
-          "locator": "PubMed abstract, Key findings and limitations"
+          "met": "not-tested",
+          "note": "Lower scores represent improvement; the reported p value was not part of the multiplicity-controlled endpoint hierarchy.",
+          "locator": "Full text, Methods §2.5, p 3; Results §3.4, p 4; Fig 1C, p 5"
         },
         {
           "endpoint": "Surgical retreatment",
           "role": "secondary",
           "measure": "Surgical retreatment by 1 year",
           "values": {
-            "exp": "1.3%",
-            "ctl": "9.2%"
+            "exp": "1/75 (1.3%)",
+            "ctl": "7/76 (9.2%)"
           },
           "effect": {
             "type": "none"
           },
-          "locator": "PubMed abstract, Key findings and limitations"
+          "met": "not-tested",
+          "note": "One photolaser vaporization after Rezūm; four Rezūm procedures, two photolaser vaporizations, and one bipolar transurethral vaporization after combination therapy.",
+          "locator": "Full text, Results §3.3, p 4; Table 2, p 6"
         },
         {
           "endpoint": "Pharmacological retreatment",
           "role": "secondary",
           "measure": "Pharmacological retreatment by 1 year",
           "values": {
-            "exp": "12%",
-            "ctl": "1.3%"
+            "exp": "9/75 (12%)",
+            "ctl": "1/76 (1.3%)"
           },
           "effect": {
             "type": "none"
           },
-          "locator": "PubMed abstract, Key findings and limitations"
+          "met": "not-tested",
+          "note": "The nine Rezūm patients received six alpha-blocker regimens, two anticholinergics, and one combination regimen.",
+          "locator": "Full text, Results §3.3, p 4; Table 2, p 6"
         },
         {
-          "endpoint": "Combined retreatment",
+          "endpoint": "BPO progression composite",
           "role": "secondary",
-          "measure": "Combined surgical or pharmacological retreatment through 1 year",
+          "measure": "Time to surgical treatment, new BPO medication, catheterization after 90 days, or IPSS worsening by at least 4 points through 1 year",
           "effect": {
             "type": "HR",
             "value": 0.52,
@@ -147,76 +180,113 @@
             ],
             "p": "0.08"
           },
-          "locator": "PubMed abstract, Key findings and limitations"
+          "met": false,
+          "locator": "Full text, Methods §§2.4–2.5, p 3; Results §3.3, p 4"
         },
         {
           "endpoint": "IPSS worsening",
           "role": "secondary",
-          "measure": "IPSS worsening of at least 4 points by 1 year",
+          "measure": "IPSS worsening of at least 4 points from baseline through 1 year",
           "values": {
-            "exp": "2.7%",
-            "ctl": "13%"
+            "exp": "2/75 (2.7%)",
+            "ctl": "10/76 (13%)"
           },
           "effect": {
             "type": "none"
           },
-          "locator": "PubMed abstract, Methods; Key findings and limitations"
+          "met": "not-tested",
+          "note": "The two Rezūm patients worsened at 3 months but improved below baseline by 6 months.",
+          "locator": "Full text, Results §3.3, p 4; Table 2, p 6"
         },
         {
           "endpoint": "Late catheterization",
           "role": "secondary",
-          "measure": "Catheterization beyond 90 days after procedure",
+          "measure": "Urinary retention requiring catheterization after 90 days post-treatment",
           "values": {
-            "exp": "0%",
-            "ctl": "1.3%"
+            "exp": "0/75 (0%)",
+            "ctl": "1/76 (1.3%)"
           },
           "effect": {
             "type": "none"
           },
-          "locator": "PubMed abstract, Methods; Key findings and limitations"
+          "met": "not-tested",
+          "locator": "Full text, Methods §2.4, p 3; Results §3.3, p 4; Table 2, p 6"
         }
       ],
       "harms": [
         {
           "label": "Treatment-related adverse events",
           "values": {
-            "exp": "40%",
-            "ctl": "28%"
+            "exp": "30/75 (40%)",
+            "ctl": "21/76 (28%)"
           },
-          "locator": "PubMed abstract, Key findings and limitations",
-          "note": "The abstract describes events after water vapor therapy as largely procedure-related."
+          "locator": "Full text, Table 3, p 7; Results §3.4, p 4",
+          "note": "There were 50 versus 40 treatment-related events; 44/50 Rezūm events occurred within 90 days."
         },
         {
           "label": "Serious adverse events",
           "values": {
-            "exp": "12%",
-            "ctl": "1.3%"
+            "exp": "9/75 (12%)",
+            "ctl": "1/76 (1.3%)"
           },
-          "locator": "PubMed abstract, Key findings and limitations",
-          "note": "The abstract does not give event types or severity grading."
+          "locator": "Full text, Results §3.4, p 4; Table 3, p 7",
+          "note": "Nine versus two serious events affected nine versus one patients; six Rezūm events were procedure-related: urinary retention (2), bacterial prostatitis (1), prostatic obstruction (1), persistent LUTS (1), and anejaculation (1)."
+        },
+        {
+          "label": "Infections after Rezūm",
+          "values": {
+            "exp": "14/75 (19%)"
+          },
+          "locator": "Full text, Results §3.4, pp 4–5",
+          "note": "The report says all infections were Clavien-Dindo grade II; six patients had bacterial prostatitis, including one serious case."
+        },
+        {
+          "label": "Catheterization to manage an adverse event",
+          "values": {
+            "exp": "9/75 (12%)",
+            "ctl": "1/76 (1.3%)"
+          },
+          "locator": "Full text, Table 3, p 7",
+          "note": "This action-taken category differs from the secondary endpoint of catheterization after 90 days."
         }
       ],
       "delivery": [
         {
           "label": "Assigned interventions",
           "values": {
-            "exp": "Rezūm water vapor thermal therapy",
-            "ctl": "alpha-blocker plus 5-alpha-reductase inhibitor"
+            "exp": "Ambulatory Rezūm water vapor thermal therapy under general anesthesia within 45 days (permitted up to 90 days) of randomization",
+            "ctl": "Continued alpha-blocker and added a 5-alpha-reductase inhibitor within 7 days of randomization"
           },
-          "locator": "PubMed abstract, Background and objective; Methods"
+          "locator": "Full text, Methods §2.3, p 3"
+        },
+        {
+          "label": "Procedure characteristics",
+          "values": {
+            "exp": "5.1 ± 2.1 vapor treatments per prostate; mean procedure 13.8 ± 16.6 min (n = 72); median lobe treated in 45/72 (63%)"
+          },
+          "locator": "Full text, Results §3.1, p 3; Table 1, p 4",
+          "note": "All Rezūm patients were discharged the same day with a catheter; mean dwell time was 5.8 ± 2.20 days (Methods §2.3, p 3)."
+        },
+        {
+          "label": "Medication adherence",
+          "values": {
+            "ctl": "75% self-reported taking at least 85% of doses at 1 year"
+          },
+          "locator": "Full text, Methods §2.3 and Results §3.1, p 3",
+          "note": "The percentage denominator is not stated in the main text."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_euf_2026_08_001.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_euf_2026_08_001.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/vapeur",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

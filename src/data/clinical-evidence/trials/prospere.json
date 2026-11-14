@@ -38,11 +38,11 @@
     ],
     "population": "Women aged 45–75 years with POP-Q stage 2 or higher cystocele and no previous prolapse surgery.",
     "description": "Multicenter, assessor-blinded superiority randomized trial",
-    "locator": "PubMed abstract, Design, Setting, and Participants; ClinicalTrials.gov NCT01637441, Design"
+    "locator": "Full text, Patients and methods, pp 168–169; Results, p 169"
   },
   "verdict": "negative",
   "verdictNote": "The one-year grade II or higher complication difference missed statistical significance.",
-  "takeaway": "Laparoscopic mesh sacropexy versus transvaginal mesh repair for primary cystocele produced 17% versus 26% grade II or higher complications at one year; the difference did not reach statistical significance. Grade III or higher complications were less frequent with sacropexy.",
+  "takeaway": "Laparoscopic mesh sacropexy versus transvaginal mesh repair for primary cystocele produced 17% versus 26% grade II or higher complications at one year; the primary difference did not reach statistical significance. Grade III or higher complications were less frequent with sacropexy in a secondary analysis.",
   "reports": [
     {
       "id": "prospere-2018",
@@ -54,15 +54,15 @@
       "doi": "10.1016/j.eururo.2018.01.044",
       "pmid": "29472143",
       "followUp": "1 year",
-      "followUpLocator": "PubMed abstract, Outcome Measurements and Statistical Analysis",
+      "followUpLocator": "Full text, Results, p 169",
       "results": [
         {
           "endpoint": "Grade II or higher surgical complications",
           "role": "primary",
           "measure": "One-year complication risk difference, transvaginal mesh minus laparoscopic sacropexy",
           "values": {
-            "ls": "17%",
-            "tvm": "26%"
+            "ls": "17% reported (21/129 observed; 16.3%)",
+            "tvm": "26% reported (33/128 observed; 25.8%)"
           },
           "effect": {
             "type": "difference",
@@ -74,28 +74,86 @@
             "p": "0.088"
           },
           "met": false,
-          "note": "Modified Clavien-Dindo grade II or higher; abstract reports percentages without event counts.",
-          "locator": "PubMed abstract, Results"
+          "note": "Modified Clavien-Dindo grade II or higher; operated randomized analysis (N=257), with missing follow-up data imputed. Table 2 counts give observed rates; the text reports 17% and 26%.",
+          "locator": "Full text, Patients and methods, p 169; Results, p 170; Table 2, p 171; Fig. 3, p 172"
+        },
+        {
+          "endpoint": "One-year composite success (Barber criteria)",
+          "role": "secondary",
+          "measure": "Successful composite outcome among operated randomized patients at one year",
+          "values": {
+            "ls": "109/129 (84.5%)",
+            "tvm": "112/128 (87.5%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 3.0,
+            "ci": [
+              -5.6,
+              11.6
+            ],
+            "p": "0.823"
+          },
+          "note": "Difference is transvaginal mesh minus laparoscopic sacropexy, in percentage points, as tabulated.",
+          "locator": "Full text, Table 4, p 174"
+        },
+        {
+          "endpoint": "Dyspareunia or pain-related apareunia at one year",
+          "role": "secondary",
+          "measure": "Among women still sexually active at one year",
+          "values": {
+            "ls": "10/71 (14%)",
+            "tvm": "18/61 (30%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 15,
+            "ci": [
+              1.4,
+              29
+            ],
+            "p": "0.031"
+          },
+          "note": "Reported absolute difference, transvaginal mesh minus laparoscopic sacropexy, in percentage points.",
+          "locator": "Full text, Results, p 170"
         }
       ],
       "harms": [
         {
           "label": "Grade III or higher surgical complications at one year",
           "values": {
-            "ls": "0.8%",
-            "tvm": "9.4%"
+            "ls": "1/129 (0.8%)",
+            "tvm": "12/128 (9.4%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Difference, transvaginal mesh minus laparoscopic sacropexy, 8.6 percentage points (95% CI 3.4–15); P=0.001; event counts unavailable in abstract."
+          "locator": "Full text, Results, p 170; Table 2, p 171",
+          "note": "Secondary analysis; difference, transvaginal mesh minus laparoscopic sacropexy, 8.6 percentage points (95% CI 3.4–15); P=0.001. TVM had 11 grade III and one grade IV event; LS had one grade III event."
         },
         {
           "label": "Total reoperation at one year",
           "values": {
-            "ls": "4.7%",
-            "tvm": "10.9%"
+            "ls": "6/129 (4.7%)",
+            "tvm": "14/128 (10.9%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Difference, transvaginal mesh minus laparoscopic sacropexy, 6.3 percentage points (95% CI −0.4 to 13.3); P=0.060; event counts unavailable in abstract."
+          "locator": "Full text, Results, p 170; Table 2, p 171",
+          "note": "Difference, transvaginal mesh minus laparoscopic sacropexy, 6.3 percentage points (95% CI −0.4 to 13.3); P=0.060; includes reoperations for complications and pelvic-floor dysfunction."
+        },
+        {
+          "label": "Reoperation for complications at one year",
+          "values": {
+            "ls": "1/129 (0.8%)",
+            "tvm": "11/128 (8.6%)"
+          },
+          "locator": "Full text, Table 2, p 171; Table 3, p 173",
+          "note": "P=0.003; one TVM reoperation treated bladder outlet obstruction after concomitant sling surgery, and another drained an umbilical abscess."
+        },
+        {
+          "label": "Vaginal or bladder mesh exposure at one year",
+          "values": {
+            "ls": "0/129 (0%)",
+            "tvm": "3/128 (2.3%)"
+          },
+          "locator": "Full text, Results, p 170; Table 2, p 171; Table 3, p 173",
+          "note": "Two vaginal exposures and one bladder exposure after TVM; the text also counts one painful mesh retraction among four mesh-related complications."
         }
       ],
       "delivery": [
@@ -105,20 +163,29 @@
             "ls": "129",
             "tvm": "128"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Five of 262 randomized women withdrew before intervention."
+          "locator": "Full text, Patients and methods, p 168; Results, p 169; Fig. 3, p 172",
+          "note": "Five of 262 randomized women withdrew before intervention; analyses used the 257 operated randomized women. Both techniques placed synthetic nonabsorbable anterior mesh above the bladder neck; TVM used four suspension arms and LS used nonabsorbable promontory sutures."
         },
         {
           "label": "Conversion from laparoscopic sacropexy to transvaginal mesh",
-          "value": "6.3%",
-          "locator": "PubMed abstract, Results",
-          "note": "Numerator unavailable in abstract."
+          "value": "7/129 (5.4%)",
+          "locator": "Full text, Results, p 169; Table 2, p 171",
+          "note": "A further 1/129 (0.8%) converted to laparotomy; all eight conversions were strategic."
+        },
+        {
+          "label": "Operative duration and concomitant procedures",
+          "values": {
+            "ls": "119 ± 46 min",
+            "tvm": "59 ± 34 min"
+          },
+          "locator": "Full text, Table 2, p 171",
+          "note": "Mean ± SD; posterior mesh was placed in 113/129 (87.6%) versus 29/128 (22.7%), and concomitant stress-incontinence surgery in 48/129 (37.2%) versus 34/128 (26.6%)."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2018_01_044.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2018_01_044.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -205,7 +272,7 @@
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_1471_0528_16847.txt",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_1471_0528_16847.fulltext.txt",
         "checked": "2026-11-12",
         "level": "abstract"
       }
@@ -214,7 +281,7 @@
   "relations": [],
   "page": "/docs/clinical-evidence/studies/prospere",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

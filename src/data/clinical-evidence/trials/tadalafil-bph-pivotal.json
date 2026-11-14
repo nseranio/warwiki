@@ -330,29 +330,69 @@
       "doi": "10.1111/j.1464-410X.2009.08822.x",
       "pmid": "19732051",
       "followUp": "12-week treatment",
-      "followUpLocator": "PubMed abstract, Patients and Methods",
+      "followUpLocator": "Full text, Patients and methods, p 503",
       "results": [
         {
           "endpoint": "Peak urinary flow",
           "role": "exploratory",
-          "measure": "Percentage increase in peak urinary flow, 5 mg versus placebo",
+          "measure": "Raw-mean percentage increase in Qmax from baseline to endpoint after 12 weeks, 5 mg versus placebo; evaluable Qmax counts from age strata",
           "values": {
-            "t5": "+16%",
-            "ctl": "+12%"
+            "t5": "+16% (n=202)",
+            "ctl": "+12% (n=198)"
           },
           "effect": {
             "type": "none"
           },
-          "note": "Post hoc between-group comparison did not reach statistical significance; postvoid residual did not change significantly.",
-          "locator": "PubMed abstract, Results"
+          "met": false,
+          "note": "Exploratory post hoc analysis; between-arm Qmax differences were not significant at the paper's two-sided 0.05 threshold. The paper reports no between-arm confidence interval or exact P value for this comparison.",
+          "locator": "Full text, Results, p 504; Table 1, p 504"
+        },
+        {
+          "endpoint": "IPSS obstructive subscore",
+          "role": "exploratory",
+          "measure": "Raw-mean percentage improvement from baseline to endpoint after 12 weeks",
+          "values": {
+            "t2_5": "24%",
+            "t5": "31%",
+            "t10": "33%",
+            "t20": "33%",
+            "ctl": "13%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": true,
+          "note": "Post hoc symptom analysis; the paper states tadalafil groups improved significantly versus placebo but gives no exact between-arm P values or confidence intervals here.",
+          "locator": "Full text, Abstract and Results, p 504"
+        },
+        {
+          "endpoint": "Postvoid residual",
+          "role": "exploratory",
+          "measure": "Raw mean PVR change from baseline to endpoint after 12 weeks",
+          "values": {
+            "t5": "+0.2 mL (n=203)",
+            "ctl": "+0.9 mL (n=202)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": false,
+          "note": "No significant tadalafil-associated PVR change; no exact between-arm P value or confidence interval reported.",
+          "locator": "Full text, Table 2 and Results, pp 504–505"
         }
       ],
       "harms": [],
-      "delivery": [],
+      "delivery": [
+        {
+          "label": "Uroflowmetry assessment",
+          "value": "Qmax tracings were centrally read; analysed voids required prevoid bladder volume 150–550 mL and voided volume at least 125 mL. Participants received once-daily placebo or tadalafil 2.5, 5, 10 or 20 mg for 12 weeks after a four-week placebo run-in.",
+          "locator": "Full text, Patients and methods, p 503"
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_j_1464_410x_2009_08822_x.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_j_1464_410x_2009_08822_x.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -365,26 +405,44 @@
       "doi": "10.1111/j.1464-410X.2010.09687.x",
       "pmid": "21244606",
       "followUp": "One-year open-label extension after 12-week randomized treatment",
-      "followUpLocator": "Publisher abstract, Patients and Methods",
+      "followUpLocator": "Full text, Study design and participants, p 1111; Figure 1, p 1111",
       "results": [
         {
           "endpoint": "IPSS",
           "role": "descriptive",
-          "measure": "Total IPSS change during one-year extension",
+          "measure": "Mean total IPSS change from randomized baseline (week 0) to last nonmissing extension visit (through week 64)",
+          "values": {
+            "t5": "−5.0 ± 6.7 points (n=416); week 12 to endpoint −0.9 ± 5.7 points (n=416)"
+          },
           "effect": {
             "type": "none"
           },
-          "note": "The abstract reports that the symptom-score improvement was maintained, without a numerical change estimate.",
-          "locator": "Publisher abstract, Results"
+          "met": "not-tested",
+          "note": "Descriptive open-label efficacy among men with baseline and postbaseline data; no concurrent placebo comparison or prespecified efficacy threshold. Endpoint was the last nonmissing postbaseline value after extension entry.",
+          "locator": "Full text, Table 3 and Efficacy endpoints, p 1114"
+        },
+        {
+          "endpoint": "IIEF-EF in sexually active men with ED",
+          "role": "descriptive",
+          "measure": "Mean IIEF-EF change from randomized baseline (week 0) to last nonmissing extension visit (through week 64)",
+          "values": {
+            "t5": "+5.9 ± 7.6 points (n=219); week 12 to endpoint +1.1 ± 8.0 points (n=218)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "note": "Sexually active ED subgroup of 235 extension entrants; descriptive completer-available outcome, without concurrent control.",
+          "locator": "Full text, Table 3 and Efficacy endpoints, p 1114"
         }
       ],
       "harms": [
         {
           "label": "Treatment-emergent adverse events",
           "values": {
-            "t5": "57.6% of 427 extension participants"
+            "t5": "246/427 (57.6%)"
           },
-          "locator": "Publisher abstract, Results",
+          "locator": "Full text, Table 2, p 1113",
           "note": "All extension participants received tadalafil 5 mg; no concurrent placebo group."
         },
         {
@@ -392,21 +450,37 @@
           "values": {
             "t5": "22/427 (5.2%)"
           },
-          "locator": "Publisher abstract, Results",
+          "locator": "Full text, Table 2, p 1113; Figure 2, p 1113",
           "note": "All extension participants received tadalafil 5 mg; no concurrent placebo group."
+        },
+        {
+          "label": "Serious adverse events",
+          "values": {
+            "t5": "20/427 (4.7%)"
+          },
+          "note": "Two events were considered possibly drug-related by investigators: worsening coronary artery disease and global amnesia. Clavien-Dindo grades were not reported.",
+          "locator": "Full text, Table 2 and Safety endpoints, pp 1112–1113"
+        },
+        {
+          "label": "Most common treatment-emergent adverse events",
+          "values": {
+            "t5": "Dyspepsia 17/427 (4.0%); gastro-oesophageal reflux 17/427 (4.0%); back pain 16/427 (3.7%); headache 13/427 (3.0%)"
+          },
+          "note": "Events reported in at least 2% are listed in Table 2; one participant discontinued for residual urine, without a reported urinary-retention diagnosis.",
+          "locator": "Full text, Table 2 and Figure 2, p 1113"
         }
       ],
       "delivery": [
         {
           "label": "Extension participation and completion",
-          "value": "427 prior trial completers enrolled; 299/427 completed the one-year extension.",
-          "locator": "Publisher abstract, Patients and Methods and Results"
+          "value": "Of 886 randomized-period completers, 428 entered the 52-week open-label extension and 427 received tadalafil 5 mg once daily; 299/428 entrants (69.9%) completed it. No other BPH or ED drugs were permitted. Prior assignments among recipients were placebo 92, tadalafil 2.5 mg 96, 5 mg 83, 10 mg 85, and 20 mg 71.",
+          "locator": "Full text, Study design and participants, p 1111; Figure 2, p 1113"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_j_1464_410x_2010_09687_x.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_j_1464_410x_2010_09687_x.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],

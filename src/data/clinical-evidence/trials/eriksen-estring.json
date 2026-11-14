@@ -36,12 +36,12 @@
         "role": "control"
       }
     ],
-    "population": "Postmenopausal women with recurrent symptomatic, bacteriologically confirmed urinary tract infections.",
+    "population": "Women at least 2 years after menopause with at least 3 treated UTIs in the preceding year; the most recent infection was bacteriologically confirmed.",
     "description": "Multicenter, open-label randomized superiority trial",
-    "locator": "PubMed abstract, Study design and Results"
+    "locator": "Full text, Methods, p 1073; Results, p 1075"
   },
   "verdict": "positive",
-  "verdictNote": "Time to first recurrence favored the ring; the comparator received no estrogen.",
+  "verdictNote": "Time to first recurrence favored the ring (log-rank P = 0.008).",
   "takeaway": "In postmenopausal women with recurrent urinary tract infection, the estradiol-releasing vaginal ring Estring prolonged time to first recurrence versus no estrogen treatment; estimated infection-free survival at 36 weeks was approximately 45% versus 20% (log-rank P = 0.008).",
   "reports": [
     {
@@ -52,11 +52,11 @@
       "dateApprox": true,
       "dateLocator": "PubMed citation, May 1999",
       "cutoff": null,
-      "citation": "Eriksen B. \"A randomized, open, parallel-group study on the preventive effect of an estradiol-releasing vaginal ring (Estring) on recurrent urinary tract infections in postmenopausal women.\" *Am J Obstet Gynecol.* 1999;180(5):1072-1079. doi:10.1016/S0002-9378(99)70597-1",
+      "citation": "Eriksen BC. \"A randomized, open, parallel-group study on the preventive effect of an estradiol-releasing vaginal ring (Estring) on recurrent urinary tract infections in postmenopausal women.\" *Am J Obstet Gynecol.* 1999;180(5):1072-1079. doi:10.1016/S0002-9378(99)70597-1",
       "doi": "10.1016/S0002-9378(99)70597-1",
       "pmid": "10329858",
       "followUp": "36 weeks of ring treatment; controls followed for 36 weeks or until first recurrence",
-      "followUpLocator": "PubMed abstract, Study design",
+      "followUpLocator": "Full text, Methods, p 1073",
       "results": [
         {
           "endpoint": "Time to first recurrent UTI",
@@ -71,8 +71,23 @@
             "p": "0.008"
           },
           "met": true,
-          "note": "Log-rank comparison of time to first recurrence; estimates are not crude event proportions.",
-          "locator": "PubMed abstract, Study design and Results"
+          "note": "ITT and per-protocol Kaplan–Meier curves are shown; 9 ring recipients and 5 controls were excluded from the primary per-protocol analysis. The reported log-rank P value is 0.008. These estimates are not crude event proportions; no HR, confidence interval, or prespecified alpha is reported.",
+          "locator": "Full text, Fig 1 and Results, p 1075"
+        },
+        {
+          "endpoint": "First recurrent UTI, observed counts",
+          "role": "descriptive",
+          "measure": "Women with a symptomatic, bacteriologically confirmed recurrence during observation (ITT)",
+          "values": {
+            "exp": "27/53 (51%)",
+            "ctl": "44/55 (80%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "note": "Controls left observation at first recurrence; these crude counts are distinct from the Kaplan–Meier estimates.",
+          "locator": "Full text, Results, pp 1075–1076"
         },
         {
           "endpoint": "Vaginal pH and mucosal maturation",
@@ -84,32 +99,82 @@
           "effect": {
             "type": "none"
           },
-          "note": "The abstract gives no arm-specific values or effect estimates.",
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "Vaginal and urethral maturation-value changes differed between groups (both P < .001); ring-group pH fell from baseline to week 12 (P < .001). No numeric arm-specific maturation or pH values are printed.",
+          "locator": "Full text, Laboratory efficacy variables and Fig 2, p 1076"
+        },
+        {
+          "endpoint": "Resolution of vaginal mucosal atrophy",
+          "role": "secondary",
+          "measure": "Free of vaginal mucosal atrophy at termination (ITT; among women with baseline atrophy)",
+          "values": {
+            "exp": "34/51 (67%)",
+            "ctl": "1/50 (2%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.001"
+          },
+          "met": "not-tested",
+          "note": "Denominators are the baseline atrophy counts; no interval or prespecified threshold is reported.",
+          "locator": "Full text, Results, p 1076"
+        },
+        {
+          "endpoint": "Urge and stress incontinence symptoms",
+          "role": "secondary",
+          "measure": "Symptom-free change among participants symptomatic at baseline (ITT)",
+          "values": {
+            "exp": "urge 50%; stress 48%",
+            "ctl": "urge 16%; stress 11%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "note": "Urge P = .03; stress P = .003; symptom-specific denominators are not printed.",
+          "locator": "Full text, Table III, p 1076"
         }
       ],
       "harms": [
         {
-          "label": "Unexpected adverse events",
+          "label": "Serious adverse events",
           "values": {
-            "exp": "Not quantified by arm",
-            "ctl": "Not quantified by arm"
+            "exp": "3 events among 53 participants",
+            "ctl": "1 event among 55 participants"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The report abstract states that no unexpected adverse events were found."
+          "locator": "Full text, Events of vaginal bleeding and nonphysiologic discharge, p 1077",
+          "note": "The investigators judged a causal relationship with ring treatment unlikely. New or worsened event counts were higher with the ring (P = .039), but the proportion of subjects with a new adverse event did not differ (P = 1.0)."
+        },
+        {
+          "label": "Vaginal bleeding and nonphysiologic discharge after treatment start",
+          "values": {
+            "exp": "bleeding 3/53; discharge 8/53",
+            "ctl": "arm-specific counts not reported"
+          },
+          "locator": "Full text, Events of vaginal bleeding and nonphysiologic discharge, p 1077",
+          "note": "Events were specifically solicited at visits; no Clavien–Dindo grades, mesh exposure, or reoperation data are reported."
+        },
+        {
+          "label": "Withdrawal before completion or first recurrence",
+          "values": {
+            "exp": "5/53 (9%): 3 local discomfort, 2 own wish",
+            "ctl": "1/55 (2%): own wish"
+          },
+          "locator": "Full text, Results, p 1075; Adverse events, p 1077",
+          "note": "The authors considered the two ring-group own-wish withdrawals plausibly adverse-event related; no control subject withdrew because of an adverse event."
         }
       ],
       "delivery": [
         {
           "label": "Ring regimen",
-          "value": "Estring contained 2 mg estradiol; each ring was carried vaginally for 12 weeks during a 36-week treatment period.",
-          "locator": "PubMed abstract, Study design"
+          "value": "The 2 mg 17β-estradiol silicone ring was placed in the upper third of the vaginal vault, worn continuously for 12 ± 2 weeks, replaced at weeks 12 and 24, and removed at week 36.",
+          "locator": "Full text, Therapies, p 1073"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0002_9378_99_70597_1.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0002_9378_99_70597_1.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
@@ -122,7 +187,7 @@
   ],
   "page": "/docs/clinical-evidence/studies/eriksen-estring",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

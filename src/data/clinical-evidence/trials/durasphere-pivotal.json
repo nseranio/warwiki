@@ -19,7 +19,7 @@
   "design": {
     "phase": "not applicable",
     "randomized": true,
-    "blinding": "Patients and outcome evaluators blinded; injectors unblinded",
+    "blinding": "Patients and research staff conducting evaluations blinded; injectors unblinded",
     "type": "noninferiority",
     "n": 355,
     "arms": [
@@ -38,11 +38,11 @@
     ],
     "population": "Women with stress urinary incontinence due to intrinsic sphincter deficiency and abdominal leak-point pressure below 90 cm H2O.",
     "description": "Multicenter, patient- and evaluator-blinded randomized equivalence trial",
-    "locator": "PubMed abstract, Methods; FDA SSED pp7,9"
+    "locator": "Full text, Materials and Methods, p 13"
   },
-  "verdict": "noninferior",
-  "verdictNote": "Authors reported equivalence; the FDA tables present difference tests without equivalence intervals.",
-  "takeaway": "Durasphere carbon-coated zirconium-oxide beads and bovine collagen yielded similar 12-month continence-grade and pad-weight improvement in women with intrinsic sphincter deficiency. Durasphere required less injected material but caused more early urgency and retention.",
+  "verdict": "inconclusive",
+  "verdictNote": "The reported equivalence lacks a printed equivalence interval or prespecified decision threshold.",
+  "takeaway": "Among women with stress incontinence from intrinsic sphincter deficiency, Durasphere and bovine collagen produced similar 12-month continence-grade and pad-weight outcomes in completers; no equivalence margin was reported. Durasphere used less material; urgency and acute retention were more frequent, and acute retention resolved within seven days.",
   "reports": [
     {
       "id": "durasphere-pivotal-2001",
@@ -55,8 +55,8 @@
       "citation": "Lightner D, Calvosa C, Andersen R, et al. \"A new injectable bulking agent for treatment of stress urinary incontinence: results of a multicenter, randomized, controlled, double-blind study of Durasphere.\" *Urology.* 2001;58(1):12-15. doi:10.1016/s0090-4295(01)01148-7",
       "doi": "10.1016/s0090-4295(01)01148-7",
       "pmid": "11445471",
-      "followUp": "12 months after initial injection for the primary endpoints; one year after last treatment for a smaller reported subset",
-      "followUpLocator": "PubMed abstract, Results; FDA SSED pp7,12-13",
+      "followUp": "Efficacy among 235 12-month completers (mean 14 months, range 9–30); safety in all 355 women (mean 11 months, range 1–26); treatment-anchored subset at one year after last treatment",
+      "followUpLocator": "Full text, Results, p 13",
       "results": [
         {
           "endpoint": "Stamey continence-grade improvement",
@@ -70,9 +70,9 @@
             "type": "none",
             "p": "1.000 (test for difference)"
           },
-          "met": true,
-          "note": "Author-reported equivalence; FDA review describes a 15-percentage-point margin but gives a test for difference, not an equivalence interval.",
-          "locator": "FDA SSED pp7,12, Table 3; PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "Completer analysis; authors reported equivalence, but the article gives a P value for difference and no equivalence interval or prespecified decision threshold.",
+          "locator": "Full text, Results, p 13; Figure 1, p 14"
         },
         {
           "endpoint": "Pad-weight reduction",
@@ -86,13 +86,29 @@
             "type": "none",
             "p": "0.835 (test for difference)"
           },
-          "met": true,
-          "note": "Author-reported equivalence; the FDA table reports a difference test without an equivalence interval.",
-          "locator": "FDA SSED p13, Table 4; PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "Completer analysis; authors reported equivalence, but the article gives a P value for difference and no equivalence interval or prespecified decision threshold.",
+          "locator": "Full text, Results, p 13; Figure 2, p 14; FDA SSED p 13, Table 4 for arm denominators"
+        },
+        {
+          "endpoint": "Adverse-event safety assessment",
+          "role": "primary",
+          "measure": "Adverse events in all randomized women during mean 11-month follow-up",
+          "values": {
+            "exp": "Urgency 24.7%; acute retention 16.9% (n=178)",
+            "ctl": "Urgency 11.9%; acute retention 3.4% (n=177)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.001 (reported for urgency and retention comparison)"
+          },
+          "met": "not-tested",
+          "note": "The paper designates safety a third primary endpoint but gives no prespecified safety threshold.",
+          "locator": "Full text, Materials and Methods and Results, p 13; Results, p 14"
         },
         {
           "endpoint": "Stamey continence-grade improvement",
-          "role": "secondary",
+          "role": "descriptive",
           "measure": "At least one-grade improvement one year after last treatment",
           "values": {
             "exp": "49/61 (80.3%)",
@@ -102,8 +118,9 @@
             "type": "none",
             "p": "0.162 (test for difference)"
           },
-          "note": "Treatment-anchored subset; distinct from the initial-injection primary endpoint.",
-          "locator": "PubMed abstract, Results"
+          "note": "Treatment-anchored subset one year after last treatment; distinct from the initial-injection primary endpoint.",
+          "locator": "Full text, Results, p 13; Figure 1, p 14",
+          "met": "not-tested"
         }
       ],
       "harms": [
@@ -111,19 +128,19 @@
           "label": "Urinary urgency lasting more than 24 hours, any attribution",
           "values": {
             "exp": "44/178 (24.7%)",
-            "ctl": "11.9% (n=177)"
+            "ctl": "21/177 (11.9%)"
           },
-          "locator": "FDA SSED p15, Table 6 and text below table",
-          "note": "Short-term risk was higher with Durasphere (P=0.002)."
+          "locator": "Full text, Results, pp 13–14; FDA SSED p 15, Table 6 for event counts",
+          "note": "More frequent with Durasphere; the paper reports P=0.001 for the adverse-event comparison. Urgency resolved by study end in 90% of Durasphere versus 65% of collagen recipients (P=0.021)."
         },
         {
           "label": "Acute retention lasting more than 24 hours and at most seven days, any attribution",
           "values": {
             "exp": "30/178 (16.9%)",
-            "ctl": "3.4% (n=177)"
+            "ctl": "6/177 (3.4%)"
           },
-          "locator": "FDA SSED p15, Table 6 and text below table",
-          "note": "Short-term risk was higher with Durasphere (P<0.001)."
+          "locator": "Full text, Results, pp 13–14; FDA SSED p 15, Table 6 for event counts",
+          "note": "More frequent with Durasphere; the paper reports P=0.001 for the adverse-event comparison. Retention was treated with intermittent self-catheterization and resolved in all affected women by day 7."
         }
       ],
       "delivery": [
@@ -133,26 +150,44 @@
             "exp": "4.83 mL",
             "ctl": "6.23 mL"
           },
-          "locator": "PubMed abstract, Results; FDA SSED p14",
+          "locator": "Full text, Results, p 13",
           "note": "P<0.001 for the between-agent volume difference."
         },
         {
           "label": "Injection technique",
-          "value": "Durasphere was injected transurethrally under endoscopic vision into the bladder-neck submucosa; up to four retreatments were allowed.",
-          "locator": "FDA SSED p9, Treatment Procedures"
+          "value": "Both agents were injected transurethrally under direct vision at the bladder neck. Durasphere used prepackaged 1.0-mL syringes and an 18-gauge needle. The journal report says up to five retreatments at intervals of at least seven days; the FDA protocol summary limits retreatments to four.",
+          "locator": "Full text, Materials and Methods, p 13"
+        },
+        {
+          "label": "Total injected volume including repeat injections",
+          "values": {
+            "exp": "7.55 mL (range 0.5–22)",
+            "ctl": "9.58 mL (range 2.0–30)"
+          },
+          "locator": "Full text, Results, p 13",
+          "note": "P<0.001 for the between-agent total-volume difference."
+        },
+        {
+          "label": "Mean number of injections",
+          "values": {
+            "exp": "1.69",
+            "ctl": "1.55"
+          },
+          "locator": "Full text, Results, p 13",
+          "note": "P=0.253; repeat injections were patient-driven."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0090_4295_01_01148_7.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0090_4295_01_01148_7.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/durasphere-pivotal",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

@@ -44,10 +44,10 @@
     ],
     "population": "Solifenacin-naïve adults with overactive bladder and urinary incontinence after inadequate response to or intolerance of an anticholinergic.",
     "description": "Multicenter, double-blind, double-dummy phase 3b randomized trial",
-    "locator": "PubMed abstract, Purpose and Methods; ClinicalTrials.gov NCT01767519, Study Overview and Participant Flow"
+    "locator": "Full text, Study Participants and Study Design, p 168; Figure 1, p 169"
   },
   "verdict": "positive",
-  "verdictNote": "Both active treatments met the placebo comparisons; their direct comparison was post hoc.",
+  "verdictNote": "Both co-primary outcomes favored each active treatment versus placebo; comparisons were unadjusted for multiplicity.",
   "takeaway": "In solifenacin-naïve patients with refractory overactive bladder, onabotulinumtoxinA 100 U and solifenacin 5–10 mg reduced daily urinary incontinence and increased complete continence versus placebo at 12 weeks; the onabotulinumtoxinA–solifenacin comparison was post hoc.",
   "reports": [
     {
@@ -60,56 +60,83 @@
       "doi": "10.1016/j.juro.2017.01.069",
       "pmid": "28161352",
       "followUp": "Week 12 primary assessment; later open-label onabotulinumtoxinA treatment 2",
-      "followUpLocator": "PubMed abstract, Methods and Results",
+      "followUpLocator": "Full text, Study Design, p 168; Outcomes, p 170",
       "results": [
         {
           "endpoint": "Urinary incontinence episodes",
           "role": "primary",
-          "measure": "Mean change in daily urinary incontinence episodes from baseline to week 12",
+          "measure": "Least squares mean change in daily urinary incontinence episodes from baseline to treatment-1 week 12 (ITT)",
           "values": {
-            "botox": "−3.19 episodes/day",
-            "solifenacin": "−2.56 episodes/day",
-            "placebo": "−1.33 episodes/day"
+            "botox": "−3.19 episodes/day (n=145)",
+            "solifenacin": "−2.56 episodes/day (n=151)",
+            "placebo": "−1.33 episodes/day (n=60)"
           },
           "effect": {
             "type": "none",
             "p": "<0.001 for each active arm versus placebo"
           },
           "met": true,
-          "note": "Both active arms met their placebo comparison; direct onabotulinumtoxinA versus solifenacin analysis was post hoc.",
-          "locator": "PubMed abstract, Results"
+          "note": "Both active arms met their placebo comparison; comparisons were not adjusted for multiplicity. Direct onabotulinumtoxinA versus solifenacin analysis was post hoc. Numerical between-arm confidence intervals were not reported.",
+          "locator": "Full text, Statistical Analysis, p 169; Outcomes and Figure 2A, pp 170–171"
         },
         {
           "endpoint": "Complete continence",
           "role": "primary",
-          "measure": "100% reduction in daily urinary incontinence episodes at week 12",
+          "measure": "100% reduction in daily urinary incontinence episodes at treatment-1 week 12 (ITT)",
           "values": {
-            "botox": "33.8%",
-            "solifenacin": "24.5%",
-            "placebo": "11.7%"
+            "botox": "33.8% (49/145)",
+            "solifenacin": "24.5% (37/151)",
+            "placebo": "11.7% (7/60)"
           },
           "effect": {
             "type": "none",
             "p": "<0.001 (onabotulinumtoxinA versus placebo); 0.028 (solifenacin versus placebo)"
           },
           "met": true,
-          "note": "The percentages correspond to 49/145, 37/151 and 7/60 in the ClinicalTrials.gov primary outcome table.",
-          "locator": "PubMed abstract, Results; ClinicalTrials.gov NCT01767519, Results, primary outcome table"
+          "note": "The displayed numerators follow from the rounded percentages and ITT arm sizes in Figure 3A; comparisons were not adjusted for multiplicity.",
+          "locator": "Full text, Statistical Analysis, p 169; Outcomes, p 170; Figure 3A, p 172"
         },
         {
           "endpoint": "Urinary incontinence episodes",
           "role": "exploratory",
-          "measure": "Post hoc comparison of week-12 change in daily episodes",
+          "measure": "Post hoc comparison of least squares mean change in daily episodes at treatment-1 week 12 (ITT)",
           "values": {
-            "botox": "−3.19 episodes/day",
-            "solifenacin": "−2.56 episodes/day"
+            "botox": "−3.19 episodes/day (n=145)",
+            "solifenacin": "−2.56 episodes/day (n=151)"
           },
           "effect": {
             "type": "none",
             "p": "0.022"
           },
           "note": "Post hoc direct comparison favored onabotulinumtoxinA.",
-          "locator": "PubMed abstract, Purpose and Results"
+          "locator": "Full text, Statistical Analysis, p 169; Outcomes, p 170; Figure 2A, p 171"
+        },
+        {
+          "endpoint": "Micturition episodes",
+          "role": "secondary",
+          "measure": "Least squares mean change in daily micturitions from baseline to treatment-1 week 12 (ITT)",
+          "values": {
+            "botox": "−2.3 episodes/day (95% CI −2.7 to −1.9; n=145)",
+            "solifenacin": "−2.1 episodes/day (95% CI −2.5 to −1.7; n=151)",
+            "placebo": "−1.1 episodes/day (95% CI −1.7 to −0.4; n=60)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.002 (onabotulinumtoxinA versus placebo); 0.007 (solifenacin versus placebo)"
+          },
+          "locator": "Full text, Other Overactive Bladder Symptoms and Table 2, pp 171–173"
+        },
+        {
+          "endpoint": "Complete continence after open-label treatment 2",
+          "role": "descriptive",
+          "measure": "100% reduction in daily urinary incontinence episodes 12 weeks after treatment 2 among week-12 evaluable recipients, by original randomization arm",
+          "values": {
+            "botox": "43.2% (32/74)",
+            "solifenacin": "37.6% (32/85)",
+            "placebo": "41.9% (18/43)"
+          },
+          "note": "All received open-label onabotulinumtoxinA 100 U; denominators are the week-12 evaluable subset shown in Figure 3B, not all randomized patients.",
+          "locator": "Full text, Outcomes, pp 170–171; Figure 3B, p 172"
         }
       ],
       "harms": [
@@ -120,8 +147,8 @@
             "solifenacin": "10.2% (15/147)",
             "placebo": "10.0% (6/60)"
           },
-          "locator": "PubMed abstract, Results; ClinicalTrials.gov NCT01767519, Results, Adverse Events, urinary tract infection",
-          "note": "More common with onabotulinumtoxinA; registry safety denominators were 145, 147 and 60 for the three arms."
+          "locator": "Full text, Safety, p 171; Table 3, p 173",
+          "note": "Treatment cycle 1 (24 weeks), safety population. UTI required bacteriuria and leukocyturia regardless of symptoms."
         },
         {
           "label": "Urinary retention",
@@ -130,33 +157,63 @@
             "solifenacin": "0.7% (1/147)",
             "placebo": "0% (0/60)"
           },
-          "locator": "PubMed abstract, Results; ClinicalTrials.gov NCT01767519, Results, Adverse Events, urinary retention",
-          "note": "More common with onabotulinumtoxinA; registry safety denominators were 145, 147 and 60 for the three arms."
+          "locator": "Full text, Efficacy and Safety Evaluations, p 169; Safety, p 171; Table 3, p 173",
+          "note": "Treatment cycle 1 (24 weeks), safety population. Retention was PVR at least 350 mL regardless of symptoms or 200–349 mL with symptoms requiring CIC per investigator."
+        },
+        {
+          "label": "Symptomatic urinary tract infection",
+          "values": {
+            "botox": "8.3% (12/145)",
+            "solifenacin": "1.4% (2/147)",
+            "placebo": "3.3% (2/60)"
+          },
+          "locator": "Full text, Safety, p 171",
+          "note": "Treatment cycle 1, safety population; numerators are calculated from reported percentages and arm denominators."
+        },
+        {
+          "label": "Clean intermittent catheterization",
+          "values": {
+            "botox": "6.2% (9/145)",
+            "solifenacin": "0.7% (1/147)",
+            "placebo": "0% (0/60)"
+          },
+          "locator": "Full text, Safety, p 171",
+          "note": "Treatment cycle 1, safety population; numerators are calculated from reported percentages and arm denominators."
+        },
+        {
+          "label": "Dry mouth",
+          "values": {
+            "botox": "2.8% (4/145)",
+            "solifenacin": "8.2% (12/147)",
+            "placebo": "0% (0/60)"
+          },
+          "locator": "Full text, Table 3, p 173",
+          "note": "Treatment cycle 1, safety population."
         }
       ],
       "delivery": [
         {
           "label": "Double-dummy initial treatment",
-          "value": "Day-1 intradetrusor onabotulinumtoxinA 100 U or saline placebo injection, with daily solifenacin or placebo capsule; solifenacin started at 5 mg and could increase to 10 mg at week 6.",
-          "locator": "PubMed abstract, Methods; ClinicalTrials.gov NCT01767519, Study Plan, Arms and Interventions"
+          "value": "Day-1 detrusor injection of onabotulinumtoxinA 100 U in 10 mL or saline placebo, avoiding the trigone, with daily solifenacin or placebo capsule; solifenacin started at 5 mg and could increase to 10 mg at week 6 (48/151 randomized patients, 31.8%, escalated).",
+          "locator": "Full text, Study Design, p 168; Patient Demographic and Baseline Characteristics, p 169"
         },
         {
           "label": "Open-label second treatment",
-          "value": "Eligible patients could request open-label onabotulinumtoxinA as treatment 2 after at least 12 weeks.",
-          "locator": "PubMed abstract, Methods; ClinicalTrials.gov NCT01767519, Study Plan, Arms and Interventions"
+          "value": "At weeks 12, 18 or 24, eligible patients could request open-label onabotulinumtoxinA 100 U after at least 12 weeks since injection, at least 2 UUI episodes/day, at most 1 UI-free day in a 3-day diary and PVR below 200 mL; 213/356 (59.8%) received treatment 2 (78/145, 90/151 and 45/60 by original arm).",
+          "locator": "Full text, Study Design, p 168; Figure 1, p 169; Patient Demographic and Baseline Characteristics, p 170"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2017_01_069.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2017_01_069.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/botox-vs-solifenacin",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

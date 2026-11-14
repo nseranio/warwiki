@@ -39,65 +39,110 @@
     ],
     "population": "Men aged 18–64 years with preoperative IIEF-EF score at least 26 who were scheduled for bilateral nerve-sparing radical prostatectomy.",
     "description": "87-center, double-blind, double-dummy randomized superiority trial",
-    "locator": "PubMed abstract, Design, setting, and participants; ClinicalTrials.gov NCT00492635, Study Design"
+    "locator": "Full text, Methods, pp 925–926; Results, p 927"
   },
   "verdict": "negative",
-  "verdictNote": "Neither vardenafil schedule improved unassisted function after washout.",
-  "takeaway": "Nightly vardenafil, on-demand vardenafil, and placebo were compared after bilateral nerve-sparing prostatectomy; neither active schedule significantly increased unassisted erectile recovery after the two-month washout, although on-demand dosing improved erectile function during treatment.",
+  "verdictNote": "The prespecified overall comparison after washout was not significant.",
+  "takeaway": "After bilateral nerve-sparing prostatectomy, nightly vardenafil, on-demand vardenafil, and placebo yielded IIEF-EF scores of at least 22 after washout in 24.1%, 29.1%, and 28.9% of the modified ITT population, respectively; the primary comparison was not significant.",
   "reports": [
     {
       "id": "reinvent-2008",
       "kind": "primary",
       "label": "Primary report",
-      "published": "2008-07-09",
+      "published": "2008-07-21",
       "cutoff": null,
       "citation": "Montorsi F, Brock G, Lee J, et al. \"Effect of Nightly versus On-Demand Vardenafil on Recovery of Erectile Function in Men Following Bilateral Nerve-Sparing Radical Prostatectomy.\" *Eur Urol.* 2008;54(4):924-931. doi:10.1016/j.eururo.2008.06.083",
       "doi": "10.1016/j.eururo.2008.06.083",
       "pmid": "18640769",
       "followUp": "Nine months of randomized treatment, two-month washout, and optional two-month open-label treatment",
-      "followUpLocator": "PubMed abstract, Design, setting, and participants",
+      "followUpLocator": "Full text, Methods, p 926",
       "results": [
         {
           "endpoint": "Unassisted erectile recovery",
           "role": "primary",
           "measure": "Proportion with IIEF-EF score at least 22 after two-month washout",
+          "values": {
+            "nightly": "24.1%",
+            "ondemand": "29.1%",
+            "placebo": "28.9%"
+          },
           "effect": {
             "type": "none"
           },
           "met": false,
-          "note": "The abstract reports no statistically significant difference among groups; arm-specific rates, effect estimates, and the prespecified alpha are unavailable.",
-          "locator": "PubMed abstract, Measurements and Results"
+          "note": "Modified ITT, n=445 (143 nightly, 149 on demand, 153 placebo), with a washout IIEF-EF measurement; last observation carried forward. Prespecified overall three-group test at p<0.05 was not significant. Exact primary P value, effect estimate, and confidence interval were not reported.",
+          "locator": "Full text, Methods, p 926; Results and Fig. 3, pp 927–928"
         },
         {
           "endpoint": "Erectile function during treatment",
           "role": "secondary",
           "measure": "IIEF-EF score and SEP3 success over nine-month treatment period",
-          "effect": {
-            "type": "none"
+          "values": {
+            "nightly": "32.0% with IIEF-EF at least 22 at double-blind LOCF; 34.5% mean per-patient SEP3 success overall",
+            "ondemand": "48.2% with IIEF-EF at least 22 at double-blind LOCF; 45.9% mean per-patient SEP3 success overall",
+            "placebo": "24.8% with IIEF-EF at least 22 at double-blind LOCF; 25.0% mean per-patient SEP3 success overall"
           },
-          "note": "On-demand vardenafil produced higher IIEF-EF scores and SEP3 response rates than placebo; numerical results are unavailable in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "effect": {
+            "type": "none",
+            "p": "IIEF-EF at least 22: 0.0001 on demand vs placebo, 0.0065 on demand vs nightly; SEP3: <0.0001 on demand vs placebo, 0.0344 nightly vs placebo"
+          },
+          "note": "Secondary comparisons were nominal; efficacy analyses used the mITT population. At double-blind LOCF, arm n was 143 nightly, 149 on demand, and 152 placebo; for overall double-blind SEP3, arm n was 135, 144, and 147, respectively. Confidence intervals were not reported.",
+          "locator": "Full text, Methods and Results, pp 926–927; Figs. 3–4, pp 928–929"
         }
       ],
-      "harms": [],
+      "harms": [
+        {
+          "label": "Any adverse event during double-blind treatment",
+          "values": {
+            "nightly": "141/207 (68%)",
+            "ondemand": "136/204 (67%)",
+            "placebo": "115/206 (56%)"
+          },
+          "locator": "Full text, Table 2, p 929"
+        },
+        {
+          "label": "Common adverse events during double-blind treatment",
+          "values": {
+            "nightly": "headache 21/207 (10%); flushing 13/207 (6%); nasopharyngitis 14/207 (7%); dyspepsia 11/207 (5%)",
+            "ondemand": "headache 33/204 (16%); flushing 15/204 (7%); nasopharyngitis 13/204 (6%); dyspepsia 8/204 (4%)",
+            "placebo": "headache 11/206 (5%); flushing 3/206 (1%); nasopharyngitis 9/206 (4%); dyspepsia 5/206 (2%)"
+          },
+          "locator": "Full text, Table 2, p 929"
+        },
+        {
+          "label": "Discontinuation due to adverse events",
+          "values": {
+            "nightly": "8%",
+            "ondemand": "6%",
+            "placebo": "5%"
+          },
+          "note": "39 patients overall; 17/207 nightly, 12/204 on demand, and 10/206 placebo discontinued due to adverse events.",
+          "locator": "Full text, Results, Adverse events, p 929"
+        }
+      ],
       "delivery": [
         {
           "label": "Treatment sequence",
-          "value": "Nine months of double-blind nightly vardenafil, on-demand vardenafil, or placebo; two months of single-blind washout; optional two months of open-label treatment.",
-          "locator": "PubMed abstract, Design, setting, and participants and Intervention"
+          "value": "Randomized within 14 days of bilateral nerve-sparing prostatectomy: 10 mg nightly vardenafil (reducible to 5 mg) plus on-demand placebo; on-demand vardenafil starting at 10 mg (titrated to 5 or 20 mg) plus nightly placebo; or double placebo for nine months. Two months of single-blind placebo washout without devices followed, then optional two-month open-label on-demand vardenafil starting at 10 mg (adjustable to 5 or 20 mg after one month).",
+          "locator": "Full text, Methods, Study design, pp 925–926"
+        },
+        {
+          "label": "Participant disposition and analysis sets",
+          "value": "997 screened, 628 randomized, 617 in the safety population, 599 in ITT, 445 in modified ITT for efficacy, and 423 completed the study.",
+          "locator": "Full text, Results, Study population and baseline demographics, p 927; Fig. 2, p 927"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2008_06_083.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2008_06_083.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/reinvent",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

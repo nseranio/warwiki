@@ -18,9 +18,9 @@
   "design": {
     "phase": "not reported",
     "randomized": true,
-    "blinding": "not stated in abstract",
-    "type": "superiority",
-    "n": 221,
+    "blinding": "double-blind",
+    "type": "noninferiority",
+    "n": 222,
     "arms": [
       {
         "key": "exp",
@@ -35,13 +35,13 @@
         "role": "control"
       }
     ],
-    "population": "Men older than 40 years with overactive bladder, urodynamically confirmed detrusor overactivity, and bladder outlet obstruction.",
-    "description": "Randomized, placebo-controlled urodynamic safety trial",
-    "locator": "PubMed abstract, Materials and Methods"
+    "population": "Men aged 40 years or older with frequency and urgency, urodynamically confirmed detrusor overactivity, and screening BOOI of at least 20; recent retention and PVR greater than 40% of maximum cystometric capacity were excluded. Central review classified 15/221 as unobstructed.",
+    "description": "Double-blind, placebo-controlled urodynamic equivalence trial; 222 enrolled, 221 dosed and analyzed",
+    "locator": "Full text, Materials and Methods and Results, pp 1000–1001"
   },
-  "verdict": "inconclusive",
-  "verdictNote": "Primary urodynamic comparisons lack a reported prespecified safety margin; retention events were sparse.",
-  "takeaway": "In men with urodynamic bladder outlet obstruction and detrusor overactivity, tolterodine versus placebo produced comparable flow and voiding-pressure measurements over 12 weeks. Postvoid residual rose more with tolterodine; the only reported urinary retention event was on placebo.",
+  "verdict": "noninferior",
+  "verdictNote": "Both primary urodynamic equivalence limits were met; one acute retention event occurred on placebo.",
+  "takeaway": "In men with detrusor overactivity and screening bladder outlet obstruction, 12 weeks of tolterodine versus placebo met prespecified equivalence limits for maximum flow and voiding pressure. Postvoid residual rose more with tolterodine; acute catheterized retention occurred once, on placebo.",
   "reports": [
     {
       "id": "tolterodine-boo-safety-2006",
@@ -55,7 +55,7 @@
       "doi": "10.1016/S0022-5347(05)00483-0",
       "pmid": "16469601",
       "followUp": "12 weeks of treatment",
-      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "followUpLocator": "Full text, Materials and Methods, p 1000",
       "results": [
         {
           "endpoint": "Qmax",
@@ -70,9 +70,9 @@
             ],
             "ciLevel": "95%"
           },
-          "met": null,
-          "note": "The abstract reports no prespecified safety or noninferiority margin.",
-          "locator": "PubMed abstract, Results"
+          "met": true,
+          "note": "Median-change equivalence margin ±3 mL/s; both 95% CI limits fell within it. ITT comprised 149 tolterodine and 72 placebo recipients.",
+          "locator": "Full text, Statistics, p 1001; Results, p 1001"
         },
         {
           "endpoint": "pdetQmax",
@@ -80,31 +80,45 @@
           "measure": "Median between-group difference in detrusor pressure at maximum flow, cm H2O",
           "effect": {
             "type": "difference",
-            "value": -7
+            "value": -7,
+            "ci": [
+              -11,
+              -3
+            ],
+            "ciLevel": "95%"
           },
-          "met": null,
-          "note": "The abstract prints a 95% CI of -3 to 11, which does not contain its reported -7 estimate; interval omitted pending full text.",
-          "locator": "PubMed abstract, Results"
+          "met": true,
+          "values": {
+            "exp": "median change -8 cm H2O",
+            "ctl": "median change -1 cm H2O"
+          },
+          "note": "Median-change equivalence margin ±15 cm H2O; both 95% CI limits fell within it. The paper's abstract misprints the CI as -3 to 11.",
+          "locator": "Full text, Statistics, p 1001; Results, p 1001"
         },
         {
           "endpoint": "BOOI",
           "role": "secondary",
           "measure": "Change in bladder outlet obstruction index",
           "values": {
-            "exp": "-9",
-            "ctl": "0"
+            "exp": "median 49 at baseline to 40 at week 12",
+            "ctl": "median 43 at baseline to 44 at week 12"
           },
           "effect": {
             "type": "difference",
-            "value": -9,
-            "p": "<0.02"
+            "value": 6.4,
+            "p": "0.0108"
           },
-          "locator": "PubMed abstract, Results"
+          "note": "The paper describes the 6.4-point treatment difference as favoring tolterodine without printing a sign.",
+          "locator": "Full text, Results, p 1001"
         },
         {
           "endpoint": "Volume to first detrusor contraction",
           "role": "secondary",
           "measure": "Between-group difference in volume to first detrusor contraction, mL",
+          "values": {
+            "exp": "median 163 mL at baseline to 217 mL at week 12",
+            "ctl": "median 209 mL at baseline to 178 mL at week 12"
+          },
           "effect": {
             "type": "difference",
             "value": 59,
@@ -112,14 +126,19 @@
               19,
               100
             ],
-            "ciLevel": "95%"
+            "ciLevel": "95%",
+            "p": "0.0026"
           },
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Table 3, p 1002"
         },
         {
           "endpoint": "Maximum cystometric capacity",
           "role": "secondary",
           "measure": "Between-group difference in maximum cystometric capacity, mL",
+          "values": {
+            "exp": "median 260 mL at baseline to 320 mL at week 12",
+            "ctl": "median 294 mL at baseline to 285 mL at week 12"
+          },
           "effect": {
             "type": "difference",
             "value": 67,
@@ -127,9 +146,10 @@
               35,
               103
             ],
-            "ciLevel": "95%"
+            "ciLevel": "95%",
+            "p": "0.0001"
           },
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Table 3, p 1002"
         },
         {
           "endpoint": "Postvoid residual",
@@ -141,44 +161,116 @@
           },
           "effect": {
             "type": "difference",
-            "value": 25,
-            "p": "<0.004"
+            "value": 27,
+            "ci": [
+              8,
+              50
+            ],
+            "ciLevel": "95%",
+            "p": "0.0038"
           },
-          "locator": "PubMed abstract, Results"
+          "note": "Median baseline/week-12 PVR was 22/60 mL with tolterodine and 28/27 mL with placebo; 25/0 mL are median within-patient changes.",
+          "locator": "Full text, abstract, p 999; Table 3, p 1002"
+        },
+        {
+          "endpoint": "Bladder Contractility Index",
+          "role": "secondary",
+          "measure": "Estimated difference in median change at week 12",
+          "values": {
+            "exp": "median 112 at baseline to 107 at week 12",
+            "ctl": "median 105 at baseline to 110 at week 12"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -10,
+            "ci": [
+              -17,
+              -3
+            ],
+            "ciLevel": "95%",
+            "p": "0.0045"
+          },
+          "locator": "Full text, Table 3, p 1002"
+        },
+        {
+          "endpoint": "Voiding efficiency",
+          "role": "secondary",
+          "measure": "Estimated difference in median change at week 12, percentage points",
+          "values": {
+            "exp": "median 91% at baseline to 80% at week 12",
+            "ctl": "median 90% at baseline to 89% at week 12"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -7,
+            "ci": [
+              -13,
+              -1
+            ],
+            "ciLevel": "95%",
+            "p": "0.0183"
+          },
+          "locator": "Full text, Table 3, p 1002"
         }
       ],
       "harms": [
         {
-          "label": "Reported urinary retention",
+          "label": "Acute urinary retention requiring catheterization",
           "values": {
             "exp": "0/149",
             "ctl": "1/72"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract reports one retention event on placebo and none on tolterodine; it does not define catheterization or adjudication."
+          "locator": "Full text, Results and Table 5, pp 1002–1003",
+          "note": "The placebo event began on day 54, lasted one day, and led to catheterization and drug discontinuation."
+        },
+        {
+          "label": "Urinary retention adverse-event category",
+          "values": {
+            "exp": "5/149 (3%)",
+            "ctl": "2/72 (3%)"
+          },
+          "locator": "Full text, Table 4, p 1002; Table 5, p 1003",
+          "note": "Two tolterodine recipients discontinued for high PVR. This adverse-event category is distinct from acute catheterized retention."
+        },
+        {
+          "label": "Urinary tract infection",
+          "values": {
+            "exp": "6/149 (4%)",
+            "ctl": "3/72 (4%)"
+          },
+          "locator": "Full text, Table 4, p 1002"
+        },
+        {
+          "label": "Dry mouth",
+          "values": {
+            "exp": "36/149 (24%)",
+            "ctl": "1/72 (1%)"
+          },
+          "locator": "Full text, Table 4, p 1002",
+          "note": "One tolterodine case was severe; overall adverse events occurred in 87/149 versus 37/72 (P = 0.326)."
         }
       ],
       "delivery": [
         {
-          "label": "Study drug",
+          "label": "Study drug and completion",
           "values": {
-            "exp": "Tolterodine 2 mg twice daily for 12 weeks",
-            "ctl": "Placebo for 12 weeks"
+            "exp": "Tolterodine 2 mg twice daily for 12 weeks; 133/149 completed",
+            "ctl": "Placebo for 12 weeks; 60/72 completed"
           },
-          "locator": "PubMed abstract, Materials and Methods"
+          "locator": "Full text, Table 1 and Materials and Methods, p 1000; Results, p 1001"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0022_5347_05_00483_0.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0022_5347_05_00483_0.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/tolterodine-boo-safety",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

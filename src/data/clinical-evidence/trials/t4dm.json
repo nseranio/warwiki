@@ -36,13 +36,13 @@
         "role": "control"
       }
     ],
-    "population": "Men aged 50–74 years with waist circumference ≥95 cm, testosterone ≤14.0 nmol/L without pathological hypogonadism, and two-hour OGTT glucose 7.8–11.0 mmol/L or newly diagnosed diabetes with glucose ≤15.0 mmol/L.",
-    "description": "Six-center, double-blind, placebo-controlled phase 3b randomized trial",
-    "locator": "PubMed abstract, Methods and Findings"
+    "population": "Men aged 50–74 years with waist circumference ≥95 cm, screening testosterone ≤14.0 nmol/L without pathological hypogonadism, and 2-hour OGTT glucose 7.8 to <11.1 mmol/L or newly diagnosed diabetes with 2-hour glucose 11.1–15.0 mmol/L.",
+    "description": "Six-center, double-blind, placebo-controlled phase 3b randomized trial; men at high cardiovascular risk or with baseline hematocrit >50% were excluded. Co-primary significance thresholds were 3.5% (categorical) and 2.5% (continuous); either could make the trial positive.",
+    "locator": "Full text, Study design and participants, p 34"
   },
   "verdict": "positive",
-  "verdictNote": "Both prespecified 2-year glucose outcomes favored testosterone; hematocrit triggers were frequent.",
-  "takeaway": "In T4DM, intramuscular testosterone undecanoate plus a lifestyle programme reduced diabetes-range 2-hour glucose at 2 years and improved mean 2-hour glucose versus placebo plus the same programme; hematocrit above 54% triggered safety review more often with testosterone.",
+  "verdictNote": "Both prespecified glucose outcomes met their allocated thresholds; hematocrit safety triggers were frequent.",
+  "takeaway": "In T4DM, intramuscular testosterone undecanoate plus a lifestyle programme reduced diabetes-range 2-hour glucose and improved mean 2-hour glucose at 2 years versus placebo plus the same programme among participants with 21–27-month OGTT data; hematocrit at least 54% triggered safety review more often with testosterone.",
   "reports": [
     {
       "id": "t4dm-2021",
@@ -55,12 +55,12 @@
       "doi": "10.1016/S2213-8587(20)30367-3",
       "pmid": "33338415",
       "followUp": "2 years",
-      "followUpLocator": "PubMed abstract, Methods and Findings",
+      "followUpLocator": "Full text, Methods and Table 2, pp 35, 38",
       "results": [
         {
           "endpoint": "Diabetes-range 2-hour OGTT glucose",
           "role": "primary",
-          "measure": "2-hour glucose ≥11.1 mmol/L at 2 years, among those with available OGTT data",
+          "measure": "2-hour glucose ≥11.1 mmol/L at 2 years among participants with 21–27-month OGTT data, analysed by intention-to-treat assignment",
           "values": {
             "exp": "55/443 (12%)",
             "ctl": "87/413 (21%)"
@@ -75,16 +75,16 @@
             "p": "0.0007"
           },
           "met": true,
-          "note": "Intention-to-treat analysis; endpoint data available for 856 of 1,007 randomized men.",
-          "locator": "PubMed abstract, Findings"
+          "note": "Available-outcome intention-to-treat analysis included participants who stopped treatment or began diabetes medication; post-hoc multiple-imputation sensitivity RR 0.62 (95% CI 0.47–0.82; P=0.0015).",
+          "locator": "Full text, Statistical analysis and Table 2, p 38; Results, p 40"
         },
         {
           "endpoint": "2-hour OGTT glucose change",
           "role": "primary",
           "measure": "Mean change from baseline at 2 years; between-arm mean difference in mmol/L",
           "values": {
-            "exp": "−1.70 mmol/L (SD 2.47)",
-            "ctl": "−0.95 mmol/L (SD 2.78)"
+            "exp": "−1.70 mmol/L (SD 2.47; n=443)",
+            "ctl": "−0.95 mmol/L (SD 2.78; n=413)"
           },
           "effect": {
             "type": "difference",
@@ -96,19 +96,82 @@
             "p": "<0.0001"
           },
           "met": true,
-          "note": "Negative difference favors testosterone.",
-          "locator": "PubMed abstract, Findings"
+          "note": "Negative difference favors testosterone; available-outcome intention-to-treat analysis.",
+          "locator": "Full text, Table 2, p 38"
+        },
+        {
+          "endpoint": "Normalised 2-hour OGTT glucose",
+          "role": "secondary",
+          "measure": "2-hour glucose <7.8 mmol/L at 2 years among participants with OGTT data",
+          "values": {
+            "exp": "230/443 (52%)",
+            "ctl": "179/413 (43%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 1.2,
+            "ci": [
+              1.04,
+              1.38
+            ],
+            "p": "0.012"
+          },
+          "met": true,
+          "note": "Unadjusted secondary outcome; no multiplicity adjustment.",
+          "locator": "Full text, Table 3, p 39"
+        },
+        {
+          "endpoint": "HbA1c change",
+          "role": "secondary",
+          "measure": "Mean change from baseline at 2 years, percentage points",
+          "values": {
+            "exp": "−0.05 (SD 0.36; n=450)",
+            "ctl": "−0.03 (SD 0.38; n=419)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.02,
+            "ci": [
+              -0.07,
+              0.03
+            ],
+            "p": "0.42"
+          },
+          "met": false,
+          "note": "Unadjusted secondary outcome; no multiplicity adjustment.",
+          "locator": "Full text, Table 3, p 39"
+        },
+        {
+          "endpoint": "Total lower urinary tract symptoms score",
+          "role": "secondary",
+          "measure": "Mean change from baseline at 2 years",
+          "values": {
+            "exp": "1.35 (SD 4.60; n=432)",
+            "ctl": "0.89 (SD 4.30; n=395)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.46,
+            "ci": [
+              -0.15,
+              1.07
+            ],
+            "p": "0.14"
+          },
+          "met": false,
+          "note": "Unadjusted secondary outcome; no multiplicity adjustment.",
+          "locator": "Full text, Table 3, p 39"
         }
       ],
       "harms": [
         {
-          "label": "Hematocrit safety trigger above 54%",
+          "label": "Hematocrit safety trigger ≥54%",
           "values": {
             "exp": "106/491 (22%)",
             "ctl": "6/484 (1%)"
           },
-          "locator": "PubMed abstract, Findings",
-          "note": "Masked safety monitoring."
+          "locator": "Full text, Table 4, p 41",
+          "note": "Masked monitoring; confirmed elevation permanently stopped treatment in 25 testosterone and one placebo participant."
         },
         {
           "label": "PSA increase safety trigger ≥0.75 μg/mL",
@@ -116,8 +179,8 @@
             "exp": "109/480 (23%)",
             "ctl": "87/468 (19%)"
           },
-          "locator": "PubMed abstract, Findings",
-          "note": "Masked safety monitoring."
+          "locator": "Full text, Table 4, p 41",
+          "note": "Masked monitoring; rise prompted repeat testing and possible urologic assessment."
         },
         {
           "label": "Prespecified serious adverse events",
@@ -125,21 +188,39 @@
             "exp": "55/504 (10.9%)",
             "ctl": "37/503 (7.4%)"
           },
-          "locator": "PubMed abstract, Findings",
-          "note": "Two deaths occurred in each randomized group."
+          "locator": "Full text, Table 5 and Results, p 41",
+          "note": "Two deaths in each group; participants with any cardiovascular event: 26/504 versus 21/503."
+        },
+        {
+          "label": "Selected prespecified serious adverse event categories",
+          "values": {
+            "exp": "BPH-related hospital admissions 8/504; prostate cancer 4/504; venous thromboses 2/504",
+            "ctl": "BPH-related hospital admissions 3/503; prostate cancer 5/503; venous thromboses 0/503"
+          },
+          "locator": "Full text, Table 5, p 41",
+          "note": "Table 5 reports event counts; no participant had more than one event in a given subcategory."
         }
       ],
       "delivery": [
         {
           "label": "Injection schedule",
-          "value": "Testosterone undecanoate 1,000 mg intramuscularly or placebo at baseline, 6 weeks, then every 3 months for 2 years; both groups enrolled in a lifestyle programme.",
-          "locator": "PubMed abstract, Methods"
+          "value": "Testosterone undecanoate 1,000 mg (4 mL) or matching placebo injected slowly and deeply into the upper outer gluteal muscle at baseline, 6 weeks, then every 3 months for 2 years; no dose or interval adjustment. Both groups enrolled in a lifestyle programme.",
+          "locator": "Full text, Procedures, pp 34–35"
+        },
+        {
+          "label": "Treatment completion and lifestyle adherence",
+          "values": {
+            "exp": "386/504 completed 2 years of treatment; 116/504 discontinued early; 144/480 (30%) reported lifestyle-programme adherence at 2 years",
+            "ctl": "370/503 completed 2 years of treatment; 131/503 discontinued early; 132/471 (28%) reported lifestyle-programme adherence at 2 years"
+          },
+          "locator": "Full text, Figure 1, p 36; Results, p 39; Table 3, p 39",
+          "note": "Lifestyle adherence meant self-reported website use, meeting attendance, or both since the previous visit."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s2213_8587_20_30367_3.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s2213_8587_20_30367_3.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     },
     {
@@ -178,7 +259,7 @@
       ],
       "delivery": [],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1210_clinem_dgad485.txt",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1210_clinem_dgad485.fulltext.txt",
         "level": "abstract",
         "checked": "2026-11-12"
       }
@@ -285,7 +366,7 @@
   "relations": [],
   "page": "/docs/clinical-evidence/studies/t4dm",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }
