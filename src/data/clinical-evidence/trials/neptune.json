@@ -282,31 +282,110 @@
       "citation": "Drake MJ, Sokol R, Coyne K, et al. \"Responder and Health-related Quality of Life Analyses in Men with Lower Urinary Tract Symptoms Treated with a Fixed-dose Combination of Solifenacin and Tamsulosin Oral-controlled Absorption System: Results from the NEPTUNE Study.\" *BJU Int.* 2016;117(1):165-172. doi:10.1111/bju.13162",
       "doi": "10.1111/bju.13162",
       "pmid": "25907003",
-      "followUp": "12-week randomized treatment, secondary responder and quality-of-life analysis",
-      "followUpLocator": "PubMed abstract, Patients and Methods",
+      "followUp": "12-week randomized treatment, secondary quality-of-life and post hoc responder analyses",
+      "followUpLocator": "Full text, Patients and Methods, pp 166–167",
       "results": [
         {
           "endpoint": "Responder analyses",
-          "role": "descriptive",
-          "measure": "Number of responder analyses favoring the 6 mg combination at 12 weeks",
+          "role": "exploratory",
+          "measure": "Number of post hoc single and double responder comparisons favoring the 6 mg combination at 12 weeks (full analysis set)",
           "values": {
-            "exp6": "8/8 versus placebo; 6/8 versus tamsulosin",
+            "exp6": "8/8 versus placebo; 6/8 versus tamsulosin (four single and four double responder definitions)",
             "ctl": "reference",
             "placebo": "reference"
           },
           "effect": {
             "type": "none"
           },
-          "note": "Counts are analyses, not patients; the abstract does not give patient-level response denominators.",
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "Counts are comparisons, not patients. The 9 mg combination was analyzed but its responder results were not reported; no prespecified responder success threshold was given.",
+          "locator": "Full text, Statistical analysis and Results, pp 167–168; Tables 2–3, pp 168–169"
+        },
+        {
+          "endpoint": "TUFS single response",
+          "role": "exploratory",
+          "measure": "Post hoc response at week 12: TUFS decrease of at least 6 points (full analysis set)",
+          "values": {
+            "exp6": "FAS n=314; response count not printed",
+            "ctl": "FAS n=299; response count not printed",
+            "placebo": "FAS n=320; response count not printed"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 1.58,
+            "ci": [
+              1.13,
+              2.22
+            ],
+            "p": "0.01 versus tamsulosin"
+          },
+          "met": "not-tested",
+          "note": "Response-rate difference 9 percentage points versus tamsulosin; versus placebo, 19 points, OR 2.27 (95% CI 1.63–3.18), P<0.001. Post hoc analysis.",
+          "locator": "Full text, Definitions of response and Table 1, p 167; Table 2, p 168"
+        },
+        {
+          "endpoint": "TUFS and PGI bladder double response",
+          "role": "exploratory",
+          "measure": "Post hoc joint TUFS and patient global impression of bladder-symptom response at week 12 (full analysis set)",
+          "values": {
+            "exp6": "FAS n=314; joint-response count not printed",
+            "ctl": "FAS n=299; joint-response count not printed",
+            "placebo": "FAS n=320; joint-response count not printed"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 1.69,
+            "ci": [
+              1.2,
+              2.38
+            ],
+            "p": "0.003 versus tamsulosin"
+          },
+          "met": "not-tested",
+          "note": "Response-rate difference 8 percentage points versus tamsulosin; versus placebo, 18 points, OR 2.50 (95% CI 1.77–3.52), P<0.001. Post hoc analysis.",
+          "locator": "Full text, Definitions of response, p 167; Table 3, p 169"
+        },
+        {
+          "endpoint": "IPSS quality of life and OAB-q symptom bother",
+          "role": "secondary",
+          "measure": "Mean improvement from baseline at week 12 in IPSS QoL score and OAB-q symptom bother score",
+          "values": {
+            "exp6": "IPSS QoL 1.3 points; OAB-q symptom bother 16.5 points",
+            "ctl": "IPSS QoL 1.0 points; OAB-q symptom bother 14.4 points",
+            "placebo": "IPSS QoL 0.9 points; OAB-q symptom bother value not stated"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "note": "IPSS QoL: P<0.001 versus placebo and P<0.05 versus tamsulosin; OAB-q symptom bother: P=0.068 versus tamsulosin. Only the 6 mg arm reached a 10-point mean improvement in OAB-q total HRQoL.",
+          "locator": "Full text, Introduction, pp 166–167; Discussion, p 170"
+        },
+        {
+          "endpoint": "TUFS change and quality-of-life correlations",
+          "role": "secondary",
+          "measure": "Prespecified Spearman correlations between change in TUFS and change in patient-reported outcomes",
+          "value": "IPSS QoL 0.34; OAB-q symptom bother 0.35; PGI bladder 0.43; PGI general health 0.36 (all P<0.001)",
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "note": "Associations across the randomized cohort; no treatment-arm contrast or prespecified success threshold.",
+          "locator": "Full text, Correlation between HRQoL parameters and TUFS, pp 167–168"
         }
       ],
       "harms": [],
-      "delivery": [],
+      "delivery": [
+        {
+          "label": "Blinding and responder-analysis coverage",
+          "value": "The 12-week trial used once-daily, double-blind, double-dummy dosing. The 9 mg combination was included in analyses but its responder results were not reported.",
+          "locator": "Full text, Study design and patients and Statistical analysis, pp 166–167; Discussion, p 170"
+        }
+      ],
       "source": {
         "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_bju_13162.fulltext.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {

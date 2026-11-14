@@ -16,7 +16,7 @@
   ],
   "question": "Does finasteride reduce symptoms, acute urinary retention, and BPH surgery compared with placebo in men with symptomatic prostatic enlargement?",
   "design": {
-    "phase": "not stated in abstract",
+    "phase": "not reported",
     "randomized": true,
     "blinding": "double-blind",
     "type": "superiority",
@@ -35,13 +35,13 @@
         "role": "control"
       }
     ],
-    "population": "3,040 men with moderate-to-severe urinary symptoms and enlarged prostate glands.",
+    "population": "3,040 men with moderate-to-severe urinary symptoms, low maximal urinary flow, and an enlarged prostate on digital rectal examination.",
     "description": "Multicenter, double-blind, placebo-controlled randomized trial",
-    "locator": "McConnell 1998 PubMed abstract, Methods; Wessells 2003 publisher abstract, Methods (arm denominators)"
+    "locator": "Full text, Methods, p 558; Figure 1, p 559"
   },
   "verdict": "positive",
-  "verdictNote": "Event benefits were assessed in 3,016 evaluable men; symptom change was reported among completers.",
-  "takeaway": "Four years of finasteride 5 mg daily versus placebo reduced BPH surgery (69/1,513 versus 152/1,503) and acute urinary retention (42/1,513 versus 99/1,503) in men with symptomatic prostatic enlargement; symptom scores also improved among completers.",
+  "verdictNote": "Prespecified symptom-score endpoint improved in the intention-to-treat analysis; surgery and retention were secondary endpoints.",
+  "takeaway": "In 3,016 evaluable men with symptomatic prostatic enlargement, finasteride 5 mg daily for four years improved the primary symptom score (mean decrease 2.6 versus 1.0 points; P <0.001) and reduced surgery or acute retention (100/1,513 versus 199/1,503; 51% risk reduction).",
   "reports": [
     {
       "id": "pless-1998",
@@ -53,23 +53,48 @@
       "doi": "10.1056/NEJM199802263380901",
       "pmid": "9475762",
       "followUp": "4 years",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Methods, p 558",
       "results": [
         {
           "endpoint": "Urinary symptom score",
           "role": "primary",
-          "measure": "Mean symptom-score decrease among study completers; 1–34 symptom-score scale",
+          "measure": "Mean decrease in quasi-AUA symptom score (0–34) over 4 years; prespecified stratified intention-to-treat analysis including discontinuations",
           "values": {
-            "exp": "3.3 points",
-            "ctl": "1.3 points"
+            "exp": "2.6 points",
+            "ctl": "1.0 point"
           },
           "effect": {
-            "type": "none",
+            "type": "difference",
+            "value": 1.6,
+            "ci": [
+              0.7,
+              2.5
+            ],
             "p": "<0.001"
           },
-          "met": null,
-          "note": "The abstract does not state the prespecified primary threshold.",
-          "locator": "PubMed abstract, Results"
+          "met": true,
+          "note": "Among completers, mean decreases were 3.3 versus 1.3 points (reported difference 2.1; 95% CI 1.6–2.6; P <0.001).",
+          "locator": "Full text, Methods, p 558; Results, p 560"
+        },
+        {
+          "endpoint": "BPH surgery or acute urinary retention",
+          "role": "descriptive",
+          "measure": "First event over 4 years in evaluable men",
+          "values": {
+            "exp": "100/1,513 (7%)",
+            "ctl": "199/1,503 (13%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.49,
+            "ci": [
+              0.39,
+              0.62
+            ],
+            "p": "<0.001"
+          },
+          "note": "Paper reports a 51% risk reduction (95% CI 38–61%) from a time-to-first-event log-rank analysis; the ratio and CI here are inversions of that estimate.",
+          "locator": "Full text, Table 2 and Results, pp 559–560"
         },
         {
           "endpoint": "BPH surgery",
@@ -85,10 +110,11 @@
             "ci": [
               0.35,
               0.59
-            ]
+            ],
+            "p": "<0.001"
           },
-          "note": "Risk ratio and CI are the inverse of the reported 55% risk reduction (95% CI 41–65%).",
-          "locator": "PubMed abstract, Results"
+          "note": "Reported 55% risk reduction (95% CI 41–65%) from time-to-first-event log-rank analysis; 64/1,513 versus 125/1,503 underwent transurethral prostatectomy (49% risk reduction; 95% CI 33–62%).",
+          "locator": "Full text, Table 2 and Results, pp 559–560"
         },
         {
           "endpoint": "Acute urinary retention",
@@ -104,13 +130,64 @@
             "ci": [
               0.31,
               0.6
-            ]
+            ],
+            "p": "<0.001"
           },
-          "note": "Risk ratio and CI are the inverse of the reported 57% risk reduction (95% CI 40–69%).",
-          "locator": "PubMed abstract, Results"
+          "note": "Reported 57% risk reduction (95% CI 40–69%) from time-to-first-event log-rank analysis; spontaneous retention: 20/1,513 versus 56/1,503 (62% reduction; 95% CI 40–76%); precipitated retention: 23/1,513 versus 48/1,503 (52% reduction; 95% CI 23–70%). One man could have both types but counted once in total.",
+          "locator": "Full text, Table 2 and Results, p 560"
+        },
+        {
+          "endpoint": "Maximal urinary flow rate",
+          "role": "descriptive",
+          "measure": "Mean increase among 4-year completers",
+          "values": {
+            "exp": "1.9 mL/s",
+            "ctl": "0.2 mL/s"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.7,
+            "ci": [
+              1.3,
+              2.1
+            ],
+            "p": "<0.001"
+          },
+          "note": "Separation was evident within 4 months.",
+          "locator": "Full text, Results and Figure 3, p 561"
+        },
+        {
+          "endpoint": "Prostate volume",
+          "role": "descriptive",
+          "measure": "Mean percentage change among 4-year completers in MRI subgroup (157 finasteride; 155 placebo at baseline)",
+          "values": {
+            "exp": "18% decrease",
+            "ctl": "14% increase"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 32,
+            "ci": [
+              28,
+              36
+            ],
+            "p": "<0.001"
+          },
+          "note": "Volume was measured in 312 men at baseline; four-year MRI measurements were available for 102 finasteride and 85 placebo recipients.",
+          "locator": "Full text, Table 1, p 559; Results and Figure 3, p 561"
         }
       ],
-      "harms": [],
+      "harms": [
+        {
+          "label": "Drug-related sexual and breast adverse events in year 1",
+          "values": {
+            "exp": "decreased libido 6.4%; impotence 8.1%; decreased ejaculate volume 3.7%; breast enlargement 0.5% (1,524 randomized)",
+            "ctl": "decreased libido 3.4%; impotence 3.7%; decreased ejaculate volume 0.8%; breast enlargement 0.1% (1,516 randomized)"
+          },
+          "note": "Table 3 reports percentages without event counts. Overall serious adverse-event incidence did not differ significantly; counts were not reported.",
+          "locator": "Full text, Safety and Table 3, pp 561–562"
+        }
+      ],
       "delivery": [
         {
           "label": "Assigned treatment",
@@ -118,18 +195,27 @@
             "exp": "Finasteride 5 mg orally daily for 4 years",
             "ctl": "placebo daily for 4 years"
           },
-          "locator": "PubMed abstract, Methods"
+          "locator": "Full text, Methods, p 558"
         },
         {
           "label": "Outcome ascertainment",
-          "value": "Symptoms, flow, and clinical events assessed every 4 months in 3,016 evaluable men; complete event data in 2,760.",
-          "locator": "PubMed abstract, Methods"
+          "value": "Symptoms, flow, and clinical events assessed every 4 months in 3,016 evaluable men; complete four-year event data in 2,760 (92%). An allocation-blinded committee classified surgery and catheter-requiring retention; efficacy excluded 24 men from one closed site.",
+          "locator": "Full text, Methods, p 558; Figure 1, p 559"
+        },
+        {
+          "label": "Four-year treatment discontinuation",
+          "values": {
+            "exp": "524/1,524 (34%); 1,000 completed treatment",
+            "ctl": "633/1,516 (42%); 883 completed treatment"
+          },
+          "note": "Event analyses included events after treatment discontinuation when follow-up was available.",
+          "locator": "Full text, Methods, p 558; Figure 1 and Results, p 559"
         }
       ],
       "source": {
         "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1056_nejm199802263380901.fulltext.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -265,6 +351,20 @@
             "p": "0.01"
           },
           "note": "Post-retention subgroup; descriptive conditional comparison.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Surgery after precipitated acute urinary retention",
+          "role": "descriptive",
+          "measure": "Subsequent BPH surgery among men with precipitated retention",
+          "values": {
+            "exp": "14%",
+            "ctl": "26%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Post-retention subgroup; the abstract gives percentages without counts or a P value.",
           "locator": "PubMed abstract, Results"
         }
       ],
@@ -469,7 +569,7 @@
   "relations": [],
   "page": "/docs/clinical-evidence/studies/pless",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

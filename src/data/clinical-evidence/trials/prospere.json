@@ -197,8 +197,8 @@
       "citation": "Lucot JP, Cosson M, Verdun S, et al. Long-term outcomes of primary cystocele repair by transvaginal mesh surgery versus laparoscopic mesh sacropexy: extended follow up of the PROSPERE multicentre randomised trial. *BJOG.* 2022;129(1):127-137. doi:10.1111/1471-0528.16847",
       "doi": "10.1111/1471-0528.16847",
       "pmid": "34264001",
-      "followUp": "4 years; 220 of 262 randomized women followed",
-      "followUpLocator": "PubMed abstract, Results",
+      "followUp": "4 years; 220 of 262 randomized women entered the extension, 209 completed 48-month follow-up",
+      "followUpLocator": "Full text, Results, p 129; Figure 1, p 130",
       "results": [
         {
           "endpoint": "Pelvic Floor Distress Inventory-20",
@@ -211,16 +211,20 @@
               -14,
               -0.05
             ],
-            "p": "0.029"
+            "p": "0.048"
           },
           "met": true,
-          "note": "Both groups improved; between-group difference was below the minimal clinically important difference. Group means unavailable in abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Adjusted between-group difference, LS minus TVM. Extension enrolled 104 LS and 116 TVM patients; 209/220 completed follow-up. Exact PFDI-20 arm denominators are not given. The abstract gives P=0.029, whereas Table 2 gives P=0.048; both meet the prespecified 5% threshold. Difference below the 45-point MCID.",
+          "locator": "Full text, Methods, p 129; Results, p 129; Table 2, p 133",
+          "values": {
+            "ls": "19.2 ± 24.6 points (mean ± SD)",
+            "tvm": "26.1 ± 29.4 points (mean ± SD)"
+          }
         },
         {
           "endpoint": "Composite success",
           "role": "secondary",
-          "measure": "Four-year composite success",
+          "measure": "Four-year composite success; hazard ratio for time to composite failure",
           "values": {
             "ls": "70% (95% CI 61–81%)",
             "tvm": "71% (95% CI 62–81%)"
@@ -234,23 +238,51 @@
             ],
             "p": "0.75"
           },
-          "note": "Definition and event counts unavailable in abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Composite failure: POP-Q Ba, C or Bp >0 cm beyond hymen, bothersome vaginal bulge, or retreatment for recurrence. Percentages are 48-month time-to-event estimates, not raw counts.",
+          "locator": "Full text, Methods, pp 128–129; Results, p 131; Figure 3, p 134",
+          "met": false
         },
         {
           "endpoint": "POP-Q point C",
           "role": "secondary",
           "measure": "Four-year point C position, millimeters",
           "values": {
-            "ls": "−57 mm",
-            "tvm": "−48 mm"
+            "ls": "−59.7 ± 21.7 mm (mean ± SD)",
+            "tvm": "−51.7 ± 27.1 mm (mean ± SD)"
           },
           "effect": {
-            "type": "none",
+            "type": "difference",
+            "value": 8.5,
+            "ci": [
+              2.2,
+              14.9
+            ],
             "p": "0.0093"
           },
-          "note": "Other POP-Q measurements did not differ according to the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Adjusted between-group difference, TVM minus LS, in mm. The abstract gives rounded arm positions of −57 and −48 mm; Table 2 gives these detailed values.",
+          "locator": "Full text, Results, p 132; Table 2, p 133",
+          "met": true
+        },
+        {
+          "endpoint": "Surgical revision for prolapse recurrence",
+          "role": "secondary",
+          "measure": "Four-year surgical revision for prolapse recurrence",
+          "values": {
+            "ls": "4.3% (95% CI 1.6–10.2%)",
+            "tvm": "5.8% (95% CI 2.4–12.6%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 0.74,
+            "ci": [
+              0.17,
+              3.0
+            ],
+            "p": "0.76"
+          },
+          "met": false,
+          "note": "Odds ratio LS versus TVM; report does not give raw arm event counts.",
+          "locator": "Full text, Results, p 131"
         }
       ],
       "harms": [
@@ -260,21 +292,43 @@
             "ls": "2% (95% CI 0–4.7%)",
             "tvm": "8.7% (95% CI 3.4–13.7%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Reported hazard ratio 4.6 (95% CI 1.007–21.0), P=0.049; event counts unavailable in abstract."
+          "locator": "Full text, Results, p 132",
+          "note": "Cumulative rates in 220 extension participants (104 LS, 116 TVM); HR TVM versus LS 4.6 (95% CI 1.007–21.0), P=0.049. Three complications occurred after year one: vaginal synechiae and urinary obstruction requiring surgery after TVM, and rectovaginal fistula after treatment for recurrence involving the LS mesh. Sensitivity analysis of all randomized women, with nonparticipants censored at 1 year: 2.8% versus 8.8%, HR 3.5 (95% CI 0.99–12.7), P=0.052."
+        },
+        {
+          "label": "Vaginal mesh exposure through four years",
+          "values": {
+            "ls": "0 reported (extension n=104)",
+            "tvm": "3 reported (extension n=116)"
+          },
+          "locator": "Full text, Results, p 132",
+          "note": "One TVM exposure required surgery at six weeks and recurred at four years; another was asymptomatic at two years. Arm sizes are extension enrollment, not exposure-assessment denominators."
+        },
+        {
+          "label": "Pelvic or perineal pain reported at least once between six months and four years",
+          "values": {
+            "ls": "34/93 (36.6%)",
+            "tvm": "39/105 (37.1%)"
+          },
+          "locator": "Full text, Results, p 132",
+          "note": "73/198 (36.9%) overall. Chronic pain criteria were met by 13/205 (6.3%) overall."
         }
       ],
       "delivery": [
         {
           "label": "Four-year follow-up participation",
-          "value": "220 of 262 randomized women",
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Results, p 129; Figure 1, p 130",
+          "values": {
+            "ls": "104 entered extension; 96 completed 48-month follow-up",
+            "tvm": "116 entered extension; 113 completed 48-month follow-up"
+          },
+          "note": "220/262 randomized women entered the extension; 209 completed 48-month follow-up (193 in-person examination and questionnaire, 16 questionnaire only). Follow-up analyses were by randomized assignment."
         }
       ],
       "source": {
         "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_1471_0528_16847.fulltext.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],

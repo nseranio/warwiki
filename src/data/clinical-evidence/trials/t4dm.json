@@ -232,36 +232,86 @@
       "citation": "Handelsman DJ, Grossmann M, Yeap BB, et al. \"Long-term Outcomes of Testosterone Treatment in Men: A T4DM Postrandomization Observational Follow-up Study.\" *J Clin Endocrinol Metab.* 2024;109(1):e25-e31. doi:10.1210/clinem/dgad485",
       "doi": "10.1210/clinem/dgad485",
       "pmid": "37623257",
-      "followUp": "Median 5.1 years since last injection; 599/1,007 completed surveys",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUp": "Median 5.1 years (IQR 4.4–5.8) since last injection; 704/1,007 responded and 599/1,007 completed surveys (316/504 testosterone, 283/503 placebo)",
+      "followUpLocator": "Full text, Results, p e26",
       "results": [
         {
           "endpoint": "Self-reported new diabetes after trial treatment",
           "role": "descriptive",
-          "measure": "Between-group comparison in postrandomization survey",
-          "effect": {
-            "type": "none"
+          "measure": "New diagnosis after T4DM among 599 survey completers, median 5.1 years since last injection",
+          "values": {
+            "exp": "63/316 (20%)",
+            "ctl": "49/283 (17%)"
           },
-          "note": "No between-group difference reported; survey response was 316/504 versus 283/503, and diabetes outcome counts were absent from the abstract.",
-          "locator": "PubMed abstract, Methods and Results"
+          "effect": {
+            "type": "none",
+            "p": "0.65"
+          },
+          "met": "not-tested",
+          "note": "P is for the overall diabetes-diagnosis category comparison; self-reported without repeat OGTT or objective verification. No prespecified efficacy threshold for this observational survey.",
+          "locator": "Full text, Table 2, p e28; Results, p e26"
+        },
+        {
+          "endpoint": "Perceived benefit of study treatment",
+          "role": "descriptive",
+          "measure": "Self-reported benefit during T4DM and ongoing benefit after T4DM among 599 survey completers",
+          "values": {
+            "exp": "During 201/316 (64%); ongoing 138/316 (44%)",
+            "ctl": "During 139/283 (49%); ongoing 113/283 (40%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001 during; 0.07 ongoing"
+          },
+          "met": "not-tested",
+          "note": "Self-reported perception after treatment allocation was disclosed to some participants.",
+          "locator": "Full text, Table 2, p e28; Results, p e26"
         }
       ],
       "harms": [
         {
+          "label": "Self-reported new prostate disease diagnosis after T4DM",
+          "values": {
+            "exp": "Cancer 10/316 (3%); noncancer 20/316 (6%)",
+            "ctl": "Cancer 10/283 (4%); noncancer 25/283 (9%)"
+          },
+          "locator": "Full text, Table 2, p e28; Results, p e26",
+          "note": "P=0.49 for overall prostate-disease category comparison among 599 survey completers."
+        },
+        {
+          "label": "Self-reported new cardiovascular disease diagnosis after T4DM",
+          "values": {
+            "exp": "Heart disease 41/316 (13%); stroke 2/316 (1%); both 1/316 (0.3%)",
+            "ctl": "Heart disease 37/283 (13%); stroke 3/283 (1%); both 1/283"
+          },
+          "locator": "Full text, Table 2, p e28; Results, p e26",
+          "note": "P=0.95 for overall cardiovascular-disease category comparison among 599 survey completers."
+        },
+        {
           "label": "New sleep apnea diagnosis during randomized treatment, self-reported at survey",
           "values": {
-            "exp": "3.0%",
-            "ctl": "0.4%"
+            "exp": "10/316 (3%)",
+            "ctl": "1/283 (0.4%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "P=0.03; the abstract gives no event counts."
+          "locator": "Full text, Table 2, p e28; Results, p e26",
+          "note": "P=0.03; paper reports OR 10.5 (95% CI 5.5–20), which is inconsistent with the displayed counts. After T4DM, new diagnoses were 23/316 (7%) versus 26/283 (9%)."
         }
       ],
-      "delivery": [],
+      "delivery": [
+        {
+          "label": "Prescribed testosterone treatment after T4DM",
+          "values": {
+            "exp": "19/316 (6%) prescribed after T4DM; 16/19 (84%) still taking it at survey",
+            "ctl": "8/283 (2.8%) prescribed after T4DM; 6/8 (75%) still taking it at survey"
+          },
+          "locator": "Full text, Table 2, p e28; Results, p e26",
+          "note": "P=0.03 for poststudy testosterone prescription; all 27 poststudy treatments were prescribed by nonstudy doctors."
+        }
+      ],
       "source": {
         "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1210_clinem_dgad485.fulltext.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     },
     {

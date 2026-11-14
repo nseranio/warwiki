@@ -29,13 +29,13 @@
         "role": "single"
       }
     ],
-    "population": "137 adults with refractory urgency urinary incontinence were enrolled at 15 US centers; 133 received an implant and 132 entered the published intention-to-treat analysis.",
+    "population": "137 adults with refractory urgency urinary incontinence were enrolled at 15 US centers; 133 received an implant and 132 entered the published intention-to-treat analysis after one participant with zero baseline UUI episodes was excluded.",
     "description": "Prospective, multicenter, open-label, single-arm pivotal device study",
-    "locator": "PubMed abstract, Materials and methods and Results"
+    "locator": "Full text, Results, p 404; Table 1, p 403"
   },
-  "verdict": "descriptive",
-  "verdictNote": "The observed responder rate was 68% at 48 weeks in this single-arm study.",
-  "takeaway": "In a single-arm pivotal study, implanted eCoin leadless tibial nerve stimulation was associated with at least 50% fewer urgency incontinence episodes in 68% of the published intention-to-treat cohort at 48 weeks after activation.",
+  "verdict": "positive",
+  "verdictNote": "Primary efficacy met the prespecified 40% performance goal in a single-arm ITT analysis.",
+  "takeaway": "In this single-arm pivotal study, 68% of the 132-person published ITT set responded at 48 weeks after activation (95% CI 60%–76%), meeting the prespecified 40% performance goal; device-related events affected 16% of 133 implanted participants through 52 weeks.",
   "reports": [
     {
       "id": "ecoin-pivotal-2021",
@@ -47,7 +47,7 @@
       "doi": "10.1097/JU.0000000000001733",
       "pmid": "33797291",
       "followUp": "48 weeks after activation for efficacy; 52 weeks after implantation for device-related adverse events",
-      "followUpLocator": "PubMed abstract, Materials and methods and Results",
+      "followUpLocator": "Full text, Outcomes, p 402; Results, p 406",
       "results": [
         {
           "endpoint": "Urgency urinary incontinence responder rate",
@@ -59,9 +59,35 @@
           "effect": {
             "type": "none"
           },
-          "met": null,
-          "note": "The accessible abstract does not state the prespecified performance goal or test result.",
-          "locator": "PubMed abstract, Results"
+          "met": true,
+          "note": "Prespecified success required the lower bound of the two-sided 95% CI to exceed the 40% performance goal; the paper does not print a primary-endpoint P value.",
+          "locator": "Full text, Statistical Analysis and Results, p 404"
+        },
+        {
+          "endpoint": "Mean change in daily urgency urinary incontinence episodes",
+          "role": "secondary",
+          "measure": "Change from baseline at 48 weeks after activation among 120 with available three-day diaries; no imputation for secondary outcomes",
+          "values": {
+            "exp": "-2.61 episodes/day (SD 2.97; n=120; P < 0.001)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "locator": "Full text, Table 3, p 405"
+        },
+        {
+          "endpoint": "Overactive Bladder Questionnaire quality of life",
+          "role": "secondary",
+          "measure": "Mean changes from baseline at 48 weeks after activation among 116 with available questionnaire data; no imputation",
+          "values": {
+            "exp": "Symptom bother -34.2 (SD 27.5; n=116; P < 0.001); health-related quality of life +34.5 (SD 25.9; n=116; P < 0.001)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "locator": "Full text, Table 3, p 405"
         }
       ],
       "harms": [
@@ -70,8 +96,23 @@
           "values": {
             "exp": "16% of 133 implanted participants"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The FDA physician labeling uses a different device-related event count; see notes.md."
+          "locator": "Full text, Abstract and Results, pp 400, 406",
+          "note": "The FDA physician labeling uses a different device-related event count."
+        },
+        {
+          "label": "Device- or procedure-related adverse events through 52 weeks, journal analysis",
+          "values": {
+            "exp": "26/133 (20%): mild 15/133 (11%), moderate 8/133 (6%), severe 3/133 (2%); infections 9/133 (7%), including postoperative wound infection 6/133 (5%); device stimulation issues 6/133 (5%) and device dislocation 2/133 (2%)"
+          },
+          "locator": "Full text, Table 5, p 406",
+          "note": "Table 5 gives patient counts by MedDRA severity; the paper's prose rounds the overall rate to 19%."
+        },
+        {
+          "label": "Serious device- or procedure-related adverse event through 52 weeks, journal analysis",
+          "values": {
+            "exp": "1/133 (1%): procedure-related infection requiring explantation, resolved without sequelae"
+          },
+          "locator": "Full text, Results, p 406"
         },
         {
           "label": "Device- or procedure-related adverse events through 52 weeks, FDA labeling analysis",
@@ -93,20 +134,25 @@
       "delivery": [
         {
           "label": "Implant location and treatment delivery",
-          "value": "eCoin was implanted in the lower leg above the fascia over the tibial nerve and delivered automated stimulation sessions.",
-          "locator": "PubMed abstract, Materials and methods"
+          "value": "eCoin was implanted subcutaneously in the medial lower leg above the fascia over the tibial nerve and delivered automated stimulation sessions; programming used 20 pulses/second, 200-microsecond pulse width and 0.5–15 mA amplitude adjusted to an acceptable sensory level.",
+          "locator": "Full text, Procedures, pp 401–402"
+        },
+        {
+          "label": "Implantation time",
+          "value": "Mean incision-to-final-suture time was 19.8 minutes (SD 14.3) under local anesthesia.",
+          "locator": "Full text, Results, p 404"
         },
         {
           "label": "Procedure setting and activation",
-          "value": "Implantation was primarily in office settings under local anesthesia; activation followed a 4-week healing period, then 30-minute sessions every 3 days for 18 weeks and every 4 days thereafter.",
-          "locator": "FDA physician labeling P200036D, pp25-26, Study Design",
-          "note": "FDA labeling describes the same pivotal cohort."
+          "value": "Implantation was performed in office or outpatient settings under local anesthesia; activation followed a 4-week healing period, then 30-minute sessions every 3 days for 18 weeks and every 4 days thereafter.",
+          "locator": "Full text, Procedures, pp 401–402",
+          "note": "The journal describes office or outpatient implantation and four-week activation."
         }
       ],
       "source": {
         "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_ju_0000000000001733.fulltext.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -243,7 +289,7 @@
   "relations": [],
   "page": "/docs/clinical-evidence/studies/ecoin-pivotal",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

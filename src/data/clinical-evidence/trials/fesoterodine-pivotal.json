@@ -338,48 +338,99 @@
     },
     {
       "id": "fesoterodine-pivotal-2011-extension",
-      "kind": "secondary",
-      "label": "Pooled open-label extensions",
+      "kind": "post-hoc",
+      "label": "Pooled open-label extensions, post hoc analysis",
       "published": "2011-03-01",
       "cutoff": null,
       "citation": "Scarpero H, Sand PK, Kelleher CJ, et al. \"Long-term safety, tolerability, and efficacy of fesoterodine treatment in men and women with overactive bladder symptoms.\" *Curr Med Res Opin.* 2011;27(5):921-930. doi:10.1185/03007995.2011.559581",
       "doi": "10.1185/03007995.2011.559581",
       "pmid": "21355814",
-      "followUp": "Open-label treatment assessed through 24 months; maximum allowed 24-36 months",
-      "followUpLocator": "PubMed abstract, Research Design and Methods and Main Outcome Measures",
+      "followUp": "Open-label treatment assessed through 24 months; maximum allowed 36 months, with site-dependent operational termination",
+      "followUpLocator": "Full text, Subjects and study design, pp 922–923; Outcome measures, p 923",
       "results": [
         {
           "endpoint": "Overactive bladder diary outcomes",
-          "role": "descriptive",
-          "measure": "Change from double-blind baseline through open-label month 24",
+          "role": "secondary",
+          "measure": "Paired change from double-blind baseline to open-label month 24 in the full analysis set with available 3-day diaries; UUI analyses restricted to baseline UUI",
           "effect": {
             "type": "none"
           },
-          "note": "In pooled flexible-dose extension participants followed through month 24, improvements were sustained or further improved. Open-label extensions pooled participants from SP583 and SP584; all began at 8 mg, with dose reduction and re-escalation permitted.",
-          "locator": "Scarpero PubMed abstract, Research Design and Methods and Results"
+
+          "note": "At month 24, micturition and urgency diaries were available for 74 men and 325 women, and UUI diaries for 58 men and 290 women. All four diary variables remained improved from double-blind baseline (men P<0.05; women P≤0.0001); none changed significantly from open-label baseline in men at month 24. Paired tests had no concurrent control or prespecified comparative threshold.",
+          "locator": "Full text, Outcomes measures and Statistical analyses, p 923; Figure 3 and Results, p 927"
+        },
+        {
+          "endpoint": "Micturitions per 24 hours at open-label month 24 by prior randomized treatment",
+          "role": "secondary",
+          "measure": "Mean change from double-blind baseline among available month-24 diary completers, stratified by sex and preceding double-blind treatment",
+          "values": {
+            "placebo": "men −3.0 (n=22, P=0.0024); women −3.0 (n=92, P<0.0001)",
+            "tolterodine": "men −2.2 (n=13, P=0.0026); women −2.4 (n=57, P<0.0001)",
+            "feso4": "men −1.7 (n=20, P=0.0071); women −2.9 (n=100, P<0.0001)",
+            "feso8": "men −4.3 (n=19, P=0.0003); women −2.9 (n=76, P<0.0001)"
+          },
+          "effect": {
+            "type": "none"
+          },
+
+          "note": "All participants received open-label fesoterodine; these are within-subject paired P values, not randomized between-arm comparisons. No confidence intervals were reported.",
+          "locator": "Full text, Table 4, Micturitions per 24 h, p 928"
+        },
+        {
+          "endpoint": "Patient-reported treatment tolerance",
+          "role": "primary",
+          "measure": "Good or excellent on a four-point scale at months 4, 12, and 24 among assessed open-label recipients",
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "note": "At least 92% of men and 91% of women rated treatment tolerance good or excellent at each assessed visit; month-24 assessments included 79 men and 346 women. The paper reported no prespecified success threshold or between-group test.",
+          "locator": "Full text, Outcomes measures, p 923; Figure 2 and Subject-reported treatment tolerance, p 926"
         }
       ],
       "harms": [
         {
           "label": "Dry mouth in pooled flexible-dose extension",
           "values": {
-            "feso8": "24% of men; 32% of women"
+            "feso8": "44/185 men (23.8%) and 227/705 women (32.2%) had treatment-emergent dry mouth"
           },
-          "locator": "Scarpero PubMed abstract, Results",
-          "note": "All participants began at 8 mg; annual dose reduction to 4 mg and re-escalation were permitted. Rates are by sex, not randomized dose."
+          "locator": "Full text, Table 3, p 926",
+          "note": "Sex-specific safety populations; all began open-label fesoterodine 8 mg with optional reduction to 4 mg."
+        },
+        {
+          "label": "Any treatment-emergent adverse event and urinary tract infection",
+          "values": {
+            "feso8": "Any AE: 140/185 men (75.7%) and 539/705 women (76.5%); urinary tract infection: 6/185 men (3.2%) and 128/705 women (18.2%)"
+          },
+          "locator": "Full text, Table 3, p 926",
+          "note": "All-causality treatment-emergent events in the open-label safety population."
+        },
+        {
+          "label": "Discontinuation due to treatment-emergent adverse events",
+          "values": {
+            "feso8": "29/185 men (15.7%) and 83/705 women (11.8%) discontinued over the entire open-label extension; dry mouth caused 2/185 and 13/705 discontinuations, respectively"
+          },
+          "locator": "Full text, Table 3, p 926",
+          "note": "Table 3 covers the full exposure period; the first-24-month AE-discontinuation counts were 29 men and 82 women (Results, p 924)."
         }
       ],
       "delivery": [
         {
           "label": "Continuation through 24 months",
           "value": "83/185 men (45%) and 356/705 women (50%) continued open-label fesoterodine for at least 24 months.",
-          "locator": "Scarpero PubMed abstract, Results"
+          "locator": "Full text, Treatment discontinuations, p 924; Figure 1, p 925",
+          "note": "Within the first 24 months, 102/185 men and 349/705 women discontinued; insufficient response accounted for 30/185 men and 90/705 women."
+        },
+        {
+          "label": "Open-label dose adjustment",
+          "value": "All 890 participants began fesoterodine 8 mg once daily; reduction to 4 mg was allowed after month 1, and reduction and re-escalation were each permitted once annually. The initial 8 mg dose was maintained throughout treatment by 156/185 men (84.3%) and 525/705 women (74.5%).",
+          "locator": "Full text, Subjects and study design, pp 922–923; Table 2, p 926"
         }
       ],
       "source": {
         "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1185_03007995_2011_559581.fulltext.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],

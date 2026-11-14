@@ -201,26 +201,56 @@
       "doi": "10.1080/00365590802671031",
       "pmid": "19137459",
       "followUp": "Quality of life before and after six months of oral treatment",
-      "followUpLocator": "PubMed abstract, Material and methods",
+      "followUpLocator": "Full text, Material and methods, p 213; Figure 1, p 216",
       "results": [
         {
           "endpoint": "Health-related quality of life",
-          "role": "secondary",
-          "measure": "Emotional well-being, social functioning, activity limitation days, pain, and physical capacity after oral treatment",
+          "role": "descriptive",
+          "measure": "Baseline (32 per arm) and six-month (29 completers per arm) mean scores; between-arm changes in pain, emotional well-being, social functioning, physical capacity, and activity limitation days compared by t test",
+          "values": {
+            "exp": "pain 5.5 ± 1.7 to 2.9 ± 2.1; emotional well-being 58.5 ± 13 to 75.9 ± 15; social functioning 3.3 ± 1.1 to 5.0 ± 1.3; physical capacity 2.2 ± 0.5 to 1.5 ± 0.7",
+            "ctl": "pain 5.8 ± 1.6 to 4.9 ± 2.3; emotional well-being 58.8 ± 18 to 65.4 ± 15; social functioning 3.1 ± 1.3 to 3.4 ± 1.4; physical capacity 1.9 ± 0.7 to 1.7 ± 0.7"
+          },
           "effect": {
             "type": "none",
             "p": "<0.05"
           },
-          "note": "Cyclosporine had a greater effect than PPS across the listed domains; the abstract gives no arm-specific scores. This report also analyzed a separate DMSO-versus-BCG trial.",
-          "locator": "PubMed abstract, Results"
+          "note": "The paper designates no primary HRQoL endpoint. Cyclosporine had greater change in the five listed domains; Figure 1 does not report domain-specific effect estimates, confidence intervals, or P values. Lower pain and physical-capacity scores indicate improvement. The report also analyzed a separate DMSO-versus-BCG trial.",
+          "locator": "Full text, Figure 1 and caption, p 216"
+        },
+        {
+          "endpoint": "Global response (much better or completely cured)",
+          "role": "descriptive",
+          "measure": "GRA categories 5–6 after six months; randomized-arm denominators with dropouts counted as nonresponders",
+          "values": {
+            "exp": "19/32 (59%)",
+            "ctl": "4/32 (13%, rounded)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 46.875,
+            "p": "<0.001"
+          },
+          "note": "Percentage-point difference calculated from counts; no confidence interval reported. The 2005 primary report's broader GRA 4–6 definition yielded 24/32 versus 6/32.",
+          "locator": "Full text, Material and methods, p 213; Table I, p 215"
         }
       ],
       "harms": [],
-      "delivery": [],
+      "delivery": [
+        {
+          "label": "Oral treatment and questionnaire completion",
+          "values": {
+            "exp": "Cyclosporine A 1.5 mg/kg twice daily for six months; 29/32 completed",
+            "ctl": "Pentosan polysulfate sodium 100 mg three times daily for six months; 29/32 completed"
+          },
+          "locator": "Full text, Material and methods, p 213; Results, p 214; Figure 1 caption, p 216",
+          "note": "Figure 1 uses 32 pretreatment and 29 post-treatment questionnaires per oral arm."
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1080_00365590802671031.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1080_00365590802671031.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     }
   ],

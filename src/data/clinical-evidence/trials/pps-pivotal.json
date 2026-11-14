@@ -215,16 +215,16 @@
       "citation": "Parsons CL, Benson G, Childs SJ, et al. \"A quantitatively controlled method to study prospectively interstitial cystitis and demonstrate the efficacy of pentosanpolysulfate.\" *J Urol.* 1993;150(3):845-848. doi:10.1016/s0022-5347(17)35629-x",
       "doi": "10.1016/s0022-5347(17)35629-x",
       "pmid": "7688432",
-      "followUp": "not stated in abstract",
-      "followUpLocator": "PubMed abstract",
+      "followUp": "3 months of double-blind treatment",
+      "followUpLocator": "Full text, Patients and Methods, p 845; Results, p 846",
       "results": [
         {
           "endpoint": "Patient-reported global improvement",
           "role": "primary",
-          "measure": "Significant overall symptom improvement; risk difference in percentage points",
+          "measure": "At least 50% overall symptom improvement by patient self-evaluation at 3 months; 24/74 versus 12/74",
           "values": {
-            "exp": "32%",
-            "ctl": "16%"
+            "exp": "24/74 (32%)",
+            "ctl": "12/74 (16%)"
           },
           "effect": {
             "type": "difference",
@@ -232,79 +232,151 @@
             "p": "0.01"
           },
           "met": true,
-          "note": "Independent randomized cohort; response cutoff and arm denominators unavailable in the abstract. Risk difference calculated from rounded percentages.",
-          "locator": "PubMed abstract, Results"
+          "note": "Prespecified successful-therapy threshold. The 16-percentage-point difference is calculated from rounded percentages; no confidence interval is reported.",
+          "locator": "Full text, Patients and Methods, p 845; Results, p 846; Table 2, p 847"
+        },
+        {
+          "endpoint": "Investigator-rated global improvement",
+          "role": "primary",
+          "measure": "At least good (50%) overall improvement at 3 months",
+          "values": {
+            "exp": "36%",
+            "ctl": "15%"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 21,
+            "p": "0.002"
+          },
+          "met": true,
+          "note": "Percentage-point difference calculated from rounded rates; endpoint-specific denominators and confidence interval are not reported.",
+          "locator": "Full text, Results, p 846; Table 2, p 847; Discussion, p 847"
         },
         {
           "endpoint": "Pain on analogue scale",
-          "role": "secondary",
-          "measure": "Between-group decrease in pain",
+          "role": "primary",
+          "measure": "At least 1-point decrease on 0–5 pain scale at 3 months",
           "values": {
-            "exp": "greater decrease",
-            "ctl": "placebo"
+            "exp": "66%",
+            "ctl": "51%"
           },
           "effect": {
             "type": "none",
             "p": "0.04"
           },
-          "locator": "PubMed abstract, Results"
+          "met": true,
+          "note": "The paper designates the pain scale a primary efficacy variable; endpoint-specific denominators are not reported.",
+          "locator": "Full text, Patients and Methods and Results, p 846; Table 2 and Discussion, p 847"
         },
         {
           "endpoint": "Urgency on analogue scale",
-          "role": "secondary",
-          "measure": "Between-group decrease in urgency",
+          "role": "primary",
+          "measure": "At least 1-point decrease on 0–5 urgency scale at 3 months",
           "values": {
-            "exp": "greater decrease",
-            "ctl": "placebo"
+            "exp": "61%",
+            "ctl": "43%"
           },
           "effect": {
             "type": "none",
             "p": "0.01"
           },
-          "locator": "PubMed abstract, Results"
+          "met": true,
+          "note": "The paper designates the urgency scale a primary efficacy variable; endpoint-specific denominators are not reported.",
+          "locator": "Full text, Patients and Methods and Results, p 846; Table 2 and Discussion, p 847"
+        },
+        {
+          "endpoint": "Patient-rated pain improvement",
+          "role": "secondary",
+          "measure": "At least 50% pain improvement on follow-up questionnaire at 3 months",
+          "values": {
+            "exp": "38%",
+            "ctl": "18%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.005"
+          },
+          "met": true,
+          "note": "Endpoint-specific denominators are not reported.",
+          "locator": "Full text, Results, p 846; Table 2, p 847"
+        },
+        {
+          "endpoint": "Patient-rated pressure-to-urinate improvement",
+          "role": "secondary",
+          "measure": "At least 50% improvement in pressure to urinate on follow-up questionnaire at 3 months",
+          "values": {
+            "exp": "30%",
+            "ctl": "18%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.04"
+          },
+          "met": true,
+          "note": "Endpoint-specific denominators are not reported.",
+          "locator": "Full text, Results, p 846; Table 2, p 847"
         },
         {
           "endpoint": "Voided volume",
           "role": "secondary",
-          "measure": "Patients with mean increase greater than 20 mL",
+          "measure": "At least 20-mL increase in average volume per void at 3 months",
           "values": {
-            "exp": "more patients",
-            "ctl": "placebo"
+            "exp": "40%",
+            "ctl": "24%"
           },
           "effect": {
             "type": "none",
             "p": "0.02"
           },
-          "locator": "PubMed abstract, Results"
+          "met": true,
+          "note": "Endpoint-specific denominators are not reported; mean volume changes of +20.4 and -2.1 mL were not significantly different.",
+          "locator": "Full text, Results, p 846; Table 3, p 847"
         }
       ],
       "harms": [
         {
-          "label": "Minor adverse effects",
+          "label": "Patients with adverse experiences",
           "values": {
-            "exp": "7 reported",
-            "ctl": "10 reported"
+            "exp": "7/74 (9%; 12 experiences)",
+            "ctl": "10/74 (14%; 19 experiences)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract gives counts of adverse effects without arm denominators."
+          "locator": "Full text, Results, p 846; Table 4 and Discussion, p 847",
+          "note": "Authors considered no adverse experiences serious; Table 4 lists one placebo-group suicide attempt and one PPS-group bowel obstruction."
+        },
+        {
+          "label": "Treatment discontinued because of adverse experiences",
+          "values": {
+            "exp": "3/74",
+            "ctl": "5/74"
+          },
+          "locator": "Full text, Results, p 846; Discussion, p 848"
         }
       ],
       "delivery": [
         {
           "label": "Patient global symptom scale",
           "value": "Worse or 0%, 25%, 50%, 75%, or 100% improved",
-          "locator": "PubMed abstract, Methods"
+          "locator": "Full text, Patients and Methods, p 845"
         },
         {
           "label": "Oral PPS regimen",
-          "value": "100 mg three times daily versus placebo at 7 centers (148 patients)",
-          "locator": "PubMed abstract, Methods"
+          "value": "Oral PPS 100 mg three times daily (300 mg/day), one hour before meals or two hours after meals; identically appearing placebo capsules",
+          "locator": "Full text, Patients and Methods, p 845"
+        },
+        {
+          "label": "Three-month completion",
+          "values": {
+            "exp": "65/74 completed (9 did not complete)",
+            "ctl": "65/74 completed (9 did not complete)"
+          },
+          "locator": "Full text, Results, p 846",
+          "note": "Completion counts calculated from 74 randomized and 9 who did not complete in each group; 3 PPS and 5 placebo participants discontinued because of adverse experiences."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0022_5347_17_35629_x.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0022_5347_17_35629_x.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],

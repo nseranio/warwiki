@@ -18,28 +18,30 @@
   "design": {
     "phase": "not applicable",
     "randomized": true,
-    "blinding": "not specified in abstract",
+    "blinding": "Objective-response assessors blinded; recognizable DMSO garlic odor limited patient blinding",
     "type": "superiority",
     "n": 33,
     "arms": [
       {
         "key": "exp",
         "label": "Intravesical 50% dimethyl sulfoxide",
+        "n": 15,
         "role": "experimental"
       },
       {
         "key": "ctl",
         "label": "intravesical saline",
+        "n": 18,
         "role": "control"
       }
     ],
-    "population": "Thirty women and three men with biopsies suggestive of interstitial cystitis were enrolled; mean age was 48 years and mean symptom duration was 5.5 years.",
+    "population": "Thirty women and three men with biopsies suggestive of interstitial cystitis were enrolled; mean age was 48 years and mean symptom duration was 5.5 years. None had Hunner ulcers or contracted bladders.",
     "description": "Randomized, saline-controlled crossover trial",
-    "locator": "PubMed abstract, Methods and Results"
+    "locator": "Full text, Materials and Methods, pp 36-37; Discussion, p 39"
   },
   "verdict": "positive",
-  "verdictNote": "Both reported improvement rates favored DMSO; trial-defined significance could not be assessed.",
-  "takeaway": "In a randomized crossover trial of intravesical 50% dimethyl sulfoxide versus saline for interstitial cystitis, markedly improved symptoms were reported in 53% versus 18%, and objective improvement in 93% versus 35%.",
+  "verdictNote": "First-period subjective and objective responses favored DMSO; exact P values were not reported.",
+  "takeaway": "In a randomized crossover trial of intravesical 50% dimethyl sulfoxide versus saline for interstitial cystitis, first-period marked subjective improvement was 6/15 (40%) versus 3/17 (18%), and objective improvement was 14/15 (93%) versus 6/17 (35%).",
   "reports": [
     {
       "id": "dmso-ic-1988",
@@ -52,66 +54,116 @@
       "citation": "Perez-Marrero R, Emerson LE, Feltis JT. \"A Controlled Study of Dimethyl Sulfoxide in Interstitial Cystitis.\" *J Urol.* 1988;140(1):36-39. doi:10.1016/s0022-5347(17)41478-9",
       "doi": "10.1016/s0022-5347(17)41478-9",
       "pmid": "3288775",
-      "followUp": "Assessment after intravesical treatment; timing not stated in the abstract.",
-      "followUpLocator": "PubMed abstract, Methods and Results",
+      "followUp": "After four instillations at 2-week intervals in each period, separated by a 4-week rest",
+      "followUpLocator": "Full text, Materials and Methods, pp 36-37",
       "results": [
         {
           "endpoint": "Marked subjective improvement",
           "role": "descriptive",
-          "measure": "Patients markedly improved by subjective assessment; percentage of treated patients",
+          "measure": "First-period patient-rated marked improvement after four instillations; analyzed patients",
           "values": {
-            "exp": "53%",
-            "ctl": "18%"
+            "exp": "6/15 (40%)",
+            "ctl": "3/17 (18%)"
           },
           "effect": {
             "type": "none"
           },
-          "note": "The abstract gives percentages without arm denominators, a prespecified endpoint hierarchy, or a P value.",
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "No primary endpoint or numerical effect estimate, confidence interval, P value, or significance threshold was specified; the authors state that the subjective differences were statistically significant. The 53% figure is 8/15 after DMSO-to-saline crossover.",
+          "locator": "Full text, Table 5 and Results, p 38"
         },
         {
           "endpoint": "Objective improvement",
           "role": "descriptive",
-          "measure": "Objective improvement by urodynamic assessment; percentage of treated patients",
+          "measure": "First-period improvement adjudicated by blinded assessors using urodynamics, voiding charts, and symptom scales; analyzed patients",
           "values": {
-            "exp": "93%",
-            "ctl": "35%"
+            "exp": "14/15 (93%)",
+            "ctl": "6/17 (35%)"
           },
           "effect": {
             "type": "none"
           },
-          "note": "The abstract gives percentages without arm denominators, an exact objective-response definition, or a P value.",
-          "locator": "PubMed abstract, Methods and Results"
+          "met": "not-tested",
+          "note": "Objective response required a 50% increase in cystometric urge or capacity and/or loss of filling pain, supported by improvement in the voiding chart or symptom scales. No numerical effect estimate, confidence interval, P value, or significance threshold was specified.",
+          "locator": "Full text, Materials and Methods, p 37; Table 4, p 38"
+        },
+        {
+          "endpoint": "Moderate or marked subjective improvement",
+          "role": "descriptive",
+          "measure": "First-period patient-rated moderate or marked improvement; analyzed patients",
+          "values": {
+            "exp": "13/15 (87%)",
+            "ctl": "10/17 (59%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "note": "Sum of the moderate and marked categories; no separate P value or confidence interval reported.",
+          "locator": "Full text, Table 5, p 38"
+        },
+        {
+          "endpoint": "Marked subjective improvement after crossover",
+          "role": "descriptive",
+          "measure": "Second-period patient-rated marked improvement by original randomized sequence; 15 patients per sequence evaluated",
+          "values": {
+            "exp": "8/15 (53%) after DMSO then saline",
+            "ctl": "7/15 (47%) after saline then DMSO"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "note": "Second-period values reflect treatment sequences, not a concurrent DMSO-versus-saline comparison.",
+          "locator": "Full text, Table 5 and Results, p 38"
+        },
+        {
+          "endpoint": "Objective improvement after crossover",
+          "role": "descriptive",
+          "measure": "Second-period objective improvement by original randomized sequence; 15 patients per sequence evaluated",
+          "values": {
+            "exp": "13/15 after DMSO then saline",
+            "ctl": "10/15 (67%) after saline then DMSO"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "note": "The text prints 86% for 13/15, while 13/15 rounds to 87%; one initial DMSO responder relapsed. Second-period values reflect treatment sequences, not a concurrent DMSO-versus-saline comparison.",
+          "locator": "Full text, Table 4 and Results, p 38"
         }
       ],
       "harms": [
         {
-          "label": "Significant side effects from DMSO",
-          "values": {
-            "exp": "None noted"
-          },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract does not give adverse-event categories, counts, or saline-arm rates."
+          "label": "Complications during the instillation study",
+          "locator": "Full text, Results, p 38",
+          "note": "5/33 patients (15%) had complications. Three minor events did not interrupt therapy: 2/33 had uncomplicated lower urinary tract infections and 1/33 had biliary colic. Clavien-Dindo grades, retention, reoperation, and mesh exposure were not reported."
+        },
+        {
+          "label": "Severe neurologic symptoms requiring treatment discontinuation",
+          "locator": "Full text, Results, pp 38-39",
+          "note": "2/33 randomized patients, both during saline: one hemiparesis and one severe migraine. Both resolved within 48 hours; the authors reported no significant side effects attributable to DMSO."
         }
       ],
       "delivery": [
         {
           "label": "Instillation schedule",
-          "value": "50% dimethyl sulfoxide or saline intravesically every two weeks for two sessions of four treatments each, with crossover.",
-          "locator": "PubMed abstract, Methods"
+          "value": "50 cc of 50% dimethyl sulfoxide or normal saline intravesically every 2 weeks for four instillations, then a 4-week rest and crossover to four instillations of the other solution; hold in the bladder for at least 15 minutes. An outpatient nurse administered all instillations.",
+          "locator": "Full text, Materials and Methods, pp 36-37",
+          "note": "Thirty-three randomized; 15 DMSO-first and 18 saline-first. One saline-first patient was removed after pregnancy following the first instillation; 32 were analyzed in period 1, and 15 per sequence entered period 2."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0022_5347_17_41478_9.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0022_5347_17_41478_9.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/dmso-ic",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

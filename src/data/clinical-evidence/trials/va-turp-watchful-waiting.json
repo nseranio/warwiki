@@ -36,13 +36,13 @@
         "role": "control"
       }
     ],
-    "population": "556 men older than 54 years with moderate symptoms of benign prostatic hyperplasia.",
+    "population": "556 men aged 55 years or older with a 10–20/27 symptom score and moderate BPH symptoms.",
     "description": "Multicenter, open-label randomized superiority trial",
-    "locator": "PubMed abstract, Background and Methods"
+    "locator": "Full text, Methods, Selection of Patients and Assignment to Treatment, pp 75–76; Results, Screening, p 76"
   },
   "verdict": "positive",
   "verdictNote": "Watchful-waiting crossover to surgery reached 65/276 (24%) by three years.",
-  "takeaway": "In men with moderate BPH symptoms, immediate transurethral resection reduced three-year composite treatment failure versus watchful waiting (23/280 versus 47/276; RR 0.48, 95% CI 0.30–0.77).",
+  "takeaway": "Among 556 men with moderate BPH symptoms, immediate TURP reduced three-year composite treatment failure versus watchful waiting (23/280 [8.2%] versus 47/276 [17.0%]; RR 0.48, 95% CI 0.30–0.77; P = 0.002 for event rates).",
   "reports": [
     {
       "id": "va-turp-watchful-waiting-1995",
@@ -54,7 +54,7 @@
       "doi": "10.1056/NEJM199501123320202",
       "pmid": "7527493",
       "followUp": "Mean 2.8 years; planned follow-up three years",
-      "followUpLocator": "PubMed abstract, Methods and Results",
+      "followUpLocator": "Full text, Table 2 footnote, p 77",
       "results": [
         {
           "endpoint": "Treatment failure",
@@ -70,51 +70,98 @@
             "ci": [
               0.3,
               0.77
-            ]
+            ],
+            "p": "0.002 for event-rate comparison"
           },
-          "met": null,
-          "note": "Intention-to-treat; composite included death, retention, postvoid residual above 350 mL, bladder calculus, persistent new incontinence, high symptom score, or doubled creatinine.",
-          "locator": "PubMed abstract, Methods and Results"
+          "met": true,
+          "note": "Intention to treat; composite included death, repeated or intractable retention, postvoid residual above 350 mL, bladder calculus, new persistent incontinence, high symptom score, or doubled creatinine. All tests were two-sided; P ≤ 0.05 was significant.",
+          "locator": "Full text, Statistical Analysis, p 76; Table 2 and Treatment Outcomes, p 77"
         },
         {
-          "endpoint": "Symptoms and urinary bother",
-          "role": "secondary",
-          "measure": "Symptom, urinary-difficulty, and daily-activity interference scores",
+          "endpoint": "Symptoms, urinary bother, and daily activities",
+          "role": "descriptive",
+          "measure": "Three-year symptom score (0–27), urinary-bother score and daily-activity score (both 0–100; higher is better), available follow-up assessments",
           "values": {
-            "exp": "greater improvement",
-            "ctl": "less improvement"
+            "exp": "4.9, 75.7, and 86.4, respectively",
+            "ctl": "9.1, 57.6, and 75.6, respectively"
           },
           "effect": {
             "type": "none",
-            "p": "<0.001 for all comparisons"
+            "p": "<0.001 for between-group changes in each measure"
           },
-          "note": "The greatest benefit was reported among men most bothered by urinary symptoms at baseline.",
-          "locator": "PubMed abstract, Results"
+          "note": "The greatest improvement in urinary bother after TURP was among men more bothered at baseline: 134/148 (91%) improved versus 45/73 (62%) of those less bothered.",
+          "locator": "Full text, Table 3 and Factors Influencing Outcomes, p 78"
+        },
+        {
+          "endpoint": "Obstructive components of treatment failure",
+          "role": "descriptive",
+          "measure": "Three-year urinary retention, high postvoid residual, and high symptom score, intention to treat",
+          "values": {
+            "exp": "1/280 (0.4%), 3/280 (1.1%), and 1/280 (0.4%), respectively",
+            "ctl": "8/276 (2.9%), 16/276 (5.8%), and 12/276 (4.3%), respectively"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "locator": "Full text, Table 2 and Treatment Outcomes, p 77"
+        },
+        {
+          "endpoint": "Peak flow and postvoid residual",
+          "role": "descriptive",
+          "measure": "Three-year peak urinary flow and postvoid residual, available follow-up assessments",
+          "values": {
+            "exp": "17.8 mL/s and 51 mL",
+            "ctl": "12.7 mL/s and 72 mL"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001 for flow change; 0.015 for residual-volume change"
+          },
+          "locator": "Full text, Table 3 and Change in Symptoms and Quality of Life, pp 77–78"
         }
       ],
       "harms": [
         {
-          "label": "Impotence and urinary incontinence",
-          "note": "Surgery was not associated with impotence or urinary incontinence in the reported comparison; absolute rates were not in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "label": "Persistent incontinence and sexual performance",
+          "values": {
+            "exp": "4/280 (1.4%) persistent incontinence",
+            "ctl": "4/276 (1.4%) persistent incontinence"
+          },
+          "note": "The three-year change in sexual-performance score was −3.0 after assignment to TURP and −3.2 after watchful waiting (P = 0.920); the 0–100 scale is higher for less impairment.",
+          "locator": "Full text, Tables 2–3 and Change in Symptoms and Quality of Life, pp 77–78"
+        },
+        {
+          "label": "Early postoperative complications",
+          "value": "Among 242 TURP procedures with complete operative information, repeat catheter placement occurred in 9/242 (3.7%), capsule perforation in 5/242 (2.1%), transfusion in 3/242 (1.2%), urinary infection in 2/242 (0.8%), and thrombophlebitis in 1/242 (0.4%) within 30 days; no surgery-associated deaths.",
+          "locator": "Full text, Postoperative Events, pp 76–77"
+        },
+        {
+          "label": "Later corrective procedures after TURP",
+          "value": "Within three years after surgery, nine men underwent endoscopic surgery for bladder-neck contracture, nine needed urethral dilation for stricture, and eight had a second TURP (four for adenocarcinoma).",
+          "locator": "Full text, Postoperative Events, p 77"
         }
       ],
       "delivery": [
         {
           "label": "Early TURP receipt",
-          "value": "249/280 (89%) assigned to surgery underwent TURP within two weeks of randomization.",
-          "locator": "PubMed abstract, Results"
+          "value": "249/280 (88.9%) assigned to surgery underwent TURP within two weeks. Among 242 procedures with complete operative information, 97% were resected to the capsule; median tissue weight was 14 g (IQR 8–21 g), and 78% had a hospital stay of four days or less (mean 4 ± 4 days).",
+          "locator": "Full text, Assignment to Treatment, p 75; Postoperative Events, pp 76–77"
         },
         {
           "label": "Watchful-waiting crossover",
-          "value": "65/276 (24%) assigned to watchful waiting underwent surgery within three years.",
-          "locator": "PubMed abstract, Results"
+          "value": "65/276 (23.6%) assigned to watchful waiting underwent surgery within three years; 20 crossed over because of treatment failure.",
+          "locator": "Full text, Treatment Outcomes, p 77"
+        },
+        {
+          "label": "Watchful-waiting regimen and follow-up",
+          "value": "Both groups were advised to avoid coffee, alcohol, and other liquids after dinner and to avoid symptom-worsening medications; physicians were asked to avoid alpha-adrenergic antagonists. Visits occurred at six to eight weeks and then twice yearly for three years.",
+          "locator": "Full text, Assignment to Treatment and Follow-up, pp 75–76"
         }
       ],
       "source": {
         "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1056_nejm199501123320202.fulltext.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     },
     {
@@ -239,7 +286,7 @@
   "relations": [],
   "page": "/docs/clinical-evidence/studies/va-turp-watchful-waiting",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

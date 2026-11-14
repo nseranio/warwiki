@@ -17635,26 +17635,56 @@
         "doi": "10.1080/00365590802671031",
         "pmid": "19137459",
         "followUp": "Quality of life before and after six months of oral treatment",
-        "followUpLocator": "PubMed abstract, Material and methods",
+        "followUpLocator": "Full text, Material and methods, p 213; Figure 1, p 216",
         "results": [
           {
             "endpoint": "Health-related quality of life",
-            "role": "secondary",
-            "measure": "Emotional well-being, social functioning, activity limitation days, pain, and physical capacity after oral treatment",
+            "role": "descriptive",
+            "measure": "Baseline (32 per arm) and six-month (29 completers per arm) mean scores; between-arm changes in pain, emotional well-being, social functioning, physical capacity, and activity limitation days compared by t test",
+            "values": {
+              "exp": "pain 5.5 ± 1.7 to 2.9 ± 2.1; emotional well-being 58.5 ± 13 to 75.9 ± 15; social functioning 3.3 ± 1.1 to 5.0 ± 1.3; physical capacity 2.2 ± 0.5 to 1.5 ± 0.7",
+              "ctl": "pain 5.8 ± 1.6 to 4.9 ± 2.3; emotional well-being 58.8 ± 18 to 65.4 ± 15; social functioning 3.1 ± 1.3 to 3.4 ± 1.4; physical capacity 1.9 ± 0.7 to 1.7 ± 0.7"
+            },
             "effect": {
               "type": "none",
               "p": "<0.05"
             },
-            "note": "Cyclosporine had a greater effect than PPS across the listed domains; the abstract gives no arm-specific scores. This report also analyzed a separate DMSO-versus-BCG trial.",
-            "locator": "PubMed abstract, Results"
+            "note": "The paper designates no primary HRQoL endpoint. Cyclosporine had greater change in the five listed domains; Figure 1 does not report domain-specific effect estimates, confidence intervals, or P values. Lower pain and physical-capacity scores indicate improvement. The report also analyzed a separate DMSO-versus-BCG trial.",
+            "locator": "Full text, Figure 1 and caption, p 216"
+          },
+          {
+            "endpoint": "Global response (much better or completely cured)",
+            "role": "descriptive",
+            "measure": "GRA categories 5–6 after six months; randomized-arm denominators with dropouts counted as nonresponders",
+            "values": {
+              "exp": "19/32 (59%)",
+              "ctl": "4/32 (13%, rounded)"
+            },
+            "effect": {
+              "type": "difference",
+              "value": 46.875,
+              "p": "<0.001"
+            },
+            "note": "Percentage-point difference calculated from counts; no confidence interval reported. The 2005 primary report's broader GRA 4–6 definition yielded 24/32 versus 6/32.",
+            "locator": "Full text, Material and methods, p 213; Table I, p 215"
           }
         ],
         "harms": [],
-        "delivery": [],
+        "delivery": [
+          {
+            "label": "Oral treatment and questionnaire completion",
+            "values": {
+              "exp": "Cyclosporine A 1.5 mg/kg twice daily for six months; 29/32 completed",
+              "ctl": "Pentosan polysulfate sodium 100 mg three times daily for six months; 29/32 completed"
+            },
+            "locator": "Full text, Material and methods, p 213; Results, p 214; Figure 1 caption, p 216",
+            "note": "Figure 1 uses 32 pretreatment and 29 post-treatment questionnaires per oral arm."
+          }
+        ],
         "source": {
           "file": null,
-          "level": "abstract",
-          "checked": "2026-11-12"
+          "level": "full-text",
+          "checked": "2026-11-13"
         }
       }
     ],
@@ -18268,28 +18298,30 @@
     "design": {
       "phase": "not applicable",
       "randomized": true,
-      "blinding": "not specified in abstract",
+      "blinding": "Objective-response assessors blinded; recognizable DMSO garlic odor limited patient blinding",
       "type": "superiority",
       "n": 33,
       "arms": [
         {
           "key": "exp",
           "label": "Intravesical 50% dimethyl sulfoxide",
+          "n": 15,
           "role": "experimental"
         },
         {
           "key": "ctl",
           "label": "intravesical saline",
+          "n": 18,
           "role": "control"
         }
       ],
-      "population": "Thirty women and three men with biopsies suggestive of interstitial cystitis were enrolled; mean age was 48 years and mean symptom duration was 5.5 years.",
+      "population": "Thirty women and three men with biopsies suggestive of interstitial cystitis were enrolled; mean age was 48 years and mean symptom duration was 5.5 years. None had Hunner ulcers or contracted bladders.",
       "description": "Randomized, saline-controlled crossover trial",
-      "locator": "PubMed abstract, Methods and Results"
+      "locator": "Full text, Materials and Methods, pp 36-37; Discussion, p 39"
     },
     "verdict": "positive",
-    "verdictNote": "Both reported improvement rates favored DMSO; trial-defined significance could not be assessed.",
-    "takeaway": "In a randomized crossover trial of intravesical 50% dimethyl sulfoxide versus saline for interstitial cystitis, markedly improved symptoms were reported in 53% versus 18%, and objective improvement in 93% versus 35%.",
+    "verdictNote": "First-period subjective and objective responses favored DMSO; exact P values were not reported.",
+    "takeaway": "In a randomized crossover trial of intravesical 50% dimethyl sulfoxide versus saline for interstitial cystitis, first-period marked subjective improvement was 6/15 (40%) versus 3/17 (18%), and objective improvement was 14/15 (93%) versus 6/17 (35%).",
     "reports": [
       {
         "id": "dmso-ic-1988",
@@ -18302,66 +18334,116 @@
         "citation": "Perez-Marrero R, Emerson LE, Feltis JT. \"A Controlled Study of Dimethyl Sulfoxide in Interstitial Cystitis.\" *J Urol.* 1988;140(1):36-39. doi:10.1016/s0022-5347(17)41478-9",
         "doi": "10.1016/s0022-5347(17)41478-9",
         "pmid": "3288775",
-        "followUp": "Assessment after intravesical treatment; timing not stated in the abstract.",
-        "followUpLocator": "PubMed abstract, Methods and Results",
+        "followUp": "After four instillations at 2-week intervals in each period, separated by a 4-week rest",
+        "followUpLocator": "Full text, Materials and Methods, pp 36-37",
         "results": [
           {
             "endpoint": "Marked subjective improvement",
             "role": "descriptive",
-            "measure": "Patients markedly improved by subjective assessment; percentage of treated patients",
+            "measure": "First-period patient-rated marked improvement after four instillations; analyzed patients",
             "values": {
-              "exp": "53%",
-              "ctl": "18%"
+              "exp": "6/15 (40%)",
+              "ctl": "3/17 (18%)"
             },
             "effect": {
               "type": "none"
             },
-            "note": "The abstract gives percentages without arm denominators, a prespecified endpoint hierarchy, or a P value.",
-            "locator": "PubMed abstract, Results"
+            "met": "not-tested",
+            "note": "No primary endpoint or numerical effect estimate, confidence interval, P value, or significance threshold was specified; the authors state that the subjective differences were statistically significant. The 53% figure is 8/15 after DMSO-to-saline crossover.",
+            "locator": "Full text, Table 5 and Results, p 38"
           },
           {
             "endpoint": "Objective improvement",
             "role": "descriptive",
-            "measure": "Objective improvement by urodynamic assessment; percentage of treated patients",
+            "measure": "First-period improvement adjudicated by blinded assessors using urodynamics, voiding charts, and symptom scales; analyzed patients",
             "values": {
-              "exp": "93%",
-              "ctl": "35%"
+              "exp": "14/15 (93%)",
+              "ctl": "6/17 (35%)"
             },
             "effect": {
               "type": "none"
             },
-            "note": "The abstract gives percentages without arm denominators, an exact objective-response definition, or a P value.",
-            "locator": "PubMed abstract, Methods and Results"
+            "met": "not-tested",
+            "note": "Objective response required a 50% increase in cystometric urge or capacity and/or loss of filling pain, supported by improvement in the voiding chart or symptom scales. No numerical effect estimate, confidence interval, P value, or significance threshold was specified.",
+            "locator": "Full text, Materials and Methods, p 37; Table 4, p 38"
+          },
+          {
+            "endpoint": "Moderate or marked subjective improvement",
+            "role": "descriptive",
+            "measure": "First-period patient-rated moderate or marked improvement; analyzed patients",
+            "values": {
+              "exp": "13/15 (87%)",
+              "ctl": "10/17 (59%)"
+            },
+            "effect": {
+              "type": "none"
+            },
+            "met": "not-tested",
+            "note": "Sum of the moderate and marked categories; no separate P value or confidence interval reported.",
+            "locator": "Full text, Table 5, p 38"
+          },
+          {
+            "endpoint": "Marked subjective improvement after crossover",
+            "role": "descriptive",
+            "measure": "Second-period patient-rated marked improvement by original randomized sequence; 15 patients per sequence evaluated",
+            "values": {
+              "exp": "8/15 (53%) after DMSO then saline",
+              "ctl": "7/15 (47%) after saline then DMSO"
+            },
+            "effect": {
+              "type": "none"
+            },
+            "met": "not-tested",
+            "note": "Second-period values reflect treatment sequences, not a concurrent DMSO-versus-saline comparison.",
+            "locator": "Full text, Table 5 and Results, p 38"
+          },
+          {
+            "endpoint": "Objective improvement after crossover",
+            "role": "descriptive",
+            "measure": "Second-period objective improvement by original randomized sequence; 15 patients per sequence evaluated",
+            "values": {
+              "exp": "13/15 after DMSO then saline",
+              "ctl": "10/15 (67%) after saline then DMSO"
+            },
+            "effect": {
+              "type": "none"
+            },
+            "met": "not-tested",
+            "note": "The text prints 86% for 13/15, while 13/15 rounds to 87%; one initial DMSO responder relapsed. Second-period values reflect treatment sequences, not a concurrent DMSO-versus-saline comparison.",
+            "locator": "Full text, Table 4 and Results, p 38"
           }
         ],
         "harms": [
           {
-            "label": "Significant side effects from DMSO",
-            "values": {
-              "exp": "None noted"
-            },
-            "locator": "PubMed abstract, Results",
-            "note": "The abstract does not give adverse-event categories, counts, or saline-arm rates."
+            "label": "Complications during the instillation study",
+            "locator": "Full text, Results, p 38",
+            "note": "5/33 patients (15%) had complications. Three minor events did not interrupt therapy: 2/33 had uncomplicated lower urinary tract infections and 1/33 had biliary colic. Clavien-Dindo grades, retention, reoperation, and mesh exposure were not reported."
+          },
+          {
+            "label": "Severe neurologic symptoms requiring treatment discontinuation",
+            "locator": "Full text, Results, pp 38-39",
+            "note": "2/33 randomized patients, both during saline: one hemiparesis and one severe migraine. Both resolved within 48 hours; the authors reported no significant side effects attributable to DMSO."
           }
         ],
         "delivery": [
           {
             "label": "Instillation schedule",
-            "value": "50% dimethyl sulfoxide or saline intravesically every two weeks for two sessions of four treatments each, with crossover.",
-            "locator": "PubMed abstract, Methods"
+            "value": "50 cc of 50% dimethyl sulfoxide or normal saline intravesically every 2 weeks for four instillations, then a 4-week rest and crossover to four instillations of the other solution; hold in the bladder for at least 15 minutes. An outpatient nurse administered all instillations.",
+            "locator": "Full text, Materials and Methods, pp 36-37",
+            "note": "Thirty-three randomized; 15 DMSO-first and 18 saline-first. One saline-first patient was removed after pregnancy following the first instillation; 32 were analyzed in period 1, and 15 per sequence entered period 2."
           }
         ],
         "source": {
           "file": null,
-          "checked": "2026-11-12",
-          "level": "abstract"
+          "checked": "2026-11-13",
+          "level": "full-text"
         }
       }
     ],
     "relations": [],
     "page": "/docs/clinical-evidence/studies/dmso-ic",
     "status": {
-      "sourceRead": "abstract",
+      "sourceRead": "full-text",
       "claimsChecked": null,
       "clinicalReview": null
     }
@@ -19308,13 +19390,13 @@
           "role": "single"
         }
       ],
-      "population": "137 adults with refractory urgency urinary incontinence were enrolled at 15 US centers; 133 received an implant and 132 entered the published intention-to-treat analysis.",
+      "population": "137 adults with refractory urgency urinary incontinence were enrolled at 15 US centers; 133 received an implant and 132 entered the published intention-to-treat analysis after one participant with zero baseline UUI episodes was excluded.",
       "description": "Prospective, multicenter, open-label, single-arm pivotal device study",
-      "locator": "PubMed abstract, Materials and methods and Results"
+      "locator": "Full text, Results, p 404; Table 1, p 403"
     },
-    "verdict": "descriptive",
-    "verdictNote": "The observed responder rate was 68% at 48 weeks in this single-arm study.",
-    "takeaway": "In a single-arm pivotal study, implanted eCoin leadless tibial nerve stimulation was associated with at least 50% fewer urgency incontinence episodes in 68% of the published intention-to-treat cohort at 48 weeks after activation.",
+    "verdict": "positive",
+    "verdictNote": "Primary efficacy met the prespecified 40% performance goal in a single-arm ITT analysis.",
+    "takeaway": "In this single-arm pivotal study, 68% of the 132-person published ITT set responded at 48 weeks after activation (95% CI 60%–76%), meeting the prespecified 40% performance goal; device-related events affected 16% of 133 implanted participants through 52 weeks.",
     "reports": [
       {
         "id": "ecoin-pivotal-2021",
@@ -19326,7 +19408,7 @@
         "doi": "10.1097/JU.0000000000001733",
         "pmid": "33797291",
         "followUp": "48 weeks after activation for efficacy; 52 weeks after implantation for device-related adverse events",
-        "followUpLocator": "PubMed abstract, Materials and methods and Results",
+        "followUpLocator": "Full text, Outcomes, p 402; Results, p 406",
         "results": [
           {
             "endpoint": "Urgency urinary incontinence responder rate",
@@ -19338,9 +19420,35 @@
             "effect": {
               "type": "none"
             },
-            "met": null,
-            "note": "The accessible abstract does not state the prespecified performance goal or test result.",
-            "locator": "PubMed abstract, Results"
+            "met": true,
+            "note": "Prespecified success required the lower bound of the two-sided 95% CI to exceed the 40% performance goal; the paper does not print a primary-endpoint P value.",
+            "locator": "Full text, Statistical Analysis and Results, p 404"
+          },
+          {
+            "endpoint": "Mean change in daily urgency urinary incontinence episodes",
+            "role": "secondary",
+            "measure": "Change from baseline at 48 weeks after activation among 120 with available three-day diaries; no imputation for secondary outcomes",
+            "values": {
+              "exp": "-2.61 episodes/day (SD 2.97; n=120; P < 0.001)"
+            },
+            "effect": {
+              "type": "none"
+            },
+            "met": "not-tested",
+            "locator": "Full text, Table 3, p 405"
+          },
+          {
+            "endpoint": "Overactive Bladder Questionnaire quality of life",
+            "role": "secondary",
+            "measure": "Mean changes from baseline at 48 weeks after activation among 116 with available questionnaire data; no imputation",
+            "values": {
+              "exp": "Symptom bother -34.2 (SD 27.5; n=116; P < 0.001); health-related quality of life +34.5 (SD 25.9; n=116; P < 0.001)"
+            },
+            "effect": {
+              "type": "none"
+            },
+            "met": "not-tested",
+            "locator": "Full text, Table 3, p 405"
           }
         ],
         "harms": [
@@ -19349,8 +19457,23 @@
             "values": {
               "exp": "16% of 133 implanted participants"
             },
-            "locator": "PubMed abstract, Results",
-            "note": "The FDA physician labeling uses a different device-related event count; see notes.md."
+            "locator": "Full text, Abstract and Results, pp 400, 406",
+            "note": "The FDA physician labeling uses a different device-related event count."
+          },
+          {
+            "label": "Device- or procedure-related adverse events through 52 weeks, journal analysis",
+            "values": {
+              "exp": "26/133 (20%): mild 15/133 (11%), moderate 8/133 (6%), severe 3/133 (2%); infections 9/133 (7%), including postoperative wound infection 6/133 (5%); device stimulation issues 6/133 (5%) and device dislocation 2/133 (2%)"
+            },
+            "locator": "Full text, Table 5, p 406",
+            "note": "Table 5 gives patient counts by MedDRA severity; the paper's prose rounds the overall rate to 19%."
+          },
+          {
+            "label": "Serious device- or procedure-related adverse event through 52 weeks, journal analysis",
+            "values": {
+              "exp": "1/133 (1%): procedure-related infection requiring explantation, resolved without sequelae"
+            },
+            "locator": "Full text, Results, p 406"
           },
           {
             "label": "Device- or procedure-related adverse events through 52 weeks, FDA labeling analysis",
@@ -19372,20 +19495,25 @@
         "delivery": [
           {
             "label": "Implant location and treatment delivery",
-            "value": "eCoin was implanted in the lower leg above the fascia over the tibial nerve and delivered automated stimulation sessions.",
-            "locator": "PubMed abstract, Materials and methods"
+            "value": "eCoin was implanted subcutaneously in the medial lower leg above the fascia over the tibial nerve and delivered automated stimulation sessions; programming used 20 pulses/second, 200-microsecond pulse width and 0.5–15 mA amplitude adjusted to an acceptable sensory level.",
+            "locator": "Full text, Procedures, pp 401–402"
+          },
+          {
+            "label": "Implantation time",
+            "value": "Mean incision-to-final-suture time was 19.8 minutes (SD 14.3) under local anesthesia.",
+            "locator": "Full text, Results, p 404"
           },
           {
             "label": "Procedure setting and activation",
-            "value": "Implantation was primarily in office settings under local anesthesia; activation followed a 4-week healing period, then 30-minute sessions every 3 days for 18 weeks and every 4 days thereafter.",
-            "locator": "FDA physician labeling P200036D, pp25-26, Study Design",
-            "note": "FDA labeling describes the same pivotal cohort."
+            "value": "Implantation was performed in office or outpatient settings under local anesthesia; activation followed a 4-week healing period, then 30-minute sessions every 3 days for 18 weeks and every 4 days thereafter.",
+            "locator": "Full text, Procedures, pp 401–402",
+            "note": "The journal describes office or outpatient implantation and four-week activation."
           }
         ],
         "source": {
           "file": null,
-          "checked": "2026-11-12",
-          "level": "abstract"
+          "checked": "2026-11-13",
+          "level": "full-text"
         }
       },
       {
@@ -19522,7 +19650,7 @@
     "relations": [],
     "page": "/docs/clinical-evidence/studies/ecoin-pivotal",
     "status": {
-      "sourceRead": "abstract",
+      "sourceRead": "full-text",
       "claimsChecked": null,
       "clinicalReview": null
     }
@@ -22216,48 +22344,97 @@
       },
       {
         "id": "fesoterodine-pivotal-2011-extension",
-        "kind": "secondary",
-        "label": "Pooled open-label extensions",
+        "kind": "post-hoc",
+        "label": "Pooled open-label extensions, post hoc analysis",
         "published": "2011-03-01",
         "cutoff": null,
         "citation": "Scarpero H, Sand PK, Kelleher CJ, et al. \"Long-term safety, tolerability, and efficacy of fesoterodine treatment in men and women with overactive bladder symptoms.\" *Curr Med Res Opin.* 2011;27(5):921-930. doi:10.1185/03007995.2011.559581",
         "doi": "10.1185/03007995.2011.559581",
         "pmid": "21355814",
-        "followUp": "Open-label treatment assessed through 24 months; maximum allowed 24-36 months",
-        "followUpLocator": "PubMed abstract, Research Design and Methods and Main Outcome Measures",
+        "followUp": "Open-label treatment assessed through 24 months; maximum allowed 36 months, with site-dependent operational termination",
+        "followUpLocator": "Full text, Subjects and study design, pp 922–923; Outcome measures, p 923",
         "results": [
           {
             "endpoint": "Overactive bladder diary outcomes",
-            "role": "descriptive",
-            "measure": "Change from double-blind baseline through open-label month 24",
+            "role": "secondary",
+            "measure": "Paired change from double-blind baseline to open-label month 24 in the full analysis set with available 3-day diaries; UUI analyses restricted to baseline UUI",
             "effect": {
               "type": "none"
             },
-            "note": "In pooled flexible-dose extension participants followed through month 24, improvements were sustained or further improved. Open-label extensions pooled participants from SP583 and SP584; all began at 8 mg, with dose reduction and re-escalation permitted.",
-            "locator": "Scarpero PubMed abstract, Research Design and Methods and Results"
+            "note": "At month 24, micturition and urgency diaries were available for 74 men and 325 women, and UUI diaries for 58 men and 290 women. All four diary variables remained improved from double-blind baseline (men P<0.05; women P≤0.0001); none changed significantly from open-label baseline in men at month 24. Paired tests had no concurrent control or prespecified comparative threshold.",
+            "locator": "Full text, Outcomes measures and Statistical analyses, p 923; Figure 3 and Results, p 927"
+          },
+          {
+            "endpoint": "Micturitions per 24 hours at open-label month 24 by prior randomized treatment",
+            "role": "secondary",
+            "measure": "Mean change from double-blind baseline among available month-24 diary completers, stratified by sex and preceding double-blind treatment",
+            "values": {
+              "placebo": "men −3.0 (n=22, P=0.0024); women −3.0 (n=92, P<0.0001)",
+              "tolterodine": "men −2.2 (n=13, P=0.0026); women −2.4 (n=57, P<0.0001)",
+              "feso4": "men −1.7 (n=20, P=0.0071); women −2.9 (n=100, P<0.0001)",
+              "feso8": "men −4.3 (n=19, P=0.0003); women −2.9 (n=76, P<0.0001)"
+            },
+            "effect": {
+              "type": "none"
+            },
+            "note": "All participants received open-label fesoterodine; these are within-subject paired P values, not randomized between-arm comparisons. No confidence intervals were reported.",
+            "locator": "Full text, Table 4, Micturitions per 24 h, p 928"
+          },
+          {
+            "endpoint": "Patient-reported treatment tolerance",
+            "role": "primary",
+            "measure": "Good or excellent on a four-point scale at months 4, 12, and 24 among assessed open-label recipients",
+            "effect": {
+              "type": "none"
+            },
+            "met": "not-tested",
+            "note": "At least 92% of men and 91% of women rated treatment tolerance good or excellent at each assessed visit; month-24 assessments included 79 men and 346 women. The paper reported no prespecified success threshold or between-group test.",
+            "locator": "Full text, Outcomes measures, p 923; Figure 2 and Subject-reported treatment tolerance, p 926"
           }
         ],
         "harms": [
           {
             "label": "Dry mouth in pooled flexible-dose extension",
             "values": {
-              "feso8": "24% of men; 32% of women"
+              "feso8": "44/185 men (23.8%) and 227/705 women (32.2%) had treatment-emergent dry mouth"
             },
-            "locator": "Scarpero PubMed abstract, Results",
-            "note": "All participants began at 8 mg; annual dose reduction to 4 mg and re-escalation were permitted. Rates are by sex, not randomized dose."
+            "locator": "Full text, Table 3, p 926",
+            "note": "Sex-specific safety populations; all began open-label fesoterodine 8 mg with optional reduction to 4 mg."
+          },
+          {
+            "label": "Any treatment-emergent adverse event and urinary tract infection",
+            "values": {
+              "feso8": "Any AE: 140/185 men (75.7%) and 539/705 women (76.5%); urinary tract infection: 6/185 men (3.2%) and 128/705 women (18.2%)"
+            },
+            "locator": "Full text, Table 3, p 926",
+            "note": "All-causality treatment-emergent events in the open-label safety population."
+          },
+          {
+            "label": "Discontinuation due to treatment-emergent adverse events",
+            "values": {
+              "feso8": "29/185 men (15.7%) and 83/705 women (11.8%) discontinued over the entire open-label extension; dry mouth caused 2/185 and 13/705 discontinuations, respectively"
+            },
+            "locator": "Full text, Table 3, p 926",
+            "note": "Table 3 covers the full exposure period; the first-24-month AE-discontinuation counts were 29 men and 82 women (Results, p 924)."
           }
         ],
         "delivery": [
           {
             "label": "Continuation through 24 months",
             "value": "83/185 men (45%) and 356/705 women (50%) continued open-label fesoterodine for at least 24 months.",
-            "locator": "Scarpero PubMed abstract, Results"
+            "locator": "Full text, Treatment discontinuations, p 924; Figure 1, p 925",
+            "note": "Within the first 24 months, 102/185 men and 349/705 women discontinued; insufficient response accounted for 30/185 men and 90/705 women."
+          },
+          {
+            "label": "Open-label dose adjustment",
+            "value": "All 890 participants began fesoterodine 8 mg once daily; reduction to 4 mg was allowed after month 1, and reduction and re-escalation were each permitted once annually. The initial 8 mg dose was maintained throughout treatment by 156/185 men (84.3%) and 525/705 women (74.5%).",
+            "locator": "Full text, Subjects and study design, pp 922–923; Table 2, p 926"
           }
         ],
         "source": {
           "file": null,
-          "checked": "2026-11-12",
-          "level": "abstract"
+          "checked": "2026-11-13",
+          "level": "full-text"
         }
       }
     ],
@@ -38995,31 +39172,110 @@
         "citation": "Drake MJ, Sokol R, Coyne K, et al. \"Responder and Health-related Quality of Life Analyses in Men with Lower Urinary Tract Symptoms Treated with a Fixed-dose Combination of Solifenacin and Tamsulosin Oral-controlled Absorption System: Results from the NEPTUNE Study.\" *BJU Int.* 2016;117(1):165-172. doi:10.1111/bju.13162",
         "doi": "10.1111/bju.13162",
         "pmid": "25907003",
-        "followUp": "12-week randomized treatment, secondary responder and quality-of-life analysis",
-        "followUpLocator": "PubMed abstract, Patients and Methods",
+        "followUp": "12-week randomized treatment, secondary quality-of-life and post hoc responder analyses",
+        "followUpLocator": "Full text, Patients and Methods, pp 166–167",
         "results": [
           {
             "endpoint": "Responder analyses",
-            "role": "descriptive",
-            "measure": "Number of responder analyses favoring the 6 mg combination at 12 weeks",
+            "role": "exploratory",
+            "measure": "Number of post hoc single and double responder comparisons favoring the 6 mg combination at 12 weeks (full analysis set)",
             "values": {
-              "exp6": "8/8 versus placebo; 6/8 versus tamsulosin",
+              "exp6": "8/8 versus placebo; 6/8 versus tamsulosin (four single and four double responder definitions)",
               "ctl": "reference",
               "placebo": "reference"
             },
             "effect": {
               "type": "none"
             },
-            "note": "Counts are analyses, not patients; the abstract does not give patient-level response denominators.",
-            "locator": "PubMed abstract, Results"
+            "met": "not-tested",
+            "note": "Counts are comparisons, not patients. The 9 mg combination was analyzed but its responder results were not reported; no prespecified responder success threshold was given.",
+            "locator": "Full text, Statistical analysis and Results, pp 167–168; Tables 2–3, pp 168–169"
+          },
+          {
+            "endpoint": "TUFS single response",
+            "role": "exploratory",
+            "measure": "Post hoc response at week 12: TUFS decrease of at least 6 points (full analysis set)",
+            "values": {
+              "exp6": "FAS n=314; response count not printed",
+              "ctl": "FAS n=299; response count not printed",
+              "placebo": "FAS n=320; response count not printed"
+            },
+            "effect": {
+              "type": "OR",
+              "value": 1.58,
+              "ci": [
+                1.13,
+                2.22
+              ],
+              "p": "0.01 versus tamsulosin"
+            },
+            "met": "not-tested",
+            "note": "Response-rate difference 9 percentage points versus tamsulosin; versus placebo, 19 points, OR 2.27 (95% CI 1.63–3.18), P<0.001. Post hoc analysis.",
+            "locator": "Full text, Definitions of response and Table 1, p 167; Table 2, p 168"
+          },
+          {
+            "endpoint": "TUFS and PGI bladder double response",
+            "role": "exploratory",
+            "measure": "Post hoc joint TUFS and patient global impression of bladder-symptom response at week 12 (full analysis set)",
+            "values": {
+              "exp6": "FAS n=314; joint-response count not printed",
+              "ctl": "FAS n=299; joint-response count not printed",
+              "placebo": "FAS n=320; joint-response count not printed"
+            },
+            "effect": {
+              "type": "OR",
+              "value": 1.69,
+              "ci": [
+                1.2,
+                2.38
+              ],
+              "p": "0.003 versus tamsulosin"
+            },
+            "met": "not-tested",
+            "note": "Response-rate difference 8 percentage points versus tamsulosin; versus placebo, 18 points, OR 2.50 (95% CI 1.77–3.52), P<0.001. Post hoc analysis.",
+            "locator": "Full text, Definitions of response, p 167; Table 3, p 169"
+          },
+          {
+            "endpoint": "IPSS quality of life and OAB-q symptom bother",
+            "role": "secondary",
+            "measure": "Mean improvement from baseline at week 12 in IPSS QoL score and OAB-q symptom bother score",
+            "values": {
+              "exp6": "IPSS QoL 1.3 points; OAB-q symptom bother 16.5 points",
+              "ctl": "IPSS QoL 1.0 points; OAB-q symptom bother 14.4 points",
+              "placebo": "IPSS QoL 0.9 points; OAB-q symptom bother value not stated"
+            },
+            "effect": {
+              "type": "none"
+            },
+            "met": "not-tested",
+            "note": "IPSS QoL: P<0.001 versus placebo and P<0.05 versus tamsulosin; OAB-q symptom bother: P=0.068 versus tamsulosin. Only the 6 mg arm reached a 10-point mean improvement in OAB-q total HRQoL.",
+            "locator": "Full text, Introduction, pp 166–167; Discussion, p 170"
+          },
+          {
+            "endpoint": "TUFS change and quality-of-life correlations",
+            "role": "secondary",
+            "measure": "Prespecified Spearman correlations between change in TUFS and change in patient-reported outcomes",
+            "value": "IPSS QoL 0.34; OAB-q symptom bother 0.35; PGI bladder 0.43; PGI general health 0.36 (all P<0.001)",
+            "effect": {
+              "type": "none"
+            },
+            "met": "not-tested",
+            "note": "Associations across the randomized cohort; no treatment-arm contrast or prespecified success threshold.",
+            "locator": "Full text, Correlation between HRQoL parameters and TUFS, pp 167–168"
           }
         ],
         "harms": [],
-        "delivery": [],
+        "delivery": [
+          {
+            "label": "Blinding and responder-analysis coverage",
+            "value": "The 12-week trial used once-daily, double-blind, double-dummy dosing. The 9 mg combination was included in analyses but its responder results were not reported.",
+            "locator": "Full text, Study design and patients and Statistical analysis, pp 166–167; Discussion, p 170"
+          }
+        ],
         "source": {
           "file": null,
-          "checked": "2026-11-12",
-          "level": "abstract"
+          "checked": "2026-11-13",
+          "level": "full-text"
         }
       },
       {
@@ -40526,56 +40782,136 @@
         "citation": "Lose G, Lalos O, Freeman RM, et al. Efficacy of desmopressin (Minirin) in the treatment of nocturia: a double-blind placebo-controlled study in women. *Am J Obstet Gynecol.* 2003;189(4):1106-1113.",
         "doi": "10.1067/s0002-9378(03)00593-3",
         "pmid": "14586363",
-        "followUp": "3-week double-blind treatment after 3-week titration and 1-week washout",
-        "followUpLocator": "PubMed abstract, Study Design",
+        "followUp": "3-week double-blind treatment after up to 3-week titration and 1-week washout",
+        "followUpLocator": "Full text, Patients and methods, pp 1107-1108, Fig 1",
         "results": [
           {
             "endpoint": "At least 50% reduction in nightly voids",
-            "role": "descriptive",
-            "measure": "Responder proportion after 3 weeks in a separate randomized cohort of women",
+            "role": "primary",
+            "measure": "At least 50% reduction in mean nightly voids after 3 weeks, intention-to-treat population (72 desmopressin, 70 placebo)",
             "values": {
               "exp": "33/72 (46%)",
-              "ctl": "5/72 (7%)"
+              "ctl": "5/70 (7%)"
             },
             "effect": {
-              "type": "none",
+              "type": "OR",
+              "value": 13.4,
+              "ci": [
+                4.6,
+                39.2
+              ],
               "p": "<0.0001"
             },
-            "note": "The abstract does not state the prespecified endpoint hierarchy or alpha.",
-            "locator": "PubMed abstract, Results"
+            "met": true,
+            "note": "The prespecified two-sided alpha was 0.05; two of 72 randomized placebo recipients lacked efficacy data.",
+            "locator": "Full text, Patients and methods, p 1109; Results, pp 1109-1110, Fig 2"
+          },
+          {
+            "endpoint": "Nightly voids",
+            "role": "secondary",
+            "measure": "Between-group difference in change in mean nightly voids after 3 weeks, intention-to-treat population",
+            "values": {
+              "exp": "2.92 to 1.61",
+              "ctl": "2.91 to 2.36"
+            },
+            "effect": {
+              "type": "difference",
+              "value": -0.76,
+              "ci": [
+                -1.01,
+                -0.5
+              ],
+              "p": "<0.0001"
+            },
+            "met": true,
+            "locator": "Full text, Table II, p 1111"
+          },
+          {
+            "endpoint": "First sleep period",
+            "role": "secondary",
+            "measure": "Between-group difference in change in mean minutes until first nocturnal void after 3 weeks, intention-to-treat population",
+            "values": {
+              "exp": "142 to 272 min",
+              "ctl": "144 to 181 min"
+            },
+            "effect": {
+              "type": "difference",
+              "value": 93.73,
+              "ci": [
+                64.1,
+                123
+              ],
+              "p": "<0.0001"
+            },
+            "met": true,
+            "locator": "Full text, Results, p 1110; Table II, p 1111"
+          },
+          {
+            "endpoint": "Nocturnal diuresis",
+            "role": "secondary",
+            "measure": "Between-group difference in change in mean nocturnal diuresis after 3 weeks, intention-to-treat population",
+            "values": {
+              "exp": "1.51 to 0.82 mL/min",
+              "ctl": "1.44 to 1.35 mL/min"
+            },
+            "effect": {
+              "type": "difference",
+              "value": -0.6,
+              "ci": [
+                -0.71,
+                -0.49
+              ],
+              "p": "<0.0001"
+            },
+            "met": true,
+            "locator": "Full text, Table II, p 1111"
           }
         ],
         "harms": [
           {
             "label": "Hyponatremia during open-label dose titration",
             "values": {
-              "exp": "6%",
+              "exp": "14/224 (6%) reported hyponatremia; 27/224 (12%) had sodium below normal; 13/224 (6%) had sodium below 130 mmol/L; 7/224 (3%) withdrew",
               "ctl": "not applicable"
             },
-            "locator": "PubMed abstract, Results",
-            "note": "The abstract does not give the titration denominator or randomized-arm hyponatremia rates."
+            "locator": "Full text, Results, pp 1110-1112, Table III",
+            "note": "All cases occurred during titration; no below-normal sodium was reported during double-blind treatment. Eleven of 13 women with sodium below 130 mmol/L were at least 65 years old."
           },
           {
-            "label": "Deaths during the women’s study (n = 2)",
+            "label": "Deaths during open-label dose titration",
             "values": {
-              "exp": "not reported by arm",
-              "ctl": "not reported by arm"
+              "exp": "2/224 (1%) during titration",
+              "ctl": "not applicable"
             },
-            "locator": "PubMed abstract, Results",
-            "note": "Neither death could be directly associated with study drug; allocation and timing were not stated."
+            "locator": "Full text, Results, pp 1110-1111, Table III and footnote",
+            "note": "One death was considered unlikely to be treatment related; the other was mainly attributed to diabetic complications, although an initial causal link to pneumonia and respiratory insufficiency could not be excluded."
+          },
+          {
+            "label": "Adverse events during double-blind treatment",
+            "values": {
+              "exp": "any: 26/72 (36%); treatment related: 9/72 (13%); serious: 0/72 (0%)",
+              "ctl": "any: 25/72 (35%); treatment related: 6/72 (8%); serious: 1/72 (1%)"
+            },
+            "locator": "Full text, Results, pp 1110-1111, Table III",
+            "note": "The one serious double-blind event occurred in the placebo arm; no below-normal sodium was reported during double-blind treatment."
           }
         ],
         "delivery": [
           {
             "label": "Dose titration and randomization",
-            "value": "Women received 0.1, 0.2, or 0.4 mg oral desmopressin during titration; 144 responders were randomized equally to desmopressin or placebo.",
-            "locator": "PubMed abstract, Study Design and Results"
+            "value": "224 women took at least one dose during open-label titration; oral desmopressin began at 0.1 mg at bedtime and rose weekly to 0.2 or 0.4 mg if a full response had not occurred. After a 1-week washout, 144 women with at least a 20% reduction in nocturnal diuresis during titration and return to at least 78% of baseline diuresis after washout were randomized 72/72 to their selected dose or placebo for 3 weeks.",
+            "locator": "Full text, Patients and methods, pp 1107-1108; Results, p 1109, Fig 2"
+          },
+          {
+            "label": "Double-blind treatment adherence",
+            "value": "At least 80% of study medication was taken by 72/72 (100%) desmopressin recipients and 68/72 (94%) placebo recipients; 141/144 (98%) completed 3 weeks.",
+            "locator": "Full text, Results, p 1109, Fig 2"
           }
         ],
         "source": {
           "file": null,
-          "checked": "2026-11-12",
-          "level": "abstract"
+          "checked": "2026-11-13",
+          "level": "full-text"
         }
       },
       {
@@ -48742,7 +49078,7 @@
     ],
     "question": "Does finasteride reduce symptoms, acute urinary retention, and BPH surgery compared with placebo in men with symptomatic prostatic enlargement?",
     "design": {
-      "phase": "not stated in abstract",
+      "phase": "not reported",
       "randomized": true,
       "blinding": "double-blind",
       "type": "superiority",
@@ -48761,13 +49097,13 @@
           "role": "control"
         }
       ],
-      "population": "3,040 men with moderate-to-severe urinary symptoms and enlarged prostate glands.",
+      "population": "3,040 men with moderate-to-severe urinary symptoms, low maximal urinary flow, and an enlarged prostate on digital rectal examination.",
       "description": "Multicenter, double-blind, placebo-controlled randomized trial",
-      "locator": "McConnell 1998 PubMed abstract, Methods; Wessells 2003 publisher abstract, Methods (arm denominators)"
+      "locator": "Full text, Methods, p 558; Figure 1, p 559"
     },
     "verdict": "positive",
-    "verdictNote": "Event benefits were assessed in 3,016 evaluable men; symptom change was reported among completers.",
-    "takeaway": "Four years of finasteride 5 mg daily versus placebo reduced BPH surgery (69/1,513 versus 152/1,503) and acute urinary retention (42/1,513 versus 99/1,503) in men with symptomatic prostatic enlargement; symptom scores also improved among completers.",
+    "verdictNote": "Prespecified symptom-score endpoint improved in the intention-to-treat analysis; surgery and retention were secondary endpoints.",
+    "takeaway": "In 3,016 evaluable men with symptomatic prostatic enlargement, finasteride 5 mg daily for four years improved the primary symptom score (mean decrease 2.6 versus 1.0 points; P <0.001) and reduced surgery or acute retention (100/1,513 versus 199/1,503; 51% risk reduction).",
     "reports": [
       {
         "id": "pless-1998",
@@ -48779,23 +49115,48 @@
         "doi": "10.1056/NEJM199802263380901",
         "pmid": "9475762",
         "followUp": "4 years",
-        "followUpLocator": "PubMed abstract, Methods",
+        "followUpLocator": "Full text, Methods, p 558",
         "results": [
           {
             "endpoint": "Urinary symptom score",
             "role": "primary",
-            "measure": "Mean symptom-score decrease among study completers; 1–34 symptom-score scale",
+            "measure": "Mean decrease in quasi-AUA symptom score (0–34) over 4 years; prespecified stratified intention-to-treat analysis including discontinuations",
             "values": {
-              "exp": "3.3 points",
-              "ctl": "1.3 points"
+              "exp": "2.6 points",
+              "ctl": "1.0 point"
             },
             "effect": {
-              "type": "none",
+              "type": "difference",
+              "value": 1.6,
+              "ci": [
+                0.7,
+                2.5
+              ],
               "p": "<0.001"
             },
-            "met": null,
-            "note": "The abstract does not state the prespecified primary threshold.",
-            "locator": "PubMed abstract, Results"
+            "met": true,
+            "note": "Among completers, mean decreases were 3.3 versus 1.3 points (reported difference 2.1; 95% CI 1.6–2.6; P <0.001).",
+            "locator": "Full text, Methods, p 558; Results, p 560"
+          },
+          {
+            "endpoint": "BPH surgery or acute urinary retention",
+            "role": "descriptive",
+            "measure": "First event over 4 years in evaluable men",
+            "values": {
+              "exp": "100/1,513 (7%)",
+              "ctl": "199/1,503 (13%)"
+            },
+            "effect": {
+              "type": "RR",
+              "value": 0.49,
+              "ci": [
+                0.39,
+                0.62
+              ],
+              "p": "<0.001"
+            },
+            "note": "Paper reports a 51% risk reduction (95% CI 38–61%) from a time-to-first-event log-rank analysis; the ratio and CI here are inversions of that estimate.",
+            "locator": "Full text, Table 2 and Results, pp 559–560"
           },
           {
             "endpoint": "BPH surgery",
@@ -48811,10 +49172,11 @@
               "ci": [
                 0.35,
                 0.59
-              ]
+              ],
+              "p": "<0.001"
             },
-            "note": "Risk ratio and CI are the inverse of the reported 55% risk reduction (95% CI 41–65%).",
-            "locator": "PubMed abstract, Results"
+            "note": "Reported 55% risk reduction (95% CI 41–65%) from time-to-first-event log-rank analysis; 64/1,513 versus 125/1,503 underwent transurethral prostatectomy (49% risk reduction; 95% CI 33–62%).",
+            "locator": "Full text, Table 2 and Results, pp 559–560"
           },
           {
             "endpoint": "Acute urinary retention",
@@ -48830,13 +49192,64 @@
               "ci": [
                 0.31,
                 0.6
-              ]
+              ],
+              "p": "<0.001"
             },
-            "note": "Risk ratio and CI are the inverse of the reported 57% risk reduction (95% CI 40–69%).",
-            "locator": "PubMed abstract, Results"
+            "note": "Reported 57% risk reduction (95% CI 40–69%) from time-to-first-event log-rank analysis; spontaneous retention: 20/1,513 versus 56/1,503 (62% reduction; 95% CI 40–76%); precipitated retention: 23/1,513 versus 48/1,503 (52% reduction; 95% CI 23–70%). One man could have both types but counted once in total.",
+            "locator": "Full text, Table 2 and Results, p 560"
+          },
+          {
+            "endpoint": "Maximal urinary flow rate",
+            "role": "descriptive",
+            "measure": "Mean increase among 4-year completers",
+            "values": {
+              "exp": "1.9 mL/s",
+              "ctl": "0.2 mL/s"
+            },
+            "effect": {
+              "type": "difference",
+              "value": 1.7,
+              "ci": [
+                1.3,
+                2.1
+              ],
+              "p": "<0.001"
+            },
+            "note": "Separation was evident within 4 months.",
+            "locator": "Full text, Results and Figure 3, p 561"
+          },
+          {
+            "endpoint": "Prostate volume",
+            "role": "descriptive",
+            "measure": "Mean percentage change among 4-year completers in MRI subgroup (157 finasteride; 155 placebo at baseline)",
+            "values": {
+              "exp": "18% decrease",
+              "ctl": "14% increase"
+            },
+            "effect": {
+              "type": "difference",
+              "value": 32,
+              "ci": [
+                28,
+                36
+              ],
+              "p": "<0.001"
+            },
+            "note": "Volume was measured in 312 men at baseline; four-year MRI measurements were available for 102 finasteride and 85 placebo recipients.",
+            "locator": "Full text, Table 1, p 559; Results and Figure 3, p 561"
           }
         ],
-        "harms": [],
+        "harms": [
+          {
+            "label": "Drug-related sexual and breast adverse events in year 1",
+            "values": {
+              "exp": "decreased libido 6.4%; impotence 8.1%; decreased ejaculate volume 3.7%; breast enlargement 0.5% (1,524 randomized)",
+              "ctl": "decreased libido 3.4%; impotence 3.7%; decreased ejaculate volume 0.8%; breast enlargement 0.1% (1,516 randomized)"
+            },
+            "note": "Table 3 reports percentages without event counts. Overall serious adverse-event incidence did not differ significantly; counts were not reported.",
+            "locator": "Full text, Safety and Table 3, pp 561–562"
+          }
+        ],
         "delivery": [
           {
             "label": "Assigned treatment",
@@ -48844,18 +49257,27 @@
               "exp": "Finasteride 5 mg orally daily for 4 years",
               "ctl": "placebo daily for 4 years"
             },
-            "locator": "PubMed abstract, Methods"
+            "locator": "Full text, Methods, p 558"
           },
           {
             "label": "Outcome ascertainment",
-            "value": "Symptoms, flow, and clinical events assessed every 4 months in 3,016 evaluable men; complete event data in 2,760.",
-            "locator": "PubMed abstract, Methods"
+            "value": "Symptoms, flow, and clinical events assessed every 4 months in 3,016 evaluable men; complete four-year event data in 2,760 (92%). An allocation-blinded committee classified surgery and catheter-requiring retention; efficacy excluded 24 men from one closed site.",
+            "locator": "Full text, Methods, p 558; Figure 1, p 559"
+          },
+          {
+            "label": "Four-year treatment discontinuation",
+            "values": {
+              "exp": "524/1,524 (34%); 1,000 completed treatment",
+              "ctl": "633/1,516 (42%); 883 completed treatment"
+            },
+            "note": "Event analyses included events after treatment discontinuation when follow-up was available.",
+            "locator": "Full text, Methods, p 558; Figure 1 and Results, p 559"
           }
         ],
         "source": {
           "file": null,
-          "checked": "2026-11-12",
-          "level": "abstract"
+          "checked": "2026-11-13",
+          "level": "full-text"
         }
       },
       {
@@ -48991,6 +49413,20 @@
               "p": "0.01"
             },
             "note": "Post-retention subgroup; descriptive conditional comparison.",
+            "locator": "PubMed abstract, Results"
+          },
+          {
+            "endpoint": "Surgery after precipitated acute urinary retention",
+            "role": "descriptive",
+            "measure": "Subsequent BPH surgery among men with precipitated retention",
+            "values": {
+              "exp": "14%",
+              "ctl": "26%"
+            },
+            "effect": {
+              "type": "none"
+            },
+            "note": "Post-retention subgroup; the abstract gives percentages without counts or a P value.",
             "locator": "PubMed abstract, Results"
           }
         ],
@@ -49195,7 +49631,7 @@
     "relations": [],
     "page": "/docs/clinical-evidence/studies/pless",
     "status": {
-      "sourceRead": "abstract",
+      "sourceRead": "full-text",
       "claimsChecked": null,
       "clinicalReview": null
     }
@@ -50862,16 +51298,16 @@
         "citation": "Parsons CL, Benson G, Childs SJ, et al. \"A quantitatively controlled method to study prospectively interstitial cystitis and demonstrate the efficacy of pentosanpolysulfate.\" *J Urol.* 1993;150(3):845-848. doi:10.1016/s0022-5347(17)35629-x",
         "doi": "10.1016/s0022-5347(17)35629-x",
         "pmid": "7688432",
-        "followUp": "not stated in abstract",
-        "followUpLocator": "PubMed abstract",
+        "followUp": "3 months of double-blind treatment",
+        "followUpLocator": "Full text, Patients and Methods, p 845; Results, p 846",
         "results": [
           {
             "endpoint": "Patient-reported global improvement",
             "role": "primary",
-            "measure": "Significant overall symptom improvement; risk difference in percentage points",
+            "measure": "At least 50% overall symptom improvement by patient self-evaluation at 3 months; 24/74 versus 12/74",
             "values": {
-              "exp": "32%",
-              "ctl": "16%"
+              "exp": "24/74 (32%)",
+              "ctl": "12/74 (16%)"
             },
             "effect": {
               "type": "difference",
@@ -50879,79 +51315,151 @@
               "p": "0.01"
             },
             "met": true,
-            "note": "Independent randomized cohort; response cutoff and arm denominators unavailable in the abstract. Risk difference calculated from rounded percentages.",
-            "locator": "PubMed abstract, Results"
+            "note": "Prespecified successful-therapy threshold. The 16-percentage-point difference is calculated from rounded percentages; no confidence interval is reported.",
+            "locator": "Full text, Patients and Methods, p 845; Results, p 846; Table 2, p 847"
+          },
+          {
+            "endpoint": "Investigator-rated global improvement",
+            "role": "primary",
+            "measure": "At least good (50%) overall improvement at 3 months",
+            "values": {
+              "exp": "36%",
+              "ctl": "15%"
+            },
+            "effect": {
+              "type": "difference",
+              "value": 21,
+              "p": "0.002"
+            },
+            "met": true,
+            "note": "Percentage-point difference calculated from rounded rates; endpoint-specific denominators and confidence interval are not reported.",
+            "locator": "Full text, Results, p 846; Table 2, p 847; Discussion, p 847"
           },
           {
             "endpoint": "Pain on analogue scale",
-            "role": "secondary",
-            "measure": "Between-group decrease in pain",
+            "role": "primary",
+            "measure": "At least 1-point decrease on 0–5 pain scale at 3 months",
             "values": {
-              "exp": "greater decrease",
-              "ctl": "placebo"
+              "exp": "66%",
+              "ctl": "51%"
             },
             "effect": {
               "type": "none",
               "p": "0.04"
             },
-            "locator": "PubMed abstract, Results"
+            "met": true,
+            "note": "The paper designates the pain scale a primary efficacy variable; endpoint-specific denominators are not reported.",
+            "locator": "Full text, Patients and Methods and Results, p 846; Table 2 and Discussion, p 847"
           },
           {
             "endpoint": "Urgency on analogue scale",
-            "role": "secondary",
-            "measure": "Between-group decrease in urgency",
+            "role": "primary",
+            "measure": "At least 1-point decrease on 0–5 urgency scale at 3 months",
             "values": {
-              "exp": "greater decrease",
-              "ctl": "placebo"
+              "exp": "61%",
+              "ctl": "43%"
             },
             "effect": {
               "type": "none",
               "p": "0.01"
             },
-            "locator": "PubMed abstract, Results"
+            "met": true,
+            "note": "The paper designates the urgency scale a primary efficacy variable; endpoint-specific denominators are not reported.",
+            "locator": "Full text, Patients and Methods and Results, p 846; Table 2 and Discussion, p 847"
+          },
+          {
+            "endpoint": "Patient-rated pain improvement",
+            "role": "secondary",
+            "measure": "At least 50% pain improvement on follow-up questionnaire at 3 months",
+            "values": {
+              "exp": "38%",
+              "ctl": "18%"
+            },
+            "effect": {
+              "type": "none",
+              "p": "0.005"
+            },
+            "met": true,
+            "note": "Endpoint-specific denominators are not reported.",
+            "locator": "Full text, Results, p 846; Table 2, p 847"
+          },
+          {
+            "endpoint": "Patient-rated pressure-to-urinate improvement",
+            "role": "secondary",
+            "measure": "At least 50% improvement in pressure to urinate on follow-up questionnaire at 3 months",
+            "values": {
+              "exp": "30%",
+              "ctl": "18%"
+            },
+            "effect": {
+              "type": "none",
+              "p": "0.04"
+            },
+            "met": true,
+            "note": "Endpoint-specific denominators are not reported.",
+            "locator": "Full text, Results, p 846; Table 2, p 847"
           },
           {
             "endpoint": "Voided volume",
             "role": "secondary",
-            "measure": "Patients with mean increase greater than 20 mL",
+            "measure": "At least 20-mL increase in average volume per void at 3 months",
             "values": {
-              "exp": "more patients",
-              "ctl": "placebo"
+              "exp": "40%",
+              "ctl": "24%"
             },
             "effect": {
               "type": "none",
               "p": "0.02"
             },
-            "locator": "PubMed abstract, Results"
+            "met": true,
+            "note": "Endpoint-specific denominators are not reported; mean volume changes of +20.4 and -2.1 mL were not significantly different.",
+            "locator": "Full text, Results, p 846; Table 3, p 847"
           }
         ],
         "harms": [
           {
-            "label": "Minor adverse effects",
+            "label": "Patients with adverse experiences",
             "values": {
-              "exp": "7 reported",
-              "ctl": "10 reported"
+              "exp": "7/74 (9%; 12 experiences)",
+              "ctl": "10/74 (14%; 19 experiences)"
             },
-            "locator": "PubMed abstract, Results",
-            "note": "The abstract gives counts of adverse effects without arm denominators."
+            "locator": "Full text, Results, p 846; Table 4 and Discussion, p 847",
+            "note": "Authors considered no adverse experiences serious; Table 4 lists one placebo-group suicide attempt and one PPS-group bowel obstruction."
+          },
+          {
+            "label": "Treatment discontinued because of adverse experiences",
+            "values": {
+              "exp": "3/74",
+              "ctl": "5/74"
+            },
+            "locator": "Full text, Results, p 846; Discussion, p 848"
           }
         ],
         "delivery": [
           {
             "label": "Patient global symptom scale",
             "value": "Worse or 0%, 25%, 50%, 75%, or 100% improved",
-            "locator": "PubMed abstract, Methods"
+            "locator": "Full text, Patients and Methods, p 845"
           },
           {
             "label": "Oral PPS regimen",
-            "value": "100 mg three times daily versus placebo at 7 centers (148 patients)",
-            "locator": "PubMed abstract, Methods"
+            "value": "Oral PPS 100 mg three times daily (300 mg/day), one hour before meals or two hours after meals; identically appearing placebo capsules",
+            "locator": "Full text, Patients and Methods, p 845"
+          },
+          {
+            "label": "Three-month completion",
+            "values": {
+              "exp": "65/74 completed (9 did not complete)",
+              "ctl": "65/74 completed (9 did not complete)"
+            },
+            "locator": "Full text, Results, p 846",
+            "note": "Completion counts calculated from 74 randomized and 9 who did not complete in each group; 3 PPS and 5 placebo participants discontinued because of adverse experiences."
           }
         ],
         "source": {
           "file": null,
-          "checked": "2026-11-12",
-          "level": "abstract"
+          "checked": "2026-11-13",
+          "level": "full-text"
         }
       }
     ],
@@ -53055,8 +53563,8 @@
         "citation": "Lucot JP, Cosson M, Verdun S, et al. Long-term outcomes of primary cystocele repair by transvaginal mesh surgery versus laparoscopic mesh sacropexy: extended follow up of the PROSPERE multicentre randomised trial. *BJOG.* 2022;129(1):127-137. doi:10.1111/1471-0528.16847",
         "doi": "10.1111/1471-0528.16847",
         "pmid": "34264001",
-        "followUp": "4 years; 220 of 262 randomized women followed",
-        "followUpLocator": "PubMed abstract, Results",
+        "followUp": "4 years; 220 of 262 randomized women entered the extension, 209 completed 48-month follow-up",
+        "followUpLocator": "Full text, Results, p 129; Figure 1, p 130",
         "results": [
           {
             "endpoint": "Pelvic Floor Distress Inventory-20",
@@ -53069,16 +53577,20 @@
                 -14,
                 -0.05
               ],
-              "p": "0.029"
+              "p": "0.048"
             },
             "met": true,
-            "note": "Both groups improved; between-group difference was below the minimal clinically important difference. Group means unavailable in abstract.",
-            "locator": "PubMed abstract, Results"
+            "note": "Adjusted between-group difference, LS minus TVM. Extension enrolled 104 LS and 116 TVM patients; 209/220 completed follow-up. Exact PFDI-20 arm denominators are not given. The abstract gives P=0.029, whereas Table 2 gives P=0.048; both meet the prespecified 5% threshold. Difference below the 45-point MCID.",
+            "locator": "Full text, Methods, p 129; Results, p 129; Table 2, p 133",
+            "values": {
+              "ls": "19.2 ± 24.6 points (mean ± SD)",
+              "tvm": "26.1 ± 29.4 points (mean ± SD)"
+            }
           },
           {
             "endpoint": "Composite success",
             "role": "secondary",
-            "measure": "Four-year composite success",
+            "measure": "Four-year composite success; hazard ratio for time to composite failure",
             "values": {
               "ls": "70% (95% CI 61–81%)",
               "tvm": "71% (95% CI 62–81%)"
@@ -53092,23 +53604,51 @@
               ],
               "p": "0.75"
             },
-            "note": "Definition and event counts unavailable in abstract.",
-            "locator": "PubMed abstract, Results"
+            "note": "Composite failure: POP-Q Ba, C or Bp >0 cm beyond hymen, bothersome vaginal bulge, or retreatment for recurrence. Percentages are 48-month time-to-event estimates, not raw counts.",
+            "locator": "Full text, Methods, pp 128–129; Results, p 131; Figure 3, p 134",
+            "met": false
           },
           {
             "endpoint": "POP-Q point C",
             "role": "secondary",
             "measure": "Four-year point C position, millimeters",
             "values": {
-              "ls": "−57 mm",
-              "tvm": "−48 mm"
+              "ls": "−59.7 ± 21.7 mm (mean ± SD)",
+              "tvm": "−51.7 ± 27.1 mm (mean ± SD)"
             },
             "effect": {
-              "type": "none",
+              "type": "difference",
+              "value": 8.5,
+              "ci": [
+                2.2,
+                14.9
+              ],
               "p": "0.0093"
             },
-            "note": "Other POP-Q measurements did not differ according to the abstract.",
-            "locator": "PubMed abstract, Results"
+            "note": "Adjusted between-group difference, TVM minus LS, in mm. The abstract gives rounded arm positions of −57 and −48 mm; Table 2 gives these detailed values.",
+            "locator": "Full text, Results, p 132; Table 2, p 133",
+            "met": true
+          },
+          {
+            "endpoint": "Surgical revision for prolapse recurrence",
+            "role": "secondary",
+            "measure": "Four-year surgical revision for prolapse recurrence",
+            "values": {
+              "ls": "4.3% (95% CI 1.6–10.2%)",
+              "tvm": "5.8% (95% CI 2.4–12.6%)"
+            },
+            "effect": {
+              "type": "OR",
+              "value": 0.74,
+              "ci": [
+                0.17,
+                3
+              ],
+              "p": "0.76"
+            },
+            "met": false,
+            "note": "Odds ratio LS versus TVM; report does not give raw arm event counts.",
+            "locator": "Full text, Results, p 131"
           }
         ],
         "harms": [
@@ -53118,21 +53658,43 @@
               "ls": "2% (95% CI 0–4.7%)",
               "tvm": "8.7% (95% CI 3.4–13.7%)"
             },
-            "locator": "PubMed abstract, Results",
-            "note": "Reported hazard ratio 4.6 (95% CI 1.007–21.0), P=0.049; event counts unavailable in abstract."
+            "locator": "Full text, Results, p 132",
+            "note": "Cumulative rates in 220 extension participants (104 LS, 116 TVM); HR TVM versus LS 4.6 (95% CI 1.007–21.0), P=0.049. Three complications occurred after year one: vaginal synechiae and urinary obstruction requiring surgery after TVM, and rectovaginal fistula after treatment for recurrence involving the LS mesh. Sensitivity analysis of all randomized women, with nonparticipants censored at 1 year: 2.8% versus 8.8%, HR 3.5 (95% CI 0.99–12.7), P=0.052."
+          },
+          {
+            "label": "Vaginal mesh exposure through four years",
+            "values": {
+              "ls": "0 reported (extension n=104)",
+              "tvm": "3 reported (extension n=116)"
+            },
+            "locator": "Full text, Results, p 132",
+            "note": "One TVM exposure required surgery at six weeks and recurred at four years; another was asymptomatic at two years. Arm sizes are extension enrollment, not exposure-assessment denominators."
+          },
+          {
+            "label": "Pelvic or perineal pain reported at least once between six months and four years",
+            "values": {
+              "ls": "34/93 (36.6%)",
+              "tvm": "39/105 (37.1%)"
+            },
+            "locator": "Full text, Results, p 132",
+            "note": "73/198 (36.9%) overall. Chronic pain criteria were met by 13/205 (6.3%) overall."
           }
         ],
         "delivery": [
           {
             "label": "Four-year follow-up participation",
-            "value": "220 of 262 randomized women",
-            "locator": "PubMed abstract, Results"
+            "locator": "Full text, Results, p 129; Figure 1, p 130",
+            "values": {
+              "ls": "104 entered extension; 96 completed 48-month follow-up",
+              "tvm": "116 entered extension; 113 completed 48-month follow-up"
+            },
+            "note": "220/262 randomized women entered the extension; 209 completed 48-month follow-up (193 in-person examination and questionnaire, 16 questionnaire only). Follow-up analyses were by randomized assignment."
           }
         ],
         "source": {
           "file": null,
-          "checked": "2026-11-12",
-          "level": "abstract"
+          "checked": "2026-11-13",
+          "level": "full-text"
         }
       }
     ],
@@ -68596,36 +69158,86 @@
         "citation": "Handelsman DJ, Grossmann M, Yeap BB, et al. \"Long-term Outcomes of Testosterone Treatment in Men: A T4DM Postrandomization Observational Follow-up Study.\" *J Clin Endocrinol Metab.* 2024;109(1):e25-e31. doi:10.1210/clinem/dgad485",
         "doi": "10.1210/clinem/dgad485",
         "pmid": "37623257",
-        "followUp": "Median 5.1 years since last injection; 599/1,007 completed surveys",
-        "followUpLocator": "PubMed abstract, Methods",
+        "followUp": "Median 5.1 years (IQR 4.4–5.8) since last injection; 704/1,007 responded and 599/1,007 completed surveys (316/504 testosterone, 283/503 placebo)",
+        "followUpLocator": "Full text, Results, p e26",
         "results": [
           {
             "endpoint": "Self-reported new diabetes after trial treatment",
             "role": "descriptive",
-            "measure": "Between-group comparison in postrandomization survey",
-            "effect": {
-              "type": "none"
+            "measure": "New diagnosis after T4DM among 599 survey completers, median 5.1 years since last injection",
+            "values": {
+              "exp": "63/316 (20%)",
+              "ctl": "49/283 (17%)"
             },
-            "note": "No between-group difference reported; survey response was 316/504 versus 283/503, and diabetes outcome counts were absent from the abstract.",
-            "locator": "PubMed abstract, Methods and Results"
+            "effect": {
+              "type": "none",
+              "p": "0.65"
+            },
+            "met": "not-tested",
+            "note": "P is for the overall diabetes-diagnosis category comparison; self-reported without repeat OGTT or objective verification. No prespecified efficacy threshold for this observational survey.",
+            "locator": "Full text, Table 2, p e28; Results, p e26"
+          },
+          {
+            "endpoint": "Perceived benefit of study treatment",
+            "role": "descriptive",
+            "measure": "Self-reported benefit during T4DM and ongoing benefit after T4DM among 599 survey completers",
+            "values": {
+              "exp": "During 201/316 (64%); ongoing 138/316 (44%)",
+              "ctl": "During 139/283 (49%); ongoing 113/283 (40%)"
+            },
+            "effect": {
+              "type": "none",
+              "p": "<0.001 during; 0.07 ongoing"
+            },
+            "met": "not-tested",
+            "note": "Self-reported perception after treatment allocation was disclosed to some participants.",
+            "locator": "Full text, Table 2, p e28; Results, p e26"
           }
         ],
         "harms": [
           {
+            "label": "Self-reported new prostate disease diagnosis after T4DM",
+            "values": {
+              "exp": "Cancer 10/316 (3%); noncancer 20/316 (6%)",
+              "ctl": "Cancer 10/283 (4%); noncancer 25/283 (9%)"
+            },
+            "locator": "Full text, Table 2, p e28; Results, p e26",
+            "note": "P=0.49 for overall prostate-disease category comparison among 599 survey completers."
+          },
+          {
+            "label": "Self-reported new cardiovascular disease diagnosis after T4DM",
+            "values": {
+              "exp": "Heart disease 41/316 (13%); stroke 2/316 (1%); both 1/316 (0.3%)",
+              "ctl": "Heart disease 37/283 (13%); stroke 3/283 (1%); both 1/283"
+            },
+            "locator": "Full text, Table 2, p e28; Results, p e26",
+            "note": "P=0.95 for overall cardiovascular-disease category comparison among 599 survey completers."
+          },
+          {
             "label": "New sleep apnea diagnosis during randomized treatment, self-reported at survey",
             "values": {
-              "exp": "3.0%",
-              "ctl": "0.4%"
+              "exp": "10/316 (3%)",
+              "ctl": "1/283 (0.4%)"
             },
-            "locator": "PubMed abstract, Results",
-            "note": "P=0.03; the abstract gives no event counts."
+            "locator": "Full text, Table 2, p e28; Results, p e26",
+            "note": "P=0.03; paper reports OR 10.5 (95% CI 5.5–20), which is inconsistent with the displayed counts. After T4DM, new diagnoses were 23/316 (7%) versus 26/283 (9%)."
           }
         ],
-        "delivery": [],
+        "delivery": [
+          {
+            "label": "Prescribed testosterone treatment after T4DM",
+            "values": {
+              "exp": "19/316 (6%) prescribed after T4DM; 16/19 (84%) still taking it at survey",
+              "ctl": "8/283 (2.8%) prescribed after T4DM; 6/8 (75%) still taking it at survey"
+            },
+            "locator": "Full text, Table 2, p e28; Results, p e26",
+            "note": "P=0.03 for poststudy testosterone prescription; all 27 poststudy treatments were prescribed by nonstudy doctors."
+          }
+        ],
         "source": {
           "file": null,
-          "level": "abstract",
-          "checked": "2026-11-12"
+          "level": "full-text",
+          "checked": "2026-11-13"
         }
       },
       {
@@ -77578,13 +78190,13 @@
           "role": "control"
         }
       ],
-      "population": "556 men older than 54 years with moderate symptoms of benign prostatic hyperplasia.",
+      "population": "556 men aged 55 years or older with a 10–20/27 symptom score and moderate BPH symptoms.",
       "description": "Multicenter, open-label randomized superiority trial",
-      "locator": "PubMed abstract, Background and Methods"
+      "locator": "Full text, Methods, Selection of Patients and Assignment to Treatment, pp 75–76; Results, Screening, p 76"
     },
     "verdict": "positive",
     "verdictNote": "Watchful-waiting crossover to surgery reached 65/276 (24%) by three years.",
-    "takeaway": "In men with moderate BPH symptoms, immediate transurethral resection reduced three-year composite treatment failure versus watchful waiting (23/280 versus 47/276; RR 0.48, 95% CI 0.30–0.77).",
+    "takeaway": "Among 556 men with moderate BPH symptoms, immediate TURP reduced three-year composite treatment failure versus watchful waiting (23/280 [8.2%] versus 47/276 [17.0%]; RR 0.48, 95% CI 0.30–0.77; P = 0.002 for event rates).",
     "reports": [
       {
         "id": "va-turp-watchful-waiting-1995",
@@ -77596,7 +78208,7 @@
         "doi": "10.1056/NEJM199501123320202",
         "pmid": "7527493",
         "followUp": "Mean 2.8 years; planned follow-up three years",
-        "followUpLocator": "PubMed abstract, Methods and Results",
+        "followUpLocator": "Full text, Table 2 footnote, p 77",
         "results": [
           {
             "endpoint": "Treatment failure",
@@ -77612,51 +78224,98 @@
               "ci": [
                 0.3,
                 0.77
-              ]
+              ],
+              "p": "0.002 for event-rate comparison"
             },
-            "met": null,
-            "note": "Intention-to-treat; composite included death, retention, postvoid residual above 350 mL, bladder calculus, persistent new incontinence, high symptom score, or doubled creatinine.",
-            "locator": "PubMed abstract, Methods and Results"
+            "met": true,
+            "note": "Intention to treat; composite included death, repeated or intractable retention, postvoid residual above 350 mL, bladder calculus, new persistent incontinence, high symptom score, or doubled creatinine. All tests were two-sided; P ≤ 0.05 was significant.",
+            "locator": "Full text, Statistical Analysis, p 76; Table 2 and Treatment Outcomes, p 77"
           },
           {
-            "endpoint": "Symptoms and urinary bother",
-            "role": "secondary",
-            "measure": "Symptom, urinary-difficulty, and daily-activity interference scores",
+            "endpoint": "Symptoms, urinary bother, and daily activities",
+            "role": "descriptive",
+            "measure": "Three-year symptom score (0–27), urinary-bother score and daily-activity score (both 0–100; higher is better), available follow-up assessments",
             "values": {
-              "exp": "greater improvement",
-              "ctl": "less improvement"
+              "exp": "4.9, 75.7, and 86.4, respectively",
+              "ctl": "9.1, 57.6, and 75.6, respectively"
             },
             "effect": {
               "type": "none",
-              "p": "<0.001 for all comparisons"
+              "p": "<0.001 for between-group changes in each measure"
             },
-            "note": "The greatest benefit was reported among men most bothered by urinary symptoms at baseline.",
-            "locator": "PubMed abstract, Results"
+            "note": "The greatest improvement in urinary bother after TURP was among men more bothered at baseline: 134/148 (91%) improved versus 45/73 (62%) of those less bothered.",
+            "locator": "Full text, Table 3 and Factors Influencing Outcomes, p 78"
+          },
+          {
+            "endpoint": "Obstructive components of treatment failure",
+            "role": "descriptive",
+            "measure": "Three-year urinary retention, high postvoid residual, and high symptom score, intention to treat",
+            "values": {
+              "exp": "1/280 (0.4%), 3/280 (1.1%), and 1/280 (0.4%), respectively",
+              "ctl": "8/276 (2.9%), 16/276 (5.8%), and 12/276 (4.3%), respectively"
+            },
+            "effect": {
+              "type": "none"
+            },
+            "locator": "Full text, Table 2 and Treatment Outcomes, p 77"
+          },
+          {
+            "endpoint": "Peak flow and postvoid residual",
+            "role": "descriptive",
+            "measure": "Three-year peak urinary flow and postvoid residual, available follow-up assessments",
+            "values": {
+              "exp": "17.8 mL/s and 51 mL",
+              "ctl": "12.7 mL/s and 72 mL"
+            },
+            "effect": {
+              "type": "none",
+              "p": "<0.001 for flow change; 0.015 for residual-volume change"
+            },
+            "locator": "Full text, Table 3 and Change in Symptoms and Quality of Life, pp 77–78"
           }
         ],
         "harms": [
           {
-            "label": "Impotence and urinary incontinence",
-            "note": "Surgery was not associated with impotence or urinary incontinence in the reported comparison; absolute rates were not in the abstract.",
-            "locator": "PubMed abstract, Results"
+            "label": "Persistent incontinence and sexual performance",
+            "values": {
+              "exp": "4/280 (1.4%) persistent incontinence",
+              "ctl": "4/276 (1.4%) persistent incontinence"
+            },
+            "note": "The three-year change in sexual-performance score was −3.0 after assignment to TURP and −3.2 after watchful waiting (P = 0.920); the 0–100 scale is higher for less impairment.",
+            "locator": "Full text, Tables 2–3 and Change in Symptoms and Quality of Life, pp 77–78"
+          },
+          {
+            "label": "Early postoperative complications",
+            "value": "Among 242 TURP procedures with complete operative information, repeat catheter placement occurred in 9/242 (3.7%), capsule perforation in 5/242 (2.1%), transfusion in 3/242 (1.2%), urinary infection in 2/242 (0.8%), and thrombophlebitis in 1/242 (0.4%) within 30 days; no surgery-associated deaths.",
+            "locator": "Full text, Postoperative Events, pp 76–77"
+          },
+          {
+            "label": "Later corrective procedures after TURP",
+            "value": "Within three years after surgery, nine men underwent endoscopic surgery for bladder-neck contracture, nine needed urethral dilation for stricture, and eight had a second TURP (four for adenocarcinoma).",
+            "locator": "Full text, Postoperative Events, p 77"
           }
         ],
         "delivery": [
           {
             "label": "Early TURP receipt",
-            "value": "249/280 (89%) assigned to surgery underwent TURP within two weeks of randomization.",
-            "locator": "PubMed abstract, Results"
+            "value": "249/280 (88.9%) assigned to surgery underwent TURP within two weeks. Among 242 procedures with complete operative information, 97% were resected to the capsule; median tissue weight was 14 g (IQR 8–21 g), and 78% had a hospital stay of four days or less (mean 4 ± 4 days).",
+            "locator": "Full text, Assignment to Treatment, p 75; Postoperative Events, pp 76–77"
           },
           {
             "label": "Watchful-waiting crossover",
-            "value": "65/276 (24%) assigned to watchful waiting underwent surgery within three years.",
-            "locator": "PubMed abstract, Results"
+            "value": "65/276 (23.6%) assigned to watchful waiting underwent surgery within three years; 20 crossed over because of treatment failure.",
+            "locator": "Full text, Treatment Outcomes, p 77"
+          },
+          {
+            "label": "Watchful-waiting regimen and follow-up",
+            "value": "Both groups were advised to avoid coffee, alcohol, and other liquids after dinner and to avoid symptom-worsening medications; physicians were asked to avoid alpha-adrenergic antagonists. Visits occurred at six to eight weeks and then twice yearly for three years.",
+            "locator": "Full text, Assignment to Treatment and Follow-up, pp 75–76"
           }
         ],
         "source": {
           "file": null,
-          "level": "abstract",
-          "checked": "2026-11-12"
+          "level": "full-text",
+          "checked": "2026-11-13"
         }
       },
       {
@@ -77781,7 +78440,7 @@
     "relations": [],
     "page": "/docs/clinical-evidence/studies/va-turp-watchful-waiting",
     "status": {
-      "sourceRead": "abstract",
+      "sourceRead": "full-text",
       "claimsChecked": null,
       "clinicalReview": null
     }

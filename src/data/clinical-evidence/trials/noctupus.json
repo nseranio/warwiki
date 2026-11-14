@@ -162,56 +162,136 @@
       "citation": "Lose G, Lalos O, Freeman RM, et al. Efficacy of desmopressin (Minirin) in the treatment of nocturia: a double-blind placebo-controlled study in women. *Am J Obstet Gynecol.* 2003;189(4):1106-1113.",
       "doi": "10.1067/s0002-9378(03)00593-3",
       "pmid": "14586363",
-      "followUp": "3-week double-blind treatment after 3-week titration and 1-week washout",
-      "followUpLocator": "PubMed abstract, Study Design",
+      "followUp": "3-week double-blind treatment after up to 3-week titration and 1-week washout",
+      "followUpLocator": "Full text, Patients and methods, pp 1107-1108, Fig 1",
       "results": [
         {
           "endpoint": "At least 50% reduction in nightly voids",
-          "role": "descriptive",
-          "measure": "Responder proportion after 3 weeks in a separate randomized cohort of women",
+          "role": "primary",
+          "measure": "At least 50% reduction in mean nightly voids after 3 weeks, intention-to-treat population (72 desmopressin, 70 placebo)",
           "values": {
             "exp": "33/72 (46%)",
-            "ctl": "5/72 (7%)"
+            "ctl": "5/70 (7%)"
           },
           "effect": {
-            "type": "none",
+            "type": "OR",
+            "value": 13.4,
+            "ci": [
+              4.6,
+              39.2
+            ],
             "p": "<0.0001"
           },
-          "note": "The abstract does not state the prespecified endpoint hierarchy or alpha.",
-          "locator": "PubMed abstract, Results"
+          "met": true,
+          "note": "The prespecified two-sided alpha was 0.05; two of 72 randomized placebo recipients lacked efficacy data.",
+          "locator": "Full text, Patients and methods, p 1109; Results, pp 1109-1110, Fig 2"
+        },
+        {
+          "endpoint": "Nightly voids",
+          "role": "secondary",
+          "measure": "Between-group difference in change in mean nightly voids after 3 weeks, intention-to-treat population",
+          "values": {
+            "exp": "2.92 to 1.61",
+            "ctl": "2.91 to 2.36"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.76,
+            "ci": [
+              -1.01,
+              -0.5
+            ],
+            "p": "<0.0001"
+          },
+          "met": true,
+          "locator": "Full text, Table II, p 1111"
+        },
+        {
+          "endpoint": "First sleep period",
+          "role": "secondary",
+          "measure": "Between-group difference in change in mean minutes until first nocturnal void after 3 weeks, intention-to-treat population",
+          "values": {
+            "exp": "142 to 272 min",
+            "ctl": "144 to 181 min"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 93.73,
+            "ci": [
+              64.1,
+              123
+            ],
+            "p": "<0.0001"
+          },
+          "met": true,
+          "locator": "Full text, Results, p 1110; Table II, p 1111"
+        },
+        {
+          "endpoint": "Nocturnal diuresis",
+          "role": "secondary",
+          "measure": "Between-group difference in change in mean nocturnal diuresis after 3 weeks, intention-to-treat population",
+          "values": {
+            "exp": "1.51 to 0.82 mL/min",
+            "ctl": "1.44 to 1.35 mL/min"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.6,
+            "ci": [
+              -0.71,
+              -0.49
+            ],
+            "p": "<0.0001"
+          },
+          "met": true,
+          "locator": "Full text, Table II, p 1111"
         }
       ],
       "harms": [
         {
           "label": "Hyponatremia during open-label dose titration",
           "values": {
-            "exp": "6%",
+            "exp": "14/224 (6%) reported hyponatremia; 27/224 (12%) had sodium below normal; 13/224 (6%) had sodium below 130 mmol/L; 7/224 (3%) withdrew",
             "ctl": "not applicable"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract does not give the titration denominator or randomized-arm hyponatremia rates."
+          "locator": "Full text, Results, pp 1110-1112, Table III",
+          "note": "All cases occurred during titration; no below-normal sodium was reported during double-blind treatment. Eleven of 13 women with sodium below 130 mmol/L were at least 65 years old."
         },
         {
-          "label": "Deaths during the women’s study (n = 2)",
+          "label": "Deaths during open-label dose titration",
           "values": {
-            "exp": "not reported by arm",
-            "ctl": "not reported by arm"
+            "exp": "2/224 (1%) during titration",
+            "ctl": "not applicable"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Neither death could be directly associated with study drug; allocation and timing were not stated."
+          "locator": "Full text, Results, pp 1110-1111, Table III and footnote",
+          "note": "One death was considered unlikely to be treatment related; the other was mainly attributed to diabetic complications, although an initial causal link to pneumonia and respiratory insufficiency could not be excluded."
+        },
+        {
+          "label": "Adverse events during double-blind treatment",
+          "values": {
+            "exp": "any: 26/72 (36%); treatment related: 9/72 (13%); serious: 0/72 (0%)",
+            "ctl": "any: 25/72 (35%); treatment related: 6/72 (8%); serious: 1/72 (1%)"
+          },
+          "locator": "Full text, Results, pp 1110-1111, Table III",
+          "note": "The one serious double-blind event occurred in the placebo arm; no below-normal sodium was reported during double-blind treatment."
         }
       ],
       "delivery": [
         {
           "label": "Dose titration and randomization",
-          "value": "Women received 0.1, 0.2, or 0.4 mg oral desmopressin during titration; 144 responders were randomized equally to desmopressin or placebo.",
-          "locator": "PubMed abstract, Study Design and Results"
+          "value": "224 women took at least one dose during open-label titration; oral desmopressin began at 0.1 mg at bedtime and rose weekly to 0.2 or 0.4 mg if a full response had not occurred. After a 1-week washout, 144 women with at least a 20% reduction in nocturnal diuresis during titration and return to at least 78% of baseline diuresis after washout were randomized 72/72 to their selected dose or placebo for 3 weeks.",
+          "locator": "Full text, Patients and methods, pp 1107-1108; Results, p 1109, Fig 2"
+        },
+        {
+          "label": "Double-blind treatment adherence",
+          "value": "At least 80% of study medication was taken by 72/72 (100%) desmopressin recipients and 68/72 (94%) placebo recipients; 141/144 (98%) completed 3 weeks.",
+          "locator": "Full text, Results, p 1109, Fig 2"
         }
       ],
       "source": {
         "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1067_s0002_9378_03_00593_3.fulltext.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
