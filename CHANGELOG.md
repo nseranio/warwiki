@@ -6,6 +6,13 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## November 13, 2026 (night) — Owner downloads finished: 98 more WARWIKI trial pages and 17 WHITWIKI trials updated from full texts
+
+- Codex retrieved 250 of the 251 requested sources through the Jefferson library; only Roehrborn 2000 (PLESS retention, Karger) needs document delivery.
+- WARWIKI batches 4–6 (`27175469`, `03544e68`, `94e1a24b`): 98 trial pages brought up to their full texts, each through a Codex enrich pass, a two-reviewer claim gate and two independent final rechecks (about 3,400 claims passing). Verdicts changed to match the papers: WATER III mixed (coprimary safety endpoint missed), Durasphere inconclusive (no equivalence margin), tolterodine BOO and MOTIVE noninferior (equivalence met), eCoin positive (40% performance goal met), Mazdak mitomycin and Finnish TVT/TVT-O descriptive (no primary endpoint), NAPRUTI negative (noninferiority failed), nightly sildenafil after prostatectomy inconclusive (neither dose met the Bonferroni threshold). PLESS now leads with its prespecified symptom-score endpoint and adds the 2000 retention analysis's abstract facts.
+- WHITWIKI (`5f4889c`, `089af9c`): TROG RADAR dose analysis, RTOG 0126 15-year results (new report), DESTINY-PanTumor02 bladder final poster, RTOG 0521 Publisher's Note (new correction report), PACE-A eight-year results, RTOG 0815, PRESTO, Study 205 overall survival, the Weiss 1990 late-relapse letter (OCR), the THOR appendix, and full texts for ECOG BEP versus VIP, Tannock 1996, RTOG 89-03, SpaceOAR, INT-0036, Saad 2002 and Skinner 1991.
+- Codex hit its usage limit mid-batch on November 13 (8 jobs lost) and came back the same evening; the runners skip finished trials, so partial notes were moved aside and rerun.
+
 ## November 14, 2026 — Design review fixes and CI repaired (overnight, both sites)
 
 - Impeccable design critique of WARWIKI and WHITWIKI (separate design-review and detector agents; both 25/40). Report and ranked decisions for the owner: `~/Documents/WARWIKI/design-review-2026-11-14/DESIGN-CRITIQUE.md` (outside the repo). Main open items: phone tables hide the result column, Clinical Evidence landings need search and a collapsed decision list, heavy table headers and boxes, Rounds styling.
