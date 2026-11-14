@@ -42,7 +42,7 @@
   --warwiki-border-strong:  #C2CBD9;
   --warwiki-text:           #111827;
   --warwiki-text-muted:     #4B5767;
-  --warwiki-text-subtle:    #8494A8;
+  --warwiki-text-subtle:    #5F6E82; /* 4.6:1 or better on every light background (was #8494A8, 2.8-3.1:1), 2026-11-14 */
 
   /* ── Semantic callout backgrounds ── */
   --warwiki-note-bg:        #EBF3FB;
@@ -126,7 +126,7 @@
   --warwiki-border-strong:  #243347;
   --warwiki-text:           #E4ECF5;
   --warwiki-text-muted:     #7D93AB;
-  --warwiki-text-subtle:    #4D6070;
+  --warwiki-text-subtle:    #7C8EA2; /* 4.6:1 or better on every dark background (was #4D6070, 2.4-2.9:1), 2026-11-14 */
 
   --warwiki-note-bg:        rgba(74, 159, 224, 0.09);
   --warwiki-note-border:    #4A9FE0;
@@ -406,6 +406,14 @@ h1, h2, h3, h4, h5, h6 {
   /* The header cell takes its row's color in both themes. */
   .markdown table thead th:first-child {
     background-color: inherit;
+  }
+  /* Technique databases have their own quiet header; without this the sticky first cell
+     inherited the blue markdown header row and showed muted text on blue (2026-11-14). */
+  .markdown .td-wrapper .td-table thead th:first-child {
+    background-color: var(--warwiki-bg);
+  }
+  [data-theme='dark'] .markdown .td-wrapper .td-table thead th:first-child {
+    background-color: #111827;
   }
   .markdown table tbody tr:nth-child(even) td:first-child {
     background-color: var(--warwiki-bg-subtle);
@@ -1086,7 +1094,7 @@ main.container .hero__title {
 
 .footer__copyright {
   font-size: 0.78rem;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.6); /* was 0.3 (2.65:1), 2026-11-14 */
   margin-top: 0;
   padding-top: 0;
   border-top: none;
