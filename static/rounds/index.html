@@ -21,7 +21,7 @@
 /* Layout: one narrow reading column; home is a chart-room summary, the question screen reads like a case sheet. */
 :root{
   --bg:#F2F4F4; --panel:#FBFCFC; --ink:#1A2224; --ink2:#5E6A6D; --line:#D2DADB; --soft:#E6ECEC;
-  --accent:#3E7C78; --accentInk:#FFFFFF; --accentSoft:#DCEBEA; --pearl:#C77A0A; --ring:#D2DADB; --logo:#2E5E59; --logoTrack:#D2DADB;
+  --accent:#3E7C78; --accentInk:#FFFFFF; --accentSoft:#DCEBEA; --pearl:#C77A0A; --keyBg:rgba(199,122,10,.15); --ring:#D2DADB; --logo:#2E5E59; --logoTrack:#D2DADB;
   --ok:#3B6D11; --okSoft:#E7EFDB; --bad:#A32D2D; --badSoft:#F6E1DF; --warn:#946200; --warnSoft:#F4EAD3; --onc:#ECE4F3; --oncInk:#5E3A8C;
   --shadow:0 1px 2px rgba(27,26,23,.05); --glow:0 0 0 3px rgba(199,122,10,.18);
   --sans:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
@@ -31,12 +31,12 @@
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#141B1D; --panel:#1A2326; --ink:#E5ECED; --ink2:#94A3A6; --line:#2A3639; --soft:#1F2A2D;
-  --accent:#7CC3BC; --accentInk:#0F1A1B; --accentSoft:#1E3335; --pearl:#EF9F27; --ring:#2A3639;
+  --accent:#7CC3BC; --accentInk:#0F1A1B; --accentSoft:#1E3335; --pearl:#EF9F27; --keyBg:rgba(239,159,39,.2); --ring:#2A3639;
   --ok:#97C459; --okSoft:#253019; --bad:#E57A6E; --badSoft:#3A1F1C; --warn:#E3B341; --warnSoft:#33280F; --onc:#2C2338; --oncInk:#C9AEEB;
   --shadow:none; --glow:0 0 0 3px rgba(239,159,39,.22); color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#141B1D; --panel:#1A2326; --ink:#E5ECED; --ink2:#94A3A6; --line:#2A3639; --soft:#1F2A2D;
-  --accent:#7CC3BC; --accentInk:#0F1A1B; --accentSoft:#1E3335; --pearl:#EF9F27; --ring:#2A3639;
+  --accent:#7CC3BC; --accentInk:#0F1A1B; --accentSoft:#1E3335; --pearl:#EF9F27; --keyBg:rgba(239,159,39,.2); --ring:#2A3639;
   --ok:#97C459; --okSoft:#253019; --bad:#E57A6E; --badSoft:#3A1F1C; --warn:#E3B341; --warnSoft:#33280F; --onc:#2C2338; --oncInk:#C9AEEB;
   --shadow:none; --glow:0 0 0 3px rgba(239,159,39,.22); color-scheme:dark}
 *{box-sizing:border-box}
@@ -130,6 +130,9 @@ a{color:var(--accent)}
 .block.pearl{border-color:var(--accent)}
 .block.card{border-color:var(--warn);background:var(--warnSoft);border-radius:0 10px 10px 0;padding:10px 12px 10px 14px}
 .block p{margin:5px 0 0;line-height:1.6}
+mark.key{background:var(--keyBg);color:inherit;font-weight:600;padding:.05em .25em;margin:0 -.1em;border-radius:4px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.resetBtn{align-self:center;background:none;border:0;color:var(--bad);font:500 13px/1.4 var(--sans);padding:8px 10px;border-radius:8px;opacity:.85}
+.resetBtn:hover{opacity:1;text-decoration:underline;text-underline-offset:3px}
 .quote{font-size:14px;color:var(--ink2);font-style:italic}
 .src{font:500 12px var(--mono);color:var(--ink2);display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
 .src a{text-decoration:none;font-weight:600}
@@ -372,6 +375,7 @@ const ICON={
   flag:SVG('<path d="M5 21V4h11l-1.5 4L16 12H5"/>'),
   end:SVG('<path d="M6 6l12 12M18 6L6 18"/>')};
 const dayKey=(t=Date.now())=>{const d=new Date(t);return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")};
+function explainHTML(q){const t=esc(q.explanation);if(!q.key)return t;const k=esc(q.key),i=t.indexOf(k);return i<0?t:t.slice(0,i)+'<mark class="key">'+k+'</mark>'+t.slice(i+k.length)}
 function days(){return S.prog._days||{}}
 function streak(){
   const d=days();let n=0;let t=Date.now();
@@ -397,10 +401,14 @@ let syncCode=LS.get("rounds-sync",null);if(syncCode&&!CODE_RE.test(syncCode))syn
 let syncInfo={state:syncCode?"pending":"off",at:0,err:""};
 (()=>{const m=location.hash.match(/^#sync=([A-Za-z2-9-]{12,14})$/);if(m){const c=m[1].replace(/-/g,"").toUpperCase();if(CODE_RE.test(c)){syncCode=c;LS.put("rounds-sync",c);syncInfo.state="pending"}try{history.replaceState(null,"",location.pathname+location.search)}catch(e){}}})();
 function newCode(){const A="ABCDEFGHJKLMNPQRSTUVWXYZ23456789";const r=new Uint8Array(12);crypto.getRandomValues(r);return Array.from(r,x=>A[x%32]).join("")}
+function resetAt(p){return (p&&p._reset&&p._reset.at)||0}
+function prune(p,r){if(!r)return p;for(const k of Object.keys(p)){if(k==="_reset")continue;if(((p[k]&&p[k].at)||0)<=r)delete p[k]}return p}
 function mergeInto(base,inc){
+  const r=Math.max(resetAt(base),resetAt(inc));inc=prune({...(inc||{})},r);prune(base,r);
   for(const [k,b] of Object.entries(inc||{})){const a=base[k];
     if(k==="_days"){const m={...(a||{})};for(const [d,v] of Object.entries(b||{}))if(d!=="at")m[d]=Math.max(v,m[d]||0);m.at=Math.max((a&&a.at)||0,(b&&b.at)||0);base[k]=m;continue}
     if(!a||((b&&b.at)||0)>(a.at||0))base[k]=b}
+  if(r)base._reset={at:r};
   return base;
 }
 async function syncPull(){
@@ -447,6 +455,9 @@ async function connect(){
     const snap=await S.col.get();
     clearTimeout(timer);
     const remote={};snap.docs.forEach(d=>{if(d.exists)remote[d.id]=d.data()});
+    // reset marker: drop anything older than the newest reset on either side
+    const R=Math.max(resetAt(S.prog),resetAt(remote));
+    if(R){for(const k of Object.keys(remote)){if(k!=="_reset"&&((remote[k]&&remote[k].at)||0)<=R){delete remote[k];delDoc(k)}}prune(S.prog,R);remote._reset={at:R};S.col.doc("_reset").set({at:R}).catch(()=>{})}
     // merge: keep whichever record has more attempts / newer
     const local=S.prog;
     for(const k of Object.keys(local)){
@@ -456,6 +467,15 @@ async function connect(){
     }
     S.prog=remote;S.store="account";LS.put("rounds-prog",S.prog);render();
   }catch(e){clearTimeout(timer);S.store="local";render()}
+}
+function delDoc(k){try{const d=S.col.doc(k);(d.delete?d.delete():d.set({at:0})).catch(()=>{})}catch(e){}}
+function resetProgress(){
+  const at=Date.now();
+  if(S.col)for(const k of Object.keys(S.prog))if(k!=="_reset")delDoc(k);
+  S.prog={_reset:{at}};LS.put("rounds-prog",S.prog);
+  if(S.col)S.col.doc("_reset").set({at}).catch(()=>{});
+  if(syncCode)syncPush(true);
+  S.block=null;S.view="home";S.sheet=false;render();window.scrollTo(0,0);
 }
 function save(id){
   LS.put("rounds-prog",S.prog);
@@ -473,7 +493,7 @@ function record(q,ok){
 }
 function toggleFlag(q){
   const p=S.prog[q.id]||{n:0,right:0,ivl:0};
-  p.flag=!p.flag; p.at=p.at||0; S.prog[q.id]=p; save(q.id);
+  p.flag=!p.flag; p.at=p.at||Date.now(); S.prog[q.id]=p; save(q.id);
 }
 
 /* ---------- pools ---------- */
@@ -548,7 +568,8 @@ function home(){
     <div class="rows">${Object.entries(KINDS).map(([k,l])=>barRow(l,tally(scope.filter(q=>q.kind===k)))).join("")}</div></div>`:""}
   </div>
   ${ONSITE?`<button class="pickRow" id="openSync"><span><span class="pv">${syncCode?"Sync on · "+fmtCode(syncCode):"Sync across sites and devices"}</span><span class="note">${syncCode?(syncInfo.state==="error"?"Offline: saved on this device":syncInfo.state==="ok"?"Up to date":"Syncing…"):"No account needed: a private code links your progress"}</span></span><span class="chev">›</span></button>`:""}
-  <p class="note">${esc(storeNote)} ${S.qs.length} questions, each checked against its source page or guideline${S.meta&&S.meta.built?` (bank built ${esc(S.meta.built)})`:""}.</p>`;
+  <p class="note">${esc(storeNote)} ${S.qs.length} questions, each checked against its source page or guideline${S.meta&&S.meta.built?` (bank built ${esc(S.meta.built)})`:""}.</p>
+  ${Object.keys(S.prog).some(k=>k[0]!=="_")||days().at?`<button class="resetBtn" id="resetProg">Reset progress</button>`:""}`;
 }
 
 /* ---------- block ---------- */
@@ -583,7 +604,7 @@ function quiz(){
   const ans=reveal?`<div class="panel ans">
       <div class="verdict ${ok?"c":"w"}">${ok?"Correct.":"Incorrect."} The answer is (${"ABCDE"[q.answer]}).</div>
       ${(b.recallText||{})[q.id]?`<div class="block"><div class="lab">You recalled</div><p>${esc(b.recallText[q.id])}</p></div>`:""}
-      <div class="block"><div class="lab">Explanation</div><p>${esc(q.explanation)}</p></div>
+      <div class="block"><div class="lab">Explanation</div><p>${explainHTML(q)}</p></div>
       ${q.pearl?`<div class="block pearl"><div class="lab">Pearl</div><p>${esc(q.pearl)}</p></div>`:""}
       ${q.card?`<div class="block card"><div class="lab">Trial card · memorize</div><p>${esc(q.card)}</p></div>`:""}
       ${q.source&&q.source.quote?`<div class="block"><div class="lab">${q.source.url?"From the page":"From the guideline"}</div><p class="quote">“${esc(q.source.quote)}”</p></div>`:""}
@@ -720,6 +741,7 @@ document.addEventListener("click",e=>{
   if(e.target.id==="sheetBg"){S.sheet=false;render();return}
   const t=e.target.closest("button");if(!t)return;
   if(t.id==="exitBlock"){const b=S.block;if(!b){S.view="home";render();return}if(b.finished){S.view="summary";render();window.scrollTo(0,0);return}const any=b.ids.some(id=>b.done[id]!=null);if(any)finish();else{S.block=null;S.view="home";render();window.scrollTo(0,0)}return}
+  if(t.id==="resetProg"){const msg="Reset all progress? This clears every answer, flag and your streak"+(syncCode?" on this device and on every device using your sync code":S.store==="account"?" in your account":"")+". It cannot be undone.";if(confirm(msg))resetProgress();return}
   if(t.id==="toggleStats"){S.showStats=!S.showStats;render();return}
   if(t.id==="openSync"){S.sheet="sync";render();return}
   if(t.id==="syncOn"){syncCode=newCode();LS.put("rounds-sync",syncCode);syncInfo.state="syncing";syncPush(true);render();return}
