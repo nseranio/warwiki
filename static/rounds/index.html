@@ -302,6 +302,14 @@ h1.logo{cursor:pointer}
 .sw i{width:12px;height:22px;display:block}
 @media (max-width:520px){.choices{margin-left:0}.reveal,.recall{margin-left:0}.qbody{grid-template-columns:26px minmax(0,1fr)}.stem,.ask{font-size:17px}.ch{font-size:16.5px}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+.qimg{margin:14px 0 2px;display:flex;flex-direction:column;gap:6px}
+.qimg .zoom{all:unset;cursor:zoom-in;display:block;align-self:flex-start;max-width:100%;border-radius:8px;overflow:hidden;background:#000;line-height:0}
+.qimg .zoom:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.qimg img{display:block;max-width:100%;max-height:min(440px,60vh);width:auto;height:auto}
+.qimg figcaption{font:400 11.5px/1.4 var(--sans);color:var(--ink2)}
+.qimg figcaption a{color:inherit;text-decoration:underline;text-decoration-color:color-mix(in srgb,currentColor 35%,transparent)}
+#zoomBg{position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center;padding:16px;cursor:zoom-out}
+#zoomBg img{width:100%;height:100%;object-fit:contain}
 </style>
 
 <div class="wrap" id="app">
@@ -391,9 +399,10 @@ const HOST=location.hostname;
 const ONSITE=!window.claude&&/warwiki|whitwiki|localhost|127\.0\.0\.1/.test(HOST);
 const HOME=HOST.includes("whitwiki")?{name:"WHITWIKI",url:"/",other:"WARWIKI",otherUrl:"https://warwiki.org/rounds"}:{name:"WARWIKI",url:"/",other:"WHITWIKI",otherUrl:"https://whitwiki.org/rounds"};
 const QURLS=!location.pathname.startsWith("/rounds")?["questions.json"]:/(^|\.)warwiki\.org$/.test(HOST)||/^warwiki[a-z0-9-]*\.vercel\.app$/.test(HOST)?["https://whitwiki.org/rounds/questions.json","https://whitwiki.vercel.app/rounds/questions.json"]:["/rounds/questions.json","https://whitwiki.org/rounds/questions.json","https://whitwiki.vercel.app/rounds/questions.json"];
+let QBASE=location.href;
 async function fetchQuestions(){
   const ctrls=QURLS.map(()=>new AbortController());const timers=ctrls.map(c=>setTimeout(()=>c.abort(),12000));
-  try{return await Promise.any(QURLS.map((u,i)=>fetch(u,{cache:"no-cache",signal:ctrls[i].signal}).then(r=>{if(!r.ok)throw new Error("status "+r.status);return r.json()}).then(d=>{ctrls.forEach((c,j)=>{if(j!==i)c.abort()});return d})))}
+  try{return await Promise.any(QURLS.map((u,i)=>fetch(u,{cache:"no-cache",signal:ctrls[i].signal}).then(r=>{if(!r.ok)throw new Error("status "+r.status);return r.json()}).then(d=>{ctrls.forEach((c,j)=>{if(j!==i)c.abort()});QBASE=new URL(u,location.href).href;return d})))}
   finally{timers.forEach(clearTimeout)}
 }
 const SYNC_API=/(^|\.)warwiki\.org$/.test(HOST)?"/api/rounds-sync":"https://warwiki.org/api/rounds-sync";
@@ -507,6 +516,7 @@ const POOLS={
   due:{label:"Due",f:q=>{const p=S.prog[q.id];return p&&p.n&&p.due<=Date.now()}},
   flagged:{label:"Flagged",f:q=>S.prog[q.id]&&S.prog[q.id].flag},
   boardfav:{label:"Board favorites",f:q=>q.boardFav},
+  images:{label:"Images",f:q=>!!q.image},
   all:{label:"All",f:()=>true}
 };
 function poolList(key){return S.qs.filter(q=>inTopic(q)&&POOLS[key].f(q))}
@@ -623,7 +633,7 @@ function quiz(){
   <div class="ticks" aria-hidden="true">${ticks}</div>
   <div class="${fresh?"case":""}" style="display:flex;flex-direction:column;gap:16px">
   <div class="meta"><span class="chip ${q.field==="oncology"?"onc":""}">${esc(topicLabel(q.topic))}</span><span class="chip ${q.kind==="trial"?"t":""}">${esc(q.trial||KINDS[q.kind]||q.kind)}</span><span class="chip ${yLevel(q)==="c"?"core":""}">${YIELDS[yLevel(q)]}</span>${q.boardFav?'<span class="chip bf">Board favorite</span>':""}</div>
-  <div class="qbody"><div class="qn">${idx+1}.</div><div><div class="stem">${esc(q.stem)}</div><div class="ask">${esc(q.question)}</div></div></div>
+  <div class="qbody"><div class="qn">${idx+1}.</div><div><div class="stem">${esc(q.stem)}</div>${q.image?figHTML(q.image):""}<div class="ask">${esc(q.question)}</div></div></div>
   ${choices}
   ${ans}
   </div>
@@ -632,6 +642,8 @@ function quiz(){
     ${action}
   </div></div>`;
 }
+function imgURL(f){return new URL(f,QBASE).href}
+function figHTML(im){const u=imgURL(im.file);return `<figure class="qimg"><button class="zoom" data-zoom="${esc(u)}" aria-label="Enlarge image"><img src="${esc(u)}" alt="${esc(im.alt||"")}" loading="lazy" decoding="async"></button><figcaption>${im.link?`<a href="${esc(im.link)}" target="_blank" rel="noopener">${esc(im.credit)}</a>`:esc(im.credit)}</figcaption></figure>`}
 function submit(){
   const b=S.block,q=cur();const k=b.pick[q.id];if(k==null)return;
   const ok=k===q.answer;b.done[q.id]=ok;record(q,ok);
@@ -741,6 +753,8 @@ document.addEventListener("click",e=>{
   if(e.target.closest("#logoHome")){if(S.view==="quiz"&&S.block&&!S.block.finished){const b=S.block;if(b.ids.some(id=>b.done[id]!=null)){finish();return}S.block=null}S.view="home";S.sheet=false;render();window.scrollTo(0,0);return}
   const pk=e.target.closest("[data-peek]");if(pk&&pk.classList.contains("hidden-card")){S.peek=S.peek||{};S.peek[pk.dataset.peek]=true;render();return}
   if(e.target.id==="sheetBg"){S.sheet=false;render();return}
+  if(e.target.closest("#zoomBg")){document.getElementById("zoomBg").remove();return}
+  const zb=e.target.closest("[data-zoom]");if(zb){const o=document.createElement("div");o.id="zoomBg";o.setAttribute("role","dialog");o.setAttribute("aria-label","Image, tap to close");o.innerHTML=`<img src="${esc(zb.dataset.zoom)}" alt="">`;document.body.appendChild(o);return}
   const t=e.target.closest("button");if(!t)return;
   if(t.id==="exitBlock"){const b=S.block;if(!b){S.view="home";render();return}if(b.finished){S.view="summary";render();window.scrollTo(0,0);return}const any=b.ids.some(id=>b.done[id]!=null);if(any)finish();else{S.block=null;S.view="home";render();window.scrollTo(0,0)}return}
   if(t.id==="resetProg"){const msg="Reset all progress? This clears every answer, flag and your streak"+(syncCode?" on this device and on every device using your sync code":S.store==="account"?" in your account":"")+". It cannot be undone.";if(confirm(msg))resetProgress();return}
@@ -782,6 +796,7 @@ document.addEventListener("change",e=>{
 });
 document.addEventListener("keydown",e=>{
   if(e.target&&e.target.id==="nIn"&&e.key==="Enter"){e.target.blur();return}
+  if(e.key==="Escape"&&document.getElementById("zoomBg")){document.getElementById("zoomBg").remove();return}
   if(e.key==="Escape"&&S.sheet){S.sheet=false;render();return}
   if(S.view!=="quiz"||!S.block)return;
   if(e.target&&e.target.tagName==="TEXTAREA"){if(e.key==="Enter"&&(e.metaKey||e.ctrlKey)){const b=$("#showCh");if(b)b.click()}return}
