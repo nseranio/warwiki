@@ -55,7 +55,7 @@ function OrgBadge({ org }: { org: string }) {
 function TypeBadge({ type }: { type: string }) {
   const color = TYPE_COLORS[type] ?? '#6b7280';
   return (
-    <span style={{
+    <span className="wk-tint-badge" style={{
       display: 'inline-block',
       fontSize: '0.62rem',
       fontWeight: 600,
@@ -64,6 +64,7 @@ function TypeBadge({ type }: { type: string }) {
       borderRadius: '4px',
       backgroundColor: color + '18',
       color: color,
+      ['--badge' as string]: color,
       border: `1px solid ${color}44`,
       whiteSpace: 'nowrap',
       flexShrink: 0,

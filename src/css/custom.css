@@ -1746,7 +1746,12 @@ a.book-card:visited {
   color: var(--ifm-color-primary);
   font-family: var(--ifm-font-family-monospace);
   margin-top: 0.25rem;
-  opacity: 0.75;
+}
+
+/* Tinted database badges: the saturated label colors fall below 4.5:1 on the
+   dark tinted fill, so dark mode lightens the text toward white. */
+html[data-theme='dark'] .wk-tint-badge {
+  color: color-mix(in srgb, var(--badge) 45%, #fff) !important;
 }
 
 /* Accent color modifiers */

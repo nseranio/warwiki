@@ -54,7 +54,7 @@ const DEFAULT_BADGE_COLOR = '#6b7280';
 
 function SubtleBadge({ label, color }: { label: string; color: string }) {
   return (
-    <span style={{
+    <span className="wk-tint-badge" style={{
       display: 'inline-block',
       fontSize: '0.62rem',
       fontWeight: 600,
@@ -63,6 +63,7 @@ function SubtleBadge({ label, color }: { label: string; color: string }) {
       borderRadius: '4px',
       backgroundColor: color + '18',
       color: color,
+      ['--badge' as string]: color,
       border: `1px solid ${color}44`,
       // Long labels such as "Penile / hypospadias / panurethral" wrap so the
       // badge column does not force the database wider than the page.
