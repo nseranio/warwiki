@@ -15,10 +15,10 @@ describe('video library progressive rendering', () => {
     expect(screen.getAllByRole('button', {name: /^Play:/})).toHaveLength(24);
     fireEvent.click(screen.getByRole('button', {name: 'Show 24 more videos'}));
     expect(screen.getAllByRole('button', {name: /^Play:/})).toHaveLength(48);
-    fireEvent.change(screen.getByRole('searchbox'), {target: {value: 'Operative video 54'}});
+    fireEvent.change(screen.getByLabelText('Search videos or surgeons'), {target: {value: 'Operative video 54'}});
     expect(screen.getAllByRole('button', {name: /^Play:/})).toHaveLength(1);
     expect(screen.getByText('Operative video 54')).toBeInTheDocument();
-    fireEvent.change(screen.getByRole('searchbox'), {target: {value: ''}});
+    fireEvent.change(screen.getByLabelText('Search videos or surgeons'), {target: {value: ''}});
     expect(screen.getAllByRole('button', {name: /^Play:/})).toHaveLength(24);
   });
 });
