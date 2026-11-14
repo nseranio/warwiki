@@ -6,6 +6,11 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## November 14, 2026 — Held facts-only pages published; Rounds highlights and reset
+
+- The three pages held from the October 21 facts-only sweep are live (`c3568aa5`). Intracavernosal Injection Agents took its held copy unchanged; Alpha-Blockers and Urgency Incontinence/OAB had been rewritten by the November coherence sweep, so their commentary cuts were reapplied by hand to the current text. OAB lost its only Farag 2023 citation and was renumbered (surgeon-citation anchors followed, `db792053`). The four blocking claims pass: both AUA ED compounding statements against the local AUA ED 2018 copy (the review attached the AUA marker to each sentence), and the alpha-blocker retention and OAB vaginal-estrogen rows after their second independent check (`reports/audit-v2/sources-local/gate-2026-11-14*`).
+- Rounds: every explanation highlights its key finding (1,961 Codex-chosen phrases, each an exact substring) and the home screen has a Reset progress link that clears answers, flags and streak on every synced device (`8347d5b6`; WHITWIKI `e6136c5`).
+
 ## November 13, 2026 (night) — Owner downloads finished: 98 more WARWIKI trial pages and 17 WHITWIKI trials updated from full texts
 
 - Codex retrieved 250 of the 251 requested sources through the Jefferson library; only Roehrborn 2000 (PLESS retention, Karger) needs document delivery.
