@@ -213,7 +213,7 @@ GUIDE_LOCAL = [  # guideline references (any page) -> the owner's local copies (
     ((_AUA, r"Neurogenic Lower Urinary"), "aua-sufu-nlutd-2021-unabridged.txt"),
     ((_AUA, r"Stress Urinary Incontinence"), "aua-sui-2023-unabridged.txt"),
     ((_AUA, r"Incontinence [Aa]fter Prostate"), "aua-ipt-2024-unabridged.txt"),
-    ((_AUA, r"Recurrent Uncomplicated Urinary Tract"), "aua-rutI-2025-unabridged.txt"),
+    ((_AUA, r"[Rr]ecurrent [Uu]ncomplicated [Uu]rinary [Tt]ract"), "aua-rutI-2025-unabridged.txt"),
     ((r"AUA|SUFU|AUGS", r"Genitourinary Syndrome of Menopause"), "aua-sufu-augs-gsm-2025.txt"),
     ((_AUA, r"Testosterone"), "aua-testosterone-deficiency.txt"),
     ((_AUA, r"Erectile [Dd]ysfunction"), "aua-ed-2018-website.txt"),

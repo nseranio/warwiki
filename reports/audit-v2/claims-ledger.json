@@ -83972,6 +83972,20 @@
 "v1": "ff31420f5ac3c69a",
 "v1_d": "2026-10-05"
 },
+"v2:1f3ea3ccd6d6ceb4dee1": {
+"checks": [
+{
+"access": "full-text",
+"d": "2026-11-14",
+"q": "An estimated 30% to 44% of women will have a second UTI within six months of an initial infection.",
+"run": "gate-2026-11-14-doi",
+"s": "ok",
+"src": "PMID 27035041"
+}
+],
+"d": "2026-11-14",
+"s": "verified-supported"
+},
 "v2:1f3efb78b5cad874838d": {
 "checks": [
 {
@@ -161996,10 +162010,24 @@
 "run": "gate-r2-2026-10-18",
 "s": "ok",
 "src": "https://doi.org/10.1097/JU.0000000000004723"
+},
+{
+"access": "guideline-section",
+"d": "2026-11-14",
+"q": "At the initial presentation for rUTI evaluation, physical examination including an abdominal and detailed pelvic examination should be performed to look for any structural or functional abnormalities.",
+"run": "gate-2026-11-14-doi",
+"s": "error",
+"src": "DOI 10.1097/JU.0000000000004723"
+},
+{
+"d": "2026-11-14",
+"run": "gate-2026-11-14-doi",
+"s": "confirmed-error",
+"src": "The published guideline (doi:10.1097/JU.0000000000004723, pp. 4-5, Statement 1) places the pelvic examination at initial rUTI evaluation in its otherwise health"
 }
 ],
-"d": "2026-10-18",
-"s": "verified-supported"
+"d": "2026-11-14",
+"s": "flagged"
 },
 "v2:3d047bd021d67f509f67": {
 "checks": [
@@ -198021,6 +198049,34 @@
 ],
 "d": "2026-10-19",
 "s": "verified-supported"
+},
+"v2:4a84627c5dc71fca9fd2": {
+"checks": [
+{
+"access": "guideline-section",
+"d": "2026-11-14",
+"q": "",
+"run": "gate-2026-11-14-doi-final2",
+"s": "unverifiable",
+"src": "doi:10.1097/JU.0000000000004723 (2025 update, full published article); https://www.cua.org/system/files/Guideline-Files/rUTI-guideline.pdf (2019 unabridged guid"
+},
+{
+"access": "guideline-section",
+"d": "2026-11-14",
+"q": "Evaluation for incomplete bladder emptying to rule out occult retention can be considered for all patients, but should be performed in any patient with suspicion of incomplete emptying",
+"run": "gate-2026-11-14-doi-final3",
+"s": "error",
+"src": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/aua-rutI-2025-unabridged.txt (AUA/CUA/SUFU 2025 unabridged guideline, p. 19, Statement 1 "
+},
+{
+"d": "2026-11-14",
+"run": "gate-2026-11-14-doi-final3",
+"s": "confirmed-error",
+"src": "The owner-supplied AUA/CUA/SUFU 2025 unabridged guideline, p. 19, calls for evaluation of suspected incomplete emptying without naming PVR. Siddiqui et al., Uro"
+}
+],
+"d": "2026-11-14",
+"s": "flagged"
 },
 "v2:4a851052af687675032d": {
 "checks": [
@@ -252800,6 +252856,36 @@
 "d": "2026-10-19",
 "s": "verified-supported"
 },
+"v2:5fe63edde38bea5c68ca": {
+"checks": [
+{
+"access": "guideline-section",
+"d": "2026-11-14",
+"q": "On the basis of earlier work, the consensus group recommends a minimum catheter duration of 10 to 14 days [statement 37] [33].",
+"run": "gate-2026-11-14-ce",
+"s": "ok",
+"src": "https://www.ncbi.nlm.nih.gov/books/NBK493344/pdf/Bookshelf_NBK493344.pdf; https://link.springer.com/article/10.1007/s00192-025-06413-6"
+},
+{
+"access": "guideline-section",
+"d": "2026-11-14",
+"q": "For women in the postoperative period after the surgical repair of a simple obstetric urinary fistula, short duration of bladder catheterization (7 to 10 days) is recommended as an alternative to longer duration of catheterization",
+"run": "gate-2026-11-14-doi-final-a",
+"s": "ok",
+"src": "https://www.ncbi.nlm.nih.gov/sites/books/NBK493340/; https://link.springer.com/article/10.1007/s00192-025-06413-6"
+},
+{
+"access": "full-text",
+"d": "2026-11-14",
+"q": "Following obstetric VVF repair, continuous bladder drainage via catheter lasts for a minimum of 10\u201314 days.",
+"run": "gate-2026-11-14-doi-final-b",
+"s": "ok",
+"src": "https://iris.who.int/bitstream/handle/10665/259818/9789241550192-eng.pdf?sequence=1; https://link.springer.com/article/10.1007/s00192-025-06413-6"
+}
+],
+"d": "2026-11-14",
+"s": "verified-supported"
+},
 "v2:5fe7583d874fe65a00da": {
 "d": "2026-10-06",
 "q": "Insulin dose reductions also include NPH insulin to one-half of the dose or long-acting basal insulin analogs to 75\u201380% of the dose or adjustment of insulin pump (if not in automated mode) basal rates based on the type of diabetes and clinical judgment.",
@@ -258215,9 +258301,33 @@
 "run": "gate-r2-2026-10-18",
 "s": "unverifiable",
 "src": "https://doi.org/10.1097/JU.0000000000004723"
+},
+{
+"access": "guideline-section",
+"d": "2026-11-14",
+"q": "",
+"run": "gate-2026-11-14-doi",
+"s": "unverifiable",
+"src": "DOI 10.1097/JU.0000000000004723"
+},
+{
+"access": "full-text",
+"d": "2026-11-14",
+"q": "",
+"run": "gate-2026-11-14-doi-final-a",
+"s": "unverifiable",
+"src": "doi:10.1097/JU.0000000000004723 (published article full text: https://www.binasss.sa.cr/ene26/36.pdf)"
+},
+{
+"access": "full-text",
+"d": "2026-11-14",
+"q": "",
+"run": "gate-2026-11-14-doi-final-b",
+"s": "unverifiable",
+"src": "https://www.binasss.sa.cr/ene26/36.pdf (doi:10.1097/JU.0000000000004723); https://www.cua.org/system/files/Guideline-Files/rUTI-guideline.pdf (2019 version)"
 }
 ],
-"d": "2026-10-18",
+"d": "2026-11-14",
 "s": "source-needed"
 },
 "v2:620b1d7d427f66ed28ed": {
@@ -513901,6 +514011,28 @@
 "v1": "8d49df300edc7003",
 "v1_d": "2026-10-04"
 },
+"v2:c2e1ce3f91fb2e070e24": {
+"checks": [
+{
+"access": "full-text",
+"d": "2026-11-14",
+"q": "Clinicians should obtain a complete patient history and perform a pelvic examination in women presenting with rUTIs. (Clinical Principle)",
+"run": "gate-2026-11-14-doi-final-a",
+"s": "ok",
+"src": "doi:10.1097/JU.0000000000004723 (published article full text: https://www.binasss.sa.cr/ene26/36.pdf)"
+},
+{
+"access": "full-text",
+"d": "2026-11-14",
+"q": "Clinicians should obtain a complete patient history and perform a pelvic examination in women presenting with rUTIs. (Clinical Principle)",
+"run": "gate-2026-11-14-doi-final-b",
+"s": "ok",
+"src": "https://www.binasss.sa.cr/ene26/36.pdf (doi:10.1097/JU.0000000000004723)"
+}
+],
+"d": "2026-11-14",
+"s": "verified-supported"
+},
 "v2:c2e2c1c52541352f2afb": {
 "checks": [
 {
@@ -529926,6 +530058,20 @@
 "src": "https://pubmed.ncbi.nlm.nih.gov/33652027/",
 "v1": "26ee5032a3929fde",
 "v1_d": "2026-10-04"
+},
+"v2:c918773e7a2b2f8a67e7": {
+"checks": [
+{
+"access": "full-text",
+"d": "2026-11-14",
+"q": "Over 50% of adult women experience at least 1 urinary tract infection (UTI) in their lifetime, and almost one-quarter of them will experience a recurrent UTI (rUTI).",
+"run": "gate-2026-11-14-doi",
+"s": "ok",
+"src": "PMID 40095960; PMID 27035041"
+}
+],
+"d": "2026-11-14",
+"s": "verified-supported"
 },
 "v2:c91a367e189f5dac022d": {
 "checks": [
@@ -593460,6 +593606,28 @@
 "src": "Falcone et al. (PMID 28940910; BJU International abstract) reports 247 patients, 328 implants, mean 20-month follow-up, estimated five-year device survival of 7",
 "v1": "b7bfba022e559199",
 "v1_d": "2026-10-04"
+},
+"v2:e1f653cd56d9f1d17730": {
+"checks": [
+{
+"access": "guideline-section",
+"d": "2026-11-14",
+"q": "p. 19, Statement 1 discussion: \u201ccan be considered for all patients, but should be performed in any patient with suspicion of incomplete emptying, such as those with significant anterior vaginal wall prolapse, underlying neurologic disease, diabetes, or a subjective sensation of incomplete emptying.\u201d",
+"run": "gate-2026-11-14-doi-final3-a",
+"s": "ok",
+"src": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/aua-rutI-2025-unabridged.txt"
+},
+{
+"access": "guideline-section",
+"d": "2026-11-14",
+"q": "can be considered for all patients, but should be performed in any patient with suspicion of incomplete emptying, such as those with significant anterior vaginal wall prolapse, underlying neurologic disease, diabetes, or a subjective sensation of incomplete emptying.",
+"run": "gate-2026-11-14-doi-final3-b",
+"s": "ok",
+"src": "doi:10.1097/JU.0000000000004723 (owner-supplied guideline full text, p. 19, Statement 1 discussion)"
+}
+],
+"d": "2026-11-14",
+"s": "verified-supported"
 },
 "v2:e1f69131b1db6b69c2fe": {
 "d": "2026-10-06",
