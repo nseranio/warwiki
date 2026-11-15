@@ -792,10 +792,18 @@ const ARROW='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-w
 function slider(off){
   return `<div class="confBtns" role="group" aria-label="Submit your answer with how sure you are">${CONF.map((l,k)=>`<button class="cb c${k}" data-conf="${k}" ${off?"disabled":""} aria-label="Submit: ${l}"><span class="bars" aria-hidden="true">${[0,1,2].map(i=>`<i${i<=k?' class="on"':""}></i>`).join("")}</span><span class="cl">${l}<kbd>${k+1}</kbd></span></button>`).join("")}</div>`;
 }
+/* picking a choice updates the page in place (no redraw), so nothing moves */
+function pickInPlace(q){
+  const b=S.block,k=b.pick[q.id];
+  document.querySelectorAll(".choices [data-ch]").forEach(el=>el.setAttribute("aria-pressed",String(+el.dataset.ch===k)));
+  document.querySelectorAll(".confBtns [data-conf]").forEach(el=>el.disabled=false);
+  const n=document.querySelector(".confNote");if(n)n.textContent="Submit with how sure you are";
+  if(!document.querySelector(".confBtns"))render();
+}
 function submit(conf){
   const b=S.block,q=cur();const k=b.pick[q.id];if(k==null||b.done[q.id]!=null)return;
   const ok=k===q.answer;b.done[q.id]=ok;b.conf=b.conf||{};if(conf!=null)b.conf[q.id]=conf;record(q,ok,conf,k);
-  if(b.mode==="timed"){if(b.i<b.ids.length-1){b.i++}else{finish();return}}
+  if(b.mode==="timed"){if(b.i<b.ids.length-1){b.i++}else{finish();return}render();window.scrollTo(0,0);return}
   render();
 }
 function finish(){
@@ -979,6 +987,8 @@ function render(){
   if(S.view==="cards")S.view="home";
   const v=$("#view");
   if(!S.qs.length)return;
+  /* keep the reader's place: remember the scroll position and any loaded question image, so a redraw does not jump */
+  const keepY=window.scrollY,oldImg=v.querySelector(".qimg img");
   if(S.view==="home")v.innerHTML=`<div style="display:flex;flex-direction:column;gap:20px">${home()}</div>`;
   else if(S.view==="quiz"){v.innerHTML=`<div style="display:flex;flex-direction:column;gap:14px">${quiz()}</div>`;
     if(!S.block.finished){tick=setInterval(()=>{const c=$("#clock");if(c)c.textContent=clock();const b=S.block;if(b&&b.limit&&!b.finished&&(Date.now()-b.start)/1000>=b.limit)finish()},1000)}}
@@ -992,6 +1002,9 @@ function render(){
   L.innerHTML=S.sheet==="theme"?themeSheet():S.sheet==="sync"?syncSheet():showSheet?sheet():"";
   document.documentElement.classList.toggle("locked",!!showSheet);
   const nb=$("#sbody");if(nb)nb.scrollTop=top;
+  const newImg=v.querySelector(".qimg img");
+  if(oldImg&&newImg&&oldImg.complete&&oldImg.getAttribute("src")===newImg.getAttribute("src"))newImg.replaceWith(oldImg);
+  if(Math.abs(window.scrollY-keepY)>1)window.scrollTo(0,keepY);
 }
 const THEMES=["system","light","dark"];
 document.addEventListener("click",e=>{
@@ -1037,7 +1050,7 @@ document.addEventListener("click",e=>{
   if(t.dataset.open){const l=t.dataset.open==="find"?findList():mineList();if(l)startBrowse(l,+t.dataset.k,t.dataset.open);return}
   if(t.id==="showAll"){S.showAll=!S.showAll;render();return}
   const b=S.block;
-  if(t.dataset.ch!=null&&b){const q=cur();if(b.done[q.id]!=null)return;b.pick[q.id]=+t.dataset.ch;render();return}
+  if(t.dataset.ch!=null&&b){const q=cur();if(b.done[q.id]!=null)return;b.pick[q.id]=+t.dataset.ch;pickInPlace(q);return}
   if(t.id==="showCh"){const r=$("#recallIn");b.recallText=b.recallText||{};if(r&&r.value.trim())b.recallText[cur().id]=r.value.trim();b.shown[cur().id]=true;render();return}
   if(t.dataset.conf!=null&&b){submit(+t.dataset.conf);return}
   if(t.dataset.jump!=null&&b){b.i=+t.dataset.jump;render();window.scrollTo(0,0);return}
