@@ -15,13 +15,24 @@
 const fs = require('fs');
 const path = require('path');
 
+// URL segment -> homepage group. Evaluation, Clinical Conditions and Special
+// Populations are shown together as Clinical Care (pilot menu).
+const GROUP = {
+  foundations: 'foundations',
+  'clinical-care': 'clinical-care',
+  evaluation: 'clinical-care',
+  'clinical-conditions': 'clinical-care',
+  'special-populations': 'clinical-care',
+  'surgical-techniques': 'surgical-techniques',
+  'clinical-evidence': 'clinical-evidence',
+};
 const SECTIONS = {
   foundations: 'Foundations',
-  evaluation: 'Evaluation',
-  'clinical-conditions': 'Clinical Conditions',
+  'clinical-care': 'Clinical Care',
   'surgical-techniques': 'Treatment Atlas',
-  'special-populations': 'Special Populations',
+  'clinical-evidence': 'Clinical Evidence',
 };
+const groupOf = (permalink) => GROUP[permalink.split('/')[2]];
 
 const RECENT_COUNT = 4;
 
@@ -37,7 +48,7 @@ function countVideos(siteDir) {
 function countSections(docs) {
   const counts = {};
   for (const d of docs) {
-    const key = d.permalink.split('/')[2];
+    const key = groupOf(d.permalink);
     if (SECTIONS[key] && !d.unlisted) counts[key] = (counts[key] || 0) + 1;
   }
   return counts;
@@ -47,7 +58,7 @@ function pickRecent(docs) {
   const candidates = docs
     .filter((d) => d.lastUpdatedAt && !d.frontMatter?.hide_title && !d.unlisted)
     .map((d) => {
-      const key = d.permalink.split('/')[2];
+      const key = groupOf(d.permalink);
       return { title: d.title, permalink: d.permalink, section: SECTIONS[key], sectionKey: key, updatedAt: d.lastUpdatedAt };
     })
     .filter((d) => d.section)

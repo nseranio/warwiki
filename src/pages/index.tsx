@@ -109,20 +109,12 @@ const SECTION_CARDS: SectionCard[] = [
     cta: 'Explore Foundations',
   },
   {
-    key: 'evaluation',
-    accent: 'evaluation',
-    title: 'Evaluation',
-    to: '/docs/evaluation',
-    description: 'History, examination, imaging, urodynamics and laboratory workup before reconstruction.',
-    cta: 'Explore Evaluation',
-  },
-  {
-    key: 'clinical-conditions',
+    key: 'clinical-care',
     accent: 'conditions',
-    title: 'Clinical Conditions',
-    to: '/docs/clinical-conditions',
-    description: 'Storage and voiding disorders, pelvic support, neurogenic bladder, upper tract, fistula, genital and pelvic pain.',
-    cta: 'Explore Conditions',
+    title: 'Clinical Care',
+    to: '/docs/clinical-care',
+    description: 'Evaluation and workup, storage, voiding and pelvic support disorders, trauma and emergencies, and care across populations.',
+    cta: 'Explore Clinical Care',
   },
   {
     key: 'surgical-techniques',
@@ -133,12 +125,12 @@ const SECTION_CARDS: SectionCard[] = [
     cta: 'Open the Atlas',
   },
   {
-    key: 'special-populations',
-    accent: 'populations',
-    title: 'Special Populations',
-    to: '/docs/special-populations',
-    description: 'Trauma and emergencies, gender-affirming care, cancer survivorship, women’s health and lifelong care.',
-    cta: 'Explore Populations',
+    key: 'clinical-evidence',
+    accent: 'evaluation',
+    title: 'Clinical Evidence',
+    to: '/docs/clinical-evidence',
+    description: 'The trials behind each decision, with their numbers, verdicts and how they changed practice.',
+    cta: 'See the evidence',
   },
 ];
 
@@ -181,6 +173,12 @@ function HomepageSections() {
             <span className={styles.sectionCta}>{card.cta} →</span>
           </Link>
         ))}
+        <Link to="pathname:///rounds" className={styles.sectionCard} data-accent="rounds">
+          <span className={styles.sectionCount}>2,000+ questions</span>
+          <span className={styles.sectionTitle}>Rounds</span>
+          <span className={styles.sectionDesc}>Board-style questions written from these pages, each with an explanation, a pearl and its source.</span>
+          <span className={styles.sectionCta}>Start Rounds →</span>
+        </Link>
         <Link to="/video-library" className={styles.sectionCard} data-accent="video">
           <span className={styles.sectionCount}>{videos > 0 ? `${videos.toLocaleString()} videos` : '\u00a0'}</span>
           <span className={styles.sectionTitle}>Video Library</span>

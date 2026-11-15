@@ -6,6 +6,7 @@ import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import { useLocation } from '@docusaurus/router';
 import ArticleListener from '@site/src/components/ArticleListener';
 import CitationTooltips from '@site/src/components/CitationTooltips';
+import {PracticeChip, PracticeCard} from '@site/src/components/PracticeQuestions';
 
 type Props = WrapperProps<typeof ContentType>;
 
@@ -26,9 +27,11 @@ export default function ContentWrapper(props: Props): React.ReactElement {
   return (
     <>
       {showListener && <ArticleListener />}
+      {showListener && <PracticeChip />}
       <div className={landingClass}>
         <Content {...props} />
       </div>
+      {showListener && <PracticeCard />}
       <CitationTooltips />
     </>
   );

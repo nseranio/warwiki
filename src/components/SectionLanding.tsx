@@ -60,7 +60,11 @@ export default function SectionLanding({cards = {}}: {cards?: Record<string, Rea
   const here = norm(useLocation().pathname);
   if (!sidebar) return null;
   const entries = Object.entries(cards).map(([href, desc]) => [norm(href), desc] as const);
-  const items = sidebar.items.filter(item =>
+  // A group's landing page (the link of a top-level category, as in Clinical Care)
+  // lists that group's contents; a section landing lists the whole sidebar.
+  const group = sidebar.items.find(item => item.type === 'category' && item.href && norm(item.href) === here);
+  const scope = group && group.type === 'category' ? group.items : sidebar.items;
+  const items = scope.filter(item =>
     !hidden(item) && !(item.type === 'link' && (norm(item.href) === here || item.docId?.endsWith('/index'))));
   return (
     <div className="wk-sl">

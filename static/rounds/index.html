@@ -14,7 +14,7 @@
 <meta name="apple-mobile-web-app-title" content="Rounds">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100,400;100,500;100,600;112,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Archivo:wdth,wght@100,400;100,500;100,600;112,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap">
 </head>
 <body>
 <style>
@@ -24,9 +24,9 @@
   --accent:#3E7C78; --accentInk:#FFFFFF; --accentSoft:#DCEBEA; --pearl:#C77A0A; --keyBg:rgba(199,122,10,.15); --ring:#D2DADB; --logo:#2E5E59; --logoTrack:#D2DADB;
   --ok:#3B6D11; --okSoft:#E7EFDB; --bad:#A32D2D; --badSoft:#F6E1DF; --warn:#946200; --warnSoft:#F4EAD3; --onc:#ECE4F3; --oncInk:#5E3A8C;
   --shadow:0 1px 2px rgba(27,26,23,.05); --glow:0 0 0 3px rgba(199,122,10,.18);
-  --sans:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--word:"Archivo",-apple-system,BlinkMacSystemFont,sans-serif;
   --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
-  --mono:"Archivo",-apple-system,BlinkMacSystemFont,sans-serif;
+  --mono:"Inter",-apple-system,BlinkMacSystemFont,sans-serif;
   --ease:cubic-bezier(.2,.8,.2,1);
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
@@ -228,7 +228,7 @@ html.locked,html.locked body{overflow:hidden}
 
 /* ---- booklet layer (overrides above) ---- */
 body{font-family:var(--sans)}
-h1.logo{display:flex;align-items:center;font:700 36px/1 var(--sans);font-stretch:112%;letter-spacing:.11em;color:var(--ink);margin:0}
+h1.logo{display:flex;align-items:center;font:700 36px/1 var(--word);font-stretch:112%;letter-spacing:.11em;color:var(--ink);margin:0}
 h1.logo svg{width:.92em;height:.92em;margin:0 .07em 0 .03em}
 @media (max-width:520px){h1.logo{font-size:30px}}
 .panel{border-radius:8px;box-shadow:var(--shadow);background:var(--panel)}
@@ -449,8 +449,40 @@ h1.logo{cursor:pointer}
   .sheet{top:7vh;bottom:auto;max-height:86vh;max-width:680px;border-radius:12px;box-shadow:0 24px 60px -12px rgba(0,0,0,.35)}
   .sfoot{border-radius:0 0 12px 12px}
 }
+
+/* ---- site bar: the WARWIKI/WHITWIKI navbar, so Rounds reads as part of the site ---- */
+.siteBar{position:sticky;top:0;z-index:20;background:var(--panel);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.sbIn{max-width:1180px;margin:0 auto;height:60px;display:flex;align-items:center;gap:18px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.sbTitle{font:700 17px/1 var(--sans);letter-spacing:-.02em;color:var(--accent);text-decoration:none;flex:none}
+.sbNav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;min-width:0}
+.sbNav::-webkit-scrollbar{display:none}
+.sbNav a{font:500 13px/1 var(--sans);color:var(--ink2);text-decoration:none;padding:8px 9px;border-radius:6px;white-space:nowrap}
+.sbNav a:hover{color:var(--accent);background:var(--accentSoft)}
+.sbNav a[aria-current="page"]{color:var(--accent);font-weight:600;background:var(--accentSoft);box-shadow:inset 0 -2px 0 var(--accent)}
+.sbBack{margin-left:auto;font:600 13px/1.2 var(--sans);color:var(--accent);text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.sbBack:hover{text-decoration:underline}
+body.hasBar .homeLink{display:none}
+/* during questions the bar shrinks to the site name and the way back */
+body.inQuiz .sbNav{display:none}
+body.inQuiz .sbIn{height:48px}
+@media (max-width:760px){
+  .sbIn{height:auto;flex-wrap:wrap;gap:4px 12px;padding-top:10px;padding-bottom:6px}
+  .sbNav{order:3;flex-basis:100%;margin:0 -9px;flex-wrap:wrap;overflow:visible}
+  .sbNav a{padding:7px 9px}
+  body.inQuiz .sbIn{padding-bottom:10px}
+}
+.fromPage{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.fromPage .lab{margin-bottom:4px}
+.fromPage b{font:600 16px/1.3 var(--sans)}
 </style>
 
+<header class="siteBar" id="siteBar" hidden>
+  <div class="sbIn">
+    <a class="sbTitle" id="sbTitle" href="/">WARWIKI</a>
+    <nav class="sbNav" id="sbNav" aria-label="Site"></nav>
+    <a class="sbBack" id="sbBack" hidden></a>
+  </div>
+</header>
 <div class="wrap" id="app">
   <div class="top">
     <div class="brand">
@@ -496,6 +528,7 @@ const THEME_NAME={system:"Match device",light:"Light",dark:"Dark"};
 let theme=LS.get("rounds-theme","system");
 const P=(bg,panel,ink,ink2,line,soft,accent,accentInk,accentSoft,pearl,ok,okSoft,bad,badSoft)=>({bg,panel,ink,ink2,line,soft,accent,accentInk,accentSoft,pearl,ring:line,ok,okSoft,bad,badSoft});
 const PALETTES={
+  warwiki:{name:"WARWIKI blue",L:P("#F7F9FC","#FFFFFF","#111827","#4B5767","#DDE3ED","#EEF2F8","#185FA5","#FFFFFF","#EBF3FB","#C77A0A","#2F6B4A","#E0EEE6","#A63A32","#F5E2DF"),D:P("#0E1520","#141D2B","#E4ECF5","#8FA3B9","#1C2A3E","#1A2536","#4A9FE0","#0A1018","#16273B","#EF9F27","#8FC2A4","#1D2E25","#E57A6E","#3A1F1C")},
   slate:{name:"Slate and eucalyptus",L:P("#F2F4F4","#FBFCFC","#1A2224","#5E6A6D","#D2DADB","#E6ECEC","#3E7C78","#FFFFFF","#DCEBEA","#C77A0A","#2F6B4A","#E0EEE6","#A63A32","#F5E2DF"),D:P("#141B1D","#1A2326","#E5ECED","#94A3A6","#2A3639","#1F2A2D","#7CC3BC","#0F1A1B","#1E3335","#EF9F27","#8FC2A4","#1D2E25","#E57A6E","#3A1F1C")},
   slatePure:{name:"Slate, all eucalyptus",L:P("#F2F4F4","#FBFCFC","#1A2224","#5E6A6D","#D2DADB","#E6ECEC","#3E7C78","#FFFFFF","#DCEBEA","#3E7C78","#2F6B4A","#E0EEE6","#A63A32","#F5E2DF"),D:P("#141B1D","#1A2326","#E5ECED","#94A3A6","#2A3639","#1F2A2D","#7CC3BC","#0F1A1B","#1E3335","#7CC3BC","#8FC2A4","#1D2E25","#E57A6E","#3A1F1C")},
   sage:{name:"Graphite, sage and amber",L:P("#F4F5F2","#FBFCFA","#1E2321","#626A66","#D5DBD7","#E8ECE9","#4F7A64","#FFFFFF","#E1ECE5","#C77A0A","#2F6B4A","#E1EEE6","#A63A32","#F5E2DF"),D:P("#171B1A","#1D2321","#E7ECE9","#9AA4A0","#2E3734","#222927","#8FC2A4","#141A18","#22322B","#EF9F27","#8FC2A4","#1F2D26","#E57A6E","#3A1F1C")},
@@ -503,7 +536,8 @@ const PALETTES={
   stone:{name:"Stone and ochre",L:P("#EFEBE2","#F8F5EF","#2A2620","#736B5E","#D6CEBF","#E6E0D4","#A8741A","#FFFFFF","#EADBB8","#A8741A","#4A6B2A","#E5ECDA","#A32D2D","#F4E0DC"),D:P("#24211C","#2B2822","#EDE7DB","#ABA292","#3D382F","#302C25","#D9A247","#24211C","#3B3120","#D9A247","#A9C77F","#2A3220","#E57A6E","#3A1F1C")},
   copper:{name:"Charcoal and copper",L:P("#F7F5F1","#FCFBF9","#1C1B1A","#6A6560","#DCD6CE","#ECE8E2","#B0562C","#FFFFFF","#F4E0D4","#B0562C","#3B6D11","#E7EFDB","#A32D2D","#F6E1DF"),D:P("#191817","#201F1D","#F0ECE6","#A6A097","#373330","#282624","#E58A5C","#191817","#3A251B","#E58A5C","#97C459","#253019","#E57A6E","#3A1F1C")}};
 const LOGO={slate:{L:["#2E5E59","#D2DADB"],D:["#7CC3BC","#2A3639"]}};
-let palette=LS.get("rounds-palette","slate");if(!PALETTES[palette])palette="slate";
+const SITE_PALETTE=/warwiki|localhost|127\.0\.0\.1/.test(location.hostname)?"warwiki":"slate";
+let palette=LS.get("rounds-palette",SITE_PALETTE);if(!PALETTES[palette])palette="slate";
 const mq=window.matchMedia?window.matchMedia("(prefers-color-scheme: dark)"):null;
 const WIDEQ=window.matchMedia?window.matchMedia("(min-width:1080px)"):null;
 function wide(){return !!(WIDEQ&&WIDEQ.matches)}
@@ -578,6 +612,20 @@ function syncPush(now){
 }
 document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible"&&syncCode)syncPull()});
 if(ONSITE){const h=document.getElementById("homeLink");if(h){h.hidden=false;h.href=HOME.url;h.textContent="‹ "+HOME.name}}
+/* ---------- site bar + "questions from this page" entry ---------- */
+const SITE_NAV=HOST.includes("whitwiki")
+  ?[["Foundations","/docs/foundations"],["Cancers","/docs/cancers"],["Treatment Atlas","/docs/treatment-atlas"],["Clinical Evidence","/docs/clinical-evidence"],["Rounds","/rounds"],["Library","/docs/resources"]]
+  :[["Foundations","/docs/foundations"],["Clinical Care","/docs/clinical-care"],["Treatment Atlas","/docs/surgical-techniques"],["Clinical Evidence","/docs/clinical-evidence"],["Rounds","/rounds"],["Library","/docs/resources"]];
+const FROM=(()=>{try{const u=new URLSearchParams(location.search);const page=u.get("page");if(!page)return null;
+  const from=u.get("from")||"";return {page,from:/^\/docs\//.test(from)?from:"",title:(u.get("title")||"the article").slice(0,120),started:false}}catch(e){return null}})();
+if(ONSITE){
+  const bar=document.getElementById("siteBar");bar.hidden=false;document.body.classList.add("hasBar");
+  const t=document.getElementById("sbTitle");t.textContent=HOME.name;t.href=HOME.url;
+  document.getElementById("sbNav").innerHTML=SITE_NAV.map(([l,u])=>`<a href="${u}"${l==="Rounds"?' aria-current="page"':""}>${l}</a>`).join("");
+  if(FROM&&FROM.from){const b=document.getElementById("sbBack");b.hidden=false;b.href=FROM.from;b.textContent="‹ Back to "+FROM.title}
+}
+function fromPageQs(){return FROM?S.qs.filter(q=>q.source&&q.source.file===FROM.page):[]}
+function startFromPage(){const ids=shuffle(fromPageQs().map(q=>q.id));if(ids.length){FROM.started=true;startIds(ids,"tutor",false)}}
 
 /* ---------- data ---------- */
 const QCACHE={db:null,
@@ -733,7 +781,9 @@ function home(){
   <p class="note">${esc(storeNote)} ${S.qs.length} questions, each checked against its source page or guideline${S.meta&&S.meta.built?` (bank built ${esc(S.meta.built)})`:""}.</p>
   ${Object.keys(S.prog).some(k=>k[0]!=="_")||days().at?`<button class="resetBtn" id="resetProg">Reset progress</button>`:""}`;
   if(W)return `${field}<div class="hBand">${hero}${todayPanel()}</div><div class="hGrid"><div class="hMain">${opts}</div><div class="hSide">${search}${ready}${mine}${progress}${tail}</div></div>`;
-  return `${field}${hero}${todayPanel()}${search}${ready}${mine}${opts}${progress}${tail}`;
+  const fromN=FROM?fromPageQs().length:0;
+  const fromPanel=fromN?`<div class="panel fromPage"><div style="min-width:0"><div class="lab">From the page you were reading</div><b>${esc(FROM.title)}</b><div class="note">${fromN} questions written from this page</div></div><div style="display:flex;gap:8px;flex-wrap:wrap">${FROM.from?`<a class="btn ghost" href="${esc(FROM.from)}">Back to the page</a>`:""}<button class="btn" id="startFromPage">Practice ${fromN}</button></div></div>`:"";
+  return `${field}${fromPanel}${hero}${todayPanel()}${search}${ready}${mine}${opts}${progress}${tail}`;
 }
 
 /* ---------- block ---------- */
@@ -1080,6 +1130,8 @@ function themeSheet(){
 /* ---------- render + events ---------- */
 function render(){
   clearInterval(tick);
+  document.body.classList.toggle("inQuiz",S.view==="quiz");
+  if(FROM&&!FROM.started&&S.qs.length&&fromPageQs().length){FROM.started=true;setTimeout(startFromPage,0)}
   if(S.view==="cards")S.view="home";
   const v=$("#view");
   if(!S.qs.length)return;
@@ -1134,6 +1186,7 @@ document.addEventListener("click",e=>{
   if(t.dataset.set){let v=t.dataset.v;if(v==="true")v=true;else if(v==="false")v=false;else if(/^\d+$/.test(v))v=+v;S.set[t.dataset.set]=v;LS.put("rounds-set",S.set);render();return}
   if(t.id==="start"){startBlock();return}
   if(t.id==="startToday"){startIds(todayIds(),"tutor",false);return}
+  if(t.id==="startFromPage"){startFromPage();return}
   if(t.id==="openFind"){S.view="find";render();window.scrollTo(0,0);const i=$("#findIn");if(i)i.focus();return}
   if(t.id==="backReady"){S.block=null;S.view="ready";render();window.scrollTo(0,0);return}
   if(t.id==="openReady"){S.view="ready";render();window.scrollTo(0,0);return}

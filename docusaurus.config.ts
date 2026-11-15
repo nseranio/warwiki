@@ -122,6 +122,14 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          // Clinical Care groups use each folder's index as the category link, so
+          // drop that index from the folder's generated items (it would repeat).
+          sidebarItemsGenerator: async ({defaultSidebarItemsGenerator, ...args}) => {
+            const items = await defaultSidebarItemsGenerator(args);
+            const grouped = /^(02-evaluation|03-clinical-conditions|05-special-populations\/05[a-f]-[a-z-]+)$/;
+            if (!grouped.test(args.item.dirName)) return items;
+            return items.filter((i) => !(i.type === 'doc' && /(^|\/)index$/.test(i.id) && i.id.split('/').length <= 3));
+          },
           editUrl: 'https://github.com/nseranio/warwiki/tree/main/',
           showLastUpdateTime: true,
           showLastUpdateAuthor: false,
@@ -169,15 +177,9 @@ const config: Config = {
         },
         {
           type: 'docSidebar',
-          sidebarId: 'evaluationSidebar',
+          sidebarId: 'clinicalCareSidebar',
           position: 'left',
-          label: 'Evaluation',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'clinicalSidebar',
-          position: 'left',
-          label: 'Clinical Conditions',
+          label: 'Clinical Care',
         },
         {
           type: 'docSidebar',
@@ -187,17 +189,22 @@ const config: Config = {
         },
         {
           type: 'docSidebar',
-          sidebarId: 'populationsSidebar',
+          sidebarId: 'evidenceSidebar',
           position: 'left',
-          label: 'Special Populations',
+          label: 'Clinical Evidence',
+        },
+        {
+          to: 'pathname:///rounds',
+          position: 'left',
+          label: 'Rounds',
+          className: 'navbar-rounds-link',
         },
         {
           position: 'left',
           label: 'Library',
           items: [
-            {to: '/docs/clinical-evidence', label: 'Clinical Evidence'},
             {to: '/video-library', label: 'Video Library'},
-            {to: 'pathname:///rounds', label: 'Question Bank'},
+            {to: '/docs/foundations/tools', label: 'Instruments & Devices'},
             {to: '/docs/resources', label: 'Resources'},
             {to: '/docs/roots', label: 'History'},
           ],
