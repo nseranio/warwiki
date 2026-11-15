@@ -169,7 +169,7 @@ export default function SectionLanding({cards = {}, sections = false}: {cards?: 
               <h2 id={`hub-${id}`} className="wk-sl-section-title">{g.href ? <Link to={g.href}>{g.label}</Link> : g.label}</h2>
               {desc && <p className="wk-sl-section-desc">{desc}</p>}
               <div className="wk-sl">
-                {childCards(g).map(c => <Card key={c.label} item={c} entries={entries} here={here} level={3} />)}
+                {childCards(g).map((c, i) => <Card key={'label' in c ? c.label : i} item={c} entries={entries} here={here} level={3} />)}
               </div>
             </section>
           );
@@ -179,7 +179,7 @@ export default function SectionLanding({cards = {}, sections = false}: {cards?: 
   }
   return (
     <div className="wk-sl">
-      {items.map(item => <Card key={'href' in item && item.href ? item.href : item.label} item={item} entries={entries} here={here} level={2} />)}
+      {items.map(item => <Card key={'href' in item && item.href ? item.href : 'label' in item ? item.label : String(item.type)} item={item} entries={entries} here={here} level={2} />)}
     </div>
   );
 }

@@ -3991,10 +3991,13 @@ html[data-section='populations'] .wk-landing:not(.wk-landing--root) .markdown > 
 .wk-ev-trial-facts + p {font-size: .85rem;}
 
 /* Clinical Care hub: one section per group, every page listed (pilot) */
-.wk-sl-jump {position: sticky; top: var(--ifm-navbar-height); z-index: 3; display: flex; gap: .5rem; margin: 1.25rem -.5rem .5rem; padding: .6rem .5rem; background: var(--ifm-background-color); border-bottom: 1px solid var(--warwiki-border); overflow-x: auto; scrollbar-width: none; transition: top .2s ease;}
+.wk-sl-jump {position: sticky; top: var(--ifm-navbar-height); z-index: 3; display: flex; gap: .5rem; margin: 1.25rem -.5rem .5rem; padding: .6rem .5rem; background: var(--warwiki-white); border-bottom: 1px solid var(--warwiki-border); overflow-x: auto; scrollbar-width: none; transition: top .2s ease;}
 .wk-sl-jump::-webkit-scrollbar {display: none;}
 html:has(.navbar[class*='navbarHidden']) .wk-sl-jump {top: 0;}
-.wk-sl-jump a {flex: none; padding: .45rem .9rem; border: 1px solid var(--warwiki-border); border-radius: 999px; font-size: .875rem; font-weight: 500; color: var(--warwiki-text-muted); background: var(--ifm-background-color); text-decoration: none; white-space: nowrap;}
+[data-theme='dark'] .wk-sl-jump {background: #0D1521;}
+/* phones: the article has no card, so the row takes the page color */
+@media (max-width: 996px) {.wk-sl-jump, [data-theme='dark'] .wk-sl-jump {background: var(--warwiki-bg);}}
+.wk-sl-jump a {flex: none; padding: .45rem .9rem; border: 1px solid var(--warwiki-border); border-radius: 999px; font-size: .875rem; font-weight: 500; color: var(--warwiki-text-muted); background: transparent; text-decoration: none; white-space: nowrap;}
 .wk-sl-jump a:hover {color: var(--ifm-color-primary); border-color: var(--ifm-color-primary); text-decoration: none;}
 .wk-sl-jump a[aria-current='true'] {color: #fff; background: var(--ifm-color-primary); border-color: var(--ifm-color-primary);}
 [data-theme='dark'] .wk-sl-jump a[aria-current='true'] {color: #0A1018;}
