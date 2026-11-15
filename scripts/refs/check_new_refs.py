@@ -24,7 +24,7 @@ import xml.etree.ElementTree as ET
 
 UA = {"User-Agent": "WARWIKI-refcheck/1.0 (mailto:warwikihq@gmail.com)"}
 REF_LINE = re.compile(r'^\+\s*(?:\d+\.\s*)?<a id="ref[^"]*"></a>')
-DOI = re.compile(r"(?:doi\.org/|doi:\s*\[?)(10\.\d{4,9}/[^\s>\]\"'<)]+)", re.I)
+DOI = re.compile(r"(?:doi\.org/|doi:\s*\[?)(10\.\d{4,9}/(?:[^\s>\]\"'<()]|\([^\s()<>]*\))+)", re.I)  # balanced parentheses allowed (e.g. S0022-5347(05)64074-8)
 PMID = re.compile(r"(?:pubmed\.ncbi\.nlm\.nih\.gov/|PMID:?\s*\[?)(\d{5,9})", re.I)
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
 
