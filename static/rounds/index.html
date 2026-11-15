@@ -755,7 +755,7 @@ function quiz(){
       const st=b.done[id]==null?"not answered":reviewed?(b.done[id]?"correct":"incorrect"):"answered";
       return `<button data-jump="${k}" class="${c.trim()}" aria-label="Question ${k+1}, ${st}"${k===idx?' aria-current="step"':""}>${k+1}</button>`}).join("");
     const nDone=b.ids.filter(id=>b.done[id]!=null).length;
-    const keys=`<div class="keys"><span><kbd>A</kbd>to <kbd>E</kbd>choose</span><span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd>submit: guessed, unsure, sure</span><span><kbd>Enter</kbd>next</span></div>`;
+    const keys=`<div class="keys"><span><kbd>A</kbd>to <kbd>E</kbd>choose</span><span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd>submit: guessed, fairly sure, knew it</span><span><kbd>Enter</kbd>next</span></div>`;
     const nav=b.browse?`<div class="panel">${keys}</div>`:`<div class="panel navP"><div class="navH"><span class="lab">${b.finished?"Review":b.mode==="timed"?"Timed block":"Tutor block"}</span><span class="note">${nDone} of ${b.ids.length} answered</span></div><div class="navGrid" role="group" aria-label="Go to question">${tiles}</div>${keys}</div>`;
     return `
   <div class="qbar"><button class="exitBtn" id="exitBlock">‹ ${b.browse?"Back":b.finished?"Summary":"Exit"}</button><div class="lab">Question ${idx+1} of ${b.ids.length}</div><div class="clock" id="clock">${b.finished?"Review":clock()}</div></div>
@@ -787,7 +787,7 @@ function quiz(){
 }
 function imgURL(f){return new URL(f,QBASE).href}
 function figHTML(im){const u=imgURL(im.file);return `<figure class="qimg"><button class="zoom" data-zoom="${esc(u)}" aria-label="Enlarge image"><img src="${esc(u)}" alt="${esc(im.alt||"")}" loading="lazy" decoding="async"></button><figcaption>${im.link?`<a href="${esc(im.link)}" target="_blank" rel="noopener">${esc(im.credit)}</a>`:esc(im.credit)}</figcaption></figure>`}
-const CONF=["Guessed","Unsure","Sure"];
+const CONF=["Guessed","Fairly sure","Knew it"];
 const ARROW='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>';
 function slider(off){
   return `<div class="confBtns" role="group" aria-label="Submit your answer with how sure you are">${CONF.map((l,k)=>`<button class="cb c${k}" data-conf="${k}" ${off?"disabled":""} aria-label="Submit: ${l}"><span class="bars" aria-hidden="true">${[0,1,2].map(i=>`<i${i<=k?' class="on"':""}></i>`).join("")}</span><span class="cl">${l}<kbd>${k+1}</kbd></span></button>`).join("")}</div>`;
