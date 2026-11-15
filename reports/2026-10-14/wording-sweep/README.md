@@ -71,3 +71,5 @@ The patches no longer applied after later commits, so every `defer-gate` row (pl
 4. Incontinence-procedures landing intro carries the AUA 2024 statements plus MASTER-trial numbers (t26-01). Keep in the landing intro?
 5. Adjustable-devices hub has a "Launch Note" section that only says the page is a hub (t26-06/07). Remove the section?
 6. Cancer Survivorship carries an IMvigor011 adjuvant-oncology paragraph (s069): possible scope issue.
+
+**Answered November 14, 2026 (owner, decision page):** 1 move to Indications (applied to all 18 cosmetic pages with the paragraph; landing box kept); 2 remove the repeated quote; 3 cut; 4 trim to the orientation sentence; 5 remove; 6 cut. Applied and gated the same day (CHANGELOG).

@@ -6,6 +6,32 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## November 14, 2026 — Owner decisions applied (decision page)
+
+- The owner answered the open decisions on an interactive page (Artifact WVH8xk1JKPvbDb7i1ErAYi): each card showed the live text, the proposed change and recommended answers.
+- Wording-sweep questions from October 14, all answered:
+  - Society-position paragraphs moved out of the openings on 18 cosmetic genital pages, wording unchanged. Procedure pages put them under Indications, or the nearest indications or safety section where a page has none (hoodoplasty variants, fillers, laser labiaplasty, G-spot). The two hubs put them under Decision Framework. The cosmetic landing page keeps its box.
+  - Stem Cell Therapy for ED: the repeated AUA quote was cut.
+  - Feminizing Gender-Affirming Surgery: the evidence-sources paragraph was cut. Morrison 2023 lost its last citation and was dropped, and the references were renumbered. Stelmar 2023 is still cited lower on the page.
+  - Incontinence landing: trimmed to its one-sentence orientation. The AUA 2024 and MASTER material stays on the male SUI, AUS and sling pages, and the landing's reference list was removed.
+  - Adjustable Continence Devices: the "Launch Note" section was removed.
+  - Cancer Survivorship: the IMvigor011 paragraph and its reference were cut as out of scope, and the references were renumbered.
+- Claim gate on the moved claims: two independent Codex runs found 21 of 23 supported. Four narrowing edits were accepted:
+  - FDA 2018 applies to cosmetic vaginal procedures.
+  - EAU 2026 HA recommendation excludes penile dysmorphic disorder.
+  - The Yang 2020 filler adverse events fell within 4 weeks of injection.
+  - The S2k guideline says "must not" for female genital aesthetic surgery when BDD is suspected.
+- Profile cards:
+  - Dwyer IUGA presidency is now 2003–2004 (IUGA past-presidents page, new footnote), and his IUJ editorship reads "to 2017". The start year is dropped because ICS (2010) and IUGA (2011) disagree.
+  - Kralj stays at 1989–1990 (IUGA's list).
+- Practice handout About – Simple Prostatectomy: "about 7 in 100 need a blood transfusion" (a mixed open/robotic figure) became "A blood transfusion is sometimes needed." Re-rendered and copied to Seranio Practice; old copy in `_archive/2026-11-14/`; compendium rebuilt (1,660 pages).
+- Owner kept color-only prose links and the current citation spacing (Lighthouse link-in-text-block and tap-target items closed as owner decisions).
+- Still open:
+  - Old tts-1 audio deletion: the owner approved it, but the local Vercel CLI login has expired. Run `BLOB_READ_WRITE_TOKEN=… node scripts/delete-old-tts-audio.mjs --delete` with the project's Blob token.
+  - Vercel deployment checks: the owner will turn them on.
+  - The PTNS device, semen lab and Glean visit length are still unknown. The sheets are already written without them.
+  - PLESS 2000 and Mulcahy 2021 are not obtainable soon.
+
 ## November 14, 2026 — Held facts-only pages published; Rounds highlights and reset
 
 - The three pages held from the October 21 facts-only sweep are live (`c3568aa5`). Intracavernosal Injection Agents took its held copy unchanged; Alpha-Blockers and Urgency Incontinence/OAB had been rewritten by the November coherence sweep, so their commentary cuts were reapplied by hand to the current text. OAB lost its only Farag 2023 citation and was renumbered (surgeon-citation anchors followed, `db792053`). The four blocking claims pass: both AUA ED compounding statements against the local AUA ED 2018 copy (the review attached the AUA marker to each sentence), and the alpha-blocker retention and OAB vaginal-estrogen rows after their second independent check (`reports/audit-v2/sources-local/gate-2026-11-14*`).
