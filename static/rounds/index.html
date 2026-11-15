@@ -513,6 +513,8 @@ try{Object.assign(S.set,LS.get("rounds-set",{}))}catch(e){}
 if(!Array.isArray(S.set.topics))S.set.topics=[];if(!Array.isArray(S.set.kinds))S.set.kinds=[];
 if(S.set.pool==="trials"){S.set.pool="all";S.set.kinds=["trial"]}
 delete S.set.topic;
+const MAXN={timed:50,tutor:100};const maxN=m=>MAXN[m]||100;
+if(S.set.n==="all"||typeof S.set.n!=="number"||S.set.n>maxN(S.set.mode))S.set.n=maxN(S.set.mode);
 const FIELDS={both:"All",specialty:"GURS/URPS",general:"General",oncology:"Oncology"};
 if(!FIELDS[S.set.field])S.set.field="both";if(!S.set.yield||!LS.get("rounds-yield-v3",false)){S.set.yield="all";LS.put("rounds-yield-v3",true)}
 const YIELDS={all:"All",c:"High-yield",u:"Supplemental",d:"In-depth"};
@@ -749,7 +751,7 @@ function home(){
   const kindCnt=k=>S.qs.filter(q=>inField(q)&&(!S.set.topics.length||S.set.topics.includes(q.topic))&&q.kind===k).length;
   const pools=Object.entries(POOLS).map(([k,v])=>[k,v.label,poolList(k).length]);
   const avail=poolList(S.set.pool).length;
-  const n=S.set.n==="all"?avail:Math.min(S.set.n,avail);
+  const cap=maxN(S.set.mode),n=Math.min(S.set.n,cap,avail);
   const field=`<div class="fieldSw" role="group" aria-label="Field">${Object.entries(FIELDS).map(([k,l])=>`<button data-set="field" data-v="${k}" aria-pressed="${S.set.field===k}">${l}<span>${k==="both"?S.qs.length:S.qs.filter(q=>q.field===k).length}</span></button>`).join("")}</div>`;
   const hero=`<div class="panel hero">
     ${ring(all.used?all.c/all.used:0)}
@@ -768,7 +770,7 @@ function home(){
   const oYield=`<div><div class="lab" style="margin-bottom:6px">Yield</div>${segs("yield",Object.entries(YIELDS).map(([k,l])=>[k,l,S.qs.filter(q=>inField(q)&&(k==="all"||yLevel(q)===k)).length]))}<div class="note" style="margin-top:6px">High-yield: guideline statements, landmark trial results and standard decisions. Supplemental: facts that round out a topic. In-depth: small-series numbers and subgroups. All: every question.</div></div>`;
   const oType=`<div><div class="lab" style="margin-bottom:6px">Type</div>${multi("kinds",[["__all","All types"],...Object.entries(KINDS).map(([k,l])=>[k,l,kindCnt(k)])])}</div>`;
   const oPool=`<div><div class="lab" style="margin-bottom:6px">Questions</div>${segs("pool",pools)}</div>`;
-  const oN=`<div><div class="lab" style="margin-bottom:6px">How many</div><div class="nRow">${segs("n",[[5,"5"],[10,"10"],[20,"20"],["all","All"]])}<input id="nIn" class="nIn" type="number" inputmode="numeric" min="1" max="${avail||1}" placeholder="Custom" aria-label="Custom number of questions" value="${typeof S.set.n==="number"&&![5,10,20].includes(S.set.n)?S.set.n:""}"></div></div>`;
+  const oN=`<div><div class="lab" style="margin-bottom:6px">How many</div><div class="nRow">${segs("n",[[5,"5"],[10,"10"],[20,"20"],[cap,String(cap)]])}<input id="nIn" class="nIn" type="number" inputmode="numeric" min="1" max="${Math.min(cap,avail)||1}" placeholder="Custom" aria-label="Custom number of questions" value="${typeof S.set.n==="number"&&![5,10,20,cap].includes(S.set.n)?S.set.n:""}"></div><div class="note" style="margin-top:6px">Up to ${MAXN.timed} questions in Timed and ${MAXN.tutor} in Tutor.</div></div>`;
   const oMode=`<div><div class="lab" style="margin-bottom:6px">Mode</div>${segs("mode",[["tutor","Tutor"],["timed","Timed"]])}</div>`;
   const oRecall=`<div><div class="lab" style="margin-bottom:6px">Recall first</div>${segs("recall",[[false,"Off"],[true,"On"]])}<div class="note" style="margin-top:6px">Each question first shows without its choices. Type your answer (or just think it), then tap Show choices and pick. Your recalled answer appears beside the explanation so you can compare. Harder, and better for quoting trial numbers from memory.</div></div>`;
   const go=`<div class="go"><button class="btn wide" id="start" ${n?"":"disabled"}>Start ${n||""} question${n===1?"":"s"}</button>${n?"":`<span class="note">No questions match. Pick another set.</span>`}</div>`;
@@ -795,7 +797,7 @@ function home(){
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 function startBlock(){
   let list=shuffle(poolList(S.set.pool).slice());
-  if(S.set.n!=="all")list=list.slice(0,S.set.n);
+  list=list.slice(0,Math.min(S.set.n,maxN(S.set.mode)));
   S.block={ids:list.map(q=>q.id),i:0,pick:{},done:{},shown:{},conf:{},pre:{},mode:S.set.mode,recall:S.set.recall,start:Date.now(),limit:S.set.mode==="timed"?list.length*90:0,finished:false};
   S.view="quiz";render();window.scrollTo(0,0);
 }
@@ -808,7 +810,7 @@ function clock(){
 }
 let tick=null;
 function quiz(){
-  const b=S.block,q=cur(),idx=b.i,answered=b.done[q.id]!=null;b.conf=b.conf||{};b.pre=b.pre||{};
+  const b=S.block,q=cur(),idx=b.i,answered=b.done[q.id]!=null;b.conf=b.conf||{};b.pre=b.pre||{};if(!b.finished){b.seen=b.seen||{};b.seen[q.id]=1}
   const reveal=answered&&(b.mode==="tutor"||b.finished);
   const hideChoices=b.recall&&!b.shown[q.id]&&!answered;
   const ticks=b.browse?"":b.ids.map((id,k)=>{let c="";if(k===idx)c="cur";else if(b.done[id]!=null)c=(b.mode==="tutor"||b.finished)?(b.done[id]?"c":"w"):"a";return`<i class="${c}"></i>`}).join("");
@@ -895,7 +897,7 @@ function submit(conf){
 }
 function finish(){
   const b=S.block;
-  if(!b.finished){b.ids.forEach(id=>{if(b.done[id]==null){/* unanswered counts as wrong only in timed */ if(b.mode==="timed"){b.done[id]=false;record(S.byId[id],false)}}});}
+  if(!b.finished){b.ids.forEach(id=>{if(b.done[id]==null){/* in timed, a question you saw and left blank counts as wrong; one you never reached stays unanswered */ if(b.mode==="timed"&&b.seen&&b.seen[id]){b.done[id]=false;record(S.byId[id],false)}}});}
   b.finished=true;S.view="summary";render();window.scrollTo(0,0);
 }
 function summary(){
@@ -942,6 +944,7 @@ function todayPanel(){
   return `<div class="panel today"><div style="min-width:0"><div class="lab">Today</div><div class="pv">${TODAY_N} questions</div><div class="note">${esc(line)}</div></div><button class="btn" id="startToday">Start</button></div>`;
 }
 function startIds(ids,mode,recall){
+  ids=ids.slice(0,maxN(mode||"tutor"));
   S.block={ids,i:0,pick:{},done:{},shown:{},conf:{},pre:{},mode:mode||"tutor",recall:!!recall,start:Date.now(),limit:mode==="timed"?ids.length*90:0,finished:false};
   S.view="quiz";render();window.scrollTo(0,0);
 }
@@ -972,7 +975,7 @@ function findResults(){
   const ans=h.filter(q=>S.prog[q.id]&&S.prog[q.id].n),miss=h.filter(FF.missed[1]).length;
   return `<div class="note">${h.length} question${h.length===1?"":"s"}${ans.length?` · ${ans.length} answered${miss?", "+miss+" missed":""}`:""}</div>
   <div class="seg">${Object.entries(FF).map(([k,[l,fn]])=>`<button data-ff="${k}" aria-pressed="${f===k}">${l}<span class="k">${h.filter(fn).length}</span></button>`).join("")}</div>
-  ${list.length?`<button class="btn" id="findStart" style="width:100%">Start a block with ${list.length===1?"this one":list.length>200?"200 of these":"these "+list.length}</button>`:""}
+  ${list.length?`<button class="btn" id="findStart" style="width:100%">Start a block with ${list.length===1?"this one":list.length>maxN(S.set.mode)?maxN(S.set.mode)+" of these":"these "+list.length}</button>`:""}
   ${rowsHTML(list,"find",S.findMax||50)}`;
 }
 function findView(){
@@ -995,7 +998,7 @@ function mineView(){
   return `<div class="viewHead"><button class="exitBtn" id="goHome">‹ Home</button><h2>Your questions</h2></div>
   ${base.length?`<div class="seg">${Object.entries(MF).map(([k,[l,fn]])=>{const n=base.filter(fn).length;return (n||k==="all"||k===f)?`<button data-mf="${k}" aria-pressed="${f===k}">${l}<span class="k">${n}</span></button>`:""}).join("")}</div>
   <div class="seg"><button data-ms="new" aria-pressed="${S.ms!=="topic"}">Newest</button><button data-ms="topic" aria-pressed="${S.ms==="topic"}">By topic</button></div>
-  ${list.length?`<button class="btn" id="mineStart" style="width:100%">Redo ${list.length===1?"this one":list.length>200?"200 of these":"these "+list.length}${label?" "+label:""}</button>`:`<div class="panel empty">None yet.</div>`}
+  ${list.length?`<button class="btn" id="mineStart" style="width:100%">Redo ${list.length===1?"this one":list.length>maxN(S.set.mode)?maxN(S.set.mode)+" of these":"these "+list.length}${label?" "+label:""}</button>`:`<div class="panel empty">None yet.</div>`}
   ${rowsHTML(list,"mine",S.mineMax||50)}`:`<div class="panel empty">Questions you answer or flag show up here.</div>`}`;
 }
 function startBrowse(list,k,from){
@@ -1188,7 +1191,7 @@ document.addEventListener("click",e=>{
   if(t.dataset.multi){const k=t.dataset.multi,v=t.dataset.v;let a=S.set[k].slice();if(v==="__all")a=[];else a=a.includes(v)?a.filter(x=>x!==v):a.concat(v);S.set[k]=a;LS.put("rounds-set",S.set);render();return}
   if(t.dataset.area){const ids=TOPICS_().filter(x=>x.group===t.dataset.area).map(x=>x.id);const all=ids.every(i=>S.set.topics.includes(i));S.set.topics=all?S.set.topics.filter(i=>!ids.includes(i)):[...new Set(S.set.topics.concat(ids))];LS.put("rounds-set",S.set);render();return}
   if(t.dataset.set==="field"){S.set.field=t.dataset.v;S.set.topics=S.set.topics.filter(id=>{const tp=TOPICS_().find(x=>x.id===id);const g=tp&&GROUPS_().find(x=>x.id===tp.group);return S.set.field==="both"||(g&&g.field===S.set.field)});LS.put("rounds-set",S.set);render();return}
-  if(t.dataset.set){let v=t.dataset.v;if(v==="true")v=true;else if(v==="false")v=false;else if(/^\d+$/.test(v))v=+v;S.set[t.dataset.set]=v;LS.put("rounds-set",S.set);render();return}
+  if(t.dataset.set){let v=t.dataset.v;if(v==="true")v=true;else if(v==="false")v=false;else if(/^\d+$/.test(v))v=+v;S.set[t.dataset.set]=v;if(t.dataset.set==="mode"&&S.set.n>maxN(v))S.set.n=maxN(v);LS.put("rounds-set",S.set);render();return}
   if(t.id==="start"){startBlock();return}
   if(t.id==="startToday"){startIds(todayIds(),"tutor",false);return}
   if(t.id==="startFromPage"){startFromPage();return}
@@ -1203,8 +1206,8 @@ document.addEventListener("click",e=>{
   if(t.dataset.ms){S.ms=t.dataset.ms;render();return}
   if(t.dataset.more==="find"){S.findMax=(S.findMax||50)+50;$("#findRes").innerHTML=findResults();return}
   if(t.dataset.more==="mine"){S.mineMax=(S.mineMax||50)+50;render();return}
-  if(t.id==="findStart"){const l=findList();if(l&&l.length)startIds(shuffle(l.map(q=>q.id)).slice(0,200),S.set.mode,S.set.recall);return}
-  if(t.id==="mineStart"){const l=mineList();if(l.length)startIds(shuffle(l.map(q=>q.id)).slice(0,200),S.set.mode,S.set.recall);return}
+  if(t.id==="findStart"){const l=findList();if(l&&l.length)startIds(shuffle(l.map(q=>q.id)).slice(0,maxN(S.set.mode)),S.set.mode,S.set.recall);return}
+  if(t.id==="mineStart"){const l=mineList();if(l.length)startIds(shuffle(l.map(q=>q.id)).slice(0,maxN(S.set.mode)),S.set.mode,S.set.recall);return}
   if(t.dataset.open){const l=t.dataset.open==="find"?findList():mineList();if(l)startBrowse(l,+t.dataset.k,t.dataset.open);return}
   if(t.id==="showAll"){S.showAll=!S.showAll;render();return}
   const b=S.block;
@@ -1224,7 +1227,7 @@ document.addEventListener("input",e=>{
   if(e.target&&e.target.id==="findIn"){S.q=e.target.value;S.findMax=50;const r=$("#findRes");if(r)r.innerHTML=findResults()}
 });
 document.addEventListener("change",e=>{
-  if(e.target&&e.target.id==="nIn"){const v=parseInt(e.target.value,10);if(v>0){S.set.n=v;LS.put("rounds-set",S.set)}render()}
+  if(e.target&&e.target.id==="nIn"){const v=parseInt(e.target.value,10);if(v>0){S.set.n=Math.min(v,maxN(S.set.mode));LS.put("rounds-set",S.set)}setTimeout(render)}
 });
 document.addEventListener("keydown",e=>{
   if(e.target&&e.target.id==="nIn"&&e.key==="Enter"){e.target.blur();return}
