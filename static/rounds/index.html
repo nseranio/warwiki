@@ -311,27 +311,8 @@ h1.logo{cursor:pointer}
 #zoomBg{position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center;padding:16px;cursor:zoom-out}
 #zoomBg img{width:100%;height:100%;object-fit:contain}
 
-/* ---- confidence slider, Today, search, Your questions ---- */
-.slide{position:relative;height:54px;border-radius:10px;background:var(--soft);border:1px solid var(--line);display:grid;grid-template-columns:56px repeat(3,minmax(0,1fr));user-select:none;-webkit-user-select:none;touch-action:pan-y;overflow:hidden;flex:1;min-width:0}
-.slide .fill{position:absolute;left:0;top:0;bottom:0;width:54px;background:var(--accentSoft);transition:width .22s var(--ease)}
-.slide.drag .fill,.slide.drag .knob{transition:none}
-.slide .knob{position:absolute;left:4px;top:4px;width:46px;height:44px;border-radius:7px;background:var(--accent);color:var(--accentInk);display:grid;place-items:center;z-index:3;cursor:grab;touch-action:none;transition:transform .22s var(--ease);box-shadow:0 2px 6px -2px rgba(0,0,0,.35)}
-.slide .knob svg{width:20px;height:20px}
-.slide.drag .knob{cursor:grabbing}
-.slide .z{position:relative;z-index:2;background:none;border:0;border-left:1px dashed var(--line);font:600 13px/1.15 var(--sans);color:var(--ink2);padding:0 4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;transition:color .15s}
-.slide .z[data-conf="0"]{grid-column:2}
-.slide .z kbd{font:500 10px var(--mono);color:var(--ink2);opacity:.7;display:none}
-@media (hover:hover) and (pointer:fine){.slide .z kbd{display:block}}
-.slide .z:hover,.slide .z.on{color:var(--ink)}
-.slide .z[data-conf="0"].on{color:var(--warn)}
-.slide .z[data-conf="2"].on{color:var(--accent)}
-.slide.off{opacity:.5}
-.slide.off .z,.slide.off .knob{pointer-events:none}
-.slide .msg{position:absolute;inset:0;display:grid;place-items:center;font:500 13px var(--sans);color:var(--ink2);z-index:1;padding-left:56px}
-.dock .foot.two{flex-direction:column;align-items:stretch;gap:8px}
-.dock .foot.two .slide{flex:none}
-.dock .foot.two .row{display:flex;justify-content:space-between;align-items:center;gap:8px}
-.confNote{font-size:12.5px;color:var(--ink2);text-align:right;white-space:nowrap}
+/* ---- Today, search, Your questions ---- */
+position:absolute;inset:0;display:grid;place-items:center;font:500 13px var(--sans);color:var(--ink2);z-index:1;padding-left:56px}
 .today{display:flex;align-items:center;justify-content:space-between;gap:14px}
 .today .pv{font:600 18px/1.25 var(--sans);margin-top:2px}
 .today .note{margin-top:3px}
@@ -416,7 +397,6 @@ h1.logo{cursor:pointer}
   .qimg img{max-height:min(560px,62vh)}
   .ans .block p{font-size:17px}
   .verdict{font-size:19px}
-  .slide{height:58px}
   .sumTop{gap:36px}
   .score{font-size:56px}
   .narrow{max-width:880px;width:100%;margin:0 auto}
@@ -738,7 +718,7 @@ function quiz(){
       return `<button class="${cls}" data-ch="${k}" aria-pressed="${b.pick[q.id]===k}" ${answered?"aria-disabled=\"true\"":""}><span class="L">${L}</span><span class="ct">${esc(c)}${mk}</span>${why}</button>`}).join("")}</div>`;
   const ok=b.done[q.id];
   const ans=reveal?`<div class="panel ans">
-      <div class="verdict ${ok?"c":"w"}">${b.pre[q.id]?(ok?"Correct last time.":"Missed last time."):(ok?"Correct.":"Incorrect.")} The answer is (${"ABCDE"[q.answer]}).${b.conf[q.id]!=null?`<span class="note" style="font-weight:400"> You said: ${CONF[b.conf[q.id]]}.</span>`:""}</div>
+      <div class="verdict ${ok?"c":"w"}">${b.pre[q.id]?(ok?"Correct last time.":"Missed last time."):(ok?"Correct.":"Incorrect.")} The answer is (${"ABCDE"[q.answer]}).</div>
       ${(b.recallText||{})[q.id]?`<div class="block"><div class="lab">You recalled</div><p>${esc(b.recallText[q.id])}</p></div>`:""}
       <div class="block"><div class="lab">Explanation</div><p>${explainHTML(q)}</p></div>
       ${q.pearl?`<div class="block pearl"><div class="lab">Pearl</div><p>${esc(q.pearl)}</p></div>`:""}
@@ -749,17 +729,16 @@ function quiz(){
   const last=idx===b.ids.length-1;
   let action="";
   if(!answered&&hideChoices)action="";
-  else if(!answered)action=slider(b.pick[q.id]==null);
+  else if(!answered)action=`<button class="btn wide" id="submit" ${b.pick[q.id]==null?"disabled":""}>${b.mode==="tutor"?"Submit":(last?"Submit and finish":"Submit and next")}</button>`;
   else action=last?`<button class="btn wide" id="finish">${b.browse?"Back to list":b.finished?"Back to summary":"Finish block"}</button>`:`<button class="btn wide" id="next">Next question</button>`;
-  const two=!answered&&!hideChoices;
-  const fresh=S.shownIdx!==b.ids[idx];S.shownIdx=b.ids[idx];
+    const fresh=S.shownIdx!==b.ids[idx];S.shownIdx=b.ids[idx];
   if(wide()){
     const reviewed=b.mode==="tutor"||b.finished;
     const tiles=b.ids.map((id,k)=>{let c="";if(b.done[id]!=null)c=reviewed?(b.done[id]?"c":"w"):"a";if(k===idx)c+=" cur";if(S.prog[id]&&S.prog[id].flag)c+=" f";
       const st=b.done[id]==null?"not answered":reviewed?(b.done[id]?"correct":"incorrect"):"answered";
       return `<button data-jump="${k}" class="${c.trim()}" aria-label="Question ${k+1}, ${st}"${k===idx?' aria-current="step"':""}>${k+1}</button>`}).join("");
     const nDone=b.ids.filter(id=>b.done[id]!=null).length;
-    const keys=`<div class="keys"><span><kbd>A</kbd>to <kbd>E</kbd>choose</span><span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd>submit</span><span><kbd>Enter</kbd>next</span></div>`;
+    const keys=`<div class="keys"><span><kbd>A</kbd>to <kbd>E</kbd>choose</span><span><kbd>Enter</kbd>submit, then next</span></div>`;
     const nav=b.browse?`<div class="panel">${keys}</div>`:`<div class="panel navP"><div class="navH"><span class="lab">${b.finished?"Review":b.mode==="timed"?"Timed block":"Tutor block"}</span><span class="note">${nDone} of ${b.ids.length} answered</span></div><div class="navGrid" role="group" aria-label="Go to question">${tiles}</div>${keys}</div>`;
     return `
   <div class="qbar"><button class="exitBtn" id="exitBlock">‹ ${b.browse?"Back":b.finished?"Summary":"Exit"}</button><div class="lab">Question ${idx+1} of ${b.ids.length}</div><div class="clock" id="clock">${b.finished?"Review":clock()}</div></div>
@@ -769,9 +748,9 @@ function quiz(){
   <div class="qbody"><div class="qn">${idx+1}.</div><div><div class="stem">${esc(q.stem)}</div>${q.image?figHTML(q.image):""}<div class="ask">${esc(q.question)}</div></div></div>
   ${choices}
   </div>
-  <div class="dock"><div class="foot${two?" two":""}">${two?action+'<div class="row">':""}
+  <div class="dock"><div class="foot">
     <div class="l"><button class="ghost icon" id="prev" ${idx?"":"disabled"} aria-label="Previous question" title="Previous">${ICON.back}</button><button class="ghost icon flag" id="flag" aria-pressed="${!!p.flag}" aria-label="${p.flag?"Unflag question":"Flag question"}" title="${p.flag?"Flagged":"Flag"}">${ICON.flag}</button><button class="ghost icon" id="quit" aria-label="${b.browse?"Back to list":b.finished?"Home":"End block"}" title="${b.browse?"Back to list":b.finished?"Home":"End block"}">${ICON.end}</button></div>
-    ${two?'<span class="confNote">Slide, click or press 1 2 3 to answer</span></div>':action}
+    ${action}
   </div></div>
   </div><aside class="qRail" aria-label="${reveal?"Answer and block":"Block"}">${ans}${nav}</aside></div>`;
   }
@@ -784,21 +763,16 @@ function quiz(){
   ${choices}
   ${ans}
   </div>
-  <div class="dock"><div class="foot${two?" two":""}">${two?action+'<div class="row">':""}
+  <div class="dock"><div class="foot">
     <div class="l"><button class="ghost icon" id="prev" ${idx?"":"disabled"} aria-label="Previous question" title="Previous">${ICON.back}</button><button class="ghost icon flag" id="flag" aria-pressed="${!!p.flag}" aria-label="${p.flag?"Unflag question":"Flag question"}" title="${p.flag?"Flagged":"Flag"}">${ICON.flag}</button><button class="ghost icon" id="quit" aria-label="${b.browse?"Back to list":b.finished?"Home":"End block"}" title="${b.browse?"Back to list":b.finished?"Home":"End block"}">${ICON.end}</button></div>
-    ${two?'<span class="confNote">Slide or tap to answer</span></div>':action}
+    ${action}
   </div></div>`;
 }
 function imgURL(f){return new URL(f,QBASE).href}
 function figHTML(im){const u=imgURL(im.file);return `<figure class="qimg"><button class="zoom" data-zoom="${esc(u)}" aria-label="Enlarge image"><img src="${esc(u)}" alt="${esc(im.alt||"")}" loading="lazy" decoding="async"></button><figcaption>${im.link?`<a href="${esc(im.link)}" target="_blank" rel="noopener">${esc(im.credit)}</a>`:esc(im.credit)}</figcaption></figure>`}
-const CONF=["Guessed","Unsure","Knew it"];
-const ARROW='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>';
-function slider(off){
-  return `<div class="slide${off?" off":""}" id="slide" role="group" aria-label="Submit your answer with how sure you are"><div class="fill"></div><div class="knob" aria-hidden="true">${ARROW}</div>${off?'<div class="msg">Pick an answer</div>':CONF.map((l,k)=>`<button class="z" data-conf="${k}" aria-label="Submit: ${l}">${l}<kbd>${k+1}</kbd></button>`).join("")}</div>`;
-}
-function submit(conf){
+function submit(){
   const b=S.block,q=cur();const k=b.pick[q.id];if(k==null||b.done[q.id]!=null)return;
-  const ok=k===q.answer;b.done[q.id]=ok;b.conf=b.conf||{};if(conf!=null)b.conf[q.id]=conf;record(q,ok,conf,k);
+  const ok=k===q.answer;b.done[q.id]=ok;record(q,ok,null,k);
   if(b.mode==="timed"){if(b.i<b.ids.length-1){b.i++}else{finish();return}}
   render();
 }
@@ -862,8 +836,7 @@ let IDX=null;
 function index(){if(IDX)return IDX;IDX={};S.qs.forEach(q=>{IDX[q.id]=norm([q.stem,q.question,(q.choices||[]).join(" "),q.explanation,q.trial,q.pearl,q.card,topicLabel(q.topic),q.image&&q.image.alt].join(" "))});return IDX}
 function statusOf(q){const p=S.prog[q.id];
   if(!p||!p.n)return p&&p.flag?["","Flagged, not answered"]:["","Not seen"];
-  if(p.last==="w")return ["w",p.mis?"Missed, was sure":"Missed"];
-  if(p.conf===0)return ["g","Correct, guessed"];
+  if(p.last==="w")return ["w","Missed"];
   return ["c","Correct"];}
 function qRow(q,attr){const [cls,lab]=statusOf(q);const p=S.prog[q.id]||{};
   return `<button class="qrow" ${attr}><i class="${cls}" aria-hidden="true"></i><span style="min-width:0"><span class="qt">${esc(q.stem)}</span><span class="qm"><span class="chip ${q.field==="oncology"?"onc":""}">${esc(topicLabel(q.topic))}</span>${q.image?'<span class="chip">Image</span>':""}<span class="note">${lab}${p.flag&&p.n?" · flagged":""}</span></span></span><span class="chev" aria-hidden="true">›</span></button>`}
@@ -890,7 +863,7 @@ function findView(){
   <div id="findRes" style="display:flex;flex-direction:column;gap:12px">${findResults()}</div>`;
 }
 function mineBase(){return S.qs.filter(q=>{const p=S.prog[q.id];return p&&(p.n||p.flag)})}
-const MF={all:["All",q=>S.prog[q.id].n],missed:["Missed",q=>S.prog[q.id].last==="w"],mis:["Missed when sure",q=>S.prog[q.id].mis],guessed:["Guessed right",q=>S.prog[q.id].last==="c"&&S.prog[q.id].conf===0],flagged:["Flagged",q=>S.prog[q.id].flag],images:["Images",q=>S.prog[q.id].n&&!!q.image]};
+const MF={all:["All",q=>S.prog[q.id].n],missed:["Missed",q=>S.prog[q.id].last==="w"],flagged:["Flagged",q=>S.prog[q.id].flag],images:["Images",q=>S.prog[q.id].n&&!!q.image]};
 function mineList(){
   const base=mineBase(),f=MF[S.mf||"all"]?S.mf||"all":"all";
   const list=base.filter(MF[f][1]);
@@ -1043,7 +1016,7 @@ document.addEventListener("click",e=>{
   const b=S.block;
   if(t.dataset.ch!=null&&b){const q=cur();if(b.done[q.id]!=null)return;b.pick[q.id]=+t.dataset.ch;render();return}
   if(t.id==="showCh"){const r=$("#recallIn");b.recallText=b.recallText||{};if(r&&r.value.trim())b.recallText[cur().id]=r.value.trim();b.shown[cur().id]=true;render();return}
-  if(t.dataset.conf!=null&&b){submit(+t.dataset.conf);return}
+  if(t.id==="submit"&&b){submit();return}
   if(t.dataset.jump!=null&&b){b.i=+t.dataset.jump;render();window.scrollTo(0,0);return}
   if(t.id==="next"){b.i++;render();window.scrollTo(0,0);return}
   if(t.id==="prev"){b.i--;render();window.scrollTo(0,0);return}
@@ -1056,30 +1029,6 @@ document.addEventListener("click",e=>{
 document.addEventListener("input",e=>{
   if(e.target&&e.target.id==="findIn"){S.q=e.target.value;S.findMax=50;const r=$("#findRes");if(r)r.innerHTML=findResults()}
 });
-/* slide to submit: drag the knob right; where it is let go sets how sure you were */
-let SD=null;
-document.addEventListener("pointerdown",e=>{
-  const k=e.target.closest(".slide:not(.off) .knob");if(!k)return;
-  const sl=k.parentElement;const zs=[...sl.querySelectorAll(".z")];
-  SD={sl,k,x0:e.clientX,max:sl.clientWidth-54,zs,zone:null,id:e.pointerId};
-  sl.classList.add("drag");try{k.setPointerCapture(e.pointerId)}catch(_){ }e.preventDefault();
-});
-document.addEventListener("pointermove",e=>{
-  if(!SD||e.pointerId!==SD.id)return;
-  const dx=Math.max(0,Math.min(SD.max,e.clientX-SD.x0));
-  SD.k.style.transform=`translateX(${dx}px)`;SD.sl.querySelector(".fill").style.width=(dx+54)+"px";
-  const cx=SD.k.getBoundingClientRect().left+23;let z=null;
-  SD.zs.forEach((b,i)=>{const r=b.getBoundingClientRect();if(dx>8&&cx>=r.left-23)z=i});
-  SD.zone=z;SD.zs.forEach((b,i)=>b.classList.toggle("on",i===z));
-});
-function endSlide(e){
-  if(!SD||(e&&e.pointerId!==SD.id))return;
-  const s=SD;SD=null;s.sl.classList.remove("drag");
-  if(s.zone!=null&&e.type==="pointerup"){submit(s.zone);return}
-  s.k.style.transform="";s.sl.querySelector(".fill").style.width="";s.zs.forEach(b=>b.classList.remove("on"));
-}
-document.addEventListener("pointerup",endSlide);
-document.addEventListener("pointercancel",endSlide);
 document.addEventListener("change",e=>{
   if(e.target&&e.target.id==="nIn"){const v=parseInt(e.target.value,10);if(v>0){S.set.n=v;LS.put("rounds-set",S.set)}render()}
 });
@@ -1092,8 +1041,7 @@ document.addEventListener("keydown",e=>{
   if(e.target&&e.target.tagName==="TEXTAREA"){if(e.key==="Enter"&&(e.metaKey||e.ctrlKey)){const b=$("#showCh");if(b)b.click()}return}
   const k=e.key.toUpperCase();
   if("ABCDE".includes(k)&&k.length===1){const btn=document.querySelector(`[data-ch="${"ABCDE".indexOf(k)}"]`);if(btn)btn.click()}
-  else if("123".includes(e.key)&&e.key.length===1){const btn=document.querySelector(`.slide:not(.off) [data-conf="${+e.key-1}"]`);if(btn)btn.click()}
-  else if(e.key==="Enter"){const btn=$("#next")||$("#finish");if(btn&&!btn.disabled)btn.click()}
+  else if(e.key==="Enter"){const btn=$("#submit")||$("#next")||$("#finish");if(btn&&!btn.disabled)btn.click()}
 });
 load();
 })();
