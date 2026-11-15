@@ -210,3 +210,22 @@ The owner's rule after the Bladder Diverticula pilot: a section should read like
 Before (one paragraph): the 2,134-patient cohort and its hazard ratio stated twice, the 764-patient series as "102/764" and again as "13.3%", mechanism wedged between them, then incidental cancers. After: three paragraphs (risk, mechanism, cancer found at surgery), each study once, each paragraph opening with its point.
 
 The sweep uses `scripts/voice/coherence_extract.py` (candidate sections) with `scripts/review/orchestrate.py --claims --brief coherence --verify-brief coherence-verify`, then `scripts/voice/coherence_check.py` (no number or citation marker lost) and the claim gate on the final text.
+
+## 15. Cost and value (November 14, 2026; pilot)
+
+The owner wants cost and value on the pages because they bear on clinical decisions. Cost evidence goes in one subsection per page, placed directly after the outcomes or comparison material it depends on: `### Cost and Value` at the end of the comparison section (Outcomes, Efficacy, or the "X vs Y" section) when every cost study concerns that comparison, otherwise `## Cost and Value` after the last outcomes or comparison section. Do not weave cost sentences into efficacy paragraphs: scattered cost lines repeat studies, separate a figure from its context and are hard to find. A trial-summary table may keep a cost row if it cites the economic paper.
+
+Every figure carries the context that makes it comparable, written into the sentence that reports it, in this order where the source gives it:
+
+- **Setting and payer.** Country and system or payer: "US Medicare national payments", "UK NHS", "an Australian public hospital", "Dutch secondary care".
+- **Currency and price year.** "2018 US dollars", "2008 euros", "2023 Canadian dollars". If the source does not state the price year, give the publication year instead ("published 2013"). Never convert currencies or adjust for inflation.
+- **Perspective.** Health-system, payer, third-party payer or societal, as the source names it.
+- **Design and horizon.** Within-trial analysis, Markov model, decision tree, cost-minimization model, cohort cost analysis, or cost-consequence analysis, with its time horizon ("2-year Markov model", "within-trial analysis over 24 months").
+- **Ratios with their comparator.** An ICER is always written as option A versus option B, with its unit: "$116,427 per QALY gained with SNM versus onabotulinumtoxinA", "$573,000 per additional patient remaining on therapy with SNM versus PTNS". "Dominant" is written out once as lower cost and more QALYs. Give the willingness-to-pay threshold whenever a probability of cost-effectiveness is reported.
+- **Industry ties.** When authors are employees of the maker of an option, or the paper reports manufacturer funding, say so in the sentence ("a model by Medtronic-affiliated authors"). Do not infer funding from the topic.
+
+Leave out any element the source does not report; never fill one in from another paper. Prices come from published studies, not list prices, coding manuals or payer websites. Patient cost sharing, coverage rules and billing advice stay off the site.
+
+Sections 11, 12 and 14 apply. Open the paragraph with what the cost evidence shows ("Analyses comparing SNM with onabotulinumtoxinA reached different conclusions by time horizon and setting: …"), give each study once, and group by comparison (A versus B, then A versus C). Report the authors' own conclusion only as their stated result ("judged onabotulinumtoxinA the most cost-effective option"). No commentary: no "cost is an important consideration", "value-based care", "should be weighed" or "may influence the choice". A two-option comparison may appear on both options' pages with identical figures; the fuller account sits on the page where the decision is usually made, and the other page gives the headline result and links to it.
+
+Pilot pages (November 14): Percutaneous Tibial Nerve Stimulation, Sacral Neuromodulation, Intradetrusor OnabotulinumtoxinA, DVIU and Urethral Dilation, Prolapse Pessaries.
