@@ -352,41 +352,6 @@ h1.logo{cursor:pointer}
 .viewHead h2{font:600 19px var(--sans);margin:0}
 .more{width:100%}
 
-/* ---- Pimp mode ---- */
-.pimpP{display:flex;flex-direction:column;gap:14px}
-.pimpP h2{margin-bottom:3px}
-.opList{display:flex;flex-direction:column;gap:8px}
-.opBtn{display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;text-align:left;border:1px solid var(--line);background:var(--panel);border-radius:6px;padding:12px 14px;transition:border-color .15s var(--ease),transform .12s var(--ease)}
-.opBtn:hover{border-color:var(--accent)}
-.opBtn:active{transform:scale(.985)}
-.opBtn>span:first-child{display:flex;flex-direction:column;gap:2px;min-width:0}
-.opBtn .on{font-weight:600}
-.opBtn .chev{font-size:20px;color:var(--ink2);line-height:1}
-.pbar{height:4px;background:var(--soft);border-radius:2px;overflow:hidden}
-.pbar i{display:block;height:100%;background:var(--accent);transition:width .35s var(--ease)}
-.pCard{display:flex;flex-direction:column;gap:18px;min-height:240px;padding:26px 24px}
-.pQ{font:500 23px/1.4 var(--serif);text-wrap:pretty}
-.pAns{border-top:1px solid var(--line);padding-top:18px;display:flex;flex-direction:column;gap:10px;animation:rise .3s var(--ease) both}
-.pA{font:700 22px/1.3 var(--sans);letter-spacing:-.01em}
-.pMore{margin:0;font:400 16.5px/1.6 var(--serif);color:var(--ink2);text-wrap:pretty}
-.pFoot{display:block!important}
-.pShow{width:100%;display:flex;justify-content:center;align-items:center;gap:10px}
-.grade{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
-.gBtn{border:1px solid var(--line);background:var(--panel);border-radius:8px;padding:13px 6px;font:600 15px/1.2 var(--sans);display:flex;flex-direction:column;align-items:center;gap:3px;transition:background .15s,border-color .15s,transform .12s var(--ease)}
-.gBtn:active{transform:scale(.97)}
-.gBtn.g0{color:var(--bad)}.gBtn.g0:hover{background:var(--badSoft);border-color:var(--bad)}
-.gBtn.g1{color:var(--warn)}.gBtn.g1:hover{background:var(--warnSoft);border-color:var(--warn)}
-.gBtn.g2{color:var(--ok)}.gBtn.g2:hover{background:var(--okSoft);border-color:var(--ok)}
-.gBtn kbd,.pShow kbd{font:500 10.5px var(--mono);opacity:.75;display:none}
-.pShow kbd{border:1px solid currentColor;border-radius:4px;padding:0 5px;opacity:.6}
-@media (hover:hover) and (pointer:fine){.gBtn kbd,.pShow kbd{display:inline-block}}
-.pRev{display:grid;grid-template-columns:24px minmax(0,1fr);gap:10px;padding:12px 0;border-top:1px solid var(--line)}
-.pRev:first-child{border-top:0}
-.pRev .m{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:12px;color:var(--panel);background:var(--warn)}
-.pRev .m.w{background:var(--bad)}
-.pRq{font:400 15.5px/1.45 var(--serif)}
-.pRa{font:600 14.5px/1.4 var(--sans);margin-top:4px}
-
 /* ---- desktop: wider canvas, two columns, larger type (phone layout unchanged) ---- */
 .navP{display:flex;flex-direction:column;gap:14px}
 .navH{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
@@ -456,12 +421,6 @@ h1.logo{cursor:pointer}
   .score{font-size:56px}
   .narrow{max-width:880px;width:100%;margin:0 auto}
   .qrow .qt{font-size:16px}
-  .pCard{padding:46px 52px;min-height:340px;gap:24px}
-  .pQ{font-size:31px;line-height:1.35}
-  .pA{font-size:27px}
-  .pMore{font-size:18.5px}
-  .pAns{padding-top:24px;gap:12px}
-  .gBtn{padding:15px 8px;font-size:16px}
   .sheet{top:7vh;bottom:auto;max-height:86vh;max-width:680px;border-radius:12px;box-shadow:0 24px 60px -12px rgba(0,0,0,.35)}
   .sfoot{border-radius:0 0 12px 12px}
 }
@@ -745,8 +704,8 @@ function home(){
   const tail=`${ONSITE?`<button class="pickRow" id="openSync"><span><span class="pv">${syncCode?"Sync on · "+fmtCode(syncCode):"Sync across sites and devices"}</span><span class="note">${syncCode?(syncInfo.state==="error"?"Offline: saved on this device":syncInfo.state==="ok"?"Up to date":"Syncing…"):"No account needed: a private code links your progress"}</span></span><span class="chev">›</span></button>`:""}
   <p class="note">${esc(storeNote)} ${S.qs.length} questions, each checked against its source page or guideline${S.meta&&S.meta.built?` (bank built ${esc(S.meta.built)})`:""}.</p>
   ${Object.keys(S.prog).some(k=>k[0]!=="_")||days().at?`<button class="resetBtn" id="resetProg">Reset progress</button>`:""}`;
-  if(W)return `${field}<div class="hBand">${hero}${todayPanel()}</div><div class="hGrid"><div class="hMain">${opts}</div><div class="hSide">${pimpPanel()}${search}${mine}${progress}${tail}</div></div>`;
-  return `${field}${hero}${todayPanel()}${pimpPanel()}${search}${mine}${opts}${progress}${tail}`;
+  if(W)return `${field}<div class="hBand">${hero}${todayPanel()}</div><div class="hGrid"><div class="hMain">${opts}</div><div class="hSide">${search}${mine}${progress}${tail}</div></div>`;
+  return `${field}${hero}${todayPanel()}${search}${mine}${opts}${progress}${tail}`;
 }
 
 /* ---------- block ---------- */
@@ -1018,56 +977,6 @@ function themeSheet(){
       ${Object.entries(PALETTES).map(([k,p])=>`<button class="trow prow" data-palette="${k}" aria-pressed="${palette===k}">${sw(p.L)}${sw(p.D)}<span class="pn">${esc(p.name)}</span><span class="box ${palette===k?"on":""}">${palette===k?"✓":""}</span></button>`).join("")}
     </div></div>`;
 }
-/* ---------- Pimp mode: rapid operating-room questions ---------- */
-const PCAT={anatomy:"Anatomy",steps:"Steps",devices:"Devices",decisions:"Decisions",complications:"Complications",numbers:"Numbers"};
-const PGRADE=["Missed","Unsure","Knew it"];
-const pKey=id=>"pimp:"+id;
-function pimpData(){const P=S.meta&&S.meta.pimp;return P&&Array.isArray(P.cards)&&P.cards.length?P:null}
-function pCard(id){const P=pimpData();return P&&P.cards.find(c=>c.id===id)}
-function pOp(id){const P=pimpData();return (P&&P.ops.find(o=>o.id===id))||{id,label:id}}
-function pimpPanel(){
-  const P=pimpData();if(!P)return "";
-  const ops=P.ops.filter(o=>P.cards.some(c=>c.op===o.id));
-  return `<div class="panel pimpP"><div><h2>Pimp mode</h2><div class="note">Rapid questions from the operating room. Pick a case, say the answer, then check it.</div></div><div class="opList">${ops.map(o=>{const cs=P.cards.filter(c=>c.op===o.id);const seen=cs.filter(c=>(S.prog[pKey(c.id)]||{}).n).length;const due=cs.filter(c=>{const p=S.prog[pKey(c.id)];return p&&p.n&&p.due<=Date.now()}).length;
-    return `<button class="opBtn" data-op="${esc(o.id)}"><span><span class="on">${esc(o.label)}</span><span class="note">${cs.length} questions${seen?` · ${seen} seen`:""}${due?` · ${due} due`:""}</span></span><span class="chev" aria-hidden="true">›</span></button>`}).join("")}</div></div>`;
-}
-function startPimp(op,ids){
-  const P=pimpData();if(!P)return;
-  ids=ids||P.cards.filter(c=>c.op===op).map(c=>c.id);
-  S.pimp={op,ids:ids.slice(),i:0,shown:false,first:{},last:{},again:{}};S.view="pimp";render();window.scrollTo(0,0);
-}
-function pimpRecord(c,g){record({id:pKey(c.id)},g>0,g>0?g:null)}
-function pimpGrade(g){
-  const s=S.pimp;if(!s||!s.shown)return;const id=s.ids[s.i],c=pCard(id);if(!c)return;
-  if(s.first[id]==null){s.first[id]=g;pimpRecord(c,g)}
-  s.last[id]=g;
-  if(g===0&&!s.again[id]){s.again[id]=1;s.ids.push(id)}
-  if(s.i>=s.ids.length-1){S.view="pimpSum";render();window.scrollTo(0,0);return}
-  s.i++;s.shown=false;render();window.scrollTo(0,0);
-}
-function pimpView(){
-  const s=S.pimp,c=pCard(s.ids[s.i]);if(!c){S.view="home";return home()}
-  const n=s.ids.length,graded=Object.keys(s.first).length;
-  const fresh=S.pShown!==s.i+":"+c.id;S.pShown=s.i+":"+c.id;
-  const src=c.source&&c.source.url?`<div class="src"><span>${esc(c.source.title||"")}${c.source.section?" · "+esc(c.source.section):""}</span><a href="${esc(c.source.url)}" target="_blank" rel="noopener">Open page ↗</a></div>`:"";
-  const ans=s.shown?`<div class="pAns" aria-live="polite"><div class="pA">${esc(c.a)}</div>${c.more?`<p class="pMore">${esc(c.more)}</p>`:""}${src}</div>`:"";
-  const act=s.shown?`<div class="grade" role="group" aria-label="How did you do">${PGRADE.map((l,k)=>`<button class="gBtn g${k}" data-grade="${k}">${l}<kbd>${k+1}</kbd></button>`).join("")}</div>`
-    :`<button class="btn pShow" id="pShow">Show answer<kbd>Space</kbd></button>`;
-  return `<div class="qbar"><button class="exitBtn" id="pExit">‹ Exit</button><div class="lab">${esc(pOp(s.op).label)} · ${s.i+1} of ${n}</div><div class="clock">${graded} done</div></div>
-  <div class="pbar" aria-hidden="true"><i style="width:${Math.round(s.i/n*100)}%"></i></div>
-  <div class="panel pCard${fresh?" case":""}"><div class="meta"><span class="chip">${esc(PCAT[c.cat]||c.cat||"")}</span>${s.again[c.id]&&s.first[c.id]!=null?'<span class="chip t">Again</span>':""}</div><div class="pQ">${esc(c.q)}</div>${ans}</div>
-  <div class="dock"><div class="foot pFoot">${act}</div></div>`;
-}
-function pimpSum(){
-  const s=S.pimp,ids=[...new Set(s.ids)],n=ids.length;
-  const cnt=[0,0,0];ids.forEach(id=>{const g=s.first[id];if(g!=null)cnt[g]++});
-  const done=cnt[0]+cnt[1]+cnt[2],frac=done?cnt[2]/done:0;
-  const rev=ids.filter(id=>s.first[id]!=null&&s.first[id]<2).map(pCard).filter(Boolean);
-  return `<div class="panel sumTop">${ring(frac,cnt[2]+"/"+done,"KNEW IT",frac>=.7?"var(--ok)":"var(--accent)")}<div><div class="lab">${esc(pOp(s.op).label)}</div><div class="score">${Math.round(frac*100)}%</div><div class="note" style="margin-top:6px">Knew ${cnt[2]} · Unsure ${cnt[1]} · Missed ${cnt[0]}${done<n?` · ${n-done} skipped`:""}</div></div></div>
-  ${rev.length?`<div class="panel"><div class="lab" style="margin-bottom:6px">To go over</div><div class="list">${rev.map(c=>`<div class="pRev"><span class="m ${s.first[c.id]===0?"w":""}" aria-label="${PGRADE[s.first[c.id]]}">${s.first[c.id]===0?"✕":"?"}</span><div><div class="pRq">${esc(c.q)}</div><div class="pRa">${esc(c.a)}</div></div></div>`).join("")}</div></div>`:""}
-  <div class="go">${rev.length?`<button class="btn wide" id="pAgain">Go over these ${rev.length} again</button>`:`<button class="btn wide" id="pRestart">Run the case again</button>`}<button class="ghost" id="pDone">Done</button></div>`;
-}
-
 /* ---------- render + events ---------- */
 function render(){
   clearInterval(tick);
@@ -1080,8 +989,6 @@ function render(){
   else if(S.view==="summary")v.innerHTML=`<div class="narrow" style="display:flex;flex-direction:column;gap:20px">${summary()}</div>`;
   else if(S.view==="cards")v.innerHTML=`<div class="narrow" style="display:flex;flex-direction:column;gap:14px">${cards()}</div>`;
   else if(S.view==="find")v.innerHTML=`<div class="narrow" style="display:flex;flex-direction:column;gap:14px">${findView()}</div>`;
-  else if(S.view==="pimp")v.innerHTML=`<div class="narrow" style="display:flex;flex-direction:column;gap:14px">${pimpView()}</div>`;
-  else if(S.view==="pimpSum")v.innerHTML=`<div class="narrow" style="display:flex;flex-direction:column;gap:20px">${pimpSum()}</div>`;
   else if(S.view==="mine")v.innerHTML=`<div class="narrow" style="display:flex;flex-direction:column;gap:14px">${mineView()}</div>`;
   let L=$("#sheetLayer");if(!L){L=document.createElement("div");L.id="sheetLayer";document.body.appendChild(L)}
   const sb=$("#sbody"),top=sb?sb.scrollTop:0;
@@ -1100,13 +1007,6 @@ document.addEventListener("click",e=>{
   const t=e.target.closest("button");if(!t)return;
   if(t.id==="exitBlock"){const b=S.block;if(!b){S.view="home";render();return}if(b.browse){leaveBrowse();return}if(b.finished){S.view="summary";render();window.scrollTo(0,0);return}const any=b.ids.some(id=>b.done[id]!=null);if(any)finish();else{S.block=null;S.view="home";render();window.scrollTo(0,0)}return}
   if(t.id==="resetProg"){const msg="Reset all progress? This clears every answer, flag and your streak"+(syncCode?" on this device and on every device using your sync code":S.store==="account"?" in your account":"")+". It cannot be undone.";if(confirm(msg))resetProgress();return}
-  if(t.dataset.op){startPimp(t.dataset.op);return}
-  if(t.id==="pShow"&&S.pimp){S.pimp.shown=true;render();return}
-  if(t.dataset.grade!=null&&S.pimp){pimpGrade(+t.dataset.grade);return}
-  if(t.id==="pExit"&&S.pimp){if(Object.keys(S.pimp.first).length){S.view="pimpSum"}else{S.pimp=null;S.view="home"}render();window.scrollTo(0,0);return}
-  if(t.id==="pAgain"&&S.pimp){const s=S.pimp;startPimp(s.op,[...new Set(s.ids)].filter(id=>s.first[id]!=null&&s.first[id]<2));return}
-  if(t.id==="pRestart"&&S.pimp){startPimp(S.pimp.op);return}
-  if(t.id==="pDone"){S.pimp=null;S.view="home";render();window.scrollTo(0,0);return}
   if(t.id==="toggleStats"){S.showStats=!S.showStats;render();return}
   if(t.id==="openSync"){S.sheet="sync";render();return}
   if(t.id==="syncOn"){syncCode=newCode();LS.put("rounds-sync",syncCode);syncInfo.state="syncing";syncPush(true);render();return}
@@ -1188,11 +1088,6 @@ document.addEventListener("keydown",e=>{
   if(e.key==="Escape"&&document.getElementById("zoomBg")){document.getElementById("zoomBg").remove();return}
   if(e.key==="Escape"&&S.sheet){S.sheet=false;render();return}
   if(e.key==="Enter"&&e.target&&e.target.id==="findIn"){e.target.blur();return}
-  if(S.view==="pimp"&&S.pimp&&!(e.target&&/INPUT|TEXTAREA/.test(e.target.tagName))){
-    if(!S.pimp.shown&&(e.key===" "||e.key==="Enter")){e.preventDefault();S.pimp.shown=true;render();return}
-    if(S.pimp.shown&&"123".includes(e.key)&&e.key.length===1){e.preventDefault();pimpGrade(+e.key-1);return}
-    return;
-  }
   if(S.view!=="quiz"||!S.block)return;
   if(e.target&&e.target.tagName==="TEXTAREA"){if(e.key==="Enter"&&(e.metaKey||e.ctrlKey)){const b=$("#showCh");if(b)b.click()}return}
   const k=e.key.toUpperCase();
