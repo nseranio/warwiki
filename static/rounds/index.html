@@ -311,8 +311,23 @@ h1.logo{cursor:pointer}
 #zoomBg{position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center;padding:16px;cursor:zoom-out}
 #zoomBg img{width:100%;height:100%;object-fit:contain}
 
-/* ---- Today, search, Your questions ---- */
-position:absolute;inset:0;display:grid;place-items:center;font:500 13px var(--sans);color:var(--ink2);z-index:1;padding-left:56px}
+/* ---- confidence buttons, Today, search, Your questions ---- */
+.confBtns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.cb{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:58px;padding:9px 6px;border-radius:8px;border:1.5px solid var(--cbc);background:var(--cbs);color:var(--cbc);font:600 15px/1.15 var(--sans);transition:transform .12s var(--ease),filter .15s,opacity .2s}
+.cb.c0{--cbc:var(--bad);--cbs:var(--badSoft)}.cb.c1{--cbc:var(--warn);--cbs:var(--warnSoft)}.cb.c2{--cbc:var(--ok);--cbs:var(--okSoft)}
+.cb:hover:not(:disabled){filter:brightness(1.06)}
+.cb:active:not(:disabled){transform:scale(.97)}
+.cb:disabled{opacity:.4;cursor:default}
+.cb .bars{display:flex;align-items:flex-end;gap:3px;height:17px}
+.cb .bars i{width:6px;border-radius:2px;background:currentColor;opacity:.22}
+.cb .bars i:nth-child(1){height:7px}.cb .bars i:nth-child(2){height:12px}.cb .bars i:nth-child(3){height:17px}
+.cb .bars i.on{opacity:1}
+.cb .cl{display:flex;align-items:baseline;gap:6px}
+.cb kbd{font:500 10.5px var(--mono);opacity:.7;display:none}
+@media (hover:hover) and (pointer:fine){.cb kbd{display:inline}}
+.dock .foot.two{flex-direction:column;align-items:stretch;gap:8px}
+.dock .foot.two .row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.confNote{font-size:12.5px;color:var(--ink2);text-align:right;white-space:nowrap}
 .today{display:flex;align-items:center;justify-content:space-between;gap:14px}
 .today .pv{font:600 18px/1.25 var(--sans);margin-top:2px}
 .today .note{margin-top:3px}
@@ -397,6 +412,7 @@ position:absolute;inset:0;display:grid;place-items:center;font:500 13px var(--sa
   .qimg img{max-height:min(560px,62vh)}
   .ans .block p{font-size:17px}
   .verdict{font-size:19px}
+  .cb{min-height:62px;font-size:16px}
   .sumTop{gap:36px}
   .score{font-size:56px}
   .narrow{max-width:880px;width:100%;margin:0 auto}
@@ -718,7 +734,7 @@ function quiz(){
       return `<button class="${cls}" data-ch="${k}" aria-pressed="${b.pick[q.id]===k}" ${answered?"aria-disabled=\"true\"":""}><span class="L">${L}</span><span class="ct">${esc(c)}${mk}</span>${why}</button>`}).join("")}</div>`;
   const ok=b.done[q.id];
   const ans=reveal?`<div class="panel ans">
-      <div class="verdict ${ok?"c":"w"}">${b.pre[q.id]?(ok?"Correct last time.":"Missed last time."):(ok?"Correct.":"Incorrect.")} The answer is (${"ABCDE"[q.answer]}).</div>
+      <div class="verdict ${ok?"c":"w"}">${b.pre[q.id]?(ok?"Correct last time.":"Missed last time."):(ok?"Correct.":"Incorrect.")} The answer is (${"ABCDE"[q.answer]}).${b.conf[q.id]!=null?`<span class="note" style="font-weight:400"> You said: ${CONF[b.conf[q.id]]}.</span>`:""}</div>
       ${(b.recallText||{})[q.id]?`<div class="block"><div class="lab">You recalled</div><p>${esc(b.recallText[q.id])}</p></div>`:""}
       <div class="block"><div class="lab">Explanation</div><p>${explainHTML(q)}</p></div>
       ${q.pearl?`<div class="block pearl"><div class="lab">Pearl</div><p>${esc(q.pearl)}</p></div>`:""}
@@ -729,16 +745,17 @@ function quiz(){
   const last=idx===b.ids.length-1;
   let action="";
   if(!answered&&hideChoices)action="";
-  else if(!answered)action=`<button class="btn wide" id="submit" ${b.pick[q.id]==null?"disabled":""}>${b.mode==="tutor"?"Submit":(last?"Submit and finish":"Submit and next")}</button>`;
+  else if(!answered)action=slider(b.pick[q.id]==null);
   else action=last?`<button class="btn wide" id="finish">${b.browse?"Back to list":b.finished?"Back to summary":"Finish block"}</button>`:`<button class="btn wide" id="next">Next question</button>`;
-    const fresh=S.shownIdx!==b.ids[idx];S.shownIdx=b.ids[idx];
+  const two=!answered&&!hideChoices;
+  const fresh=S.shownIdx!==b.ids[idx];S.shownIdx=b.ids[idx];
   if(wide()){
     const reviewed=b.mode==="tutor"||b.finished;
     const tiles=b.ids.map((id,k)=>{let c="";if(b.done[id]!=null)c=reviewed?(b.done[id]?"c":"w"):"a";if(k===idx)c+=" cur";if(S.prog[id]&&S.prog[id].flag)c+=" f";
       const st=b.done[id]==null?"not answered":reviewed?(b.done[id]?"correct":"incorrect"):"answered";
       return `<button data-jump="${k}" class="${c.trim()}" aria-label="Question ${k+1}, ${st}"${k===idx?' aria-current="step"':""}>${k+1}</button>`}).join("");
     const nDone=b.ids.filter(id=>b.done[id]!=null).length;
-    const keys=`<div class="keys"><span><kbd>A</kbd>to <kbd>E</kbd>choose</span><span><kbd>Enter</kbd>submit, then next</span></div>`;
+    const keys=`<div class="keys"><span><kbd>A</kbd>to <kbd>E</kbd>choose</span><span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd>submit: guessed, unsure, sure</span><span><kbd>Enter</kbd>next</span></div>`;
     const nav=b.browse?`<div class="panel">${keys}</div>`:`<div class="panel navP"><div class="navH"><span class="lab">${b.finished?"Review":b.mode==="timed"?"Timed block":"Tutor block"}</span><span class="note">${nDone} of ${b.ids.length} answered</span></div><div class="navGrid" role="group" aria-label="Go to question">${tiles}</div>${keys}</div>`;
     return `
   <div class="qbar"><button class="exitBtn" id="exitBlock">‹ ${b.browse?"Back":b.finished?"Summary":"Exit"}</button><div class="lab">Question ${idx+1} of ${b.ids.length}</div><div class="clock" id="clock">${b.finished?"Review":clock()}</div></div>
@@ -748,9 +765,9 @@ function quiz(){
   <div class="qbody"><div class="qn">${idx+1}.</div><div><div class="stem">${esc(q.stem)}</div>${q.image?figHTML(q.image):""}<div class="ask">${esc(q.question)}</div></div></div>
   ${choices}
   </div>
-  <div class="dock"><div class="foot">
+  <div class="dock"><div class="foot${two?" two":""}">${two?action+'<div class="row">':""}
     <div class="l"><button class="ghost icon" id="prev" ${idx?"":"disabled"} aria-label="Previous question" title="Previous">${ICON.back}</button><button class="ghost icon flag" id="flag" aria-pressed="${!!p.flag}" aria-label="${p.flag?"Unflag question":"Flag question"}" title="${p.flag?"Flagged":"Flag"}">${ICON.flag}</button><button class="ghost icon" id="quit" aria-label="${b.browse?"Back to list":b.finished?"Home":"End block"}" title="${b.browse?"Back to list":b.finished?"Home":"End block"}">${ICON.end}</button></div>
-    ${action}
+    ${two?`<span class="confNote">${b.pick[q.id]==null?"Pick an answer, then how sure you are":"Submit with how sure you are"}</span></div>`:action}
   </div></div>
   </div><aside class="qRail" aria-label="${reveal?"Answer and block":"Block"}">${ans}${nav}</aside></div>`;
   }
@@ -763,16 +780,21 @@ function quiz(){
   ${choices}
   ${ans}
   </div>
-  <div class="dock"><div class="foot">
+  <div class="dock"><div class="foot${two?" two":""}">${two?action+'<div class="row">':""}
     <div class="l"><button class="ghost icon" id="prev" ${idx?"":"disabled"} aria-label="Previous question" title="Previous">${ICON.back}</button><button class="ghost icon flag" id="flag" aria-pressed="${!!p.flag}" aria-label="${p.flag?"Unflag question":"Flag question"}" title="${p.flag?"Flagged":"Flag"}">${ICON.flag}</button><button class="ghost icon" id="quit" aria-label="${b.browse?"Back to list":b.finished?"Home":"End block"}" title="${b.browse?"Back to list":b.finished?"Home":"End block"}">${ICON.end}</button></div>
-    ${action}
+    ${two?`<span class="confNote">${b.pick[q.id]==null?"Pick an answer, then how sure you are":"Submit with how sure you are"}</span></div>`:action}
   </div></div>`;
 }
 function imgURL(f){return new URL(f,QBASE).href}
 function figHTML(im){const u=imgURL(im.file);return `<figure class="qimg"><button class="zoom" data-zoom="${esc(u)}" aria-label="Enlarge image"><img src="${esc(u)}" alt="${esc(im.alt||"")}" loading="lazy" decoding="async"></button><figcaption>${im.link?`<a href="${esc(im.link)}" target="_blank" rel="noopener">${esc(im.credit)}</a>`:esc(im.credit)}</figcaption></figure>`}
-function submit(){
+const CONF=["Guessed","Unsure","Sure"];
+const ARROW='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>';
+function slider(off){
+  return `<div class="confBtns" role="group" aria-label="Submit your answer with how sure you are">${CONF.map((l,k)=>`<button class="cb c${k}" data-conf="${k}" ${off?"disabled":""} aria-label="Submit: ${l}"><span class="bars" aria-hidden="true">${[0,1,2].map(i=>`<i${i<=k?' class="on"':""}></i>`).join("")}</span><span class="cl">${l}<kbd>${k+1}</kbd></span></button>`).join("")}</div>`;
+}
+function submit(conf){
   const b=S.block,q=cur();const k=b.pick[q.id];if(k==null||b.done[q.id]!=null)return;
-  const ok=k===q.answer;b.done[q.id]=ok;record(q,ok,null,k);
+  const ok=k===q.answer;b.done[q.id]=ok;b.conf=b.conf||{};if(conf!=null)b.conf[q.id]=conf;record(q,ok,conf,k);
   if(b.mode==="timed"){if(b.i<b.ids.length-1){b.i++}else{finish();return}}
   render();
 }
@@ -836,7 +858,8 @@ let IDX=null;
 function index(){if(IDX)return IDX;IDX={};S.qs.forEach(q=>{IDX[q.id]=norm([q.stem,q.question,(q.choices||[]).join(" "),q.explanation,q.trial,q.pearl,q.card,topicLabel(q.topic),q.image&&q.image.alt].join(" "))});return IDX}
 function statusOf(q){const p=S.prog[q.id];
   if(!p||!p.n)return p&&p.flag?["","Flagged, not answered"]:["","Not seen"];
-  if(p.last==="w")return ["w","Missed"];
+  if(p.last==="w")return ["w",p.mis?"Missed, was sure":"Missed"];
+  if(p.conf===0)return ["g","Correct, guessed"];
   return ["c","Correct"];}
 function qRow(q,attr){const [cls,lab]=statusOf(q);const p=S.prog[q.id]||{};
   return `<button class="qrow" ${attr}><i class="${cls}" aria-hidden="true"></i><span style="min-width:0"><span class="qt">${esc(q.stem)}</span><span class="qm"><span class="chip ${q.field==="oncology"?"onc":""}">${esc(topicLabel(q.topic))}</span>${q.image?'<span class="chip">Image</span>':""}<span class="note">${lab}${p.flag&&p.n?" · flagged":""}</span></span></span><span class="chev" aria-hidden="true">›</span></button>`}
@@ -863,7 +886,7 @@ function findView(){
   <div id="findRes" style="display:flex;flex-direction:column;gap:12px">${findResults()}</div>`;
 }
 function mineBase(){return S.qs.filter(q=>{const p=S.prog[q.id];return p&&(p.n||p.flag)})}
-const MF={all:["All",q=>S.prog[q.id].n],missed:["Missed",q=>S.prog[q.id].last==="w"],flagged:["Flagged",q=>S.prog[q.id].flag],images:["Images",q=>S.prog[q.id].n&&!!q.image]};
+const MF={all:["All",q=>S.prog[q.id].n],missed:["Missed",q=>S.prog[q.id].last==="w"],mis:["Missed when sure",q=>S.prog[q.id].mis],guessed:["Guessed right",q=>S.prog[q.id].last==="c"&&S.prog[q.id].conf===0],flagged:["Flagged",q=>S.prog[q.id].flag],images:["Images",q=>S.prog[q.id].n&&!!q.image]};
 function mineList(){
   const base=mineBase(),f=MF[S.mf||"all"]?S.mf||"all":"all";
   const list=base.filter(MF[f][1]);
@@ -1016,7 +1039,7 @@ document.addEventListener("click",e=>{
   const b=S.block;
   if(t.dataset.ch!=null&&b){const q=cur();if(b.done[q.id]!=null)return;b.pick[q.id]=+t.dataset.ch;render();return}
   if(t.id==="showCh"){const r=$("#recallIn");b.recallText=b.recallText||{};if(r&&r.value.trim())b.recallText[cur().id]=r.value.trim();b.shown[cur().id]=true;render();return}
-  if(t.id==="submit"&&b){submit();return}
+  if(t.dataset.conf!=null&&b){submit(+t.dataset.conf);return}
   if(t.dataset.jump!=null&&b){b.i=+t.dataset.jump;render();window.scrollTo(0,0);return}
   if(t.id==="next"){b.i++;render();window.scrollTo(0,0);return}
   if(t.id==="prev"){b.i--;render();window.scrollTo(0,0);return}
@@ -1041,7 +1064,8 @@ document.addEventListener("keydown",e=>{
   if(e.target&&e.target.tagName==="TEXTAREA"){if(e.key==="Enter"&&(e.metaKey||e.ctrlKey)){const b=$("#showCh");if(b)b.click()}return}
   const k=e.key.toUpperCase();
   if("ABCDE".includes(k)&&k.length===1){const btn=document.querySelector(`[data-ch="${"ABCDE".indexOf(k)}"]`);if(btn)btn.click()}
-  else if(e.key==="Enter"){const btn=$("#submit")||$("#next")||$("#finish");if(btn&&!btn.disabled)btn.click()}
+  else if("123".includes(e.key)&&e.key.length===1){const btn=document.querySelector(`.confBtns [data-conf="${+e.key-1}"]:not(:disabled)`);if(btn)btn.click()}
+  else if(e.key==="Enter"){const btn=$("#next")||$("#finish");if(btn&&!btn.disabled)btn.click()}
 });
 load();
 })();
