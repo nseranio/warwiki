@@ -141,6 +141,7 @@ Applies to every new or edited reference. Existing lines are not rewritten in bu
 - Year, volume and pages as in the version of record; when the online and print years differ, use the year printed with the volume.
 - Resolve every new DOI before committing (`scripts/audit/pubmed.py`, `scripts/refs/registry.py`). A group or society author is written as published (for example "American Urological Association").
 - `python3 scripts/refs/registry.py` re-checks every DOI-bearing reference against Crossref; run it after a large source dump.
+- Before committing new references, run `npm run refs:new` (or `python3 scripts/refs/check_new_refs.py [--since REV] [FILES]`). It fails on an unresolved DOI, a retraction or an expression of concern, and lists errata to read. `publish_batch.sh` runs it (November 15, 2026).
 
 ## 11. Openings (October 8, 2026)
 
@@ -224,7 +225,7 @@ Every figure carries the context that makes it comparable, written into the sent
 - **Ratios with their comparator.** An ICER is always written as option A versus option B, with its unit: "$116,427 per QALY gained with SNM versus onabotulinumtoxinA", "$573,000 per additional patient remaining on therapy with SNM versus PTNS". "Dominant" is written out once as lower cost and more QALYs. Give the willingness-to-pay threshold whenever a probability of cost-effectiveness is reported.
 - **Industry ties.** When authors are employees of the maker of an option, or the paper reports manufacturer funding, say so in the sentence ("a model by Medtronic-affiliated authors"). Do not infer funding from the topic.
 
-Leave out any element the source does not report; never fill one in from another paper. Prices come from published studies, not list prices, coding manuals or payer websites. Patient cost sharing, coverage rules and billing advice stay off the site.
+Every new cost reference passes `npm run refs:new` (retractions are common enough in this literature to matter: the pilot found one). Cost figures (currency amounts, per-QALY ratios, ICERs) are claim-gate units like any other number. Leave out any element the source does not report; never fill one in from another paper. Prices come from published studies, not list prices, coding manuals or payer websites. Patient cost sharing, coverage rules and billing advice stay off the site.
 
 Sections 11, 12 and 14 apply. Open the paragraph with what the cost evidence shows ("Analyses comparing SNM with onabotulinumtoxinA reached different conclusions by time horizon and setting: …"), give each study once, and group by comparison (A versus B, then A versus C). Report the authors' own conclusion only as their stated result ("judged onabotulinumtoxinA the most cost-effective option"). No commentary: no "cost is an important consideration", "value-based care", "should be weighed" or "may influence the choice". A two-option comparison may appear on both options' pages with identical figures; the fuller account sits on the page where the decision is usually made, and the other page gives the headline result and links to it.
 

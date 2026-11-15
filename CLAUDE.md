@@ -137,6 +137,7 @@ Before committing:
 | Freshness advisory | `npm run lint:freshness` |
 | External links | `npm run lint:external-links` or `node scripts/check-external-links.js --sample 200` (needs open network) |
 | Stub tracker | `npm run status` |
+| New-reference check (DOI resolves; no retraction or expression of concern; errata listed) | `npm run refs:new` (needs network; `publish_batch.sh` runs it) |
 | Unit tests | `npx vitest run` |
 | Video registry sync | `npm run videos:sync` (needs `YT_API_KEY` in `.env`) |
 | Video candidates for a page | `node scripts/suggest-page-videos.js <page.mdx>` (needs `src/data/videos.generated.json` from a sync) |

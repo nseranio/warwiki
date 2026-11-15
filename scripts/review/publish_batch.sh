@@ -8,6 +8,7 @@ python3 -c "import json;print('\n'.join(json.load(open('$D/touched.json'))))" > 
 [ -s $F ] || { echo "nothing touched"; exit 0; }
 xargs sed -i '' -E 's/[[:space:]]+$//' < $F
 cp $F $F.g; [ -s $F.g ] && { xargs python3 scripts/review/gate.py check < $F.g > /dev/null || { echo "CLAIM GATE FAILS: not publishing"; xargs python3 scripts/review/gate.py check < $F.g | head; exit 1; }; }
+xargs python3 scripts/refs/check_new_refs.py < $F || { echo "NEW REFERENCE CHECK FAILS (unresolved DOI, retraction or concern): not publishing"; exit 1; }
 grep -q "✗" $D/lint.log && { echo "LINT FAILED: not publishing"; grep -A3 "✗" $D/lint.log | head; exit 1; }
 grep -q "\[SUCCESS\]" $D/build.log || { echo "BUILD LOG HAS NO SUCCESS: not publishing"; exit 1; }
 xargs git diff --check -- < $F

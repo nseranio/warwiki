@@ -340,5 +340,18 @@ class OrchestratorTests(Fixture):
         self.assertIsNone(self.O.verify_problem(self.job, ["claims/u"]))
 
 
+
+class CostFigures(unittest.TestCase):
+    """November 15, 2026: plain cost figures escaped the gate until COST was added."""
+
+    def test_cost_figures_are_number_claims(self):
+        for s in ["Costs were $9,579 and $9,017.", "The sling saved CA$4,710.", "It cost £363 more.",
+                  "An ICER of €27,991 per QALY.", "The ratio was 12 per QALY gained.", "Delivery cost US$5 each."]:
+            self.assertTrue(G.COST.search(s), s)
+
+    def test_plain_text_is_not_a_cost_figure(self):
+        for s in ["Three cases were reported.", "The $ sign alone is not a figure.", "costs rose"]:
+            self.assertFalse(G.COST.search(s), s)
+
 if __name__ == "__main__":
     unittest.main()

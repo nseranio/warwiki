@@ -27,7 +27,8 @@ There is no bulk baseline: `baseline` refuses.
   python3 scripts/review/gate.py stats [--json]          counts by status and kind (what is verified vs carried over)
   python3 scripts/review/gate.py migrate                 (one-off) schema 1 -> 2; writes the migration summary
 
-Claim kinds: "dose", "guideline", "number" and "absolute" (see the regular expressions below), excluding negated
+Claim kinds: "dose", "guideline", "number" (including cost figures: currency amounts, per-QALY ratios, ICERs)
+and "absolute" (see the regular expressions below), excluding negated
 hedges such as "is not a universal rule". Lines inside JSX components, imports and figures are not extracted; those
 surfaces are listed for manual review in reports/quality/coverage-matrix.md.
 """
@@ -59,6 +60,8 @@ GUIDE_GENERIC = re.compile(r"\bguidelines?\s+(?:\w+\s+){0,3}(?:recommend(?:s|ed)
 GUIDE_STATEMENT = re.compile(r"\b(?:guideline\s+)?statement\s*\#?\s*\d+[a-z]?\b", re.I)
 STRONG = re.compile(r"\d(?:[\d.,]*)\s?%|\b\d+\s?/\s?\d+\b|\b(?:OR|HR|RR|IRR|aOR|aHR)\b(?=[^.|]{0,15}\d)|\bCI\b|\bn\s?=\s?\d|"
                     r"\b(?:mean|median)\b[^.|]{0,40}\d")
+# Cost figures (STYLE.md section 15, November 15, 2026): a currency amount, a ratio per QALY, or an ICER.
+COST = re.compile(r"(?:US|CA|AU|A|NZ)?\$\s?\d|[£€]\s?\d|\b\d[\d,.]*\s?(?:per|/)\s?QALY\b|\bICERs?\b", re.I)
 CONTRA = re.compile(r"contraindicat", re.I)
 DOI = re.compile(r"\b10\.\d{4,9}/[^\s\])>\"']+", re.I)
 PMID = re.compile(r"\bPMID:?\s*(\d{5,9})\b", re.I)
@@ -282,7 +285,7 @@ def units_of(path):
         for u in us:
             plain = C.CITE.sub("", u)
             kinds = []
-            if STRONG.search(plain) or (C.STAT.search(plain) and C.CITE.search(u)):
+            if STRONG.search(plain) or COST.search(plain) or (C.STAT.search(plain) and C.CITE.search(u)):
                 kinds.append("number")
             if is_absolute(u):
                 kinds.append("absolute")
