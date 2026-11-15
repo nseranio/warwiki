@@ -1,6 +1,6 @@
 # Cost and value: site-wide rollout plan (November 15, 2026)
 
-Convention: STYLE.md section 15. Done so far: the pilot (5 pages, `cf43bc3b`) and Tier A (8 decision groups on 12 pages, `8f3f3a2a`). Pipeline fixes (`8397bf3f`): the claim gate now treats currency amounts, per-QALY ratios and ICERs as number claims, and `npm run refs:new` blocks unresolved DOIs, retractions and expressions of concern.
+Convention: STYLE.md section 15. Done: the pilot (5 pages, `cf43bc3b`), Tier A (8 decision groups on 12 pages, `8f3f3a2a`), B1 (13 pages, `6b4cd59f`), B2 (19 pages, `6c5ada74`) and WHITWIKI ranks 1–9 (27 pages). Remaining only on request: Tier C and WHITWIKI ranks 10–11. Pipeline fixes (`8397bf3f`): the claim gate now treats currency amounts, per-QALY ratios and ICERs as number claims, and `npm run refs:new` blocks unresolved DOIs, retractions and expressions of concern.
 
 ## How the list was made
 
