@@ -1,0 +1,75 @@
+# Draft: Cost and Value for Sacrocolpopexy
+
+## 1. Target page and placement
+
+Page: `docs/04-surgical-techniques/04g-prolapse-repair/apical/sacrocolpopexy.mdx`
+
+Insert a new `## Cost and Value` section after the end of `## Efficacy: Read the Endpoint Before the Percentage` (after the paragraph "Counsel with separate outcomes: ..." and before `## Complications and Follow-up`). It is `##` because the cost studies cover three comparisons (robotic versus laparoscopic and open, abdominal versus vaginal apical repair, hysterectomy versus uterine preservation), per STYLE.md section 15.
+
+## 2. Section text (paste as is)
+
+## Cost and Value
+
+Robotic sacrocolpopexy cost more than conventional laparoscopic sacrocolpopexy in both randomized trials that measured cost, in a decision model and in a national database analysis. In the single-center randomized trial by Paraiso and colleagues (78 women, health care system perspective, published 2011), the robotic group's cost exceeded the laparoscopic group's by a mean $1,936 (95% CI $417 to $3,454; P = .008).<sup>[[54]](#ref54)</sup> In the randomized ACCESS trial (78 women, hospital and physician costs, published 2014), mean hospital costs over 6 weeks were $20,898 with robotic and $12,170 with laparoscopic sacrocolpopexy (P &lt; .001); when robot purchase and maintenance costs were excluded, they were $13,867 versus $12,170 (P = .060).<sup>[[55]](#ref55)</sup> A cost-minimization decision model (2008 US dollars) in which the hospital already owned a robot estimated $8,508 per procedure for robotic, $7,353 for laparoscopic and $5,792 for abdominal sacrocolpopexy; robotic and laparoscopic sacrocolpopexy became cost-equivalent only when robotic operative time fell to 149 minutes, robotic disposables cost $2,132, or laparoscopic disposables cost $3,413.<sup>[[56]](#ref56)</sup> In the US Nationwide Readmissions Database (2009 to 2015; 7,675 weighted patients having hysterectomy with concurrent sacrocolpopexy; costs estimated from charges and cost-to-charge ratios; published 2022), median hospital costs were $16,367 with robot-assisted and $13,898 with conventional laparoscopic procedures, an adjusted cost ratio of 1.24 (95% CI 1.17 to 1.31).<sup>[[57]](#ref57)</sup>
+
+Single-institution comparisons of robotic and open sacrocolpopexy reached different conclusions. In a consecutive series of 91 open and 73 robotic sacrocolpopexies performed beyond the surgical learning curve, with robot cost and maintenance included (published 2012), median direct hospital costs were $6,668 with the robot and $7,804 with open surgery (P = .002); median operative time was 212 versus 166 minutes and length of stay 2 versus 3 days.<sup>[[58]](#ref58)</sup> A cost-minimization analysis from a retrospective cohort (2006 to 2010, published 2012) estimated $10,178 for robot-assisted and $11,307 for open sacrocolpopexy, a 10% saving, with institutional robotic case volume, length of stay and cost per hospital day the largest drivers.<sup>[[59]](#ref59)</sup> In a hospital cohort of 203 robotic and 291 abdominal cases (July 2018 to May 2022, published 2025), costs were $8,747.48 with robotic and $7,675.99 with abdominal sacrocolpopexy (P &lt; .0001), and reimbursement was $10,102.28 versus $16,210.48 (P &lt; .0001).<sup>[[60]](#ref60)</sup>
+
+Compared with vaginal apical repair, abdominal sacral colpopexy cost more than vaginal sacrospinous colpopexy in the randomized trial of 95 women with vault prolapse (P &lt; .01).<sup>[[35]](#ref35)</sup> In a single-institution retrospective cohort of 512 women with post-hysterectomy vault prolapse (2000 to 2012, inverse-probability weighting, published 2017), median cost was $8,776 with Mayo-McCall culdoplasty (n = 174), $12,695 with open abdominal sacrocolpopexy (n = 237) and $13,107 with robotic sacrocolpopexy (n = 101) (P &lt; .01).<sup>[[42]](#ref42)</sup> A stochastic Markov model of apical prolapse pathways from the health care system perspective (2019 US dollars, 5- and 10-year horizons, willingness-to-pay threshold $50,000 per QALY) found the vaginal-only approach the only cost-effective surgical pathway over 5 years: laparoscopic sacrocolpopexy followed by vaginal repair for recurrence had an ICER above $500,000 compared with the vaginal-only approach. Over 10 years, the ICER was $6,176 with laparoscopic-first sacrocolpopexy compared with the vaginal-only approach, and $35,479 with robotic-first sacrocolpopexy when laparoscopy was not available.<sup>[[61]](#ref61)</sup>
+
+For concomitant hysterectomy, a decision-tree model comparing supracervical hysterectomy with sacrocolpopexy and minimally invasive sacrohysteropexy (published 2026) estimated an ICER of $59,820 per QALY gained with supracervical hysterectomy and sacrocolpopexy versus sacrohysteropexy; the probability that supracervical hysterectomy with sacrocolpopexy was cost-effective was 55.4% at a willingness-to-pay threshold of $100,000 per QALY and 57.9% at $200,000. Per 10,000 patients, sacrohysteropexy was associated with 648 additional major surgical procedures, 5 endometrial cancer cases and 2 endometrial cancer deaths.<sup>[[62]](#ref62)</sup>
+
+## 3. New reference lines (page format; append after ref53, in order of first appearance; ref35 and ref42 already exist)
+
+<a id="ref54"></a>54. Paraiso MFR, Jelovsek JE, Frick A, Chen CCG, Barber MD. "Laparoscopic compared with robotic sacrocolpopexy for vaginal prolapse: a randomized controlled trial." *Obstet Gynecol.* 2011;118(5):1005-1013. doi:[10.1097/AOG.0b013e318231537c](https://doi.org/10.1097/AOG.0b013e318231537c)
+
+<a id="ref55"></a>55. Anger JT, Mueller ER, Tarnay C, et al. "Robotic compared with laparoscopic sacrocolpopexy: a randomized controlled trial." *Obstet Gynecol.* 2014;123(1):5-12. doi:[10.1097/AOG.0000000000000006](https://doi.org/10.1097/AOG.0000000000000006)
+
+<a id="ref56"></a>56. Judd JP, Siddiqui NY, Barnett JC, Visco AG, Havrilesky LJ, Wu JM. "Cost-minimization analysis of robotic-assisted, laparoscopic, and abdominal sacrocolpopexy." *J Minim Invasive Gynecol.* 2010;17(4):493-499. doi:[10.1016/j.jmig.2010.03.011](https://doi.org/10.1016/j.jmig.2010.03.011)
+
+<a id="ref57"></a>57. Andiman SE, Bui AH, Ascher-Walsh C, Wright JD, Xu X. "Surgical complications and hospital costs in robot-assisted versus conventional laparoscopic hysterectomy with concurrent sacrocolpopexy: analysis of the Nationwide Readmissions Database." *Female Pelvic Med Reconstr Surg.* 2022;28(5):e142-e148. doi:[10.1097/SPV.0000000000001133](https://doi.org/10.1097/SPV.0000000000001133)
+
+<a id="ref58"></a>58. Hoyte L, Rabbanifard R, Mezzich J, Bassaly R, Downes K. "Cost analysis of open versus robotic-assisted sacrocolpopexy." *Female Pelvic Med Reconstr Surg.* 2012;18(6):335-339. doi:[10.1097/SPV.0b013e318270ade3](https://doi.org/10.1097/SPV.0b013e318270ade3)
+
+<a id="ref59"></a>59. Elliott CS, Hsieh MH, Sokol ER, Comiter CV, Payne CK, Chen B. "Robot-assisted versus open sacrocolpopexy: a cost-minimization analysis." *J Urol.* 2012;187(2):638-643. doi:[10.1016/j.juro.2011.09.160](https://doi.org/10.1016/j.juro.2011.09.160)
+
+<a id="ref60"></a>60. Korn E, Welton C, Garely A, Govindarajulu U, Rahimi S. "A cohort study comparing cost-efficiency of abdominal and robotic sacrocolpopexy." *Urology.* 2025;196:110-114. doi:[10.1016/j.urology.2024.10.073](https://doi.org/10.1016/j.urology.2024.10.073)
+
+<a id="ref61"></a>61. Wang R, Hacker MR, Richardson M. "Cost-effectiveness of surgical treatment pathways for prolapse." *Female Pelvic Med Reconstr Surg.* 2021;27(2):e408-e413. doi:[10.1097/SPV.0000000000000948](https://doi.org/10.1097/SPV.0000000000000948)
+
+<a id="ref62"></a>62. Griswold LH, Dengler KL, Welch EK, Brown J. "Cost-effectiveness of sacrohysteropexy versus hysterectomy with sacrocolpopexy." *Urogynecology (Phila).* 2026;32(4):454-463. doi:[10.1097/SPV.0000000000001842](https://doi.org/10.1097/SPV.0000000000001842)
+
+## 4. Edits to existing text
+
+1. Line 98 (Efficacy, Longer-term outcomes), move the cost clause to the new section.
+   Old: `the abdominal route had longer operating time, slower return to daily activities and greater cost.<sup>[[35]](#ref35)</sup>`
+   New: `the abdominal route had longer operating time and slower return to daily activities.<sup>[[35]](#ref35)</sup>`
+2. Ref 42 (Anand 2017) is in the References list but the page text does not cite it inline (grep finds only the definition). The new section cites it inline, which resolves that. Its line is `42. Anand M, et al. ...` with no author list; optional fix to the full author list: Anand M, Weaver AL, Fruth KM, Borah BJ, Klingele CJ, Gebhart JB.
+3. Optional pointer, end of `## Open, Laparoscopic and Robotic Approaches` second paragraph ("...observational cohorts.<sup>[[4]](#ref4)</sup>"): add ` Cost comparisons are in [Cost and Value](#cost-and-value).`
+
+## 5. Source table
+
+| Statement | PMID | Supporting quote |
+|---|---|---|
+| Paraiso: 78 women, single-center, health care system perspective, +$1,936 (CI), P=.008 | 21979458 | "cost from a health care system perspective" ; "greater cost than the laparoscopic group (mean difference +$1,936; 95% CI $417-$3,454; P=.008)" ; "single-center, blinded randomized trial" |
+| ACCESS: 78 women, $20,898 vs $12,170, $13,867 vs $12,170 | 24463657 | "hospital costs remained higher for robotic sacrocolpopexy ($20,898 compared with $12,170, P<.001)" ; "hospital costs over 6 weeks ($13,867 compared with $12,170; P=.060)" |
+| ACCESS "hospital and physician costs" (perspective wording) | 24463657 (PMC4266590 full text) | "Healthcare costs were assessed from the healthcare provider's (i.e., hospital and physician's) perspectives" |
+| Judd: 2008 US dollars; $8,508/$7,353/$5,792; equivalence at 149 min, $2,132, $3,413 | 20621010 | "costs (2008 US dollars)" ; "robotic sacrocolpopexy was the most expensive, $8508 per procedure compared with laparoscopic sacrocolpopexy at $7353 and abdominal sacrocolpopexy at $5792" ; "only when robotic operative time was reduced to 149 minutes, robotic disposables costs were reduced to $2132, or laparoscopic disposable costs were increased to $3413" |
+| Andiman: NRD 2009-2015, 7,675, $16,367 vs $13,898, ratio 1.24 | 35113048 | "2009-2015 Nationwide Readmissions Database" ; "median costs, $16,367 vs $13,898" ; "adjusted cost ratio of 1.24 (95% confidence interval, 1.17-1.31" ; "weighted sample included a total of 7,675 patients" ; "Hospital costs were estimated using charges and cost-to-charge ratios" |
+| Hoyte: 91 open, 73 robotic, learning curve, $6,668 vs $7,804, 212 vs 166 min, LOS 2 vs 3 | 23143426 | "Median robotic and open procedure direct costs were $6668 and $7804 (P = 0.002)" ; "Median operative times for open and robotic approaches were 166 and 212 minutes" ; "length of stay was 3 versus 2 days" ; "Robot cost and maintenance were included" |
+| Elliott: 2006-2010, $10,178 vs $11,307, 10%, drivers | 22177180 | "overall 10% cost savings for robot-assisted vs open sacrocolpopexy ($10,178 vs $11,307)" ; "between 2006 and 2010" ; "number of institutional robotic cases done annually, length of stay and cost per hospitalization day ... largest drivers" |
+| Korn: 203 vs 291, 2018-2022, $8,747.48 vs $7,675.99, reimbursement | 39510213 | "Abdominal procedures were associated with lower costs ($7675.99 vs 8747.48, P <.0001) and higher reimbursement rates ($ 16,210.48 vs $ 10,102.28" ; "203 robotic and 291 abdominal cases" ; "between July 1, 2018 and May 31, 2022" |
+| Maher: abdominal cost more than vaginal, P<.01 | 14749629 | "a longer operating time, a slower return to activities of daily living, and a greater cost than the sacrospinous colpopexy (P<.01)" |
+| Anand: 512 women, 2000-2012, IPW, medians $8,776/$12,695/$13,107, n=174/237/101 | 27682746 | "median cost (US $8,776 vs $12,695 for ASC, US $8,773 vs $13,107 for RSC)" ; "512 patients met the inclusion criteria (174 MMC, 237 ASC, and 101 RSC)" ; "between January 1, 2000, and June 30, 2012" |
+| Wang: Markov, health care system perspective, 5 and 10 years, WTP $50,000, ICERs; 2019 US dollars | 32941315 | "ICER, >$500,000" ; "ICER of US $6,176" ; "ICER, US $35,479" ; "calculated costs from the health care system's perspective" ; PMC8579510: "were in 2019 US dollars" |
+| Griswold: decision tree, $59,820/QALY, 55.4% at $100,000, 57.9% at $200,000, 648/5/2 per 10,000 | 41854470 | "ICER of $59,820/QALY compared with MISH" ; "chance of SCH-SCP being cost-effective was 55.4% at a WTP of $100,000 and 57.9% at a WTP of $200,000" ; "additional 648 major surgical procedures, 5 endometrial cancer cases, and 2 endometrial cancer deaths" |
+
+## 6. Notes
+
+- Retraction check (efetch XML for 21979458, 24463657, 20621010, 35113048, 23143426, 22177180, 39510213, 14749629, 27682746, 32941315, 41854470): no retraction or expression of concern. **Erratum:** Anger 2014 (24463657) has an ErratumIn, Obstet Gynecol 2014 Jul;124(1):165. I could not locate the erratum record on PubMed or Crossref, so its content is unknown. The cost figures I cite match both the PubMed abstract and the PMC full text (PMC4266590), but someone should open the erratum before publishing.
+- Crossref resolves all DOIs (200) for refs 54 to 62.
+- Industry ties: no manufacturer affiliations in any record (all abstracts' affiliations checked for Intuitive, Ethicon, Medtronic, Boston Scientific, Coloplast, Astora, Covidien). Anand: author Gebhart discloses consulting for Astora (a mesh maker) and royalties; not stated in the text because it is not funding or employment.
+- Price year not stated in the abstract: Paraiso, ACCESS, Andiman, Hoyte, Elliott, Korn, Anand, Griswold, so "published YYYY" used; ACCESS perspective taken from PMC full text. Setting: Judd (US dollars), Andiman (US database), Wang (US dollars) given; others show dollars only. Paraiso horizon, Anand's "costs to patients" wording are not given; Anand's text says "median cost". Griswold perspective and horizon not in abstract and omitted; its price year is unknown.
+- Hospital cohorts (Hoyte, Elliott, Korn) are retrospective; the section names their design in each sentence.
+- Considered and rejected: Callewaert 2016 and Pan 2016 systematic reviews of robotic versus laparoscopic (clinical, no cost model); Iavazzo 2014 (gynecologic robotics review, not sacrocolpopexy-specific); Ehlert 2016 robotic sacrocolpopexy versus transvaginal mesh (used in the mesh draft instead); Chang 2022/2023 genital hiatus and Richardson 2013 sling-at-sacrocolpopexy models (concomitant procedures, not the decisions named; could be added under Concomitant Anti-Incontinence Procedures if wanted); Harvie 2026 SUPeR (mesh page).
+- Brief says 3 to 7 studies; this draft has 10 because the page has three distinct decisions. If shortening, drop Korn, Andiman and Griswold first. Griswold concerns sacrohysteropexy (the page links it; the owner does not offer it in practice materials), so omit if the owner prefers.
+- The Hoyte and Elliott sentences report only authors' stated results; the open-versus-robotic section carries no conclusion sentence of its own.

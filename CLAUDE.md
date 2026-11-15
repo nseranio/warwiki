@@ -6,6 +6,8 @@ Read this at the start of a session. It is the working handbook: current state, 
 
 ## Current State (October 14, 2026, evening)
 
+- **Cost and value (November 14–15):** STYLE.md section 15 (one Cost and Value subsection per page; every figure with setting/payer, currency and price year, perspective, design and horizon; ICERs with both options). Pilot (5 pages) and Tier A (8 decision groups, 12 pages) published; the claim gate now covers cost figures and `npm run refs:new` blocks retracted or unresolvable new references. Ranked site-wide plan (about 75 more pages across both sites): `reports/2026-11-15/cost-value/rollout-plan.md`; waits on the owner. Detail in CHANGELOG.
+
 - **November 14 (later):** owner answered the open decisions on an interactive page (offer this format for future decision batches): wording-sweep six applied (society paragraphs out of 18 cosmetic openings, stem-cell repeat quote, feminizing sources paragraph, incontinence landing trimmed, Launch Note and IMvigor011 cut), Dwyer card dates, simple-prostatectomy handout transfusion in words; links stay color-only and citation spacing unchanged. Open: old TTS audio deletion needs the Blob token (CLI login expired); owner turns on Vercel deployment checks; PTNS device, semen lab and Glean length unknown (sheets work without them).
 
 - **November 14:** held facts-only pages published; October 27 unverifiable trial details all verified except the InhibiZone 2009 FDA date (Mulcahy 2021 wanted); Lighthouse re-measure (`reports/2026-11-14/lighthouse/`): contrast fixed, prose-link underlines and citation tap spacing are owner decisions. Open owner questions unchanged (wording-sweep six, practice-sheet clinic facts, transfusion figure, bio card dates, old TTS audio).

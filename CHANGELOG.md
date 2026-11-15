@@ -6,6 +6,15 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## November 14–15, 2026 — Cost and value (STYLE.md section 15, pilot, Tier A, pipeline)
+
+- **Convention.** STYLE.md section 15: one Cost and Value subsection per page, after the comparison material; every figure states setting and payer, currency and price year (publication year when none is given), perspective, design and horizon; ICERs name both options and the unit; willingness-to-pay thresholds go with any probability of cost-effectiveness; manufacturer employment or funding is stated when the paper reports it. No currency conversion, list prices, coverage or billing advice.
+- **Pilot (`cf43bc3b`):** PTNS, SNM, Intradetrusor OnabotulinumtoxinA, DVIU and Urethral Dilation, Prolapse Pessaries (21 studies). Autiero 2015 (BJU Int, UK SNM model) turned out to be retracted (2018) and was removed before commit.
+- **Tier A (`8f3f3a2a`):** Male Urethral Slings (AUS headline), Female Slings & Suspensions (mini-sling headline), Urodynamics, Pelvic Floor PT (behavioral page pointer), Mesh & Graft-Augmented Repair, Sacrocolpopexy, Recurrent UTI, Drug-Coated Balloon (pharmacology pointer); 45 studies. Four Claude research agents drafted from a common brief (`reports/2026-11-15/cost-value/tierA/`), Claude edited, the claim gate made eight scope corrections from full texts (PROSPECT figures are the primary-repair trial at 2 years; ALTAR's from 121 complete pairs; BUS figures are ICERs; Paraiso costs for 68 operated women).
+- **Pipeline (`8397bf3f`):** the claim gate counts currency amounts, per-QALY ratios and ICERs as number claims (41 existing sentences recorded legacy-unverified, detector `cost-gate-widening-2026-11-15`; the 22 new ones gated, three corrections). `npm run refs:new` (`scripts/refs/check_new_refs.py`) fails on an unresolved DOI, retraction or expression of concern in newly added references and lists errata; `publish_batch.sh` runs it.
+- **Open:** Martinson 2013 erratum (J Urol 2013;190:1142) and Anger 2014 erratum (Obstet Gynecol 2014;124:165) unread (paywalled); MASTER centre count (page says 27, HTA abstract 28); Harvie 2026 SUPeR economic paper cited by PMID until its DOI registers.
+- **Next:** rollout plan in `reports/2026-11-15/cost-value/rollout-plan.md` (inventory of 924 pages on both sites; about 40 more WARWIKI and 35 WHITWIKI pages in roughly nine batches; owner go-ahead pending).
+
 ## November 14, 2026 — Owner decisions applied (decision page)
 
 - The owner answered the open decisions on an interactive page (Artifact WVH8xk1JKPvbDb7i1ErAYi): each card showed the live text, the proposed change and recommended answers.
