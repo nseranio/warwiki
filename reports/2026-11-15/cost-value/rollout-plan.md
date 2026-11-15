@@ -1,6 +1,6 @@
 # Cost and value: site-wide rollout plan (November 15, 2026)
 
-Convention: STYLE.md section 15. Done: the pilot (5 pages, `cf43bc3b`), Tier A (8 decision groups on 12 pages, `8f3f3a2a`), B1 (13 pages, `6b4cd59f`), B2 (19 pages, `6c5ada74`) and WHITWIKI ranks 1–9 (27 pages, `a729d0a`) and 10–11 (5 pages, `c1ba3cc`). The plan is complete; Tier C only on request. Pipeline fixes (`8397bf3f`): the claim gate now treats currency amounts, per-QALY ratios and ICERs as number claims, and `npm run refs:new` blocks unresolved DOIs, retractions and expressions of concern.
+Convention: STYLE.md section 15. Done: the pilot (5 pages, `cf43bc3b`), Tier A (8 decision groups on 12 pages, `8f3f3a2a`), B1 (13 pages, `6b4cd59f`), B2 (19 pages, `6c5ada74`) and WHITWIKI ranks 1–9 (27 pages, `a729d0a`) and 10–11 (5 pages, `c1ba3cc`). The plan is complete. Tier C was approved by the owner the same day and done on 16 pages (see CHANGELOG); women's cancer screening and osteoporosis pages were skipped as general-medicine economics, and pages without cost literature got nothing. Pipeline fixes (`8397bf3f`): the claim gate now treats currency amounts, per-QALY ratios and ICERs as number claims, and `npm run refs:new` blocks unresolved DOIs, retractions and expressions of concern.
 
 ## How the list was made
 
