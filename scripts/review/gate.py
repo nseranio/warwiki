@@ -61,7 +61,8 @@ GUIDE_STATEMENT = re.compile(r"\b(?:guideline\s+)?statement\s*\#?\s*\d+[a-z]?\b"
 STRONG = re.compile(r"\d(?:[\d.,]*)\s?%|\b\d+\s?/\s?\d+\b|\b(?:OR|HR|RR|IRR|aOR|aHR)\b(?=[^.|]{0,15}\d)|\bCI\b|\bn\s?=\s?\d|"
                     r"\b(?:mean|median)\b[^.|]{0,40}\d")
 # Cost figures (STYLE.md section 15, November 15, 2026): a currency amount, a ratio per QALY, or an ICER.
-COST = re.compile(r"(?:US|CA|AU|A|NZ)?\$\s?\d|[£€]\s?\d|\b\d[\d,.]*\s?(?:per|/)\s?QALY\b|\bICERs?\b", re.I)
+COST = re.compile(r"(?:US|CA|AU|A|NZ)?\$\s?\d|[£€¥]\s?\d|\b(?:PLN|CHF|SEK|NOK|DKK|EUR|USD|GBP|CAD|AUD|JPY|CNY|BRL)\s?\d|"
+                  r"\bper\s+(?:additional\s+)?QALYs?\b|/\s?QALY\b|\bQALYs?\s+(?:gained|lost)\b|\bICERs?\b", re.I)
 CONTRA = re.compile(r"contraindicat", re.I)
 DOI = re.compile(r"\b10\.\d{4,9}/[^\s\])>\"']+", re.I)
 PMID = re.compile(r"\bPMID:?\s*(\d{5,9})\b", re.I)

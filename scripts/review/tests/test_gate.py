@@ -346,7 +346,8 @@ class CostFigures(unittest.TestCase):
 
     def test_cost_figures_are_number_claims(self):
         for s in ["Costs were $9,579 and $9,017.", "The sling saved CA$4,710.", "It cost £363 more.",
-                  "An ICER of €27,991 per QALY.", "The ratio was 12 per QALY gained.", "Delivery cost US$5 each."]:
+                  "An ICER of €27,991 per QALY.", "The ratio was 12 per QALY gained.", "Delivery cost US$5 each.",
+                  "It estimated PLN 56.1 thousand per QALY gained.", "Costs were CHF 4,000 higher."]:
             self.assertTrue(G.COST.search(s), s)
 
     def test_plain_text_is_not_a_cost_figure(self):
