@@ -3989,3 +3989,15 @@ html[data-section='populations'] .wk-landing:not(.wk-landing--root) .markdown > 
 .wk-ev-trial-facts table th {width: 25%; text-align: left; vertical-align: top; font-size: .8rem; font-weight: 600; color: var(--ifm-color-primary);}
 .wk-ev-trial-registration {font-size: .8rem;}
 .wk-ev-trial-facts + p {font-size: .85rem;}
+
+/* Clinical Care hub: one section per group, every page listed (pilot) */
+.wk-sl-jump {display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.25rem 0 .5rem;}
+.wk-sl-jump a {padding: .35rem .8rem; border: 1px solid var(--warwiki-border); border-radius: 999px; font-size: .875rem; font-weight: 500; color: var(--warwiki-text-muted); text-decoration: none;}
+.wk-sl-jump a:hover {color: var(--ifm-color-primary); border-color: var(--ifm-color-primary); text-decoration: none;}
+.wk-sl-section {margin-top: 2.5rem; scroll-margin-top: calc(var(--ifm-navbar-height) + 1rem);}
+.markdown .wk-sl-section-title {font-size: 1.5rem; margin: 0 0 .35rem; padding-bottom: .5rem; border-bottom: 1px solid var(--warwiki-border);}
+.markdown .wk-sl-section-title a {color: inherit; text-decoration: none;}
+.markdown .wk-sl-section-title a:hover {color: var(--ifm-color-primary);}
+.markdown .wk-sl-section-desc {color: var(--warwiki-text-muted); margin: .5rem 0 0;}
+.wk-sl-hub .wk-sl {margin-top: 1rem;}
+.markdown h3.wk-sl-card-title {font-size: 1.05rem;}

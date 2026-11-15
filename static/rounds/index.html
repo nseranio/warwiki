@@ -450,26 +450,28 @@ h1.logo{cursor:pointer}
   .sfoot{border-radius:0 0 12px 12px}
 }
 
-/* ---- site bar: the WARWIKI/WHITWIKI navbar, so Rounds reads as part of the site ---- */
-.siteBar{position:sticky;top:0;z-index:20;background:var(--panel);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
-.sbIn{max-width:1180px;margin:0 auto;height:60px;display:flex;align-items:center;gap:18px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.sbTitle{font:700 17px/1 var(--sans);letter-spacing:-.02em;color:var(--accent);text-decoration:none;flex:none}
-.sbNav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;min-width:0}
-.sbNav::-webkit-scrollbar{display:none}
-.sbNav a{font:500 13px/1 var(--sans);color:var(--ink2);text-decoration:none;padding:8px 9px;border-radius:6px;white-space:nowrap}
-.sbNav a:hover{color:var(--accent);background:var(--accentSoft)}
-.sbNav a[aria-current="page"]{color:var(--accent);font-weight:600;background:var(--accentSoft);box-shadow:inset 0 -2px 0 var(--accent)}
-.sbBack{margin-left:auto;font:600 13px/1.2 var(--sans);color:var(--accent);text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
-.sbBack:hover{text-decoration:underline}
+/* ---- site bar: a quiet line linking back into the site; Rounds stays the main thing on screen ---- */
+.siteBar{padding-top:env(safe-area-inset-top,0px)}
+.sbIn{max-width:1180px;margin:0 auto;min-height:40px;display:flex;align-items:center;gap:14px;padding:8px max(16px,env(safe-area-inset-right,0px)) 0 max(16px,env(safe-area-inset-left,0px))}
+.sbTitle{font:600 11.5px/1 var(--sans);letter-spacing:.08em;color:var(--ink2);text-decoration:none;flex:none}
+.sbTitle:hover{color:var(--accent)}
+.sbNav{display:flex;gap:2px;flex-wrap:wrap;min-width:0}
+.sbNav a{font:500 12.5px/1 var(--sans);color:var(--ink2);text-decoration:none;padding:6px 8px;border-radius:6px;white-space:nowrap;opacity:.85}
+.sbNav a:hover{color:var(--accent);opacity:1}
+.sbNav a[aria-current="page"]{color:var(--ink);font-weight:600;opacity:1}
+.sbMenu{display:none;margin-left:auto;border:0;background:none;padding:6px 2px;font:500 12.5px/1 var(--sans);color:var(--ink2)}
+.sbBack{margin-left:auto;font:500 12.5px/1.2 var(--sans);color:var(--ink2);text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.sbBack:hover{color:var(--accent)}
 body.hasBar .homeLink{display:none}
-/* during questions the bar shrinks to the site name and the way back */
-body.inQuiz .sbNav{display:none}
-body.inQuiz .sbIn{height:48px}
+/* during questions: only the site name and the way back */
+body.inQuiz .sbNav,body.inQuiz .sbMenu{display:none}
 @media (max-width:760px){
-  .sbIn{height:auto;flex-wrap:wrap;gap:4px 12px;padding-top:10px;padding-bottom:6px}
-  .sbNav{order:3;flex-basis:100%;margin:0 -9px;flex-wrap:wrap;overflow:visible}
-  .sbNav a{padding:7px 9px}
-  body.inQuiz .sbIn{padding-bottom:10px}
+  .sbIn{flex-wrap:wrap;gap:4px 12px}
+  .sbNav{display:none;order:3;flex-basis:100%;margin:0 -8px 2px}
+  .sbMenu{display:block}
+  .sbBack:not([hidden])~.sbMenu{margin-left:12px}
+  body.sbOpen .sbNav{display:flex}
+  body.inQuiz.sbOpen .sbNav{display:none}
 }
 .fromPage{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .fromPage .lab{margin-bottom:4px}
@@ -481,6 +483,7 @@ body.inQuiz .sbIn{height:48px}
     <a class="sbTitle" id="sbTitle" href="/">WARWIKI</a>
     <nav class="sbNav" id="sbNav" aria-label="Site"></nav>
     <a class="sbBack" id="sbBack" hidden></a>
+    <button class="sbMenu" id="sbMenu" type="button" aria-expanded="false" aria-controls="sbNav">Menu</button>
   </div>
 </header>
 <div class="wrap" id="app">
@@ -622,6 +625,7 @@ if(ONSITE){
   const bar=document.getElementById("siteBar");bar.hidden=false;document.body.classList.add("hasBar");
   const t=document.getElementById("sbTitle");t.textContent=HOME.name;t.href=HOME.url;
   document.getElementById("sbNav").innerHTML=SITE_NAV.map(([l,u])=>`<a href="${u}"${l==="Rounds"?' aria-current="page"':""}>${l}</a>`).join("");
+  const mb=document.getElementById("sbMenu");mb.addEventListener("click",()=>{const o=document.body.classList.toggle("sbOpen");mb.setAttribute("aria-expanded",String(o));mb.textContent=o?"Close":"Menu"});
   if(FROM&&FROM.from){const b=document.getElementById("sbBack");b.hidden=false;b.href=FROM.from;b.textContent="‹ Back to "+FROM.title}
 }
 function fromPageQs(){return FROM?S.qs.filter(q=>q.source&&q.source.file===FROM.page):[]}

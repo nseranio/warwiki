@@ -10,7 +10,8 @@ import type {PropSidebarItem} from '@docusaurus/plugin-content-docs';
  * its visible pages; a nested category is one row that opens it. Hidden pages
  * (sidebar-hidden-item) stay hidden. `cards` maps a card's link (the category
  * link or any page inside it) to its one-line description; the card title opens
- * that link, so a group can still open on its first sidebar page.
+ * the group's own landing page when it has one; otherwise the title is plain text
+ * and every page in the group is listed under it.
  */
 
 type Row = {label: string; href: string};
@@ -55,53 +56,94 @@ function slug(label: string): string {
   return label.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
 
-export default function SectionLanding({cards = {}}: {cards?: Record<string, React.ReactNode>}): React.ReactElement | null {
+type Entry = readonly [string, React.ReactNode];
+
+function Card({item, entries, here, level}: {item: PropSidebarItem; entries: Entry[]; here: string; level: 2 | 3}): React.ReactElement | null {
+  if (item.type !== 'link' && item.type !== 'category') return null;
+  const hrefs = allHrefs(item);
+  const match = entries.find(([href]) => hrefs.includes(href));
+  const desc = match?.[1];
+  if (item.type === 'link') {
+    return (
+      <Link className="wk-sl-card wk-sl-card--single" to={item.href} id={slug(item.label)}>
+        <span className="wk-sl-card-title">{item.label}</span>
+        {desc && <span className="wk-sl-card-desc">{desc}</span>}
+      </Link>
+    );
+  }
+  const rows = rowsOf(item.items).filter(row => norm(row.href) !== here && norm(row.href) !== norm(item.href ?? ''));
+  // A group without its own landing page has no title link: its pages are all listed below it.
+  const titleHref = item.href;
+  const id = slug(item.label);
+  const H = level === 2 ? 'h2' : 'h3';
+  return (
+    <section className="wk-sl-card" id={id} aria-labelledby={`landing-${id}`}>
+      <H id={`landing-${id}`} className="wk-sl-card-title">
+        {titleHref ? <Link to={titleHref}>{item.label}</Link> : item.label}
+      </H>
+      {desc && <p className="wk-sl-card-desc">{desc}</p>}
+      {rows.length > 0 && (
+        <ul className="wk-sl-rows">
+          {rows.map(row => (
+            <li key={row.href}>
+              <Link className="wk-sl-row" to={row.href}>{row.label}</Link>
+            </li>
+          ))}
+        </ul>
+      )}
+    </section>
+  );
+}
+
+/** A group's children as cards: its subgroups, plus one card for pages that sit directly in it. */
+function childCards(group: PropSidebarItem & {type: 'category'}): PropSidebarItem[] {
+  const kids = group.items.filter(i => !hidden(i));
+  const direct = kids.filter(i => i.type === 'link');
+  const cats = kids.filter(i => i.type === 'category');
+  if (!direct.length) return cats;
+  const loose = {type: 'category', label: cats.length ? `More in ${group.label}` : group.label, items: direct, collapsed: false, collapsible: false} as unknown as PropSidebarItem;
+  return cats.length ? [...cats, loose] : [loose];
+}
+
+export default function SectionLanding({cards = {}, sections = false}: {cards?: Record<string, React.ReactNode>; sections?: boolean}): React.ReactElement | null {
   const sidebar = useDocsSidebar();
   const here = norm(useLocation().pathname);
   if (!sidebar) return null;
-  const entries = Object.entries(cards).map(([href, desc]) => [norm(href), desc] as const);
+  const entries: Entry[] = Object.entries(cards).map(([href, desc]) => [norm(href), desc] as const);
   // A group's landing page (the link of a top-level category, as in Clinical Care)
   // lists that group's contents; a section landing lists the whole sidebar.
   const group = sidebar.items.find(item => item.type === 'category' && item.href && norm(item.href) === here);
   const scope = group && group.type === 'category' ? group.items : sidebar.items;
   const items = scope.filter(item =>
     !hidden(item) && !(item.type === 'link' && (norm(item.href) === here || item.docId?.endsWith('/index'))));
+  if (sections) {
+    // Hub: each group is a heading with every subgroup and page listed under it,
+    // so no page is reachable only from the sidebar.
+    const groups = items.filter((i): i is PropSidebarItem & {type: 'category'} => i.type === 'category');
+    return (
+      <div className="wk-sl-hub">
+        <nav className="wk-sl-jump" aria-label="Groups on this page">
+          {groups.map(g => <a key={g.label} href={`#${slug(g.label)}`}>{g.label}</a>)}
+        </nav>
+        {groups.map(g => {
+          const id = slug(g.label);
+          const desc = entries.find(([href]) => g.href && norm(g.href) === href)?.[1];
+          return (
+            <section key={g.label} className="wk-sl-section" id={id} aria-labelledby={`hub-${id}`}>
+              <h2 id={`hub-${id}`} className="wk-sl-section-title">{g.href ? <Link to={g.href}>{g.label}</Link> : g.label}</h2>
+              {desc && <p className="wk-sl-section-desc">{desc}</p>}
+              <div className="wk-sl">
+                {childCards(g).map(c => <Card key={c.label} item={c} entries={entries} here={here} level={3} />)}
+              </div>
+            </section>
+          );
+        })}
+      </div>
+    );
+  }
   return (
     <div className="wk-sl">
-      {items.map(item => {
-        if (item.type !== 'link' && item.type !== 'category') return null;
-        const hrefs = allHrefs(item);
-        const match = entries.find(([href]) => hrefs.includes(href));
-        const desc = match?.[1];
-        if (item.type === 'link') {
-          return (
-            <Link key={item.href} className="wk-sl-card wk-sl-card--single" to={item.href} id={slug(item.label)}>
-              <span className="wk-sl-card-title">{item.label}</span>
-              {desc && <span className="wk-sl-card-desc">{desc}</span>}
-            </Link>
-          );
-        }
-        const rows = rowsOf(item.items).filter(row => norm(row.href) !== here && norm(row.href) !== norm(item.href ?? ''));
-        const titleHref = match?.[0] ?? item.href ?? rows[0]?.href;
-        const id = slug(item.label);
-        return (
-          <section key={item.label} className="wk-sl-card" id={id} aria-labelledby={`landing-${id}`}>
-            <h2 id={`landing-${id}`} className="wk-sl-card-title">
-              {titleHref ? <Link to={titleHref}>{item.label}</Link> : item.label}
-            </h2>
-            {desc && <p className="wk-sl-card-desc">{desc}</p>}
-            {rows.length > 0 && (
-              <ul className="wk-sl-rows">
-                {rows.map(row => (
-                  <li key={row.href}>
-                    <Link className="wk-sl-row" to={row.href}>{row.label}</Link>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </section>
-        );
-      })}
+      {items.map(item => <Card key={'href' in item && item.href ? item.href : item.label} item={item} entries={entries} here={here} level={2} />)}
     </div>
   );
 }
