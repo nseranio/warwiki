@@ -310,6 +310,47 @@ h1.logo{cursor:pointer}
 .qimg figcaption a{color:inherit;text-decoration:underline;text-decoration-color:color-mix(in srgb,currentColor 35%,transparent)}
 #zoomBg{position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center;padding:16px;cursor:zoom-out}
 #zoomBg img{width:100%;height:100%;object-fit:contain}
+
+/* ---- confidence slider, Today, search, Your questions ---- */
+.slide{position:relative;height:54px;border-radius:10px;background:var(--soft);border:1px solid var(--line);display:grid;grid-template-columns:56px repeat(3,minmax(0,1fr));user-select:none;-webkit-user-select:none;touch-action:pan-y;overflow:hidden;flex:1;min-width:0}
+.slide .fill{position:absolute;left:0;top:0;bottom:0;width:54px;background:var(--accentSoft);transition:width .22s var(--ease)}
+.slide.drag .fill,.slide.drag .knob{transition:none}
+.slide .knob{position:absolute;left:4px;top:4px;width:46px;height:44px;border-radius:7px;background:var(--accent);color:var(--accentInk);display:grid;place-items:center;z-index:3;cursor:grab;touch-action:none;transition:transform .22s var(--ease);box-shadow:0 2px 6px -2px rgba(0,0,0,.35)}
+.slide .knob svg{width:20px;height:20px}
+.slide.drag .knob{cursor:grabbing}
+.slide .z{position:relative;z-index:2;background:none;border:0;border-left:1px dashed var(--line);font:600 13px/1.15 var(--sans);color:var(--ink2);padding:0 4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;transition:color .15s}
+.slide .z[data-conf="0"]{grid-column:2}
+.slide .z kbd{font:500 10px var(--mono);color:var(--ink2);opacity:.7;display:none}
+@media (hover:hover) and (pointer:fine){.slide .z kbd{display:block}}
+.slide .z:hover,.slide .z.on{color:var(--ink)}
+.slide .z[data-conf="0"].on{color:var(--warn)}
+.slide .z[data-conf="2"].on{color:var(--accent)}
+.slide.off{opacity:.5}
+.slide.off .z,.slide.off .knob{pointer-events:none}
+.slide .msg{position:absolute;inset:0;display:grid;place-items:center;font:500 13px var(--sans);color:var(--ink2);z-index:1;padding-left:56px}
+.dock .foot.two{flex-direction:column;align-items:stretch;gap:8px}
+.dock .foot.two .slide{flex:none}
+.dock .foot.two .row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.confNote{font-size:12.5px;color:var(--ink2);text-align:right;white-space:nowrap}
+.today{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.today .pv{font:600 18px/1.25 var(--sans);margin-top:2px}
+.today .note{margin-top:3px}
+.today .btn{flex:none;padding:11px 22px}
+.searchBtn,.searchBox{display:flex;align-items:center;gap:10px;width:100%;border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:11px 13px;font-size:15px;color:var(--ink2);text-align:left}
+.searchBtn svg,.searchBox svg{flex:none;width:18px;height:18px}
+.searchBox input{flex:1;min-width:0;border:0;background:none;font:inherit;color:var(--ink);outline:none;font-size:16px}
+.searchBox:focus-within{border-color:var(--accent);box-shadow:var(--glow)}
+.qrows{padding:2px 14px}
+.qrow{display:grid;grid-template-columns:10px minmax(0,1fr) auto;gap:12px;align-items:start;padding:13px 0;border:0;border-top:1px solid var(--line);background:none;width:100%;text-align:left;color:var(--ink)}
+.qrow:first-child{border-top:0}
+.qrow>i{width:10px;height:10px;border-radius:50%;margin-top:6px;background:var(--line)}
+.qrow>i.c{background:var(--ok)}.qrow>i.w{background:var(--bad)}.qrow>i.g{background:var(--warn)}
+.qrow .qt{font:400 14.5px/1.42 var(--serif);overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical}
+.qrow .qm{display:flex;align-items:center;gap:8px;margin-top:6px;flex-wrap:wrap}
+.qrow .chev{font-size:20px;line-height:1.2}
+.viewHead{display:flex;align-items:center;gap:10px}
+.viewHead h2{font:600 19px var(--sans);margin:0}
+.more{width:100%}
 </style>
 
 <div class="wrap" id="app">
@@ -442,7 +483,7 @@ const QCACHE={db:null,
   open(){return new Promise(res=>{try{const r=indexedDB.open("rounds",1);r.onupgradeneeded=()=>r.result.createObjectStore("kv");r.onsuccess=()=>{this.db=r.result;res(this.db)};r.onerror=()=>res(null)}catch(e){res(null)}})},
   async get(){const db=this.db||await this.open();if(!db)return null;return new Promise(res=>{try{const t=db.transaction("kv").objectStore("kv").get("questions");t.onsuccess=()=>res(t.result||null);t.onerror=()=>res(null)}catch(e){res(null)}})},
   async put(v){const db=this.db||await this.open();if(!db)return;try{db.transaction("kv","readwrite").objectStore("kv").put(v,"questions")}catch(e){}}};
-function useData(d){S.qs=d.questions;S.meta=d;S.byId={};S.qs.forEach(q=>S.byId[q.id]=q)}
+function useData(d){IDX=null;S.qs=d.questions;S.meta=d;S.byId={};S.qs.forEach(q=>S.byId[q.id]=q)}
 async function load(){
   const cached=ONSITE?await QCACHE.get():null;
   if(cached&&cached.questions){useData(cached);S.prog=LS.get("rounds-prog",{});render()}
@@ -493,11 +534,15 @@ function save(id){
   if(S.col)S.col.doc(id).set(S.prog[id]).catch(()=>{S.store="local"});
   if(syncCode&&!S.col)syncPush();
 }
-function record(q,ok){
+function record(q,ok,conf,pick){
   const p=S.prog[q.id]||{n:0,right:0,ivl:0};
   p.n++; if(ok)p.right++;
   p.last=ok?"c":"w"; p.at=Date.now();
-  p.ivl=ok?(p.ivl?Math.min(Math.round(p.ivl*2.5),120):3):1;
+  if(pick!=null)p.pick=pick;
+  if(conf!=null)p.conf=conf;else delete p.conf;
+  p.mis=!ok&&conf===2;
+  /* review interval: wrong or guessed comes back tomorrow; unsure grows slowly; knew it grows fast */
+  p.ivl=!ok||conf===0?1:conf===1?Math.min(Math.max(2,Math.round((p.ivl||1)*1.5)),60):(p.ivl?Math.min(Math.round(p.ivl*2.5),120):3);
   p.due=p.at+p.ivl*DAY;
   S.prog[q.id]=p; save(q.id);
   const d={...days()};const k=dayKey();d[k]=(d[k]||0)+1;d.at=Date.now();S.prog._days=d;save("_days");
@@ -561,6 +606,9 @@ function home(){
       <div class="stat"><div class="lab">Streak</div><div class="v">${streak()}<small> ${streak()===1?"day":"days"}</small></div></div>
     </div>
   </div>
+  ${todayPanel()}
+  <button class="searchBtn" id="openFind">${MAG}<span>Search ${S.qs.length.toLocaleString()} questions</span></button>
+  ${(()=>{const m=mineBase();if(!m.length)return"";const miss=m.filter(q=>S.prog[q.id].last==="w").length,fl=m.filter(q=>S.prog[q.id].flag).length;return `<button class="pickRow" id="openMine"><span><span class="pv">Your questions</span><span class="note">${m.filter(q=>S.prog[q.id].n).length} answered · ${miss} missed${fl?" · "+fl+" flagged":""}</span></span><span class="chev">›</span></button>`})()}
   <div class="panel opts">
     <h2>New block</h2>
     <div><div class="lab" style="margin-bottom:8px">Topics</div>${topicPicker}</div>
@@ -589,7 +637,7 @@ function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random
 function startBlock(){
   let list=shuffle(poolList(S.set.pool).slice());
   if(S.set.n!=="all")list=list.slice(0,S.set.n);
-  S.block={ids:list.map(q=>q.id),i:0,pick:{},done:{},shown:{},mode:S.set.mode,recall:S.set.recall,start:Date.now(),limit:S.set.mode==="timed"?list.length*90:0,finished:false};
+  S.block={ids:list.map(q=>q.id),i:0,pick:{},done:{},shown:{},conf:{},pre:{},mode:S.set.mode,recall:S.set.recall,start:Date.now(),limit:S.set.mode==="timed"?list.length*90:0,finished:false};
   S.view="quiz";render();window.scrollTo(0,0);
 }
 function cur(){return S.byId[S.block.ids[S.block.i]]}
@@ -601,10 +649,10 @@ function clock(){
 }
 let tick=null;
 function quiz(){
-  const b=S.block,q=cur(),idx=b.i,answered=b.done[q.id]!=null;
+  const b=S.block,q=cur(),idx=b.i,answered=b.done[q.id]!=null;b.conf=b.conf||{};b.pre=b.pre||{};
   const reveal=answered&&(b.mode==="tutor"||b.finished);
   const hideChoices=b.recall&&!b.shown[q.id]&&!answered;
-  const ticks=b.ids.map((id,k)=>{let c="";if(k===idx)c="cur";else if(b.done[id]!=null)c=(b.mode==="tutor"||b.finished)?(b.done[id]?"c":"w"):"a";return`<i class="${c}"></i>`}).join("");
+  const ticks=b.browse?"":b.ids.map((id,k)=>{let c="";if(k===idx)c="cur";else if(b.done[id]!=null)c=(b.mode==="tutor"||b.finished)?(b.done[id]?"c":"w"):"a";return`<i class="${c}"></i>`}).join("");
   const p=S.prog[q.id]||{};
   const choices=hideChoices?`<div class="recall"><label class="lab" for="recallIn">Your answer, from memory</label><textarea id="recallIn" rows="2" placeholder="Type it, or just say it to yourself">${esc((b.recallText||{})[q.id]||"")}</textarea><button class="btn wide" id="showCh">Show choices</button></div>`:
     `<div class="choices" role="group" aria-label="Answer choices">${q.choices.map((c,k)=>{
@@ -614,7 +662,7 @@ function quiz(){
       return `<button class="${cls}" data-ch="${k}" aria-pressed="${b.pick[q.id]===k}" ${answered?"aria-disabled=\"true\"":""}><span class="L">${L}</span><span class="ct">${esc(c)}${mk}</span>${why}</button>`}).join("")}</div>`;
   const ok=b.done[q.id];
   const ans=reveal?`<div class="panel ans">
-      <div class="verdict ${ok?"c":"w"}">${ok?"Correct.":"Incorrect."} The answer is (${"ABCDE"[q.answer]}).</div>
+      <div class="verdict ${ok?"c":"w"}">${b.pre[q.id]?(ok?"Correct last time.":"Missed last time."):(ok?"Correct.":"Incorrect.")} The answer is (${"ABCDE"[q.answer]}).${b.conf[q.id]!=null?`<span class="note" style="font-weight:400"> You said: ${CONF[b.conf[q.id]]}.</span>`:""}</div>
       ${(b.recallText||{})[q.id]?`<div class="block"><div class="lab">You recalled</div><p>${esc(b.recallText[q.id])}</p></div>`:""}
       <div class="block"><div class="lab">Explanation</div><p>${explainHTML(q)}</p></div>
       ${q.pearl?`<div class="block pearl"><div class="lab">Pearl</div><p>${esc(q.pearl)}</p></div>`:""}
@@ -625,11 +673,12 @@ function quiz(){
   const last=idx===b.ids.length-1;
   let action="";
   if(!answered&&hideChoices)action="";
-  else if(!answered)action=`<button class="btn wide" id="submit" ${b.pick[q.id]==null?"disabled":""}>${b.mode==="tutor"?"Submit":(last?"Submit and finish":"Submit and next")}</button>`;
-  else action=last?`<button class="btn wide" id="finish">${b.finished?"Back to summary":"Finish block"}</button>`:`<button class="btn wide" id="next">Next question</button>`;
+  else if(!answered)action=slider(b.pick[q.id]==null);
+  else action=last?`<button class="btn wide" id="finish">${b.browse?"Back to list":b.finished?"Back to summary":"Finish block"}</button>`:`<button class="btn wide" id="next">Next question</button>`;
+  const two=!answered&&!hideChoices;
   const fresh=S.shownIdx!==b.ids[idx];S.shownIdx=b.ids[idx];
   return `
-  <div class="qbar"><button class="exitBtn" id="exitBlock">‹ ${b.finished?"Summary":"Exit"}</button><div class="lab">Question ${idx+1} of ${b.ids.length}</div><div class="clock" id="clock">${b.finished?"Review":clock()}</div></div>
+  <div class="qbar"><button class="exitBtn" id="exitBlock">‹ ${b.browse?"Back":b.finished?"Summary":"Exit"}</button><div class="lab">Question ${idx+1} of ${b.ids.length}</div><div class="clock" id="clock">${b.finished?"Review":clock()}</div></div>
   <div class="ticks" aria-hidden="true">${ticks}</div>
   <div class="${fresh?"case":""}" style="display:flex;flex-direction:column;gap:16px">
   <div class="meta"><span class="chip ${q.field==="oncology"?"onc":""}">${esc(topicLabel(q.topic))}</span><span class="chip ${q.kind==="trial"?"t":""}">${esc(q.trial||KINDS[q.kind]||q.kind)}</span><span class="chip ${yLevel(q)==="c"?"core":""}">${YIELDS[yLevel(q)]}</span>${q.boardFav?'<span class="chip bf">Board favorite</span>':""}</div>
@@ -637,16 +686,21 @@ function quiz(){
   ${choices}
   ${ans}
   </div>
-  <div class="dock"><div class="foot">
-    <div class="l"><button class="ghost icon" id="prev" ${idx?"":"disabled"} aria-label="Previous question" title="Previous">${ICON.back}</button><button class="ghost icon flag" id="flag" aria-pressed="${!!p.flag}" aria-label="${p.flag?"Unflag question":"Flag question"}" title="${p.flag?"Flagged":"Flag"}">${ICON.flag}</button><button class="ghost icon" id="quit" aria-label="${b.finished?"Home":"End block"}" title="${b.finished?"Home":"End block"}">${ICON.end}</button></div>
-    ${action}
+  <div class="dock"><div class="foot${two?" two":""}">${two?action+'<div class="row">':""}
+    <div class="l"><button class="ghost icon" id="prev" ${idx?"":"disabled"} aria-label="Previous question" title="Previous">${ICON.back}</button><button class="ghost icon flag" id="flag" aria-pressed="${!!p.flag}" aria-label="${p.flag?"Unflag question":"Flag question"}" title="${p.flag?"Flagged":"Flag"}">${ICON.flag}</button><button class="ghost icon" id="quit" aria-label="${b.browse?"Back to list":b.finished?"Home":"End block"}" title="${b.browse?"Back to list":b.finished?"Home":"End block"}">${ICON.end}</button></div>
+    ${two?'<span class="confNote">Slide or tap to answer</span></div>':action}
   </div></div>`;
 }
 function imgURL(f){return new URL(f,QBASE).href}
 function figHTML(im){const u=imgURL(im.file);return `<figure class="qimg"><button class="zoom" data-zoom="${esc(u)}" aria-label="Enlarge image"><img src="${esc(u)}" alt="${esc(im.alt||"")}" loading="lazy" decoding="async"></button><figcaption>${im.link?`<a href="${esc(im.link)}" target="_blank" rel="noopener">${esc(im.credit)}</a>`:esc(im.credit)}</figcaption></figure>`}
-function submit(){
-  const b=S.block,q=cur();const k=b.pick[q.id];if(k==null)return;
-  const ok=k===q.answer;b.done[q.id]=ok;record(q,ok);
+const CONF=["Guessed","Unsure","Knew it"];
+const ARROW='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>';
+function slider(off){
+  return `<div class="slide${off?" off":""}" id="slide" role="group" aria-label="Submit your answer with how sure you are"><div class="fill"></div><div class="knob" aria-hidden="true">${ARROW}</div>${off?'<div class="msg">Pick an answer</div>':CONF.map((l,k)=>`<button class="z" data-conf="${k}" aria-label="Submit: ${l}">${l}<kbd>${k+1}</kbd></button>`).join("")}</div>`;
+}
+function submit(conf){
+  const b=S.block,q=cur();const k=b.pick[q.id];if(k==null||b.done[q.id]!=null)return;
+  const ok=k===q.answer;b.done[q.id]=ok;b.conf=b.conf||{};if(conf!=null)b.conf[q.id]=conf;record(q,ok,conf,k);
   if(b.mode==="timed"){if(b.i<b.ids.length-1){b.i++}else{finish();return}}
   render();
 }
@@ -667,6 +721,101 @@ function summary(){
       return `<button class="li" data-rev="${k}"><span class="m ${d==null?"":d?"c":"w"}">${d==null?"–":d?"✓":"✕"}</span><span class="s">${esc(q.question)}</span><span class="chip">${esc(q.trial||KINDS[q.kind])}</span></button>`}).join("")}</div></div>
     <div class="go"><button class="btn wide" id="again">New block</button></div>`;
 }
+
+/* ---------- Today ---------- */
+const TODAY_N=20,TODAY_DUE=15;
+function weakTopics(){
+  return TOPICS_().map(t=>({id:t.id,label:t.label,...tally(S.qs.filter(q=>q.topic===t.id&&inField(q)))})).filter(x=>x.used>=3&&x.total>x.used).sort((a,b)=>a.c/a.used-b.c/b.used||b.total-a.total).slice(0,3);
+}
+function todayPlan(){
+  const now=Date.now();
+  const due=S.qs.filter(q=>{const p=S.prog[q.id];return inField(q)&&p&&p.n&&p.due<=now}).sort((a,b)=>S.prog[a.id].due-S.prog[b.id].due);
+  const nDue=Math.min(due.length,TODAY_DUE);
+  const nNew=TODAY_N-nDue;
+  return {due,nDue,nNew,weak:weakTopics()};
+}
+function todayIds(){
+  const pl=todayPlan();
+  const unused=q=>inField(q)&&!(S.prog[q.id]&&S.prog[q.id].n);
+  const picked=new Set(pl.due.slice(0,pl.nDue).map(q=>q.id));
+  const take=(arr,n)=>{for(const q of shuffle(arr.slice())){if(n<=0)break;if(!picked.has(q.id)){picked.add(q.id);n--}}return n};
+  let need=pl.nNew;
+  if(pl.weak.length){const per=Math.ceil(need*0.6/pl.weak.length);for(const w of pl.weak){const left=take(S.qs.filter(q=>unused(q)&&q.topic===w.id&&yLevel(q)==="c"),per);need-=per-left}}
+  need=take(S.qs.filter(q=>unused(q)&&yLevel(q)==="c"),need);
+  need=take(S.qs.filter(unused),need);
+  if(need>0)take(S.qs.filter(inField),need);
+  return shuffle([...picked]);
+}
+function todayPanel(){
+  const pl=todayPlan(),done=days()[dayKey()]||0;
+  const from=pl.weak.length?"new, weighted to "+pl.weak.map(w=>w.label).join(", "):"new high-yield";
+  const line=done>=TODAY_N&&!pl.due.length?`Done for today: ${done} answered. Another ${TODAY_N} are ready.`:`${pl.nDue?pl.nDue+" due for review · ":""}${pl.nNew} ${from}`;
+  return `<div class="panel today"><div style="min-width:0"><div class="lab">Today</div><div class="pv">${TODAY_N} questions</div><div class="note">${esc(line)}</div></div><button class="btn" id="startToday">Start</button></div>`;
+}
+function startIds(ids,mode,recall){
+  S.block={ids,i:0,pick:{},done:{},shown:{},conf:{},pre:{},mode:mode||"tutor",recall:!!recall,start:Date.now(),limit:mode==="timed"?ids.length*90:0,finished:false};
+  S.view="quiz";render();window.scrollTo(0,0);
+}
+
+/* ---------- search and Your questions ---------- */
+const MAG='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>';
+const norm=s=>String(s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/['\u2019`]/g,"");
+let IDX=null;
+function index(){if(IDX)return IDX;IDX={};S.qs.forEach(q=>{IDX[q.id]=norm([q.stem,q.question,(q.choices||[]).join(" "),q.explanation,q.trial,q.pearl,q.card,topicLabel(q.topic),q.image&&q.image.alt].join(" "))});return IDX}
+function statusOf(q){const p=S.prog[q.id];
+  if(!p||!p.n)return p&&p.flag?["","Flagged, not answered"]:["","Not seen"];
+  if(p.last==="w")return ["w",p.mis?"Missed, was sure":"Missed"];
+  if(p.conf===0)return ["g","Correct, guessed"];
+  return ["c","Correct"];}
+function qRow(q,attr){const [cls,lab]=statusOf(q);const p=S.prog[q.id]||{};
+  return `<button class="qrow" ${attr}><i class="${cls}" aria-hidden="true"></i><span style="min-width:0"><span class="qt">${esc(q.stem)}</span><span class="qm"><span class="chip ${q.field==="oncology"?"onc":""}">${esc(topicLabel(q.topic))}</span>${q.image?'<span class="chip">Image</span>':""}<span class="note">${lab}${p.flag&&p.n?" · flagged":""}</span></span></span><span class="chev" aria-hidden="true">›</span></button>`}
+function rowsHTML(list,kind,max){
+  if(!list.length)return "";
+  return `<div class="panel qrows">${list.slice(0,max).map((q,k)=>qRow(q,`data-open="${kind}" data-k="${k}"`)).join("")}</div>${list.length>max?`<button class="ghost more" data-more="${kind}">Show ${Math.min(50,list.length-max)} more of ${list.length-max}</button>`:""}`}
+const FF={all:["All",()=>true],unseen:["Not seen",q=>!(S.prog[q.id]&&S.prog[q.id].n)],missed:["Missed",q=>S.prog[q.id]&&S.prog[q.id].last==="w"],flagged:["Flagged",q=>S.prog[q.id]&&S.prog[q.id].flag]};
+function findHits(){const toks=norm(S.q||"").split(/\s+/).filter(Boolean);if(!toks.length||(S.q||"").trim().length<2)return null;const ix=index();return S.qs.filter(q=>toks.every(t=>ix[q.id].includes(t)))}
+function findList(){const h=findHits();if(!h)return null;return h.filter(FF[S.ff||"all"][1])}
+function findResults(){
+  const h=findHits();
+  if(!h)return `<p class="note">Type at least two letters. Try a trial (PIVOT), a drug (mirabegron), a finding (whirlpool) or a topic.</p>`;
+  if(!h.length)return `<div class="panel empty">No questions match “${esc(S.q.trim())}”.</div>`;
+  const f=S.ff||"all",list=h.filter(FF[f][1]);
+  const ans=h.filter(q=>S.prog[q.id]&&S.prog[q.id].n),miss=h.filter(FF.missed[1]).length;
+  return `<div class="note">${h.length} question${h.length===1?"":"s"}${ans.length?` · ${ans.length} answered${miss?", "+miss+" missed":""}`:""}</div>
+  <div class="seg">${Object.entries(FF).map(([k,[l,fn]])=>`<button data-ff="${k}" aria-pressed="${f===k}">${l}<span class="k">${h.filter(fn).length}</span></button>`).join("")}</div>
+  ${list.length?`<button class="btn" id="findStart" style="width:100%">Start a block with ${list.length===1?"this one":list.length>200?"200 of these":"these "+list.length}</button>`:""}
+  ${rowsHTML(list,"find",S.findMax||50)}`;
+}
+function findView(){
+  return `<div class="viewHead"><button class="exitBtn" id="goHome">‹ Home</button></div>
+  <label class="searchBox">${MAG}<input id="findIn" type="search" enterkeyhint="search" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="Search ${S.qs.length.toLocaleString()} questions" value="${esc(S.q||"")}" aria-label="Search questions"></label>
+  <div id="findRes" style="display:flex;flex-direction:column;gap:12px">${findResults()}</div>`;
+}
+function mineBase(){return S.qs.filter(q=>{const p=S.prog[q.id];return p&&(p.n||p.flag)})}
+const MF={all:["All",q=>S.prog[q.id].n],missed:["Missed",q=>S.prog[q.id].last==="w"],mis:["Missed when sure",q=>S.prog[q.id].mis],guessed:["Guessed right",q=>S.prog[q.id].last==="c"&&S.prog[q.id].conf===0],flagged:["Flagged",q=>S.prog[q.id].flag],images:["Images",q=>S.prog[q.id].n&&!!q.image]};
+function mineList(){
+  const base=mineBase(),f=MF[S.mf||"all"]?S.mf||"all":"all";
+  const list=base.filter(MF[f][1]);
+  if(S.ms==="topic"){const order={};TOPICS_().forEach((t,i)=>order[t.id]=i);list.sort((a,b)=>(order[a.topic]??999)-(order[b.topic]??999)||(S.prog[b.id].at||0)-(S.prog[a.id].at||0))}
+  else list.sort((a,b)=>(S.prog[b.id].at||0)-(S.prog[a.id].at||0));
+  return list;
+}
+function mineView(){
+  const base=mineBase(),f=S.mf||"all",list=mineList();
+  const label=f==="all"?"":MF[f][0].toLowerCase();
+  return `<div class="viewHead"><button class="exitBtn" id="goHome">‹ Home</button><h2>Your questions</h2></div>
+  ${base.length?`<div class="seg">${Object.entries(MF).map(([k,[l,fn]])=>{const n=base.filter(fn).length;return (n||k==="all"||k===f)?`<button data-mf="${k}" aria-pressed="${f===k}">${l}<span class="k">${n}</span></button>`:""}).join("")}</div>
+  <div class="seg"><button data-ms="new" aria-pressed="${S.ms!=="topic"}">Newest</button><button data-ms="topic" aria-pressed="${S.ms==="topic"}">By topic</button></div>
+  ${list.length?`<button class="btn" id="mineStart" style="width:100%">Redo ${list.length===1?"this one":list.length>200?"200 of these":"these "+list.length}${label?" "+label:""}</button>`:`<div class="panel empty">None yet.</div>`}
+  ${rowsHTML(list,"mine",S.mineMax||50)}`:`<div class="panel empty">Questions you answer or flag show up here.</div>`}`;
+}
+function startBrowse(list,k,from){
+  const ids=list.map(q=>q.id),pick={},done={},pre={},conf={};
+  ids.forEach(id=>{const p=S.prog[id];if(p&&p.n){done[id]=p.last==="c";pre[id]=true;if(p.pick!=null)pick[id]=p.pick;if(p.conf!=null)conf[id]=p.conf}});
+  S.block={ids,i:k,pick,done,shown:{},conf,pre,mode:"tutor",recall:false,start:Date.now(),limit:0,finished:true,browse:from};
+  S.scrollBack=window.scrollY;S.view="quiz";render();window.scrollTo(0,0);
+}
+function leaveBrowse(){const from=S.block.browse;S.block=null;S.view=from;render();window.scrollTo(0,S.scrollBack||0)}
 
 /* ---------- trial cards ---------- */
 function cards(){
@@ -741,6 +890,8 @@ function render(){
     if(!S.block.finished){tick=setInterval(()=>{const c=$("#clock");if(c)c.textContent=clock();const b=S.block;if(b&&b.limit&&!b.finished&&(Date.now()-b.start)/1000>=b.limit)finish()},1000)}}
   else if(S.view==="summary")v.innerHTML=`<div style="display:flex;flex-direction:column;gap:20px">${summary()}</div>`;
   else if(S.view==="cards")v.innerHTML=`<div style="display:flex;flex-direction:column;gap:14px">${cards()}</div>`;
+  else if(S.view==="find")v.innerHTML=`<div style="display:flex;flex-direction:column;gap:14px">${findView()}</div>`;
+  else if(S.view==="mine")v.innerHTML=`<div style="display:flex;flex-direction:column;gap:14px">${mineView()}</div>`;
   let L=$("#sheetLayer");if(!L){L=document.createElement("div");L.id="sheetLayer";document.body.appendChild(L)}
   const sb=$("#sbody"),top=sb?sb.scrollTop:0;
   const showSheet=S.sheet==="theme"||S.sheet==="sync"||(S.sheet&&S.view==="home");
@@ -750,13 +901,13 @@ function render(){
 }
 const THEMES=["system","light","dark"];
 document.addEventListener("click",e=>{
-  if(e.target.closest("#logoHome")){if(S.view==="quiz"&&S.block&&!S.block.finished){const b=S.block;if(b.ids.some(id=>b.done[id]!=null)){finish();return}S.block=null}S.view="home";S.sheet=false;render();window.scrollTo(0,0);return}
+  if(e.target.closest("#logoHome")){if(S.block&&S.block.browse)S.block=null;if(S.view==="quiz"&&S.block&&!S.block.finished){const b=S.block;if(b.ids.some(id=>b.done[id]!=null)){finish();return}S.block=null}S.view="home";S.sheet=false;render();window.scrollTo(0,0);return}
   const pk=e.target.closest("[data-peek]");if(pk&&pk.classList.contains("hidden-card")){S.peek=S.peek||{};S.peek[pk.dataset.peek]=true;render();return}
   if(e.target.id==="sheetBg"){S.sheet=false;render();return}
   if(e.target.closest("#zoomBg")){document.getElementById("zoomBg").remove();return}
   const zb=e.target.closest("[data-zoom]");if(zb){const o=document.createElement("div");o.id="zoomBg";o.setAttribute("role","dialog");o.setAttribute("aria-label","Image, tap to close");o.innerHTML=`<img src="${esc(zb.dataset.zoom)}" alt="">`;document.body.appendChild(o);return}
   const t=e.target.closest("button");if(!t)return;
-  if(t.id==="exitBlock"){const b=S.block;if(!b){S.view="home";render();return}if(b.finished){S.view="summary";render();window.scrollTo(0,0);return}const any=b.ids.some(id=>b.done[id]!=null);if(any)finish();else{S.block=null;S.view="home";render();window.scrollTo(0,0)}return}
+  if(t.id==="exitBlock"){const b=S.block;if(!b){S.view="home";render();return}if(b.browse){leaveBrowse();return}if(b.finished){S.view="summary";render();window.scrollTo(0,0);return}const any=b.ids.some(id=>b.done[id]!=null);if(any)finish();else{S.block=null;S.view="home";render();window.scrollTo(0,0)}return}
   if(t.id==="resetProg"){const msg="Reset all progress? This clears every answer, flag and your streak"+(syncCode?" on this device and on every device using your sync code":S.store==="account"?" in your account":"")+". It cannot be undone.";if(confirm(msg))resetProgress();return}
   if(t.id==="toggleStats"){S.showStats=!S.showStats;render();return}
   if(t.id==="openSync"){S.sheet="sync";render();return}
@@ -778,19 +929,58 @@ document.addEventListener("click",e=>{
   if(t.dataset.set==="field"){S.set.field=t.dataset.v;S.set.topics=S.set.topics.filter(id=>{const tp=TOPICS_().find(x=>x.id===id);const g=tp&&GROUPS_().find(x=>x.id===tp.group);return S.set.field==="both"||(g&&g.field===S.set.field)});LS.put("rounds-set",S.set);render();return}
   if(t.dataset.set){let v=t.dataset.v;if(v==="true")v=true;else if(v==="false")v=false;else if(/^\d+$/.test(v))v=+v;S.set[t.dataset.set]=v;LS.put("rounds-set",S.set);render();return}
   if(t.id==="start"){startBlock();return}
+  if(t.id==="startToday"){startIds(todayIds(),"tutor",false);return}
+  if(t.id==="openFind"){S.view="find";render();window.scrollTo(0,0);const i=$("#findIn");if(i)i.focus();return}
+  if(t.id==="openMine"){S.view="mine";S.mineMax=50;render();window.scrollTo(0,0);return}
+  if(t.id==="goHome"){S.view="home";render();window.scrollTo(0,0);return}
+  if(t.dataset.ff){S.ff=t.dataset.ff;S.findMax=50;$("#findRes").innerHTML=findResults();return}
+  if(t.dataset.mf){S.mf=t.dataset.mf;S.mineMax=50;render();return}
+  if(t.dataset.ms){S.ms=t.dataset.ms;render();return}
+  if(t.dataset.more==="find"){S.findMax=(S.findMax||50)+50;$("#findRes").innerHTML=findResults();return}
+  if(t.dataset.more==="mine"){S.mineMax=(S.mineMax||50)+50;render();return}
+  if(t.id==="findStart"){const l=findList();if(l&&l.length)startIds(shuffle(l.map(q=>q.id)).slice(0,200),S.set.mode,S.set.recall);return}
+  if(t.id==="mineStart"){const l=mineList();if(l.length)startIds(shuffle(l.map(q=>q.id)).slice(0,200),S.set.mode,S.set.recall);return}
+  if(t.dataset.open){const l=t.dataset.open==="find"?findList():mineList();if(l)startBrowse(l,+t.dataset.k,t.dataset.open);return}
   if(t.id==="showAll"){S.showAll=!S.showAll;render();return}
   const b=S.block;
   if(t.dataset.ch!=null&&b){const q=cur();if(b.done[q.id]!=null)return;b.pick[q.id]=+t.dataset.ch;render();return}
   if(t.id==="showCh"){const r=$("#recallIn");b.recallText=b.recallText||{};if(r&&r.value.trim())b.recallText[cur().id]=r.value.trim();b.shown[cur().id]=true;render();return}
-  if(t.id==="submit"){submit();return}
+  if(t.dataset.conf!=null&&b){submit(+t.dataset.conf);return}
   if(t.id==="next"){b.i++;render();window.scrollTo(0,0);return}
   if(t.id==="prev"){b.i--;render();window.scrollTo(0,0);return}
-  if(t.id==="finish"){finish();return}
+  if(t.id==="finish"){if(b.browse){leaveBrowse();return}finish();return}
   if(t.id==="flag"){toggleFlag(cur());render();return}
-  if(t.id==="quit"){if(b.finished){S.view="home";S.block=null;render()}else finish();return}
+  if(t.id==="quit"){if(b.browse){leaveBrowse();return}if(b.finished){S.view="home";S.block=null;render()}else finish();return}
   if(t.dataset.rev!=null){b.i=+t.dataset.rev;S.view="quiz";render();window.scrollTo(0,0);return}
   if(t.id==="again"){S.block=null;S.view="home";render();return}
 });
+document.addEventListener("input",e=>{
+  if(e.target&&e.target.id==="findIn"){S.q=e.target.value;S.findMax=50;const r=$("#findRes");if(r)r.innerHTML=findResults()}
+});
+/* slide to submit: drag the knob right; where it is let go sets how sure you were */
+let SD=null;
+document.addEventListener("pointerdown",e=>{
+  const k=e.target.closest(".slide:not(.off) .knob");if(!k)return;
+  const sl=k.parentElement;const zs=[...sl.querySelectorAll(".z")];
+  SD={sl,k,x0:e.clientX,max:sl.clientWidth-54,zs,zone:null,id:e.pointerId};
+  sl.classList.add("drag");try{k.setPointerCapture(e.pointerId)}catch(_){ }e.preventDefault();
+});
+document.addEventListener("pointermove",e=>{
+  if(!SD||e.pointerId!==SD.id)return;
+  const dx=Math.max(0,Math.min(SD.max,e.clientX-SD.x0));
+  SD.k.style.transform=`translateX(${dx}px)`;SD.sl.querySelector(".fill").style.width=(dx+54)+"px";
+  const cx=SD.k.getBoundingClientRect().left+23;let z=null;
+  SD.zs.forEach((b,i)=>{const r=b.getBoundingClientRect();if(dx>8&&cx>=r.left-23)z=i});
+  SD.zone=z;SD.zs.forEach((b,i)=>b.classList.toggle("on",i===z));
+});
+function endSlide(e){
+  if(!SD||(e&&e.pointerId!==SD.id))return;
+  const s=SD;SD=null;s.sl.classList.remove("drag");
+  if(s.zone!=null&&e.type==="pointerup"){submit(s.zone);return}
+  s.k.style.transform="";s.sl.querySelector(".fill").style.width="";s.zs.forEach(b=>b.classList.remove("on"));
+}
+document.addEventListener("pointerup",endSlide);
+document.addEventListener("pointercancel",endSlide);
 document.addEventListener("change",e=>{
   if(e.target&&e.target.id==="nIn"){const v=parseInt(e.target.value,10);if(v>0){S.set.n=v;LS.put("rounds-set",S.set)}render()}
 });
@@ -798,11 +988,13 @@ document.addEventListener("keydown",e=>{
   if(e.target&&e.target.id==="nIn"&&e.key==="Enter"){e.target.blur();return}
   if(e.key==="Escape"&&document.getElementById("zoomBg")){document.getElementById("zoomBg").remove();return}
   if(e.key==="Escape"&&S.sheet){S.sheet=false;render();return}
+  if(e.key==="Enter"&&e.target&&e.target.id==="findIn"){e.target.blur();return}
   if(S.view!=="quiz"||!S.block)return;
   if(e.target&&e.target.tagName==="TEXTAREA"){if(e.key==="Enter"&&(e.metaKey||e.ctrlKey)){const b=$("#showCh");if(b)b.click()}return}
   const k=e.key.toUpperCase();
   if("ABCDE".includes(k)&&k.length===1){const btn=document.querySelector(`[data-ch="${"ABCDE".indexOf(k)}"]`);if(btn)btn.click()}
-  else if(e.key==="Enter"){const btn=$("#submit")||$("#next")||$("#finish");if(btn&&!btn.disabled)btn.click()}
+  else if("123".includes(e.key)&&e.key.length===1){const btn=document.querySelector(`.slide:not(.off) [data-conf="${+e.key-1}"]`);if(btn)btn.click()}
+  else if(e.key==="Enter"){const btn=$("#next")||$("#finish");if(btn&&!btn.disabled)btn.click()}
 });
 load();
 })();
