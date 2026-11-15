@@ -3996,17 +3996,23 @@ html[data-section='populations'] .wk-landing:not(.wk-landing--root) .markdown > 
 .wk-ev-trial-facts + p {font-size: .85rem;}
 
 /* Clinical Care hub: one section per group, every page listed (pilot) */
-.wk-sl-jump {position: sticky; top: var(--ifm-navbar-height); z-index: 3; display: flex; gap: .5rem; margin: 1.25rem -.5rem .5rem; padding: .6rem .5rem; background: var(--warwiki-white); border-bottom: 1px solid var(--warwiki-border); overflow-x: auto; scrollbar-width: none; transition: top .2s ease;}
+.wk-sl-jump {position: sticky; top: var(--ifm-navbar-height); z-index: 3; display: flex; gap: 0 1.35rem; margin: 1.25rem 0 .5rem; padding: .2rem 0 0; background: var(--warwiki-white); border-bottom: 1px solid var(--warwiki-border); overflow-x: auto; scrollbar-width: none; transition: top .2s ease;}
 .wk-sl-jump::-webkit-scrollbar {display: none;}
 html:has(.navbar[class*='navbarHidden']) .wk-sl-jump {top: 0;}
 [data-theme='dark'] .wk-sl-jump {background: #0D1521;}
 /* phones: the article has no card, so the row takes the page color */
 @media (max-width: 996px) {.wk-sl-jump {background: var(--warwiki-bg);} [data-theme='dark'] .wk-sl-jump {background: var(--ifm-background-color);}}
-.wk-sl-jump a {flex: none; padding: .45rem .9rem; border: 1px solid var(--warwiki-border); border-radius: 999px; font-size: .875rem; font-weight: 500; color: var(--warwiki-text-muted); background: transparent; text-decoration: none; white-space: nowrap;}
-.wk-sl-jump a:hover {color: var(--ifm-color-primary); border-color: var(--ifm-color-primary); text-decoration: none;}
-.wk-sl-jump a[aria-current='true'] {color: #fff; background: var(--ifm-color-primary); border-color: var(--ifm-color-primary);}
-[data-theme='dark'] .wk-sl-jump a[aria-current='true'] {color: #0A1018;}
-.wk-sl-section {margin-top: 2.5rem; scroll-margin-top: calc(var(--ifm-navbar-height) + 4.5rem);}
+/* Group buttons as text tabs, matching the Clinical Evidence area filter (owner, Nov 15): the group in view is underlined in the accent. */
+.wk-sl-jump a {flex: none; padding: .6rem 0 .55rem; margin-bottom: -1px; border-bottom: 2px solid transparent; font-size: .9rem; font-weight: 500; color: var(--warwiki-text-muted); text-decoration: none; white-space: nowrap; transition: color .15s ease, border-color .15s ease;}
+.wk-sl-jump a:hover {color: var(--warwiki-text); text-decoration: none;}
+.wk-sl-jump a[aria-current='true'] {color: var(--warwiki-text); border-bottom-color: var(--ifm-color-primary);}
+.wk-sl-jump a:focus-visible {outline: 2px solid var(--ifm-color-primary); outline-offset: -2px; border-radius: 4px;}
+/* Section landings: an unpinned, wrapping index of the cards below, styled like the Clinical Evidence lane chips. */
+.wk-sl-jump.wk-sl-jump--index {position: static; flex-wrap: wrap; gap: .15rem .25rem; margin: 1.1rem 0 1.25rem -.55rem; padding: 0; background: none; border: 0; overflow: visible;}
+.wk-sl-jump--index a {padding: .3rem .55rem; margin: 0; border: 0; border-radius: 6px; font-size: .86rem; color: var(--warwiki-text-subtle); transition: color .15s ease, background-color .15s ease;}
+.wk-sl-jump--index a:hover {color: var(--ifm-color-primary); background: var(--warwiki-bg-subtle);}
+[data-theme='dark'] .wk-sl-jump.wk-sl-jump--index {background: none;}
+.wk-sl-section {margin-top: 2.5rem; scroll-margin-top: calc(var(--ifm-navbar-height) + 4rem);}
 .markdown .wk-sl-section-title {font-size: 1.5rem; margin: 0 0 .35rem; padding-bottom: .5rem; border-bottom: 1px solid var(--warwiki-border);}
 .markdown .wk-sl-section-title a {color: inherit; text-decoration: none;}
 .markdown .wk-sl-section-title a:hover {color: var(--ifm-color-primary);}

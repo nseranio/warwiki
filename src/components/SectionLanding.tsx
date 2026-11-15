@@ -95,15 +95,21 @@ function Card({item, entries, here, level}: {item: PropSidebarItem; entries: Ent
   );
 }
 
-/** Pinned row of group buttons: smooth scroll to a group, and the group in view stays highlighted. */
-function JumpNav({ids}: {ids: ReadonlyArray<readonly [string, string]>}): React.ReactElement {
-  const [active, setActive] = useState<string | null>(null);
+/**
+ * Row of group buttons that smooth-scroll to a group. Pinned (the Clinical Care hub): it stays under
+ * the navbar and the group in view stays highlighted. Unpinned (section landings): a quiet wrapping
+ * index at the top of the page, with no highlight to track.
+ */
+function JumpNav({ids, pinned = true}: {ids: ReadonlyArray<readonly [string, string]>; pinned?: boolean}): React.ReactElement {
+  // The first group starts highlighted, as the area filter's "All" does on Clinical Evidence.
+  const [active, setActive] = useState<string | null>(pinned ? ids[0]?.[0] ?? null : null);
   const navRef = useRef<HTMLElement>(null);
   // While a click-scroll runs, the observer must not move the highlight (it would flicker through the groups passed).
   const locked = useRef(false);
   const unlock = useRef<() => void>(() => {});
   useEffect(() => () => unlock.current(), []);
   useEffect(() => {
+    if (!pinned) return undefined;
     const els = ids.map(([id]) => document.getElementById(id)).filter((e): e is HTMLElement => !!e);
     if (!els.length || typeof IntersectionObserver === 'undefined') return undefined;
     const seen = new Map<string, boolean>();
@@ -115,13 +121,13 @@ function JumpNav({ids}: {ids: ReadonlyArray<readonly [string, string]>}): React.
     }, {rootMargin: '-140px 0px -55% 0px'});
     els.forEach(e => io.observe(e));
     return () => io.disconnect();
-  }, [ids.map(([id]) => id).join('|')]);
+  }, [pinned, ids.map(([id]) => id).join('|')]);
   useEffect(() => {
     // Keep the highlighted button visible in the row on a phone. Scroll the row only, sideways:
     // element.scrollIntoView would also scroll the page, and in Safari and Firefox that cancels
     // the smooth scroll a click has started, so the page barely moves.
     const nav = navRef.current;
-    if (!active || !nav || nav.scrollWidth <= nav.clientWidth) return;
+    if (!pinned || !active || !nav || nav.scrollWidth <= nav.clientWidth) return;
     const btn = nav.querySelector<HTMLElement>(`a[data-id="${active}"]`);
     if (btn) nav.scrollTo({left: btn.offsetLeft - (nav.clientWidth - btn.offsetWidth) / 2});
   }, [active]);
@@ -157,9 +163,9 @@ function JumpNav({ids}: {ids: ReadonlyArray<readonly [string, string]>}): React.
     history.replaceState(null, '', `#${id}`);
   };
   return (
-    <nav className="wk-sl-jump" aria-label="Groups on this page" ref={navRef}>
+    <nav className={pinned ? 'wk-sl-jump' : 'wk-sl-jump wk-sl-jump--index'} aria-label="Groups on this page" ref={navRef}>
       {ids.map(([id, label]) => (
-        <a key={id} href={`#${id}`} data-id={id} aria-current={active === id ? 'true' : undefined} onClick={e => go(e, id)}>{label}</a>
+        <a key={id} href={`#${id}`} data-id={id} aria-current={pinned && active === id ? 'true' : undefined} onClick={e => go(e, id)}>{label}</a>
       ))}
     </nav>
   );
@@ -175,7 +181,19 @@ function childCards(group: PropSidebarItem & {type: 'category'}): PropSidebarIte
   return cats.length ? [...cats, loose] : [loose];
 }
 
-export default function SectionLanding({cards = {}, sections = false}: {cards?: Record<string, React.ReactNode>; sections?: boolean}): React.ReactElement | null {
+type Props = {
+  cards?: Record<string, React.ReactNode>;
+  /** Hub layout: each top-level group is a heading with its subgroups and pages (Clinical Care). */
+  sections?: boolean;
+  /** Section landing: a row of jump links to each card at the top of the page. */
+  jump?: boolean;
+  /** Shorter button text for long card titles, keyed by the card title. */
+  jumpLabels?: Record<string, string>;
+  /** Extra jump targets after the cards: [element id, button text], e.g. a heading further down the page. */
+  jumpExtra?: ReadonlyArray<readonly [string, string]>;
+};
+
+export default function SectionLanding({cards = {}, sections = false, jump = false, jumpLabels = {}, jumpExtra = []}: Props): React.ReactElement | null {
   const sidebar = useDocsSidebar();
   const here = norm(useLocation().pathname);
   if (!sidebar) return null;
@@ -209,9 +227,17 @@ export default function SectionLanding({cards = {}, sections = false}: {cards?: 
       </div>
     );
   }
-  return (
+  const grid = (
     <div className="wk-sl">
       {items.map(item => <Card key={'href' in item && item.href ? item.href : 'label' in item ? item.label : String(item.type)} item={item} entries={entries} here={here} level={2} />)}
     </div>
+  );
+  if (!jump) return grid;
+  const targets = items.flatMap(item => ('label' in item && (item.type === 'link' || item.type === 'category') ? [[slug(item.label), jumpLabels[item.label] ?? item.label] as const] : []));
+  return (
+    <>
+      <JumpNav ids={[...targets, ...jumpExtra]} pinned={false} />
+      {grid}
+    </>
   );
 }
