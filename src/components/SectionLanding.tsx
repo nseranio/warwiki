@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import Link from '@docusaurus/Link';
 import {useLocation} from '@docusaurus/router';
 import {useDocsSidebar} from '@docusaurus/plugin-content-docs/client';
@@ -98,12 +98,18 @@ function Card({item, entries, here, level}: {item: PropSidebarItem; entries: Ent
 /** Pinned row of group buttons: smooth scroll to a group, and the group in view stays highlighted. */
 function JumpNav({ids}: {ids: ReadonlyArray<readonly [string, string]>}): React.ReactElement {
   const [active, setActive] = useState<string | null>(null);
+  const navRef = useRef<HTMLElement>(null);
+  // While a click-scroll runs, the observer must not move the highlight (it would flicker through the groups passed).
+  const locked = useRef(false);
+  const unlock = useRef<() => void>(() => {});
+  useEffect(() => () => unlock.current(), []);
   useEffect(() => {
     const els = ids.map(([id]) => document.getElementById(id)).filter((e): e is HTMLElement => !!e);
     if (!els.length || typeof IntersectionObserver === 'undefined') return undefined;
     const seen = new Map<string, boolean>();
     const io = new IntersectionObserver(entries => {
       entries.forEach(e => seen.set(e.target.id, e.isIntersecting));
+      if (locked.current) return;
       const first = ids.find(([id]) => seen.get(id));
       if (first) setActive(first[0]);
     }, {rootMargin: '-140px 0px -55% 0px'});
@@ -111,21 +117,47 @@ function JumpNav({ids}: {ids: ReadonlyArray<readonly [string, string]>}): React.
     return () => io.disconnect();
   }, [ids.map(([id]) => id).join('|')]);
   useEffect(() => {
-    // keep the highlighted button visible in the row on a phone
-    if (!active) return;
-    document.querySelector(`.wk-sl-jump a[data-id="${active}"]`)?.scrollIntoView({block: 'nearest', inline: 'center'});
+    // Keep the highlighted button visible in the row on a phone. Scroll the row only, sideways:
+    // element.scrollIntoView would also scroll the page, and in Safari and Firefox that cancels
+    // the smooth scroll a click has started, so the page barely moves.
+    const nav = navRef.current;
+    if (!active || !nav || nav.scrollWidth <= nav.clientWidth) return;
+    const btn = nav.querySelector<HTMLElement>(`a[data-id="${active}"]`);
+    if (btn) nav.scrollTo({left: btn.offsetLeft - (nav.clientWidth - btn.offsetWidth) / 2});
   }, [active]);
   const go = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     const el = document.getElementById(id);
     if (!el) return;
     e.preventDefault();
     const smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // Hold the highlight on the clicked group until the page stops moving: scrollend where the
+    // browser has it, else 150 ms after the last scroll event; 300 ms if it never moves; 3 s at most.
+    unlock.current();
+    locked.current = true;
+    let idle = 0;
+    const done = () => {
+      window.clearTimeout(idle);
+      window.clearTimeout(cap);
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('scrollend', done);
+      locked.current = false;
+      unlock.current = () => {};
+    };
+    const onScroll = () => {
+      window.clearTimeout(idle);
+      idle = window.setTimeout(done, 150);
+    };
+    const cap = window.setTimeout(done, 3000);
+    idle = window.setTimeout(done, 300);
+    window.addEventListener('scroll', onScroll, {passive: true});
+    if ('onscrollend' in window) window.addEventListener('scrollend', done);
+    unlock.current = done;
+    setActive(id);
     el.scrollIntoView({behavior: smooth ? 'smooth' : 'auto', block: 'start'});
     history.replaceState(null, '', `#${id}`);
-    setActive(id);
   };
   return (
-    <nav className="wk-sl-jump" aria-label="Groups on this page">
+    <nav className="wk-sl-jump" aria-label="Groups on this page" ref={navRef}>
       {ids.map(([id, label]) => (
         <a key={id} href={`#${id}`} data-id={id} aria-current={active === id ? 'true' : undefined} onClick={e => go(e, id)}>{label}</a>
       ))}
