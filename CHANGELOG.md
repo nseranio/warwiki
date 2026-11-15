@@ -6,6 +6,10 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## November 15, 2026 — Anki decks retired
+
+- Owner retired the Anki decks in favor of Rounds. WARWIKI and WHITWIKI Question Bank pages now describe Rounds only; the Anki sections (WARWIKI GURS & URPS Review and its two tracks, WARWIKI Urology Board Review, WHITWIKI Urologic Oncology Review) and the Resources-landing mentions are gone. The Rounds description was brought up to date (more than 2,000 questions, image questions, Today set, High-yield/Supplemental/In-depth levels, Guessed/Fairly sure/Knew it review, Your questions and search, US-keyed sources). Journal Club trial-anchor redirects stay for old deck links.
+
 ## November 14–15, 2026 — Cost and value (STYLE.md section 15, pilot, Tier A, pipeline)
 
 - **Convention.** STYLE.md section 15: one Cost and Value subsection per page, after the comparison material; every figure states setting and payer, currency and price year (publication year when none is given), perspective, design and horizon; ICERs name both options and the unit; willingness-to-pay thresholds go with any probability of cost-effectiveness; manufacturer employment or funding is stated when the paper reports it. No currency conversion, list prices, coverage or billing advice.
