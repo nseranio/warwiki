@@ -351,6 +351,79 @@ h1.logo{cursor:pointer}
 .viewHead{display:flex;align-items:center;gap:10px}
 .viewHead h2{font:600 19px var(--sans);margin:0}
 .more{width:100%}
+
+/* ---- desktop: wider canvas, two columns, larger type (phone layout unchanged) ---- */
+.navP{display:flex;flex-direction:column;gap:14px}
+.navH{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.navGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(42px,1fr));gap:6px;max-height:340px;overflow-y:auto;padding:2px}
+.navGrid button{position:relative;height:40px;border:1px solid var(--line);background:var(--panel);border-radius:6px;font:600 13.5px var(--sans);font-variant-numeric:tabular-nums;color:var(--ink2);transition:border-color .15s var(--ease),background .2s var(--ease),transform .12s var(--ease)}
+.navGrid button:hover{border-color:var(--ink2);color:var(--ink)}
+.navGrid button:active{transform:scale(.94)}
+.navGrid button.a{background:var(--soft);color:var(--ink)}
+.navGrid button.c{background:var(--okSoft);border-color:transparent;color:var(--ok)}
+.navGrid button.w{background:var(--badSoft);border-color:transparent;color:var(--bad)}
+.navGrid button.cur{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent);color:var(--ink)}
+.navGrid button.f::after{content:"";position:absolute;top:4px;right:4px;width:6px;height:6px;border-radius:50%;background:var(--warn)}
+.keys{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:12.5px;color:var(--ink2)}
+.keys kbd{font:500 11px var(--mono);border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;padding:1px 6px;margin-right:3px;color:var(--ink);background:var(--bg)}
+.oc{display:flex;flex-direction:column;gap:18px;min-width:0}
+@media (min-width:1080px){
+  .wrap{max-width:1240px;padding-block:32px 72px;padding-left:max(40px,env(safe-area-inset-left,0px));padding-right:max(40px,env(safe-area-inset-right,0px));gap:28px}
+  h1.logo{font-size:44px}
+  .homeLink{font-size:12px}
+  .themeBtn{width:42px;height:42px}
+  .fieldSw{padding:5px}
+  .fieldSw button{padding:13px 10px;font-size:15.5px}
+  .fieldSw button span{font-size:12px}
+  .panel{padding:26px 30px}
+  .hBand,.hGrid{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:24px;align-items:stretch}
+  .hGrid{align-items:start}
+  .hero{gap:40px}
+  .ring{width:150px;height:150px}
+  .stats{gap:28px}
+  .stat .lab{font-size:12px}
+  .stat .v{font-size:40px;margin-top:6px}
+  .stat .v small{font-size:15px}
+  .today{flex-direction:column;align-items:stretch;justify-content:space-between;gap:20px}
+  .today .pv{font-size:28px;margin-top:6px;letter-spacing:-.01em}
+  .today .note{font-size:14px;margin-top:6px}
+  .today .btn{padding:14px 22px;font-size:16px}
+  .hSide{display:flex;flex-direction:column;gap:16px;min-width:0}
+  .hSide .note{line-height:1.6}
+  .opts h2{font-size:22px;letter-spacing:-.01em}
+  .opts.wideOpts{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:40px;row-gap:24px}
+  .opts.wideOpts>h2,.opts.wideOpts>.go{grid-column:1/-1}
+  .opts .go .btn{padding:15px 22px;font-size:16px}
+  .seg button{padding:9px 14px;font-size:14px}
+  .pickRow{padding:14px 16px}
+  .searchBtn{padding:14px 16px}
+  .statsHead{padding:20px 24px}
+  .statsBody{padding:0 24px 22px}
+  .hSide .row{grid-template-columns:minmax(0,1fr) 90px 60px}
+  .qbar .lab{font-size:12px}
+  .qGrid{display:grid;grid-template-columns:minmax(0,1fr) 440px;gap:44px;align-items:start}
+  .qMain{display:flex;flex-direction:column;gap:18px;min-width:0}
+  .qRail{display:flex;flex-direction:column;gap:16px;min-width:0}
+  .qbody{grid-template-columns:36px minmax(0,1fr)}
+  .qn{font-size:20px}
+  .stem{font-size:20px;line-height:1.62}
+  .ask{font-size:20px;margin-top:14px}
+  .choices{margin-left:36px;gap:4px}
+  .ch{font-size:19px;padding:10px 12px 10px 8px;grid-template-columns:38px minmax(0,1fr)}
+  .ch .L{font-size:19px}
+  .ch .why{font-size:16px}
+  .reveal,.recall{margin-left:36px}
+  .qimg img{max-height:min(560px,62vh)}
+  .ans .block p{font-size:17px}
+  .verdict{font-size:19px}
+  .slide{height:58px}
+  .sumTop{gap:36px}
+  .score{font-size:56px}
+  .narrow{max-width:880px;width:100%;margin:0 auto}
+  .qrow .qt{font-size:16px}
+  .sheet{top:7vh;bottom:auto;max-height:86vh;max-width:680px;border-radius:12px;box-shadow:0 24px 60px -12px rgba(0,0,0,.35)}
+  .sfoot{border-radius:0 0 12px 12px}
+}
 </style>
 
 <div class="wrap" id="app">
@@ -407,6 +480,9 @@ const PALETTES={
 const LOGO={slate:{L:["#2E5E59","#D2DADB"],D:["#7CC3BC","#2A3639"]}};
 let palette=LS.get("rounds-palette","slate");if(!PALETTES[palette])palette="slate";
 const mq=window.matchMedia?window.matchMedia("(prefers-color-scheme: dark)"):null;
+const WIDEQ=window.matchMedia?window.matchMedia("(min-width:1080px)"):null;
+function wide(){return !!(WIDEQ&&WIDEQ.matches)}
+if(WIDEQ){const onWide=()=>{if(S.qs.length&&S.view!=="find")render()};WIDEQ.addEventListener?WIDEQ.addEventListener("change",onWide):WIDEQ.addListener&&WIDEQ.addListener(onWide)}
 function applyTheme(){
   const r=document.documentElement;
   const mode=theme==="system"?((HOST_THEME==="dark"||HOST_THEME==="light")?HOST_THEME:(mq&&mq.matches?"dark":"light")):theme;
@@ -596,40 +672,40 @@ function home(){
   const pools=Object.entries(POOLS).map(([k,v])=>[k,v.label,poolList(k).length]);
   const avail=poolList(S.set.pool).length;
   const n=S.set.n==="all"?avail:Math.min(S.set.n,avail);
-  return `
-  <div class="fieldSw" role="group" aria-label="Field">${Object.entries(FIELDS).map(([k,l])=>`<button data-set="field" data-v="${k}" aria-pressed="${S.set.field===k}">${l}<span>${k==="both"?S.qs.length:S.qs.filter(q=>q.field===k).length}</span></button>`).join("")}</div>
-  <div class="panel hero">
+  const field=`<div class="fieldSw" role="group" aria-label="Field">${Object.entries(FIELDS).map(([k,l])=>`<button data-set="field" data-v="${k}" aria-pressed="${S.set.field===k}">${l}<span>${k==="both"?S.qs.length:S.qs.filter(q=>q.field===k).length}</span></button>`).join("")}</div>`;
+  const hero=`<div class="panel hero">
     ${ring(all.used?all.c/all.used:0)}
     <div class="stats">
       <div class="stat"><div class="lab">Answered</div><div class="v">${all.used}<small> / ${all.total}</small></div></div>
       <div class="stat"><div class="lab">Today</div><div class="v">${days()[dayKey()]||0}</div></div>
       <div class="stat"><div class="lab">Streak</div><div class="v">${streak()}<small> ${streak()===1?"day":"days"}</small></div></div>
     </div>
-  </div>
-  ${todayPanel()}
-  <button class="searchBtn" id="openFind">${MAG}<span>Search ${S.qs.length.toLocaleString()} questions</span></button>
-  ${(()=>{const m=mineBase();if(!m.length)return"";const miss=m.filter(q=>S.prog[q.id].last==="w").length,fl=m.filter(q=>S.prog[q.id].flag).length;return `<button class="pickRow" id="openMine"><span><span class="pv">Your questions</span><span class="note">${m.filter(q=>S.prog[q.id].n).length} answered · ${miss} missed${fl?" · "+fl+" flagged":""}</span></span><span class="chev">›</span></button>`})()}
-  <div class="panel opts">
-    <h2>New block</h2>
-    <div><div class="lab" style="margin-bottom:8px">Topics</div>${topicPicker}</div>
-    <div><div class="lab" style="margin-bottom:6px">Yield</div>${segs("yield",Object.entries(YIELDS).map(([k,l])=>[k,l,S.qs.filter(q=>inField(q)&&(k==="all"||yLevel(q)===k)).length]))}<div class="note" style="margin-top:6px">High-yield: guideline statements, landmark trial results and standard decisions. Supplemental: facts that round out a topic. In-depth: small-series numbers and subgroups. All: every question.</div></div>
-    <div><div class="lab" style="margin-bottom:6px">Type</div>${multi("kinds",[["__all","All types"],...Object.entries(KINDS).map(([k,l])=>[k,l,kindCnt(k)])])}</div>
-    <div><div class="lab" style="margin-bottom:6px">Questions</div>${segs("pool",pools)}</div>
-    <div><div class="lab" style="margin-bottom:6px">How many</div><div class="nRow">${segs("n",[[5,"5"],[10,"10"],[20,"20"],["all","All"]])}<input id="nIn" class="nIn" type="number" inputmode="numeric" min="1" max="${avail||1}" placeholder="Custom" aria-label="Custom number of questions" value="${typeof S.set.n==="number"&&![5,10,20].includes(S.set.n)?S.set.n:""}"></div></div>
-    <div><div class="lab" style="margin-bottom:6px">Mode</div>${segs("mode",[["tutor","Tutor"],["timed","Timed"]])}</div>
-    <div><div class="lab" style="margin-bottom:6px">Recall first</div>${segs("recall",[[false,"Off"],[true,"On"]])}<div class="note" style="margin-top:6px">Each question first shows without its choices. Type your answer (or just think it), then tap Show choices and pick. Your recalled answer appears beside the explanation so you can compare. Harder, and better for quoting trial numbers from memory.</div></div>
-    <div class="go"><button class="btn wide" id="start" ${n?"":"disabled"}>Start ${n||""} question${n===1?"":"s"}</button>${n?"":`<span class="note">No questions match. Pick another set.</span>`}</div>
-  </div>
-  <div class="panel statsP">
+  </div>`;
+  const search=`<button class="searchBtn" id="openFind">${MAG}<span>Search ${S.qs.length.toLocaleString()} questions</span></button>`;
+  const mine=(()=>{const m=mineBase();if(!m.length)return"";const miss=m.filter(q=>S.prog[q.id].last==="w").length,fl=m.filter(q=>S.prog[q.id].flag).length;return `<button class="pickRow" id="openMine"><span><span class="pv">Your questions</span><span class="note">${m.filter(q=>S.prog[q.id].n).length} answered · ${miss} missed${fl?" · "+fl+" flagged":""}</span></span><span class="chev">›</span></button>`})();
+  const oTopics=`<div><div class="lab" style="margin-bottom:8px">Topics</div>${topicPicker}</div>`;
+  const oYield=`<div><div class="lab" style="margin-bottom:6px">Yield</div>${segs("yield",Object.entries(YIELDS).map(([k,l])=>[k,l,S.qs.filter(q=>inField(q)&&(k==="all"||yLevel(q)===k)).length]))}<div class="note" style="margin-top:6px">High-yield: guideline statements, landmark trial results and standard decisions. Supplemental: facts that round out a topic. In-depth: small-series numbers and subgroups. All: every question.</div></div>`;
+  const oType=`<div><div class="lab" style="margin-bottom:6px">Type</div>${multi("kinds",[["__all","All types"],...Object.entries(KINDS).map(([k,l])=>[k,l,kindCnt(k)])])}</div>`;
+  const oPool=`<div><div class="lab" style="margin-bottom:6px">Questions</div>${segs("pool",pools)}</div>`;
+  const oN=`<div><div class="lab" style="margin-bottom:6px">How many</div><div class="nRow">${segs("n",[[5,"5"],[10,"10"],[20,"20"],["all","All"]])}<input id="nIn" class="nIn" type="number" inputmode="numeric" min="1" max="${avail||1}" placeholder="Custom" aria-label="Custom number of questions" value="${typeof S.set.n==="number"&&![5,10,20].includes(S.set.n)?S.set.n:""}"></div></div>`;
+  const oMode=`<div><div class="lab" style="margin-bottom:6px">Mode</div>${segs("mode",[["tutor","Tutor"],["timed","Timed"]])}</div>`;
+  const oRecall=`<div><div class="lab" style="margin-bottom:6px">Recall first</div>${segs("recall",[[false,"Off"],[true,"On"]])}<div class="note" style="margin-top:6px">Each question first shows without its choices. Type your answer (or just think it), then tap Show choices and pick. Your recalled answer appears beside the explanation so you can compare. Harder, and better for quoting trial numbers from memory.</div></div>`;
+  const go=`<div class="go"><button class="btn wide" id="start" ${n?"":"disabled"}>Start ${n||""} question${n===1?"":"s"}</button>${n?"":`<span class="note">No questions match. Pick another set.</span>`}</div>`;
+  const W=wide();
+  const opts=W?`<div class="panel opts wideOpts"><h2>New block</h2><div class="oc">${oTopics}${oYield}${oType}</div><div class="oc">${oPool}${oN}${oMode}${oRecall}</div>${go}</div>`
+    :`<div class="panel opts"><h2>New block</h2>${oTopics}${oYield}${oType}${oPool}${oN}${oMode}${oRecall}${go}</div>`;
+  const progress=`<div class="panel statsP">
     <button class="statsHead" id="toggleStats" aria-expanded="${!!S.showStats}"><span><span class="pv">Progress</span><span class="note">${(()=>{const ts=TOPICS_().filter(t=>S.qs.some(q=>q.topic===t.id&&inField(q))).map(t=>({l:t.label,...tally(S.qs.filter(q=>q.topic===t.id))})).filter(x=>x.used>=3);if(!ts.length)return "By topic and type, once you have answered a few";const w=ts.sort((a,b)=>a.c/a.used-b.c/b.used)[0];return "Weakest so far: "+w.l+" ("+Math.round(w.c/w.used*100)+"%)"})()}</span></span><span class="chev">${S.showStats?"−":"+"}</span></button>
     ${S.showStats?`<div class="statsBody">
     <div class="rows">${groups.map(g=>`<div class="lab rowh">${esc(g.label)}</div>`+TOPICS_().filter(t=>t.group===g.id).map(t=>barRow(t.label,tally(S.qs.filter(q=>q.topic===t.id)))).join("")).join("")}</div>
     <div class="lab rowh" style="margin-top:18px">By type</div>
     <div class="rows">${Object.entries(KINDS).map(([k,l])=>barRow(l,tally(scope.filter(q=>q.kind===k)))).join("")}</div></div>`:""}
-  </div>
-  ${ONSITE?`<button class="pickRow" id="openSync"><span><span class="pv">${syncCode?"Sync on · "+fmtCode(syncCode):"Sync across sites and devices"}</span><span class="note">${syncCode?(syncInfo.state==="error"?"Offline: saved on this device":syncInfo.state==="ok"?"Up to date":"Syncing…"):"No account needed: a private code links your progress"}</span></span><span class="chev">›</span></button>`:""}
+  </div>`;
+  const tail=`${ONSITE?`<button class="pickRow" id="openSync"><span><span class="pv">${syncCode?"Sync on · "+fmtCode(syncCode):"Sync across sites and devices"}</span><span class="note">${syncCode?(syncInfo.state==="error"?"Offline: saved on this device":syncInfo.state==="ok"?"Up to date":"Syncing…"):"No account needed: a private code links your progress"}</span></span><span class="chev">›</span></button>`:""}
   <p class="note">${esc(storeNote)} ${S.qs.length} questions, each checked against its source page or guideline${S.meta&&S.meta.built?` (bank built ${esc(S.meta.built)})`:""}.</p>
   ${Object.keys(S.prog).some(k=>k[0]!=="_")||days().at?`<button class="resetBtn" id="resetProg">Reset progress</button>`:""}`;
+  if(W)return `${field}<div class="hBand">${hero}${todayPanel()}</div><div class="hGrid"><div class="hMain">${opts}</div><div class="hSide">${search}${mine}${progress}${tail}</div></div>`;
+  return `${field}${hero}${todayPanel()}${search}${mine}${opts}${progress}${tail}`;
 }
 
 /* ---------- block ---------- */
@@ -677,6 +753,28 @@ function quiz(){
   else action=last?`<button class="btn wide" id="finish">${b.browse?"Back to list":b.finished?"Back to summary":"Finish block"}</button>`:`<button class="btn wide" id="next">Next question</button>`;
   const two=!answered&&!hideChoices;
   const fresh=S.shownIdx!==b.ids[idx];S.shownIdx=b.ids[idx];
+  if(wide()){
+    const reviewed=b.mode==="tutor"||b.finished;
+    const tiles=b.ids.map((id,k)=>{let c="";if(b.done[id]!=null)c=reviewed?(b.done[id]?"c":"w"):"a";if(k===idx)c+=" cur";if(S.prog[id]&&S.prog[id].flag)c+=" f";
+      const st=b.done[id]==null?"not answered":reviewed?(b.done[id]?"correct":"incorrect"):"answered";
+      return `<button data-jump="${k}" class="${c.trim()}" aria-label="Question ${k+1}, ${st}"${k===idx?' aria-current="step"':""}>${k+1}</button>`}).join("");
+    const nDone=b.ids.filter(id=>b.done[id]!=null).length;
+    const keys=`<div class="keys"><span><kbd>A</kbd>to <kbd>E</kbd>choose</span><span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd>submit</span><span><kbd>Enter</kbd>next</span></div>`;
+    const nav=b.browse?`<div class="panel">${keys}</div>`:`<div class="panel navP"><div class="navH"><span class="lab">${b.finished?"Review":b.mode==="timed"?"Timed block":"Tutor block"}</span><span class="note">${nDone} of ${b.ids.length} answered</span></div><div class="navGrid" role="group" aria-label="Go to question">${tiles}</div>${keys}</div>`;
+    return `
+  <div class="qbar"><button class="exitBtn" id="exitBlock">‹ ${b.browse?"Back":b.finished?"Summary":"Exit"}</button><div class="lab">Question ${idx+1} of ${b.ids.length}</div><div class="clock" id="clock">${b.finished?"Review":clock()}</div></div>
+  <div class="qGrid"><div class="qMain">
+  <div class="${fresh?"case":""}" style="display:flex;flex-direction:column;gap:18px">
+  <div class="meta"><span class="chip ${q.field==="oncology"?"onc":""}">${esc(topicLabel(q.topic))}</span><span class="chip ${q.kind==="trial"?"t":""}">${esc(q.trial||KINDS[q.kind]||q.kind)}</span><span class="chip ${yLevel(q)==="c"?"core":""}">${YIELDS[yLevel(q)]}</span>${q.boardFav?'<span class="chip bf">Board favorite</span>':""}</div>
+  <div class="qbody"><div class="qn">${idx+1}.</div><div><div class="stem">${esc(q.stem)}</div>${q.image?figHTML(q.image):""}<div class="ask">${esc(q.question)}</div></div></div>
+  ${choices}
+  </div>
+  <div class="dock"><div class="foot${two?" two":""}">${two?action+'<div class="row">':""}
+    <div class="l"><button class="ghost icon" id="prev" ${idx?"":"disabled"} aria-label="Previous question" title="Previous">${ICON.back}</button><button class="ghost icon flag" id="flag" aria-pressed="${!!p.flag}" aria-label="${p.flag?"Unflag question":"Flag question"}" title="${p.flag?"Flagged":"Flag"}">${ICON.flag}</button><button class="ghost icon" id="quit" aria-label="${b.browse?"Back to list":b.finished?"Home":"End block"}" title="${b.browse?"Back to list":b.finished?"Home":"End block"}">${ICON.end}</button></div>
+    ${two?'<span class="confNote">Slide, click or press 1 2 3 to answer</span></div>':action}
+  </div></div>
+  </div><aside class="qRail" aria-label="${reveal?"Answer and block":"Block"}">${ans}${nav}</aside></div>`;
+  }
   return `
   <div class="qbar"><button class="exitBtn" id="exitBlock">‹ ${b.browse?"Back":b.finished?"Summary":"Exit"}</button><div class="lab">Question ${idx+1} of ${b.ids.length}</div><div class="clock" id="clock">${b.finished?"Review":clock()}</div></div>
   <div class="ticks" aria-hidden="true">${ticks}</div>
@@ -888,10 +986,10 @@ function render(){
   if(S.view==="home")v.innerHTML=`<div style="display:flex;flex-direction:column;gap:20px">${home()}</div>`;
   else if(S.view==="quiz"){v.innerHTML=`<div style="display:flex;flex-direction:column;gap:14px">${quiz()}</div>`;
     if(!S.block.finished){tick=setInterval(()=>{const c=$("#clock");if(c)c.textContent=clock();const b=S.block;if(b&&b.limit&&!b.finished&&(Date.now()-b.start)/1000>=b.limit)finish()},1000)}}
-  else if(S.view==="summary")v.innerHTML=`<div style="display:flex;flex-direction:column;gap:20px">${summary()}</div>`;
-  else if(S.view==="cards")v.innerHTML=`<div style="display:flex;flex-direction:column;gap:14px">${cards()}</div>`;
-  else if(S.view==="find")v.innerHTML=`<div style="display:flex;flex-direction:column;gap:14px">${findView()}</div>`;
-  else if(S.view==="mine")v.innerHTML=`<div style="display:flex;flex-direction:column;gap:14px">${mineView()}</div>`;
+  else if(S.view==="summary")v.innerHTML=`<div class="narrow" style="display:flex;flex-direction:column;gap:20px">${summary()}</div>`;
+  else if(S.view==="cards")v.innerHTML=`<div class="narrow" style="display:flex;flex-direction:column;gap:14px">${cards()}</div>`;
+  else if(S.view==="find")v.innerHTML=`<div class="narrow" style="display:flex;flex-direction:column;gap:14px">${findView()}</div>`;
+  else if(S.view==="mine")v.innerHTML=`<div class="narrow" style="display:flex;flex-direction:column;gap:14px">${mineView()}</div>`;
   let L=$("#sheetLayer");if(!L){L=document.createElement("div");L.id="sheetLayer";document.body.appendChild(L)}
   const sb=$("#sbody"),top=sb?sb.scrollTop:0;
   const showSheet=S.sheet==="theme"||S.sheet==="sync"||(S.sheet&&S.view==="home");
@@ -946,6 +1044,7 @@ document.addEventListener("click",e=>{
   if(t.dataset.ch!=null&&b){const q=cur();if(b.done[q.id]!=null)return;b.pick[q.id]=+t.dataset.ch;render();return}
   if(t.id==="showCh"){const r=$("#recallIn");b.recallText=b.recallText||{};if(r&&r.value.trim())b.recallText[cur().id]=r.value.trim();b.shown[cur().id]=true;render();return}
   if(t.dataset.conf!=null&&b){submit(+t.dataset.conf);return}
+  if(t.dataset.jump!=null&&b){b.i=+t.dataset.jump;render();window.scrollTo(0,0);return}
   if(t.id==="next"){b.i++;render();window.scrollTo(0,0);return}
   if(t.id==="prev"){b.i--;render();window.scrollTo(0,0);return}
   if(t.id==="finish"){if(b.browse){leaveBrowse();return}finish();return}
