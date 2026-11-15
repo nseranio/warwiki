@@ -6,6 +6,15 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## November 15, 2026 — One menu for both sites; Rounds linked from the pages
+
+- Both sites now share one menu: Foundations · Clinical Care (WHITWIKI: Cancers) · Treatment Atlas · Clinical Evidence · Rounds · Library. WARWIKI's Library holds Video Library, Instruments & Devices, Resources and History. The owner approved it after a pilot on a preview branch.
+- Clinical Care (`docs/clinical-care.mdx`, sidebar `clinicalCareSidebar`) groups Evaluation, Conditions, Trauma & Emergencies and Populations & Life Stages. No files moved, so URLs, claim-gate bindings and Rounds `source.file` paths are unchanged. Six condition groups have no index page, which left their pages reachable only from the sidebar; the hub now lists every page under its group, with a pinned row of group buttons that scrolls to a group and highlights the one in view. The Evaluation, Clinical Conditions and Special Populations landings list their own group (`SectionLanding` scopes to the top-level category whose link is the current page), and a group title links only to a real landing page.
+- Homepage cards: Foundations, Clinical Care, Treatment Atlas, Clinical Evidence, Rounds and Video Library.
+- Pages with 5 or more Rounds questions written from them (47 on WARWIKI, 32 on WHITWIKI) show "Practice N questions from this page" under the title and a "Test yourself" card at the end. The link opens Rounds on that page's questions, with a link back. Counts live in `src/data/rounds-pages.json`, written by Rounds `tools/page_counts.py` (run by `tools/export_site.sh --copy`).
+- Rounds uses each site's colors (WARWIKI blue, WHITWIKI crimson) and Inter, with a quiet line of site links above it: site name and menu on the home screen, site name and the way back during questions, menu folded behind "Menu" on phones. The change is in the Rounds source (`~/Documents/Rounds/bank/app/index.html`).
+- WHITWIKI: Survivorship & Supportive Care is a named group inside Cancers, and Rounds took its place in the menu.
+
 ## November 15, 2026 — Anki decks retired
 
 - Owner retired the Anki decks in favor of Rounds. WARWIKI and WHITWIKI Question Bank pages now describe Rounds only; the Anki sections (WARWIKI GURS & URPS Review and its two tracks, WARWIKI Urology Board Review, WHITWIKI Urologic Oncology Review) and the Resources-landing mentions are gone. The Rounds description was brought up to date (more than 2,000 questions, image questions, Today set, High-yield/Supplemental/In-depth levels, Guessed/Fairly sure/Knew it review, Your questions and search, US-keyed sources). Journal Club trial-anchor redirects stay for old deck links.
