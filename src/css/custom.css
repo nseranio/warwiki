@@ -3927,10 +3927,11 @@ html[data-section='populations'] .wk-landing:not(.wk-landing--root) .markdown > 
 
 /* Evidence timeline: one chronological list */
 .wk-ev-tl {margin: 1rem 0 1.5rem;}
-.wk-ev-tl-filter {display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1rem;}
-.wk-ev-tl-filter button {font: inherit; font-size: .8rem; padding: .3rem .7rem; border-radius: 999px; border: 1px solid var(--warwiki-border); background: transparent; color: var(--warwiki-text-muted); cursor: pointer;}
-.wk-ev-tl-filter button[aria-pressed='true'] {background: var(--ifm-color-primary); border-color: var(--ifm-color-primary); color: #fff;}
-[data-theme='dark'] .wk-ev-tl-filter button[aria-pressed='true'] {color: #0E1520;}
+/* Lane filter: quiet text buttons; the active lane gets a soft tint (owner, Nov 15: cleaner, quieter toggles). */
+.wk-ev-tl-filter {display: flex; flex-wrap: wrap; gap: .15rem .25rem; margin: -.2rem 0 .9rem -.5rem;}
+.wk-ev-tl-filter button {font: inherit; font-size: .8rem; font-weight: 500; line-height: 1.35; padding: .28rem .5rem; border: 0; border-radius: 6px; background: transparent; color: var(--warwiki-text-subtle); cursor: pointer; transition: color .15s ease, background-color .15s ease;}
+.wk-ev-tl-filter button:hover {color: var(--warwiki-text);}
+.wk-ev-tl-filter button[aria-pressed='true'] {background: var(--warwiki-bg-subtle); color: var(--ifm-color-primary); font-weight: 600;}
 .wk-ev-tl-list {list-style: none; margin: 0; padding: 0;}
 .wk-ev-tl-item {display: grid; grid-template-columns: 3.2rem 1rem minmax(0, 1fr); column-gap: .6rem; position: relative; padding-bottom: .9rem;}
 .wk-ev-tl-item::before {content: ''; position: absolute; left: calc(3.2rem + .6rem + .5rem - 1px); top: .9rem; bottom: -.1rem; width: 2px; background: var(--warwiki-border);}
@@ -3960,21 +3961,25 @@ html[data-section='populations'] .wk-landing:not(.wk-landing--root) .markdown > 
   .wk-ev-convo-rel {display: block; min-width: 0;}
 }
 /* Timelines page: area and decision filters sit above the list and scroll with the page (owner, Nov 12: no floating bar). */
-.wk-ev-tlb-filter {padding: .7rem 0; margin-bottom: 1rem; border-bottom: 1px solid var(--warwiki-border);}
-.wk-ev-tlb-families, .wk-ev-tlb-areas {display: flex; flex-wrap: wrap; gap: .45rem;}
-.wk-ev-tlb-areas {margin-top: .55rem;}
-.wk-ev-tlb-filter button {font: inherit; font-size: .88rem; font-weight: 600; padding: .45rem .95rem; border-radius: 999px; border: 1px solid var(--warwiki-border); background: transparent; color: var(--warwiki-text-muted); cursor: pointer;}
-.wk-ev-tlb-areas button {font-size: .82rem; padding: .32rem .8rem;}
-.wk-ev-tlb-filter button[aria-pressed='true'] {background: var(--ifm-color-primary); border-color: var(--ifm-color-primary); color: #fff;}
-.wk-ev-tlb-areas button[aria-pressed='true'] {background: var(--wk-accent-soft, rgba(24, 95, 165, .12)); border-color: var(--ifm-color-primary); color: var(--ifm-color-primary);}
-[data-theme='dark'] .wk-ev-tlb-families button[aria-pressed='true'] {color: #0E1520;}
+.wk-ev-tlb-filter {padding: .2rem 0 0; margin-bottom: 1rem; border-bottom: 1px solid var(--warwiki-border);}
+.wk-ev-tlb-families, .wk-ev-tlb-areas {display: flex; flex-wrap: wrap; gap: 0 1.35rem;}
+.wk-ev-tlb-areas {gap: 0 1.1rem; padding-top: .1rem; border-top: 1px solid var(--warwiki-border);}
+/* Area filter: text tabs; the active one is underlined in the accent and sits on the rule below. */
+.wk-ev-tlb-filter button {font: inherit; font-size: .9rem; font-weight: 500; padding: .6rem 0 .55rem; margin-bottom: -1px; border: 0; border-bottom: 2px solid transparent; border-radius: 0; background: transparent; color: var(--warwiki-text-muted); cursor: pointer; transition: color .15s ease, border-color .15s ease;}
+.wk-ev-tlb-areas button {font-size: .84rem; padding: .5rem 0 .45rem;}
+.wk-ev-tlb-filter button:hover {color: var(--warwiki-text);}
+.wk-ev-tlb-filter button[aria-pressed='true'] {color: var(--warwiki-text); font-weight: 600; border-bottom-color: var(--ifm-color-primary);}
+.wk-ev-tlb-families button[aria-pressed='true'] {color: var(--warwiki-text);}
 .wk-ev-tlb-group h2 {margin-top: 2rem;}
 .wk-ev-tlb-decision h3 {font-size: 1.05rem; margin: 1.6rem 0 .7rem; scroll-margin-top: calc(var(--ifm-navbar-height) + 4rem);}
 /* Clinical Trial Library: By trial / By decision switch above the shared cancer filter. */
-.wk-ev-evx-views {display: inline-flex; gap: 0; margin: 1.5rem 0 .25rem; border: 1px solid var(--warwiki-border); border-radius: 999px; padding: 3px;}
-.wk-ev-evx-views button {font: inherit; font-size: .92rem; font-weight: 600; padding: .45rem 1.1rem; border: 0; border-radius: 999px; background: transparent; color: var(--warwiki-text-muted); cursor: pointer;}
-.wk-ev-evx-views button[aria-selected='true'] {background: var(--ifm-color-primary); color: #fff;}
-[data-theme='dark'] .wk-ev-evx-views button[aria-selected='true'] {color: #0E1520;}
+/* View switch: one segmented control on a soft track; the chosen view is a raised surface, not a solid fill. */
+.wk-ev-evx-views {display: inline-flex; gap: 2px; margin: 1.5rem 0 .75rem; padding: 3px; border-radius: 10px; background: var(--warwiki-bg-subtle);}
+.wk-ev-evx-views button {font: inherit; font-size: .88rem; font-weight: 500; padding: .38rem 1rem; border: 0; border-radius: 7px; background: transparent; color: var(--warwiki-text-muted); cursor: pointer; transition: color .15s ease, background-color .15s ease, box-shadow .15s ease;}
+.wk-ev-evx-views button:hover {color: var(--warwiki-text);}
+.wk-ev-evx-views button[aria-selected='true'] {background: var(--warwiki-white); color: var(--warwiki-text); font-weight: 600; box-shadow: 0 1px 2px rgba(18, 55, 105, .1), 0 1px 1px rgba(0, 0, 0, .04);}
+[data-theme='dark'] .wk-ev-evx-views button[aria-selected='true'] {background: #22324A; box-shadow: 0 1px 2px rgba(0, 0, 0, .35);}
+.wk-ev-evx-views button:focus-visible, .wk-ev-tlb-filter button:focus-visible, .wk-ev-tl-filter button:focus-visible {outline: 2px solid var(--ifm-color-primary); outline-offset: 2px;}
 .wk-ev-evx-note {color: var(--warwiki-text-muted); margin: .5rem 0 0;}
 .wk-ev-link-button {font: inherit; padding: 0; border: 0; background: none; color: var(--ifm-link-color); cursor: pointer;}
 .wk-ev-link-button:hover {text-decoration: underline;}

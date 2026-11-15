@@ -97,7 +97,13 @@ a{color:var(--accent)}
 .qbar{display:flex;justify-content:space-between;align-items:center;gap:10px}
 .ticks{display:flex;gap:4px}
 .ticks i{flex:1;max-width:28px;height:4px;border-radius:2px;background:var(--line);transition:background .3s var(--ease)}
-.ticks i.cur{background:var(--accent)} .ticks i.c{background:var(--ok)} .ticks i.w{background:var(--bad)} .ticks i.a{background:var(--ink2)}
+:root{--cfK:var(--logo);--cfS:color-mix(in srgb,var(--logo) 45%,var(--panel));--cfG:var(--pearl)}
+:root[data-theme="dark"]{--cfS:color-mix(in srgb,var(--logo) 55%,var(--ink2))}
+.ticks i.cur{background:var(--accent)} .ticks i.ck{background:var(--cfK)} .ticks i.cs{background:var(--cfS)} .ticks i.cg{background:var(--cfG)} .ticks i.w{background:var(--bad)} .ticks i.a{background:var(--ink2)}
+.cfKey{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:12px;font-size:12.5px;color:var(--ink2)}
+.cfKey span{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.cfKey i{width:9px;height:9px;border-radius:50%;flex:none}
+.cfKey b{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
 .meta{display:flex;gap:8px;flex-wrap:wrap}
 .chip{font:500 11px var(--mono);letter-spacing:.05em;text-transform:uppercase;padding:4px 9px;border-radius:6px;background:var(--soft);color:var(--ink2)}
 .chip.t{background:var(--warnSoft);color:var(--warn)}
@@ -313,8 +319,10 @@ h1.logo{cursor:pointer}
 
 /* ---- confidence buttons, Today, search, Your questions ---- */
 .confBtns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
-.cb{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:58px;padding:9px 6px;border-radius:8px;border:1.5px solid var(--cbc);background:var(--cbs);color:var(--cbc);font:600 15px/1.15 var(--sans);transition:transform .12s var(--ease),filter .15s,opacity .2s}
-.cb.c0{--cbc:var(--bad);--cbs:var(--badSoft)}.cb.c1{--cbc:var(--warn);--cbs:var(--warnSoft)}.cb.c2{--cbc:var(--ok);--cbs:var(--okSoft)}
+.cb{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:58px;padding:9px 6px;border-radius:8px;border:1.5px solid var(--cbb,var(--cbc));background:var(--cbs);color:var(--cbc);font:600 15px/1.15 var(--sans);transition:transform .12s var(--ease),filter .15s,opacity .2s}
+.cb.c0{--cbc:color-mix(in srgb,var(--cfG) 70%,var(--ink));--cbb:var(--cfG);--cbs:color-mix(in srgb,var(--cfG) 12%,var(--panel))}
+.cb.c1{--cbc:color-mix(in srgb,var(--cfK) 72%,var(--ink2));--cbb:var(--cfS);--cbs:color-mix(in srgb,var(--cfK) 6%,var(--panel))}
+.cb.c2{--cbc:var(--cfK);--cbb:var(--cfK);--cbs:color-mix(in srgb,var(--cfK) 13%,var(--panel))}
 .cb:hover:not(:disabled){filter:brightness(1.06)}
 .cb:active:not(:disabled){transform:scale(.97)}
 .cb:disabled{opacity:.4;cursor:default}
@@ -347,35 +355,7 @@ h1.logo{cursor:pointer}
 .viewHead{display:flex;align-items:center;gap:10px}
 .viewHead h2{font:600 19px var(--sans);margin:0}
 .more{width:100%}
-/* ---- readiness map ---- */
-.rdSum{display:flex;flex-direction:column;gap:12px}
-.rdCounts{display:flex;flex-wrap:wrap;gap:8px}
-.rdCounts span{display:inline-flex;align-items:baseline;gap:6px;font:600 14px var(--sans)}
-.rdCounts b{font-variant-numeric:tabular-nums}
-.rdList{display:flex;flex-direction:column;gap:8px}
-.rdSub{margin:10px 0 0}
-.rdRow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;align-items:center;width:100%;text-align:left;border:1px solid var(--line);border-left:4px solid var(--stc);background:var(--panel);border-radius:6px;padding:12px 14px 12px 12px;color:var(--ink);transition:border-color .15s var(--ease),transform .12s var(--ease)}
-.rdRow:hover{border-color:var(--ink2);border-left-color:var(--stc)}
-.rdRow:active{transform:scale(.99)}
-.rdRow .rdMain{display:flex;flex-direction:column;gap:7px;min-width:0}
-.rdRow .rdTop{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
-.rdRow .rdName{font:600 15px/1.35 var(--sans);min-width:0}
-.rdRow .chev{grid-row:1;grid-column:2;font-size:20px;color:var(--ink2);line-height:1}
-.st{flex:none;font:600 11.5px/1 var(--sans);letter-spacing:.05em;text-transform:uppercase;padding:5px 8px;border-radius:4px;background:var(--sts);color:var(--stc);white-space:nowrap}
-.s-weak{--stc:var(--bad);--sts:var(--badSoft)}.s-build{--stc:var(--warn);--sts:var(--warnSoft)}.s-strong{--stc:var(--ok);--sts:var(--okSoft)}.s-none{--stc:var(--line);--sts:var(--soft)}
-.st.s-none,.s-none .st{color:var(--ink2)}
-.rdRow .bar{height:6px}
-.rdFacts{display:flex;flex-wrap:wrap;gap:4px 14px;font:400 13px/1.45 var(--sans);color:var(--ink2);font-variant-numeric:tabular-nums}
-.rdFacts b{font-weight:600;color:var(--ink)}
-.rdFacts .miss b{color:var(--bad)}
-.rdMini{padding:10px 14px 10px 12px}
-.rdMini .rdTop{flex-direction:column;align-items:flex-start;gap:2px;min-width:0}
-.rdMini .rdName{font-weight:500}
-.rdMini .rdFacts{font-size:12.5px}
-.rdLegend{display:grid;gap:6px;font-size:13px;color:var(--ink2);line-height:1.5}
-.rdLegend div{display:grid;grid-template-columns:128px minmax(0,1fr);gap:10px;align-items:start}
-.rdLegend .st{justify-self:start}
-@media (min-width:1080px){.rdRow{padding:14px 18px 14px 16px}.rdRow .rdName{font-size:16px}.rdFacts{font-size:13.5px}}
+
 
 /* ---- desktop: wider canvas, two columns, larger type (phone layout unchanged) ---- */
 .navP{display:flex;flex-direction:column;gap:14px}
@@ -723,10 +703,17 @@ const POOLS={
 function poolList(key){return S.qs.filter(q=>inTopic(q)&&POOLS[key].f(q))}
 
 /* ---------- home ---------- */
-function ring(frac,label,sub,color){
-  const r=40,c=2*Math.PI*r,d=c*Math.max(0,Math.min(1,frac));
-  return `<svg class="ring" viewBox="0 0 96 96" role="img" aria-label="${Math.round(frac*100)} percent correct"><circle cx="48" cy="48" r="${r}" fill="none" stroke="var(--soft)" stroke-width="8"/>${frac>0?`<circle class="arc" cx="48" cy="48" r="${r}" fill="none" stroke="${color||"var(--accent)"}" stroke-width="8" stroke-linecap="round" stroke-dasharray="${d} ${c}" transform="rotate(-90 48 48)"/>`:""}<text x="48" y="50" text-anchor="middle" font-family="Inter,sans-serif" font-weight="600" font-size="21" fill="var(--ink)">${label??Math.round(frac*100)+"%"}</text><text x="48" y="66" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8.5" letter-spacing=".8" fill="var(--ink2)">${sub||"CORRECT"}</text></svg>`;
+/* Correct answers by how sure you were: Knew it (logo color), Fairly sure (lighter tint, also answers saved before confidence existed), Guessed (amber), drawn like the O in the logo. */
+const confOf=c=>c===2?"k":c===0?"g":"s";
+const CF=[["k","var(--cfK)","Knew it"],["s","var(--cfS)","Fairly sure"],["g","var(--cfG)","Guessed"]];
+function confRing(cnt,den,label,sub){
+  const r=40,c=2*Math.PI*r,W=11,right=cnt.k+cnt.s+cnt.g,frac=den?right/den:0;let off=0;
+  const arcs=CF.map(([k,col])=>{const n=cnt[k];if(!n||!den)return"";const len=c*n/den,T=.9*right/den,dur=(T*len/(c*frac)).toFixed(3),dl=(T*off/(c*frac)).toFixed(3),el=`<circle class="arc" style="animation:draw ${dur}s linear ${dl}s both" cx="48" cy="48" r="${r}" fill="none" stroke="${col}" stroke-width="${W}" stroke-dasharray="${len} ${c}" stroke-dashoffset="${-off}" transform="rotate(-90 48 48)"/>`;off+=len;return el}).join("");
+  const aria=`${Math.round(frac*100)} percent correct${right?`: knew it ${cnt.k}, fairly sure ${cnt.s}, guessed ${cnt.g}`:""}`;
+  return `<svg class="ring" viewBox="0 0 96 96" role="img" aria-label="${aria}"><circle cx="48" cy="48" r="${r}" fill="none" stroke="var(--logoTrack)" stroke-width="${W}"/>${arcs}<text x="48" y="50" text-anchor="middle" font-family="Inter,sans-serif" font-weight="600" font-size="21" fill="var(--ink)">${label??Math.round(frac*100)+"%"}</text><text x="48" y="66" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8.5" letter-spacing=".8" fill="var(--ink2)">${sub||"CORRECT"}</text></svg>`;
 }
+const cfKey=cnt=>cnt.k+cnt.s+cnt.g?`<div class="cfKey" aria-hidden="true">${CF.map(([k,col,l])=>`<span><i style="background:${col}"></i>${l} <b>${cnt[k]}</b></span>`).join("")}</div>`:"";
+function confCount(list){const cnt={k:0,s:0,g:0};list.forEach(q=>{const p=S.prog[q.id];if(p&&p.n&&p.last==="c")cnt[confOf(p.conf)]++});return cnt}
 function tally(list){
   let used=0,c=0,w=0;
   list.forEach(q=>{const p=S.prog[q.id];if(p&&p.n){used++;p.last==="c"?c++:w++}});
@@ -754,18 +741,15 @@ function home(){
   const cap=maxN(S.set.mode),n=Math.min(S.set.n,cap,avail);
   const field=`<div class="fieldSw" role="group" aria-label="Field">${Object.entries(FIELDS).map(([k,l])=>`<button data-set="field" data-v="${k}" aria-pressed="${S.set.field===k}">${l}<span>${k==="both"?S.qs.length:S.qs.filter(q=>q.field===k).length}</span></button>`).join("")}</div>`;
   const hero=`<div class="panel hero">
-    ${ring(all.used?all.c/all.used:0)}
-    <div class="stats">
+    ${confRing(confCount(scope),all.used)}
+    <div><div class="stats">
       <div class="stat"><div class="lab">Answered</div><div class="v">${all.used}<small> / ${all.total}</small></div></div>
       <div class="stat"><div class="lab">Today</div><div class="v">${days()[dayKey()]||0}</div></div>
       <div class="stat"><div class="lab">Streak</div><div class="v">${streak()}<small> ${streak()===1?"day":"days"}</small></div></div>
-    </div>
+    </div>${cfKey(confCount(scope))}</div>
   </div>`;
   const search=`<button class="searchBtn" id="openFind">${MAG}<span>Search ${S.qs.length.toLocaleString()} questions</span></button>`;
   const mine=(()=>{const m=mineBase();if(!m.length)return"";const miss=m.filter(q=>S.prog[q.id].last==="w").length,fl=m.filter(q=>S.prog[q.id].flag).length;return `<button class="pickRow" id="openMine"><span><span class="pv">Your questions</span><span class="note">${m.filter(q=>S.prog[q.id].n).length} answered · ${miss} missed${fl?" · "+fl+" flagged":""}</span></span><span class="chev">›</span></button>`})();
-  const ready=(()=>{const rs=rdAll(),w=rs.filter(r=>r.st==="weak"),st=rs.filter(r=>r.st==="strong").length,rated=rs.filter(r=>r.st!=="none").length;
-    const note=!rated?"Strength by board module, once you answer a few":w.length?w.length+" weak · weakest: "+w[0].m.label:rated+" of "+rs.length+" modules rated · "+st+" strong";
-    return `<button class="pickRow" id="openReady"><span><span class="pv">Readiness map</span><span class="note">${esc(note)}</span></span><span class="chev">›</span></button>`})();
   const oTopics=`<div><div class="lab" style="margin-bottom:8px">Topics</div>${topicPicker}</div>`;
   const oYield=`<div><div class="lab" style="margin-bottom:6px">Yield</div>${segs("yield",Object.entries(YIELDS).map(([k,l])=>[k,l,S.qs.filter(q=>inField(q)&&(k==="all"||yLevel(q)===k)).length]))}<div class="note" style="margin-top:6px">High-yield: guideline statements, landmark trial results and standard decisions. Supplemental: facts that round out a topic. In-depth: small-series numbers and subgroups. All: every question.</div></div>`;
   const oType=`<div><div class="lab" style="margin-bottom:6px">Type</div>${multi("kinds",[["__all","All types"],...Object.entries(KINDS).map(([k,l])=>[k,l,kindCnt(k)])])}</div>`;
@@ -787,10 +771,10 @@ function home(){
   const tail=`${ONSITE?`<button class="pickRow" id="openSync"><span><span class="pv">${syncCode?"Sync on · "+fmtCode(syncCode):"Sync across sites and devices"}</span><span class="note">${syncCode?(syncInfo.state==="error"?"Offline: saved on this device":syncInfo.state==="ok"?"Up to date":"Syncing…"):"No account needed: a private code links your progress"}</span></span><span class="chev">›</span></button>`:""}
   <p class="note">${esc(storeNote)} ${S.qs.length} questions, each checked against its source page or guideline${S.meta&&S.meta.built?` (bank built ${esc(S.meta.built)})`:""}.</p>
   ${Object.keys(S.prog).some(k=>k[0]!=="_")||days().at?`<button class="resetBtn" id="resetProg">Reset progress</button>`:""}`;
-  if(W)return `${field}<div class="hBand">${hero}${todayPanel()}</div><div class="hGrid"><div class="hMain">${opts}</div><div class="hSide">${search}${ready}${mine}${progress}${tail}</div></div>`;
+  if(W)return `${field}<div class="hBand">${hero}${todayPanel()}</div><div class="hGrid"><div class="hMain">${opts}</div><div class="hSide">${search}${mine}${progress}${tail}</div></div>`;
   const fromN=FROM?fromPageQs().length:0;
   const fromPanel=fromN?`<div class="panel fromPage"><div style="min-width:0"><div class="lab">From the page you were reading</div><b>${esc(FROM.title)}</b><div class="note">${fromN} questions written from this page</div></div><div style="display:flex;gap:8px;flex-wrap:wrap">${FROM.from?`<a class="btn ghost" href="${esc(FROM.from)}">Back to the page</a>`:""}<button class="btn" id="startFromPage">Practice ${fromN}</button></div></div>`:"";
-  return `${field}${fromPanel}${hero}${todayPanel()}${search}${ready}${mine}${opts}${progress}${tail}`;
+  return `${field}${fromPanel}${hero}${todayPanel()}${search}${mine}${opts}${progress}${tail}`;
 }
 
 /* ---------- block ---------- */
@@ -813,7 +797,7 @@ function quiz(){
   const b=S.block,q=cur(),idx=b.i,answered=b.done[q.id]!=null;b.conf=b.conf||{};b.pre=b.pre||{};if(!b.finished){b.seen=b.seen||{};b.seen[q.id]=1}
   const reveal=answered&&(b.mode==="tutor"||b.finished);
   const hideChoices=b.recall&&!b.shown[q.id]&&!answered;
-  const ticks=b.browse?"":b.ids.map((id,k)=>{let c="";if(k===idx)c="cur";else if(b.done[id]!=null)c=(b.mode==="tutor"||b.finished)?(b.done[id]?"c":"w"):"a";return`<i class="${c}"></i>`}).join("");
+  const ticks=b.browse?"":b.ids.map((id,k)=>{let c="";if(k===idx)c="cur";else if(b.done[id]!=null)c=(b.mode==="tutor"||b.finished)?(b.done[id]?"c"+confOf(b.conf&&b.conf[id]):"w"):"a";return`<i class="${c}"></i>`}).join("");
   const p=S.prog[q.id]||{};
   const choices=hideChoices?`<div class="recall"><label class="lab" for="recallIn">Your answer, from memory</label><textarea id="recallIn" rows="2" placeholder="Type it, or just say it to yourself">${esc((b.recallText||{})[q.id]||"")}</textarea><button class="btn wide" id="showCh">Show choices</button></div>`:
     `<div class="choices" role="group" aria-label="Answer choices">${q.choices.map((c,k)=>{
@@ -904,13 +888,14 @@ function summary(){
   const b=S.block;const ans=b.ids.filter(id=>b.done[id]!=null);const c=ans.filter(id=>b.done[id]).length;
   const mins=Math.round((Date.now()-b.start)/60000);
   const frac=ans.length?c/ans.length:0;
+  const bcnt={k:0,s:0,g:0};ans.forEach(id=>{if(b.done[id])bcnt[confOf(b.conf&&b.conf[id])]++});
   return `<div class="panel sumTop">
-      ${ring(frac,c+"/"+ans.length,"SCORE",frac>=.7?"var(--ok)":"var(--accent)")}
-      <div><div class="lab">Block complete</div><div class="score">${Math.round(frac*100)}%</div><div class="note" style="margin-top:6px">${mins<1?"Under a minute":mins+" min"} · ${days()[dayKey()]||0} answered today · ${streak()} day streak</div></div>
+      ${confRing(bcnt,ans.length,c+"/"+ans.length,"SCORE")}
+      <div><div class="lab">Block complete</div><div class="score">${Math.round(frac*100)}%</div><div class="note" style="margin-top:6px">${mins<1?"Under a minute":mins+" min"} · ${days()[dayKey()]||0} answered today · ${streak()} day streak</div>${cfKey(bcnt)}</div>
     </div>
     <div class="panel"><div class="lab" style="margin-bottom:6px">Tap a question to review it</div><div class="list">${b.ids.map((id,k)=>{const q=S.byId[id];const d=b.done[id];
       return `<button class="li" data-rev="${k}"><span class="m ${d==null?"":d?"c":"w"}">${d==null?"–":d?"✓":"✕"}</span><span class="s">${esc(q.question)}</span><span class="chip">${esc(q.trial||KINDS[q.kind])}</span></button>`}).join("")}</div></div>
-    <div class="go">${b.from==="ready"?`<button class="ghost" id="backReady">Readiness map</button>`:""}<button class="btn wide" id="again">New block</button></div>`;
+    <div class="go"><button class="btn wide" id="again">New block</button></div>`;
 }
 
 /* ---------- Today ---------- */
@@ -1009,70 +994,6 @@ function startBrowse(list,k,from){
 }
 function leaveBrowse(){const from=S.block.browse;S.block=null;S.view=from;render();window.scrollTo(0,S.scrollBack||0)}
 
-/* ---------- readiness map ---------- */
-const RD_MIN=5,RD_STRONG_MIN=10;
-const MODULES_=()=>{const m=S.meta&&S.meta.modules;if(m&&m.length)return m;return GROUPS_().map(g=>({id:g.id,label:g.label,field:g.field,topics:TOPICS_().filter(t=>t.group===g.id).map(t=>t.id)}))};
-const RD_LABEL={weak:"Weak",build:"Building",strong:"Strong",none:"Not rated yet"};
-function rdStats(m){
-  const qs=S.qs.filter(q=>inField(q)&&m.topics.includes(q.topic));
-  let seen=0,c=0,knew=0,fair=0,guess=0,mis=0,sure=0;
-  qs.forEach(q=>{const p=S.prog[q.id];if(!p||!p.n)return;seen++;const ok=p.last==="c";if(ok)c++;
-    if(p.conf===2)knew++;else if(p.conf===1)fair++;else if(p.conf===0)guess++;
-    if(p.mis)mis++;if(ok&&p.conf!==0)sure++});
-  const acc=seen?c/seen:0,solid=seen?sure/seen:0,misR=seen?mis/seen:0;
-  let st="none";
-  if(seen>=RD_MIN){st=acc<.6||misR>=.15?"weak":seen>=RD_STRONG_MIN&&acc>=.8&&solid>=.75&&misR<=.1?"strong":"build"}
-  return {m,qs,total:qs.length,seen,c,w:seen-c,acc,solid,knew,fair,guess,mis,st};
-}
-function rdAll(){
-  const rank={weak:0,build:1,strong:2,none:3};
-  return MODULES_().map(rdStats).filter(r=>r.total).sort((a,b)=>rank[a.st]-rank[b.st]||(a.st==="none"?(b.seen-a.seen)||(b.total-a.total):(a.solid-b.solid)||(a.acc-b.acc))||a.m.label.localeCompare(b.m.label));
-}
-function rdRow(r){
-  const pct=x=>Math.round(x*100)+"%";
-  if(!r.seen)return `<button class="rdRow rdMini s-none" data-ready="${esc(r.m.id)}" aria-label="${esc(r.m.label)}: not started, ${r.total} questions. Start a block"><span class="rdTop"><span class="rdName">${esc(r.m.label)}</span><span class="rdFacts">${r.total} questions · not started</span></span><span class="chev" aria-hidden="true">›</span></button>`;
-  const cw=r.total?r.c/r.total*100:0,ww=r.total?r.w/r.total*100:0;
-  const rated=r.knew+r.fair+r.guess;
-  const facts=[`<span><b>${r.seen}</b> of ${r.total} seen</span>`];
-  if(r.seen)facts.push(`<span><b>${pct(r.acc)}</b> right</span>`);
-  if(rated)facts.push(`<span>Knew it <b>${r.knew}</b> · Fairly sure <b>${r.fair}</b> · Guessed <b>${r.guess}</b></span>`);
-  if(r.seen)facts.push(`<span class="${r.mis?"miss":""}">Missed when sure <b>${r.mis}</b></span>`);
-  const need=r.st==="none"&&r.seen<RD_MIN?`<span>${RD_MIN-r.seen} more to rate</span>`:"";
-  return `<button class="rdRow s-${r.st}" data-ready="${esc(r.m.id)}" aria-label="${esc(r.m.label)}: ${RD_LABEL[r.st]}. ${r.seen} of ${r.total} seen. Start a block"><span class="rdMain"><span class="rdTop"><span class="rdName">${esc(r.m.label)}</span><span class="st">${RD_LABEL[r.st]}</span></span><span class="bar" aria-hidden="true"><i class="c" style="width:${cw}%"></i><i class="w" style="width:${ww}%"></i></span><span class="rdFacts">${facts.join("")}${need}</span></span><span class="chev" aria-hidden="true">›</span></button>`;
-}
-function readyView(){
-  const rows=rdAll(),n=k=>rows.filter(r=>r.st===k).length,any=rows.some(r=>r.seen);
-  const rated=rows.filter(r=>r.st!=="none"),later=rows.filter(r=>r.st==="none");
-  const fsw=`<div class="fieldSw sm" role="group" aria-label="Field">${Object.entries(FIELDS).map(([k,l])=>`<button data-set="field" data-v="${k}" aria-pressed="${S.set.field===k}">${l}</button>`).join("")}</div>`;
-  const counts=`<div class="rdCounts">${["weak","build","strong","none"].map(k=>`<span class="st s-${k}"><b>${n(k)}</b> ${RD_LABEL[k]}</span>`).join("")}</div>`;
-  const intro=any?`<p class="note" style="margin:0">Board modules, weakest first. Tap one to start ${rdN()} questions on it: misses and due reviews first, then new ones.</p>`
-    :`<p class="note" style="margin:0">Nothing answered yet${S.set.field!=="both"?" in "+FIELDS[S.set.field]:""}. Each board module below will be rated once you answer ${RD_MIN} of its questions, and the list will sort itself weakest first. Each row will show how many questions you have seen, how many you got right, how sure you were, and how many you missed when you said Knew it. Tap a module to start ${rdN()} questions on it.</p>`;
-  const legend=`<div class="rdLegend">
-    <div><span class="st s-weak">Weak</span><span>Under 60% right, or 15% or more missed when you said Knew it.</span></div>
-    <div><span class="st s-build">Building</span><span>Between weak and strong.</span></div>
-    <div><span class="st s-strong">Strong</span><span>At least ${RD_STRONG_MIN} answered, 80% or more right, three in four right without guessing, and no more than 1 in 10 missed when sure.</span></div>
-    <div><span class="st s-none">Not rated yet</span><span>Fewer than ${RD_MIN} answered.</span></div>
-    <span>Counts use your latest answer to each question.</span></div>`;
-  return `<div class="viewHead"><button class="exitBtn" id="goHome">‹ Home</button><h2>Readiness</h2></div>
-  ${fsw}
-  <div class="panel rdSum">${counts}${intro}</div>
-  ${rated.length?`<div class="rdList">${rated.map(rdRow).join("")}</div>`:""}
-  ${later.length?`<div class="lab rdSub">Not rated yet${rated.length?"":": answer "+RD_MIN+" in a module to rate it"}</div><div class="rdList">${later.map(rdRow).join("")}</div>`:""}
-  ${rows.length?"":`<div class="panel empty">No modules in this field.</div>`}
-  <div class="panel">${legend}</div>`;
-}
-function rdN(){return typeof S.set.n==="number"?S.set.n:20}
-function rdStart(id){
-  const m=MODULES_().find(x=>x.id===id);if(!m)return;
-  const now=Date.now(),qs=S.qs.filter(q=>inField(q)&&m.topics.includes(q.topic)),p=q=>S.prog[q.id]||{};
-  const miss=qs.filter(q=>p(q).n&&(p(q).last==="w"||p(q).mis)),due=qs.filter(q=>p(q).n&&p(q).due<=now&&!miss.includes(q));
-  const fresh=qs.filter(q=>!p(q).n),core=fresh.filter(q=>yLevel(q)==="c"),rest=fresh.filter(q=>yLevel(q)!=="c");
-  const seenOk=qs.filter(q=>p(q).n&&!miss.includes(q)&&!due.includes(q));
-  const ids=[...shuffle(miss),...shuffle(due),...shuffle(core),...shuffle(rest),...seenOk.sort((a,b)=>(p(a).due||0)-(p(b).due||0))].map(q=>q.id);
-  const list=[...new Set(ids)].slice(0,rdN());
-  if(list.length){startIds(shuffle(list),S.set.mode,S.set.recall);S.block.from="ready"}
-}
-
 /* ---------- trial cards ---------- */
 function cards(){
   const seen=q=>S.prog[q.id]&&S.prog[q.id].n;
@@ -1152,7 +1073,6 @@ function render(){
   else if(S.view==="cards")v.innerHTML=`<div class="narrow" style="display:flex;flex-direction:column;gap:14px">${cards()}</div>`;
   else if(S.view==="find")v.innerHTML=`<div class="narrow" style="display:flex;flex-direction:column;gap:14px">${findView()}</div>`;
   else if(S.view==="mine")v.innerHTML=`<div class="narrow" style="display:flex;flex-direction:column;gap:14px">${mineView()}</div>`;
-  else if(S.view==="ready")v.innerHTML=`<div class="narrow" style="display:flex;flex-direction:column;gap:14px">${readyView()}</div>`;
   let L=$("#sheetLayer");if(!L){L=document.createElement("div");L.id="sheetLayer";document.body.appendChild(L)}
   const sb=$("#sbody"),top=sb?sb.scrollTop:0;
   const showSheet=S.sheet==="theme"||S.sheet==="sync"||(S.sheet&&S.view==="home");
@@ -1171,7 +1091,7 @@ document.addEventListener("click",e=>{
   if(e.target.closest("#zoomBg")){document.getElementById("zoomBg").remove();return}
   const zb=e.target.closest("[data-zoom]");if(zb){const o=document.createElement("div");o.id="zoomBg";o.setAttribute("role","dialog");o.setAttribute("aria-label","Image, tap to close");o.innerHTML=`<img src="${esc(zb.dataset.zoom)}" alt="">`;document.body.appendChild(o);return}
   const t=e.target.closest("button");if(!t)return;
-  if(t.id==="exitBlock"){const b=S.block;if(!b){S.view="home";render();return}if(b.browse){leaveBrowse();return}if(b.finished){S.view="summary";render();window.scrollTo(0,0);return}const any=b.ids.some(id=>b.done[id]!=null);if(any)finish();else{const fr=b.from==="ready";S.block=null;S.view=fr?"ready":"home";render();window.scrollTo(0,0)}return}
+  if(t.id==="exitBlock"){const b=S.block;if(!b){S.view="home";render();return}if(b.browse){leaveBrowse();return}if(b.finished){S.view="summary";render();window.scrollTo(0,0);return}const any=b.ids.some(id=>b.done[id]!=null);if(any)finish();else{S.block=null;S.view="home";render();window.scrollTo(0,0)}return}
   if(t.id==="resetProg"){const msg="Reset all progress? This clears every answer, flag and your streak"+(syncCode?" on this device and on every device using your sync code":S.store==="account"?" in your account":"")+". It cannot be undone.";if(confirm(msg))resetProgress();return}
   if(t.id==="toggleStats"){S.showStats=!S.showStats;render();return}
   if(t.id==="openSync"){S.sheet="sync";render();return}
@@ -1196,9 +1116,6 @@ document.addEventListener("click",e=>{
   if(t.id==="startToday"){startIds(todayIds(),"tutor",false);return}
   if(t.id==="startFromPage"){startFromPage();return}
   if(t.id==="openFind"){S.view="find";render();window.scrollTo(0,0);const i=$("#findIn");if(i)i.focus();return}
-  if(t.id==="backReady"){S.block=null;S.view="ready";render();window.scrollTo(0,0);return}
-  if(t.id==="openReady"){S.view="ready";render();window.scrollTo(0,0);return}
-  if(t.dataset.ready){rdStart(t.dataset.ready);return}
   if(t.id==="openMine"){S.view="mine";S.mineMax=50;render();window.scrollTo(0,0);return}
   if(t.id==="goHome"){S.view="home";render();window.scrollTo(0,0);return}
   if(t.dataset.ff){S.ff=t.dataset.ff;S.findMax=50;$("#findRes").innerHTML=findResults();return}
