@@ -532,6 +532,7 @@ let theme=LS.get("rounds-theme","system");
 const P=(bg,panel,ink,ink2,line,soft,accent,accentInk,accentSoft,pearl,ok,okSoft,bad,badSoft)=>({bg,panel,ink,ink2,line,soft,accent,accentInk,accentSoft,pearl,ring:line,ok,okSoft,bad,badSoft});
 const PALETTES={
   warwiki:{name:"WARWIKI blue",L:P("#F7F9FC","#FFFFFF","#111827","#4B5767","#DDE3ED","#EEF2F8","#185FA5","#FFFFFF","#EBF3FB","#C77A0A","#2F6B4A","#E0EEE6","#A63A32","#F5E2DF"),D:P("#0E1520","#141D2B","#E4ECF5","#8FA3B9","#1C2A3E","#1A2536","#4A9FE0","#0A1018","#16273B","#EF9F27","#8FC2A4","#1D2E25","#E57A6E","#3A1F1C")},
+  whitwiki:{name:"WHITWIKI crimson",L:P("#FAF8F6","#FFFFFF","#292A2D","#616267","#E8E2DF","#F3EEEC","#AD303D","#FFFFFF","#F8ECEC","#C77A0A","#2F6B4A","#E0EEE6","#B4471F","#F7E4DA"),D:P("#19191C","#222126","#F2EFF0","#BBB7BB","#3C3539","#2B282D","#EC929C","#19191C","#35252B","#EF9F27","#8FC2A4","#1D2E25","#F0A070","#3A2418")},
   slate:{name:"Slate and eucalyptus",L:P("#F2F4F4","#FBFCFC","#1A2224","#5E6A6D","#D2DADB","#E6ECEC","#3E7C78","#FFFFFF","#DCEBEA","#C77A0A","#2F6B4A","#E0EEE6","#A63A32","#F5E2DF"),D:P("#141B1D","#1A2326","#E5ECED","#94A3A6","#2A3639","#1F2A2D","#7CC3BC","#0F1A1B","#1E3335","#EF9F27","#8FC2A4","#1D2E25","#E57A6E","#3A1F1C")},
   slatePure:{name:"Slate, all eucalyptus",L:P("#F2F4F4","#FBFCFC","#1A2224","#5E6A6D","#D2DADB","#E6ECEC","#3E7C78","#FFFFFF","#DCEBEA","#3E7C78","#2F6B4A","#E0EEE6","#A63A32","#F5E2DF"),D:P("#141B1D","#1A2326","#E5ECED","#94A3A6","#2A3639","#1F2A2D","#7CC3BC","#0F1A1B","#1E3335","#7CC3BC","#8FC2A4","#1D2E25","#E57A6E","#3A1F1C")},
   sage:{name:"Graphite, sage and amber",L:P("#F4F5F2","#FBFCFA","#1E2321","#626A66","#D5DBD7","#E8ECE9","#4F7A64","#FFFFFF","#E1ECE5","#C77A0A","#2F6B4A","#E1EEE6","#A63A32","#F5E2DF"),D:P("#171B1A","#1D2321","#E7ECE9","#9AA4A0","#2E3734","#222927","#8FC2A4","#141A18","#22322B","#EF9F27","#8FC2A4","#1F2D26","#E57A6E","#3A1F1C")},
@@ -539,7 +540,7 @@ const PALETTES={
   stone:{name:"Stone and ochre",L:P("#EFEBE2","#F8F5EF","#2A2620","#736B5E","#D6CEBF","#E6E0D4","#A8741A","#FFFFFF","#EADBB8","#A8741A","#4A6B2A","#E5ECDA","#A32D2D","#F4E0DC"),D:P("#24211C","#2B2822","#EDE7DB","#ABA292","#3D382F","#302C25","#D9A247","#24211C","#3B3120","#D9A247","#A9C77F","#2A3220","#E57A6E","#3A1F1C")},
   copper:{name:"Charcoal and copper",L:P("#F7F5F1","#FCFBF9","#1C1B1A","#6A6560","#DCD6CE","#ECE8E2","#B0562C","#FFFFFF","#F4E0D4","#B0562C","#3B6D11","#E7EFDB","#A32D2D","#F6E1DF"),D:P("#191817","#201F1D","#F0ECE6","#A6A097","#373330","#282624","#E58A5C","#191817","#3A251B","#E58A5C","#97C459","#253019","#E57A6E","#3A1F1C")}};
 const LOGO={slate:{L:["#2E5E59","#D2DADB"],D:["#7CC3BC","#2A3639"]}};
-const SITE_PALETTE=/warwiki|localhost|127\.0\.0\.1/.test(location.hostname)?"warwiki":"slate";
+const SITE_PALETTE=/whitwiki/.test(location.hostname)?"whitwiki":/warwiki|localhost|127\.0\.0\.1/.test(location.hostname)?"warwiki":"slate";
 let palette=LS.get("rounds-palette",SITE_PALETTE);if(!PALETTES[palette])palette="slate";
 const mq=window.matchMedia?window.matchMedia("(prefers-color-scheme: dark)"):null;
 const WIDEQ=window.matchMedia?window.matchMedia("(min-width:1080px)"):null;

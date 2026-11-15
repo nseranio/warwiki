@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Link from '@docusaurus/Link';
 import {useLocation} from '@docusaurus/router';
 import {useDocsSidebar} from '@docusaurus/plugin-content-docs/client';
@@ -95,6 +95,44 @@ function Card({item, entries, here, level}: {item: PropSidebarItem; entries: Ent
   );
 }
 
+/** Pinned row of group buttons: smooth scroll to a group, and the group in view stays highlighted. */
+function JumpNav({ids}: {ids: ReadonlyArray<readonly [string, string]>}): React.ReactElement {
+  const [active, setActive] = useState<string | null>(null);
+  useEffect(() => {
+    const els = ids.map(([id]) => document.getElementById(id)).filter((e): e is HTMLElement => !!e);
+    if (!els.length || typeof IntersectionObserver === 'undefined') return undefined;
+    const seen = new Map<string, boolean>();
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => seen.set(e.target.id, e.isIntersecting));
+      const first = ids.find(([id]) => seen.get(id));
+      if (first) setActive(first[0]);
+    }, {rootMargin: '-140px 0px -55% 0px'});
+    els.forEach(e => io.observe(e));
+    return () => io.disconnect();
+  }, [ids.map(([id]) => id).join('|')]);
+  useEffect(() => {
+    // keep the highlighted button visible in the row on a phone
+    if (!active) return;
+    document.querySelector(`.wk-sl-jump a[data-id="${active}"]`)?.scrollIntoView({block: 'nearest', inline: 'center'});
+  }, [active]);
+  const go = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    e.preventDefault();
+    const smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    el.scrollIntoView({behavior: smooth ? 'smooth' : 'auto', block: 'start'});
+    history.replaceState(null, '', `#${id}`);
+    setActive(id);
+  };
+  return (
+    <nav className="wk-sl-jump" aria-label="Groups on this page">
+      {ids.map(([id, label]) => (
+        <a key={id} href={`#${id}`} data-id={id} aria-current={active === id ? 'true' : undefined} onClick={e => go(e, id)}>{label}</a>
+      ))}
+    </nav>
+  );
+}
+
 /** A group's children as cards: its subgroups, plus one card for pages that sit directly in it. */
 function childCards(group: PropSidebarItem & {type: 'category'}): PropSidebarItem[] {
   const kids = group.items.filter(i => !hidden(i));
@@ -122,9 +160,7 @@ export default function SectionLanding({cards = {}, sections = false}: {cards?: 
     const groups = items.filter((i): i is PropSidebarItem & {type: 'category'} => i.type === 'category');
     return (
       <div className="wk-sl-hub">
-        <nav className="wk-sl-jump" aria-label="Groups on this page">
-          {groups.map(g => <a key={g.label} href={`#${slug(g.label)}`}>{g.label}</a>)}
-        </nav>
+        <JumpNav ids={groups.map(g => [slug(g.label), g.label] as const)} />
         {groups.map(g => {
           const id = slug(g.label);
           const desc = entries.find(([href]) => g.href && norm(g.href) === href)?.[1];

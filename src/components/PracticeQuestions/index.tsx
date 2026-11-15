@@ -3,22 +3,15 @@ import {useDoc} from '@docusaurus/plugin-content-docs/client';
 import data from '@site/src/data/rounds-pages.json';
 import styles from './styles.module.css';
 
-// Pilot: the link shows only on these pages, and only with the count of Rounds
-// questions written from this exact page (each question records its source file).
-const PILOT = new Set([
-  'docs/02-evaluation/ancillary-tests/urodynamics.mdx',
-  'docs/03-clinical-conditions/03b-voiding-outlet/urethral-stricture.mdx',
-  'docs/03-clinical-conditions/03a-storage-incontinence/sui-male.mdx',
-  'docs/05-special-populations/05e-womens-health/recurrent-uti.mdx',
-  'docs/04-surgical-techniques/04b-bladder-reconstruction/catheterizable-channels.mdx',
-]);
+// Shown on any page with at least MIN Rounds questions written from it (each question
+// records its source file); counts come from Rounds tools/page_counts.py.
 const MIN = 5;
 
 export function usePractice(): {href: string; count: number} | null {
   const {metadata} = useDoc();
   const file = metadata.source.replace(/^@site\//, '');
   const count = (data.pages as Record<string, number>)[file] ?? 0;
-  if (!PILOT.has(file) || count < MIN) return null;
+  if (count < MIN) return null;
   const q = new URLSearchParams({page: file, from: metadata.permalink, title: metadata.title});
   return {href: `/rounds?${q.toString()}`, count};
 }
