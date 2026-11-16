@@ -462,6 +462,42 @@ body.inQuiz .sbNav,body.inQuiz .sbMenu{display:none}
 .fromPage{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .fromPage .lab{margin-bottom:4px}
 .fromPage b{font:600 16px/1.3 var(--sans)}
+
+/* ---------- game pilot ---------- */
+.pilotNote{font:500 12.5px/1.45 var(--sans);color:var(--ink2);border:1px dashed var(--line);border-radius:8px;padding:8px 12px}
+.pilotNote b{color:var(--pearl);margin-right:6px;font:600 11px var(--sans);letter-spacing:.07em;text-transform:uppercase}
+.ch.right{background:linear-gradient(var(--okSoft),var(--okSoft)) no-repeat 0 0/100% 100%}
+.ch.right.fx{animation:sweep .6s var(--ease) .05s both}
+.ch.wrong.fx{animation:shake .36s var(--ease)}
+@keyframes sweep{from{background-size:0% 100%}}
+@keyframes shake{20%{transform:translateX(-5px)}40%{transform:translateX(4px)}60%{transform:translateX(-2px)}80%{transform:translateX(1px)}}
+.segIn{animation:draw .5s var(--ease) both}
+#toasts{position:fixed;bottom:calc(112px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);z-index:70;display:flex;flex-direction:column;gap:8px;align-items:center;pointer-events:none;width:max-content;max-width:calc(100vw - 32px)}
+.toast{background:var(--ink);color:var(--bg);border-radius:10px;padding:9px 16px;box-shadow:0 8px 24px rgba(0,0,0,.18);display:flex;flex-direction:column;align-items:center;gap:2px;font:600 14px/1.3 var(--sans);text-align:center;animation:toastIn .4s var(--ease) both;transition:opacity .35s var(--ease),transform .35s var(--ease)}
+.toast .lab{color:color-mix(in srgb,var(--bg) 72%,var(--ink));font-size:10px}
+.toast.out{opacity:0;transform:translateY(6px)}
+@keyframes toastIn{from{opacity:0;transform:translateY(10px)}}
+.rk{display:inline-block;margin-left:7px;font:600 10.5px/1 var(--sans);letter-spacing:.03em;padding:3px 6px;border-radius:4px;background:var(--soft);color:var(--ink2);vertical-align:1px}
+.rk.r2{background:var(--accentSoft);color:var(--ink)}
+.rk.r3{background:color-mix(in srgb,var(--cfK) 18%,var(--panel));color:var(--cfK)}
+.rk.r4{background:var(--cfK);color:var(--panel)}
+.rkKey{margin:0 0 14px}
+.tMain{display:flex;gap:16px;align-items:center;min-width:0}
+.tRing{width:60px;height:60px;flex:none}
+.tRing .arc{animation:draw .9s var(--ease) both}
+.tRing.met{animation:pop .5s var(--ease)}
+.goalBtn{border:0;background:none;padding:6px 0 0;font:500 12.5px var(--sans);color:var(--accent)}
+.goalEd{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;align-items:center}
+.goalEd button{border:1px solid var(--line);background:var(--panel);border-radius:6px;padding:5px 11px;font:500 13px var(--sans);color:var(--ink2);font-variant-numeric:tabular-nums}
+.goalEd button[aria-pressed="true"]{background:var(--accentSoft);border-color:var(--accent);color:var(--ink)}
+.goalEd .nIn{width:78px;padding:5px 8px}
+.goalEd .note{flex-basis:100%;margin-top:4px}
+.mm .pv{font:600 18px/1.25 var(--sans)}
+.mm .btn.ghost{color:var(--ink);background:var(--panel);border:1px solid var(--line);box-shadow:none}
+.mm .btn.ghost:hover{border-color:var(--accent)}
+.party{font:600 15px var(--sans);color:var(--cfK);margin-top:8px}
+.note.up{color:var(--ink)}
+@media (max-width:520px){.today{flex-direction:column;align-items:stretch;gap:14px}.today .btn{width:100%}}
 </style>
 
 <header class="siteBar" id="siteBar" hidden>
@@ -578,9 +614,14 @@ const dayKey=(t=Date.now())=>{const d=new Date(t);return d.getFullYear()+"-"+Str
 function explainHTML(q){const t=esc(q.explanation);if(!q.key)return t;const k=esc(q.key),i=t.indexOf(k);return i<0?t:t.slice(0,i)+'<mark class="key">'+k+'</mark>'+t.slice(i+k.length)}
 function days(){return S.prog._days||{}}
 function streak(){
-  const d=days();let n=0;let t=Date.now();
+  /* one missed day in any 7 is forgiven, so a single day off does not reset the streak */
+  const d=days();let n=0,t=Date.now(),i=0,rest=-99;
   if(!d[dayKey(t)])t-=DAY;
-  while(d[dayKey(t)]){n++;t-=DAY}
+  for(;;i++){
+    if(d[dayKey(t)]){n++;t-=DAY;continue}
+    if(n&&i-rest>=7&&d[dayKey(t-DAY)]){rest=i;t-=DAY;continue}
+    break;
+  }
   return n;
 }
 
@@ -747,10 +788,10 @@ function tally(list){
   list.forEach(q=>{const p=S.prog[q.id];if(p&&p.n){used++;p.last==="c"?c++:w++}});
   return {total:list.length,used,c,w};
 }
-function barRow(label,t){
+function barRow(label,t,rk){
   const cw=t.total?t.c/t.total*100:0,ww=t.total?t.w/t.total*100:0;
   const pct=t.used?Math.round(t.c/t.used*100)+"%":"–";
-  return `<div class="row"><div>${esc(label)}</div><div class="bar" aria-hidden="true"><i class="c" style="width:${cw}%"></i><i class="w" style="width:${ww}%"></i></div><div class="n">${pct} · ${t.used}/${t.total}</div></div>`;
+  return `<div class="row"><div>${esc(label)}${rk!=null&&t.used?` <span class="rk r${rk}">${RANKS[rk]}</span>`:""}</div><div class="bar" aria-hidden="true"><i class="c" style="width:${cw}%"></i><i class="w" style="width:${ww}%"></i></div><div class="n">${pct} · ${t.used}/${t.total}</div></div>`;
 }
 function home(){
   const scope=S.qs.filter(inField);
@@ -789,19 +830,19 @@ function home(){
   const opts=W?`<div class="panel opts wideOpts"><h2>New block</h2><div class="oc">${oTopics}${oYield}${oType}</div><div class="oc">${oPool}${oN}${oMode}${oRecall}</div>${go}</div>`
     :`<div class="panel opts"><h2>New block</h2>${oTopics}${oYield}${oType}${oPool}${oN}${oMode}${oRecall}${go}</div>`;
   const progress=`<div class="panel statsP">
-    <button class="statsHead" id="toggleStats" aria-expanded="${!!S.showStats}"><span><span class="pv">Progress</span><span class="note">${(()=>{const ts=TOPICS_().filter(t=>S.qs.some(q=>q.topic===t.id&&inField(q))).map(t=>({l:t.label,...tally(S.qs.filter(q=>q.topic===t.id))})).filter(x=>x.used>=3);if(!ts.length)return "By topic and type, once you have answered a few";const w=ts.sort((a,b)=>a.c/a.used-b.c/b.used)[0];return "Weakest so far: "+w.l+" ("+Math.round(w.c/w.used*100)+"%)"})()}</span></span><span class="chev">${S.showStats?"−":"+"}</span></button>
-    ${S.showStats?`<div class="statsBody">
-    <div class="rows">${doorSections().map(s=>`<div class="lab rowh">${esc(s.title)}</div>`+s.groups.flatMap(g=>g.topics).map(id=>barRow(topicLabel(id),tally(S.qs.filter(q=>q.topic===id&&inScope(q))))).join("")).join("")}</div>
+    <button class="statsHead" id="toggleStats" aria-expanded="${!!S.showStats}"><span><span class="pv">Progress</span><span class="note">${(()=>{const ts=TOPICS_().filter(t=>S.qs.some(q=>q.topic===t.id&&inField(q))).map(t=>({l:t.label,...tally(S.qs.filter(q=>q.topic===t.id))})).filter(x=>x.used>=3);if(!ts.length)return "By topic and type, once you have answered a few";const w=ts.sort((a,b)=>a.c/a.used-b.c/b.used)[0];return rankLine()+"Weakest so far: "+w.l+" ("+Math.round(w.c/w.used*100)+"%)"})()}</span></span><span class="chev">${S.showStats?"−":"+"}</span></button>
+    ${S.showStats?`<div class="statsBody"><p class="note rkKey">Ranks per topic: Intern, then Resident (a quarter answered, 60% right), Chief (half, 70%), Fellow (three quarters, 80%, half your right answers rated Knew it) and Attending (90%, 85%, 70% Knew it, almost no misses when sure).</p>
+    <div class="rows">${doorSections().map(s=>`<div class="lab rowh">${esc(s.title)}</div>`+s.groups.flatMap(g=>g.topics).map(id=>barRow(topicLabel(id),tally(S.qs.filter(q=>q.topic===id&&inScope(q))),rankOf(id))).join("")).join("")}</div>
     <div class="lab rowh" style="margin-top:18px">By type</div>
     <div class="rows">${Object.entries(KINDS).map(([k,l])=>barRow(l,tally(scope.filter(q=>q.kind===k)))).join("")}</div></div>`:""}
   </div>`;
   const tail=`${ONSITE?`<button class="pickRow" id="openSync"><span><span class="pv">${syncCode?"Sync on · "+fmtCode(syncCode):"Sync across sites and devices"}</span><span class="note">${syncCode?(syncInfo.state==="error"?"Offline: saved on this device":syncInfo.state==="ok"?"Up to date":"Syncing…"):"No account needed: a private code links your progress"}</span></span><span class="chev">›</span></button>`:""}
   <p class="note">${esc(storeNote)} ${S.qs.length} questions, each checked against its source page or guideline${S.meta&&S.meta.built?` (bank built ${esc(S.meta.built)})`:""}.</p>
   ${Object.keys(S.prog).some(k=>k[0]!=="_")||days().at?`<button class="resetBtn" id="resetProg">Reset progress</button>`:""}`;
-  if(W)return `${field}<div class="hBand">${hero}${todayPanel()}</div><div class="hGrid"><div class="hMain">${opts}</div><div class="hSide">${search}${mine}${progress}${tail}</div></div>`;
+  if(W)return `${pilotNote()}${field}<div class="hBand">${hero}${todayPanel()}</div><div class="hGrid"><div class="hMain">${opts}</div><div class="hSide">${mmPanel()}${search}${mine}${progress}${tail}</div></div>`;
   const fromN=FROM?fromPageQs().length:0;
   const fromPanel=fromN?`<div class="panel fromPage"><div style="min-width:0"><div class="lab">From the page you were reading</div><b>${esc(FROM.title)}</b><div class="note">${fromN} questions written from this page</div></div><div style="display:flex;gap:8px;flex-wrap:wrap">${FROM.from?`<a class="btn ghost" href="${esc(FROM.from)}">Back to the page</a>`:""}<button class="btn" id="startFromPage">Practice ${fromN}</button></div></div>`:"";
-  return `${field}${fromPanel}${hero}${todayPanel()}${search}${mine}${opts}${progress}${tail}`;
+  return `${pilotNote()}${field}${fromPanel}${hero}${todayPanel()}${mmPanel()}${search}${mine}${opts}${progress}${tail}`;
 }
 
 /* ---------- block ---------- */
@@ -829,7 +870,7 @@ function quiz(){
   const choices=hideChoices?`<div class="recall"><label class="lab" for="recallIn">Your answer, from memory</label><textarea id="recallIn" rows="2" placeholder="Type it, or just say it to yourself">${esc((b.recallText||{})[q.id]||"")}</textarea><button class="btn wide" id="showCh">Show choices</button></div>`:
     `<div class="choices" role="group" aria-label="Answer choices">${q.choices.map((c,k)=>{
       let cls="ch";if(answered)cls+=" done";const L="("+"ABCDE"[k]+")";let mk="";
-      if(reveal){if(k===q.answer){cls+=" right";mk='<span class="mk">✓</span>'}else if(k===b.pick[q.id]){cls+=" wrong";mk='<span class="mk">✕</span>'}else cls+=" dim"}
+      if(reveal){const fx=S.fx&&S.fx.id===q.id&&!S.fx.seg?" fx":"";if(k===q.answer){cls+=" right"+fx;mk='<span class="mk">✓</span>'}else if(k===b.pick[q.id]){cls+=" wrong"+fx;mk='<span class="mk">✕</span>'}else cls+=" dim"}
       const why=reveal&&q.whyNot&&q.whyNot[k]?`<div class="why">${esc(q.whyNot[k])}</div>`:"";
       return `<button class="${cls}" data-ch="${k}" aria-pressed="${b.pick[q.id]===k}" ${answered?"aria-disabled=\"true\"":""}><span class="L">${L}</span><span class="ct">${esc(c)}${mk}</span>${why}</button>`}).join("")}</div>`;
   const ok=b.done[q.id];
@@ -902,14 +943,14 @@ function pickInPlace(q){
 }
 function submit(conf){
   const b=S.block,q=cur();const k=b.pick[q.id];if(k==null||b.done[q.id]!=null)return;
-  const ok=k===q.answer;b.done[q.id]=ok;b.conf=b.conf||{};if(conf!=null)b.conf[q.id]=conf;record(q,ok,conf,k);
+  const ok=k===q.answer;b.done[q.id]=ok;b.conf=b.conf||{};if(conf!=null)b.conf[q.id]=conf;const r0=rankOf(q.topic),d0=days()[dayKey()]||0;record(q,ok,conf,k);gameAfter(q,ok,conf,r0,d0);
   if(b.mode==="timed"){if(b.i<b.ids.length-1){b.i++}else{finish();return}render();window.scrollTo(0,0);return}
   render();
 }
 function finish(){
   const b=S.block;
   if(!b.finished){b.ids.forEach(id=>{if(b.done[id]==null){/* in timed, a question you saw and left blank counts as wrong; one you never reached stays unanswered */ if(b.mode==="timed"&&b.seen&&b.seen[id]){b.done[id]=false;record(S.byId[id],false)}}});}
-  b.finished=true;S.view="summary";render();window.scrollTo(0,0);
+  b.finished=true;gameFinish(b);S.view="summary";render();window.scrollTo(0,0);
 }
 function summary(){
   const b=S.block;const ans=b.ids.filter(id=>b.done[id]!=null);const c=ans.filter(id=>b.done[id]).length;
@@ -918,20 +959,71 @@ function summary(){
   const bcnt={k:0,s:0,g:0};ans.forEach(id=>{if(b.done[id])bcnt[confOf(b.conf&&b.conf[id])]++});
   return `<div class="panel sumTop">
       ${confRing(bcnt,ans.length,c+"/"+ans.length,"SCORE")}
-      <div><div class="lab">Block complete</div><div class="score">${Math.round(frac*100)}%</div><div class="note" style="margin-top:6px">${mins<1?"Under a minute":mins+" min"} · ${days()[dayKey()]||0} answered today · ${streak()} day streak</div>${cfKey(bcnt)}</div>
+      <div><div class="lab">Block complete</div><div class="score">${Math.round(frac*100)}%</div><div class="note" style="margin-top:6px">${mins<1?"Under a minute":mins+" min"} · ${days()[dayKey()]||0} answered today · ${streak()} day streak</div>${sumExtras(b,c,ans.length)}${cfKey(bcnt)}</div>
     </div>
     <div class="panel"><div class="lab" style="margin-bottom:6px">Tap a question to review it</div><div class="list">${b.ids.map((id,k)=>{const q=S.byId[id];const d=b.done[id];
       return `<button class="li" data-rev="${k}"><span class="m ${d==null?"":d?"c":"w"}">${d==null?"–":d?"✓":"✕"}</span><span class="s">${esc(q.question)}</span><span class="chip">${esc(q.trial||KINDS[q.kind])}</span></button>`}).join("")}</div></div>
     <div class="go"><button class="btn wide" id="again">New block</button></div>`;
 }
 
+/* ---------- game pilot (Nov 15, 2026) ---------- */
+const RM=()=>window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const G=Object.assign({bestPct:0},LS.get("rounds-game",{}));
+const putG=()=>LS.put("rounds-game",G);
+function pilotNote(){return "";`<div class="pilotNote"><b>Pilot</b>Game touches: answer reveal, block ring in the logo, ranks, daily goal and M&amp;M. Progress is shared with the live Rounds.</div>`}
+function toast(main,sub){let L=document.getElementById("toasts");if(!L){L=document.createElement("div");L.id="toasts";L.setAttribute("aria-live","polite");document.body.appendChild(L)}
+  const t=document.createElement("div");t.className="toast";t.innerHTML=`${sub?`<span class="lab">${esc(sub)}</span>`:""}<span>${esc(main)}</span>`;L.appendChild(t);
+  setTimeout(()=>{t.classList.add("out");setTimeout(()=>t.remove(),400)},2800)}
+/* clinical ranks per topic, from each question's latest answer */
+const RANKS=["Intern","Resident","Chief","Fellow","Attending"];
+const RANK_RULE=[null,{cov:.25,acc:.6},{cov:.5,acc:.7},{cov:.75,acc:.8,kn:.5},{cov:.9,acc:.85,kn:.7,mis:.05}];
+function rankOf(id){let total=0,used=0,c=0,k=0,mis=0;
+  S.qs.forEach(q=>{if(q.topic!==id)return;total++;const p=S.prog[q.id];if(!p||!p.n)return;used++;if(p.last==="c"){c++;if(p.conf===2)k++}if(p.mis)mis++});
+  if(!used)return 0;const cov=used/total,acc=c/used,kn=c?k/c:0,mr=mis/used;let r=0;
+  for(let i=1;i<RANK_RULE.length;i++){const R=RANK_RULE[i];if(cov>=R.cov&&acc>=R.acc&&(R.kn==null||kn>=R.kn)&&(R.mis==null||mr<=R.mis))r=i;else break}
+  return r}
+function rankSnap(b){const o={};b.ids.forEach(id=>{const t=S.byId[id]&&S.byId[id].topic;if(t&&o[t]==null)o[t]=rankOf(t)});return o}
+function rankLine(){let top=0;TOPICS_().forEach(t=>{if(S.qs.some(q=>q.topic===t.id&&inField(q))&&rankOf(t.id)>=2)top++});return top?top+" topic"+(top===1?"":"s")+" at Chief or above · ":""}
+function gameAfter(q,ok,conf,r0,d0){const b=S.block,tutor=b.mode==="tutor";
+  if(tutor){S.fx={id:q.id,ok,conf};if(!RM()&&navigator.vibrate)try{navigator.vibrate(ok?12:[18,60,18])}catch(e){}
+    const r1=rankOf(q.topic);if(r1>r0)toast(topicLabel(q.topic)+": "+RANKS[r1],"New rank")}
+  else S.fx={id:q.id,seg:true};
+  const g=goalN(),d1=days()[dayKey()]||0;if(d0<g&&d1>=g){S.goalJust=true;toast("Daily goal met",g+" questions today")}}
+function gameFinish(b){if(b.gameDone)return;b.gameDone=1;
+  const ans=b.ids.filter(id=>b.done[id]!=null),c=ans.filter(id=>b.done[id]).length,f=ans.length?c/ans.length:0;
+  b.ups=Object.entries(b.r0||{}).map(([t,r])=>[t,rankOf(t),r]).filter(x=>x[1]>x[2]);
+  if(b.browse)return;
+  if(ans.length>=5&&c===ans.length)b.party="Perfect block";
+  else if(ans.length>=10&&G.bestPct>0&&f>G.bestPct)b.party="New personal best";
+  if(ans.length>=10&&f>G.bestPct){G.bestPct=f;putG()}}
+function sumExtras(b,c,n){const bits=[];
+  if(b.party)bits.push(`<div class="party">${esc(b.party)}</div>`);
+  if(b.kind==="mm")bits.push(`<div class="note">M&amp;M: cleared ${c} of ${n} case${n===1?"":"s"}</div>`);
+  (b.ups||[]).forEach(([t,r])=>bits.push(`<div class="note up">${esc(topicLabel(t))}: now ${RANKS[r]}</div>`));
+  return bits.join("")}
+/* the logo's O becomes the block ring during a block */
+let LOGO0=null;
+function paintLogo(){const svg=document.querySelector("#logoHome svg");if(!svg)return;if(LOGO0==null)LOGO0=svg.innerHTML;const b=S.block;
+  if(S.view!=="quiz"||!b||b.browse){if(svg.dataset.blk){svg.innerHTML=LOGO0;delete svg.dataset.blk}return}
+  const N=b.ids.length,r=15,c=2*Math.PI*r,len=c/N,gap=N<=40?Math.min(1.4,len*.3):0,rev=b.mode==="tutor"||b.finished;
+  const segs=b.ids.map((id,k)=>{const d=b.done[id];if(d==null)return"";
+    const col=!rev?"var(--ink2)":d?"var(--cf"+confOf(b.conf&&b.conf[id]).toUpperCase()+")":"var(--bad)";
+    const fresh=S.fx&&S.fx.id===id;
+    return `<circle cx="20" cy="20" r="${r}" fill="none" stroke="${col}" stroke-width="6" stroke-dasharray="${Math.max(.6,len-gap).toFixed(2)} ${c.toFixed(2)}" stroke-dashoffset="${(-k*len).toFixed(2)}" transform="rotate(-90 20 20)"${fresh?' class="segIn"':""}/>`}).join("");
+  svg.dataset.blk=1;svg.innerHTML=`<circle cx="20" cy="20" r="${r}" fill="none" stroke="var(--logoTrack)" stroke-width="6"/>${segs}`}
+/* M&M conference: questions missed when sure, most recent first */
+function mmList(){return S.qs.filter(q=>{const p=S.prog[q.id];return p&&p.mis}).sort((a,b)=>S.prog[b.id].at-S.prog[a.id].at)}
+function mmPanel(){const l=mmList();if(!l.length)return"";const wk=l.filter(q=>Date.now()-S.prog[q.id].at<7*DAY).length,n=Math.min(10,l.length);
+  return `<div class="panel today mm"><div style="min-width:0"><div class="lab">M&amp;M conference</div><div class="pv">${l.length} case${l.length===1?"":"s"}</div><div class="note">Questions you missed when you were sure${wk?` · ${wk} this week`:""}. Get one right and it leaves the list.</div></div><button class="btn ghost" id="startMM">Present ${n}</button></div>`}
+
 /* ---------- Today ---------- */
-const TODAY_N=20,TODAY_DUE=15;
+const goalN=()=>S.set.goal||20;let TODAY_N=20,TODAY_DUE=15;
+function setToday(){const g=goalN(),d=days()[dayKey()]||0;TODAY_N=Math.max(1,Math.min(d<g?g-d:g,MAXN.tutor));TODAY_DUE=Math.round(TODAY_N*.75)}
 function weakTopics(){
   return TOPICS_().map(t=>({id:t.id,label:t.label,...tally(S.qs.filter(q=>q.topic===t.id&&inField(q)))})).filter(x=>x.used>=3&&x.total>x.used).sort((a,b)=>a.c/a.used-b.c/b.used||b.total-a.total).slice(0,3);
 }
 function todayPlan(){
-  const now=Date.now();
+  setToday();const now=Date.now();
   const due=S.qs.filter(q=>{const p=S.prog[q.id];return inField(q)&&p&&p.n&&p.due<=now}).sort((a,b)=>S.prog[a.id].due-S.prog[b.id].due);
   const nDue=Math.min(due.length,TODAY_DUE);
   const nNew=TODAY_N-nDue;
@@ -950,10 +1042,14 @@ function todayIds(){
   return shuffle([...picked]);
 }
 function todayPanel(){
-  const pl=todayPlan(),done=days()[dayKey()]||0;
+  const pl=todayPlan(),done=days()[dayKey()]||0,g=goalN(),met=done>=g;
   const from=pl.weak.length?"new, weighted to "+pl.weak.map(w=>w.label).join(", "):"new high-yield";
-  const line=done>=TODAY_N&&!pl.due.length?`Done for today: ${done} answered. Another ${TODAY_N} are ready.`:`${pl.nDue?pl.nDue+" due for review · ":""}${pl.nNew} ${from}`;
-  return `<div class="panel today"><div style="min-width:0"><div class="lab">Today</div><div class="pv">${TODAY_N} questions</div><div class="note">${esc(line)}</div></div><button class="btn" id="startToday">Start</button></div>`;
+  const line=`${pl.nDue?pl.nDue+" due for review · ":""}${pl.nNew} ${from}`;
+  const r=23,c=2*Math.PI*r,f=Math.min(1,done/g);
+  const ring=`<svg class="tRing${met&&S.goalJust?" met":""}" viewBox="0 0 60 60" role="img" aria-label="${done} of ${g} answered today"><circle cx="30" cy="30" r="${r}" fill="none" stroke="var(--logoTrack)" stroke-width="7"/>${f?`<circle class="arc" cx="30" cy="30" r="${r}" fill="none" stroke="var(--cfK)" stroke-width="7" stroke-dasharray="${(c*f).toFixed(2)} ${c}" transform="rotate(-90 30 30)"/>`:""}${met?'<path d="M21.5 30.5l6 6L39 24.5" fill="none" stroke="var(--cfK)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>':`<text x="30" y="34.5" text-anchor="middle" font-family="Inter,sans-serif" font-weight="600" font-size="14" fill="var(--ink)">${done}</text>`}</svg>`;
+  const presets=[10,20,30,50,100];
+  const goalEd=S.goalEdit?`<div class="goalEd" role="group" aria-label="Daily goal">${presets.map(n=>`<button data-goal="${n}" aria-pressed="${g===n}">${n}</button>`).join("")}<input id="goalIn" class="nIn" type="number" inputmode="numeric" min="1" max="200" placeholder="Other" aria-label="Other daily goal" value="${presets.includes(g)?"":g}"><span class="note">Miss one day a week and your streak stays.</span></div>`:"";
+  return `<div class="panel today"><div class="tMain">${ring}<div style="min-width:0"><div class="lab">Today</div><div class="pv">${met?"Goal met · "+done+" answered":done+" of "+g}</div><div class="note">${esc((met?"Another "+TODAY_N+" ready: ":"Next "+TODAY_N+": ")+line)}</div><button class="goalBtn" id="goalEdit" aria-expanded="${!!S.goalEdit}">Daily goal: ${g} ${S.goalEdit?"‹":"›"}</button>${goalEd}</div></div><button class="btn" id="startToday">${met?"More":"Start"}</button></div>`;
 }
 function startIds(ids,mode,recall){
   ids=ids.slice(0,maxN(mode||"tutor"));
@@ -1095,6 +1191,7 @@ function themeSheet(){
 function render(){
   clearInterval(tick);
   document.body.classList.toggle("inQuiz",S.view==="quiz");
+  if(S.block&&!S.block.r0)S.block.r0=rankSnap(S.block);
   if(FROM&&!FROM.started&&S.qs.length&&fromPageQs().length){FROM.started=true;setTimeout(startFromPage,0)}
   if(S.view==="cards")S.view="home";
   const v=$("#view");
@@ -1117,6 +1214,7 @@ function render(){
   const newImg=v.querySelector(".qimg img");
   if(oldImg&&newImg&&oldImg.complete&&oldImg.getAttribute("src")===newImg.getAttribute("src"))newImg.replaceWith(oldImg);
   if(Math.abs(window.scrollY-keepY)>1)window.scrollTo(0,keepY);
+  paintLogo();S.fx=null;S.goalJust=false;
 }
 const THEMES=["system","light","dark"];
 document.addEventListener("click",e=>{
@@ -1148,6 +1246,9 @@ document.addEventListener("click",e=>{
   if(t.dataset.door){S.set.door=t.dataset.door;S.set.sub=[];pruneTopics();LS.put("rounds-set",S.set);render();return}
   if(t.dataset.sub){const v=t.dataset.sub;S.set.sub=v==="__all"?[]:S.set.sub.includes(v)?S.set.sub.filter(x=>x!==v):S.set.sub.concat(v);pruneTopics();LS.put("rounds-set",S.set);render();return}
   if(t.dataset.set){let v=t.dataset.v;if(v==="true")v=true;else if(v==="false")v=false;else if(/^\d+$/.test(v))v=+v;S.set[t.dataset.set]=v;if(t.dataset.set==="mode"&&S.set.n>maxN(v))S.set.n=maxN(v);LS.put("rounds-set",S.set);render();return}
+  if(t.id==="goalEdit"){S.goalEdit=!S.goalEdit;render();return}
+  if(t.dataset.goal){S.set.goal=+t.dataset.goal;LS.put("rounds-set",S.set);render();return}
+  if(t.id==="startMM"){const l=mmList().slice(0,10).map(q=>q.id);if(l.length){startIds(l,"tutor",false);S.block.kind="mm"}return}
   if(t.id==="start"){startBlock();return}
   if(t.id==="startToday"){startIds(todayIds(),"tutor",false);return}
   if(t.id==="startFromPage"){startFromPage();return}
@@ -1180,10 +1281,11 @@ document.addEventListener("input",e=>{
   if(e.target&&e.target.id==="findIn"){S.q=e.target.value;S.findMax=50;const r=$("#findRes");if(r)r.innerHTML=findResults()}
 });
 document.addEventListener("change",e=>{
+  if(e.target&&e.target.id==="goalIn"){const v=parseInt(e.target.value,10);if(v>0){S.set.goal=Math.min(v,200);LS.put("rounds-set",S.set)}setTimeout(render);return}
   if(e.target&&e.target.id==="nIn"){const v=parseInt(e.target.value,10);if(v>0){S.set.n=Math.min(v,maxN(S.set.mode));LS.put("rounds-set",S.set)}setTimeout(render)}
 });
 document.addEventListener("keydown",e=>{
-  if(e.target&&e.target.id==="nIn"&&e.key==="Enter"){e.target.blur();return}
+  if(e.target&&(e.target.id==="nIn"||e.target.id==="goalIn")&&e.key==="Enter"){e.target.blur();return}
   if(e.key==="Escape"&&document.getElementById("zoomBg")){document.getElementById("zoomBg").remove();return}
   if(e.key==="Escape"&&S.sheet){S.sheet=false;render();return}
   if(e.key==="Enter"&&e.target&&e.target.id==="findIn"){e.target.blur();return}
