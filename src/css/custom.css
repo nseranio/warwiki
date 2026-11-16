@@ -4001,10 +4001,12 @@ html[data-section='populations'] .wk-landing:not(.wk-landing--root) .markdown > 
 html:has(.navbar[class*='navbarHidden']) .wk-sl-jump {top: 0;}
 [data-theme='dark'] .wk-sl-jump {background: #0D1521;}
 /* phones: the article has no card, so the row takes the page color */
-@media (max-width: 996px) {.wk-sl-jump {background: var(--warwiki-bg);} [data-theme='dark'] .wk-sl-jump {background: var(--ifm-background-color);}}
+@media (max-width: 996px) {.wk-sl-jump {background: var(--warwiki-bg);} [data-theme='dark'] .wk-sl-jump {background: var(--warwiki-bg);}}
 /* Group buttons as text tabs, matching the Clinical Evidence area filter (owner, Nov 15): the group in view is underlined in the accent. */
-.wk-sl-jump a {flex: none; padding: .6rem 0 .55rem; border-bottom: 2px solid transparent; font-size: .9rem; font-weight: 500; color: var(--warwiki-text-muted); text-decoration: none; white-space: nowrap; transition: color .15s ease, border-color .15s ease;}
-.wk-sl-jump a:hover {color: var(--warwiki-text); text-decoration: none;}
+.wk-sl-jump a {flex: none; padding: .6rem 0 .55rem; border-bottom: 2px solid transparent; font-size: .9rem; font-weight: 500; color: var(--warwiki-text-muted); text-decoration: none; white-space: nowrap; transition: color .15s ease;}
+/* No border transition and hover only with a real pointer: iPhone Safari left the old underline and a sticky hover on the previous tab (owner, Nov 16). */
+@media (hover: hover) {.wk-sl-jump a:hover {color: var(--warwiki-text); text-decoration: none;}}
+.wk-sl-jump a:hover {text-decoration: none;}
 .wk-sl-jump a[aria-current='true'] {color: var(--warwiki-text); border-bottom-color: var(--ifm-color-primary);}
 .wk-sl-jump a:focus-visible {outline: 2px solid var(--ifm-color-primary); outline-offset: -2px; border-radius: 4px;}
 /* Section landings: an unpinned, wrapping index of the cards below, styled like the Clinical Evidence lane chips. */
