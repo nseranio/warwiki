@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Rounds pilot: New block versions</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/rounds/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#F2F4F4;--panel:#FBFCFC;--ink:#1A2224;--ink2:#5E6A6D;--line:#D2DADB;--soft:#E6ECEC;--accent:#3E7C78;--pearl:#C77A0A;--shadow:0 1px 2px rgba(20,30,32,.06),0 8px 24px rgba(20,30,32,.06)}
+@media (prefers-color-scheme:dark){:root{--bg:#141B1D;--panel:#1A2326;--ink:#E5ECED;--ink2:#94A3A6;--line:#2A3639;--soft:#1F2A2D;--accent:#7CC3BC;--pearl:#EF9F27;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25)}}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.top{max-width:1600px;margin:0 auto;padding:18px 16px 6px;display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:10px 20px}
+h1{margin:0;font:600 20px/1.25 Inter,sans-serif;letter-spacing:-.01em}
+.sub{margin:4px 0 0;color:var(--ink2);font-size:13.5px}
+.tabs{display:flex;gap:2px;background:var(--soft);border-radius:10px;padding:3px}
+.tabs button{border:0;background:none;min-width:44px;padding:7px 12px;border-radius:8px;font:600 13px Inter,sans-serif;color:var(--ink2);cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--panel);color:var(--ink);box-shadow:var(--shadow)}
+.strip{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:12px 16px 24px;scroll-padding:0 16px;justify-content:safe center;overscroll-behavior-x:contain}
+.card{flex:0 0 min(390px,calc(100vw - 48px));scroll-snap-align:start;display:flex;flex-direction:column;gap:10px}
+.card header{display:flex;align-items:flex-start;gap:10px;min-height:52px}
+.tag{flex:none;width:28px;height:28px;border-radius:8px;display:grid;place-items:center;background:var(--accent);color:var(--panel);font:700 13px Inter,sans-serif}
+.card h2{margin:0;font:600 15px/1.3 Inter,sans-serif}
+.card p{margin:2px 0 0;color:var(--ink2);font-size:13px;line-height:1.4}
+.open{margin-left:auto;flex:none;font:500 13px Inter,sans-serif;color:var(--accent);text-decoration:none;padding:4px 2px}
+.open:hover{text-decoration:underline}
+iframe{width:100%;height:min(780px,calc(100svh - 170px));min-height:520px;border:1px solid var(--line);border-radius:18px;background:var(--bg);box-shadow:var(--shadow)}
+.note{max-width:1600px;margin:0 auto;padding:0 16px 24px;color:var(--ink2);font-size:12.5px}
+</style>
+</head>
+<body>
+<div class="top"><div><h1>New block: four versions</h1><p class="sub">Each frame is the working pilot. Try them here or open one full screen.</p></div><nav class="tabs" aria-label="Jump to version"><button data-go="va" aria-pressed="true">A</button><button data-go="vb" aria-pressed="false">B</button><button data-go="vc" aria-pressed="false">C</button><button data-go="vd" aria-pressed="false">D</button></nav></div>
+<main class="strip" id="strip">
+<section class="card" id="va"><header><span class="tag">A</span><div><h2>Three choices</h2><p>Topics, then 10, 20 or 40, Tutor or Timed, Start.</p></div><a class="open" href="pilot-block-a.html">Open</a></header><iframe src="pilot-block-a.html?embed" title="Version A: Three choices"></iframe></section>
+<section class="card" id="vb"><header><span class="tag">B</span><div><h2>Tap to start</h2><p>Topics and mode; tapping 10, 20 or 40 starts the block.</p></div><a class="open" href="pilot-block-b.html">Open</a></header><iframe src="pilot-block-b.html?embed" title="Version B: Tap to start"></iframe></section>
+<section class="card" id="vc"><header><span class="tag">C</span><div><h2>Essentials plus More</h2><p>A, with the other options under More options.</p></div><a class="open" href="pilot-block-c.html">Open</a></header><iframe src="pilot-block-c.html?embed" title="Version C: Essentials plus More"></iframe></section>
+<section class="card" id="vd"><header><span class="tag">D</span><div><h2>Wheels</h2><p>Scroll for how many questions and the time per question.</p></div><a class="open" href="pilot-block-d.html">Open</a></header><iframe src="pilot-block-d.html?embed" title="Version D: Wheels"></iframe></section>
+</main>
+<p class="note">Pilots share your progress and settings with the live Rounds. Starting a block in a frame counts like any other block.</p>
+<script>
+const strip=document.getElementById("strip"),btns=[...document.querySelectorAll(".tabs button")];
+btns.forEach(b=>b.addEventListener("click",()=>{const c=document.getElementById(b.dataset.go);strip.scrollTo({left:c.offsetLeft-16,behavior:"smooth"})}));
+const cards=[...document.querySelectorAll(".card")];
+const mark=()=>{const x=strip.scrollLeft+16;let best=cards[0],d=1e9;cards.forEach(c=>{const k=Math.abs(c.offsetLeft-x);if(k<d){d=k;best=c}});btns.forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.go===best.id)))};
+strip.addEventListener("scroll",()=>requestAnimationFrame(mark),{passive:true});mark();
+</script>
+</body>
+</html>

@@ -877,9 +877,10 @@ function wheelSet(key,i){const sizes=[...document.querySelectorAll('.wheel[data-
   if(key==="n")S.set.n=sizes[i];else{const p=WHEEL.pace[i];if(p){S.set.mode="timed";S.set.pace=p}else S.set.mode="tutor"}
   LS.put("rounds-set",S.set);const s=document.getElementById("wheelSum");if(s)s.textContent=wheelSum();
   const b=document.getElementById("start");if(b){const n=Math.min(S.set.n,simpleAvail());b.textContent=n?`Start ${n} question${n===1?"":"s"}`:"Start";b.disabled=!n}}
-function initWheel(w){w.dataset.init=1;const H=44,last=w.children.length-1;w.scrollTop=(+w.dataset.sel||0)*H;let t;
+function initWheel(w){w.dataset.init=1;const H=44,last=w.children.length-1;let t,touched=false;const home=()=>{if(!touched)w.scrollTop=(+w.dataset.sel||0)*H};home();requestAnimationFrame(home);setTimeout(home,250);
+  ["pointerdown","wheel","touchstart","keydown"].forEach(ev=>w.addEventListener(ev,()=>{touched=true},{passive:true}));
   const mark=i=>[...w.children].forEach((c,k)=>c.setAttribute("aria-selected",String(k===i)));
-  w.addEventListener("scroll",()=>{const i=Math.max(0,Math.min(last,Math.round(w.scrollTop/H)));mark(i);clearTimeout(t);t=setTimeout(()=>{if(+w.dataset.sel!==i){w.dataset.sel=i;wheelSet(w.dataset.wheel,i)}},110)},{passive:true});
+  w.addEventListener("scroll",()=>{const i=Math.max(0,Math.min(last,Math.round(w.scrollTop/H)));mark(i);clearTimeout(t);t=setTimeout(()=>{if(touched&&+w.dataset.sel!==i){w.dataset.sel=i;wheelSet(w.dataset.wheel,i)}},110)},{passive:true});
   w.addEventListener("click",e=>{const it=e.target.closest(".wi");if(it)w.scrollTo({top:+it.dataset.i*H,behavior:"smooth"})});
   w.addEventListener("keydown",e=>{if(e.key!=="ArrowDown"&&e.key!=="ArrowUp")return;e.preventDefault();const i=Math.max(0,Math.min(last,(+w.dataset.sel||0)+(e.key==="ArrowDown"?1:-1)));w.scrollTo({top:i*H,behavior:"smooth"})})}
 new MutationObserver(()=>document.querySelectorAll(".wheel:not([data-init])").forEach(initWheel)).observe(document.documentElement,{childList:true,subtree:true});
@@ -1006,7 +1007,7 @@ function summary(){
 const RM=()=>window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const G=Object.assign({bestPct:0},LS.get("rounds-game",{}));
 const putG=()=>LS.put("rounds-game",G);
-function pilotNote(){return `<div class="pilotNote"><b>Pilot</b>Version D · Wheels. Scroll to pick how many and the time per question; Untimed shows each answer as you go. Also try <a href="pilot-block-a.html">A</a> · <a href="pilot-block-b.html">B</a> · <a href="pilot-block-c.html">C</a>. Progress is shared with the live Rounds.</div>`;`<div class="pilotNote"><b>Pilot</b>Game touches: answer reveal, block ring in the logo, ranks, daily goal and M&amp;M. Progress is shared with the live Rounds.</div>`}
+var EMBED=/[?&]embed\b/.test(location.search);function pilotNote(){if(EMBED)return "";return `<div class="pilotNote"><b>Pilot</b>Version D · Wheels. Scroll to pick how many and the time per question; Untimed shows each answer as you go. Also try <a href="pilot-block-a.html">A</a> · <a href="pilot-block-b.html">B</a> · <a href="pilot-block-c.html">C</a>. Progress is shared with the live Rounds.</div>`;`<div class="pilotNote"><b>Pilot</b>Game touches: answer reveal, block ring in the logo, ranks, daily goal and M&amp;M. Progress is shared with the live Rounds.</div>`}
 function toast(main,sub){let L=document.getElementById("toasts");if(!L){L=document.createElement("div");L.id="toasts";L.setAttribute("aria-live","polite");document.body.appendChild(L)}
   const t=document.createElement("div");t.className="toast";t.innerHTML=`${sub?`<span class="lab">${esc(sub)}</span>`:""}<span>${esc(main)}</span>`;L.appendChild(t);
   setTimeout(()=>{t.classList.add("out");setTimeout(()=>t.remove(),400)},2800)}
@@ -1334,6 +1335,7 @@ document.addEventListener("keydown",e=>{
 });
 load();
 })();
+if(/[?&]embed\b/.test(location.search)){let n=0,user=false;["pointerdown","wheel","touchstart","keydown"].forEach(ev=>addEventListener(ev,()=>{user=true},{once:true,passive:true}));const go=()=>{if(user)return;const el=document.querySelector(".opts.simple");if(el){const y=el.getBoundingClientRect().top+scrollY-12;if(Math.abs(scrollY-y)>4)scrollTo(0,y)}if(++n<30)setTimeout(go,150)};setTimeout(go,200)}
 </script>
 
 </body>

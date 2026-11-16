@@ -991,7 +991,7 @@ function summary(){
 const RM=()=>window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const G=Object.assign({bestPct:0},LS.get("rounds-game",{}));
 const putG=()=>LS.put("rounds-game",G);
-function pilotNote(){return `<div class="pilotNote"><b>Pilot</b>Version A · Three choices. Topics, how many and mode; everything else uses the defaults. Also try <a href="pilot-block-b.html">B</a> · <a href="pilot-block-c.html">C</a> · <a href="pilot-block-d.html">D</a>. Progress is shared with the live Rounds.</div>`;`<div class="pilotNote"><b>Pilot</b>Game touches: answer reveal, block ring in the logo, ranks, daily goal and M&amp;M. Progress is shared with the live Rounds.</div>`}
+var EMBED=/[?&]embed\b/.test(location.search);function pilotNote(){if(EMBED)return "";return `<div class="pilotNote"><b>Pilot</b>Version A · Three choices. Topics, how many and mode; everything else uses the defaults. Also try <a href="pilot-block-b.html">B</a> · <a href="pilot-block-c.html">C</a> · <a href="pilot-block-d.html">D</a>. Progress is shared with the live Rounds.</div>`;`<div class="pilotNote"><b>Pilot</b>Game touches: answer reveal, block ring in the logo, ranks, daily goal and M&amp;M. Progress is shared with the live Rounds.</div>`}
 function toast(main,sub){let L=document.getElementById("toasts");if(!L){L=document.createElement("div");L.id="toasts";L.setAttribute("aria-live","polite");document.body.appendChild(L)}
   const t=document.createElement("div");t.className="toast";t.innerHTML=`${sub?`<span class="lab">${esc(sub)}</span>`:""}<span>${esc(main)}</span>`;L.appendChild(t);
   setTimeout(()=>{t.classList.add("out");setTimeout(()=>t.remove(),400)},2800)}
@@ -1319,6 +1319,7 @@ document.addEventListener("keydown",e=>{
 });
 load();
 })();
+if(/[?&]embed\b/.test(location.search)){let n=0,user=false;["pointerdown","wheel","touchstart","keydown"].forEach(ev=>addEventListener(ev,()=>{user=true},{once:true,passive:true}));const go=()=>{if(user)return;const el=document.querySelector(".opts.simple");if(el){const y=el.getBoundingClientRect().top+scrollY-12;if(Math.abs(scrollY-y)>4)scrollTo(0,y)}if(++n<30)setTimeout(go,150)};setTimeout(go,200)}
 </script>
 
 </body>
