@@ -493,7 +493,6 @@ body.inQuiz .sbNav,body.inQuiz .sbMenu{display:none}
 .goalEd{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;align-items:center}
 .goalEd button{border:1px solid var(--line);background:var(--panel);border-radius:6px;padding:5px 11px;font:500 13px var(--sans);color:var(--ink2);font-variant-numeric:tabular-nums}
 .goalEd button[aria-pressed="true"]{background:var(--accentSoft);border-color:var(--accent);color:var(--ink)}
-.goalEd .nIn{width:78px;padding:5px 8px}
 .goalEd .note{flex-basis:100%;margin-top:4px}
 .mm .pv{font:600 18px/1.25 var(--sans)}
 .mm .btn.ghost{color:var(--ink);background:var(--panel);border:1px solid var(--line);box-shadow:none}
@@ -1052,7 +1051,9 @@ function mmPanel(){const l=mmList();if(!l.length)return"";const wk=l.filter(q=>D
   return `<div class="panel today mm"><div style="min-width:0"><div class="lab">M&amp;M conference</div><div class="pv">${l.length} case${l.length===1?"":"s"}</div><div class="note">Questions you missed when you were sure${wk?` · ${wk} this week`:""}. Get one right and it leaves the list.</div></div><button class="btn ghost" id="startMM">Present ${n}</button></div>`}
 
 /* ---------- Today ---------- */
-const goalN=()=>S.set.goal||20;let TODAY_N=20,TODAY_DUE=15;
+/* daily goal: fixed choices only (owner, Nov 16: no custom number, 5 to 40); an older saved goal snaps to the nearest choice */
+const GOALS=[5,10,15,20,30,40];
+const goalN=()=>{const v=S.set.goal||20;return GOALS.reduce((a,b)=>Math.abs(b-v)<Math.abs(a-v)?b:a)};let TODAY_N=20,TODAY_DUE=15;
 function setToday(){const g=goalN(),d=days()[dayKey()]||0;TODAY_N=Math.max(1,Math.min(d<g?g-d:g,MAXN.tutor));TODAY_DUE=Math.round(TODAY_N*.75)}
 function weakTopics(){
   return TOPICS_().map(t=>({id:t.id,label:t.label,...tally(S.qs.filter(q=>q.topic===t.id&&inField(q)))})).filter(x=>x.used>=3&&x.total>x.used).sort((a,b)=>a.c/a.used-b.c/b.used||b.total-a.total).slice(0,3);
@@ -1082,8 +1083,8 @@ function todayPanel(){
   const line=`${pl.nDue?pl.nDue+" due for review · ":""}${pl.nNew} ${from}`;
   const r=23,c=2*Math.PI*r,f=Math.min(1,done/g);
   const ring=`<svg class="tRing${met&&S.goalJust?" met":""}" viewBox="0 0 60 60" role="img" aria-label="${done} of ${g} answered today"><circle cx="30" cy="30" r="${r}" fill="none" stroke="var(--logoTrack)" stroke-width="7"/>${f?`<circle class="arc" cx="30" cy="30" r="${r}" fill="none" stroke="var(--cfK)" stroke-width="7" stroke-dasharray="${(c*f).toFixed(2)} ${c}" transform="rotate(-90 30 30)"/>`:""}${met?'<path d="M21.5 30.5l6 6L39 24.5" fill="none" stroke="var(--cfK)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>':`<text x="30" y="34.5" text-anchor="middle" font-family="Inter,sans-serif" font-weight="600" font-size="14" fill="var(--ink)">${done}</text>`}</svg>`;
-  const presets=[10,20,30,50,100];
-  const goalEd=S.goalEdit?`<div class="goalEd" role="group" aria-label="Daily goal">${presets.map(n=>`<button data-goal="${n}" aria-pressed="${g===n}">${n}</button>`).join("")}<input id="goalIn" class="nIn" type="number" inputmode="numeric" min="1" max="200" placeholder="Other" aria-label="Other daily goal" value="${presets.includes(g)?"":g}"><span class="note">Miss one day a week and your streak stays.</span></div>`:"";
+  const presets=GOALS;
+  const goalEd=S.goalEdit?`<div class="goalEd" role="group" aria-label="Daily goal">${presets.map(n=>`<button data-goal="${n}" aria-pressed="${g===n}">${n}</button>`).join("")}<span class="note">Miss one day a week and your streak stays.</span></div>`:"";
   return `<div class="panel today"><div class="tMain">${ring}<div style="min-width:0"><div class="lab">Today</div><div class="pv">${met?"Goal met · "+done+" answered":done+" of "+g}</div><div class="note">${esc((met?"Another "+TODAY_N+" ready: ":"Next "+TODAY_N+": ")+line)}</div><button class="goalBtn" id="goalEdit" aria-expanded="${!!S.goalEdit}">Daily goal: ${g} ${S.goalEdit?"‹":"›"}</button>${goalEd}</div></div><button class="btn" id="startToday">${met?"More":"Start"}</button></div>`;
 }
 function startIds(ids,mode,recall){
