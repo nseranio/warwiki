@@ -344,7 +344,7 @@ h1.logo{cursor:pointer}
 @media (hover:hover) and (pointer:fine){.cb kbd{display:inline}}
 .dock .foot.two{flex-direction:column;align-items:stretch;gap:8px}
 .dock .foot.two .row{display:flex;justify-content:space-between;align-items:center;gap:8px}
-.confNote{font-size:12.5px;color:var(--ink2);text-align:right;white-space:nowrap}
+.confNote{font-size:12.5px;line-height:1.3;color:var(--ink2);text-align:right;min-width:0;flex:1 1 auto;text-wrap:balance} /* wraps on narrow phones instead of running past the dock (owner, Nov 16) */
 .today{display:flex;align-items:center;justify-content:space-between;gap:14px}
 .today .pv{font:600 18px/1.25 var(--sans);margin-top:2px}
 .today .note{margin-top:3px}
@@ -467,8 +467,6 @@ body.inQuiz .sbNav,body.inQuiz .sbMenu{display:none}
 .fromPage b{font:600 16px/1.3 var(--sans)}
 
 /* ---------- game pilot ---------- */
-.pilotNote{font:500 12.5px/1.45 var(--sans);color:var(--ink2);border:1px dashed var(--line);border-radius:8px;padding:8px 12px}
-.pilotNote b{color:var(--pearl);margin-right:6px;font:600 11px var(--sans);letter-spacing:.07em;text-transform:uppercase}
 .ch.right{background:linear-gradient(var(--okSoft),var(--okSoft)) no-repeat 0 0/100% 100%}
 .ch.right.fx{animation:sweep .6s var(--ease) .05s both}
 .ch.wrong.fx{animation:shake .36s var(--ease)}
@@ -515,6 +513,28 @@ body.inQuiz .sbNav,body.inQuiz .sbMenu{display:none}
 .wi[aria-selected="true"]{color:var(--ink);font-weight:600}
 .wheelBox::after{content:"";position:absolute;left:8px;right:8px;bottom:44px;height:44px;border-block:1px solid var(--accent);opacity:.55;pointer-events:none}
 .wheelSum{font:500 14px var(--sans);color:var(--ink2);font-variant-numeric:tabular-nums}
+
+/* ---------- launch animation: once per visit (owner liked the pilot, Nov 16) ---------- */
+#splash{position:fixed;inset:0;z-index:60;display:grid;place-items:center;cursor:pointer}
+#splash .spBg{position:absolute;inset:0;background:var(--bg);transition:opacity .42s var(--ease)}
+#splash .spLogo{position:relative;display:flex;align-items:center;font:700 58px/1 var(--word);font-stretch:112%;letter-spacing:.11em;color:var(--ink);transform-origin:0 0;will-change:transform}
+#splash .spLogo svg{width:.92em;height:.92em;margin:0 .07em 0 .03em;overflow:visible}
+#splash .spL{display:inline-block;animation:spLetter .5s var(--ease) both}
+#splash .spL.u{animation-delay:.08s}
+#splash .trk{animation:spFade .35s ease both}
+#splash .arc{stroke-dasharray:1 1;stroke-dashoffset:1;animation:spDraw .62s cubic-bezier(.55,.1,.25,1) .12s forwards}
+#splash .tip{opacity:0;transform-origin:20px 20px;animation:spTip .3s var(--ease) .7s forwards}
+@keyframes spLetter{from{opacity:0;letter-spacing:.32em;filter:blur(2px)}to{opacity:1;letter-spacing:.11em;filter:none}}
+@keyframes spFade{from{opacity:0}}
+@keyframes spDraw{to{stroke-dashoffset:0}}
+@keyframes spTip{0%{opacity:0;stroke-width:3}60%{opacity:1;stroke-width:8.5}100%{opacity:1;stroke-width:6}}
+#splash.go .spBg{opacity:0}
+#splash.go{pointer-events:none}
+#splash.skip .spBg,#splash.skip .spLogo{transition:opacity .16s ease!important;opacity:0}
+body.spWait #logoHome{visibility:hidden}
+#view.spIn>*{animation:spRise .5s var(--ease) both}
+@keyframes spRise{from{opacity:0;transform:translateY(10px)}}
+@media (max-width:520px){#splash .spLogo{font-size:44px}}
 </style>
 
 <header class="siteBar" id="siteBar" hidden>
@@ -525,6 +545,7 @@ body.inQuiz .sbNav,body.inQuiz .sbMenu{display:none}
     <button class="sbMenu" id="sbMenu" type="button" aria-expanded="false" aria-controls="sbNav">Menu</button>
   </div>
 </header>
+<div id="splash" aria-hidden="true"><div class="spBg"></div><div class="spLogo"><span class="spL">R</span><svg viewBox="0 0 40 40"><circle class="trk" cx="20" cy="20" r="15" fill="none" stroke="var(--logoTrack)" stroke-width="6"/><path class="arc" pathLength="1" d="M20 5 A15 15 0 1 1 7.9 28.8" fill="none" stroke="var(--logo)" stroke-width="6"/><path class="tip" d="M7.9 28.8 A15 15 0 0 1 5.7 24.6" fill="none" stroke="var(--pearl)" stroke-width="6"/></svg><span class="spL u">UNDS</span></div></div>
 <div class="wrap" id="app">
   <div class="top">
     <div class="brand">
@@ -1361,6 +1382,31 @@ document.addEventListener("keydown",e=>{
   else if("123".includes(e.key)&&e.key.length===1){const btn=document.querySelector(`.confBtns [data-conf="${+e.key-1}"]:not(:disabled)`);if(btn)btn.click()}
   else if(e.key==="Enter"){const btn=$("#next")||$("#finish");if(btn&&!btn.disabled)btn.click()}
 });
+
+/* launch animation (pilot): plays while the questions load; hands off as soon as both the animation and the data are ready */
+const ADOPTED=true;
+(function splash(){
+  const el=document.getElementById("splash");if(!el)return;
+  const RMq=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let seen=false;if(ADOPTED){try{seen=sessionStorage.getItem("rounds-splash")==="1";sessionStorage.setItem("rounds-splash","1")}catch(e){}}
+  if(RMq||seen){el.remove();return}
+  document.body.classList.add("spWait");
+  const t0=performance.now(),MIN=950,MAX=2600;let done=false;
+  const finish=fast=>{if(done)return;done=true;
+    const logo=el.querySelector(".spLogo"),target=document.getElementById("logoHome");
+    const view=document.getElementById("view");
+    if(fast||!target){el.classList.add("skip");document.body.classList.remove("spWait");setTimeout(()=>el.remove(),180);return}
+    /* land the ring on the header's ring: scale by the two rings' sizes, origin at the splash logo's top left */
+    const L=logo.getBoundingClientRect(),A=logo.querySelector("svg").getBoundingClientRect(),B=target.querySelector("svg").getBoundingClientRect(),k=B.width/A.width;
+    logo.style.transition="transform .48s cubic-bezier(.2,.75,.2,1)";
+    logo.style.transform=`translate(${B.left-L.left-k*(A.left-L.left)}px,${B.top-L.top-k*(A.top-L.top)}px) scale(${k})`;
+    el.classList.add("go");view.classList.add("spIn");
+    setTimeout(()=>{document.body.classList.remove("spWait");el.remove();setTimeout(()=>view.classList.remove("spIn"),600)},500)};
+  el.addEventListener("pointerdown",()=>finish(true));
+  addEventListener("keydown",()=>finish(true),{once:true});
+  (function wait(){if(done)return;const t=performance.now()-t0;
+    if((S.qs.length&&t>=MIN)||t>=MAX){finish(false);return}setTimeout(wait,40)})();
+})();
 load();
 })();
 </script>
