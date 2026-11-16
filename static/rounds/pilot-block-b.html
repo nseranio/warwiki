@@ -508,6 +508,15 @@ body.inQuiz .sbNav,body.inQuiz .sbMenu{display:none}
 .moreRow{display:flex;justify-content:space-between;align-items:center;width:100%;background:none;border:0;border-top:1px solid var(--line);padding:12px 0 0;color:var(--ink2);font:500 13.5px var(--sans);text-align:left}
 .moreRow:hover{color:var(--ink)}
 .moreBody{display:flex;flex-direction:column;gap:18px}
+.wheels{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.wheelBox{position:relative}
+.wheel{height:132px;overflow-y:auto;scroll-snap-type:y mandatory;padding:44px 0;box-sizing:border-box;scrollbar-width:none;overscroll-behavior:contain;border:1px solid var(--line);border-radius:6px;background:var(--panel);outline:none;-webkit-mask-image:linear-gradient(transparent,#000 34%,#000 66%,transparent);mask-image:linear-gradient(transparent,#000 34%,#000 66%,transparent)}
+.wheel::-webkit-scrollbar{display:none}
+.wheel:focus-visible{border-color:var(--accent)}
+.wi{height:44px;display:flex;align-items:center;justify-content:center;scroll-snap-align:center;font:500 20px var(--sans);font-variant-numeric:tabular-nums;color:var(--ink2);cursor:pointer;user-select:none;transition:color .15s var(--ease)}
+.wi[aria-selected="true"]{color:var(--ink);font-weight:600}
+.wheelBox::after{content:"";position:absolute;left:8px;right:8px;bottom:44px;height:44px;border-block:1px solid var(--accent);opacity:.55;pointer-events:none}
+.wheelSum{font:500 14px var(--sans);color:var(--ink2);font-variant-numeric:tabular-nums}
 </style>
 
 <header class="siteBar" id="siteBar" hidden>
@@ -983,7 +992,7 @@ function summary(){
 const RM=()=>window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const G=Object.assign({bestPct:0},LS.get("rounds-game",{}));
 const putG=()=>LS.put("rounds-game",G);
-function pilotNote(){return `<div class="pilotNote"><b>Pilot</b>Version B · Tap to start. Pick topics and mode, then tap a size to begin. Also try <a href="pilot-block-a.html">A</a> · <a href="pilot-block-c.html">C</a>. Progress is shared with the live Rounds.</div>`;`<div class="pilotNote"><b>Pilot</b>Game touches: answer reveal, block ring in the logo, ranks, daily goal and M&amp;M. Progress is shared with the live Rounds.</div>`}
+function pilotNote(){return `<div class="pilotNote"><b>Pilot</b>Version B · Tap to start. Pick topics and mode, then tap a size to begin. Also try <a href="pilot-block-a.html">A</a> · <a href="pilot-block-c.html">C</a> · <a href="pilot-block-d.html">D</a>. Progress is shared with the live Rounds.</div>`;`<div class="pilotNote"><b>Pilot</b>Game touches: answer reveal, block ring in the logo, ranks, daily goal and M&amp;M. Progress is shared with the live Rounds.</div>`}
 function toast(main,sub){let L=document.getElementById("toasts");if(!L){L=document.createElement("div");L.id="toasts";L.setAttribute("aria-live","polite");document.body.appendChild(L)}
   const t=document.createElement("div");t.className="toast";t.innerHTML=`${sub?`<span class="lab">${esc(sub)}</span>`:""}<span>${esc(main)}</span>`;L.appendChild(t);
   setTimeout(()=>{t.classList.add("out");setTimeout(()=>t.remove(),400)},2800)}
