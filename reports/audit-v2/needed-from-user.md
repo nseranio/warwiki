@@ -15,7 +15,7 @@ Drop files in Downloads or `reports/audit-v2/sources-local/` (gitignored). Each 
 - NICE NG239. NICE NG112 and NG123 are on disk; ADA Standards of Care 2026 was received and checked October 18.
 - Barry 1992 (priapism shunt); Frazier 2024 (AUS series); a Trimix efficacy series (any clinical series of papaverine–phentolamine–alprostadil response rates; settles "about 90%" on the erectile dysfunction page).
 - Lange M, et al. *Ann Plast Surg* 2022;88(5):538–543 (vaginal-flap neomeatus incontinence count).
-- Mulcahy JJ, Köhler TS, Wen L, Wilson SK. *Int J Impot Res* 2021;33(8):801–807 (doi 10.1038/s41443-020-0338-1; added November 14): settles the InhibiZone 2009 FDA infection-reduction claim on the penile-prosthesis History page. openFDA PMA records for N970012 start in 2010.
+- ~~Mulcahy JJ, Köhler TS, Wen L, Wilson SK. *Int J Impot Res* 2021;33(8):801–807 (doi 10.1038/s41443-020-0338-1)~~ **Received November 16, 2026** (`sources-local/pdfs-2026-11-16/10.1038_s41443-020-0338-1.pdf`). Journal p. 801: "The Federal Drug Administration in 2009 cleared AMS to publicize that its coating called InhibiZone® reduced the rate of device infection." The History page row (prosthetics-ed.mdx, InhibiZone 2001) already cites it as ref 26 and its wording matches; no text change.
 - Roehrborn 2000 (PLESS retention, *Eur Urol* 37:528, doi 10.1159/000020189; added November 14): library document delivery (Karger is outside Jefferson's subscription).
 
 **Device documents and books**
