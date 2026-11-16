@@ -180,6 +180,12 @@ mark.key{background:var(--keyBg);color:inherit;font-weight:600;padding:.05em .25
 .fd.general{background:var(--accentSoft);color:var(--accent)}
 .chip.core{background:var(--okSoft);color:var(--ok)}
 .fieldSw{grid-template-columns:repeat(4,1fr)!important}
+.doorSubs{margin-top:-4px}
+.sdoor{font:600 16px/1.3 var(--sans);color:var(--ink);margin:22px 0 2px}
+.sfield:first-child .sdoor{margin-top:6px}
+.sfam{font:600 13px/1.3 var(--sans);color:var(--ink2);margin:14px 0 -6px}
+.trow.solo{width:100%;padding:14px 0;border-top:0;border-bottom:1px solid var(--line)}
+.trow.solo>span:first-child{font-weight:600}
 @media (max-width:520px){.fieldSw button span{display:none}.fieldSw button{font-size:13px;padding:9px 2px}}
 .rowh{margin-top:6px}
 .panel.statsP{padding:0}
@@ -484,7 +490,7 @@ body.inQuiz .sbNav,body.inQuiz .sbMenu{display:none}
 const KINDS={pathophysiology:"Pathophysiology",evaluation:"Evaluation",management:"Management",trial:"Trials"};
 const DAY=864e5;
 const S={qs:[],byId:{},prog:{},col:null,store:"loading",
-  set:{field:"both",topics:[],kinds:[],yield:"all",pool:"unused",n:10,mode:"tutor",recall:false},
+  set:{door:"all",sub:[],topics:[],kinds:[],yield:"all",pool:"unused",n:10,mode:"tutor",recall:false},
   block:null,view:"home"};
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -495,14 +501,36 @@ if(S.set.pool==="trials"){S.set.pool="all";S.set.kinds=["trial"]}
 delete S.set.topic;
 const MAXN={timed:50,tutor:100};const maxN=m=>MAXN[m]||100;
 if(S.set.n==="all"||typeof S.set.n!=="number"||S.set.n>maxN(S.set.mode))S.set.n=maxN(S.set.mode);
-const FIELDS={both:"All",specialty:"GURS/URPS",general:"General",oncology:"Oncology"};
-if(!FIELDS[S.set.field])S.set.field="both";if(!S.set.yield||!LS.get("rounds-yield-v3",false)){S.set.yield="all";LS.put("rounds-yield-v3",true)}
+if(S.set.field!=null){const f=S.set.field;S.set.door={specialty:"benign",general:"benign",oncology:"onc"}[f]||"all";S.set.sub=f==="specialty"?["func","recon"]:[];delete S.set.field}
+if(typeof S.set.door!=="string")S.set.door="all";if(!Array.isArray(S.set.sub))S.set.sub=[];if(!S.set.yield||!LS.get("rounds-yield-v3",false)){S.set.yield="all";LS.put("rounds-yield-v3",true)}
 const YIELDS={all:"All",c:"High-yield",u:"Supplemental",d:"In-depth"};
 const yLevel=q=>q.yield==="core"?"c":q.yield==="detail"?"d":"u";
 const yOk=q=>S.set.yield==="all"||yLevel(q)===S.set.yield;
 const TOPICS_=()=>(S.meta&&S.meta.topics)||[];
 const GROUPS_=()=>((S.meta&&S.meta.groups)||[]).filter(g=>TOPICS_().some(t=>t.group===g.id));
 const topicLabel=id=>(TOPICS_().find(t=>t.id===id)||{}).label||id;
+/* doors: All / Benign / Oncology / Peds with sub-options (questions.json meta.doors; owner's choice, Nov 15, 2026) */
+const DOORS_=()=>(S.meta&&S.meta.doors)||[];
+function dGroups(){const out=[];DOORS_().forEach(d=>d.subs.forEach(s=>s.groups.forEach((g,i)=>out.push({id:"d-"+s.id+"-"+i,label:g.label,topics:g.topics,door:d.id,sub:s.id,title:s.title,family:s.family}))));return out}
+function inScope(q,o){o=o||{};const door=o.door??S.set.door,sub=o.sub??S.set.sub;if(door==="all"||!q.door)return true;return q.door===door&&(!sub.length||sub.includes(q.sub))}
+function pruneTopics(){S.set.topics=S.set.topics.filter(id=>S.qs.some(q=>q.topic===id&&inScope(q)))}
+function doorBar(sm){
+  const ds=DOORS_();if(!ds.length)return "";
+  if(S.set.door!=="all"&&!ds.some(d=>d.id===S.set.door)){S.set.door="all";S.set.sub=[]}
+  const n=o=>S.qs.filter(q=>inScope(q,o)).length;
+  const top=`<div class="fieldSw${sm?" sm":""}" role="group" aria-label="Area">${[["all","All"]].concat(ds.map(d=>[d.id,d.label])).map(([v,l])=>`<button data-door="${v}" aria-pressed="${S.set.door===v}">${esc(l)}${sm?"":`<span>${v==="all"?S.qs.length:n({door:v,sub:[]})}</span>`}</button>`).join("")}</div>`;
+  if(sm||S.set.door==="all")return top;
+  const d=ds.find(x=>x.id===S.set.door);const subs=S.set.sub.filter(v=>d.subs.some(x=>x.id===v));if(subs.length!==S.set.sub.length)S.set.sub=subs;
+  return top+`<div class="seg doorSubs" role="group" aria-label="${esc(d.label)} areas">${[["__all","All "+d.label.toLowerCase()]].concat(d.subs.map(x=>[x.id,x.label])).map(([v,l])=>{const on=v==="__all"?!S.set.sub.length:S.set.sub.includes(v);return `<button data-sub="${v}" aria-pressed="${on}">${esc(l)}<span class="k">${n({sub:v==="__all"?[]:[v]})}</span></button>`}).join("")}</div>`;
+}
+function doorSections(){
+  const have=new Set(S.qs.filter(q=>inScope(q)).map(q=>q.topic));const secs=[];
+  dGroups().filter(g=>(S.set.door==="all"||g.door===S.set.door)&&(S.set.door==="all"||!S.set.sub.length||S.set.sub.includes(g.sub))).forEach(g=>{
+    const ts=g.topics.filter(id=>have.has(id));if(!ts.length)return;
+    let s=secs[secs.length-1];if(!s||s.sub!==g.sub){s={door:g.door,sub:g.sub,title:g.title,family:g.family,groups:[]};secs.push(s)}s.groups.push({...g,topics:ts})});
+  return secs;
+}
+const doorLabel=id=>(DOORS_().find(d=>d.id===id)||{}).label||id;
 const HOST_THEME=document.documentElement.getAttribute("data-theme");
 const SVG=d=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
 const THEME_ICON={
@@ -689,7 +717,7 @@ function toggleFlag(q){
 }
 
 /* ---------- pools ---------- */
-function inField(q){return S.set.field==="both"||q.field===S.set.field}
+function inField(q){return inScope(q)}
 function inTopic(q){return inField(q)&&yOk(q)&&(!S.set.topics.length||S.set.topics.includes(q.topic))&&(!S.set.kinds.length||S.set.kinds.includes(q.kind))}
 const POOLS={
   unused:{label:"Unused",f:q=>!(S.prog[q.id]&&S.prog[q.id].n)},
@@ -730,7 +758,6 @@ function home(){
   const storeNote=S.store==="account"?"Progress saves to your Claude account and follows you across devices.":S.store==="loading"?"Connecting…":ONSITE?(syncCode?"":"Progress saves in this browser. Turn on sync to carry it to "+HOME.other+" and your other devices."):"Progress saves on this device only.";
   const segs=(key,opts)=>`<div class="seg" role="group">${opts.map(([v,l,k])=>`<button data-set="${key}" data-v="${v}" aria-pressed="${String(S.set[key])===String(v)}">${esc(l)}${k!=null?`<span class="k">${k}</span>`:""}</button>`).join("")}</div>`;
   const multi=(key,opts)=>`<div class="seg" role="group">${opts.map(([v,l,k])=>{const on=v==="__all"?!S.set[key].length:S.set[key].includes(v);return `<button data-multi="${key}" data-v="${v}" aria-pressed="${on}">${esc(l)}${k!=null?`<span class="k">${k}</span>`:""}</button>`}).join("")}</div>`;
-  const groups=GROUPS_().filter(g=>S.set.field==="both"||g.field===S.set.field);
   const cnt=t=>S.qs.filter(q=>q.topic===t).length;
   const sel=S.set.topics.filter(id=>TOPICS_().some(t=>t.id===id));
   const topicSummary=sel.length?(sel.length<=2?sel.map(topicLabel).join(", "):topicLabel(sel[0])+", "+topicLabel(sel[1])+" +"+(sel.length-2)+" more"):"All topics";
@@ -739,7 +766,7 @@ function home(){
   const pools=Object.entries(POOLS).map(([k,v])=>[k,v.label,poolList(k).length]);
   const avail=poolList(S.set.pool).length;
   const cap=maxN(S.set.mode),n=Math.min(S.set.n,cap,avail);
-  const field=`<div class="fieldSw" role="group" aria-label="Field">${Object.entries(FIELDS).map(([k,l])=>`<button data-set="field" data-v="${k}" aria-pressed="${S.set.field===k}">${l}<span>${k==="both"?S.qs.length:S.qs.filter(q=>q.field===k).length}</span></button>`).join("")}</div>`;
+  const field=doorBar();
   const hero=`<div class="panel hero">
     ${confRing(confCount(scope),all.used)}
     <div><div class="stats">
@@ -764,7 +791,7 @@ function home(){
   const progress=`<div class="panel statsP">
     <button class="statsHead" id="toggleStats" aria-expanded="${!!S.showStats}"><span><span class="pv">Progress</span><span class="note">${(()=>{const ts=TOPICS_().filter(t=>S.qs.some(q=>q.topic===t.id&&inField(q))).map(t=>({l:t.label,...tally(S.qs.filter(q=>q.topic===t.id))})).filter(x=>x.used>=3);if(!ts.length)return "By topic and type, once you have answered a few";const w=ts.sort((a,b)=>a.c/a.used-b.c/b.used)[0];return "Weakest so far: "+w.l+" ("+Math.round(w.c/w.used*100)+"%)"})()}</span></span><span class="chev">${S.showStats?"−":"+"}</span></button>
     ${S.showStats?`<div class="statsBody">
-    <div class="rows">${groups.map(g=>`<div class="lab rowh">${esc(g.label)}</div>`+TOPICS_().filter(t=>t.group===g.id).map(t=>barRow(t.label,tally(S.qs.filter(q=>q.topic===t.id)))).join("")).join("")}</div>
+    <div class="rows">${doorSections().map(s=>`<div class="lab rowh">${esc(s.title)}</div>`+s.groups.flatMap(g=>g.topics).map(id=>barRow(topicLabel(id),tally(S.qs.filter(q=>q.topic===id&&inScope(q))))).join("")).join("")}</div>
     <div class="lab rowh" style="margin-top:18px">By type</div>
     <div class="rows">${Object.entries(KINDS).map(([k,l])=>barRow(l,tally(scope.filter(q=>q.kind===k)))).join("")}</div></div>`:""}
   </div>`;
@@ -834,7 +861,7 @@ function quiz(){
   <div class="qbar"><button class="exitBtn" id="exitBlock">‹ ${b.browse?"Back":b.finished?"Summary":"Exit"}</button><div class="lab">Question ${idx+1} of ${b.ids.length}</div><div class="clock" id="clock">${b.finished?"Review":clock()}</div></div>
   <div class="qGrid"><div class="qMain">
   <div class="${fresh?"case":""}" style="display:flex;flex-direction:column;gap:18px">
-  <div class="meta"><span class="chip ${q.field==="oncology"?"onc":""}">${esc(topicLabel(q.topic))}</span><span class="chip ${q.kind==="trial"?"t":""}">${esc(q.trial||KINDS[q.kind]||q.kind)}</span><span class="chip ${yLevel(q)==="c"?"core":""}">${YIELDS[yLevel(q)]}</span>${q.boardFav?'<span class="chip bf">Board favorite</span>':""}</div>
+  <div class="meta"><span class="chip ${(q.field==="oncology"||q.sub==="p-onc")?"onc":""}">${esc(topicLabel(q.topic))}</span><span class="chip ${q.kind==="trial"?"t":""}">${esc(q.trial||KINDS[q.kind]||q.kind)}</span><span class="chip ${yLevel(q)==="c"?"core":""}">${YIELDS[yLevel(q)]}</span>${q.boardFav?'<span class="chip bf">Board favorite</span>':""}</div>
   <div class="qbody"><div class="qn">${idx+1}.</div><div><div class="stem">${esc(q.stem)}</div>${q.image?figHTML(q.image):""}<div class="ask">${esc(q.question)}</div></div></div>
   ${choices}
   </div>
@@ -848,7 +875,7 @@ function quiz(){
   <div class="qbar"><button class="exitBtn" id="exitBlock">‹ ${b.browse?"Back":b.finished?"Summary":"Exit"}</button><div class="lab">Question ${idx+1} of ${b.ids.length}</div><div class="clock" id="clock">${b.finished?"Review":clock()}</div></div>
   <div class="ticks" aria-hidden="true">${ticks}</div>
   <div class="${fresh?"case":""}" style="display:flex;flex-direction:column;gap:16px">
-  <div class="meta"><span class="chip ${q.field==="oncology"?"onc":""}">${esc(topicLabel(q.topic))}</span><span class="chip ${q.kind==="trial"?"t":""}">${esc(q.trial||KINDS[q.kind]||q.kind)}</span><span class="chip ${yLevel(q)==="c"?"core":""}">${YIELDS[yLevel(q)]}</span>${q.boardFav?'<span class="chip bf">Board favorite</span>':""}</div>
+  <div class="meta"><span class="chip ${(q.field==="oncology"||q.sub==="p-onc")?"onc":""}">${esc(topicLabel(q.topic))}</span><span class="chip ${q.kind==="trial"?"t":""}">${esc(q.trial||KINDS[q.kind]||q.kind)}</span><span class="chip ${yLevel(q)==="c"?"core":""}">${YIELDS[yLevel(q)]}</span>${q.boardFav?'<span class="chip bf">Board favorite</span>':""}</div>
   <div class="qbody"><div class="qn">${idx+1}.</div><div><div class="stem">${esc(q.stem)}</div>${q.image?figHTML(q.image):""}<div class="ask">${esc(q.question)}</div></div></div>
   ${choices}
   ${ans}
@@ -945,7 +972,7 @@ function statusOf(q){const p=S.prog[q.id];
   if(p.conf===0)return ["g","Correct, guessed"];
   return ["c","Correct"];}
 function qRow(q,attr){const [cls,lab]=statusOf(q);const p=S.prog[q.id]||{};
-  return `<button class="qrow" ${attr}><i class="${cls}" aria-hidden="true"></i><span style="min-width:0"><span class="qt">${esc(q.stem)}</span><span class="qm"><span class="chip ${q.field==="oncology"?"onc":""}">${esc(topicLabel(q.topic))}</span>${q.image?'<span class="chip">Image</span>':""}<span class="note">${lab}${p.flag&&p.n?" · flagged":""}</span></span></span><span class="chev" aria-hidden="true">›</span></button>`}
+  return `<button class="qrow" ${attr}><i class="${cls}" aria-hidden="true"></i><span style="min-width:0"><span class="qt">${esc(q.stem)}</span><span class="qm"><span class="chip ${(q.field==="oncology"||q.sub==="p-onc")?"onc":""}">${esc(topicLabel(q.topic))}</span>${q.image?'<span class="chip">Image</span>':""}<span class="note">${lab}${p.flag&&p.n?" · flagged":""}</span></span></span><span class="chev" aria-hidden="true">›</span></button>`}
 function rowsHTML(list,kind,max){
   if(!list.length)return "";
   return `<div class="panel qrows">${list.slice(0,max).map((q,k)=>qRow(q,`data-open="${kind}" data-k="${k}"`)).join("")}</div>${list.length>max?`<button class="ghost more" data-more="${kind}">Show ${Math.min(50,list.length-max)} more of ${list.length-max}</button>`:""}`}
@@ -1004,20 +1031,28 @@ function cards(){
     if(!uniq.length)return"";
     return `<div class="lab">${esc(l)}</div>${uniq.map(q=>`<div class="panel tc ${q._met||S.showAll||(S.peek&&S.peek[q.id])?"":"hidden-card"}" data-peek="${q.id}"><div class="nm"><span>${esc(q.trial)}</span>${q.source&&q.source.url?`<a href="${esc(q.source.url)}" target="_blank" rel="noopener" class="lab">Page ↗</a>`:""}</div><p>${esc(q.card)}</p></div>`).join("")}`;
   }).join("");
-  return `<div class="panel"><h2>Trial cards</h2><div class="fieldSw sm" role="group" aria-label="Field" style="margin-top:12px">${Object.entries(FIELDS).map(([k,l])=>`<button data-set="field" data-v="${k}" aria-pressed="${S.set.field===k}">${l}</button>`).join("")}</div><p class="note" style="margin:6px 0 10px">The numbers to quote. Cards unlock as you answer their questions; tap a blurred card to peek.</p><div class="seg"><button id="showAll" aria-pressed="${!!S.showAll}">${S.showAll?"Showing all cards":"Show all cards"}</button></div></div>
+  return `<div class="panel"><h2>Trial cards</h2><div style="margin-top:12px">${doorBar(true)}</div><p class="note" style="margin:6px 0 10px">The numbers to quote. Cards unlock as you answer their questions; tap a blurred card to peek.</p><div class="seg"><button id="showAll" aria-pressed="${!!S.showAll}">${S.showAll?"Showing all cards":"Show all cards"}</button></div></div>
   <div class="cards">${groups||'<div class="panel empty">No trial cards yet.</div>'}</div>`;
 }
 
 /* ---------- topic sheet ---------- */
 function sheet(){
-  const groups=GROUPS_().filter(g=>S.set.field==="both"||g.field===S.set.field);
   const qn=id=>S.qs.filter(q=>q.topic===id&&inField(q)&&yOk(q)).length;
   const box=st=>`<span class="box ${st}" aria-hidden="true">${st==="on"?"✓":st==="some"?"–":""}</span>`;
-  const fieldsShown=[...new Set(groups.map(g=>g.field))];
-  const body=fieldsShown.map(f=>`<div class="sfield">${S.set.field==="both"?`<div class="lab sfl">${FIELDS[f]}</div>`:""}${groups.filter(g=>g.field===f).map(g=>{
-    const ts=TOPICS_().filter(t=>t.group===g.id);const on=ts.filter(t=>S.set.topics.includes(t.id)).length;
-    const st=on===0?"":on===ts.length?"on":"some";const open=S.open&&S.open[g.id];const n=ts.reduce((a,t)=>a+qn(t.id),0);
-    return `<div class="sarea ${open?"open":""}"><div class="arow"><button class="aexp" data-expand="${g.id}" aria-expanded="${!!open}"><span class="chev">›</span><span class="al">${esc(g.label)}</span><span class="ac">${on?on+" of "+ts.length+" · ":""}${n} Qs</span></button><button class="abox" data-area="${g.id}" aria-label="Select all of ${esc(g.label)}">${box(st)}</button></div>${open?`<div class="tlist">${ts.map(t=>{const sel=S.set.topics.includes(t.id);return `<button class="trow" data-multi="topics" data-v="${t.id}" aria-pressed="${sel}"><span>${esc(t.label)}</span><span class="tr"><span class="ac">${qn(t.id)}</span>${box(sel?"on":"")}</span></button>`}).join("")}</div>`:""}</div>`}).join("")}</div>`).join("");
+  let lastDoor=null,lastFam=null;
+  const body=doorSections().map(sec=>{
+    const gh=sec.groups.map(g=>{
+      const ts=g.topics.filter(id=>qn(id));if(!ts.length)return "";
+      if(ts.length===1){const id=ts[0],sel=S.set.topics.includes(id);return `<button class="trow solo" data-multi="topics" data-v="${id}" aria-pressed="${sel}"><span>${esc(topicLabel(id))}</span><span class="tr"><span class="ac">${qn(id)} Qs</span>${box(sel?"on":"")}</span></button>`}
+      const on=ts.filter(id=>S.set.topics.includes(id)).length;
+      const st=on===0?"":on===ts.length?"on":"some";const open=S.open&&S.open[g.id];const n=ts.reduce((a,id)=>a+qn(id),0);
+      return `<div class="sarea ${open?"open":""}"><div class="arow"><button class="aexp" data-expand="${g.id}" aria-expanded="${!!open}"><span class="chev">›</span><span class="al">${esc(g.label)}</span><span class="ac">${on?on+" of "+ts.length+" · ":""}${n} Qs</span></button><button class="abox" data-area="${g.id}" aria-label="Select all of ${esc(g.label)}">${box(st)}</button></div>${open?`<div class="tlist">${ts.map(id=>{const sel=S.set.topics.includes(id);return `<button class="trow" data-multi="topics" data-v="${id}" aria-pressed="${sel}"><span>${esc(topicLabel(id))}</span><span class="tr"><span class="ac">${qn(id)}</span>${box(sel?"on":"")}</span></button>`}).join("")}</div>`:""}</div>`}).join("");
+    if(!gh)return "";
+    let head="";
+    if(S.set.door==="all"&&sec.door!==lastDoor){head+=`<div class="sdoor">${esc(doorLabel(sec.door))}</div>`;lastDoor=sec.door;lastFam=null}
+    if(sec.family&&sec.family!==lastFam)head+=`<div class="sfam">${esc(sec.family)}</div>`;
+    lastFam=sec.family||null;
+    return `<div class="sfield">${head}<div class="lab sfl">${esc(sec.title)}</div>${gh}</div>`}).join("");
   const count=S.qs.filter(inTopic).length;
   return `<div class="sheetBg" id="sheetBg"></div><div class="sheet" role="dialog" aria-modal="true" aria-label="Choose topics">
     <div class="shead"><button class="slink" data-multi="topics" data-v="__all">${S.set.topics.length?"Clear":"All selected"}</button><h2>Topics</h2><button class="slink strong" id="closeSheet">Done</button></div>
@@ -1109,8 +1144,9 @@ document.addEventListener("click",e=>{
   if(t.dataset.mode){theme=t.dataset.mode;LS.put("rounds-theme",theme);applyTheme();render();return}
   if(t.dataset.palette){palette=t.dataset.palette;LS.put("rounds-palette",palette);applyTheme();render();return}
   if(t.dataset.multi){const k=t.dataset.multi,v=t.dataset.v;let a=S.set[k].slice();if(v==="__all")a=[];else a=a.includes(v)?a.filter(x=>x!==v):a.concat(v);S.set[k]=a;LS.put("rounds-set",S.set);render();return}
-  if(t.dataset.area){const ids=TOPICS_().filter(x=>x.group===t.dataset.area).map(x=>x.id);const all=ids.every(i=>S.set.topics.includes(i));S.set.topics=all?S.set.topics.filter(i=>!ids.includes(i)):[...new Set(S.set.topics.concat(ids))];LS.put("rounds-set",S.set);render();return}
-  if(t.dataset.set==="field"){S.set.field=t.dataset.v;S.set.topics=S.set.topics.filter(id=>{const tp=TOPICS_().find(x=>x.id===id);const g=tp&&GROUPS_().find(x=>x.id===tp.group);return S.set.field==="both"||(g&&g.field===S.set.field)});LS.put("rounds-set",S.set);render();return}
+  if(t.dataset.area){const ids=((dGroups().find(x=>x.id===t.dataset.area)||{}).topics||[]).filter(id=>S.qs.some(q=>q.topic===id&&inField(q)));const all=ids.every(i=>S.set.topics.includes(i));S.set.topics=all?S.set.topics.filter(i=>!ids.includes(i)):[...new Set(S.set.topics.concat(ids))];LS.put("rounds-set",S.set);render();return}
+  if(t.dataset.door){S.set.door=t.dataset.door;S.set.sub=[];pruneTopics();LS.put("rounds-set",S.set);render();return}
+  if(t.dataset.sub){const v=t.dataset.sub;S.set.sub=v==="__all"?[]:S.set.sub.includes(v)?S.set.sub.filter(x=>x!==v):S.set.sub.concat(v);pruneTopics();LS.put("rounds-set",S.set);render();return}
   if(t.dataset.set){let v=t.dataset.v;if(v==="true")v=true;else if(v==="false")v=false;else if(/^\d+$/.test(v))v=+v;S.set[t.dataset.set]=v;if(t.dataset.set==="mode"&&S.set.n>maxN(v))S.set.n=maxN(v);LS.put("rounds-set",S.set);render();return}
   if(t.id==="start"){startBlock();return}
   if(t.id==="startToday"){startIds(todayIds(),"tutor",false);return}
