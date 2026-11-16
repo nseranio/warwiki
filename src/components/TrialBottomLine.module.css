@@ -1,5 +1,5 @@
 .box {
-  margin: 1.25rem 0 1.75rem;
+  margin: .6rem 0 1.75rem;
   padding: 1rem 1.15rem 1.05rem;
   border: 1px solid var(--warwiki-border);
   border-left: 4px solid var(--ifm-color-primary);
@@ -32,4 +32,22 @@
 @media (max-width: 650px) {
   .box {padding: .85rem .9rem .9rem;}
   .takeaway {font-size: 1rem;}
+}
+
+/* Dateline above the bottom line: the main report's year, large enough to find at a glance. */
+.dateline {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: .1rem .5rem;
+  margin: .9rem 0 0;
+  font-size: .88rem;
+  color: var(--warwiki-text-muted);
+}
+.year {
+  font-size: 1.35rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.01em;
+  color: var(--warwiki-text);
 }
