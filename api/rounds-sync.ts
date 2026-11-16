@@ -26,21 +26,30 @@ function firstHeader(value: string | string[] | undefined): string {
   return Array.isArray(value) ? value[0] || '' : value || '';
 }
 
+function allowedHost(host: string, protocol: string): boolean {
+  if (host === 'localhost' || host === '127.0.0.1') return true;
+  if (protocol !== 'https:') return false;
+  if (['warwiki.org', 'www.warwiki.org', 'whitwiki.org', 'www.whitwiki.org'].includes(host)) return true;
+  return /^(warwiki|whitwiki)[a-z0-9-]*\.vercel\.app$/.test(host);
+}
+
 export function allowedOrigin(req: IncomingMessage): string | null {
   const raw = firstHeader(req.headers?.origin);
-  if (!raw) return null;
+  if (!raw) {
+    // Browsers leave Origin off same-origin GET requests (the app on warwiki.org reads
+    // /api/rounds-sync that way); they mark them with Sec-Fetch-Site instead.
+    if (firstHeader(req.headers?.['sec-fetch-site']) !== 'same-origin') return null;
+    const host = firstHeader(req.headers?.host).toLowerCase().replace(/:\d+$/, '');
+    const local = host === 'localhost' || host === '127.0.0.1';
+    return host && allowedHost(host, local ? 'http:' : 'https:') ? `${local ? 'http' : 'https'}://${host}` : null;
+  }
   let url: URL;
   try {
     url = new URL(raw);
   } catch {
     return null;
   }
-  const host = url.hostname.toLowerCase();
-  if (host === 'localhost' || host === '127.0.0.1') return raw;
-  if (url.protocol !== 'https:') return null;
-  if (['warwiki.org', 'www.warwiki.org', 'whitwiki.org', 'www.whitwiki.org'].includes(host)) return raw;
-  if (/^(warwiki|whitwiki)[a-z0-9-]*\.vercel\.app$/.test(host)) return raw;
-  return null;
+  return allowedHost(url.hostname.toLowerCase(), url.protocol) ? raw : null;
 }
 
 const writes = new Map<string, number[]>();
