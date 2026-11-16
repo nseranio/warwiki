@@ -624,7 +624,8 @@ const PALETTES={
   stone:{name:"Stone and ochre",L:P("#EFEBE2","#F8F5EF","#2A2620","#736B5E","#D6CEBF","#E6E0D4","#A8741A","#FFFFFF","#EADBB8","#A8741A","#4A6B2A","#E5ECDA","#A32D2D","#F4E0DC"),D:P("#24211C","#2B2822","#EDE7DB","#ABA292","#3D382F","#302C25","#D9A247","#24211C","#3B3120","#D9A247","#A9C77F","#2A3220","#E57A6E","#3A1F1C")},
   copper:{name:"Charcoal and copper",L:P("#F7F5F1","#FCFBF9","#1C1B1A","#6A6560","#DCD6CE","#ECE8E2","#B0562C","#FFFFFF","#F4E0D4","#B0562C","#3B6D11","#E7EFDB","#A32D2D","#F6E1DF"),D:P("#191817","#201F1D","#F0ECE6","#A6A097","#373330","#282624","#E58A5C","#191817","#3A251B","#E58A5C","#97C459","#253019","#E57A6E","#3A1F1C")}};
 const LOGO={slate:{L:["#2E5E59","#D2DADB"],D:["#7CC3BC","#2A3639"]}};
-const SITE_PALETTE=/whitwiki/.test(location.hostname)?"whitwiki":/warwiki|localhost|127\.0\.0\.1/.test(location.hostname)?"warwiki":"slate";
+/* default palette: Slate and eucalyptus on both sites (owner, Nov 16); a palette the learner picked is kept */
+const SITE_PALETTE="slate";
 let palette=LS.get("rounds-palette",SITE_PALETTE);if(!PALETTES[palette])palette="slate";
 const mq=window.matchMedia?window.matchMedia("(prefers-color-scheme: dark)"):null;
 const WIDEQ=window.matchMedia?window.matchMedia("(min-width:1080px)"):null;
