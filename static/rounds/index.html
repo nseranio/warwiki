@@ -564,7 +564,7 @@ body.spWait #logoHome{visibility:hidden}
 const KINDS={pathophysiology:"Pathophysiology",evaluation:"Evaluation",management:"Management",trial:"Trials"};
 const DAY=864e5;
 const S={qs:[],byId:{},prog:{},col:null,store:"loading",
-  set:{door:"all",sub:[],topics:[],kinds:[],yield:"all",pool:"unused",n:10,mode:"tutor",recall:false},
+  set:{door:"all",sub:[],topics:[],kinds:[],yield:"c",pool:"unused",n:10,mode:"tutor",recall:false},
   block:null,view:"home"};
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -576,7 +576,8 @@ delete S.set.topic;
 const MAXN={timed:50,tutor:100};const maxN=m=>MAXN[m]||100;
 if(S.set.n==="all"||typeof S.set.n!=="number"||S.set.n>maxN(S.set.mode))S.set.n=maxN(S.set.mode);
 if(S.set.field!=null){const f=S.set.field;S.set.door={specialty:"benign",general:"benign",oncology:"onc"}[f]||"all";S.set.sub=f==="specialty"?["func","recon"]:[];delete S.set.field}
-if(typeof S.set.door!=="string")S.set.door="all";if(!Array.isArray(S.set.sub))S.set.sub=[];if(!S.set.yield||!LS.get("rounds-yield-v3",false)){S.set.yield="all";LS.put("rounds-yield-v3",true)}
+if(typeof S.set.door!=="string")S.set.door="all";if(!Array.isArray(S.set.sub))S.set.sub=[];/* default Yield is High-yield (owner, Nov 16); everyone is moved to it once, and a later choice under More options is kept */
+if(!S.set.yield||!LS.get("rounds-yield-v4",false)){S.set.yield="c";LS.put("rounds-yield-v4",true);LS.put("rounds-set",S.set)}
 const YIELDS={all:"All",c:"High-yield",u:"Supplemental",d:"In-depth"};
 const yLevel=q=>q.yield==="core"?"c":q.yield==="detail"?"d":"u";
 const yOk=q=>S.set.yield==="all"||yLevel(q)===S.set.yield;
