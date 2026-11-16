@@ -468,8 +468,6 @@ body.inQuiz .sbNav,body.inQuiz .sbMenu{display:none}
 @keyframes sweep{from{background-size:0% 100%}}
 @keyframes shake{20%{transform:translateX(-5px)}40%{transform:translateX(4px)}60%{transform:translateX(-2px)}80%{transform:translateX(1px)}}
 .segIn{animation:draw .5s var(--ease) both}
-.sure{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;background:color-mix(in srgb,var(--cfK) 14%,var(--panel));color:var(--cfK);font-variant-numeric:tabular-nums}
-.sure.bump{animation:pop .45s var(--ease)}
 #toasts{position:fixed;bottom:calc(112px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);z-index:70;display:flex;flex-direction:column;gap:8px;align-items:center;pointer-events:none;width:max-content;max-width:calc(100vw - 32px)}
 .toast{background:var(--ink);color:var(--bg);border-radius:10px;padding:9px 16px;box-shadow:0 8px 24px rgba(0,0,0,.18);display:flex;flex-direction:column;align-items:center;gap:2px;font:600 14px/1.3 var(--sans);text-align:center;animation:toastIn .4s var(--ease) both;transition:opacity .35s var(--ease),transform .35s var(--ease)}
 .toast .lab{color:color-mix(in srgb,var(--bg) 72%,var(--ink));font-size:10px}
@@ -493,21 +491,8 @@ body.inQuiz .sbNav,body.inQuiz .sbMenu{display:none}
 .mm .pv{font:600 18px/1.25 var(--sans)}
 .mm .btn.ghost{color:var(--ink);background:var(--panel);border:1px solid var(--line);box-shadow:none}
 .mm .btn.ghost:hover{border-color:var(--accent)}
-.cal .pv{font:600 18px/1.25 var(--sans);margin-top:2px}
-.calRows{display:flex;flex-direction:column;gap:10px;margin:14px 0 10px}
-.calRow{display:grid;grid-template-columns:86px minmax(0,1fr) 78px;gap:10px;align-items:center;font-size:13.5px}
-.calBar{position:relative;height:10px;border-radius:5px;background:var(--soft);overflow:hidden}
-.calBar .zone{position:absolute;top:0;bottom:0;background:color-mix(in srgb,var(--ok) 26%,transparent)}
-.calBar .fill{position:absolute;left:0;top:3px;bottom:3px;border-radius:2px;animation:grow .8s var(--ease) both}
-@keyframes grow{from{width:0}}
-.calRow .n{font:500 12px var(--sans);color:var(--ink2);text-align:right;font-variant-numeric:tabular-nums}
 .party{font:600 15px var(--sans);color:var(--cfK);margin-top:8px}
 .note.up{color:var(--ink)}
-.burst{position:fixed;inset:0;pointer-events:none;z-index:60}
-.burst i{position:absolute;width:7px;height:7px;margin:-3.5px;border-radius:2px;animation:burst 1.1s cubic-bezier(.16,1,.3,1) both}
-@keyframes burst{0%{transform:translate(0,0) rotate(0) scale(.4);opacity:0}12%{opacity:1}100%{transform:translate(var(--x),var(--y)) rotate(var(--r)) scale(1);opacity:0}}
-.ring.pulse{animation:ringPulse .7s var(--ease)}
-@keyframes ringPulse{45%{transform:scale(1.07)}}
 @media (max-width:520px){.today{flex-direction:column;align-items:stretch;gap:14px}.today .btn{width:100%}}
 </style>
 
@@ -850,10 +835,10 @@ function home(){
   const tail=`${ONSITE?`<button class="pickRow" id="openSync"><span><span class="pv">${syncCode?"Sync on · "+fmtCode(syncCode):"Sync across sites and devices"}</span><span class="note">${syncCode?(syncInfo.state==="error"?"Offline: saved on this device":syncInfo.state==="ok"?"Up to date":"Syncing…"):"No account needed: a private code links your progress"}</span></span><span class="chev">›</span></button>`:""}
   <p class="note">${esc(storeNote)} ${S.qs.length} questions, each checked against its source page or guideline${S.meta&&S.meta.built?` (bank built ${esc(S.meta.built)})`:""}.</p>
   ${Object.keys(S.prog).some(k=>k[0]!=="_")||days().at?`<button class="resetBtn" id="resetProg">Reset progress</button>`:""}`;
-  if(W)return `${pilotNote()}${field}<div class="hBand">${hero}${todayPanel()}</div><div class="hGrid"><div class="hMain">${opts}</div><div class="hSide">${mmPanel()}${calPanel()}${search}${mine}${progress}${tail}</div></div>`;
+  if(W)return `${pilotNote()}${field}<div class="hBand">${hero}${todayPanel()}</div><div class="hGrid"><div class="hMain">${opts}</div><div class="hSide">${mmPanel()}${search}${mine}${progress}${tail}</div></div>`;
   const fromN=FROM?fromPageQs().length:0;
   const fromPanel=fromN?`<div class="panel fromPage"><div style="min-width:0"><div class="lab">From the page you were reading</div><b>${esc(FROM.title)}</b><div class="note">${fromN} questions written from this page</div></div><div style="display:flex;gap:8px;flex-wrap:wrap">${FROM.from?`<a class="btn ghost" href="${esc(FROM.from)}">Back to the page</a>`:""}<button class="btn" id="startFromPage">Practice ${fromN}</button></div></div>`:"";
-  return `${pilotNote()}${field}${fromPanel}${hero}${todayPanel()}${mmPanel()}${search}${mine}${opts}${calPanel()}${progress}${tail}`;
+  return `${pilotNote()}${field}${fromPanel}${hero}${todayPanel()}${mmPanel()}${search}${mine}${opts}${progress}${tail}`;
 }
 
 /* ---------- block ---------- */
@@ -910,7 +895,7 @@ function quiz(){
     const keys=`<div class="keys"><span><kbd>A</kbd>to <kbd>E</kbd>choose</span><span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd>submit: guessed, fairly sure, knew it</span><span><kbd>Enter</kbd>next</span></div>`;
     const nav=b.browse?`<div class="panel">${keys}</div>`:`<div class="panel navP"><div class="navH"><span class="lab">${b.finished?"Review":b.mode==="timed"?"Timed block":"Tutor block"}</span><span class="note">${nDone} of ${b.ids.length} answered</span></div><div class="navGrid" role="group" aria-label="Go to question">${tiles}</div>${keys}</div>`;
     return `
-  <div class="qbar"><button class="exitBtn" id="exitBlock">‹ ${b.browse?"Back":b.finished?"Summary":"Exit"}</button><div class="lab">Question ${idx+1} of ${b.ids.length}${sureChip()}</div><div class="clock" id="clock">${b.finished?"Review":clock()}</div></div>
+  <div class="qbar"><button class="exitBtn" id="exitBlock">‹ ${b.browse?"Back":b.finished?"Summary":"Exit"}</button><div class="lab">Question ${idx+1} of ${b.ids.length}</div><div class="clock" id="clock">${b.finished?"Review":clock()}</div></div>
   <div class="qGrid"><div class="qMain">
   <div class="${fresh?"case":""}" style="display:flex;flex-direction:column;gap:18px">
   <div class="meta"><span class="chip ${(q.field==="oncology"||q.sub==="p-onc")?"onc":""}">${esc(topicLabel(q.topic))}</span><span class="chip ${q.kind==="trial"?"t":""}">${esc(q.trial||KINDS[q.kind]||q.kind)}</span><span class="chip ${yLevel(q)==="c"?"core":""}">${YIELDS[yLevel(q)]}</span>${q.boardFav?'<span class="chip bf">Board favorite</span>':""}</div>
@@ -924,7 +909,7 @@ function quiz(){
   </div><aside class="qRail" aria-label="${reveal?"Answer and block":"Block"}">${ans}${nav}</aside></div>`;
   }
   return `
-  <div class="qbar"><button class="exitBtn" id="exitBlock">‹ ${b.browse?"Back":b.finished?"Summary":"Exit"}</button><div class="lab">Question ${idx+1} of ${b.ids.length}${sureChip()}</div><div class="clock" id="clock">${b.finished?"Review":clock()}</div></div>
+  <div class="qbar"><button class="exitBtn" id="exitBlock">‹ ${b.browse?"Back":b.finished?"Summary":"Exit"}</button><div class="lab">Question ${idx+1} of ${b.ids.length}</div><div class="clock" id="clock">${b.finished?"Review":clock()}</div></div>
   <div class="ticks" aria-hidden="true">${ticks}</div>
   <div class="${fresh?"case":""}" style="display:flex;flex-direction:column;gap:16px">
   <div class="meta"><span class="chip ${(q.field==="oncology"||q.sub==="p-onc")?"onc":""}">${esc(topicLabel(q.topic))}</span><span class="chip ${q.kind==="trial"?"t":""}">${esc(q.trial||KINDS[q.kind]||q.kind)}</span><span class="chip ${yLevel(q)==="c"?"core":""}">${YIELDS[yLevel(q)]}</span>${q.boardFav?'<span class="chip bf">Board favorite</span>':""}</div>
@@ -961,7 +946,7 @@ function submit(conf){
 function finish(){
   const b=S.block;
   if(!b.finished){b.ids.forEach(id=>{if(b.done[id]==null){/* in timed, a question you saw and left blank counts as wrong; one you never reached stays unanswered */ if(b.mode==="timed"&&b.seen&&b.seen[id]){b.done[id]=false;record(S.byId[id],false)}}});}
-  b.finished=true;gameFinish(b);S.view="summary";render();window.scrollTo(0,0);if(b.party)setTimeout(burst,380);
+  b.finished=true;gameFinish(b);S.view="summary";render();window.scrollTo(0,0);
 }
 function summary(){
   const b=S.block;const ans=b.ids.filter(id=>b.done[id]!=null);const c=ans.filter(id=>b.done[id]).length;
@@ -979,9 +964,9 @@ function summary(){
 
 /* ---------- game pilot (Nov 15, 2026) ---------- */
 const RM=()=>window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-const G=Object.assign({run:0,best:0,bestPct:0},LS.get("rounds-game",{}));
+const G=Object.assign({bestPct:0},LS.get("rounds-game",{}));
 const putG=()=>LS.put("rounds-game",G);
-function pilotNote(){return `<div class="pilotNote"><b>Pilot</b>Game touches: answer reveal, block ring in the logo, sure streak, celebrations, ranks, daily goal, calibration and M&amp;M. Progress is shared with the live Rounds.</div>`}
+function pilotNote(){return `<div class="pilotNote"><b>Pilot</b>Game touches: answer reveal, block ring in the logo, ranks, daily goal and M&amp;M. Progress is shared with the live Rounds.</div>`}
 function toast(main,sub){let L=document.getElementById("toasts");if(!L){L=document.createElement("div");L.id="toasts";L.setAttribute("aria-live","polite");document.body.appendChild(L)}
   const t=document.createElement("div");t.className="toast";t.innerHTML=`${sub?`<span class="lab">${esc(sub)}</span>`:""}<span>${esc(main)}</span>`;L.appendChild(t);
   setTimeout(()=>{t.classList.add("out");setTimeout(()=>t.remove(),400)},2800)}
@@ -995,11 +980,7 @@ function rankOf(id){let total=0,used=0,c=0,k=0,mis=0;
   return r}
 function rankSnap(b){const o={};b.ids.forEach(id=>{const t=S.byId[id]&&S.byId[id].topic;if(t&&o[t]==null)o[t]=rankOf(t)});return o}
 function rankLine(){let top=0;TOPICS_().forEach(t=>{if(S.qs.some(q=>q.topic===t.id&&inField(q))&&rankOf(t.id)>=2)top++});return top?top+" topic"+(top===1?"":"s")+" at Chief or above · ":""}
-/* sure streak: Knew it and right, in a row; a miss when sure ends it */
-function sureChip(){const b=S.block;if(!b||b.browse||(b.mode==="timed"&&!b.finished)||G.run<3)return"";
-  const bump=S.fx&&S.fx.ok&&S.fx.conf===2?" bump":"";return `<span class="sure${bump}" title="Knew it and right, in a row">Sure ×${G.run}</span>`}
 function gameAfter(q,ok,conf,r0,d0){const b=S.block,tutor=b.mode==="tutor";
-  if(conf===2){if(ok){G.run++;if(G.run>G.best)G.best=G.run}else{if(G.run>=3&&tutor)toast("Sure streak ended at "+G.run);G.run=0}putG()}
   if(tutor){S.fx={id:q.id,ok,conf};if(!RM()&&navigator.vibrate)try{navigator.vibrate(ok?12:[18,60,18])}catch(e){}
     const r1=rankOf(q.topic);if(r1>r0)toast(topicLabel(q.topic)+": "+RANKS[r1],"New rank")}
   else S.fx={id:q.id,seg:true};
@@ -1015,14 +996,7 @@ function sumExtras(b,c,n){const bits=[];
   if(b.party)bits.push(`<div class="party">${esc(b.party)}</div>`);
   if(b.kind==="mm")bits.push(`<div class="note">M&amp;M: cleared ${c} of ${n} case${n===1?"":"s"}</div>`);
   (b.ups||[]).forEach(([t,r])=>bits.push(`<div class="note up">${esc(topicLabel(t))}: now ${RANKS[r]}</div>`));
-  if(G.best>=3)bits.push(`<div class="note">Sure streak ${G.run} · best ${G.best}</div>`);
   return bits.join("")}
-function burst(){if(RM())return;const ring=document.querySelector(".sumTop .ring");if(!ring)return;
-  const R=ring.getBoundingClientRect(),cx=R.left+R.width/2,cy=R.top+R.height/2,L=document.createElement("div");L.className="burst";L.setAttribute("aria-hidden","true");
-  const cols=["var(--cfK)","var(--cfS)","var(--cfG)","var(--logo)"];
-  for(let i=0;i<32;i++){const a=Math.random()*Math.PI*2,d=64+Math.random()*96,e=document.createElement("i");
-    e.style.cssText=`left:${cx}px;top:${cy}px;background:${cols[i%4]};--x:${(Math.cos(a)*d).toFixed(1)}px;--y:${(Math.sin(a)*d).toFixed(1)}px;--r:${Math.round(Math.random()*360)}deg;animation-delay:${(Math.random()*.08).toFixed(2)}s`;L.appendChild(e)}
-  document.body.appendChild(L);ring.classList.add("pulse");setTimeout(()=>L.remove(),1500)}
 /* the logo's O becomes the block ring during a block */
 let LOGO0=null;
 function paintLogo(){const svg=document.querySelector("#logoHome svg");if(!svg)return;if(LOGO0==null)LOGO0=svg.innerHTML;const b=S.block;
@@ -1037,18 +1011,6 @@ function paintLogo(){const svg=document.querySelector("#logoHome svg");if(!svg)r
 function mmList(){return S.qs.filter(q=>{const p=S.prog[q.id];return p&&p.mis}).sort((a,b)=>S.prog[b.id].at-S.prog[a.id].at)}
 function mmPanel(){const l=mmList();if(!l.length)return"";const wk=l.filter(q=>Date.now()-S.prog[q.id].at<7*DAY).length,n=Math.min(10,l.length);
   return `<div class="panel today mm"><div style="min-width:0"><div class="lab">M&amp;M conference</div><div class="pv">${l.length} case${l.length===1?"":"s"}</div><div class="note">Questions you missed when you were sure${wk?` · ${wk} this week`:""}. Get one right and it leaves the list.</div></div><button class="btn ghost" id="startMM">Present ${n}</button></div>`}
-/* calibration: how often you are right at each rating */
-const CAL=[{lo:0,hi:.6,l:"Guessed"},{lo:.6,hi:.9,l:"Fairly sure"},{lo:.9,hi:1,l:"Knew it"}];
-function calStats(){const o=[{n:0,r:0},{n:0,r:0},{n:0,r:0}];Object.keys(S.prog).forEach(id=>{if(id[0]==="_")return;const p=S.prog[id];if(!p||!p.n||p.conf==null||!o[p.conf])return;o[p.conf].n++;if(p.last==="c")o[p.conf].r++});return o}
-function calPanel(){const st=calStats(),tot=st.reduce((a,x)=>a+x.n,0);
-  if(tot<20)return tot?`<div class="panel cal"><div class="lab">Calibration</div><p class="note" style="margin-top:6px">After 20 rated answers this shows how often you are right when you say Knew it, Fairly sure or Guessed. ${tot} so far.</p></div>`:"";
-  const pct=x=>x.n?x.r/x.n:null,kn=pct(st[2]),gu=pct(st[0]);
-  let v="Well calibrated",vn="How sure you feel matches how often you are right.";
-  if(st[2].n>=5&&kn<.85){v="Overconfident";vn=`When you say Knew it, you are right ${Math.round(kn*100)}% of the time.`}
-  else if(st[0].n>=5&&gu>.7){v="Underconfident";vn=`Your guesses are right ${Math.round(gu*100)}% of the time. Trust yourself more.`}
-  const cols=["var(--cfG)","var(--cfS)","var(--cfK)"];
-  const rows=[2,1,0].map(i=>{const x=st[i],c=CAL[i],p=pct(x);return `<div class="calRow"><span>${c.l}</span><span class="calBar" aria-hidden="true"><i class="zone" style="left:${c.lo*100}%;width:${(c.hi-c.lo)*100}%"></i>${p!=null?`<i class="fill" style="width:${(p*100).toFixed(1)}%;background:${cols[i]}"></i>`:""}</span><span class="n">${p!=null?Math.round(p*100)+"% of "+x.n:"–"}</span></div>`}).join("");
-  return `<div class="panel cal"><div class="lab">Calibration</div><div class="pv">${v}</div><div class="note" style="margin-top:3px">${esc(vn)}</div><div class="calRows">${rows}</div><div class="note">Right answers at each rating. The green band is where each rating should land.</div></div>`}
 
 /* ---------- Today ---------- */
 const goalN=()=>S.set.goal||20;let TODAY_N=20,TODAY_DUE=15;
