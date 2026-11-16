@@ -313,6 +313,9 @@ h1.logo{cursor:pointer}
 .sw{display:inline-flex;border:1px solid var(--line);border-radius:4px;overflow:hidden;flex:none}
 .sw i{width:12px;height:22px;display:block}
 @media (max-width:520px){.choices{margin-left:0}.reveal,.recall{margin-left:0}.qbody{grid-template-columns:26px minmax(0,1fr)}.stem,.ask{font-size:17px}.ch{font-size:16.5px}}
+/* redraws in place (topic taps, area switches): no replayed entrances or ring draws (owner, Nov 16: picking topics was jerky on desktop) */
+#sheetLayer.still .sheet,#sheetLayer.still .sheetBg,#sheetLayer.still .tlist:not(.fresh){animation:none}
+#view.calm .arc,#view.calm .segIn,#view.calm .tRing,#view.calm .statsBody{animation:none!important}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 .qimg{margin:14px 0 2px;display:flex;flex-direction:column;gap:6px}
 .qimg .zoom{all:unset;cursor:zoom-in;display:block;align-self:flex-start;max-width:100%;border-radius:8px;overflow:hidden;background:#000;line-height:0}
@@ -1174,7 +1177,7 @@ function sheet(){
       if(ts.length===1){const id=ts[0],sel=S.set.topics.includes(id);return `<button class="trow solo" data-multi="topics" data-v="${id}" aria-pressed="${sel}"><span>${esc(topicLabel(id))}</span><span class="tr"><span class="ac">${qn(id)} Qs</span>${box(sel?"on":"")}</span></button>`}
       const on=ts.filter(id=>S.set.topics.includes(id)).length;
       const st=on===0?"":on===ts.length?"on":"some";const open=S.open&&S.open[g.id];const n=ts.reduce((a,id)=>a+qn(id),0);
-      return `<div class="sarea ${open?"open":""}"><div class="arow"><button class="aexp" data-expand="${g.id}" aria-expanded="${!!open}"><span class="chev">›</span><span class="al">${esc(g.label)}</span><span class="ac">${on?on+" of "+ts.length+" · ":""}${n} Qs</span></button><button class="abox" data-area="${g.id}" aria-label="Select all of ${esc(g.label)}">${box(st)}</button></div>${open?`<div class="tlist">${ts.map(id=>{const sel=S.set.topics.includes(id);return `<button class="trow" data-multi="topics" data-v="${id}" aria-pressed="${sel}"><span>${esc(topicLabel(id))}</span><span class="tr"><span class="ac">${qn(id)}</span>${box(sel?"on":"")}</span></button>`}).join("")}</div>`:""}</div>`}).join("");
+      return `<div class="sarea ${open?"open":""}"><div class="arow"><button class="aexp" data-expand="${g.id}" aria-expanded="${!!open}"><span class="chev">›</span><span class="al">${esc(g.label)}</span><span class="ac">${on?on+" of "+ts.length+" · ":""}${n} Qs</span></button><button class="abox" data-area="${g.id}" aria-label="Select all of ${esc(g.label)}">${box(st)}</button></div>${open?`<div class="tlist${S.justOpened===g.id?" fresh":""}">${ts.map(id=>{const sel=S.set.topics.includes(id);return `<button class="trow" data-multi="topics" data-v="${id}" aria-pressed="${sel}"><span>${esc(topicLabel(id))}</span><span class="tr"><span class="ac">${qn(id)}</span>${box(sel?"on":"")}</span></button>`}).join("")}</div>`:""}</div>`}).join("");
     if(!gh)return "";
     let head="";
     if(S.set.door==="all"&&sec.door!==lastDoor){head+=`<div class="sdoor">${esc(doorLabel(sec.door))}</div>`;lastDoor=sec.door;lastFam=null}
@@ -1230,7 +1233,10 @@ function render(){
   if(!S.qs.length)return;
   /* keep the reader's place: remember the scroll position and any loaded question image, so a redraw does not jump */
   const keepY=window.scrollY,oldImg=v.querySelector(".qimg img");
-  if(S.view==="home")v.innerHTML=`<div style="display:flex;flex-direction:column;gap:20px">${home()}</div>`;
+  const sheetOnly=S.sheetOnly&&S.sheet==="topics"&&S.view==="home";S.sheetOnly=false;
+  v.classList.toggle("calm",S.view==="home"&&S.lastView==="home");
+  if(sheetOnly){}
+  else if(S.view==="home")v.innerHTML=`<div style="display:flex;flex-direction:column;gap:20px">${home()}</div>`;
   else if(S.view==="quiz"){v.innerHTML=`<div style="display:flex;flex-direction:column;gap:14px">${quiz()}</div>`;
     if(!S.block.finished){tick=setInterval(()=>{const c=$("#clock");if(c)c.textContent=clock();const b=S.block;if(b&&b.limit&&!b.finished&&(Date.now()-b.start)/1000>=b.limit)finish()},1000)}}
   else if(S.view==="summary")v.innerHTML=`<div class="narrow" style="display:flex;flex-direction:column;gap:20px">${summary()}</div>`;
@@ -1238,6 +1244,7 @@ function render(){
   else if(S.view==="find")v.innerHTML=`<div class="narrow" style="display:flex;flex-direction:column;gap:14px">${findView()}</div>`;
   else if(S.view==="mine")v.innerHTML=`<div class="narrow" style="display:flex;flex-direction:column;gap:14px">${mineView()}</div>`;
   let L=$("#sheetLayer");if(!L){L=document.createElement("div");L.id="sheetLayer";document.body.appendChild(L)}
+  L.classList.toggle("still",!!S.sheet&&S.sheet===S.lastSheet);
   const sb=$("#sbody"),top=sb?sb.scrollTop:0;
   const showSheet=S.sheet==="theme"||S.sheet==="sync"||(S.sheet&&S.view==="home");
   L.innerHTML=S.sheet==="theme"?themeSheet():S.sheet==="sync"?syncSheet():showSheet?sheet():"";
@@ -1246,7 +1253,7 @@ function render(){
   const newImg=v.querySelector(".qimg img");
   if(oldImg&&newImg&&oldImg.complete&&oldImg.getAttribute("src")===newImg.getAttribute("src"))newImg.replaceWith(oldImg);
   if(Math.abs(window.scrollY-keepY)>1)window.scrollTo(0,keepY);
-  paintLogo();S.fx=null;S.goalJust=false;
+  paintLogo();S.fx=null;S.goalJust=false;S.lastView=S.view;S.lastSheet=S.sheet;S.justOpened=null;
 }
 const THEMES=["system","light","dark"];
 document.addEventListener("click",e=>{
@@ -1267,14 +1274,14 @@ document.addEventListener("click",e=>{
   if(t.id==="copySync"){const c=fmtCode(syncCode);try{navigator.clipboard.writeText(c).then(()=>{t.textContent="Copied"},()=>{t.textContent=c})}catch(e){t.textContent=c}return}
   if(t.id==="openTopics"){S.sheet="topics";S.open=S.open||{};render();return}
   if(t.id==="closeSheet"||t.id==="closeSheet2"){S.sheet=false;render();return}
-  if(t.dataset.expand){S.open=S.open||{};S.open[t.dataset.expand]=!S.open[t.dataset.expand];render();return}
+  if(t.dataset.expand){S.open=S.open||{};S.open[t.dataset.expand]=!S.open[t.dataset.expand];if(S.open[t.dataset.expand])S.justOpened=t.dataset.expand;S.sheetOnly=true;render();return}
   if(t.id==="tabHome"){S.view=S.block&&!S.block.finished?"quiz":(S.block&&S.block.finished&&S.view==="cards"?"home":"home");render();return}
   if(t.id==="tabCards"){S.view="cards";render();return}
   if(t.id==="theme"){S.sheet="theme";render();return}
   if(t.dataset.mode){theme=t.dataset.mode;LS.put("rounds-theme",theme);applyTheme();render();return}
   if(t.dataset.palette){palette=t.dataset.palette;LS.put("rounds-palette",palette);applyTheme();render();return}
-  if(t.dataset.multi){const k=t.dataset.multi,v=t.dataset.v;let a=S.set[k].slice();if(v==="__all")a=[];else a=a.includes(v)?a.filter(x=>x!==v):a.concat(v);S.set[k]=a;LS.put("rounds-set",S.set);render();return}
-  if(t.dataset.area){const ids=((dGroups().find(x=>x.id===t.dataset.area)||{}).topics||[]).filter(id=>S.qs.some(q=>q.topic===id&&inField(q)));const all=ids.every(i=>S.set.topics.includes(i));S.set.topics=all?S.set.topics.filter(i=>!ids.includes(i)):[...new Set(S.set.topics.concat(ids))];LS.put("rounds-set",S.set);render();return}
+  if(t.dataset.multi){const k=t.dataset.multi,v=t.dataset.v;let a=S.set[k].slice();if(v==="__all")a=[];else a=a.includes(v)?a.filter(x=>x!==v):a.concat(v);S.set[k]=a;LS.put("rounds-set",S.set);S.sheetOnly=!!t.closest(".sheet");render();return}
+  if(t.dataset.area){const ids=((dGroups().find(x=>x.id===t.dataset.area)||{}).topics||[]).filter(id=>S.qs.some(q=>q.topic===id&&inField(q)));const all=ids.every(i=>S.set.topics.includes(i));S.set.topics=all?S.set.topics.filter(i=>!ids.includes(i)):[...new Set(S.set.topics.concat(ids))];LS.put("rounds-set",S.set);S.sheetOnly=true;render();return}
   if(t.dataset.door){S.set.door=t.dataset.door;S.set.sub=[];pruneTopics();LS.put("rounds-set",S.set);render();return}
   if(t.dataset.sub){const v=t.dataset.sub;S.set.sub=v==="__all"?[]:S.set.sub.includes(v)?S.set.sub.filter(x=>x!==v):S.set.sub.concat(v);pruneTopics();LS.put("rounds-set",S.set);render();return}
   if(t.dataset.set){let v=t.dataset.v;if(v==="true")v=true;else if(v==="false")v=false;else if(/^\d+$/.test(v))v=+v;S.set[t.dataset.set]=v;if(t.dataset.set==="mode"&&S.set.n>maxN(v))S.set.n=maxN(v);LS.put("rounds-set",S.set);render();return}
