@@ -1222,6 +1222,30 @@ function themeSheet(){
       ${Object.entries(PALETTES).map(([k,p])=>`<button class="trow prow" data-palette="${k}" aria-pressed="${palette===k}">${sw(p.L)}${sw(p.D)}<span class="pn">${esc(p.name)}</span><span class="box ${palette===k?"on":""}">${palette===k?"✓":""}</span></button>`).join("")}
     </div></div>`;
 }
+/* ---------- redraw in place (owner, Nov 16: "make sure all clicks run smooth, less jumpy") ----------
+   morph() patches the live page to match new markup instead of replacing it: elements that did not change
+   stay put, so entrance animations do not replay, images do not reload, inner scroll and focus are kept.
+   An element is reused only when its tag, id and data-key match; anything else is swapped for the new one. */
+function morph(root,html){const t=document.createElement("div");t.innerHTML=html;patchKids(root,t)}
+const cls0=e=>(e.getAttribute("class")||"").trim().split(/\s+/)[0];
+function sameNode(a,b){if(a.nodeType!==b.nodeType||a.nodeName!==b.nodeName)return false;if(a.nodeType!==1)return true;
+  return (a.id||"")===(b.id||"")&&(a.getAttribute("data-key")||"")===(b.getAttribute("data-key")||"")&&cls0(a)===cls0(b)}
+/* walk old and new children together; skip ahead over removed old nodes, insert new ones where nothing matches */
+function patchKids(a,b){let o=a.firstChild;
+  for(const n of [...b.childNodes]){
+    if(o&&sameNode(o,n)){const nx=o.nextSibling;if(o.nodeType===1)patchEl(o,n);else if(o.nodeValue!==n.nodeValue)o.nodeValue=n.nodeValue;o=nx;continue}
+    let f=o?o.nextSibling:null,k=0;while(f&&k<12&&!sameNode(f,n)){f=f.nextSibling;k++}
+    if(f&&sameNode(f,n)){while(o!==f){const x=o.nextSibling;o.remove();o=x}const nx=o.nextSibling;if(o.nodeType===1)patchEl(o,n);else if(o.nodeValue!==n.nodeValue)o.nodeValue=n.nodeValue;o=nx;continue}
+    a.insertBefore(n,o)}
+  while(o){const x=o.nextSibling;o.remove();o=x}}
+const KEEP_ATTR={"data-init":1};
+function patchEl(o,n){
+  for(const at of [...o.attributes])if(!n.hasAttribute(at.name)&&!KEEP_ATTR[at.name])o.removeAttribute(at.name);
+  for(const at of [...n.attributes])if(o.getAttribute(at.name)!==at.value)o.setAttribute(at.name,at.value);
+  const tag=o.nodeName,typing=o===document.activeElement;
+  if(tag==="TEXTAREA"){if(!typing&&o.value!==n.value)o.value=n.value;return}
+  if(tag==="INPUT"){const v=n.getAttribute("value")||"";if(!typing&&o.value!==v)o.value=v;return}
+  patchKids(o,n)}
 /* ---------- render + events ---------- */
 function render(){
   clearInterval(tick);
@@ -1236,22 +1260,22 @@ function render(){
   const sheetOnly=S.sheetOnly&&S.sheet==="topics"&&S.view==="home";S.sheetOnly=false;
   v.classList.toggle("calm",S.view==="home"&&S.lastView==="home");
   if(sheetOnly){}
-  else if(S.view==="home")v.innerHTML=`<div style="display:flex;flex-direction:column;gap:20px">${home()}</div>`;
-  else if(S.view==="quiz"){v.innerHTML=`<div style="display:flex;flex-direction:column;gap:14px">${quiz()}</div>`;
+  else if(S.view==="home")morph(v,`<div style="display:flex;flex-direction:column;gap:20px">${home()}</div>`);
+  else if(S.view==="quiz"){morph(v,`<div style="display:flex;flex-direction:column;gap:14px">${quiz()}</div>`);
     if(!S.block.finished){tick=setInterval(()=>{const c=$("#clock");if(c)c.textContent=clock();const b=S.block;if(b&&b.limit&&!b.finished&&(Date.now()-b.start)/1000>=b.limit)finish()},1000)}}
-  else if(S.view==="summary")v.innerHTML=`<div class="narrow" style="display:flex;flex-direction:column;gap:20px">${summary()}</div>`;
-  else if(S.view==="cards")v.innerHTML=`<div class="narrow" style="display:flex;flex-direction:column;gap:14px">${cards()}</div>`;
-  else if(S.view==="find")v.innerHTML=`<div class="narrow" style="display:flex;flex-direction:column;gap:14px">${findView()}</div>`;
-  else if(S.view==="mine")v.innerHTML=`<div class="narrow" style="display:flex;flex-direction:column;gap:14px">${mineView()}</div>`;
+  else if(S.view==="summary")morph(v,`<div class="narrow" style="display:flex;flex-direction:column;gap:20px">${summary()}</div>`);
+  else if(S.view==="cards")morph(v,`<div class="narrow" style="display:flex;flex-direction:column;gap:14px">${cards()}</div>`);
+  else if(S.view==="find")morph(v,`<div class="narrow" style="display:flex;flex-direction:column;gap:14px">${findView()}</div>`);
+  else if(S.view==="mine")morph(v,`<div class="narrow" style="display:flex;flex-direction:column;gap:14px">${mineView()}</div>`);
   let L=$("#sheetLayer");if(!L){L=document.createElement("div");L.id="sheetLayer";document.body.appendChild(L)}
   L.classList.toggle("still",!!S.sheet&&S.sheet===S.lastSheet);
   const sb=$("#sbody"),top=sb?sb.scrollTop:0;
   const showSheet=S.sheet==="theme"||S.sheet==="sync"||(S.sheet&&S.view==="home");
-  L.innerHTML=S.sheet==="theme"?themeSheet():S.sheet==="sync"?syncSheet():showSheet?sheet():"";
+  morph(L,S.sheet==="theme"?themeSheet():S.sheet==="sync"?syncSheet():showSheet?sheet():"");
   document.documentElement.classList.toggle("locked",!!showSheet);
   const nb=$("#sbody");if(nb)nb.scrollTop=top;
   const newImg=v.querySelector(".qimg img");
-  if(oldImg&&newImg&&oldImg.complete&&oldImg.getAttribute("src")===newImg.getAttribute("src"))newImg.replaceWith(oldImg);
+  if(oldImg&&newImg&&newImg!==oldImg&&oldImg.complete&&oldImg.getAttribute("src")===newImg.getAttribute("src"))newImg.replaceWith(oldImg);
   if(Math.abs(window.scrollY-keepY)>1)window.scrollTo(0,keepY);
   paintLogo();S.fx=null;S.goalJust=false;S.lastView=S.view;S.lastSheet=S.sheet;S.justOpened=null;
 }
@@ -1295,10 +1319,10 @@ document.addEventListener("click",e=>{
   if(t.id==="openFind"){S.view="find";render();window.scrollTo(0,0);const i=$("#findIn");if(i)i.focus();return}
   if(t.id==="openMine"){S.view="mine";S.mineMax=50;render();window.scrollTo(0,0);return}
   if(t.id==="goHome"){S.view="home";render();window.scrollTo(0,0);return}
-  if(t.dataset.ff){S.ff=t.dataset.ff;S.findMax=50;$("#findRes").innerHTML=findResults();return}
+  if(t.dataset.ff){S.ff=t.dataset.ff;S.findMax=50;morph($("#findRes"),findResults());return}
   if(t.dataset.mf){S.mf=t.dataset.mf;S.mineMax=50;render();return}
   if(t.dataset.ms){S.ms=t.dataset.ms;render();return}
-  if(t.dataset.more==="find"){S.findMax=(S.findMax||50)+50;$("#findRes").innerHTML=findResults();return}
+  if(t.dataset.more==="find"){S.findMax=(S.findMax||50)+50;morph($("#findRes"),findResults());return}
   if(t.dataset.more==="mine"){S.mineMax=(S.mineMax||50)+50;render();return}
   if(t.id==="findStart"){const l=findList();if(l&&l.length)startIds(shuffle(l.map(q=>q.id)).slice(0,maxN(S.set.mode)),S.set.mode,S.set.recall);return}
   if(t.id==="mineStart"){const l=mineList();if(l.length)startIds(shuffle(l.map(q=>q.id)).slice(0,maxN(S.set.mode)),S.set.mode,S.set.recall);return}
@@ -1318,7 +1342,7 @@ document.addEventListener("click",e=>{
   if(t.id==="again"){S.block=null;S.view="home";render();return}
 });
 document.addEventListener("input",e=>{
-  if(e.target&&e.target.id==="findIn"){S.q=e.target.value;S.findMax=50;const r=$("#findRes");if(r)r.innerHTML=findResults()}
+  if(e.target&&e.target.id==="findIn"){S.q=e.target.value;S.findMax=50;const r=$("#findRes");if(r)morph(r,findResults())}
 });
 document.addEventListener("change",e=>{
   if(e.target&&e.target.id==="goalIn"){const v=parseInt(e.target.value,10);if(v>0){S.set.goal=Math.min(v,200);LS.put("rounds-set",S.set)}setTimeout(render);return}
