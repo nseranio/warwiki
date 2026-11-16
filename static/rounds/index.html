@@ -498,6 +498,21 @@ body.inQuiz .sbNav,body.inQuiz .sbMenu{display:none}
 .party{font:600 15px var(--sans);color:var(--cfK);margin-top:8px}
 .note.up{color:var(--ink)}
 @media (max-width:520px){.today{flex-direction:column;align-items:stretch;gap:14px}.today .btn{width:100%}}
+
+/* ---------- New block: wheels and More options ---------- */
+.opts.simple{gap:18px}
+.moreRow{display:flex;justify-content:space-between;align-items:center;width:100%;background:none;border:0;border-top:1px solid var(--line);padding:12px 0 0;color:var(--ink2);font:500 13.5px var(--sans);text-align:left}
+.moreRow:hover{color:var(--ink)}
+.moreBody{display:flex;flex-direction:column;gap:18px}
+.wheels{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.wheelBox{position:relative}
+.wheel{height:132px;overflow-y:auto;scroll-snap-type:y mandatory;padding:44px 0;box-sizing:border-box;scrollbar-width:none;overscroll-behavior:contain;border:1px solid var(--line);border-radius:6px;background:var(--panel);outline:none;-webkit-mask-image:linear-gradient(transparent,#000 34%,#000 66%,transparent);mask-image:linear-gradient(transparent,#000 34%,#000 66%,transparent)}
+.wheel::-webkit-scrollbar{display:none}
+.wheel:focus-visible{border-color:var(--accent)}
+.wi{height:44px;display:flex;align-items:center;justify-content:center;scroll-snap-align:center;font:500 20px var(--sans);font-variant-numeric:tabular-nums;color:var(--ink2);cursor:pointer;user-select:none;transition:color .15s var(--ease)}
+.wi[aria-selected="true"]{color:var(--ink);font-weight:600}
+.wheelBox::after{content:"";position:absolute;left:8px;right:8px;bottom:44px;height:44px;border-block:1px solid var(--accent);opacity:.55;pointer-events:none}
+.wheelSum{font:500 14px var(--sans);color:var(--ink2);font-variant-numeric:tabular-nums}
 </style>
 
 <header class="siteBar" id="siteBar" hidden>
@@ -806,6 +821,7 @@ function home(){
   const kindCnt=k=>S.qs.filter(q=>inField(q)&&(!S.set.topics.length||S.set.topics.includes(q.topic))&&q.kind===k).length;
   const pools=Object.entries(POOLS).map(([k,v])=>[k,v.label,poolList(k).length]);
   const avail=poolList(S.set.pool).length;
+  const SIZES=[5,10,15,20,25,30,35,40,45,50];if(!SIZES.includes(S.set.n))S.set.n=10;
   const cap=maxN(S.set.mode),n=Math.min(S.set.n,cap,avail);
   const field=doorBar();
   const hero=`<div class="panel hero">
@@ -827,8 +843,10 @@ function home(){
   const oRecall=`<div><div class="lab" style="margin-bottom:6px">Recall first</div>${segs("recall",[[false,"Off"],[true,"On"]])}<div class="note" style="margin-top:6px">Each question first shows without its choices. Type your answer (or just think it), then tap Show choices and pick. Your recalled answer appears beside the explanation so you can compare. Harder, and better for quoting trial numbers from memory.</div></div>`;
   const go=`<div class="go"><button class="btn wide" id="start" ${n?"":"disabled"}>Start ${n||""} question${n===1?"":"s"}</button>${n?"":`<span class="note">No questions match. Pick another set.</span>`}</div>`;
   const W=wide();
-  const opts=W?`<div class="panel opts wideOpts"><h2>New block</h2><div class="oc">${oTopics}${oYield}${oType}</div><div class="oc">${oPool}${oN}${oMode}${oRecall}</div>${go}</div>`
-    :`<div class="panel opts"><h2>New block</h2>${oTopics}${oYield}${oType}${oPool}${oN}${oMode}${oRecall}${go}</div>`;
+  const nI=Math.max(0,SIZES.indexOf(S.set.n)),pI=S.set.mode==="timed"?Math.max(0,WHEEL.pace.indexOf(S.set.pace||90)):0;
+  const wheel=(key,label,items,sel)=>`<div class="wheelBox"><div class="lab" style="margin-bottom:6px">${label}</div><div class="wheel" tabindex="0" role="listbox" aria-label="${label}" data-wheel="${key}" data-sel="${sel}">${items.map((x,i)=>`<div class="wi" role="option" data-i="${i}" aria-selected="${i===sel}">${x}</div>`).join("")}</div></div>`;
+  const more=`<button class="moreRow" id="toggleMore" aria-expanded="${!!S.showMore}"><span>More options</span><span class="chev">${S.showMore?"−":"+"}</span></button>${S.showMore?`<div class="moreBody">${oYield}${oType}${oPool}${oRecall}</div>`:""}`;
+  const opts=`<div class="panel opts simple"><h2>New block</h2>${oTopics}<div class="wheels">${wheel("n","How many",SIZES,nI)}${wheel("pace","Time per question",WHEEL.paceLabel,pI)}</div><div class="wheelSum" id="wheelSum">${wheelSum()}</div>${go}${more}</div>`;
   const progress=`<div class="panel statsP">
     <button class="statsHead" id="toggleStats" aria-expanded="${!!S.showStats}"><span><span class="pv">Progress</span><span class="note">${(()=>{const ts=TOPICS_().filter(t=>S.qs.some(q=>q.topic===t.id&&inField(q))).map(t=>({l:t.label,...tally(S.qs.filter(q=>q.topic===t.id))})).filter(x=>x.used>=3);if(!ts.length)return "By topic and type, once you have answered a few";const w=ts.sort((a,b)=>a.c/a.used-b.c/b.used)[0];return rankLine()+"Weakest so far: "+w.l+" ("+Math.round(w.c/w.used*100)+"%)"})()}</span></span><span class="chev">${S.showStats?"−":"+"}</span></button>
     ${S.showStats?`<div class="statsBody"><p class="note rkKey">Ranks per topic: Intern, then Resident (a quarter answered, 60% right), Chief (half, 70%), Fellow (three quarters, 80%, half your right answers rated Knew it) and Attending (90%, 85%, 70% Knew it, almost no misses when sure).</p>
@@ -847,10 +865,24 @@ function home(){
 
 /* ---------- block ---------- */
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+
+const WHEEL={pace:[0,60,75,90,120],paceLabel:["Untimed","1:00","1:15","1:30","2:00"]};
+function wheelSum(){const n=Math.min(S.set.n,Math.min(maxN(S.set.mode),poolList(S.set.pool).length));if(!n)return "No questions match. Pick other topics.";const p=S.set.mode==="timed"?(S.set.pace||90):0;const m=Math.round(n*p/60);return p?`${n} questions · ${m<1?"under a minute":m+" min"} total · answers at the end`:`${n} questions · untimed · each answer shown as you go`}
+function wheelSet(key,i){const sizes=[...document.querySelectorAll('.wheel[data-wheel="n"] .wi')].map(e=>+e.textContent);
+  if(key==="n")S.set.n=sizes[i];else{const p=WHEEL.pace[i];if(p){S.set.mode="timed";S.set.pace=p}else S.set.mode="tutor"}
+  LS.put("rounds-set",S.set);const s=document.getElementById("wheelSum");if(s)s.textContent=wheelSum();
+  const b=document.getElementById("start");if(b){const n=Math.min(S.set.n,Math.min(maxN(S.set.mode),poolList(S.set.pool).length));b.textContent=n?`Start ${n} question${n===1?"":"s"}`:"Start";b.disabled=!n}}
+function initWheel(w){w.dataset.init=1;const H=44,last=w.children.length-1;let t,touched=false;const home=()=>{if(!touched)w.scrollTop=(+w.dataset.sel||0)*H};home();requestAnimationFrame(home);setTimeout(home,250);
+  ["pointerdown","wheel","touchstart","keydown"].forEach(ev=>w.addEventListener(ev,()=>{touched=true},{passive:true}));
+  const mark=i=>[...w.children].forEach((c,k)=>c.setAttribute("aria-selected",String(k===i)));
+  w.addEventListener("scroll",()=>{const i=Math.max(0,Math.min(last,Math.round(w.scrollTop/H)));mark(i);clearTimeout(t);t=setTimeout(()=>{if(touched&&+w.dataset.sel!==i){w.dataset.sel=i;wheelSet(w.dataset.wheel,i)}},110)},{passive:true});
+  w.addEventListener("click",e=>{const it=e.target.closest(".wi");if(it)w.scrollTo({top:+it.dataset.i*H,behavior:"smooth"})});
+  w.addEventListener("keydown",e=>{if(e.key!=="ArrowDown"&&e.key!=="ArrowUp")return;e.preventDefault();const i=Math.max(0,Math.min(last,(+w.dataset.sel||0)+(e.key==="ArrowDown"?1:-1)));w.scrollTo({top:i*H,behavior:"smooth"})})}
+new MutationObserver(()=>document.querySelectorAll(".wheel:not([data-init])").forEach(initWheel)).observe(document.documentElement,{childList:true,subtree:true});
 function startBlock(){
   let list=shuffle(poolList(S.set.pool).slice());
   list=list.slice(0,Math.min(S.set.n,maxN(S.set.mode)));
-  S.block={ids:list.map(q=>q.id),i:0,pick:{},done:{},shown:{},conf:{},pre:{},mode:S.set.mode,recall:S.set.recall,start:Date.now(),limit:S.set.mode==="timed"?list.length*90:0,finished:false};
+  S.block={ids:list.map(q=>q.id),i:0,pick:{},done:{},shown:{},conf:{},pre:{},mode:S.set.mode,recall:S.set.recall,start:Date.now(),limit:S.set.mode==="timed"?list.length*(S.set.pace||90):0,finished:false};
   S.view="quiz";render();window.scrollTo(0,0);
 }
 function cur(){return S.byId[S.block.ids[S.block.i]]}
@@ -1249,6 +1281,7 @@ document.addEventListener("click",e=>{
   if(t.id==="goalEdit"){S.goalEdit=!S.goalEdit;render();return}
   if(t.dataset.goal){S.set.goal=+t.dataset.goal;LS.put("rounds-set",S.set);render();return}
   if(t.id==="startMM"){const l=mmList().slice(0,10).map(q=>q.id);if(l.length){startIds(l,"tutor",false);S.block.kind="mm"}return}
+  if(t.id==="toggleMore"){S.showMore=!S.showMore;render();return}
   if(t.id==="start"){startBlock();return}
   if(t.id==="startToday"){startIds(todayIds(),"tutor",false);return}
   if(t.id==="startFromPage"){startFromPage();return}
