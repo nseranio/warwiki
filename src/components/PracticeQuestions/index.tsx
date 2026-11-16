@@ -16,16 +16,37 @@ export function usePractice(): {href: string; count: number} | null {
   return {href: `/rounds?${q.toString()}`, count};
 }
 
+// The Rounds logo ring: a track, the arc in the link color and an amber tip.
+function RoundsRing(): React.ReactElement {
+  return (
+    <svg className={styles.ring} viewBox="0 0 40 40" aria-hidden="true">
+      <circle className={styles.ringTrack} cx="20" cy="20" r="15" fill="none" strokeWidth="6" />
+      <path className={styles.ringArc} d="M20 5 A15 15 0 1 1 7.9 28.8" fill="none" strokeWidth="6" />
+      <path className={styles.ringTip} d="M7.9 28.8 A15 15 0 0 1 5.7 24.6" fill="none" strokeWidth="6" />
+    </svg>
+  );
+}
+
+// Sits beside "Listen to article" in the row PageTools draws above the title.
 export function PracticeChip(): React.ReactElement | null {
   const p = usePractice();
   if (!p) return null;
   return (
-    <a className={styles.chip} href={p.href}>
-      <span className={styles.chipDot} aria-hidden="true" />
-      Practice {p.count} questions from this page
-      <span aria-hidden="true"> →</span>
+    <a
+      className={styles.chip}
+      href={p.href}
+      aria-label={`Practice ${p.count} questions from this page in Rounds`}
+      title="Practice questions from this page in Rounds"
+    >
+      <RoundsRing />
+      {p.count} questions
     </a>
   );
+}
+
+// One row for the article tools (listener and practice link); wraps when the player opens.
+export function PageTools({children}: {children: React.ReactNode}): React.ReactElement {
+  return <div className={styles.tools}>{children}</div>;
 }
 
 export function PracticeCard(): React.ReactElement | null {

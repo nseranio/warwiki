@@ -1,27 +1,52 @@
+/* Article tools row: "Listen to article" and the practice link side by side. */
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin: 0 0 1.5rem;
+}
+.tools > * {
+  margin: 0 !important;
+}
+/* Matches the listener's play button (ArticleListener .playButton) in size, border and color. */
 .chip {
+  --pt-ink: var(--ifm-color-primary, #185FA5);
+  --pt-line: var(--warwiki-border, #DDE3ED);
+  --pt-hover: rgba(24, 95, 165, 0.05);
+  --pt-tip: #C77A0A;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  margin: 0 0 1.25rem;
+  gap: 0.45rem;
   padding: 0.4rem 0.85rem;
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: 999px;
-  font: 500 0.875rem/1.3 var(--ifm-font-family-base);
-  color: var(--ifm-color-primary-darker);
-  background: var(--ifm-background-surface-color);
+  font: 500 0.82rem/normal var(--ifm-font-family-base);
+  color: var(--pt-ink);
+  background: transparent;
+  border: 1px solid var(--pt-line);
+  border-radius: 6px;
   text-decoration: none;
+  transition: background 0.15s ease, border-color 0.15s ease;
 }
 .chip:hover {
-  border-color: var(--ifm-color-primary);
+  background: var(--pt-hover);
+  border-color: var(--pt-ink);
+  color: var(--pt-ink);
   text-decoration: none;
 }
-.chipDot {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  background: var(--ifm-color-primary);
+[data-theme='dark'] .chip {
+  --pt-ink: #3691E2;
+  --pt-line: #2A3442;
+  --pt-hover: rgba(54, 145, 226, 0.08);
+  --pt-tip: #EF9F27;
+}
+.ring {
+  width: 15px;
+  height: 15px;
   flex: none;
 }
+.ringTrack { stroke: var(--pt-line); }
+.ringArc { stroke: currentColor; }
+.ringTip { stroke: var(--pt-tip); }
 .card {
   display: flex;
   align-items: center;
