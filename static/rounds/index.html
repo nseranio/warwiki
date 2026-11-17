@@ -668,7 +668,13 @@ function streak(){
 /* ---------- site mode and cross-site sync ---------- */
 const HOST=location.hostname;
 const ONSITE=!window.claude&&/warwiki|whitwiki|localhost|127\.0\.0\.1/.test(HOST);
-const HOME=HOST.includes("whitwiki")?{name:"WHITWIKI",url:"/",other:"WARWIKI",otherUrl:"https://warwiki.org/rounds"}:{name:"WARWIKI",url:"/",other:"WHITWIKI",otherUrl:"https://whitwiki.org/rounds"};
+/* one home (owner, Nov 16): Rounds lives at warwiki.org/rounds; whitwiki.org/rounds forwards here with ?site=whitwiki,
+   so a WHITWIKI reader keeps the WHITWIKI bar and links back for the rest of the tab */
+const VIA=(()=>{let v="";try{v=new URLSearchParams(location.search).get("site")||""}catch(e){}
+  try{if(v==="whitwiki")sessionStorage.setItem("rounds-via","whitwiki");else if(!v)v=sessionStorage.getItem("rounds-via")||""}catch(e){}
+  return v==="whitwiki"||HOST.includes("whitwiki")?"whitwiki":"warwiki"})();
+const WHIT_ORIGIN=HOST.includes("whitwiki")?"":"https://whitwiki.org";
+const HOME=VIA==="whitwiki"?{name:"WHITWIKI",url:WHIT_ORIGIN+"/"}:{name:"WARWIKI",url:"/"};
 const QURLS=!location.pathname.startsWith("/rounds")?["questions.json"]:/(^|\.)warwiki\.org$/.test(HOST)||/^warwiki[a-z0-9-]*\.vercel\.app$/.test(HOST)?["https://whitwiki.org/rounds/questions.json","https://whitwiki.vercel.app/rounds/questions.json"]:["/rounds/questions.json","https://whitwiki.org/rounds/questions.json","https://whitwiki.vercel.app/rounds/questions.json"];
 let QBASE=location.href;
 async function fetchQuestions(){
@@ -681,6 +687,10 @@ const CODE_RE=/^[A-HJ-NP-Z2-9]{12}$/;
 const fmtCode=c=>c?c.replace(/(.{4})(.{4})(.{4})/,"$1-$2-$3"):"";
 let syncCode=LS.get("rounds-sync",null);if(syncCode&&!CODE_RE.test(syncCode))syncCode=null;
 let syncInfo={state:syncCode?"pending":"off",at:0,err:""};
+let IMPORT=null;(()=>{const m=location.hash.match(/^#import=([A-HJ-NP-Z2-9]{12})$/);if(m){IMPORT=m[1];try{history.replaceState(null,"",location.pathname+location.search)}catch(e){}}})();
+async function importHandoff(){if(!IMPORT)return;const c=IMPORT;IMPORT=null;
+  try{const r=await fetch(SYNC_API+"?code="+c,{cache:"no-store"});if(!r.ok)return;const d=await r.json();
+    if(d&&d.prog&&Object.keys(d.prog).length){mergeInto(S.prog,d.prog);LS.put("rounds-prog",S.prog);if(syncCode)syncPush(true);render();toast("Progress from WHITWIKI added")}}catch(e){}}
 (()=>{const m=location.hash.match(/^#sync=([A-Za-z2-9-]{12,14})$/);if(m){const c=m[1].replace(/-/g,"").toUpperCase();if(CODE_RE.test(c)){syncCode=c;LS.put("rounds-sync",c);syncInfo.state="pending"}try{history.replaceState(null,"",location.pathname+location.search)}catch(e){}}})();
 function newCode(){const A="ABCDEFGHJKLMNPQRSTUVWXYZ23456789";const r=new Uint8Array(12);crypto.getRandomValues(r);return Array.from(r,x=>A[x%32]).join("")}
 function resetAt(p){return (p&&p._reset&&p._reset.at)||0}
@@ -711,11 +721,11 @@ function syncPush(now){
 document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible"&&syncCode)syncPull()});
 if(ONSITE){const h=document.getElementById("homeLink");if(h){h.hidden=false;h.href=HOME.url;h.textContent="‹ "+HOME.name}}
 /* ---------- site bar + "questions from this page" entry ---------- */
-const SITE_NAV=HOST.includes("whitwiki")
-  ?[["Foundations","/docs/foundations"],["Cancers","/docs/cancers"],["Treatment Atlas","/docs/treatment-atlas"],["Clinical Evidence","/docs/clinical-evidence"],["Rounds","/rounds"],["Library","/docs/resources"]]
+const SITE_NAV=VIA==="whitwiki"
+  ?[["Foundations","/docs/foundations"],["Cancers","/docs/cancers"],["Treatment Atlas","/docs/treatment-atlas"],["Clinical Evidence","/docs/clinical-evidence"],["Rounds","/rounds"],["Library","/docs/resources"]].map(([l,u])=>[l,u==="/rounds"?"/rounds?site=whitwiki":WHIT_ORIGIN+u])
   :[["Foundations","/docs/foundations"],["Clinical Care","/docs/clinical-care"],["Treatment Atlas","/docs/surgical-techniques"],["Clinical Evidence","/docs/clinical-evidence"],["Rounds","/rounds"],["Library","/docs/resources"]];
 const FROM=(()=>{try{const u=new URLSearchParams(location.search);const page=u.get("page");if(!page)return null;
-  const from=u.get("from")||"";return {page,from:/^\/docs\//.test(from)?from:"",title:(u.get("title")||"the article").slice(0,120),started:false}}catch(e){return null}})();
+  const from=u.get("from")||"";return {page,from:/^\/docs\//.test(from)||/^https:\/\/(www\.)?whitwiki\.org\/docs\//.test(from)?from:"",title:(u.get("title")||"the article").slice(0,120),started:false}}catch(e){return null}})();
 if(ONSITE){
   const bar=document.getElementById("siteBar");bar.hidden=false;document.body.classList.add("hasBar");
   const t=document.getElementById("sbTitle");t.textContent=HOME.name;t.href=HOME.url;
@@ -723,7 +733,7 @@ if(ONSITE){
   const mb=document.getElementById("sbMenu");mb.addEventListener("click",()=>{const o=document.body.classList.toggle("sbOpen");mb.setAttribute("aria-expanded",String(o));mb.textContent=o?"Close":"Menu"});
   if(FROM&&FROM.from){const b=document.getElementById("sbBack");b.hidden=false;b.href=FROM.from;b.textContent="‹ Back to "+FROM.title}
 }
-function fromPageQs(){return FROM?S.qs.filter(q=>q.source&&q.source.file===FROM.page):[]}
+function fromPageQs(){return FROM?S.qs.filter(q=>q.source&&q.source.file===FROM.page&&(!q.source.site||q.source.site===VIA||!["warwiki","whitwiki"].includes(q.source.site))):[]}
 function startFromPage(){const ids=shuffle(fromPageQs().map(q=>q.id));if(ids.length){FROM.started=true;startIds(ids,"tutor",false)}}
 
 /* ---------- data ---------- */
@@ -742,6 +752,7 @@ async function load(){
     if(ONSITE&&changed)QCACHE.put(d);
   }catch(e){if(!cached){$("#view").innerHTML='<div class="panel empty">The questions did not load. Check your connection and reload the page.</div>';return}}
   if(!cached){S.prog=LS.get("rounds-prog",{});render()}
+  importHandoff();
   connect();
 }
 async function connect(){
@@ -839,7 +850,7 @@ function barRow(label,t,rk){
 function home(){
   const scope=S.qs.filter(inField);
   const all=tally(scope);
-  const storeNote=S.store==="account"?"Progress saves to your Claude account and follows you across devices.":S.store==="loading"?"Connecting…":ONSITE?(syncCode?"":"Progress saves in this browser. Turn on sync to carry it to "+HOME.other+" and your other devices."):"Progress saves on this device only.";
+  const storeNote=S.store==="account"?"Progress saves to your Claude account and follows you across devices.":S.store==="loading"?"Connecting…":ONSITE?(syncCode?"":"Progress saves in this browser. Turn on sync to carry it to your other devices."):"Progress saves on this device only.";
   const segs=(key,opts)=>`<div class="seg" role="group">${opts.map(([v,l,k])=>`<button data-set="${key}" data-v="${v}" aria-pressed="${String(S.set[key])===String(v)}">${esc(l)}${k!=null?`<span class="k">${k}</span>`:""}</button>`).join("")}</div>`;
   const multi=(key,opts)=>`<div class="seg" role="group">${opts.map(([v,l,k])=>{const on=v==="__all"?!S.set[key].length:S.set[key].includes(v);return `<button data-multi="${key}" data-v="${v}" aria-pressed="${on}">${esc(l)}${k!=null?`<span class="k">${k}</span>`:""}</button>`}).join("")}</div>`;
   const cnt=t=>S.qs.filter(q=>q.topic===t).length;
@@ -882,7 +893,7 @@ function home(){
     <div class="lab rowh" style="margin-top:18px">By type</div>
     <div class="rows">${Object.entries(KINDS).map(([k,l])=>barRow(l,tally(scope.filter(q=>q.kind===k)))).join("")}</div></div>`:""}
   </div>`;
-  const tail=`${ONSITE?`<button class="pickRow" id="openSync"><span><span class="pv">${syncCode?"Sync on · "+fmtCode(syncCode):"Sync across sites and devices"}</span><span class="note">${syncCode?(syncInfo.state==="error"?"Offline: saved on this device":syncInfo.state==="ok"?"Up to date":"Syncing…"):"No account needed: a private code links your progress"}</span></span><span class="chev">›</span></button>`:""}
+  const tail=`${ONSITE?`<button class="pickRow" id="openSync"><span><span class="pv">${syncCode?"Sync on · "+fmtCode(syncCode):"Sync across devices"}</span><span class="note">${syncCode?(syncInfo.state==="error"?"Offline: saved on this device":syncInfo.state==="ok"?"Up to date":"Syncing…"):"No account needed: a private code links your progress"}</span></span><span class="chev">›</span></button>`:""}
   <p class="note">${esc(storeNote)} ${S.qs.length} questions, each checked against its source page or guideline${S.meta&&S.meta.built?` (bank built ${esc(S.meta.built)})`:""}.</p>
   ${Object.keys(S.prog).some(k=>k[0]!=="_")||days().at?`<button class="resetBtn" id="resetProg">Reset progress</button>`:""}`;
   if(W)return `${pilotNote()}${field}<div class="hBand">${hero}${todayPanel()}</div><div class="hGrid"><div class="hMain">${opts}</div><div class="hSide">${mmPanel()}${search}${mine}${progress}${tail}</div></div>`;
@@ -1220,15 +1231,14 @@ function sheet(){
 function syncSheet(){
   const on=!!syncCode;
   const body=on?`<div class="syncCode">${fmtCode(syncCode)}</div>
-      <p class="note" style="text-align:center;margin:6px 0 14px">${syncInfo.state==="error"?esc(syncInfo.err):"Your progress on "+HOME.name+" is linked to this code. Anyone with the code can see and change this progress, so keep it to yourself."}</p>
+      <p class="note" style="text-align:center;margin:6px 0 14px">${syncInfo.state==="error"?esc(syncInfo.err):"Your progress is linked to this code. Anyone with the code can see and change this progress, so keep it to yourself."}</p>
       <div class="go" style="flex-direction:column;align-items:stretch">
-        <a class="btn wide" style="text-align:center;text-decoration:none" href="${HOME.otherUrl}#sync=${fmtCode(syncCode)}" target="_blank" rel="noopener">Continue on ${HOME.other}</a>
         <button class="ghost" id="copySync">Copy code</button>
         <button class="ghost" id="syncNow">Sync now</button>
         <button class="ghost" id="syncOff" style="color:var(--bad)">Turn off sync on this device</button>
       </div>
       <p class="note" style="margin-top:14px">On another phone or computer, open Rounds, tap Sync and enter this code. Turning sync off keeps your progress here; it just stops sharing it.</p>`
-    :`<p class="note" style="margin:4px 0 14px">Sync keeps one set of progress across ${HOME.name}, ${HOME.other} and your devices. No account: you get a private code instead.</p>
+    :`<p class="note" style="margin:4px 0 14px">Sync keeps one set of progress across your phone and computers. No account: you get a private code instead.</p>
       <button class="btn wide" id="syncOn" style="width:100%">Turn on sync</button>
       <div class="lab sfl" style="margin-top:22px">Already have a code?</div>
       <div style="display:flex;gap:8px"><input id="syncIn" class="codeIn" placeholder="XXXX-XXXX-XXXX" autocapitalize="characters" autocomplete="off" spellcheck="false"><button class="ghost" id="syncUse">Use code</button></div>
