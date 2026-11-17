@@ -689,7 +689,8 @@ function mergeInto(base,inc){
   const r=Math.max(resetAt(base),resetAt(inc));inc=prune({...(inc||{})},r);prune(base,r);
   for(const [k,b] of Object.entries(inc||{})){const a=base[k];
     if(k==="_days"){const m={...(a||{})};for(const [d,v] of Object.entries(b||{}))if(d!=="at")m[d]=Math.max(v,m[d]||0);m.at=Math.max((a&&a.at)||0,(b&&b.at)||0);base[k]=m;continue}
-    if(!a||((b&&b.at)||0)>(a.at||0))base[k]=b}
+    /* the newer record wins; a flag change (ft) counts as newer, so flags sync across devices */
+    const st=x=>Math.max((x&&x.at)||0,(x&&x.ft)||0);if(!a||st(b)>st(a))base[k]=b}
   if(r)base._reset={at:r};
   return base;
 }
@@ -703,7 +704,9 @@ async function syncPull(){
 let pushT=null;
 function syncPush(now){
   if(!syncCode)return;clearTimeout(pushT);
-  pushT=setTimeout(async()=>{try{const r=await fetch(SYNC_API,{method:"PUT",headers:{"Content-Type":"application/json"},body:JSON.stringify({code:syncCode,prog:S.prog})});if(!r.ok)throw new Error("status "+r.status);syncInfo={state:"ok",at:Date.now(),err:""}}catch(e){syncInfo={state:"error",at:syncInfo.at,err:"Could not reach the sync service. Your progress is still saved on this device."}}},now?50:1500);
+  pushT=setTimeout(async()=>{try{const r=await fetch(SYNC_API,{method:"PUT",headers:{"Content-Type":"application/json"},body:JSON.stringify({code:syncCode,prog:S.prog})});if(!r.ok)throw new Error("status "+r.status);syncInfo={state:"ok",at:Date.now(),err:""};
+      /* the server merges into its stored copy and returns the result: take in anything answered elsewhere */
+      try{const d=await r.json();if(d&&d.prog){const before=JSON.stringify(S.prog);mergeInto(S.prog,d.prog);if(JSON.stringify(S.prog)!==before){LS.put("rounds-prog",S.prog);if(S.view!=="quiz")render()}}}catch(e){}}catch(e){syncInfo={state:"error",at:syncInfo.at,err:"Could not reach the sync service. Your progress is still saved on this device."}}},now?50:1500);
 }
 document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible"&&syncCode)syncPull()});
 if(ONSITE){const h=document.getElementById("homeLink");if(h){h.hidden=false;h.href=HOME.url;h.textContent="‹ "+HOME.name}}
@@ -794,7 +797,7 @@ function record(q,ok,conf,pick){
 }
 function toggleFlag(q){
   const p=S.prog[q.id]||{n:0,right:0,ivl:0};
-  p.flag=!p.flag; p.at=p.at||Date.now(); S.prog[q.id]=p; save(q.id);
+  p.flag=!p.flag; p.ft=Date.now(); p.at=p.at||Date.now(); S.prog[q.id]=p; save(q.id);
 }
 
 /* ---------- pools ---------- */

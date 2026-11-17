@@ -86,15 +86,65 @@ export function cleanProgress(input: unknown): Record<string, unknown> | null {
       continue;
     }
     const rec: Record<string, unknown> = {};
-    for (const f of ['n', 'right', 'ivl', 'at', 'due'] as const) if (num(v[f]) !== undefined) rec[f] = v[f];
+    // ft = when the flag last changed, so a flag set or cleared on one device wins over an older answer record.
+    for (const f of ['n', 'right', 'ivl', 'at', 'due', 'ft'] as const) if (num(v[f]) !== undefined) rec[f] = v[f];
     if (v.last === 'c' || v.last === 'w') rec.last = v.last;
-    if (v.flag === true) rec.flag = true;
+    if (typeof v.flag === 'boolean') rec.flag = v.flag;
+    if (typeof v.mis === 'boolean') rec.mis = v.mis; // M&M conference: missed when sure
+    if (Number.isInteger(v.conf) && (v.conf as number) >= 0 && (v.conf as number) <= 2) rec.conf = v.conf; // how sure
+    if (Number.isInteger(v.pick) && (v.pick as number) >= 0 && (v.pick as number) <= 4) rec.pick = v.pick; // chosen answer
     out[key] = rec;
   }
   return out;
 }
 
 const blobPath = (code: string) => `rounds-sync/${code}.json`;
+
+type Prog = Record<string, Record<string, number | boolean | string>>;
+const stamp = (r: unknown) => {
+  const o = (r || {}) as {at?: unknown; ft?: unknown};
+  return Math.max(num(o.at) ?? 0, num(o.ft) ?? 0);
+};
+const resetAt = (p: Prog) => num(p._reset?.at) ?? 0;
+
+/** Same rule as the app's mergeInto: a reset removes older records; otherwise the newer record (answer or flag change) wins
+ *  and daily counts keep the higher value. Saving merges into the stored copy, so a device that has not pulled recently
+ *  cannot erase answers made elsewhere. */
+export function mergeProgress(base: Prog, inc: Prog): Prog {
+  const out: Prog = {...base};
+  const r = Math.max(resetAt(base), resetAt(inc));
+  const keep = (p: Prog) => Object.entries(p).filter(([k, v]) => k === '_reset' || k === '_days' || !r || (num((v as {at?: unknown}).at) ?? 0) > r);
+  const merged: Prog = Object.fromEntries(keep(out));
+  for (const [k, b] of keep(inc)) {
+    const a = merged[k];
+    if (k === '_reset') continue;
+    if (k === '_days') {
+      const m: Record<string, number> = {...((a as Record<string, number>) || {})};
+      for (const [d, v] of Object.entries(b as Record<string, number>)) if (d !== 'at') m[d] = Math.max(v, m[d] || 0);
+      m.at = Math.max(num(a?.at) ?? 0, num((b as Record<string, number>).at) ?? 0);
+      merged[k] = m;
+      continue;
+    }
+    if (!a || stamp(b) > stamp(a)) merged[k] = b;
+  }
+  if (r) merged._reset = {at: r};
+  return merged;
+}
+
+/** Read the stored copy. Overwritten blobs stay cached at the CDN for up to a minute and head() can report the old
+ *  upload time, so the read always carries a fresh query string. */
+async function readStored(code: string): Promise<{prog: Prog; updated: number}> {
+  try {
+    const meta = await head(blobPath(code));
+    const r = await fetch(`${meta.url}?r=${Date.now()}-${Math.random().toString(36).slice(2)}`, {cache: 'no-store'});
+    if (!r.ok) throw new Error(`blob fetch ${r.status}`);
+    const data = (await r.json()) as {prog?: unknown; updated?: number};
+    return {prog: (cleanProgress(data.prog) || {}) as Prog, updated: data.updated || 0};
+  } catch (err) {
+    if (err instanceof BlobNotFoundError) return {prog: {}, updated: 0};
+    throw err;
+  }
+}
 
 export default async function handler(req: SyncRequest, res: ServerResponse) {
   res.setHeader('Cache-Control', 'private, no-store');
@@ -124,16 +174,9 @@ export default async function handler(req: SyncRequest, res: ServerResponse) {
       return;
     }
     try {
-      const meta = await head(blobPath(code));
-      const r = await fetch(`${meta.url}?v=${new Date(meta.uploadedAt).getTime()}`, { cache: 'no-store' });
-      if (!r.ok) throw new Error(`blob fetch ${r.status}`);
-      const data = (await r.json()) as { prog?: unknown; updated?: number };
-      sendJson(res, 200, { prog: cleanProgress(data.prog) || {}, updated: data.updated || 0 });
-    } catch (err) {
-      if (err instanceof BlobNotFoundError) {
-        sendJson(res, 200, { prog: {}, updated: 0 });
-        return;
-      }
+      const stored = await readStored(code);
+      sendJson(res, 200, { prog: stored.prog, updated: stored.updated });
+    } catch {
       sendJson(res, 502, { error: 'Sync store unavailable' });
     }
     return;
@@ -156,7 +199,14 @@ export default async function handler(req: SyncRequest, res: ServerResponse) {
       sendJson(res, 400, { error: 'Invalid progress data' });
       return;
     }
-    const payload = JSON.stringify({ prog, updated: Date.now() });
+    let merged: Prog;
+    try {
+      merged = mergeProgress((await readStored(code)).prog, prog as Prog);
+    } catch {
+      sendJson(res, 502, { error: 'Sync store unavailable' });
+      return;
+    }
+    const payload = JSON.stringify({ prog: merged, updated: Date.now() });
     if (payload.length > MAX_BODY_CHARS) {
       sendJson(res, 413, { error: 'Progress data too large' });
       return;
@@ -169,7 +219,7 @@ export default async function handler(req: SyncRequest, res: ServerResponse) {
         contentType: 'application/json',
         cacheControlMaxAge: 60,
       });
-      sendJson(res, 200, { ok: true });
+      sendJson(res, 200, { ok: true, prog: merged });
     } catch {
       sendJson(res, 502, { error: 'Sync store unavailable' });
     }
