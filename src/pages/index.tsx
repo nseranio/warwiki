@@ -174,7 +174,7 @@ function HomepageSections() {
           </Link>
         ))}
         <Link to="pathname:///rounds" className={styles.sectionCard} data-accent="rounds">
-          <span className={styles.sectionCount}>3,000+ questions</span>
+          <span className={styles.sectionCount}>Nearly 3,000 questions</span>
           <span className={styles.sectionTitle}>Rounds</span>
           <span className={styles.sectionDesc}>Board-style questions written from these pages, each with an explanation, a pearl and its source.</span>
           <span className={styles.sectionCta}>Start Rounds →</span>
