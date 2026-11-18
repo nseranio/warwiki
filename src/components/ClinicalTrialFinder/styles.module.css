@@ -332,29 +332,6 @@
 .armFoot { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; margin-top: 0.45rem; }
 .clamp { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 
-/* Map tab */
-.mapFrame { display: grid; grid-template-columns: minmax(0, 1fr) minmax(16rem, 28%); border: 1px solid var(--tf-line); border-radius: var(--tf-radius); overflow: hidden; background: var(--tf-surface); }
-.mapCanvas { position: relative; padding: 0.6rem; border-right: 1px solid var(--tf-line); background: var(--tf-sunken); }
-.mapSvg { display: block; width: 100%; height: auto; max-height: 70vh; }
-.mapLand { fill: var(--tf-surface); stroke: var(--tf-line-strong); stroke-width: 0.8; }
-.mapStates { fill: none; stroke: var(--tf-line); stroke-linejoin: round; }
-.mapRing { fill: rgba(3, 105, 161, 0.05); stroke: #0369a1; }
-.mapDot { fill: #0d9373; fill-opacity: 0.78; stroke: var(--tf-surface); cursor: pointer; transition: fill 0.15s ease; }
-.mapDot:hover, .mapDot:focus-visible { fill: var(--tf-accent); fill-opacity: 1; outline: none; }
-.mapDotOn { fill: var(--tf-accent); fill-opacity: 1; }
-.mapOrigin { fill: var(--tf-surface); stroke: #0369a1; }
-.mapControls { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 0.8rem; padding: 0.4rem 0.2rem 0; }
-.mapSide { max-height: 72vh; overflow-y: auto; padding: 0.8rem 0.9rem; }
-.mapSideHead { margin: 0 0 0.3rem; font-size: 0.78rem; font-weight: 700; color: var(--tf-muted); }
-.mapPlaces { list-style: none; margin: 0.4rem 0 0; padding: 0; display: grid; gap: 0.55rem; }
-.mapPlaces li { margin: 0; display: grid; gap: 0.5rem; }
-.mapPlace { display: grid; gap: 0.15rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--tf-line); }
-.mapStudies { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.2rem; }
-.mapStudy { padding: 0.15rem 0.5rem; border: 1px solid var(--tf-line-strong); border-radius: 999px; background: var(--tf-surface); color: var(--tf-accent); font: inherit; font-size: 0.74rem; font-weight: 600; cursor: pointer; }
-.mapStudy:hover, .mapStudyOn { border-color: var(--tf-accent); background: var(--tf-accent-tint); }
-.mapLoading { height: 24rem; border-radius: var(--tf-radius); background: var(--tf-sunken); border: 1px solid var(--tf-line); }
-:global([data-theme='dark']) .mapRing { fill: rgba(124, 196, 238, 0.08); stroke: #7cc4ee; }
-:global([data-theme='dark']) .mapOrigin { stroke: #7cc4ee; }
 
 @media (max-width: 996px) {
   .frame { display: block; height: auto; min-height: 0; position: static; border: 0; border-radius: 0; overflow: visible; background: transparent; }
@@ -364,9 +341,6 @@
   .showPane .pane { display: block; }
   .backButton { display: inline-flex; }
   .listGroup { position: static; }
-  .mapFrame { grid-template-columns: 1fr; }
-  .mapCanvas { border-right: 0; border-bottom: 1px solid var(--tf-line); }
-  .mapSide { max-height: none; }
 }
 @media (max-width: 640px) {
   .zipField { flex: 1 1 100%; }
@@ -379,15 +353,6 @@
   .kbd { display: none; }
 }
 .chipPanel .segmented { flex-wrap: wrap; overflow: visible; }
-.mapSvg { cursor: grab; touch-action: none; user-select: none; }
-.mapSvg:active { cursor: grabbing; }
-.mapZoom { position: absolute; top: 0.9rem; right: 0.9rem; display: grid; gap: 0.3rem; }
-.mapZoom .iconButton { box-shadow: var(--warwiki-shadow-sm); }
-.mapZoom svg { width: 16px; height: 16px; }
-.mapLabel { fill: var(--tf-text); stroke: var(--tf-surface); paint-order: stroke; stroke-linejoin: round; font-family: var(--ifm-font-family-base); font-weight: 600; pointer-events: none; }
-/* The side list scrolls within the map's height instead of stretching it. */
-.mapSide { height: 0; min-height: 100%; max-height: none; }
-@media (max-width: 996px) { .mapSide { height: auto; min-height: 0; max-height: 26rem; } }
 .sectionToggle { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; width: 100%; padding: 0; border: 0; background: none; color: inherit; font: inherit; text-align: left; cursor: pointer; }
 .sectionToggle .h4 { margin: 0; }
 .sectionToggle svg { width: 15px; height: 15px; color: var(--tf-muted); }

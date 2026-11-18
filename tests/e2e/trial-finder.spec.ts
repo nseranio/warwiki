@@ -2,7 +2,7 @@ import {expect, test} from '@playwright/test';
 import {collectBrowserErrors} from './browser-errors';
 
 /** Structure only: the registry changes daily, so no study counts or names are asserted. */
-test('trial finder: snapshot loads, OAB details, ZIP states, reading pane and map', async ({page}) => {
+test('trial finder: snapshot loads, OAB details, ZIP states, reading pane', async ({page}) => {
   const errors = collectBrowserErrors(page);
   await page.goto('/docs/resources/clinical-trial-finder');
   await expect(page.locator('html')).toHaveAttribute('data-has-hydrated', 'true');
@@ -19,8 +19,6 @@ test('trial finder: snapshot loads, OAB details, ZIP states, reading pane and ma
   await page.getByLabel('US ZIP').fill('99999');
   await expect(page.getByText(/has no Census ZIP Code Tabulation Area/)).toBeVisible();
   await page.getByLabel('US ZIP').fill('');
-  await page.getByRole('tab', {name: 'Map'}).click();
-  await expect(page.locator('svg[role="img"][aria-label*="site locations"]')).toBeVisible();
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
   expect(overflow).toBeLessThanOrEqual(0);
   expect(errors).toEqual([]);

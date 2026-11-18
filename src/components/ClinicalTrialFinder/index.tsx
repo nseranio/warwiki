@@ -18,7 +18,6 @@ import {ChevronIcon, PinIcon, RefreshIcon, SearchIcon} from './Icons';
 import Shortlist from './Shortlist';
 import StudyPane, {OUTCOME_LABEL} from './StudyPane';
 import StudyRow from './StudyRow';
-import SiteMap from './SiteMap';
 import {ContextFields, DEEP_DEFAULTS, STATE_LABELS, bits, contextLabel, statesFor, type DeepContexts, type State} from './contexts';
 import styles from './styles.module.css';
 
@@ -87,7 +86,6 @@ export default function ClinicalTrialFinder() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [showPane, setShowPane] = useState(false);
   const [picked, setPicked] = useState(false);
-  const [tab, setTab] = useState<'list' | 'map'>('list');
   const [panel, setPanel] = useState<'disease' | 'distance' | 'status' | 'type' | null>(null);
   const searchRef = useRef<HTMLInputElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
@@ -299,18 +297,12 @@ export default function ClinicalTrialFinder() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loading, listRows.map(r => r.hit.study.id).join(','), selectedId]);
 
-  const select = (nct: string, fromMap = false) => {
+  const select = (nct: string) => {
     setPicked(true);
     setSelectedId(nct);
-    if (fromMap) setTab('list');
     if (!isWide()) {
       setShowPane(true);
       frameRef.current?.scrollIntoView({block: 'start'});
-    }
-    if (fromMap) {
-      const i = listRows.findIndex(r => r.hit.study.id === nct);
-      if (i >= shown) setShown(i + PAGE);
-      window.setTimeout(() => listRef.current?.querySelector<HTMLButtonElement>(`[data-nct="${nct}"]`)?.scrollIntoView({block: 'nearest'}), 50);
     }
   };
 
@@ -523,10 +515,6 @@ export default function ClinicalTrialFinder() {
 
       <div className={styles.resultsHead}>
         <p className={styles.count} aria-live="polite">{summaryLine}</p>
-        <div className={clsx(styles.segmented, styles.segmentedCompact, styles.tabs)} role="tablist" aria-label="Results view">
-          <button type="button" role="tab" aria-selected={tab === 'list'} className={clsx(styles.segment, tab === 'list' && styles.segmentOn)} onClick={() => setTab('list')}>List</button>
-          <button type="button" role="tab" aria-selected={tab === 'map'} className={clsx(styles.segment, tab === 'map' && styles.segmentOn)} onClick={() => setTab('map')}>Map</button>
-        </div>
       </div>
       {poolErrors.length ? <p className={styles.warn}>Could not load {poolErrors.map(p => POOL_LABELS[p]).join(', ')}. Results are incomplete. <button type="button" className={styles.linkButton} onClick={() => { setPoolErrors([]); setReloadKey(k => k + 1); }}>Try again</button></p> : null}
       {live && live.nct === nctQuery && live.state === 'failed' ? <p className={styles.warn}>Live lookup for {live.nct} failed. Open it on <a href={`https://clinicaltrials.gov/study/${live.nct}`} target="_blank" rel="noopener noreferrer">ClinicalTrials.gov</a>.</p> : null}
@@ -536,9 +524,6 @@ export default function ClinicalTrialFinder() {
       {loading && !manifestError ? <div className={styles.skeleton} aria-hidden><span /><span /><span /></div> : null}
 
       {!loading && !zipBlocked && !manifestError && listRows.length ? (
-        tab === 'map' ? (
-          <SiteMap hits={listRows.map(r => r.hit)} origin={origin} radius={origin ? radius : undefined} selectedNct={selectedId} onOpenStudy={nct => select(nct, true)} />
-        ) : (
           <div ref={frameRef} className={clsx(styles.frame, showPane && styles.showPane)}>
             <div ref={listRef} className={styles.list} onKeyDown={onListKey} aria-label="Results">
               {renderList()}
@@ -564,7 +549,6 @@ export default function ClinicalTrialFinder() {
               ) : <p className={styles.paneEmpty}>Choose a study to see its arms, cohorts, sites and contacts.</p>}
             </div>
           </div>
-        )
       ) : null}
 
       {!loading && !zipBlocked && !manifestError && !listRows.length && !(live && live.nct === nctQuery && live.state === 'loading') ? (
