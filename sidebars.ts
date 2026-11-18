@@ -39,6 +39,7 @@ const sidebars: SidebarsConfig = {
   // reached from Patient Resources.
   resourcesSidebar: [
     'resources/index',
+    'resources/clinical-trial-finder',
     'resources/patient-resources',
     'resources/flashcards',
     'resources/surgical-video-atlases',

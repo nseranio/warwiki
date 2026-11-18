@@ -15,7 +15,8 @@ export default function ContentWrapper(props: Props): React.ReactElement {
   // Hide TTS on any page that sets hide_title: true — all section landings,
   // sub-section landings, and database index pages use this convention.
   // True article pages do not set hide_title, so they always get the player.
-  const showListener = !frontMatter.hide_title;
+  // Tool pages (the trial finder) set article_tools: false.
+  const showListener = !frontMatter.hide_title && (frontMatter as {article_tools?: boolean}).article_tools !== false;
   const { pathname } = useLocation();
   // Landings get the section label above their title (custom.css), except the
   // five top-level section landings such as /docs/foundations.

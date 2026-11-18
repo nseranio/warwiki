@@ -1,0 +1,59 @@
+name: Refresh trial finder snapshot
+
+# Daily ClinicalTrials.gov snapshot for /docs/resources/clinical-trial-finder
+# (Reconstructive & Functional Urology Trial Finder).
+# The registry posts its daily data update around 10:00 UTC; this runs after it.
+# scripts/clinical-trials/refresh.ts exits non-zero on any incomplete retrieval,
+# so a failed run commits nothing and the last complete snapshot stays live.
+# GitHub emails the repository owner when a scheduled run fails; the finder
+# also shows a warning once the snapshot is older than staleAfterHours (48).
+
+on:
+  schedule:
+    - cron: '50 11 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trial-finder-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+
+      # No npm install: the refresh uses only Node built-ins and src/lib/clinical-trials.
+      - name: Retrieve, validate and stage the snapshot
+        run: node --experimental-strip-types --no-warnings scripts/clinical-trials/refresh.ts
+
+      - name: Publish the snapshot
+        run: |
+          git add static/trial-finder/data
+          if git diff --cached --quiet; then
+            echo "Snapshot unchanged."
+            exit 0
+          fi
+          # Authored as the repository owner so Vercel deploys the commit (Hobby plans
+          # skip private-repo commits by authors outside the Vercel team).
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit --author="Nicolas Seranio <31759167+nseranio@users.noreply.github.com>" \
+            -m "Trial finder: ClinicalTrials.gov snapshot $(date -u +%Y-%m-%dT%H:%MZ)" -- static/trial-finder/data
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase origin main && git push origin HEAD:main; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            sleep $((attempt * 20))
+          done
+          echo "Could not push the snapshot after 5 attempts." >&2
+          exit 1
