@@ -1,0 +1,19 @@
+Build a GU Clinical Trial Finder into WARWIKI Resources so oncologists can find relevant trials, identify nearby recruiting sites, and prepare patients for study-team screening and enrollment.
+
+Work in /Users/joyboy/Documents/WARWIKI/warwiki.
+
+Read CLAUDE.md and AGENTS.md first, then this complete handoff:
+/Users/joyboy/Documents/WARWIKI/warwiki/reports/2026-11-18/clinical-trial-finder/HANDOFF.md
+
+The historical interactive concept is alongside it:
+/Users/joyboy/Documents/WARWIKI/warwiki/reports/2026-11-18/clinical-trial-finder/concept-october-28.html
+
+My November 18 direction supersedes the original separate-website idea: this now belongs in WARWIKI under Library > Resources. This specifically authorizes the GU oncology finder resource despite the usual restriction on primary oncology articles. Use the descriptive title GU Clinical Trial Finder; no standalone product name has been adopted.
+
+Start by showing the integrated page design and the data/refresh approach before substantial UI implementation. Use the handoff as the feature specification and current repository instructions for the working/review/publishing process.
+
+Build real ClinicalTrials.gov retrieval and nationwide ZIP/radius support. Give HG UTUC before surgery and HG Ta NMIBC after BCG without CIS detailed cohort handling, while supporting basic search across GU cancers. The six old studies are examples, not the full product.
+
+Keep overall study recruitment, individual-site recruitment, cohort opening, available slots, and patient eligibility separate. Unknown data must remain unknown. Include sourced contacts and a copy/print referral-preparation summary; actual screening, consent and enrollment stay with the study team. Keep patient identifiers and clinical context out of public storage, telemetry and share URLs.
+
+The handoff includes repository integration points, recommended data architecture, source/version rules, current example-record observations, acceptance checks, and known prototype limits. Preserve unrelated working-tree changes. Carry the work through the required tests and current publishing instructions when it is ready.
