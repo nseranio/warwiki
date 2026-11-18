@@ -6,6 +6,15 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## November 18, 2026 — Rounds tuned for the written boards (3,003 questions)
+
+- Owner: most Rounds users prepare for the AUA In-Service Exam and the ABU Qualifying (Part 1) written exam; keep single-best-answer questions and do not convert to oral-board styles.
+- A measurement of the bank found cue problems (the correct answer was the longest choice in 43% of questions; median stem 28 words) and module weights tuned to the owner's oral boards and specialty (anatomy and physiology 2.6% of the bank vs 6.8% of recent SASP exams). Two pilots on private artifacts: realistic rewrites (more real, not harder) and close-call questions built on one decisive detail (owner: "the right difficulty").
+- 795 new checked questions (Codex author plus independent Codex check; Claude read and dropped duplicates and single-series percentages): 387 in under-covered modules, 357 close calls mixed into the bank by exam share, 75 board-favorite facts recovered from newer sources. Today and new blocks now draw topics in proportion to each module's written-exam share. Kit and lessons: Rounds bank README, "Written-boards rebalance".
+- Published WHITWIKI `bdaa087` (questions), WARWIKI `4e371275` (app, Question Bank page and homepage counts).
+
+---
+
 ## November 15, 2026 — One menu for both sites; Rounds linked from the pages
 
 - Both sites now share one menu: Foundations · Clinical Care (WHITWIKI: Cancers) · Treatment Atlas · Clinical Evidence · Rounds · Library. WARWIKI's Library holds Video Library, Instruments & Devices, Resources and History. The owner approved it after a pilot on a preview branch.
