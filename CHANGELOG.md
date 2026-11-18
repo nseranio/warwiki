@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## November 18, 2026 — Clinical Evidence library: one search with a reading pane
+
+- The Clinical Evidence page (`/docs/clinical-evidence`) now uses the design the owner chose for WHITWIKI's Clinical Trial Library the same day ("being able to nimbly go between searching and looking at trials is the goal"). One search box (name, aliases, NCT, takeaway, question, population, arms, decision titles), the area tabs (All · Pelvic floor · Male · General, then that family's areas), a question select grouped by area, result chips with counts (Positive, Negative, Noninferior, Mixed, Inconclusive, Descriptive; only nonzero shown) and a Newest/Oldest switch (newest by default; choosing a question opens it oldest first as a timeline with year bands). The list sits on the left and the selected trial's summary (bottom line, `TrialQuickHit`, links to its question timelines, "Open the full trial page") on the right; arrow keys in the search move through the results. At 996 px and below the summary replaces the list, with "← Results" and browser Back.
+- URL state `?q=&area=&question=&sort=&result=&trial=`. Older links still land: `#<decision id>` opens that question, `#<trial id>` selects the trial, `?view=trial&area=` keeps its area, and Journal Club's `#trial-<id>` goes on to the trial page.
+- The page hides the sidebar (`displayed_sidebar: null`) and `custom.css` lifts the 820 px reading cap only for pages holding `.wk-wide-tool`, so the library uses the full content width while the intro keeps the reading width.
+- WHITWIKI's Reported / Early results / To watch switch was left out: WARWIKI has no watch list and no meeting-abstract-only trials. Topic pages keep their embedded decision timelines unchanged.
+- Removed: the By decision / By trial views, `TrialsLibrary.tsx` and its CSS. New Playwright spec `tests/e2e/clinical-evidence.spec.ts` (desktop filters and pane, older links, phone pane and Back).
+
 ## November 18, 2026 — Rounds Today names its area; hypospadias plate width
 
 - Rounds: the Today panel now says which area it draws from ("Next 20 from Oncology: …", or a sub-area such as Prostate, "2 oncology areas" for several, "all areas" when All is on). Today was already scoped by the top area switch and its sub-area chips; it does not follow the New block topic picker, yield or type filters, so the due-review queue is never hidden. Owner approved the change after a mockup. Source edit in `~/Documents/Rounds/bank/app/index.html`, exported with `tools/export_site.sh` and copied to `static/rounds/index.html` only (WHITWIKI forward page and questions unchanged).

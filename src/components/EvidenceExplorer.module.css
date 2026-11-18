@@ -1,0 +1,75 @@
+/* Clinical Evidence library: search and filters on top, then a list and a reading pane side by side (one at a time on phones). */
+.explorer {--evx-surface: var(--warwiki-white); margin: 1rem 0 2rem; scroll-margin-top: calc(var(--ifm-navbar-height) + .5rem);}
+:global([data-theme='dark']) .explorer {--evx-surface: #0D1521;}
+.toolbar {display: flex; flex-direction: column; gap: .7rem; margin-bottom: .9rem;}
+.toolbar :global(.wk-ev-tlb-filter) {margin: 0;}
+.search {width: 100%; min-height: 46px; padding: .7rem .9rem; font: inherit; font-size: 1rem; border: 1px solid var(--warwiki-border); border-radius: 10px;
+  background: var(--warwiki-bg-subtle); color: var(--warwiki-text);}
+.search::placeholder {color: var(--warwiki-text-subtle);}
+.search:focus-visible {outline: 2px solid var(--ifm-color-primary); outline-offset: 1px; border-color: transparent;}
+.row {display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; justify-content: space-between;}
+.question {flex: 1 1 16rem; min-width: 0; max-width: 36rem;}
+.question select {width: 100%; font: inherit; font-size: .88rem; padding: .45rem .6rem; border: 1px solid var(--warwiki-border); border-radius: 8px; background: var(--warwiki-bg-subtle); color: var(--warwiki-text);}
+.question select:focus-visible {outline: 2px solid var(--ifm-color-primary); outline-offset: 1px;}
+/* Order: a segmented switch on a soft track; the chosen side is a raised surface, not a solid fill. */
+.sort {display: inline-flex; gap: 2px; padding: 3px; border-radius: 9px; background: var(--warwiki-bg-subtle);}
+.sort button {font: inherit; font-size: .82rem; font-weight: 500; padding: .3rem .8rem; border: 0; border-radius: 6px; background: transparent; color: var(--warwiki-text-muted); cursor: pointer; white-space: nowrap; transition: color .15s ease, background-color .15s ease, box-shadow .15s ease;}
+.sort button:hover {color: var(--warwiki-text);}
+.sort button[aria-pressed='true'] {background: var(--warwiki-white); color: var(--warwiki-text); font-weight: 600; box-shadow: 0 1px 2px rgba(18, 55, 105, .1), 0 1px 1px rgba(0, 0, 0, .04);}
+:global([data-theme='dark']) .sort button[aria-pressed='true'] {background: #22324A; box-shadow: 0 1px 2px rgba(0, 0, 0, .35);}
+/* Result filter: soft-tint chips with counts. */
+.chips {display: flex; flex-wrap: wrap; gap: .35rem;}
+.chips button {font: inherit; font-size: .8rem; font-weight: 500; padding: .28rem .7rem; border-radius: 999px; border: 1px solid transparent; background: var(--warwiki-bg-subtle); color: var(--warwiki-text-muted); cursor: pointer; white-space: nowrap; transition: color .15s ease, background-color .15s ease;}
+.chips button:hover {color: var(--warwiki-text);}
+.chips button[aria-pressed='true'] {background: var(--wk-accent-tint); border-color: color-mix(in srgb, var(--wk-accent) 35%, transparent); color: var(--warwiki-text); font-weight: 600;}
+.chips button:focus-visible, .sort button:focus-visible {outline: 2px solid var(--ifm-color-primary); outline-offset: 1px;}
+.n {font-weight: 500; font-variant-numeric: tabular-nums; color: var(--warwiki-text-muted); margin-left: .15rem;}
+.visuallyHidden {position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;}
+.frame {scroll-margin-top: calc(var(--ifm-navbar-height) + .5rem); display: grid; grid-template-columns: minmax(18rem, 32%) minmax(0, 1fr); border: 1px solid var(--warwiki-border); border-radius: 12px; overflow: hidden;
+  height: calc(100vh - var(--ifm-navbar-height) - 1.5rem); min-height: 28rem; position: sticky; top: calc(var(--ifm-navbar-height) + .75rem); background: var(--evx-surface);}
+.list {overflow-y: auto; border-right: 1px solid var(--warwiki-border); min-height: 0; overscroll-behavior: contain;}
+.pane {overflow-y: auto; min-height: 0; padding: 1.1rem 1.4rem 1.6rem; overscroll-behavior: contain;}
+.count {position: sticky; top: 0; z-index: 2; margin: 0; padding: .55rem .9rem; font-size: .78rem; color: var(--warwiki-text-muted); background: var(--evx-surface); border-bottom: 1px solid var(--warwiki-border); font-variant-numeric: tabular-nums;}
+.note {margin: 0; padding: .6rem .9rem; font-size: .84rem; color: var(--warwiki-text-muted); line-height: 1.45;}
+.pane .note {padding: 0 0 .8rem;}
+.item {display: block; width: 100%; text-align: left; font: inherit; border: 0; border-bottom: 1px solid var(--warwiki-border); background: transparent; color: var(--warwiki-text); padding: .65rem .9rem; cursor: pointer;}
+.item:hover {background: var(--warwiki-bg-subtle);}
+.item[aria-selected='true'] {background: var(--wk-accent-tint); box-shadow: inset 3px 0 0 var(--wk-accent);}
+.item:focus-visible {outline: 2px solid var(--ifm-color-primary); outline-offset: -2px;}
+.name {font-weight: 650; font-size: .94rem;}
+.meta {font-size: .78rem; color: var(--warwiki-text-muted); font-variant-numeric: tabular-nums; margin: 0 .2rem;}
+.take {display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-top: .2rem; font-size: .83rem; line-height: 1.4; color: var(--warwiki-text-muted);}
+.year {position: sticky; top: 2.1rem; z-index: 1; padding: .5rem .9rem .15rem; font-size: .74rem; font-weight: 700; letter-spacing: .03em; color: var(--wk-accent-text); background: var(--evx-surface); font-variant-numeric: tabular-nums;}
+.event {padding: .45rem .9rem; font-size: .8rem; color: var(--warwiki-text-muted); border-bottom: 1px dashed var(--warwiki-border);}
+.empty {display: flex; flex-direction: column; align-items: flex-start; gap: .4rem; padding: 1rem .9rem; font-size: .88rem; color: var(--warwiki-text-muted);}
+.empty p {margin: 0;}
+.detail {max-width: 52rem;}
+.detail header {margin-bottom: .6rem;}
+.title {font-size: 1.35rem; margin: 0 0 .2rem; line-height: 1.25;}
+.title a {color: inherit;}
+.dateline {margin: 0; font-size: .82rem; color: var(--warwiki-text-muted);}
+.bottom {margin: 0 0 .9rem; padding: .75rem .9rem; border-radius: 8px; background: var(--warwiki-bg-subtle); font-size: .95rem; line-height: 1.5;}
+.questions {display: flex; flex-wrap: wrap; gap: .3rem .7rem; align-items: baseline; font-size: .86rem; margin: .4rem 0 .8rem;}
+.questions > span {color: var(--warwiki-text-muted);}
+.questions button {text-align: left;}
+.open {font-weight: 600;}
+.back {display: none;}
+@media (max-width: 996px) {
+  .frame {display: block; height: auto; min-height: 0; position: static; border: 0; border-radius: 0; overflow: visible; background: transparent;}
+  .list {border: 1px solid var(--warwiki-border); border-radius: 10px; overflow: hidden;}
+  .count {position: static;}
+  .year {position: static;}
+  .pane {display: none; padding: .2rem 0 1rem;}
+  .showPane .list {display: none;}
+  .showPane .pane {display: block;}
+  .back {display: inline-block; margin-bottom: .7rem;}
+  .question {max-width: none; flex-basis: 100%;}
+}
+/* Trial facts inside the pane: one quiet column instead of the full-page fact cards. */
+.pane :global(.wk-ev-fact-grid) {grid-template-columns: 1fr; gap: .55rem; margin: 0 0 .9rem;}
+.pane :global(.wk-ev-fact-grid > div) {padding: 0; background: none; border: 0; border-radius: 0;}
+.pane :global(.wk-ev-fact-grid dt) {font-size: .76rem; font-weight: 650; color: var(--warwiki-text-muted);}
+.pane :global(.wk-ev-fact-grid dd) {font-size: .9rem; line-height: 1.5;}
+.pane :global(.wk-ev-table-scroll > table) {font-size: .84rem; min-width: 560px;}
+.pane :global(.wk-ev-trial-facts) {font-size: .9rem;}
+.pane :global(.wk-ev-trial-facts p) {font-size: .84rem;}
