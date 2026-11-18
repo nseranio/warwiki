@@ -13,6 +13,7 @@ For commit-level detail run `git log --oneline`.
 - 795 new checked questions (Codex author plus independent Codex check; Claude read and dropped duplicates and single-series percentages): 387 in under-covered modules, 357 close calls mixed into the bank by exam share, 75 board-favorite facts recovered from newer sources. Today and new blocks now draw topics in proportion to each module's written-exam share. Kit and lessons: Rounds bank README, "Written-boards rebalance".
 - Published WHITWIKI `bdaa087` (questions), WARWIKI `4e371275` (app, Question Bank page and homepage counts).
 - Same day: a blind solve of all 795 new questions by an independent Codex examiner agreed with every key; 8 with a second defensible answer were dropped. 423 original questions were reworded to remove answer-length and stem cues (answer and meaning unchanged, every edit independently checked; 94 left as they were). Bank 2,995; the correct answer is now clearly the longest choice in 3% of questions. Published WARWIKI `98afdcaa`, WHITWIKI `1cd19c6`.
+- Same day: the original 2,208 questions had the same blind solve (the examiner agreed with 2,198 keys). Every flag was adjudicated against the local sources: 85 fixed (stem details that rule out a second answer, overbroad choices, a few factual corrections including the corrected CARE rate) and 11 dropped; Claude reviewed all fixes and the ten disagreements. Bank 2,984. Published WHITWIKI `6ebd3c1`.
 
 ---
 
