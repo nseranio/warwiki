@@ -388,3 +388,7 @@
 /* The side list scrolls within the map's height instead of stretching it. */
 .mapSide { height: 0; min-height: 100%; max-height: none; }
 @media (max-width: 996px) { .mapSide { height: auto; min-height: 0; max-height: 26rem; } }
+.sectionToggle { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; width: 100%; padding: 0; border: 0; background: none; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.sectionToggle .h4 { margin: 0; }
+.sectionToggle svg { width: 15px; height: 15px; color: var(--tf-muted); }
+.sectionToggle:hover svg { color: var(--tf-accent); }

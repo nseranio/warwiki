@@ -1,4 +1,4 @@
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useEffect, useMemo, useRef, useState} from 'react';
 import clsx from 'clsx';
 import {enrollingExclusionReason, siteDistance, statusConflict, statusLabel, type Origin, type StudyHit} from '@site/src/lib/clinical-trials/filter';
 import {STATE_NAMES, evaluateStudy} from '@site/src/lib/clinical-trials/match';
@@ -36,6 +36,7 @@ export function OutcomePill({outcome}: {outcome: MatchOutcome}) {
 }
 
 const ARM_PREVIEW = 4;
+const SITE_PREVIEW = 3;
 
 function phaseText(ph?: string[]): string | undefined {
   if (!ph?.length || ph.includes('NA')) return undefined;
@@ -110,8 +111,14 @@ export default function StudyPane({hit, match, annotation, ctx, ctxLabel, origin
   const [picked, setPicked] = useState<string | undefined>();
   // Until the reader picks a site, the nearest qualifying site is selected (it changes with the ZIP and filters).
   const selected = picked ?? firstKey;
-  const setSelected = (key: string) => setPicked(key);
+  const setSelected = (key: string) => {
+    setPicked(key);
+    // The contact panel sits above the list; bring it into view when a site is chosen.
+    window.setTimeout(() => contactRef.current?.scrollIntoView({block: 'nearest', behavior: 'smooth'}), 0);
+  };
   const [showAllSites, setShowAllSites] = useState(false);
+  const [sitesOpen, setSitesOpen] = useState(false);
+  const contactRef = useRef<HTMLElement>(null);
   const [openArms, setOpenArms] = useState<Record<number, boolean>>({});
   const [allArms, setAllArms] = useState(false);
   const [liveWanted, setLiveWanted] = useState(autoLive);
@@ -366,11 +373,42 @@ export default function StudyPane({hit, match, annotation, ctx, ctxLabel, origin
                 </section>
               ) : null}
 
+              <h4 className={styles.h4}>Contact</h4>
+              <section ref={contactRef} className={styles.contactPanel} aria-live="polite">
+                {selectedSite ? (
+                  <>
+                    <h4 className={styles.h4}>{selectedSite.f}</h4>
+                    <p className={styles.siteMeta}>
+                      {[selectedSite.c, selectedSite.s, selectedSite.z].filter(Boolean).join(', ')}
+                      {selectedDistance !== undefined ? ` · about ${miles(selectedDistance)} straight-line` : selectedSite.g === 'bad' ? ' · distance withheld: registry coordinates and ZIP disagree' : ''}
+                    </p>
+                    <p><StatusChip status={selectedSite.st} site /> {statusConflict(study, selectedSite) ? <span className={styles.conflictSmall}>{statusConflict(study, selectedSite)}</span> : null}</p>
+                    {(selectedSite.contacts ?? []).some(c => c.phone || c.email) ? (
+                      <>
+                        <p className={styles.contactHead}>Listed for this site</p>
+                        <ContactList contacts={(selectedSite.contacts ?? []).filter(c => c.phone || c.email)} />
+                      </>
+                    ) : <p className={styles.note}>The registry lists no phone or email for this site.</p>}
+                    {(selectedSite.pi ?? []).length ? <p className={styles.small}>Site principal investigator: {(selectedSite.pi ?? []).join(', ')}</p> : null}
+                  </>
+                ) : <p className={styles.note}>Choose a site to see its listed contacts.</p>}
+                {(shown.central ?? []).some(c => c.phone || c.email) ? (
+                  <>
+                    <p className={styles.contactHead}>Central study contact (not site-specific)</p>
+                    <ContactList contacts={(shown.central ?? []).filter(c => c.phone || c.email)} central />
+                  </>
+                ) : null}
+                {shown.officials?.length ? <p className={styles.small}>Study leadership: {shown.officials.map(o => [o.name, o.role && roleLabel(o.role), o.affiliation].filter(Boolean).join(', ')).join('; ')}</p> : null}
+              </section>
+
               <section className={styles.block}>
-                <h4 className={styles.h4}>{hit.sites.length ? `Sites in this search (${hit.sites.length})` : 'Sites'}</h4>
+                <button type="button" className={styles.sectionToggle} aria-expanded={sitesOpen} onClick={() => setSitesOpen(v => !v)}>
+                  <span className={styles.h4}>{hit.sites.length ? `Sites in this search (${hit.sites.length})` : 'Sites'}</span>
+                  <ChevronIcon className={clsx(styles.chev, sitesOpen && styles.chevOpen)} />
+                </button>
                 {hit.sites.length ? (
                   <ul className={styles.siteList}>
-                    {hit.sites.map(h => {
+                    {(sitesOpen ? hit.sites : hit.sites.slice(0, SITE_PREVIEW)).map(h => {
                       const key = siteKey(h.site);
                       return (
                         <li key={key}>
@@ -383,8 +421,13 @@ export default function StudyPane({hit, match, annotation, ctx, ctxLabel, origin
                       );
                     })}
                   </ul>
-                ) : <p className={styles.note}>No site in this search. Other US sites are listed below with their registry status.</p>}
-                {otherSites.length ? (
+                ) : <p className={styles.note}>No site in this search. Other US sites are listed with their registry status.</p>}
+                {!sitesOpen && (hit.sites.length > SITE_PREVIEW || otherSites.length) ? (
+                  <button type="button" className={styles.linkButton} aria-expanded={false} onClick={() => setSitesOpen(true)}>
+                    {hit.sites.length > SITE_PREVIEW ? `Show all ${hit.sites.length} sites` : `Show the other ${otherSites.length} US ${otherSites.length === 1 ? 'site' : 'sites'} (any status)`}
+                  </button>
+                ) : null}
+                {sitesOpen && otherSites.length ? (
                   <>
                     <button type="button" className={styles.linkButton} onClick={() => setShowAllSites(v => !v)} aria-expanded={showAllSites}>
                       {showAllSites ? 'Hide other US sites' : `Show the other ${otherSites.length} US ${otherSites.length === 1 ? 'site' : 'sites'} (any status)`}
@@ -413,32 +456,6 @@ export default function StudyPane({hit, match, annotation, ctx, ctxLabel, origin
                 {shown.nonUs ? <p className={styles.small}>{shown.nonUs} non-US {shown.nonUs === 1 ? 'site is' : 'sites are'} listed on the registry and not shown here.</p> : null}
               </section>
 
-              <section className={styles.contactPanel} aria-live="polite">
-                {selectedSite ? (
-                  <>
-                    <h4 className={styles.h4}>{selectedSite.f}</h4>
-                    <p className={styles.siteMeta}>
-                      {[selectedSite.c, selectedSite.s, selectedSite.z].filter(Boolean).join(', ')}
-                      {selectedDistance !== undefined ? ` · about ${miles(selectedDistance)} straight-line` : selectedSite.g === 'bad' ? ' · distance withheld: registry coordinates and ZIP disagree' : ''}
-                    </p>
-                    <p><StatusChip status={selectedSite.st} site /> {statusConflict(study, selectedSite) ? <span className={styles.conflictSmall}>{statusConflict(study, selectedSite)}</span> : null}</p>
-                    {(selectedSite.contacts ?? []).some(c => c.phone || c.email) ? (
-                      <>
-                        <p className={styles.contactHead}>Listed for this site</p>
-                        <ContactList contacts={(selectedSite.contacts ?? []).filter(c => c.phone || c.email)} />
-                      </>
-                    ) : <p className={styles.note}>The registry lists no phone or email for this site.</p>}
-                    {(selectedSite.pi ?? []).length ? <p className={styles.small}>Site principal investigator: {(selectedSite.pi ?? []).join(', ')}</p> : null}
-                  </>
-                ) : <p className={styles.note}>Choose a site to see its listed contacts.</p>}
-                {(shown.central ?? []).some(c => c.phone || c.email) ? (
-                  <>
-                    <p className={styles.contactHead}>Central study contact (not site-specific)</p>
-                    <ContactList contacts={(shown.central ?? []).filter(c => c.phone || c.email)} central />
-                  </>
-                ) : null}
-                {shown.officials?.length ? <p className={styles.small}>Study leadership: {shown.officials.map(o => [o.name, o.role && roleLabel(o.role), o.affiliation].filter(Boolean).join(', ')).join('; ')}</p> : null}
-              </section>
 
               <details className={styles.disclosure}>
                 <summary>Eligibility criteria (registry text)</summary>
