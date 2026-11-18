@@ -146,6 +146,9 @@
    3. BASE & TYPOGRAPHY
 ═══════════════════════════════════════════════════════════ */
 html {
+  /* The page color fills the whole window: Infima paints html with --ifm-background-color (#1b1b1d in dark),
+     and body is only one screen tall, so long pages showed a lighter band below the first screen. */
+  background-color: var(--warwiki-bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;

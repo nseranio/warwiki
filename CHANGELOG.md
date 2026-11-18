@@ -13,6 +13,7 @@ For commit-level detail run `git log --oneline`.
 - The page hides the sidebar (`displayed_sidebar: null`) and `custom.css` lifts the 820 px reading cap only for pages holding `.wk-wide-tool`, so the library uses the full content width while the intro keeps the reading width.
 - WHITWIKI's Reported / Early results / To watch switch was left out: WARWIKI has no watch list and no meeting-abstract-only trials. Topic pages keep their embedded decision timelines unchanged.
 - Removed: the By decision / By trial views, `TrialsLibrary.tsx` and its CSS. New Playwright spec `tests/e2e/clinical-evidence.spec.ts` (desktop filters and pane, older links, phone pane and Back).
+- Dark mode, every page: the lighter band below the first screen is gone. Infima paints `html` with `--ifm-background-color` (`#1b1b1d` in dark) and `body` is one screen tall, so the area below showed the Infima color; `html` now takes `--warwiki-bg` (light unchanged).
 
 ## November 18, 2026 — Rounds Today names its area; hypospadias plate width
 
