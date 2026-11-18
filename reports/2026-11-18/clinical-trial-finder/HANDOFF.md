@@ -1,5 +1,7 @@
 # WARWIKI GU Clinical Trial Finder Claude Handoff
 
+> **Outcome (November 18, 2026, evening):** the owner redirected the build to **WHITWIKI** (Library › Resources › GU Clinical Trial Finder, `https://whitwiki.org/docs/resources/clinical-trial-finder`, commit `9726af7` in nseranio/whitwiki). Nothing was added to WARWIKI. Pipeline, refresh workflow, cohort annotations and open items: WHITWIKI `scripts/clinical-trials/README.md` and the November 18 status in WHITWIKI `CLAUDE.md`. Annotation working files: `~/Documents/WHITWIKI/working-sources/trial-finder/`.
+
 Prepared November 18, 2026. This is an implementation brief for Claude, with a historical interactive concept attached. The owner now wants the finder inside WARWIKI Resources so oncologists can identify relevant trials, find nearby enrolling sites, and prepare patients for study-team screening.
 
 ## Owner direction and authority
