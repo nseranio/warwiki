@@ -6,6 +6,11 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## November 18, 2026 — Rounds Today names its area; hypospadias plate width
+
+- Rounds: the Today panel now says which area it draws from ("Next 20 from Oncology: …", or a sub-area such as Prostate, "2 oncology areas" for several, "all areas" when All is on). Today was already scoped by the top area switch and its sub-area chips; it does not follow the New block topic picker, yield or type filters, so the due-review queue is never hidden. Owner approved the change after a mockup. Source edit in `~/Documents/Rounds/bank/app/index.html`, exported with `tools/export_site.sh` and copied to `static/rounds/index.html` only (WHITWIKI forward page and questions unchanged).
+- Hypospadias & Epispadias: new "Urethral plate width" subsection in the adult decision framework (`#urethral-plate-width`): the pediatric 8 mm cutoff (Holland and Smith 2000; Sarhan 2009) and the cohorts that did not reproduce it (Nguyen 2004; Bush and Snodgrass 2017), plate-to-glans ratio and post-incision width (Ru 2018; Fang 2025), the dorsal inlay trial (Negm 2026), and adult staged-repair width targets (Furr, Wisenbaugh and Gelman 2021; about 25 mm for 24 Fr and 31 mm for 30 Fr). OpenEvidence answers used as leads only; claim gate 7 claims, 3 corrected and rechecked; Redo Hypospadias links to the section (`255260a5`).
+
 ## November 18, 2026 — Rounds tuned for the written boards (3,003 questions)
 
 - Owner: most Rounds users prepare for the AUA In-Service Exam and the ABU Qualifying (Part 1) written exam; keep single-best-answer questions and do not convert to oral-board styles.

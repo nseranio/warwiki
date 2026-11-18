@@ -348,6 +348,7 @@ h1.logo{cursor:pointer}
 .today{display:flex;align-items:center;justify-content:space-between;gap:14px}
 .today .pv{font:600 18px/1.25 var(--sans);margin-top:2px}
 .today .note{margin-top:3px}
+.today .tArea{font-weight:600;color:var(--ink)}
 .today .btn{flex:none;padding:11px 22px}
 .searchBtn,.searchBox{display:flex;align-items:center;gap:10px;width:100%;border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:11px 13px;font-size:15px;color:var(--ink2);text-align:left}
 .searchBtn svg,.searchBox svg{flex:none;width:18px;height:18px}
@@ -1124,11 +1125,13 @@ function todayPanel(){
   const pl=todayPlan(),done=days()[dayKey()]||0,g=goalN(),met=done>=g;
   const from=pl.weak.length?"new, weighted to "+pl.weak.map(w=>w.label).join(", "):"new high-yield";
   const line=`${pl.nDue?pl.nDue+" due for review · ":""}${pl.nNew} ${from}`;
+  /* Today names the area it draws from (owner, Nov 18, 2026): the top area switch and its sub-area chips scope Today; the New block topic picker does not */
+  const area=(()=>{if(S.set.door==="all")return "all areas";const d=DOORS_().find(x=>x.id===S.set.door);if(!d)return "all areas";const subs=S.set.sub.map(v=>(d.subs.find(x=>x.id===v)||{}).label).filter(Boolean);return !subs.length?d.label:subs.length===1?subs[0]:subs.length+" "+d.label.toLowerCase()+" areas"})();
   const r=23,c=2*Math.PI*r,f=Math.min(1,done/g);
   const ring=`<svg class="tRing${met&&S.goalJust?" met":""}" viewBox="0 0 60 60" role="img" aria-label="${done} of ${g} answered today"><circle cx="30" cy="30" r="${r}" fill="none" stroke="var(--logoTrack)" stroke-width="7"/>${f?`<circle class="arc" cx="30" cy="30" r="${r}" fill="none" stroke="var(--cfK)" stroke-width="7" stroke-dasharray="${(c*f).toFixed(2)} ${c}" transform="rotate(-90 30 30)"/>`:""}${met?'<path d="M21.5 30.5l6 6L39 24.5" fill="none" stroke="var(--cfK)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>':`<text x="30" y="34.5" text-anchor="middle" font-family="Inter,sans-serif" font-weight="600" font-size="14" fill="var(--ink)">${done}</text>`}</svg>`;
   const presets=GOALS;
   const goalEd=S.goalEdit?`<div class="goalEd" role="group" aria-label="Daily goal">${presets.map(n=>`<button data-goal="${n}" aria-pressed="${g===n}">${n}</button>`).join("")}<span class="note">Miss one day a week and your streak stays.</span></div>`:"";
-  return `<div class="panel today"><div class="tMain">${ring}<div style="min-width:0"><div class="lab">Today</div><div class="pv">${met?"Goal met · "+done+" answered":done+" of "+g}</div><div class="note">${esc((met?"Another "+TODAY_N+" ready: ":"Next "+TODAY_N+": ")+line)}</div><button class="goalBtn" id="goalEdit" aria-expanded="${!!S.goalEdit}">Daily goal: ${g} ${S.goalEdit?"‹":"›"}</button>${goalEd}</div></div><button class="btn" id="startToday">${met?"More":"Start"}</button></div>`;
+  return `<div class="panel today"><div class="tMain">${ring}<div style="min-width:0"><div class="lab">Today</div><div class="pv">${met?"Goal met · "+done+" answered":done+" of "+g}</div><div class="note">${esc(met?"Another "+TODAY_N+" from ":"Next "+TODAY_N+" from ")}<b class="tArea">${esc(area)}</b>: ${esc(line)}</div><button class="goalBtn" id="goalEdit" aria-expanded="${!!S.goalEdit}">Daily goal: ${g} ${S.goalEdit?"‹":"›"}</button>${goalEd}</div></div><button class="btn" id="startToday">${met?"More":"Start"}</button></div>`;
 }
 function startIds(ids,mode,recall){
   ids=ids.slice(0,maxN(mode||"tutor"));
