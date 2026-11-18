@@ -12,6 +12,7 @@ For commit-level detail run `git log --oneline`.
 - A measurement of the bank found cue problems (the correct answer was the longest choice in 43% of questions; median stem 28 words) and module weights tuned to the owner's oral boards and specialty (anatomy and physiology 2.6% of the bank vs 6.8% of recent SASP exams). Two pilots on private artifacts: realistic rewrites (more real, not harder) and close-call questions built on one decisive detail (owner: "the right difficulty").
 - 795 new checked questions (Codex author plus independent Codex check; Claude read and dropped duplicates and single-series percentages): 387 in under-covered modules, 357 close calls mixed into the bank by exam share, 75 board-favorite facts recovered from newer sources. Today and new blocks now draw topics in proportion to each module's written-exam share. Kit and lessons: Rounds bank README, "Written-boards rebalance".
 - Published WHITWIKI `bdaa087` (questions), WARWIKI `4e371275` (app, Question Bank page and homepage counts).
+- Same day: a blind solve of all 795 new questions by an independent Codex examiner agreed with every key; 8 with a second defensible answer were dropped. 423 original questions were reworded to remove answer-length and stem cues (answer and meaning unchanged, every edit independently checked; 94 left as they were). Bank 2,995; the correct answer is now clearly the longest choice in 3% of questions. Published WARWIKI `98afdcaa`, WHITWIKI `1cd19c6`.
 
 ---
 
