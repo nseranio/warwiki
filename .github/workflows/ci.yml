@@ -1,6 +1,7 @@
 name: CI
 
 on:
+  workflow_dispatch:  # the trial-finder refresh starts CI on its snapshot commits
   push:
     branches: [main]
     # Authoring notes skip CI, but claim-gate inputs under reports/ (ledger, exceptions, baseline) must run it.

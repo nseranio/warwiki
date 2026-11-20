@@ -15,6 +15,7 @@ on:
 
 permissions:
   contents: write
+  actions: write  # start CI on the snapshot commit
 
 concurrency:
   group: trial-finder-refresh
@@ -39,6 +40,8 @@ jobs:
         run: node --experimental-strip-types --no-warnings scripts/clinical-trials/refresh.ts
 
       - name: Publish the snapshot
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git add static/trial-finder/data
           if git diff --cached --quiet; then
@@ -51,7 +54,12 @@ jobs:
             commit --author="Nicolas Seranio <31759167+nseranio@users.noreply.github.com>" \
             -m "Trial finder: ClinicalTrials.gov snapshot $(date -u +%Y-%m-%dT%H:%MZ)" -- static/trial-finder/data
           for attempt in 1 2 3 4 5; do
-            if git pull --rebase origin main && git push origin HEAD:main; then exit 0; fi
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              # Pushes made with the workflow token do not trigger CI, and Vercel Deployment
+              # Checks hold production until CI passes on the commit, so start CI here.
+              gh workflow run ci.yml --ref main
+              exit 0
+            fi
             git rebase --abort 2>/dev/null || true
             sleep $((attempt * 20))
           done
