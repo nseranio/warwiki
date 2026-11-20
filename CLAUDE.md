@@ -20,6 +20,7 @@ Read this at the start of a session. It is the working handbook: current state, 
 
 ## Open Items
 
+- **Vercel Deployment Checks (November 19):** workflows are ready (CI accepts `workflow_dispatch`; the trial-finder refresh starts CI on its snapshot commit, since bot pushes do not trigger CI). Still to switch on in Vercel › Settings › Build and Deployment › Deployment Checks › GitHub: WARWIKI job `lint-typecheck-build`, WHITWIKI job `check`. Vercel's 2FA prompt blocked the browser session.
 - **Owner:** delete old tts-1 audio in Vercel Blob (`scripts/delete-old-tts-audio.mjs`; needs the Blob token, CLI login expired); unshare the four AnkiWeb listings; op-report redesign.
 - **Sources still wanted:** the top of [reports/audit-v2/needed-from-user.md](reports/audit-v2/needed-from-user.md) is the single list. Also: Roehrborn 2000 PLESS retention (*Eur Urol* 37:528, Karger, needs library document delivery); InhibiZone 2009 FDA date (Mulcahy 2021); McGuire profile footnote 1 (Didusch source barred); full texts for L.I.F.T., WATER, USC-STAR, RestoreX Joseph 2020, the History page's sildenafil and InhibiZone sentences and the IUGA/ICS Delphi catheter statement; 219 abstract-only trial reports (`reports/2026-11-12/missing-trials/DOWNLOAD-LIST.md`).
 - **Held:** BMG harvest-site closure meta-analysis (`reports/2026-10-18/clinical-evidence/held/`; forest-plot values unconfirmed).
