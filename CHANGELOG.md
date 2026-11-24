@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## November 24, 2026 — Bladder pain: instillation cocktails, phenotype evidence and a symptom flares section
+
+- `intravesical-agents.mdx`: new subsection "Response and predictors of failure" under Intravesical Cocktails (small bladder capacity predicts DMSO-cocktail failure: Stav 2012, Lim 2017, Gafni-Kane 2013, Hung 2012; no added efficacy of cocktail DMSO in the Rawls 2017 review; low-dose amitriptyline added to a cocktail, Abat 2022). Heparin: relief after a 12-week heparin–alkalinized lidocaine course fades by six months (Nomiya 2013) and monthly heparin after a DMSO response (Perez-Marrero 1993). Steroids: the randomized trial of added triamcinolone (Cardenas-Trowers 2021). References 34–42.
+- `ic-pbs.mdx`: widespread pain and response to centrally directed therapy (Schrepf 2025), pain-distribution transitions over 3 years (Clemens 2026), pelvic-perineal pain as a severity marker (Zhang 2026), cognitive behavioral therapy and mindfulness added to bladder care (Yu 2022, Kanter 2016). New section "Symptom Flares": frequency and variability, triggers, infection and Hunner lesion recurrence, rescue treatment and prevention (references 70–86; AUA flare statements checked against the local guideline text).
+- `myofascial-pelvic-pain.mdx`: the randomized trial of 20 mg baclofen vaginal suppositories (Rothenberger 2026, online ahead of print) replaces "no RCTs" (reference 65).
+- Leads came from the owner's OpenEvidence answers; all 28 papers were looked up on PubMed and each number was taken from the abstract. Corrections to the leads: the Rawls review abstract gives 61% to 95% (not 61% to 70%); the flare microbiome study found more fungi during flares, which the lead omitted. Claim gate: thirteen reviewer corrections applied (missing sentence-level markers, completer and subset denominators, the baclofen entry threshold, the amitriptyline time point, flare duration as a truncated estimate), final-text rechecks passed; lint, typecheck, build and `refs:new` clean. Work files `reports/2026-11-24/ic-instillations/`.
+- Not added: GAG-replenishment scheduling points (not in the cited abstract; products not sold in the US), and uncontrolled rescue options with no bladder pain data.
+
 ## November 24, 2026 — Tibial stimulation page: add-on and peroneal surface stimulation
 
 - `percutaneous-tibial-nerve-stimulation.mdx`, Transcutaneous Alternative (TTNS): two paragraphs and four references (50–53). Add-on trials: TTNS plus behavioral therapy in 38 older women (D'Alessandro Barbosa 2026; funding-statement erratum listed) and plantar TENS plus solifenacin versus sham in 86 women (Zhang 2021). Peroneal stimulation with the URIS device: randomized trial versus solifenacin (Krhut 2023, *J Urol*) and an open-label refractory-OAB study (Krhut 2023, *Int Urogynecol J*), with the manufacturer affiliation stated.
