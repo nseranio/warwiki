@@ -6,6 +6,12 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## November 24, 2026 — Tibial stimulation page: add-on and peroneal surface stimulation
+
+- `percutaneous-tibial-nerve-stimulation.mdx`, Transcutaneous Alternative (TTNS): two paragraphs and four references (50–53). Add-on trials: TTNS plus behavioral therapy in 38 older women (D'Alessandro Barbosa 2026; funding-statement erratum listed) and plantar TENS plus solifenacin versus sham in 86 women (Zhang 2021). Peroneal stimulation with the URIS device: randomized trial versus solifenacin (Krhut 2023, *J Urol*) and an open-label refractory-OAB study (Krhut 2023, *Int Urogynecol J*), with the manufacturer affiliation stated.
+- Leads came from the owner's OpenEvidence answers; each paper was checked on PubMed (two against PMC full text). Claim gate: one wording correction applied (responder definition), final-text recheck with two reviewers passed; lint, typecheck, build and `refs:new` clean. Work files `reports/2026-11-24/ttns-additions/`.
+- Not added: a stepped home maintenance taper (no validated schedule, no source) and the Sayner 2022 scoping review.
+
 ## November 18, 2026 — Reconstructive & Functional Urology Trial Finder
 
 - New Resources tool at `/docs/resources/clinical-trial-finder` (owner's name; sidebar "Trial Finder"), ported from WHITWIKI's GU Oncology Trial Finder. Daily ClinicalTrials.gov API v2 snapshot of US studies in eight topics (incontinence, prolapse and urogynecology, urethral stricture, bladder and pelvic pain, BPH and LUTS, upper tract and trauma, sexual health, gender-affirming surgery): 353 in-scope studies at 1,044 US sites on the first run. Scope gate on title and first two conditions leaves out children-only, stones, infertility, oncology-primary (unless the title names a functional or reconstructive topic) and non-urologic matches; counts in the manifest.
