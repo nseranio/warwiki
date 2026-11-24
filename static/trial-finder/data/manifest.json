@@ -1,21 +1,21 @@
 {
   "schema": 1,
-  "version": "20261123T225632Z",
+  "version": "20261124T213432Z",
   "queryVersion": "2026-11-18.w2",
   "source": {
     "name": "ClinicalTrials.gov API v2",
     "api": "https://clinicaltrials.gov/api/v2",
     "apiVersion": "2.0.5",
-    "dataTimestamp": "2026-11-23T10:00:05"
+    "dataTimestamp": "2026-11-24T10:00:04"
   },
-  "startedAt": "2026-11-23T22:56:32.865Z",
-  "refreshedAt": "2026-11-23T22:56:35.834Z",
+  "startedAt": "2026-11-24T21:34:32.000Z",
+  "refreshedAt": "2026-11-24T21:34:34.337Z",
   "staleAfterHours": 48,
   "pools": {
     "continence": {
       "file": "pools/continence.json",
       "studies": 133,
-      "sites": 483,
+      "sites": 485,
       "queries": [
         {
           "id": "continence",
@@ -62,13 +62,13 @@
     },
     "bph": {
       "file": "pools/bph.json",
-      "studies": 70,
-      "sites": 295,
+      "studies": 71,
+      "sites": 296,
       "queries": [
         {
           "id": "bph",
-          "totalCount": 170,
-          "retrieved": 170
+          "totalCount": 172,
+          "retrieved": 172
         }
       ]
     },
@@ -110,8 +110,8 @@
     }
   },
   "totals": {
-    "studies": 356,
-    "sites": 1057
+    "studies": 357,
+    "sites": 1060
   },
   "annotationChecks": [
     {
@@ -277,7 +277,7 @@
     {
       "nct": "NCT07829692",
       "cohort": "All participants",
-      "state": "current"
+      "state": "criteriaChanged"
     },
     {
       "nct": "NCT07850804",
@@ -294,7 +294,7 @@
     "United States locations only; non-US sites are counted but not listed.",
     "Studies whose overall status is RECRUITING, NOT_YET_RECRUITING, ENROLLING_BY_INVITATION, ACTIVE_NOT_RECRUITING, SUSPENDED; completed, terminated and withdrawn studies are reached by NCT lookup.",
     "Studies with no US location listed are left out (0 this refresh).",
-    "Out of WARWIKI scope and left out: 16 children only, 135 not urologic, 26 oncology, 4 stones and endourology, 2 infertility (judged on title and first two conditions; oncology-primary studies stay in only when the title names a functional or reconstructive topic, and are listed on WHITWIKI's GU Oncology Trial Finder).",
+    "Out of WARWIKI scope and left out: 135 not urologic, 16 children only, 27 oncology, 4 stones and endourology, 2 infertility (judged on title and first two conditions; oncology-primary studies stay in only when the title names a functional or reconstructive topic, and are listed on WHITWIKI's GU Oncology Trial Finder).",
     "Disease-setting tags come from registry wording and are not clinician review."
   ]
 }
