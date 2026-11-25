@@ -2,7 +2,8 @@
 // Runs at build time on the parsed page, so the MDX source is never edited.
 //   - one link per target page, at its first mention in running text
 //   - never in headings, existing links, code, JSX blocks, or from the References / See Also / Videos sections on
-//   - never to the page itself, and not when the page already links to that target by hand
+//   - never to the page itself (or to a sibling page whose name is part of this page's own title), and not when the page already
+//     links to that target by hand
 // Terms: page titles plus src/data/autolink.json (aliases and excluded terms). Opt a page out with `autolink: false`.
 const path = require('path');
 const {buildRegistry, frontmatter} = require('./terms');
@@ -28,6 +29,7 @@ function remarkAutolink(options = {}) {
     const fm = (file.data && file.data.frontMatter) || frontmatter(String(file.value || ''));
     if (String(fm.autolink) === 'false' || String(fm.hide_title) === 'true') return;
 
+    const ownTitle = ` ${String(fm.title || '').replace(/\s+/g, ' ')} `;
     const used = new Set();
     const collect = (node) => {
       if (node.type === 'link') used.add(cleanUrl(node.url));
@@ -59,6 +61,10 @@ function remarkAutolink(options = {}) {
           if (!entry) continue;
           const target = cleanUrl(entry.url);
           if (used.has(target) || (filePath && path.resolve(entry.file) === path.resolve(filePath))) continue;
+          // A page often calls itself by a short form of its own title ("PROSPER" on the PROSPER RCC page, "WATER" on
+          // WATER II). When that short form is a sibling page in the same folder, leave it unlinked.
+          if (filePath && path.dirname(path.resolve(entry.file)) === path.dirname(path.resolve(filePath))
+            && new RegExp(`[^\\p{L}\\p{N}]${m[0].replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}[^\\p{L}\\p{N}]`, 'u').test(ownTitle)) continue;
           used.add(target);
           if (m.index > last) out.push({type: 'text', value: value.slice(last, m.index)});
           out.push({type: 'link', url: entry.url, title: null, data: {hProperties: {className: 'autolink'}},

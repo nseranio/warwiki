@@ -16,7 +16,7 @@ Read this at the start of a session. It is the working handbook: current state, 
 - **Surgeon profiles:** 271 profiles, 252 with photos (sources `src/data/surgeon-photo-sources.json`), 25 narrative biographies, Key Publications from `src/data/surgeon-key-publications/<id>.json`. Didusch Museum pages bar AI use.
 - **Handouts:** 97 English handouts in the gallery; translations stay out of the build (June text). Practice editions off-repo; `build_practice_handouts.py` is frozen at 95 (run a scratch copy for new ones). `render-en.sh <slug> gate` hangs; check page count and footer text instead.
 - **Article listener:** Marin on `gpt-4o-mini-tts` with a fixed brief in `api/tts.ts`; no voice picker.
-- **Automatic links (November 24):** a build-time linker (`plugins/autolink/`) links the first mention of any topic with its own page; MDX is not edited. Add brand names and abbreviations, or exclude a generic title, in `src/data/autolink.json`; check with `npm run autolink:report -- --term "<term>"`. Opt a page out with `autolink: false`. WHITWIKI does not have it yet.
+- **Automatic links (November 24):** a build-time linker (`plugins/autolink/`) links the first mention of any topic with its own page; MDX is not edited. Add brand names and abbreviations, or exclude a generic title, in `src/data/autolink.json`; check with `npm run autolink:report -- --term "<term>"`. Opt a page out with `autolink: false`. WHITWIKI runs the same two plugin files (port changes to both).
 - **Sister site:** WHITWIKI (`~/Documents/WHITWIKI/whitwiki`, its own CLAUDE.md). whitwiki.org is blocked on the Jefferson network; use whitwiki.vercel.app there.
 
 ## Open Items

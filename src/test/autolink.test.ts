@@ -65,6 +65,19 @@ describe('automatic first-mention linker', () => {
     expect(links(tree)).toHaveLength(1);
   });
 
+  it('does not link a sibling page whose name is a short form of this page\'s title', () => {
+    const own = write('06-clinical-evidence/studies/water-ii.mdx', 'WATER II');
+    const tree: Node = {type: 'root', children: [para(text('WATER enrolled smaller glands; eCoin is unrelated.'))]};
+    remarkAutolink({siteDir: dir, docsDir: docs, config})(tree, {path: own, data: {frontMatter: {title: 'WATER II'}}, value: ''});
+    expect(links(tree).map((l) => l.children?.[0].value)).toEqual(['eCoin']);
+  });
+
+  it('still links a device from a trial page named after it', () => {
+    const tree: Node = {type: 'root', children: [para(text('The eCoin device was implanted.'))]};
+    remarkAutolink({siteDir: dir, docsDir: docs, config})(tree, {path: trial, data: {frontMatter: {title: 'eCoin pivotal study'}}, value: ''});
+    expect(links(tree).map((l) => l.url)).toEqual(['/docs/foundations/devices/ecoin']);
+  });
+
   it('rejects an alias that points to a missing page', () => {
     const bad = path.join(dir, 'bad.json');
     fs.writeFileSync(bad, JSON.stringify({aliases: {Nope: '/docs/does/not/exist'}}));

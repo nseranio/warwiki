@@ -3,6 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 
+// Which section wins when two pages share a title (override with "sectionRank" in autolink.json).
 const SECTION_RANK = ['03-clinical-conditions', '04-surgical-techniques', '02-evaluation', '05-special-populations',
   '01-foundations', '06-clinical-evidence', '07-roots', '08-resources'];
 
@@ -64,9 +65,10 @@ function buildRegistry(docsDir, configPath) {
   const pages = new Map(); // url -> file
   const byKey = new Map(); // key -> {term, url, file, sensitive, rank}
   const collisions = [];
+  const sectionRank = cfg.sectionRank || SECTION_RANK;
   const rankOf = (file) => {
     const top = path.relative(docsDir, file).split(path.sep)[0];
-    const i = SECTION_RANK.indexOf(top);
+    const i = sectionRank.indexOf(top);
     return i < 0 ? 99 : i;
   };
   const add = (term, url, file, source) => {

@@ -15,6 +15,7 @@ For commit-level detail run `git log --oneline`.
 - Result: 6,128 links on 1,209 of 1,635 pages (median 4 per page, 90th percentile 10, most 25). The 251 trial pages now link to their devices, drugs and operations.
 - Tools: `npm run autolink:report` lists every link (`-- --term "WATER"` or `-- --page docs/...mdx` for contexts). Unit tests `src/test/autolink.test.ts`. Opt a page out with frontmatter `autolink: false`. Generated links carry `class="autolink"` and use the normal colour-only link style.
 - Checks: lint 0, typecheck, 116 unit tests, production build (broken-link check passes), eCoin and Intibia trial pages viewed in the browser.
+- November 25: ported to WHITWIKI (1,491 links on 528 pages; its own `autolink.json`). Two shared changes came back: `sectionRank` in `autolink.json` can override which section wins a duplicate title, and a page no longer links a sibling page whose name is part of its own title (WATER on WATER II, SYNERGY on SYNERGY II), which stops a trial page linking its own short name to a different study. WARWIKI now has 6,126 links; lint, typecheck, tests and build rerun.
 
 ## November 24, 2026 — Bladder pain: instillation cocktails, phenotype evidence and a symptom flares section
 
