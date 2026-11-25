@@ -31,6 +31,7 @@
     "lint:cards": "node scripts/check-card-descriptions.js",
     "lint:freshness": "node scripts/check-freshness.js",
     "lint:handouts": "node scripts/check-handout-sources.js",
+    "autolink:report": "node scripts/autolink-report.mjs",
     "lint:claims": "python3 scripts/review/gate.py check",
     "lint:facts": "python3 scripts/voice/facts_extract.py --lint",
     "lint:ref-dupes": "python3 scripts/review/dedupe_refs.py --check",

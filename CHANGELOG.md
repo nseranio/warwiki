@@ -6,6 +6,16 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## November 24, 2026 — Automatic first-mention links (Wikipedia style)
+
+- Owner: reading the Intibia and eCoin trial pages, "I somewhat expect to be able to click intibia or Ecoin at least once in the page and be taken to the article about that specific device"; "Build on the site".
+- New build-time linker `plugins/autolink/remark-autolink.js` (wired in `docusaurus.config.ts` as a docs remark plugin). It links the first mention of any topic that has its own page: once per target, never in headings, existing links, code or JSX blocks, never to the page itself, not when the page already links there by hand, and nothing from References / See Also / Videos on. MDX sources are not edited, so the claim gate, citations and Rounds `source.file` paths are untouched.
+- Terms (`plugins/autolink/terms.js`): page titles (parenthetical suffix and leading "The" dropped; index, hidden-title and surgeon-free rules as coded), with acronyms and mixed-case names matched exactly (WATER, eCoin, HoLEP) and ordinary words matched with a capital or small first letter and an optional plural s. On duplicate titles the condition page wins, then the atlas page.
+- `src/data/autolink.json`: 61 aliases (Intibia → Altaviva, InterStim, Axonics, PTNS, SNM, OAB, POP, TURP, HoLEP, Optilume, BMG, IPP, AUS, Xiaflex, drug names to their class pages) and 82 excluded titles (generic words such as Infection, Bladder, Sutures; instrument surnames such as Mayo, Kelly, Collins; trial acronyms that are ordinary words or ambiguous: OASIS, STEP, PROSPECT, SPIRIT, PLUS, STAR, OPEN, CARE).
+- Result: 6,128 links on 1,209 of 1,635 pages (median 4 per page, 90th percentile 10, most 25). The 251 trial pages now link to their devices, drugs and operations.
+- Tools: `npm run autolink:report` lists every link (`-- --term "WATER"` or `-- --page docs/...mdx` for contexts). Unit tests `src/test/autolink.test.ts`. Opt a page out with frontmatter `autolink: false`. Generated links carry `class="autolink"` and use the normal colour-only link style.
+- Checks: lint 0, typecheck, 116 unit tests, production build (broken-link check passes), eCoin and Intibia trial pages viewed in the browser.
+
 ## November 24, 2026 — Bladder pain: instillation cocktails, phenotype evidence and a symptom flares section
 
 - `intravesical-agents.mdx`: new subsection "Response and predictors of failure" under Intravesical Cocktails (small bladder capacity predicts DMSO-cocktail failure: Stav 2012, Lim 2017, Gafni-Kane 2013, Hung 2012; no added efficacy of cocktail DMSO in the Rawls 2017 review; low-dose amitriptyline added to a cocktail, Abat 2022). Heparin: relief after a 12-week heparin–alkalinized lidocaine course fades by six months (Nomiya 2013) and monthly heparin after a DMSO response (Perez-Marrero 1993). Steroids: the randomized trial of added triamcinolone (Cardenas-Trowers 2021). References 34–42.

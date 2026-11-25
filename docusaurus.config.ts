@@ -130,6 +130,8 @@ const config: Config = {
             if (!grouped.test(args.item.dirName)) return items;
             return items.filter((i) => !(i.type === 'doc' && /(^|\/)index$/.test(i.id) && i.id.split('/').length <= 3));
           },
+          // Links the first mention of a topic that has its own page (terms: page titles + src/data/autolink.json).
+          remarkPlugins: [[require('./plugins/autolink/remark-autolink.js'), {siteDir: __dirname}]],
           editUrl: 'https://github.com/nseranio/warwiki/tree/main/',
           showLastUpdateTime: true,
           showLastUpdateAuthor: false,
