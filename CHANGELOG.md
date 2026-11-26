@@ -6,6 +6,13 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## November 25, 2026 — Artificial Erection page
+
+- Owner asked whether the site explained how to perform an artificial erection and its uses; the term appeared on ten pages as a step, with no page of its own. "Build it."
+- New page `docs/01-foundations/surgical-principles/artificial-erection.mdx` (Foundations › Surgical Principles): uses by operation, saline technique (tourniquet, needle site, Kiel 60 mL protocol), pressure data, limits of the tourniquet and perineal compression, drug-induced erection (alprostadil protocols, pediatric comparative data, detumescence), accuracy of curvature measurement, complications. 20 references; one reused CC BY-NC figure (Sokolakis 2020). Most pressure and measurement data are pediatric and are labelled so.
+- Listed on the Surgical Principles index; other pages link to it through the automatic first-mention links.
+- Claim gate: 19 claims checked, two edits (EAU recommendation limited to isolated congenital curvature; Kogan sentence given its own citation), high-risk dose and guideline claims checked twice (`reports/audit-v2/sources-local/ae-2026-11-25*`). `refs:new`: 20 references, 0 failures.
+
 ## November 24, 2026 — Automatic first-mention links (Wikipedia style)
 
 - Owner: reading the Intibia and eCoin trial pages, "I somewhat expect to be able to click intibia or Ecoin at least once in the page and be taken to the article about that specific device"; "Build on the site".
