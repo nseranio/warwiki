@@ -6,6 +6,12 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## November 26, 2026 — Pessary placement steps (ring with support, Gellhorn)
+
+- Owner supplied the four CooperSurgical Milex documents (fitting kit IFU, reference guide, ring folding IFU, Gellhorn IFU) and asked for specific placement guidance for the ring with support and the Gellhorn.
+- `prolapse-pessaries.mdx`: new subsection "Placement: Ring with Support and Gellhorn" under Fitting and Selection, labelled as manufacturer instructions: labeled indications, insertion and fit checks, Gellhorn removal, the wire coil in ring sizes 11 to 13, the labeled Gellhorn contraindication for a sexually active patient, and the label follow-up schedule. References 27 and 28 (ring 38588-CR Rev. A 04/21; Gellhorn 38651-CR Rev. A 05/21; newer eIFU revisions not confirmed).
+- Claim gate passed; the contraindication sentence was checked twice (`reports/audit-v2/sources-local/pessary-ifu-2026-11-26*`).
+
 ## November 25, 2026 — Artificial Erection page
 
 - Owner asked whether the site explained how to perform an artificial erection and its uses; the term appeared on ten pages as a step, with no page of its own. "Build it."
