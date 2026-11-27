@@ -1,26 +1,26 @@
 {
   "schema": 1,
-  "version": "20261126T203500Z",
+  "version": "20261127T202112Z",
   "queryVersion": "2026-11-18.w2",
   "source": {
     "name": "ClinicalTrials.gov API v2",
     "api": "https://clinicaltrials.gov/api/v2",
     "apiVersion": "2.0.5",
-    "dataTimestamp": "2026-11-25T10:00:05"
+    "dataTimestamp": "2026-11-27T10:00:05"
   },
-  "startedAt": "2026-11-26T20:35:00.070Z",
-  "refreshedAt": "2026-11-26T20:35:02.957Z",
+  "startedAt": "2026-11-27T20:21:12.779Z",
+  "refreshedAt": "2026-11-27T20:21:14.413Z",
   "staleAfterHours": 48,
   "pools": {
     "continence": {
       "file": "pools/continence.json",
-      "studies": 133,
-      "sites": 485,
+      "studies": 134,
+      "sites": 486,
       "queries": [
         {
           "id": "continence",
-          "totalCount": 142,
-          "retrieved": 142
+          "totalCount": 143,
+          "retrieved": 143
         }
       ]
     },
@@ -74,25 +74,25 @@
     },
     "upper": {
       "file": "pools/upper.json",
-      "studies": 18,
-      "sites": 40,
+      "studies": 19,
+      "sites": 41,
       "queries": [
         {
           "id": "upper",
-          "totalCount": 159,
-          "retrieved": 159
+          "totalCount": 163,
+          "retrieved": 163
         }
       ]
     },
     "sexual": {
       "file": "pools/sexual.json",
-      "studies": 66,
-      "sites": 130,
+      "studies": 65,
+      "sites": 124,
       "queries": [
         {
           "id": "sexual",
-          "totalCount": 93,
-          "retrieved": 93
+          "totalCount": 92,
+          "retrieved": 92
         }
       ]
     },
@@ -110,8 +110,8 @@
     }
   },
   "totals": {
-    "studies": 357,
-    "sites": 1062
+    "studies": 358,
+    "sites": 1058
   },
   "annotationChecks": [
     {
@@ -294,7 +294,7 @@
     "United States locations only; non-US sites are counted but not listed.",
     "Studies whose overall status is RECRUITING, NOT_YET_RECRUITING, ENROLLING_BY_INVITATION, ACTIVE_NOT_RECRUITING, SUSPENDED; completed, terminated and withdrawn studies are reached by NCT lookup.",
     "Studies with no US location listed are left out (0 this refresh).",
-    "Out of WARWIKI scope and left out: 135 not urologic, 16 children only, 27 oncology, 4 stones and endourology, 2 infertility (judged on title and first two conditions; oncology-primary studies stay in only when the title names a functional or reconstructive topic, and are listed on WHITWIKI's GU Oncology Trial Finder).",
+    "Out of WARWIKI scope and left out: 27 oncology, 16 children only, 137 not urologic, 4 stones and endourology, 2 infertility (judged on title and first two conditions; oncology-primary studies stay in only when the title names a functional or reconstructive topic, and are listed on WHITWIKI's GU Oncology Trial Finder).",
     "Disease-setting tags come from registry wording and are not clinician review."
   ]
 }
